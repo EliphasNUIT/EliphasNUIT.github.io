@@ -10,12 +10,12 @@ function setUserName() {
   myHeading.innerHTML = 'Mozilla is cool, ' + myName;
 }
 
-if(!localStorage.getItem('name')) {
+while(!localStorage.getItem('name')) {
   setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
 }
+var storedName = localStorage.getItem('name');
+myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+
 
 myButton.onclick = function() {
   setUserName();
