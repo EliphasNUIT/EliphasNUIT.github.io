@@ -3,7 +3,7 @@ var myHeading = document.querySelector('h1');
 
 function setUserName() {
   var myName = prompt('Please enter your name.');
-  if (!myName) {
+  if (!myName && myName !== 'null') {
   	setUserName();  
   }
   localStorage.setItem('name', myName);
