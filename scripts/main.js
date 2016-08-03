@@ -4,7 +4,7 @@ var myHeading = document.querySelector('h1');
 function setUserName() {
   var myName = prompt('Please enter your name.');
   while (!myName) {
-     prompt('Please enter your name.');
+     myName = prompt('Please enter your name.');
   }
   localStorage.setItem('name', myName);
   myHeading.innerHTML = 'Mozilla is cool, ' + myName;
