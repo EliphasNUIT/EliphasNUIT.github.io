@@ -3,12 +3,11 @@ var myHeading = document.querySelector('h1');
 
 function setUserName() {
   var myName = prompt('Please enter your name.');
-  if (myName !== '' && myName != null) {
-	localStorage.setItem('name', myName);
-	myHeading.innerHTML = 'Mozilla is cool, ' + myName;
-  }	else {
-	setUserName();  
+  if (myName === '' || myName == null) {
+  	setUserName();  
   }
+  localStorage.setItem('name', myName);
+  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
 }
 
 if(!localStorage.getItem('name')) {
