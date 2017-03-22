@@ -27,7 +27,7 @@ h2 {
     color: #22334F;
 }
 
-h2.under {
+.under {
     text-decoration: underline;
 }
 
