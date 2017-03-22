@@ -23,9 +23,12 @@ p, li {
 }
 
 h2 {
-    font-size: 45px;
-    color: #55539F;
-    text-decoration: underline black;
+    font-size: 30px;
+    color: #22334F;
+}
+
+h2.under {
+    text-decoration: underline;
 }
 
 
