@@ -8,7 +8,7 @@ class Xera : public Bosses
 public:
     Xera();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // XERA_H

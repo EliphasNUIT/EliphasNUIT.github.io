@@ -5,7 +5,6 @@
 
 Bosses::Bosses(QObject *parent) : QObject(parent)
 {
-
 }
 
 void Bosses::writeToHtml(){
@@ -41,6 +40,21 @@ void Bosses::writeToHtml(){
             stream << it.next() << endl;
         }
     }
+}
+
+QStringList Bosses::getTries() {
+    QDir triesDir(this->ressourcePath);
+    QStringList tries = triesDir.entryList(QDir::Files, QDir::Name | QDir::Reversed );
+    QStringList res;
+    QStringListIterator it(tries);
+    while(it.hasNext()) {
+        QString aux(it.next());
+        QString date = aux.split("-").at(0);
+        date.insert(4,"/");
+        date.insert(7,"/");
+        res << "<li> <a href=" + this->ressourceDir + aux + "\">" + date +"</a> </li>";
+    }
+    return res;
 }
 
 

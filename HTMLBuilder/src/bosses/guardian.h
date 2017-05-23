@@ -8,7 +8,7 @@ class Guardian : public Bosses
 public:
     Guardian();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // GUARDIAN_H

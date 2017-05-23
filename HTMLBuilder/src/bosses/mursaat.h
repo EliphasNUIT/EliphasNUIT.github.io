@@ -8,7 +8,7 @@ class Mursaat : public Bosses
 public:
     Mursaat();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // MURSAAT_H

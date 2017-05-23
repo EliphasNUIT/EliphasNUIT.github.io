@@ -23,8 +23,11 @@ protected:
     QString name;
     QString imagePath;
     QString htmlFile;
+    QString ressourcePath;
+    QString ressourceDir;
 private:
-    virtual QStringList getTries() = 0;
+    QStringList getTries();
+    virtual void virtualPure() = 0;
 };
 
 #endif // BOSSES_H

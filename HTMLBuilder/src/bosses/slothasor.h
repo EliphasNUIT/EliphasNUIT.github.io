@@ -8,7 +8,7 @@ class Slothasor : public Bosses
 public:
     Slothasor();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // SLOTHASOR_H

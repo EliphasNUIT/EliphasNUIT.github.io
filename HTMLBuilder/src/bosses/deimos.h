@@ -8,7 +8,7 @@ class Deimos : public Bosses
 public:
     Deimos();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // DEIMOS_H

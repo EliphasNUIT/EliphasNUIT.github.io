@@ -8,7 +8,7 @@ class Sabetha : public Bosses
 public:
     Sabetha();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // SABETHA_H

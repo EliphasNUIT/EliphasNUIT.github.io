@@ -8,7 +8,7 @@ class Samarog : public Bosses
 public:
     Samarog();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // SAMAROG_H

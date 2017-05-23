@@ -8,7 +8,7 @@ class Matthias : public Bosses
 public:
     Matthias();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // MATTHIAS_H

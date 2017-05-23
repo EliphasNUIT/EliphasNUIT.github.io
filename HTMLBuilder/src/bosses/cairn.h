@@ -8,7 +8,7 @@ class Cairn : public Bosses
 public:
     Cairn();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // CAIRN_H

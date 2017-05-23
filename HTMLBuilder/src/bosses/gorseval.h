@@ -9,7 +9,7 @@ class Gorseval : public Bosses
 public:
     Gorseval();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // GORSEVAL_H

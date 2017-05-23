@@ -8,7 +8,7 @@ class KeepConstruct : public Bosses
 public:
     KeepConstruct();
 private:
-    QStringList getTries();
+    void virtualPure(){}
 };
 
 #endif // KEEPCONSTRUCT_H
