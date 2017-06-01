@@ -6,6 +6,6 @@ Matthias::Matthias() : Bosses()
     this->imagePath = "<img src=\"../images/131px-Matthias_Gabrel.jpg\">";
     this->htmlFile = "../../Bosses/Matthias.html";
     this->ressourceDir = "\"../ressources/Mat/";
-    this->ressourcePath = "../../ressources/%Mat";
+    this->ressourcePath = "../../ressources/Mat";
 }
 
