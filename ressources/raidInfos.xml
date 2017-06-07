@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid_info>
+	<raid name="Forsaken Thicket">
+	
+		<wing name="Spirit Vale">
+			<boss name="Vale Guardian">
+				<image>214px-Vale_Guardian.jpg</image>
+				<shortRef>VG</shortRef>
+			</boss>
+			<boss name="Gorseval the Multifarious">
+				<image>240px-Gorseval_the_Multifarious.jpg</image>
+				<shortRef>Gorse</shortRef>
+			</boss>
+			<boss name="Sabetha the Saboteur">
+				<image>173px-Sabetha_the_Saboteur.jpg</image>
+				<shortRef>Sab</shortRef>
+			</boss>
+		</wing>
+		
+		<wing name="Salvation Pass">
+			<boss name="Slothasor">
+				<image>240px-Slothasor.jpg</image>
+				<shortRef>Sloth</shortRef>
+			</boss>
+			<boss name="Matthias Gabrel">
+				<image>131px-Matthias_Gabrel.jpg</image>
+				<shortRef>Mat</shortRef>
+			</boss>
+		</wing>
+		
+		<wing name="Stronghold of the Faithful">
+			<boss name="Keep Construct">
+				<image>240px-Keep_Construct.jpg</image>
+				<shortRef>KC</shortRef>
+			</boss>
+			<boss name="Xera">
+				<image>228px-Xera_(Illusion).jpg</image>
+				<shortRef>Xera</shortRef>
+			</boss>
+		</wing>
+		
+	</raid>
+	
+	<raid name="Bastion of the Penitent">
+		
+		<wing name="Bastion of the Penitent">
+			<boss name="Cairn the Indomitable">
+				<image>240px-Cairn_the_Indomitable.jpg</image>
+				<shortRef>Cairn</shortRef>
+			</boss>
+			<boss name="Mursaat Overseer">
+				<image></image>
+				<shortRef>MO</shortRef>
+			</boss>
+			<boss name="Samarog">
+				<image>240px-Samarog.jpg</image>
+				<shortRef>Sam</shortRef>
+			</boss>
+			<boss name="Deimos">
+				<image>240px-Deimos.jpg</image>
+				<shortRef>Dei</shortRef>
+			</boss>
+		</wing>
+		
+	</raid>
+	
+</raid_info>

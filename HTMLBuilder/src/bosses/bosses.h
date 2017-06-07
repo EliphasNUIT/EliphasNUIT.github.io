@@ -10,16 +10,13 @@ class Bosses : public QObject
 {
     Q_OBJECT
 public:
-    explicit Bosses(QObject *parent = 0);
+    explicit Bosses(QObject *parent = 0, const QString& name, const QString& shortRef);
     void writeToHtml();
-    inline QString getName() {
-        return this->name;
-    }
 
 signals:
 
 public slots:
-protected:
+private:
     QString name;
     QString imagePath;
     QString htmlFile;
@@ -27,7 +24,6 @@ protected:
     QString ressourceDir;
 private:
     QStringList getTries();
-    virtual void virtualPure() = 0;
 };
 
 #endif // BOSSES_H

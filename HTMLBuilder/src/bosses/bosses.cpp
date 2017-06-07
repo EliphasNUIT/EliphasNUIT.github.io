@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QTextStream>
 
-Bosses::Bosses(QObject *parent) : QObject(parent)
+Bosses::Bosses(QObject *parent) : QObject(parent, const QString& name, const QString& shortRef)
 {
 }
 
@@ -14,13 +14,13 @@ void Bosses::writeToHtml(){
     res << "<!DOCTYPE html>";
     res <<"<html>";
     res << "<head>";
-    res <<    "<meta charset=\"utf-8\">";
-    res <<    "<title>[ODS] " + this->getName() + " Logs</title>";
+    res <<    "<meta charset=\"latin\">";
+    res <<    "<title>[ODS] " + this->name; + " Logs</title>";
     res <<    "<meta name=\"author\" content=\"EliphasNUIT\">";
     res <<    "<link href=\"../styles/style.css\" rel=\"stylesheet\" type=\"text/css\">";
     res <<  "</head>";
     res <<  "<body>";
-    res <<    "<h1>" + this->getName() + " [ODS]</h1>";
+    res <<    "<h1>" + this->name; + " [ODS]</h1>";
     res <<    this->imagePath;
     res <<    "<p> <a href=\"https://eliphasnuit.github.io/\">Index</a> </p>";
     res <<    "<p>Les try</p> ";
