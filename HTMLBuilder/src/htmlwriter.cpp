@@ -1,60 +1,63 @@
 #include "htmlwriter.h"
 #include <QStringListIterator>
 
-#include "./bosses/cairn.h"
-#include "./bosses/deimos.h"
-#include "./bosses/gorseval.h"
-#include "./bosses/guardian.h"
-#include "./bosses/keepconstruct.h"
-#include "./bosses/matthias.h"
-#include "./bosses/mursaat.h"
-#include "./bosses/sabetha.h"
-#include "./bosses/samarog.h"
-#include "./bosses/slothasor.h"
-#include "./bosses/xera.h"
-
 #include <QDebug>
 #include <QDir>
 #include <QFile>
 
 HtmlWriter::HtmlWriter(QObject *parent) : QObject(parent)
 {
-    this->bossList << new Cairn();
-    this->bossList << new Deimos();
-    this->bossList << new Gorseval();
-    this->bossList << new Guardian();
-    this->bossList << new KeepConstruct();
-    this->bossList << new Matthias();
-    this->bossList << new Mursaat();
-    this->bossList << new Sabetha();
-    this->bossList << new Samarog();
-    this->bossList << new Slothasor();
-    this->bossList << new Xera();
 }
 
 HtmlWriter::~HtmlWriter() {
-    for (int i = 0; i < this->bossList.length(); i++) {
-        delete this->bossList[i];
+    for (int i = 0; i < this->raidList.length(); i++) {
+        delete this->raidList[i];
     }
-
+    this->raidList.clear();
 }
 
-void HtmlWriter::treatHTML(){
-    // empty dir first
+void HtmlWriter::execute(){
+
+    qInfo() << "removing old files";
     QString path = "../../Bosses/";
     QDir dir(path);
     dir.setNameFilters(QStringList() << "*.*");
     dir.setFilter(QDir::Files);
     foreach(QString dirFile, dir.entryList())
     {
+        qInfo() << "removing " + dirFile;
         dir.remove(dirFile);
     }
-    // then create again
-    for (int i = 0; i < this->bossList.length(); i++) {
-        Bosses* boss = this->bossList[i];
-        qInfo() << "treating " + boss->getName();
-        boss->writeToHtml();
-        qInfo() << "finished " + boss->getName();
-        qInfo() << endl;
+    qInfo() << "old files removed";
+
+    QFile xmlFile("../../ressources/raidInfos.xml");
+	if(xmlFile.open(QIODevice::ReadOnly)) {
+        qInfo() << "opened xml";
+		QXmlStreamReader reader(&xmlFile);
+		if (reader.readNextStartElement()) {
+			if (reader.name() == "raid_info") {
+				this->read(reader);
+			}
+		}else {
+            reader.raiseError(QObject::tr("Incorrect file"));
+        }
+    } else {
+        qInfo() << "file not found";
     }
+
+    for (int i = 0; i < this->raidList.length(); i++) {
+        this->raidList[i]->generateHTMLs();
+    }
+}
+
+void HtmlWriter::read(QXmlStreamReader& reader){
+	while (reader.readNextStartElement()) {
+		if (reader.name() == "raid") {
+            QString raidName = reader.attributes().value("name").toString();
+            Raid* raid = new Raid(raidName,0);
+            this->raidList << raid;
+            raid->read(reader);
+        }
+	}
+    qInfo() << endl;
 }

@@ -3,7 +3,10 @@
 
 #include <QObject>
 #include <QVector>
-#include "./bosses/bosses.h"
+#include <QXmlStreamReader>
+#include <QFile>
+#include "./raid.h"
+
 
 class HtmlWriter : public QObject
 {
@@ -11,12 +14,12 @@ class HtmlWriter : public QObject
 public:
     explicit HtmlWriter(QObject *parent = 0);
     ~HtmlWriter();
-    void treatHTML();
-signals:
-
+    void execute();
 public slots:
 private:
-    QVector<Bosses*> bossList;
+    void read(QXmlStreamReader& reader);
+private:
+    QVector<Raid*> raidList;
 };
 
 #endif // HTMLWRITER_H

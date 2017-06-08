@@ -1,18 +1,19 @@
-#ifndef BOSSES_H
-#define BOSSES_H
+#ifndef BOSS_H
+#define BOSS_H
 
 #include <QObject>
 #include <QDir>
 #include <QFile>
+#include <QXmlStreamReader>
 #include <QStringListIterator>
 
-class Bosses : public QObject
+class Boss : public QObject
 {
     Q_OBJECT
 public:
-    explicit Bosses(QObject *parent = 0, const QString& name, const QString& shortRef);
-    void writeToHtml();
-
+    explicit Boss(const QString& name,QObject *parent = 0);
+    void generateHTMLs();
+    void read(QXmlStreamReader& reader);
 signals:
 
 public slots:
