@@ -72,7 +72,7 @@ Thumbs.db
 *.exe
 
 # directory
-./build*
+build*
 
 # raccourcis
 *.lnk

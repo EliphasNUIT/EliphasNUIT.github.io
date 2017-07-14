@@ -25,7 +25,7 @@ void Boss::generateHTMLs(){
     res <<  "<body>";
     res <<    "<h1>" + this->name + " [ODS]</h1>";
     res <<    this->imagePath;
-    res <<    "<p> <a href=\"https://eliphasnuit.github.io/\">Index</a> </p>";
+    res <<    "<p> <a href=\"../index.html\">Index</a> </p>";
     res <<    "<p>Les try</p> ";
     res <<        "<ul> ";
     res <<    this->getTries();
