@@ -54,6 +54,22 @@
 				<image>240px-Deimos.jpg</image>
 				<shortRef>Dei</shortRef>
 			</boss>
+			<boss name="Cairn the Indomitable CM">
+				<image>240px-Cairn_the_Indomitable.jpg</image>
+				<shortRef>CairnCM</shortRef>
+			</boss>
+			<boss name="Mursaat Overseer CM">
+				<image>151px-Mursaat_Overseer.jpg</image>
+				<shortRef>MOCM</shortRef>
+			</boss>
+			<boss name="Samarog CM">
+				<image>240px-Samarog.jpg</image>
+				<shortRef>SamCM</shortRef>
+			</boss>
+			<boss name="DeimosCM">
+				<image>240px-Deimos.jpg</image>
+				<shortRef>DeiCM</shortRef>
+			</boss>
 		</wing>		
 	</raid>	
 </raid_info>
