@@ -13,11 +13,12 @@ Raid::~Raid() {
     this->wingList.clear();
 }
 
-void Raid::generateHTMLs(){
+void Raid::generateHTMLs(QTextStream& stream){
     qInfo() << "treating " + this->name;
 
+    stream << "<h2>"+this->name+"</h2>" << endl;
     for (int i = 0; i < this->wingList.length(); i++) {
-        this->wingList[i]->generateHTMLs();
+        this->wingList[i]->generateHTMLs(stream);
     }
 
     qInfo() << "treated " + this->name;

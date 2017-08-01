@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QVector>
 #include <QXmlStreamReader>
+#include <QTextStream>
 #include "./wing.h"
 
 class Raid : public QObject
@@ -12,7 +13,7 @@ class Raid : public QObject
 public:
     explicit Raid(const QString& name, QObject *parent = 0);
     ~Raid();
-    void generateHTMLs();
+    void generateHTMLs(QTextStream& stream);
     void read(QXmlStreamReader& reader);
 private:
     QString name;

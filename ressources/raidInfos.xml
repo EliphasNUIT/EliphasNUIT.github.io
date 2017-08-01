@@ -14,7 +14,7 @@
 				<image>173px-Sabetha_the_Saboteur.jpg</image>
 				<shortRef>Sab</shortRef>
 			</boss>
-		</wing>	
+		</wing>
 		<wing name="Salvation Pass">
 			<boss name="Slothasor">
 				<image>240px-Slothasor.jpg</image>
@@ -24,7 +24,7 @@
 				<image>131px-Matthias_Gabrel.jpg</image>
 				<shortRef>Mat</shortRef>
 			</boss>
-		</wing>		
+		</wing>
 		<wing name="Stronghold of the Faithful">
 			<boss name="Keep Construct">
 				<image>240px-Keep_Construct.jpg</image>
@@ -34,9 +34,9 @@
 				<image>228px-Xera_(Illusion).jpg</image>
 				<shortRef>Xera</shortRef>
 			</boss>
-		</wing>		
+		</wing>
 	</raid>
-	<raid name="Bastion of the Penitent">		
+	<raid name="Bastion of the Penitent">
 		<wing name="Bastion of the Penitent">
 			<boss name="Cairn the Indomitable">
 				<image>240px-Cairn_the_Indomitable.jpg</image>
@@ -54,6 +54,8 @@
 				<image>240px-Deimos.jpg</image>
 				<shortRef>Dei</shortRef>
 			</boss>
+		</wing>
+		<wing name="Bastion of the Penitent CM">
 			<boss name="Cairn the Indomitable CM">
 				<image>240px-Cairn_the_Indomitable.jpg</image>
 				<shortRef>CairnCM</shortRef>
@@ -70,6 +72,6 @@
 				<image>240px-Deimos.jpg</image>
 				<shortRef>DeiCM</shortRef>
 			</boss>
-		</wing>		
-	</raid>	
+		</wing>
+	</raid>
 </raid_info>

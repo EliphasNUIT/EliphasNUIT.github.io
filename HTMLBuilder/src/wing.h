@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QVector>
 #include <QXmlStreamReader>
+#include <QTextStream>
 #include "./boss.h"
 
 class Wing : public QObject
@@ -12,7 +13,7 @@ class Wing : public QObject
 public:
     explicit Wing(const QString& name, QObject *parent = 0);
     ~Wing();
-    void generateHTMLs();
+    void generateHTMLs(QTextStream& stream);
     void read(QXmlStreamReader& reader);
 private:
     QString name;

@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QDir>
 #include <QFile>
+#include <QTextStream>
 #include <QXmlStreamReader>
 #include <QStringListIterator>
 
@@ -12,7 +13,7 @@ class Boss : public QObject
     Q_OBJECT
 public:
     explicit Boss(const QString& name,QObject *parent = 0);
-    void generateHTMLs();
+    void generateHTMLs(QTextStream &streamIndex);
     void read(QXmlStreamReader& reader);
 signals:
 
@@ -23,6 +24,7 @@ private:
     QString htmlFile;
     QString ressourcePath;
     QString ressourceDir;
+    QString shortRef;
 private:
     QStringList getTries();
 };
