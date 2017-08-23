@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <head>
     <meta charset="latin">
     <title>[ODS] Matthias Gabrel Logs</title>
     <meta name="author" content="EliphasNUIT">
-    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="../styles/styleBoss.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1>Matthias Gabrel [ODS]</h1>
@@ -12,12 +13,14 @@
     <p> <a href="../index.html">Index</a> </p>
     <p>Les try</p> 
         <ul> 
-<li> <a href="../ressources/Mat/20170718-230158_matt.html">2017/07/18</a> </li>
-<li> <a href="../ressources/Mat/20170705-001855_matt.html">2017/07/05</a> </li>
-<li> <a href="../ressources/Mat/20170627-232813_matt.html">2017/06/27</a> </li>
-<li> <a href="../ressources/Mat/20170613-235455_matt.html">2017/06/13</a> </li>
-<li> <a href="../ressources/Mat/20170603-230139_matt.html">2017/06/03</a> </li>
-<li> <a href="../ressources/Mat/20170531-010434_matt.html">2017/05/31</a> </li>
+            <script type="text/javascript"> function display(frameID) { var iframe = $(frameID); iframe.attr("src",iframe.data("src")); iframe.attr("width","1200"); iframe.attr("height","1200");} </script>
+            <script type="text/javascript"> function closeDisplay(frameID) { var iframe = $(frameID); iframe.attr("src","about:blank"); iframe.attr("width","1"); iframe.attr("height","1");} </script>
+            <li> <button onclick="display('#2017_06_13')"> Afficher les logs du 13/06/2017</button> <button onclick="closeDisplay('#2017_06_13')"> Fermer les logs du 13/06/2017</button> </li>
+            <iframe id="2017_06_13" data-src="../ressources/Mat/20170613-235455_matt.html" width="0" height="0" src="about:blank"> </iframe>
+            <li> <button onclick="display('#2017_06_03')"> Afficher les logs du 03/06/2017</button> <button onclick="closeDisplay('#2017_06_03')"> Fermer les logs du 03/06/2017</button> </li>
+            <iframe id="2017_06_03" data-src="../ressources/Mat/20170603-230139_matt.html" width="0" height="0" src="about:blank"> </iframe>
+            <li> <button onclick="display('#2017_05_31')"> Afficher les logs du 31/05/2017</button> <button onclick="closeDisplay('#2017_05_31')"> Fermer les logs du 31/05/2017</button> </li>
+            <iframe id="2017_05_31" data-src="../ressources/Mat/20170531-010434_matt.html" width="0" height="0" src="about:blank"> </iframe>
         </ul>
     <p>Tous les logs ont été créés par <a href="https://www.deltaconnected.com/arcdps/">ArcDPS</a> et parsés par <a href="https://raidheroes.tk/">Raid Heroes</a>.</p>
 </body>
