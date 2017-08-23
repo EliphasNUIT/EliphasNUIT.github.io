@@ -6,6 +6,9 @@ function display(frameID) {
         iframe.load(function () {
             iframe.width("1200");
             iframe.height(iframe.contents().height());
+            iframe.resize(function() {
+                iframe.height(iframe.contents().height());
+            });
             iframe.attr("status", "open");
         });
     } else {
@@ -13,6 +16,7 @@ function display(frameID) {
         iframe.load(function () {
             iframe.width("1");
             iframe.height("1");
+            iframe.resize(null);
             iframe.attr("status", "closed");
         });
 
