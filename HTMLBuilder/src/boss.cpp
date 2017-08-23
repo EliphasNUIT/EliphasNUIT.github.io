@@ -20,6 +20,7 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "<!DOCTYPE html>";
     res <<"<html>";
     res << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>";
+    res << "<script src=\"../scripts/display.js\"></script>";
     res << "<head>";
     res << "    <meta charset=\"latin\">";
     res << "    <title>[ODS] " + this->name + " Logs</title>";
@@ -61,9 +62,7 @@ QStringList Boss::getTries() {
     QStringList tries = triesDir.entryList(QDir::Files, QDir::Name | QDir::Reversed );
     QStringList res;
     QStringListIterator it(tries);
-    res << "            <script type=\"text/javascript\"> function display(frameID) { var iframe = $(frameID); iframe.attr(\"src\",iframe.data(\"src\")); iframe.attr(\"width\",\"1200\"); iframe.attr(\"height\",\"1200\");} </script>";
-    res << "            <script type=\"text/javascript\"> function closeDisplay(frameID) { var iframe = $(frameID); iframe.attr(\"src\",\"about:blank\"); iframe.attr(\"width\",\"1\"); iframe.attr(\"height\",\"1\");} </script>";
-    while(it.hasNext()) {
+   while(it.hasNext()) {
         QString aux(it.next());
         QString date = aux.split("-").at(0);
         date.insert(4,"_");
@@ -71,9 +70,8 @@ QStringList Boss::getTries() {
         const QString path = this->ressourceDir + aux;
         const QString iFrameName = "#" + date;
         const QString displayName = "display(\'"+iFrameName+"\')";
-        const QString closeName = "closeDisplay(\'"+iFrameName+"\')";
-        res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + toDate(date) + "</button> <button onclick=\""+closeName+"\"> Fermer les logs du " + toDate(date) + "</button> </li>";
-        res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\"> </iframe>";
+        res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + toDate(date) + "</button> </li>";
+        res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" status=\"closed\"> </iframe>";
     }
     return res;
 }

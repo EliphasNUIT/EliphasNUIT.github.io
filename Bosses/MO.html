@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../scripts/display.js"></script>
 <head>
     <meta charset="latin">
     <title>[ODS] Mursaat Overseer Logs</title>
@@ -13,14 +14,12 @@
     <p> <a href="../index.html">Index</a> </p>
     <p>Les try</p> 
         <ul> 
-            <script type="text/javascript"> function display(frameID) { var iframe = $(frameID); iframe.attr("src",iframe.data("src")); iframe.attr("width","1200"); iframe.attr("height","1200");} </script>
-            <script type="text/javascript"> function closeDisplay(frameID) { var iframe = $(frameID); iframe.attr("src","about:blank"); iframe.attr("width","1"); iframe.attr("height","1");} </script>
-            <li> <button onclick="display('#2017_06_06')"> Afficher les logs du 06/06/2017</button> <button onclick="closeDisplay('#2017_06_06')"> Fermer les logs du 06/06/2017</button> </li>
-            <iframe id="2017_06_06" data-src="../ressources/MO/20170606-225002_mo.html" width="0" height="0" src="about:blank"> </iframe>
-            <li> <button onclick="display('#2017_05_30')"> Afficher les logs du 30/05/2017</button> <button onclick="closeDisplay('#2017_05_30')"> Fermer les logs du 30/05/2017</button> </li>
-            <iframe id="2017_05_30" data-src="../ressources/MO/20170530-223333_mo.html" width="0" height="0" src="about:blank"> </iframe>
-            <li> <button onclick="display('#2017_05_23')"> Afficher les logs du 23/05/2017</button> <button onclick="closeDisplay('#2017_05_23')"> Fermer les logs du 23/05/2017</button> </li>
-            <iframe id="2017_05_23" data-src="../ressources/MO/20170523-231713_mo.html" width="0" height="0" src="about:blank"> </iframe>
+            <li> <button onclick="display('#2017_06_06')"> Afficher les logs du 06/06/2017</button> </li>
+            <iframe id="2017_06_06" data-src="../ressources/MO/20170606-225002_mo.html" width="0" height="0" src="about:blank" status="closed"> </iframe>
+            <li> <button onclick="display('#2017_05_30')"> Afficher les logs du 30/05/2017</button> </li>
+            <iframe id="2017_05_30" data-src="../ressources/MO/20170530-223333_mo.html" width="0" height="0" src="about:blank" status="closed"> </iframe>
+            <li> <button onclick="display('#2017_05_23')"> Afficher les logs du 23/05/2017</button> </li>
+            <iframe id="2017_05_23" data-src="../ressources/MO/20170523-231713_mo.html" width="0" height="0" src="about:blank" status="closed"> </iframe>
         </ul>
     <p>Tous les logs ont été créés par <a href="https://www.deltaconnected.com/arcdps/">ArcDPS</a> et parsés par <a href="https://raidheroes.tk/">Raid Heroes</a>.</p>
 </body>
