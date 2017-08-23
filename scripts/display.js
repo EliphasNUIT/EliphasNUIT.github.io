@@ -4,16 +4,15 @@ function display(frameID) {
     if (status === "closed") {
         iframe.attr("src", iframe.data("src"));
         iframe.load(function () {
-            var content = iframe.contents();
-            iframe.attr("width", "1200");
-            iframe.attr("height", "2200");
+            iframe.width("1200");
+            iframe.height(iframe.contents().height());
             iframe.attr("status", "open");
         });
     } else {
         iframe.attr("src", "about:blank");
         iframe.load(function () {
-            iframe.attr("width", "1");
-            iframe.attr("height", "1");
+            iframe.width("1");
+            iframe.height("1");
             iframe.attr("status", "closed");
         });
 
