@@ -139,3 +139,37 @@ var elemSkills = {
 
 
 var Elementalist = new Class([Fire, Air, Earth, Water, Arcane, Tempest, Weaver], elemSkills);
+
+builds["#tempPS"] = {
+    class: Elementalist,
+    specializations: [
+        { name: "Fire", traits: ["Duelist's Discipline", "Blinding Dissipation", "Superiority Complex"] },
+        { name: "Arcane", traits: ["Descent into Madness", "Chaotic Transference", "Bountiful Disillusionment"] },
+        { name: "Tempest", traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"] }
+    ],
+    skils: ["Signet of the Ether", "Mantra of Distraction", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
+    armor: {
+        type: "light",
+        helm: { stat: "Viper", rune: "Superior Rune of the Berserker" },
+        shoulders: { stat: "Viper", rune: "Superior Rune of the Berserker" },
+        coat: { stat: "Viper", rune: "Superior Rune of the Berserker" },
+        gloves: { stat: "Viper", rune: "Superior Rune of the Berserker" },
+        leggings: { stat: "Viper", rune: "Superior Rune of the Berserker" },
+        boots: { stat: "Viper", rune: "Superior Rune of the Berserker" }
+    },
+    trinket: {
+        amulet: "Viper",
+        ring1: "Viper",
+        ring2: "Viper",
+        earring1: "Viper",
+        earring2: "Viper",
+        back: "Viper"
+    },
+    weapons: {
+        mainHand1: { type: "Scepter", stat: "Viper", sigils: ["Superior Sigil of Malice"] },
+        mainHand2: null,
+        offHand1: { type: "Warhorn", stat: "Viper", sigils: ["Superior Sigil of Geomancy"] },
+        offHand2: null
+    },
+    food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
+};

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-<script src="../../scripts/genericAPI.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script src="../../scripts/thief.js"></script>
-<script src="../../scripts/ranger.js"></script>
+<script src="https://gw2armory.com/gw2aEmbeds.js"></script>
+<script src="../../scripts/API/matchingAPI.js"></script>
+<script src="../../scripts/API/genericAPI.js"></script>
 
-<script src="../../scripts/elementalist.js"></script>
-<script src="../../scripts/mesmer.js"></script>
+<script src="../../scripts/API/thief.js"></script>
+<script src="../../scripts/API/ranger.js"></script>
 
-<script src="../../scripts/warrior.js"></script>
-<script src="../../scripts/guardian.js"></script>
+<script src="../../scripts/API/elementalist.js"></script>
+<script src="../../scripts/API/mesmer.js"></script>
+
+<script src="../../scripts/API/warrior.js"></script>
+<script src="../../scripts/API/guardian.js"></script>
 
 <head>
     <meta charset="utf-8">
     <title>[ODS] GW2 Logs</title>
     <meta id="author" content="EliphasNUIT">
-    <link href="../../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/styleCompo.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -28,38 +32,60 @@
     <table>
         <thead>
             <tr>
-                <td>Player T1</td>
-                <td>Class</td>
-
-                <td>Role</td>
+                <td>
+                    <div smallpadding center>Player T1</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
+                <td>
+                    <div smallpadding center>Role</div>
+                </td>
             </tr>
         </thead>
 
         <tbody>
             <tr>
                 <td><a href="https://gw2armory.com/suzuca.3248/characters">Akitae</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhAQRAse8dncfClfi9fCGoBEgiFVj68JGiprOZn2qlMAGhiD-TRSBQB8b/h7pVAAnEgLq8jSqvgHdBkUJ4BVhYiPBASB41KN-e">Chrono Tank</a></td>
-                <td>tank</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#VGchrTank')"> Chrono Tank</button> </div>
+                    <div id="VGchrTank" build visibility="false" init="false"></div>
+                </td>
+                <td>tank
+                    <div smallpadding></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/damdidamdide.5209/characters">Dam</a></td>
-                <td><a href="http://gw2skills.net/editor/?vNUQNAV3fn0rClsiNrAuqAEtiFDBrpDEsqaMBg1VDAerGWLrlcsUA-TBiHQB16JAQQlf0T9HAcRAInuDntwgGVCGk9BIFwiKrA-e">Druide Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#VGdruidCondi')"> Druide Condi</button> </div>
+                    <div id="VGdruidCondi" build visibility="false" init="false"></div>
+                </td>
                 <td>zone verte</td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/drazic.4795/characters">Arkness</a></td>
-                <td><a href="http://gw2skills.net/editor/?vJUQNAT8fnckCVeg1eAefAElilpA7YAGAGZJlgTws7N1+artA-TxhHQBaUJI9U/hgK/AwTAgc6GOz+D16iAQKgAXWB-e">PS Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#bersCPS2Banners')"> Berserker CPS</button> </div>
+                    <div id="bersCPS2Banners" build visibility="false" init="false"></div>
+                </td>
                 <td>Rouge</td>
             </tr>
 
             <tr>
                 <td><a href="https://gw2armory.com/EliphasNUIT/characters">Eliphas</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhUQRArf7ansIC1ohNoBWoBMrhlVDyMGLvnob5MPpsDFPAA-TxhHQB16kAAgnAgGVCSQlf0T9nyt/A50PQKgFVWB-e">Mesmer Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#VGmesCondi')"> Mesmer Condi</button> </div>
+                    <div id="VGmesCondi" build visibility="false" init="false"></div>
+                </td>
                 <td>zone verte + rouge</td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/Genouw.2873/characters">Sakura</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhUQRArf7ansIC1ohNoBWoBMrhlVDyMGLvnob5MPpsDFPAA-TxhHQB16kAAgnAgGVCSQlf0T9nyt/A50PQKgFVWB-e">Mesmer Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#VGmesCondi')"> Mesmer Condi</button> </div>
+                    <div id="VGmesCondi" build visibility="false" init="false"></div>
+                </td>
                 <td>zone verte + rouge</td>
             </tr>
         </tbody>
@@ -67,20 +93,32 @@
     <table>
         <thead>
             <tr>
-                <td>Player T2</td>
-                <td>Class</td>
-                <td>Role</td>
+                <td>
+                    <div smallpadding center>Player T2</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
+                <td>
+                    <div smallpadding center>Role</div>
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><a href="https://gw2armory.com/Kaeryh/characters">Polgara</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhAQRAse8dncfClfi9fCGoBEgiFVjqOZn2qlMAGhi78JGipD-TBSBQBkUJ4EfCAUS9lLq8DAnEA+t/wBVhAP6HIFgXr0A-e">Chrono DPS</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#VGchrDPS')"> Chrono DPS</button> </div>
+                    <div id="VGchrDPS" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/drazic.4795/characters">Winter</a></td>
-                <td><a href="http://gw2skills.net/editor/?vNUQNBmOD7keVokVsVFwZFgoVsYIYMBg1VDw51F76Bwd1waZtEjHG-TRyGQBk7hA0GdDDZ/BFpeDBVONRlg0TFhapkBAXBgAAHAccgUA+NzC-e">Druide Heal</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#VGdruidHeal')"> Druide Heal</button> </div>
+                    <div id="VGdruidHeal" build visibility="false" init="false"></div>
+                </td>
                 <td>zone verte</td>
             </tr>
             <tr>
