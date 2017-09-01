@@ -148,6 +148,7 @@ builds["#bersCPS2Banners"] = {
         { name: "Berserker", traits: ["Last Blaze", "Heat the Soul", "King of Fires"] }
     ],
     skils: ["Blood Reckoning", "For Great Justice", "Banner of Discipline", "Banner of Strength", "Head Butt"],
+    pets: null,
     armor: {
         type: "Heavy",
         helm: { stat: "Viper", rune: "Superior Rune of the Aristocracy" },
@@ -183,6 +184,7 @@ builds["#bersCPS"] = {
         { name: "Berserker", traits: ["Last Blaze", "Heat the Soul", "King of Fires"] }
     ],
     skils: ["Blood Reckoning", "For Great Justice", "Shattering Blow", "", "Head Butt"],
+    pets: null,
     armor: {
         type: "Heavy",
         helm: { stat: "Viper", rune: "Superior Rune of the Aristocracy" },
@@ -217,6 +219,7 @@ builds["#bersCPSKC"] = {
         { name: "Berserker", traits: ["Last Blaze", "Heat the Soul", "King of Fires"] }
     ],
     skils: ["Blood Reckoning", "For Great Justice", "Shattering Blow", "", "Head Butt"],
+    pets: null,
     armor: {
         type: "Heavy",
         helm: { stat: "Viper", rune: "Superior Rune of the Aristocracy" },
@@ -251,6 +254,7 @@ builds["#bersCPSCC"] = {
         { name: "Berserker", traits: ["Last Blaze", "Heat the Soul", "King of Fires"] }
     ],
     skils: ["Blood Reckoning", "For Great Justice", "Wild Blow", "", "Head Butt"],
+    pets: null,
     armor: {
         type: "Heavy",
         helm: { stat: "Viper", rune: "Superior Rune of the Aristocracy" },

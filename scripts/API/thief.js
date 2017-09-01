@@ -1,134 +1,134 @@
 // 
 var Deadly_Arts = {
     name: "Deadly Arts",
-    id: "10",
+    id: "28",
     traits: {
         // adept
-        "Dagger Training": "686",
-        "Mug": "682",
-        "Trappers Respite": "687",
+        "Dagger Training": "1245",
+        "Mug": "1276",
+        "Trappers Respite": "1164",
         // master
-        "Deadly Trapper": "693",
-        "Panic Strike": "713",
-        "Revealed Training": "712",
+        "Deadly Trapper": "1169",
+        "Panic Strike": "1292",
+        "Revealed Training": "1704",
         // grand master
-        "Potent Poison": "681",
-        "Improvisation": "680",
-        "Executioner": "1688"
+        "Potent Poison": "1291",
+        "Improvisation": "1167",
+        "Executioner": "1269"
     }
 };
 // 
 var Critical_Strikes = {
     name: "Critical Strikes",
-    id: "1",
+    id: "35",
     traits: {
         // adept
-        "Assassin's Fury": "701",
-        "Signets of Power": "705",
-        "Twin Fangs": "700",
+        "Assassin's Fury": "1209",
+        "Signets of Power": "1267",
+        "Twin Fangs": "1268",
         // master
-        "Sundering Strikes": "1889",
-        "Practiced Tolerance": "1960",
-        "Ankle Shots": "708",
+        "Sundering Strikes": "1170",
+        "Practiced Tolerance": "1272",
+        "Ankle Shots": "1299",
         // grand master
-        "No Quarter": "692",
-        "Hidden Killer": "1950",
-        "Invigorating Precision": "704"
+        "No Quarter": "1904",
+        "Hidden Killer": "1215",
+        "Invigorating Precision": "1702"
     }
 };
 // 
 var Shadow_Arts = {
     name: "Shadow Arts",
-    id: "45",
+    id: "20",
     traits: {
         // adept
-        "Last Refuge": "670",
-        "Concealed Defeat": "675",
-        "Shadow's Embrace": "677",
+        "Last Refuge": "1160",
+        "Concealed Defeat": "1293",
+        "Shadow's Embrace": "1284",
         // master
-        "Shadow Protector": "673",
-        "Hidden Thief": "668",
-        "Leeching Venoms": "669",
+        "Shadow Protector": "1297",
+        "Hidden Thief": "1130",
+        "Leeching Venoms": "1300",
         // grand master
-        "Cloaked in Shadow": "671",
-        "Shadow's Rejuvenation": "674",
-        "Rending Shade": "1687"
+        "Cloaked in Shadow": "1134",
+        "Shadow's Rejuvenation": "1135",
+        "Rending Shade": "1162"
     }
 };
 // 
 var Acrobatics = {
     name: "Acrobatics",
-    id: "23",
+    id: "54",
     traits: {
         // adept
-        "Instant Reflexes": "756",
-        "Vigorous Recovery": "738",
-        "Pain Response": "744",
+        "Instant Reflexes": "1112",
+        "Vigorous Recovery": "1289",
+        "Pain Response": "1237",
         // master
-        "Guarded Initiation": "751",
-        "Swindler's Equilibrium": "740",
-        "Hard to Catch": "1980",
+        "Guarded Initiation": "1241",
+        "Swindler's Equilibrium": "1192",
+        "Hard to Catch": "1290",
         // grand master
-        "Assassin's Reward": "2005",
-        "Upper Hand": "1866",
-        "Don't Stop": "752"
+        "Assassin's Reward": "1238",
+        "Upper Hand": "1295",
+        "Don't Stop": "1703"
     }
 };
 // 
 var Trickery = {
     name: "Trickery",
-    id: "24",
+    id: "44",
     traits: {
         // adept
-        "Uncatchable": "721",
-        "Burst of Agility": "1869",
-        "Thrill of the Crime": "691",
+        "Uncatchable": "1159",
+        "Burst of Agility": "1252",
+        "Thrill of the Crime": "1163",
         // master
-        "Bountiful Theft": "722",
-        "Trickster": "729",
-        "Pressure Striking": "1690",
+        "Bountiful Theft": "1277",
+        "Trickster": "1286",
+        "Pressure Striking": "1190",
         // grand master
-        "Quick Pockets": "733",
-        "Sleight of Hand": "2035",
-        "Bewildering Ambush": "753"
+        "Quick Pockets": "1187",
+        "Sleight of Hand": "1158",
+        "Bewildering Ambush": "1706"
     }
 };
 //
 var Daredevil = {
     name: "Daredevil",
-    id: "40",
+    id: "7",
     traits: {
         // adept
-        "Havoc Mastery": "1838",
-        "Weakening Strikes": "1995",
-        "Brawler's Tenacity": "1987",
+        "Havoc Mastery": "1933",
+        "Weakening Strikes": "2023",
+        "Brawler's Tenacity": "1949",
         // master
-        "Staff Master": "2009",
-        "Escapist's Absolution": "1913",
-        "Impacting Disruption": "1978",
+        "Staff Master": "1884",
+        "Escapist's Absolution": "1893",
+        "Impacting Disruption": "1975",
         // grand master
-        "Lotus Training": "1942",
-        "Unhindered Combatant": "2022",
-        "Bounding Dodger": "1890"
+        "Lotus Training": "1833",
+        "Unhindered Combatant": "1964",
+        "Bounding Dodger": "2047"
     }
 };
 //
 var Deadeye = {
     name: "Deadeye",
-    id: "40",
+    id: "58",
     traits: {
         // adept
-        "Revealed Malice": "1838",
-        "Iron Sight": "1995",
-        "One in the Chamber": "1987",
+        "Revealed Malice": "2145",
+        "Iron Sight": "2173",
+        "One in the Chamber": "2136",
         // master
-        "Silent Scope": "2009",
-        "Unforgiving": "1913",
-        "Peripheral Vision": "1978",
+        "Silent Scope": "2118",
+        "Unforgiving": "2078",
+        "Peripheral Vision": "2160",
         // grand master
-        "Maleficent Seven": "1942",
-        "Be Quick or Be Killed": "2022",
-        "Fire for Effect": "1890"
+        "Maleficent Seven": "2111",
+        "Be Quick or Be Killed": "2093",
+        "Fire for Effect": "2146"
     }
 };
 //
@@ -139,3 +139,38 @@ var tfSkills = {
 
 
 var Thief = new Class([Deadly_Arts, Critical_Strikes, Shadow_Arts, Acrobatics, Trickery, Daredevil, Deadeye], tfSkills);
+
+builds["#drdPower"] = {
+    class: Thief,
+    specializations: [
+        { name: "Deadly Arts", traits: ["Mug", "Revealed Training", "Executioner"] },
+        { name: "Critical Strikes", traits: ["Twin Fangs", "Practiced Tolerance", "No Quarter"] },
+        { name: "Daredevil", traits: ["Havoc Mastery", "Staff Master", "Bounding Dodger"] }
+    ],
+    skils: ["Signet of Malice", "Assassin's Signet", "Spider Venom", "Fist Flurry", "Basilisk Venom"],
+    pets: null,
+    armor: {
+        type: "Medium",
+        helm: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
+        shoulders: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
+        coat: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
+        gloves: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
+        leggings: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
+        boots: { stat: "Berserker", rune: "Superior Rune of the Scholar" }
+    },
+    trinket: {
+        amulet: "Berserker",
+        ring1: "Berserker",
+        ring2: "Berserker",
+        earring1: "Berserker",
+        earring2: "Berserker",
+        back: "Berserker"
+    },
+    weapons: {
+        mainHand1: { type: "Staff", stat: "Berserker", sigils: ["Superior Sigil of Force", "Superior Sigil of Air"] },
+        mainHand2: null,
+        offHand1: null,
+        offHand2: null
+    },
+    food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
+};

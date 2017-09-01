@@ -147,6 +147,7 @@ builds["#VGchrTank"] = {
         { name: "Chronomancer", traits: ["All's Well That Ends Well", "Improved Alacrity", "Chronophantasma"] }
     ],
     skils: ["Well of Eternity", "Well of Action", "Well of Recall", "Signet of Inspiration", "Gravity Well"],
+    pets: null,
     armor: {
         type: "light",
         helm: { stat: "Berserker", rune: "Superior Rune of Leadership" },
@@ -181,6 +182,7 @@ builds["#VGchrDPS"] = {
         { name: "Chronomancer", traits: ["All's Well That Ends Well", "Improved Alacrity", "Chronophantasma"] }
     ],
     skils: ["Well of Eternity", "Well of Action", "Well of Recall", "Signet of Inspiration", "Gravity Well"],
+    pets: null,
     armor: {
         type: "light",
         helm: { stat: "Berserker", rune: "Superior Rune of Leadership" },
@@ -215,6 +217,7 @@ builds["#VGmesCondi"] = {
         { name: "Illusions", traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"] }
     ],
     skils: ["Signet of the Ether", "Mantra of Distraction", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
+    pets: null,
     armor: {
         type: "light",
         helm: { stat: "Viper", rune: "Superior Rune of the Berserker" },
@@ -240,3 +243,5 @@ builds["#VGmesCondi"] = {
     },
     food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
 };
+
+builds["#VGmesCondi2"] = builds["#VGmesCondi"];

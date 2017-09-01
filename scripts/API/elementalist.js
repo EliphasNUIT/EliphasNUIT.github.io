@@ -1,134 +1,134 @@
 // 
 var Fire = {
     name: "Fire",
-    id: "10",
+    id: "31",
     traits: {
         // adept
-        "Burning Precision": "686",
-        "Conjurer": "682",
-        "Burning Fire": "687",
+        "Burning Precision": "296",
+        "Conjurer": "328",
+        "Burning Fire": "335",
         // master
-        "Pyromancer's Training": "693",
-        "One with Fire": "713",
-        "Power Overwhelming": "712",
+        "Pyromancer's Training": "325",
+        "One with Fire": "340",
+        "Power Overwhelming": "334",
         // grand master
-        "Persisting Flames": "681",
-        "Pyromancer's Puissance": "680",
-        "Blinding Ashes": "1688"
+        "Persisting Flames": "1510",
+        "Pyromancer's Puissance": "294",
+        "Blinding Ashes": "1675"
     }
 };
 // 
 var Air = {
     name: "Air",
-    id: "1",
+    id: "41",
     traits: {
         // adept
-        "Zephyr's Boon": "701",
-        "One with Air": "705",
-        "Ferocious Winds": "700",
+        "Zephyr's Boon": "227",
+        "One with Air": "224",
+        "Ferocious Winds": "232",
         // master
-        "Inscription": "1889",
-        "Aeromancer's Training": "1960",
-        "Tempest Defense": "708",
+        "Inscription": "229",
+        "Aeromancer's Training": "214",
+        "Tempest Defense": "1502",
         // grand master
-        "Bolt to the Heart": "692",
-        "Fresh Air": "1950",
-        "Lightning Rod": "704"
+        "Bolt to the Heart": "226",
+        "Fresh Air": "1053",
+        "Lightning Rod": "1672"
     }
 };
 // 
 var Earth = {
     name: "Earth",
-    id: "45",
+    id: "26",
     traits: {
         // adept
-        "Earth's Embrace": "670",
-        "Serrated Stones": "675",
-        "Elemental Shielding": "677",
+        "Earth's Embrace": "282",
+        "Serrated Stones": "1507",
+        "Elemental Shielding": "289",
         // master
-        "Strength of Stone": "673",
-        "Rock Solid": "668",
-        "Geomancer's Training": "669",
+        "Strength of Stone": "275",
+        "Rock Solid": "281",
+        "Geomancer's Training": "277",
         // grand master
-        "Diamond Skin": "671",
-        "Written in Stone": "674",
-        "Stone Heart": "1687"
+        "Diamond Skin": "1508",
+        "Written in Stone": "287",
+        "Stone Heart": "1674"
     }
 };
 // 
 var Water = {
     name: "Water",
-    id: "23",
+    id: "17",
     traits: {
         // adept
-        "Soothing Ice": "756",
-        "Piercing Shards": "738",
-        "Stop, Drop, and Roll": "744",
+        "Soothing Ice": "348",
+        "Piercing Shards": "363",
+        "Stop, Drop, and Roll": "360",
         // master
-        "Cleansing Wave": "751",
-        "Soothing Disruption": "740",
-        "Aquamancer's Training": "1980",
+        "Cleansing Wave": "358",
+        "Soothing Disruption": "364",
+        "Aquamancer's Training": "349",
         // grand master
-        "Cleansing Water": "2005",
-        "Powerful Aura": "1866",
-        "Soothing Power": "752"
+        "Cleansing Water": "362",
+        "Powerful Aura": "361",
+        "Soothing Power": "2028"
     }
 };
 // 
 var Arcane = {
     name: "Arcane",
-    id: "24",
+    id: "37",
     traits: {
         // adept
-        "Arcane Precision": "721",
-        "Renewing Stamina": "1869",
-        "Arcane Abatement": "691",
+        "Arcane Precision": "253",
+        "Renewing Stamina": "266",
+        "Arcane Abatement": "1487",
         // master
-        "Arcane Resurrection": "722",
-        "Elemental Contingency": "729",
-        "Final Shielding": "1690",
+        "Arcane Resurrection": "265",
+        "Elemental Contingency": "1673",
+        "Final Shielding": "257",
         // grand master
-        "Evasive Arcana": "733",
-        "Elemental Surge": "2035",
-        "Bountiful Power": "753"
+        "Evasive Arcana": "238",
+        "Elemental Surge": "263",
+        "Bountiful Power": "1511"
     }
 };
 //
 var Tempest = {
     name: "Tempest",
-    id: "40",
+    id: "48",
     traits: {
         // adept
-        "Gale Song": "1838",
-        "Latent Stamina": "1995",
-        "Unstable Conduit": "1987",
+        "Gale Song": "1952",
+        "Latent Stamina": "1962",
+        "Unstable Conduit": "1886",
         // master
-        "Tempestuous Aria": "2009",
-        "Invigorating Torrents": "1913",
-        "Harmonious Conduit": "1978",
+        "Tempestuous Aria": "1891",
+        "Invigorating Torrents": "1902",
+        "Harmonious Conduit": "2015",
         // grand master
-        "Imbued Melodies": "1942",
-        "Lucid Singularity": "2022",
-        "Elemental Bastion": "1890"
+        "Imbued Melodies": "1839",
+        "Lucid Singularity": "2033",
+        "Elemental Bastion": "1986"
     }
 };
 //
 var Weaver = {
     name: "Weaver",
-    id: "40",
+    id: "56",
     traits: {
         // adept
-        "Superior Elements": "1838",
-        "Elemental Pursuit": "1995",
-        "Master's Fortitude": "1987",
+        "Superior Elements": "2177",
+        "Elemental Pursuit": "2165",
+        "Master's Fortitude": "2115",
         // master
-        "Weaver's Prowess": "2009",
-        "Swift Revenge": "1913",
-        "Bolstered Elements": "1978",
+        "Weaver's Prowess": "2180",
+        "Swift Revenge": "2061",
+        "Bolstered Elements": "2170",
         // grand master
-        "Elements of Rage": "1942",
-        "Unravel Hexes": "2022",
-        "Invigorating Strikes": "1890"
+        "Elements of Rage": "2131",
+        "Unravel Hexes": "2090",
+        "Invigorating Strikes": "2138"
     }
 };
 //
@@ -143,32 +143,33 @@ var Elementalist = new Class([Fire, Air, Earth, Water, Arcane, Tempest, Weaver],
 builds["#tempPS"] = {
     class: Elementalist,
     specializations: [
-        { name: "Fire", traits: ["Duelist's Discipline", "Blinding Dissipation", "Superiority Complex"] },
-        { name: "Arcane", traits: ["Descent into Madness", "Chaotic Transference", "Bountiful Disillusionment"] },
-        { name: "Tempest", traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"] }
+        { name: "Fire", traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"] },
+        { name: "Arcane", traits: ["Arcane Precision", "Final Shielding", "Elemental Surge"] },
+        { name: "Tempest", traits: ["Unstable Conduit", "Harmonious Conduit", "Imbued Melodies"] }
     ],
-    skils: ["Signet of the Ether", "Mantra of Distraction", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
+    skils: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Glyph of Elemental Power", "Glyph of Elementals"],
+    pets: null,
     armor: {
         type: "light",
-        helm: { stat: "Viper", rune: "Superior Rune of the Berserker" },
-        shoulders: { stat: "Viper", rune: "Superior Rune of the Berserker" },
-        coat: { stat: "Viper", rune: "Superior Rune of the Berserker" },
-        gloves: { stat: "Viper", rune: "Superior Rune of the Berserker" },
-        leggings: { stat: "Viper", rune: "Superior Rune of the Berserker" },
-        boots: { stat: "Viper", rune: "Superior Rune of the Berserker" }
+        helm: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
+        shoulders: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
+        coat: { stat: "Viper", rune: "Superior Rune of Balthazar" },
+        gloves: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
+        leggings: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
+        boots: { stat: "Sinister", rune: "Superior Rune of Balthazar" }
     },
     trinket: {
-        amulet: "Viper",
-        ring1: "Viper",
-        ring2: "Viper",
-        earring1: "Viper",
-        earring2: "Viper",
-        back: "Viper"
+        amulet: "Sinister",
+        ring1: "Sinister",
+        ring2: "Sinister",
+        earring1: "Sinister",
+        earring2: "Sinister",
+        back: "Sinister"
     },
     weapons: {
-        mainHand1: { type: "Scepter", stat: "Viper", sigils: ["Superior Sigil of Malice"] },
+        mainHand1: { type: "Scepter", stat: "Sinister", sigils: ["Superior Sigil of Bursting"] },
         mainHand2: null,
-        offHand1: { type: "Warhorn", stat: "Viper", sigils: ["Superior Sigil of Geomancy"] },
+        offHand1: { type: "Warhorn", stat: "Viper", sigils: ["Superior Sigil of Smoldering"] },
         offHand2: null
     },
     food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
