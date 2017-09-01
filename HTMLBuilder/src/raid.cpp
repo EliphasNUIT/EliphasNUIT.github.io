@@ -16,7 +16,7 @@ Raid::~Raid() {
 void Raid::generateHTMLs(QTextStream& stream){
     qInfo() << "treating " + this->name;
 
-    stream << "<h2>"+this->name+"</h2>" << endl;
+    stream << "    <h2>"+this->name+"</h2>" << endl;
     for (int i = 0; i < this->wingList.length(); i++) {
         this->wingList[i]->generateHTMLs(stream);
     }

@@ -16,12 +16,12 @@ Wing::~Wing() {
 void Wing::generateHTMLs(QTextStream& stream){
     qInfo() << "    treating " + this->name;
 
-    stream << "<h3>"+this->name+"</h3>" << endl;
-    stream << "<ul>" << endl;
+    stream << "    <h3>"+this->name+"</h3>" << endl;
+    stream << "    <ul>" << endl;
     for (int i = 0; i < this->bossList.length(); i++) {
         this->bossList[i]->generateHTMLs(stream);
     }
-    stream << "</ul>" << endl;
+    stream << "    </ul>" << endl;
 
     qInfo() << "    treated " + this->name;
 }

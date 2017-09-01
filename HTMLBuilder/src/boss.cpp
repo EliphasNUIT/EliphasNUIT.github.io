@@ -12,7 +12,7 @@ Boss::Boss(const QString& name,QObject *parent) : QObject(parent)
 void Boss::generateHTMLs(QTextStream& streamIndex){
     qInfo() << "        treating " + this->name;
 
-    streamIndex << "<li> <a href=\"./Bosses/" + this->shortRef + ".html\">" + this->name + "</a> </li>";
+    streamIndex << "        <li> <a href=\"./logs/" + this->shortRef + ".html\">" + this->name + "</a> </li>" << endl;
 
     QStringList res;
     QFile htmlFile(this->htmlFile);
@@ -91,7 +91,7 @@ void Boss::read(QXmlStreamReader& reader) {
     qInfo() << "        read " + this->name ;
     this->shortRef = shortRef;
 	this->imagePath = "<img src=\"../images/" + image + "\">";
-	this->htmlFile = "../../Bosses/" + shortRef + ".html";
+	this->htmlFile = "../../logs/" + shortRef + ".html";
     this->ressourceDir = "\"../ressources/" + shortRef + "/";
     this->ressourcePath = "../../ressources/" + shortRef;
 }

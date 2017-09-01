@@ -67,7 +67,7 @@ HtmlWriter::~HtmlWriter() {
 }
 
 void HtmlWriter::removeOld() {
-    QString path = "../../Bosses/";
+    QString path = "../../logs/";
     QDir dir(path);
     dir.setNameFilters(QStringList() << "*.html*");
     dir.setFilter(QDir::Files);
