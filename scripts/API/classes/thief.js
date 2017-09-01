@@ -140,37 +140,3 @@ var tfSkills = {
 
 var Thief = new Class([Deadly_Arts, Critical_Strikes, Shadow_Arts, Acrobatics, Trickery, Daredevil, Deadeye], tfSkills);
 
-builds["#drdPower"] = {
-    class: Thief,
-    specializations: [
-        { name: "Deadly Arts", traits: ["Mug", "Revealed Training", "Executioner"] },
-        { name: "Critical Strikes", traits: ["Twin Fangs", "Practiced Tolerance", "No Quarter"] },
-        { name: "Daredevil", traits: ["Havoc Mastery", "Staff Master", "Bounding Dodger"] }
-    ],
-    skils: ["Signet of Malice", "Assassin's Signet", "Spider Venom", "Fist Flurry", "Basilisk Venom"],
-    pets: null,
-    armor: {
-        type: "Medium",
-        helm: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
-        shoulders: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
-        coat: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
-        gloves: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
-        leggings: { stat: "Berserker", rune: "Superior Rune of the Scholar" },
-        boots: { stat: "Berserker", rune: "Superior Rune of the Scholar" }
-    },
-    trinket: {
-        amulet: "Berserker",
-        ring1: "Berserker",
-        ring2: "Berserker",
-        earring1: "Berserker",
-        earring2: "Berserker",
-        back: "Berserker"
-    },
-    weapons: {
-        mainHand1: { type: "Staff", stat: "Berserker", sigils: ["Superior Sigil of Force", "Superior Sigil of Air"] },
-        mainHand2: null,
-        offHand1: null,
-        offHand2: null
-    },
-    food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
-};

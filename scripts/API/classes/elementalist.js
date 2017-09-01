@@ -140,37 +140,3 @@ var elemSkills = {
 
 var Elementalist = new Class([Fire, Air, Earth, Water, Arcane, Tempest, Weaver], elemSkills);
 
-builds["#tempPS"] = {
-    class: Elementalist,
-    specializations: [
-        { name: "Fire", traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"] },
-        { name: "Arcane", traits: ["Arcane Precision", "Final Shielding", "Elemental Surge"] },
-        { name: "Tempest", traits: ["Unstable Conduit", "Harmonious Conduit", "Imbued Melodies"] }
-    ],
-    skils: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Glyph of Elemental Power", "Glyph of Elementals"],
-    pets: null,
-    armor: {
-        type: "light",
-        helm: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
-        shoulders: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
-        coat: { stat: "Viper", rune: "Superior Rune of Balthazar" },
-        gloves: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
-        leggings: { stat: "Sinister", rune: "Superior Rune of Balthazar" },
-        boots: { stat: "Sinister", rune: "Superior Rune of Balthazar" }
-    },
-    trinket: {
-        amulet: "Sinister",
-        ring1: "Sinister",
-        ring2: "Sinister",
-        earring1: "Sinister",
-        earring2: "Sinister",
-        back: "Sinister"
-    },
-    weapons: {
-        mainHand1: { type: "Scepter", stat: "Sinister", sigils: ["Superior Sigil of Bursting"] },
-        mainHand2: null,
-        offHand1: { type: "Warhorn", stat: "Viper", sigils: ["Superior Sigil of Smoldering"] },
-        offHand2: null
-    },
-    food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
-};
