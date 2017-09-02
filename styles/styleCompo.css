@@ -30,7 +30,7 @@ h3 {
     text-decoration: underline;
 }
 
-li {
+li,p {
     font-size: 16px;
     line-height: 2;
     font-weight: bold;
@@ -62,10 +62,17 @@ div[build] {
 div[center] {
     text-align: center;
 }
-
-div[spe] {
-    width: 500px;
-    padding-left: 50px;
+div[spe]::before {
+    content: "Aptitudes";
+    font-weight: bold;
+}
+div[skills]::before {
+    content: "Compétences"; 
+    font-weight: bold;
+}
+div[trinket]::before {
+    content: "Bijoux";
+    font-weight: bold;
 }
 
 button {
@@ -74,6 +81,10 @@ button {
 
 div[padding] {
     width: 600px;
+}
+
+div[paddingTop] {
+    padding-top: 5px;
 }
 
 div[smallpadding] {
