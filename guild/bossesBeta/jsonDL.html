@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="https://gw2armory.com/gw2aEmbeds.js"></script>
+
+<script src="../../scripts/APIWrapper.js"></script>
+
+<script src="../../scripts/classReader.js"></script>
+
+<script type="text/javascript">
+    var createDL = function (myClass) {
+        var json = "var " + myClass.name + " = " + JSON.stringify(myClass);
+        var blob = new Blob([json], { type: "application/json" });
+        var url = URL.createObjectURL(blob);
+
+        var a = document.createElement('a');
+        a.download = myClass.name + ".json";
+        a.href = url;
+        a.textContent = "Download " + a.download;
+
+        document.getElementById('content').appendChild(a);
+    }
+    var timeout = 60000;
+    for (var i = 0; i < myClasses.length; i++) {
+        var myClass = myClasses[i];
+        window.setTimeout(function () {
+            myClass.buildFromAPI();
+            window.setTimeout(function () {
+                createDL(myClass);
+            }, (i + 1) * timeout)
+        }, i * timeout);
+    }
+
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <title>[ODS] GW2 Logs</title>
+    <meta id="author" content="EliphasNUIT">
+    <link href="../../styles/styleCompo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="content"></div>
+</body>
+
+</html>
