@@ -22,14 +22,27 @@
         document.getElementById('content').appendChild(a);
     }
     var timeout = 60000;
-    for (var i = 0; i < myClasses.length; i++) {
-        var myClass = myClasses[i];
+
+    var doDL = function (myClass,i) {
         window.setTimeout(function () {
+            console.log("building dl for " + myClass.name);
+            createDL(myClass);
+        }, (i + 1) * timeout)
+    }
+
+    var doAPI = function (i) {
+        window.setTimeout(function () {
+            var myClass = myClasses[i];
             myClass.buildFromAPI();
-            window.setTimeout(function () {
-                createDL(myClass);
-            }, (i + 1) * timeout)
+            console.log("building class for " + myClass.name);
+            doDL(myClass,i);
         }, i * timeout);
+    };
+    var createDLs = function () {
+        var j = 0;
+        for (var i = 0; i < myClasses.length; i++) {
+            doAPI(i);
+        }
     }
 
 </script>
