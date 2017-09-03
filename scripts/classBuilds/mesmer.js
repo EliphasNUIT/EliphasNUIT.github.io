@@ -193,30 +193,32 @@ var condiMesWeapons = [
   }
 ];
 
+var condiMesTrait = [
+  {
+    name: "Dueling",
+    traits: [
+      "Duelist's Discipline",
+      "Blinding Dissipation",
+      "Superiority Complex"
+    ]
+  },
+  {
+    name: "Chaos",
+    traits: [
+      "Descent into Madness",
+      "Chaotic Transference",
+      "Bountiful Disillusionment"
+    ]
+  },
+  {
+    name: "Illusions",
+    traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"]
+  }
+];
+
 builds["#VGmesCondi"] = {
   class: Mesmer,
-  specializations: [
-    {
-      name: "Dueling",
-      traits: [
-        "Duelist's Discipline",
-        "Blinding Dissipation",
-        "Superiority Complex"
-      ]
-    },
-    {
-      name: "Chaos",
-      traits: [
-        "Descent into Madness",
-        "Chaotic Transference",
-        "Bountiful Disillusionment"
-      ]
-    },
-    {
-      name: "Illusions",
-      traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"]
-    }
-  ],
+  specializations: condiMesTrait,
   skills: [
     "Signet of the Ether",
     "Mantra of Distraction",
