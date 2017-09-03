@@ -1,3 +1,6 @@
+var builds = {};
+
+
 var Guardian = {
   name: "Guardian",
   armor: "Heavy",
