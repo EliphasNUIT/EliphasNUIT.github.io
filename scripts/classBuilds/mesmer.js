@@ -64,24 +64,29 @@ builds["#VGchrTank"] = {
   pets: null,
   armor: boonShareArmor,
   trinket: boonShareTrinket,
-  weapons: {
-    mainHand1: {
+  weapons: [
+    {
+      slot: "mh1",
       type: "Sword",
       stat: "Berserker's",
       sigils: ["Superior Sigil of Concentration"]
     },
-    mainHand2: null,
-    offHand1: {
+    {
+      slot: "mh2"
+    },
+    {
+      slot: "oh1",
       type: "Focus",
       stat: "Commander's",
       sigils: ["Superior Sigil of Force"]
     },
-    offHand2: {
+    {
+      slot: "oh2",
       type: "Shield",
       stat: "Commander's",
       sigils: ["Superior Sigil of Force"]
     }
-  },
+  ],
   food: boonShareFood
 };
 
@@ -119,24 +124,29 @@ builds["#VGchrDPS"] = {
   pets: null,
   armor: boonShareArmor,
   trinket: boonShareTrinket,
-  weapons: {
-    mainHand1: {
+  weapons: [
+    {
+      slot: "mh1",
       type: "Sword",
       stat: "Berserker's",
       sigils: ["Superior Sigil of Concentration"]
     },
-    mainHand2: null,
-    offHand1: {
+    {
+      slot: "mh2"
+    },
+    {
+      slot: "oh1",
       type: "Focus",
       stat: "Berserker's",
       sigils: ["Superior Sigil of Force"]
     },
-    offHand2: {
+    {
+      slot: "oh2",
       type: "Shield",
       stat: "Berserker's",
       sigils: ["Superior Sigil of Force"]
     }
-  },
+  ],
   food: boonShareFood
 };
 
@@ -178,6 +188,9 @@ var condiMesWeapons = [
     type: "Scepter",
     stat: "Viper's",
     sigils: ["Superior Sigil of Malice"]
+  },
+  {
+    slot: "mh2"
   },
   {
     slot: "oh1",

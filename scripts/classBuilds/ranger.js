@@ -43,6 +43,9 @@ var condiDruidWeapons = [
     sigils: ["Superior Sigil of Malice", "Superior Sigil of Geomancy"]
   },
   {
+    slot: "oh1",
+  },
+  {
     slot: "mh2",
     type: "Axe",
     stat: "Viper's",
@@ -92,6 +95,9 @@ var healDruidWeapons = [
     sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
   },
   {
+    slot: "oh1",
+  },
+  {
     slot: "mh2",
     type: "Axe",
     stat: "Magi's",
@@ -111,8 +117,8 @@ var healDruidTrinket = [
   { slot: "amulet", stat: "Minstrel's" },
   { slot: "ring1", stat: "Minstrel's" },
   { slot: "ring2", stat: "Magi's" },
-  { slot: "back", stat: "Magi's" },
-  { slot: "earring1", stat: "Minstrel's" },
+  { slot: "back", stat: "Minstrel's" },
+  { slot: "earring1", stat: "Magi's" },
   { slot: "earring2", stat: "Minstrel's" }
 ];
 

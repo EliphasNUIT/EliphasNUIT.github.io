@@ -37,6 +37,8 @@ var cpsWeapons = [
     stat: "Viper's",
     sigils: ["Superior Sigil of Geomancy", "Superior Sigil of Malice"]
   },{
+    slot: "oh1"
+  },{
     slot: "mh2",
     type: "Sword",
     stat: "Viper's",

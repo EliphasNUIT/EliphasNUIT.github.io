@@ -56,6 +56,15 @@ builds["#drdPower"] = {
       type: "Staff",
       stat: "Berserker's",
       sigils: ["Superior Sigil of Force", "Superior Sigil of Air"]
+    },
+    {
+      slot: "oh1"
+    },
+    {
+      slot: "mh2"
+    },
+    {
+      slot: "oh2"
     }
   ],
   food: [

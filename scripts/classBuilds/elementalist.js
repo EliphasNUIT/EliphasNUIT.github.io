@@ -43,6 +43,12 @@ var tempPSWeapons = [
     type: "Warhorn",
     stat: "Viper's",
     sigils: ["Superior Sigil of Smoldering"]
+  },
+  {
+    slot: "mh2"
+  },
+  {
+    slot: "oh2"
   }
 ];
 
