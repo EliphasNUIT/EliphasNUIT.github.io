@@ -1,0 +1,86 @@
+body {
+    width: 900px;
+    margin: 0 auto;
+    background-color: rgba(222, 222, 222, 0.5);
+    padding: 0 20px 20px 20px;
+    border: 5px solid rgba(200, 200, 200, 0.5);
+}
+
+
+div[build] {
+    display: none;
+}
+
+/* position stuff */
+div[center] {
+    text-align: center;
+}
+div[left] {
+    text-align: left;
+}
+
+
+/* special tags */
+div[spe] {
+    width: 600px;
+}
+div[spe]::before {
+    content: "Aptitudes";
+    font-weight: bold;
+}
+div[skills]::before {
+    content: "Compétences"; 
+    font-weight: bold;
+}
+div[trinket]::before {
+    content: "Bijoux";
+    font-weight: bold;
+}
+div[armor]::before {
+    content: "Armures";
+    font-weight: bold;
+}
+div[weapons1] {
+    padding-left: 110px;
+    display: inline-block;
+}
+div[weapons1]::before {
+    content: "Armes set1";
+    font-weight: bold;
+}
+div[weapons2] {
+    padding-left: 100px;
+    display: inline-block;
+}
+div[weapons2]::before {
+    content: "Armes set2";
+    font-weight: bold;
+}
+
+div[sigil1] {
+    padding-left: 110px;
+    display: inline-block;
+}
+
+div[sigil2] {
+    padding-left: 100px;
+    display: inline-block;
+}
+
+/* button */
+button {
+    font-size: 1.0em;
+}
+
+/* padding stuff */
+div[padding] {
+    width: 600px;
+}
+
+div[paddingTop] {
+    padding-top: 5px;
+}
+
+div[smallpadding] {
+    width: 100px;
+}
