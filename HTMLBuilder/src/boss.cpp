@@ -25,7 +25,8 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "    <meta charset=\"latin\">";
     res << "    <title>[ODS] " + this->name + " Logs</title>";
     res << "    <meta name=\"author\" content=\"EliphasNUIT\">";
-    res << "    <link href=\"../styles/styleBoss.css\" rel=\"stylesheet\" type=\"text/css\">";
+    res << "    <link href=\"../styles/html.css\" rel=\"stylesheet\" type=\"text/css\">";
+    res << "    <link href=\"../styles/bosses.css\" rel=\"stylesheet\" type=\"text/css\">";
     res << "</head>";
     res << "<body>";
     res << "    <h1>" + this->name + " [ODS]</h1>";

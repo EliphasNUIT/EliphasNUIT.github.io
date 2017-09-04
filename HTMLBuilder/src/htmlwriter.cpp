@@ -16,7 +16,7 @@ void writeIndexHeader(QTextStream& stream) {
     res << "    <meta charset=\"utf-8\">";
     res << "    <title>[ODS] GW2 Logs</title>";
     res << "    <meta name=\"author\" content=\"EliphasNUIT\">";
-    res << "    <link href=\"styles/style.css\" rel=\"stylesheet\" type=\"text/css\"> ";
+    res << "    <link href=\"styles/html.css\" rel=\"stylesheet\" type=\"text/css\"> ";
     res << "</head>";
     res << "<body>";
     res << "    <h1>Logs [ODS]</h1>";
