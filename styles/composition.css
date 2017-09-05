@@ -18,9 +18,15 @@ div[center] {
 div[left] {
     text-align: left;
 }
+img[small] {
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 120px;
+    display: inline-block;
+}
 
-
-/* special tags */
+/* special tags before */
 div[spe] {
     width: 600px;
 }
@@ -40,29 +46,40 @@ div[armor]::before {
     content: "Armures";
     font-weight: bold;
 }
-div[weapons1] {
-    padding-left: 110px;
-    display: inline-block;
-}
 div[weapons1]::before {
     content: "Armes set1";
     font-weight: bold;
-}
-div[weapons2] {
-    padding-left: 100px;
-    display: inline-block;
 }
 div[weapons2]::before {
     content: "Armes set2";
     font-weight: bold;
 }
+div[food]::before {
+    content: "Consommable";
+    font-weight: bold;
+}
+
+/* special tags */
+div[weapons1] {
+    padding-left: 130px;
+    display: inline-block;
+}
+
+div[weapons2] {
+    padding-left: 100px;
+    display: inline-block;
+}
 
 div[sigil1] {
-    padding-left: 110px;
+    height: auto; 
+    width: auto; 
+    padding-left: 130px;
     display: inline-block;
 }
 
 div[sigil2] {
+    height: auto; 
+    width: auto; 
     padding-left: 100px;
     display: inline-block;
 }
