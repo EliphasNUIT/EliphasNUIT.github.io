@@ -163,3 +163,5 @@ builds["#bersCPSCC"] = {
   weapons: cpsWeapons,
   food: cpsFood
 };
+
+builds["#bersCPSCC2"] = builds["#bersCPSCC"];

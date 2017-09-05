@@ -49,6 +49,7 @@ var runes = {
 var sigils = {
     "Superior Sigil of Concentration": 72339,
     "Superior Sigil of Force": 24615,
+    "Superior Sigil of Accuracy": 24618,
     "Superior Sigil of Malice": 44950,
     "Superior Sigil of Geomancy": 24605,
     "Superior Sigil of Air": 24554,

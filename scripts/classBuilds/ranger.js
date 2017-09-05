@@ -218,7 +218,7 @@ var healDruidTrinket = [
   { slot: "earring2", stat: "Minstrel's" }
 ];
 
-builds["#VGdruidHeal"] = {
+builds["#druidHealPush"] = {
   class: Ranger,
   specializations: [
     {
@@ -247,3 +247,119 @@ builds["#VGdruidHeal"] = {
   weapons: healDruidWeapons,
   food: healDruidFood
 };
+
+builds["#druidHealFullBuffRegen"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Sharpened Edges", "Spotter", "Quick Draw"]
+    },
+    {
+      name: "Nature Magic",
+      traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+    },
+    {
+      name: "Druid",
+      traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+    }
+  ],
+  skills: [
+    "Glyph of Rejuvenation",
+    "Glyph of Empowerment",
+    "Sun Spirit",
+    "Frost Spirit",
+    "Glyph of Unity"
+  ],
+  pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+  armor: healDruidArmor,
+  trinket: healDruidTrinket,
+  weapons: healDruidWeapons,
+  food: healDruidFood
+};
+builds["#druidHealFullBuffRegen2"] = builds["#druidHealFullBuffRegen"];
+
+builds["#druidHealFullBuffRegenPull"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Sharpened Edges", "Spotter", "Quick Draw"]
+    },
+    {
+      name: "Nature Magic",
+      traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+    },
+    {
+      name: "Druid",
+      traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+    }
+  ],
+  skills: [
+    "Glyph of Rejuvenation",
+    "Glyph of Empowerment",
+    "Sun Spirit",
+    "Frost Spirit",
+    "Glyph of Unity"
+  ],
+  pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+  armor: healDruidArmor,
+  trinket: healDruidTrinket,
+  weapons: [{
+    slot: "mh1",
+    type: "Staff",
+    stat: "Magi's",
+    sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
+  },
+  {
+    slot: "oh1",
+    type: "",
+    stat: "",
+    sigils: [""]
+  },
+  {
+    slot: "mh2",
+    type: "Axe",
+    stat: "Magi's",
+    sigils: ["Superior Sigil of Transference"]
+  },
+  {
+    slot: "oh2",
+    type: "Axe",
+    stat: "Magi's",
+    sigils: ["Superior Sigil of Water"]
+  }],
+  food: healDruidFood
+};
+builds["#druidHealFullBuffRegenPull2"] = builds["#druidHealFullBuffRegenPull"];
+
+builds["#druidMatt"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Trapper's Expertise", "Spotter", "Quick Draw"]
+    },
+    {
+      name: "Nature Magic",
+      traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+    },
+    {
+      name: "Druid",
+      traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+    }
+  ],
+  skills: [
+    "Healing Spring",
+    "Glyph of the Tides",
+    "Sun Spirit",
+    "Stone Spirit",
+    "Spirit of Nature"
+  ],
+  pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+  armor: healDruidArmor,
+  trinket: healDruidTrinket,
+  weapons: healDruidWeapons,
+  food: healDruidFood
+};
+builds["#druidMatt2"] = builds["#druidMatt"] ;

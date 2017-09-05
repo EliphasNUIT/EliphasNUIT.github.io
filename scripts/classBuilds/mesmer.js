@@ -156,6 +156,73 @@ builds["#chrDPS"] = {
   food: boonShareFood
 };
 
+builds["#chrDPS2"] = builds["#chrDPS"];
+
+builds["#chrDPSCCRef"] = {
+  class: Mesmer,
+  specializations: [
+    {
+      name: "Domination",
+      traits: ["Empowered Illusions", "Blurred Inscriptions", "Mental Anguish"]
+    },
+    {
+      name: "Inspiration",
+      traits: [
+        "Persisting Images",
+        "Warden's Feedback",
+        "Illusionary Inspiration"
+      ]
+    },
+    {
+      name: "Chronomancer",
+      traits: [
+        "All's Well That Ends Well",
+        "Improved Alacrity",
+        "Chronophantasma"
+      ]
+    }
+  ],
+  skills: [
+    "Well of Eternity",
+    "Well of Action",
+    "Feedback",
+    "Signet of Inspiration",
+    "Signet of Humility"
+  ],
+  pets: null,
+  armor: boonShareArmor,
+  trinket: boonShareTrinket,
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Sword",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Concentration"]
+    },
+    {
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "oh1",
+      type: "Focus",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force"]
+    },
+    {
+      slot: "oh2",
+      type: "Shield",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force"]
+    }
+  ],
+  food: boonShareFood
+};
+
+builds["#chrDPSCCRef2"] = builds["#chrDPSCCRef"];
+
 var condiMesArmor = [
   { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Berserker" },
   {
@@ -238,7 +305,7 @@ var condiMesTrait = [
   }
 ];
 
-builds["#VGmesCondi"] = {
+builds["#mesCondiVG"] = {
   class: Mesmer,
   specializations: condiMesTrait,
   skills: [
@@ -254,5 +321,22 @@ builds["#VGmesCondi"] = {
   weapons: condiMesWeapons,
   food: condiMesFood
 };
+builds["#mesCondiVG2"] = builds["#mesCondiVG"];
 
-builds["#VGmesCondi2"] = builds["#VGmesCondi"];
+builds["#mesCondiMatt"] = {
+  class: Mesmer,
+  specializations: condiMesTrait,
+  skills: [
+    "Signet of the Ether",
+    "Feedback",
+    "Signet of Domination",
+    "Signet of Midnight",
+    "Signet of Humility"
+  ],
+  pets: null,
+  armor: condiMesArmor,
+  trinket: condiMesTrinket,
+  weapons: condiMesWeapons,
+  food: condiMesFood
+};
+builds["#mesCondiMatt2"] = builds["#mesCondiMatt"];
