@@ -44,6 +44,9 @@ var condiDruidWeapons = [
   },
   {
     slot: "oh1",
+    type: "",
+    stat: "",
+    sigils: [""]
   },
   {
     slot: "mh2",
@@ -61,7 +64,7 @@ var condiDruidWeapons = [
 
 var condiDruidFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 
-builds["#VGdruidCondi"] = {
+builds["#druidCondiPush"] = {
   class: Ranger,
   specializations: condiDruidTrait,
   skills: [
@@ -71,20 +74,110 @@ builds["#VGdruidCondi"] = {
     "Frost Spirit",
     "Glyph of Unity"
   ],
-  pets: ["Lynx", "Electric Wyvern"],
+  pets: ["Juvenile Lynx", "Juvenile Electric Wyvern"],
   armor: condiDruidArmor,
   trinket: condiDruidTrinket,
   weapons: condiDruidWeapons,
   food: condiDruidFood
 };
 
+builds["#druidCondiFullBuff"] = {
+  class: Ranger,
+  specializations: condiDruidTrait,
+  skills: [
+    "Glyph of Rejuvenation",
+    "Glyph of Empowerment",
+    "Sun Spirit",
+    "Frost Spirit",
+    "Glyph of Unity"
+  ],
+  pets: ["Juvenile Lynx", "Juvenile Electric Wyvern"],
+  armor: condiDruidArmor,
+  trinket: condiDruidTrinket,
+  weapons: condiDruidWeapons,
+  food: condiDruidFood
+};
+builds["#druidCondiFullBuff2"] = builds["#druidCondiFullBuff"];
+
+builds["#rangerCondi"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Sharpened Edges", "Hidden Barbs", "Quick Draw"]
+    },
+    {
+      name: "Wilderness Survival",
+      traits: ["Taste for Danger", "Ambidexterity", "Poison Master"]
+    },
+    {
+      name: "Beastmastery",
+      traits: ["Potent Ally", "Natural Healing", "Honed Axes"]
+    }
+  ],
+  skills: [
+    '"We Heal As One!"',
+    "Viper's Nest",
+    "Flame Trap",
+    "Sharpening Stone",
+    "Entangle"
+  ],
+  pets: ["Juvenile Lynx", "Juvenile Electric Wyvern"],
+  armor: [
+    { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Krait" },
+    {
+      slot: "shoulders",
+      stat: "Viper's",
+      rune: "Superior Rune of the Krait"
+    },
+    { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Krait" },
+    { slot: "gloves", stat: "Viper's", rune: "Superior Rune of the Krait" },
+    { slot: "leggings", stat: "Viper's", rune: "Superior Rune of the Krait" },
+    { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Krait" }
+  ],
+  trinket: [
+    { slot: "amulet", stat: "Viper's" },
+    { slot: "ring1", stat: "Viper's" },
+    { slot: "ring2", stat: "Viper's" },
+    { slot: "back", stat: "Viper's" },
+    { slot: "earring1", stat: "Viper's" },
+    { slot: "earring2", stat: "Viper's" }
+  ],
+  weapons: [{
+    slot: "mh1",
+    type: "Shortbow",
+    stat: "Viper's",
+    sigils: ["Superior Sigil of Geomancy", "Superior Sigil of Earth"]
+  },
+  {
+    slot: "oh1",
+    type: "",
+    stat: "",
+    sigils: [""]
+  },
+  {
+    slot: "mh2",
+    type: "Axe",
+    stat: "Viper's",
+    sigils: ["Superior Sigil of Geomancy"]
+  },
+  {
+    slot: "oh2",
+    type: "Torch",
+    stat: "Viper's",
+    sigils: ["Superior Sigil of Earth"]
+  }],
+  food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
+};
+
+
 var healDruidArmor = [
-  { slot: "helm",stat: "Magi's", rune: "Superior Rune of the Monk" },
-  { slot: "shoulders",stat: "Magi's", rune: "Superior Rune of the Monk" },
-  { slot: "coat",stat: "Magi's", rune: "Superior Rune of the Monk" },
-  { slot: "gloves",stat: "Minstrel's", rune: "Superior Rune of the Monk" },
-  { slot: "leggings",stat: "Magi's", rune: "Superior Rune of the Monk" },
-  { slot: "boots",stat: "Magi's", rune: "Superior Rune of the Monk" }
+  { slot: "helm", stat: "Magi's", rune: "Superior Rune of the Monk" },
+  { slot: "shoulders", stat: "Magi's", rune: "Superior Rune of the Monk" },
+  { slot: "coat", stat: "Magi's", rune: "Superior Rune of the Monk" },
+  { slot: "gloves", stat: "Minstrel's", rune: "Superior Rune of the Monk" },
+  { slot: "leggings", stat: "Magi's", rune: "Superior Rune of the Monk" },
+  { slot: "boots", stat: "Magi's", rune: "Superior Rune of the Monk" }
 ];
 
 var healDruidWeapons = [
@@ -96,6 +189,9 @@ var healDruidWeapons = [
   },
   {
     slot: "oh1",
+    type: "",
+    stat: "",
+    sigils: [""]
   },
   {
     slot: "mh2",
@@ -145,7 +241,7 @@ builds["#VGdruidHeal"] = {
     "Frost Spirit",
     "Glyph of Unity"
   ],
-  pets: ["Tiger", "Electric Wyvern"],
+  pets: ["Juvenile Tiger", "Juvenile Electric Wyvern"],
   armor: healDruidArmor,
   trinket: healDruidTrinket,
   weapons: healDruidWeapons,

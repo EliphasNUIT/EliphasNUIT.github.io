@@ -30,7 +30,7 @@ var boonShareArmor = [
   { slot: "boots", stat: "Berserker's", rune: "Superior Rune of Leadership" }
 ];
 
-builds["#VGchrTank"] = {
+builds["#chrTank"] = {
   class: Mesmer,
   specializations: [
     {
@@ -72,7 +72,10 @@ builds["#VGchrTank"] = {
       sigils: ["Superior Sigil of Concentration"]
     },
     {
-      slot: "mh2"
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
     },
     {
       slot: "oh1",
@@ -90,7 +93,7 @@ builds["#VGchrTank"] = {
   food: boonShareFood
 };
 
-builds["#VGchrDPS"] = {
+builds["#chrDPS"] = {
   class: Mesmer,
   specializations: [
     {
@@ -132,7 +135,10 @@ builds["#VGchrDPS"] = {
       sigils: ["Superior Sigil of Concentration"]
     },
     {
-      slot: "mh2"
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
     },
     {
       slot: "oh1",
@@ -190,7 +196,10 @@ var condiMesWeapons = [
     sigils: ["Superior Sigil of Malice"]
   },
   {
-    slot: "mh2"
+    slot: "mh2",
+    type: "",
+    stat: "",
+    sigils: [""]
   },
   {
     slot: "oh1",

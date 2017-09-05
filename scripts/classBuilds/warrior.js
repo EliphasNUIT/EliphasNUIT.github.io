@@ -37,7 +37,10 @@ var cpsWeapons = [
     stat: "Viper's",
     sigils: ["Superior Sigil of Geomancy", "Superior Sigil of Malice"]
   },{
-    slot: "oh1"
+    slot: "oh1",
+    type: "",
+    stat: "",
+    sigils: [""]
   },{
     slot: "mh2",
     type: "Sword",
@@ -104,6 +107,8 @@ builds["#bersCPS"] = {
   weapons: cpsWeapons,
   food: cpsFood
 };
+
+builds["#bersCPS2"] = builds["#bersCPS"];
 
 builds["#bersCPSKC"] = {
   class: Warrior,

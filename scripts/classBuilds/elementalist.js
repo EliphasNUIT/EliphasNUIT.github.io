@@ -1,4 +1,4 @@
-var tempPSArmor = [
+var tempCondiArmor = [
   { slot: "helm", stat: "Sinister", rune: "Superior Rune of Balthazar" },
   { slot: "shoulders", stat: "Sinister", rune: "Superior Rune of Balthazar" },
   { slot: "coat", stat: "Viper's", rune: "Superior Rune of Balthazar" },
@@ -7,7 +7,7 @@ var tempPSArmor = [
   { slot: "boots", stat: "Sinister", rune: "Superior Rune of Balthazar" }
 ];
 
-var tempPSTrait = [
+var tempCondiTrait = [
   {
     name: "Fire",
     traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"]
@@ -22,7 +22,7 @@ var tempPSTrait = [
   }
 ];
 
-var tempPSTrinket = [
+var tempCondiTrinket = [
   { slot: "amulet", stat: "Sinister" },
   { slot: "ring1", stat: "Sinister" },
   { slot: "ring2", stat: "Sinister" },
@@ -31,8 +31,22 @@ var tempPSTrinket = [
   { slot: "earring2", stat: "Sinister" }
 ];
 
-var tempPSWeapons = [
-  {
+var tempCondiFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
+
+builds["#tempPS"] = {
+  class: Elementalist,
+  specializations: tempCondiTrait,
+  skills: [
+    "Arcane Brilliance",
+    "Signet of Fire",
+    "Arcane Power",
+    "Glyph of Elemental Power",
+    "Glyph of Elementals"
+  ],
+  pets: null,
+  armor: tempCondiArmor,
+  trinket: tempCondiTrinket,
+  weapons: [{
     slot: "mh1",
     type: "Scepter",
     stat: "Sinister",
@@ -45,28 +59,56 @@ var tempPSWeapons = [
     sigils: ["Superior Sigil of Smoldering"]
   },
   {
-    slot: "mh2"
+    slot: "mh2",
+    type: "",
+    stat: "",
+    sigils: [""]
   },
   {
-    slot: "oh2"
-  }
-];
+    slot: "oh2",
+    type: "",
+    stat: "",
+    sigils: [""]
+  }],
+  food: tempCondiFood
+};
 
-var tempPSFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
-
-builds["#tempPS"] = {
+builds["#tempCondi"] = {
   class: Elementalist,
-  specializations: tempPSTrait,
+  specializations: tempCondiTrait,
   skills: [
     "Arcane Brilliance",
     "Signet of Fire",
     "Arcane Power",
     "Glyph of Elemental Power",
-    "Glyph of Elementals"
+    "Conjure Fiery Greatsword"
   ],
   pets: null,
-  armor: tempPSArmor,
-  trinket: tempPSTrinket,
-  weapons: tempPSWeapons,
-  food: tempPSFood
+  armor: tempCondiArmor,
+  trinket: tempCondiTrinket,
+  weapons: [{
+    slot: "mh1",
+    type: "Dagger",
+    stat: "Sinister",
+    sigils: ["Superior Sigil of Bursting"]
+  },
+  {
+    slot: "oh1",
+    type: "Focus",
+    stat: "Viper's",
+    sigils: ["Superior Sigil of Smoldering"]
+  },
+  {
+    slot: "mh2",
+    type: "",
+    stat: "",
+    sigils: [""]
+  },
+  {
+    slot: "oh2",
+    type: "",
+    stat: "",
+    sigils: [""]
+  }],
+  food: tempCondiFood
 };
