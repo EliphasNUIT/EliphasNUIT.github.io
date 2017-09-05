@@ -13,12 +13,13 @@ function readSpecializations(build) {
   var speL = specializations.length;
   for (var i = 0; i < speL; i++) {
     var specialization = specializations[i];
-    var speID = build.class.specializations[specialization.name];
+    var speID = build.class.specializations[specialization.name] ? build.class.specializations[specialization.name] : -1;
     speIDS += speID + ",";
     var traits = "data-armory-" + speID + '-traits="';
     var traitL = specialization.traits.length;
     for (var j = 0; j < traitL; j++) {
-      traits += build.class.traits[specialization.traits[j]] + ",";
+      var traitID = build.class.traits[specialization.traits[j]] ? build.class.traits[specialization.traits[j]] : -1;
+      traits += traitID + ",";
     }
     traits = traits.slice(0, -1) + '" ';
     totalTraits += traits;
@@ -31,16 +32,18 @@ function readSpecializations(build) {
 };
 
 function readPets(build) {
-  var divToAdd = '<div pets paddingTop center data-armory-embed="pets" ';
-  var petIDS = 'data-armory-ids="';
-  for (var i = 0; i < build.pets.length; i++) {
-    var petID = pets[build.pets[i]];
-    petIDS += petID + ",";
+  var divToAdd = '<div pets center> ';
+  for (var i = 0; i < build.pets.length; i++) {  
+    var petData= pets[build.pets[i]] ? pets[build.pets[i]] : null;
+    if (petData) {
+      var img = '<img small src="';
+      img += petData.icon + '" ';
+      img += 'title="'+ build.pets[i] + '">'
+      divToAdd += img;
+    }
+    
   }
-  petIDS = skillIDS.slice(0, -1) + '" ';
-  divToAdd += petIDS;
-  divToAdd += 'data-armory-size="80" ';
-  divToAdd += "></div>";
+  divToAdd += " </div>";
   return divToAdd;
 };
 
@@ -48,12 +51,12 @@ function readSkills(build) {
   var divToAdd = '<div skills paddingTop center data-armory-embed="skills" ';
   var skillIDS = 'data-armory-ids="';
   for (var i = 0; i < build.skills.length; i++) {
-    var skillID = build.class.skills[build.skills[i]];
+    var skillID = build.class.skills[build.skills[i]] ? build.class.skills[build.skills[i]] : -1;
     skillIDS += skillID + ",";
   }
   skillIDS = skillIDS.slice(0, -1) + '" ';
   divToAdd += skillIDS;
-  divToAdd += 'data-armory-size="80" ';
+  divToAdd += 'data-armory-size="60" ';
   divToAdd += 'data-armory-blank-text="Au choix ou voir avec l\'autre classe jouant le même build" ';
   divToAdd += "></div>";
   return divToAdd;
@@ -63,18 +66,20 @@ function readTrinket(build) {
   var divToAdd = '<div trinket paddingTop center data-armory-embed="items" ';
   var trinketIDS = 'data-armory-ids="';
   var totalStats = "";
-
   for (var i = 0; i < build.trinket.length; i++) {
     var trinketValue = build.trinket[i];
-    var trId = trinket[trinketValue.slot];
-    var stat = stats[trinketValue.stat];
+    var trId = trinket[trinketValue.slot] ? trinket[trinketValue.slot] : -1;
     trinketIDS += trId + ",";
-    totalStats += 'data-armory-' + trId + '-stat="' + stat + '" ';
+    if (trId !== -1) {
+      var stat = stats[trinketValue.stat] ? stats[trinketValue.stat] : -1;
+      totalStats += 'data-armory-' + trId + '-stat="' + stat + '" ';
+    }
+
   }
   trinketIDS = trinketIDS.slice(0, -1) + '" ';
   divToAdd += totalStats;
   divToAdd += trinketIDS;
-  divToAdd += 'data-armory-size="70" ';
+  divToAdd += 'data-armory-size="60" ';
   divToAdd += "></div>";
   return divToAdd;
 };
@@ -88,21 +93,23 @@ function readArmor(build) {
   var armorToUse = armor[build.class.armor];
   for (var i = 0; i < build.armor.length; i++) {
     var armorValue = build.armor[i];
-    var arId = armorToUse[armorValue.slot];
-    var runeID = runes[armorValue.rune];
-    var stat = stats[armorValue.stat];
+    var arId = armorToUse[armorValue.slot] ? armorToUse[armorValue.slot] : -1;
     armorIDS += arId + ",";
-    runeIDS += runeID + ",";
-    totalStats += 'data-armory-' + arId + '-stat="' + stat + '" ';
+    if (arId !== -1) {
+      var runeID = runes[armorValue.rune] ? runes[armorValue.rune] : -1;
+      var stat = stats[armorValue.stat] ? stats[armorValue.stat] : -1;
+      runeIDS += runeID + ",";
+      totalStats += 'data-armory-' + arId + '-stat="' + stat + '" ';
+    }
   }
   armorIDS = armorIDS.slice(0, -1) + '" ';
   runeIDS = runeIDS.slice(0, -1) + '" ';
   divToAdd += totalStats;
   divToAdd += armorIDS;
   runeDivToAdd += runeIDS;
-  divToAdd += 'data-armory-size="70" ';
+  divToAdd += 'data-armory-size="60" ';
   divToAdd += "></div>";
-  runeDivToAdd += 'data-armory-size="70" ';
+  runeDivToAdd += 'data-armory-size="60" ';
   runeDivToAdd += "></div>";
   return { armor: divToAdd, rune: runeDivToAdd };
 };
@@ -113,32 +120,38 @@ function readWeapon1(build) {
   var ids = 'data-armory-ids="';
   var sigilIDS = 'data-armory-ids="';
   var totalStats = "";
+  var mh2Hand = false;
   for (var i = 0; i < build.weapons.length; i++) {
     var weaponValue = build.weapons[i];
-    var wepId = weapons[weaponValue.type];
-    var stat = stats[weaponValue.stat];
+    var wepId = weapons[weaponValue.type] ? weapons[weaponValue.type] : -1;
     if (weaponValue.slot === "mh1" || weaponValue.slot === "oh1") {
-      ids += wepId + ",";     
+      ids += wepId + ",";
       if (wepId !== -1) {
+        var stat = stats[weaponValue.stat] ? stats[weaponValue.stat] : -1;
         totalStats += 'data-armory-' + wepId + '-stat="' + stat + '" ';
+        mh2Hand = weaponValue.sigils.length > 1;
         for (var j = 0; j < weaponValue.sigils.length; j++) {
           var sigilValue = weaponValue.sigils[j];
-          sigilId = sigils[sigilValue];
+          sigilId = sigils[sigilValue] ? sigils[sigilValue] : -1;
           sigilIDS += sigilId + ",";
         }
+      } else if (weaponValue.slot === "mh1") {
+        sigilIDS += "-1" + ",";
+      } else if (!mh2Hand && weaponValue.slot === "oh1") {
+        sigilIDS += "-1" + ",";
       }
     }
   }
   ids = ids.slice(0, -1) + '" ';
   divToAdd += totalStats;
   divToAdd += ids;
-  divToAdd += 'data-armory-size="70" ';
+  divToAdd += 'data-armory-size="60" ';
   divToAdd += 'data-armory-blank-text="Vide" ';
   divToAdd += "></div>";
 
   sigilIDS = sigilIDS.slice(0, -1) + '" ';
   sigilDivToAdd += sigilIDS;
-  sigilDivToAdd += 'data-armory-size="70" ';
+  sigilDivToAdd += 'data-armory-size="60" ';
   sigilDivToAdd += 'data-armory-blank-text="Vide" ';
   sigilDivToAdd += "></div>";
 
@@ -151,41 +164,58 @@ function readWeapon2(build) {
   var ids = 'data-armory-ids="';
   var sigilIDS = 'data-armory-ids="';
   var totalStats = "";
+  var mh2Hand = false;
   for (var i = 0; i < build.weapons.length; i++) {
     var weaponValue = build.weapons[i];
-    var wepId = weapons[weaponValue.type];
-    var stat = stats[weaponValue.stat];
+    var wepId = weapons[weaponValue.type] ? weapons[weaponValue.type] : -1;
     if (weaponValue.slot === "mh2" || weaponValue.slot === "oh2") {
-      ids += wepId + ",";  
+      ids += wepId + ",";
       if (wepId !== -1) {
+        var stat = stats[weaponValue.stat] ? stats[weaponValue.stat] : -1;
         totalStats += 'data-armory-' + wepId + '-stat="' + stat + '" ';
+        mh2Hand = weaponValue.sigils.length > 1;
         for (var j = 0; j < weaponValue.sigils.length; j++) {
           var sigilValue = weaponValue.sigils[j];
-          sigilId = sigils[sigilValue];
+          sigilId = sigils[sigilValue] ? sigils[sigilValue] : -1;
           sigilIDS += sigilId + ",";
         }
-      } else {
+      } else if (weaponValue.slot === "mh2") {
+        sigilIDS += "-1" + ",";
+      } else if (!mh2Hand && weaponValue.slot === "oh2") {
         sigilIDS += "-1" + ",";
       }
     }
-  }
+  };
 
   ids = ids.slice(0, -1) + '" ';
   divToAdd += totalStats;
   divToAdd += ids;
-  divToAdd += 'data-armory-size="70" ';
+  divToAdd += 'data-armory-size="60" ';
   divToAdd += 'data-armory-blank-text="Vide" ';
   divToAdd += "></div>";
 
   sigilIDS = sigilIDS.slice(0, -1) + '" ';
   sigilDivToAdd += sigilIDS;
-  sigilDivToAdd += 'data-armory-size="70" ';
+  sigilDivToAdd += 'data-armory-size="60" ';
   sigilDivToAdd += 'data-armory-blank-text="Vide" ';
   sigilDivToAdd += "></div>";
 
   return { wep: divToAdd, sig: sigilDivToAdd };
 };
 
+function readFoods(build) {
+  var divToAdd = '<div food paddingTop center data-armory-embed="items" ';
+  var foodIDS = 'data-armory-ids="';
+  for (var i = 0; i < build.food.length; i++) {
+    var foodID = foods[build.food[i]] ? foods[build.food[i]] : -1;
+    foodIDS += foodID + ",";
+  }
+  foodIDS = foodIDS.slice(0, -1) + '" ';
+  divToAdd += foodIDS;
+  divToAdd += 'data-armory-size="60" ';
+  divToAdd += "></div>";
+  return divToAdd;
+};
 
 function displayBuild(divID) {
   var div = $(divID);
@@ -201,11 +231,11 @@ function displayBuild(divID) {
   var init = div.attr("init") === "true";
   if (!init) {
     var build = builds[divID];
-    div.append(readSpecializations(build));
-    if (build.pets) {
-      //div.append(readPets(build));
-    }
+    div.append(readSpecializations(build));   
     div.append(readSkills(build));
+    if (build.pets) {
+      div.append(readPets(build));
+    }
     div.append(readTrinket(build));
     var equipement = readArmor(build);
     div.append(equipement.armor);
@@ -216,6 +246,7 @@ function displayBuild(divID) {
     div.append(wep2.wep);
     div.append(wep1.sig);
     div.append(wep2.sig);
+    div.append(readFoods(build));
     div.append('<script async src="https://gw2armory.com/gw2aEmbeds.js"></script>');
     //window.document.dispatchEvent(DOMContentLoaded_event);
     div.attr("init", "true");
