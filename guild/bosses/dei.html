@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="../../scripts/classes.js"></script>
+<script src="../../scripts/stats.js"></script>
+<script src="../../scripts/items.js"></script>
+<script src="../../scripts/pets.js"></script>
+
+<script src="../../scripts/classBuilds/mesmer.js"></script>
+<script src="../../scripts/classBuilds/warrior.js"></script>
+<script src="../../scripts/classBuilds/ranger.js"></script>
+
+<script src="../../scripts/classBuilds/necromancer.js"></script>
+<script src="../../scripts/classBuilds/revenant.js"></script>
+
+<script src="../../scripts/embedCreator.js"></script>
+
 
 <head>
     <meta charset="utf-8">
@@ -7,6 +23,7 @@
     <meta id="author" content="EliphasNUIT">
     <link href="../../styles/html.css" rel="stylesheet" type="text/css">
     <link href="../../styles/table.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/composition.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -19,35 +36,56 @@
     <table>
         <thead>
             <tr>
-                <td>Player T1</td>
-                <td>Class</td>
-                <td>Role</td>
+                <td>
+                    <div smallpadding center>Player T2</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
+                <td>
+                    <div smallpadding center>Role</div>
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><a href="https://gw2armory.com/suzuca.3248/characters">Akitae</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhAQRAse8dncfClfi1fCGoBEgiFVjqOZn2qlMAGhi78JGipD-TRSBQBHUFiJ+EAuoyPKp+CAOJA8b/h7pVgkKBxjuASB41KN-e">Chrono Tank</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#chrTankDeimos')"> Chrono Tank</button> </div>
+                    <div id="chrTankDeimos" build visibility="false" init="false"></div>
+                </td>
                 <td>Tank</td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/damdidamdide.5209/characters">Dam</a></td>
-                <td><a href="http://gw2skills.net/editor/?vNUQNBmOD7keVomVsXFwZFgoVsYIYOvuYXPAurGWLrMBg1VDokhNG-TRyGQBDZ/BCqcicPEg2obAAXBA6pigiUvpWKZmoSwAAHAccgUA+NzC-e">Druide Heal</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#druidSpirit2')"> Druide Heal</button> </div>
+                    <div id="druidSpirit2" build visibility="false" init="false"></div>
+                </td>
                 <td>Black Kite</td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/drazic.4795/characters">Arkness</a></td>
-                <td><a href="http://gw2skills.net/editor/?vJUQNAT8fnckCVegtkCefAElilpA7N1+artHDwAwILpEcCmdA-TxhHQB0T9HCq8DAPBANqEkc6Gq1FB4M7PQKgAXWB-e">PS Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#bersCPS2')"> Berserker CPS</button> </div>
+                    <div id="bersCPS2" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td>Mélo</td>
-                <td><a href="http://gw2skills.net/editor/?vNAQNAnfVjUqQ3K2uC2sAVLGKEq+DG2rmHgS/B+EIaDgSOWKA-TxRFQBjUJIAOFApY/h2pPIBPBgGq8rfq/QKgFVWB-e">Rodeur Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#rangerCondi')"> Rodeur Condi</button> </div>
+                    <div id="rangerCondi" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/Genouw.2873/characters">Sakura</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhUQRArf7ansIC1ohNoBWoBMrhlVDyMGLvnob5MPpsDFPAA-TxhHQB16kAAgnAgGVCSQlf0T9nyt/A50PQKgFVWB-e">Mesmer Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#mesCondiCC2')"> Mesmer Condi</button> </div>
+                    <div id="mesCondiCC2" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
         </tbody>
@@ -55,36 +93,57 @@
     <table>
         <thead>
             <tr>
-                <td>Player T2</td>
-                <td>Class</td>
-                <td>Role</td>
+                <td>
+                    <div smallpadding center>Player T2</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
+                <td>
+                    <div smallpadding center>Role</div>
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><a href="https://gw2armory.com/Kaeryh/characters">Polgara</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhAQRAse8dncfClfi1fCGoBEgiFVjiMAGhirOZn2q98JGipD-TBSBQBT8JAcRlf8b/BAcSAwj+hDqCBJVCSJ1XIFgXr0A-e">Chrono DPS</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#chrDPSDeimos')"> Chrono DPS</button> </div>
+                    <div id="chrDPSDeimos" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/drazic.4795/characters">Winter</a></td>
-                <td><a href="http://gw2skills.net/editor/?vNUQNBmOD7keVomVsXFwZFgoVsYIYOvuYXPAurGWLrMBg1VDokhNG-TRyGQBDZ/BCqcicPEg2obAAXBA6pigiUvpWKZmoSwAAHAccgUA+NzC-e">Druide Heal</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#druidSpirit')"> Druide Heal</button> </div>
+                    <div id="druidSpirit" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/Bouhteille.2196/characters">Bouhteille</a></td>
-                <td><a href="http://gw2skills.net/editor/?vJUQNAT8fnckCVegtkC2eAElilpA7N1+artJlgTws7YAGAGZA-TxhHQB16iAoRlgnZ/B6p+DAeCAkT3ABV+RKgAXWB-e">PS Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#bersCPS')"> Berserker CPS</button> </div>
+                    <div id="bersCPS" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td></td>
-                <td><a href="http://gw2skills.net/editor/?vRAQNArYRn0ICd1gV3Ae3As3gliBLuHWETiUNhpwtKKAMASAA-TBSFQBA4JA0QlFtTfQK2fofq/kgTBAxUqJSlgkCAilVA-e">Necro</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#reaperCondiDeimos')">Reaper Condi</button> </div>
+                    <div id="reaperCondiDeimos" build visibility="false" init="false"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/EliphasNUIT/characters">Eliphas</a></td>
-                <td><a href="http://gw2skills.net/editor/?vlAQNAW8unnN2gSyJvQRNlbosoyPU4U5IKIs8EllZlRNgCewO6q7e9iQGB-TxxGQBCZ/hap8zjKBJ3TAAAXEA6p+Tb0NQKA/mZB-e">Ventari Rev</a></td>
-                <td>Kite</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#herVentari')">Hérault Ventari</button> </div>
+                    <div id="herVentari" build visibility="false" init="false"></div>
+                </td>
+                <td>Hand Kite</td>
             </tr>
         </tbody>
     </table>
