@@ -1,5 +1,5 @@
 document.GW2A_EMBED_OPTIONS = {
-  lang: 'en',
+  lang: 'fr'
 };
 
 var DOMContentLoaded_event = document.createEvent("Event");
