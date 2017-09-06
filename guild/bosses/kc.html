@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="../../scripts/classes.js"></script>
+<script src="../../scripts/stats.js"></script>
+<script src="../../scripts/items.js"></script>
+<script src="../../scripts/pets.js"></script>
+
+<script src="../../scripts/classBuilds/mesmer.js"></script>
+<script src="../../scripts/classBuilds/elementalist.js"></script>
+
+<script src="../../scripts/classBuilds/warrior.js"></script>
+
+<script src="../../scripts/classBuilds/ranger.js"></script>
+
+<script src="../../scripts/embedCreator.js"></script>
+
 
 <head>
     <meta charset="utf-8">
@@ -7,6 +23,7 @@
     <meta id="author" content="EliphasNUIT">
     <link href="../../styles/html.css" rel="stylesheet" type="text/css">
     <link href="../../styles/table.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/composition.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -19,60 +36,98 @@
     <table>
         <thead>
             <tr>
-                <td>Player T1</td>
-                <td>Class</td>
+                <td>
+                    <div smallpadding center>Player T1</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><a href="https://gw2armory.com/suzuca.3248/characters">Akitae</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhAQRAse8dncfClfi9fCGoBEgiFVj68JGiprOZn2qlMAGhiD-TRSBQBA4kAwv9Hok6LHUFCSqE8iK/unWhJ+EAwjuASB41KN-e">Chrono Tank</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#chrTank')"> Chrono Tank</button> </div>
+                    <div id="chrTank" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/damdidamdide.5209/characters">Dam</a></td>
-                <td><a href="http://gw2skills.net/editor/?vNUQNAV3fn0rC1siNrAuqAEtiFDBjJAsuaANdggVVDerGWLrlI1xA-TBiHQBaUJIBV+ROdHObhha9EACy+A0T9HAcRAIFwiKrA-e">Druide Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#druidCondi')"> Druide Condi</button> </div>
+                    <div id="druidCondi" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/drazic.4795/characters">Arkness</a></td>
-                <td><a href="http://gw2skills.net/editor/?vJUQNAT8fnckCVegtkCefAElilpALpEMCmdvp2Xbt9YAGAGZA-TxhHQBA4JAcm9H0oSQCq8rWXEAypbgeq/QKgAXWB-e">PS Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#bersCPSKC')"> Berserker CPS</button> </div>
+                    <div id="bersCPSKC" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td>Mélo</td>
-                <td><a href="http://gw2skills.net/editor/?vFAQFAWhUMo6hNNwsB8RsIAYCXyQQKIIAUAOAut2ZbtF-ThBBABB8AAA4CAUp6P5pD4MlgYt/o8jUARsMC-e">Tempest Staff</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#tempPowerKC2')"> Tempest Staff</button> </div>
+                    <div id="tempPowerKC2" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/Genouw.2873/characters">Sakura</a></td>
-                <td><a href="http://gw2skills.net/editor/?vFAQFAWhUMo6hNNwsB8RsIAYCXyQQKIIAUAOAut2ZbtF-ThBBABB8AAA4CAUp6P5pD4MlgYt/o8jUARsMC-e">Tempest Staff</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#tempPowerKC4')"> Tempest Staff</button> </div>
+                    <div id="tempPowerKC4" build visibility="false" init="false"></div>
+                </td>
             </tr>
         </tbody>
     </table>
     <table>
         <thead>
             <tr>
-                <td>Player T2</td>
-                <td>Class</td>
+                <td>
+                    <div smallpadding center>Player T1</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><a href="https://gw2armory.com/Kaeryh/characters">Polgara</a></td>
-                <td><a href="http://gw2skills.net/editor/?vhAQRAse8dncfClfi9fCGoBEgiFVjqOZn2qlMAGhi78JGipD-TBSBQBHUFC8ofYiPBAAcSA43+DXU5HlUfhkKBJFgXr0A-e">Chrono DPS</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#chrDPS')"> Chrono DPS</button> </div>
+                    <div id="chrDPS" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/drazic.4795/characters">Winter</a></td>
-                <td><a href="http://gw2skills.net/editor/?vNUQNAV3fn0rC1siNrAuqAEtiFDBjJAsuaANdggVVDerGWLrlI1xA-TBiHQBaUJIBV+ROdHObhha9EACy+A0T9HAcRAIFwiKrA-e">Druide Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#druidCondi2')"> Druide Condi</button> </div>
+                    <div id="druidCondi2" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/Bouhteille.2196/characters">Bouhteille</a></td>
-                <td><a href="http://gw2skills.net/editor/?vJUQNAT8fnckCVegtkC2eAElilpA7YAGAGZJlgRws7N1+artA-TxhHQBnZ/BCq8DAPBgadRAon6PaUJI50NQKgAXWB-e">PS Condi</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#bersCPSKC2')"> Berserker CPS</button> </div>
+                    <div id="bersCPSKC2" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td></td>
-                <td><a href="http://gw2skills.net/editor/?vFAQFAWhUMo6hNNwsB8RsIAYCXyQQKIIAUAOAut2ZbtF-ThBBABB8AAA4CAUp6P5pD4MlgYt/o8jUARsMC-e">Tempest Staff</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#tempPowerKC')"> Tempest Staff</button> </div>
+                    <div id="tempPowerKC" build visibility="false" init="false"></div>
+                </td>
             </tr>
             <tr>
                 <td><a href="https://gw2armory.com/EliphasNUIT/characters">Eliphas</a></td>
-                <td><a href="http://gw2skills.net/editor/?vFAQFAWhUMo6hNNwsB8RsIAYCXyQQKIIAUAOAut2ZbtF-ThBBABB8AAA4CAUp6P5pD4MlgYt/o8jUARsMC-e">Tempest Staff</a></td>
+                <td>
+                    <div center> <button onclick="displayBuild('#tempPowerKC3')"> Tempest Staff</button> </div>
+                    <div id="tempPowerKC3" build visibility="false" init="false"></div>
+                </td>
             </tr>
         </tbody>
     </table>
