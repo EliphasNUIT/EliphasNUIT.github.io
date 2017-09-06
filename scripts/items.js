@@ -34,6 +34,19 @@ var armor = {
     }
 };
 
+Guardian.armor = "Heavy";
+Warrior.armor = "Heavy";
+Revenant.armor = "Heavy";
+Engineer.armor = "Medium";
+Ranger.armor = "Medium";
+Thief.armor = "Medium";
+Elementalist.armor = "Light";
+Necromancer.armor = "Light";
+Mesmer.armor = "Light";
+
+
+var builds = {};
+
 var runes = {
     "Superior Rune of Leadership": 70600,
     "Superior Rune of the Scholar": 24836,
@@ -57,7 +70,8 @@ var sigils = {
     "Superior Sigil of Water": 24551,
     "Superior Sigil of Smoldering": 24624,
     "Superior Sigil of Bursting": 44944,
-    "Superior Sigil of Earth": 24560
+    "Superior Sigil of Earth": 24560,
+    "Superior Sigil of Impact": 24868
 };
 
 var weapons = {
