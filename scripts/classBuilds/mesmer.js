@@ -93,6 +93,95 @@ builds["#chrTank"] = {
   food: boonShareFood
 };
 
+builds["#chrTankDeimos"] = {
+  class: Mesmer,
+  specializations: [
+    {
+      name: "Illusions",
+      traits: ["Compounding Power", "Phantasmal Haste", "Phantasmal Force"]
+    },
+    {
+      name: "Chaos",
+      traits: [
+        "Illusionary Defense",
+        "Chaotic Dampening",
+        "Bountiful Disillusionment"
+      ]
+    },
+    {
+      name: "Chronomancer",
+      traits: [
+        "All's Well That Ends Well",
+        "Improved Alacrity",
+        "Chronophantasma"
+      ]
+    }
+  ],
+  skills: [
+    "Well of Eternity",
+    "Well of Action",
+    "Well of Precognition",
+    "Well of Recall",
+    "Time Warp"
+  ],
+  pets: null,
+  armor: [
+    { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of Water" },
+    {
+      slot: "shoulders",
+      stat: "Minstrel's",
+      rune: "Superior Rune of Water"
+    },
+    { slot: "coat", stat: "Minstrel's", rune: "Superior Rune of Water" },
+    {
+      slot: "gloves",
+      stat: "Minstrel's",
+      rune: "Superior Rune of Water"
+    },
+    {
+      slot: "leggings",
+      stat: "Minstrel's",
+      rune: "Superior Rune of Water"
+    },
+    { slot: "boots", stat: "Minstrel's", rune: "Superior Rune of Water" }
+  ],
+  trinket: [
+    { slot: "amulet", stat: "Minstrel's" },
+    { slot: "ring1", stat: "Minstrel's" },
+    { slot: "ring2", stat: "Minstrel's" },
+    { slot: "back", stat: "Minstrel's" },
+    { slot: "earring1", stat: "Minstrel's" },
+    { slot: "earring2", stat: "Minstrel's" }
+  ],
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Sword",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Concentration"]
+    },
+    {
+      slot: "mh2",
+      type: "Staff",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force" , "Superior Sigil of Accuracy"]
+    },
+    {
+      slot: "oh1",
+      type: "Shield",
+      stat: "Commander's",
+      sigils: ["Superior Sigil of Force"]
+    },
+    {
+      slot: "oh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    }
+  ],
+  food: boonShareFood
+};
+
 builds["#chrDPS"] = {
   class: Mesmer,
   specializations: [
@@ -148,6 +237,65 @@ builds["#chrDPS"] = {
     },
     {
       slot: "oh2",
+      type: "Shield",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force"]
+    }
+  ],
+  food: boonShareFood
+};
+
+builds["#chrDPSDeimos"] = {
+  class: Mesmer,
+  specializations: [
+    {
+      name: "Illusions",
+      traits: ["Compounding Power", "Phantasmal Haste", "Phantasmal Force"]
+    },
+    {
+      name: "Domination",
+      traits: ["Empowered Illusions", "Blurred Inscriptions", "Mental Anguish"]
+    },
+    {
+      name: "Chronomancer",
+      traits: [
+        "All's Well That Ends Well",
+        "Improved Alacrity",
+        "Chronophantasma"
+      ]
+    }
+  ],
+  skills: [
+    "Well of Eternity",
+    "Well of Action",
+    "Well of Precognition",
+    "Signet of Inspiration",
+    "Time Warp"
+  ],
+  pets: null,
+  armor: boonShareArmor,
+  trinket: boonShareTrinket,
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Sword",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Concentration"]
+    },
+    {
+      slot: "mh2",
+      type: "Scepter",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Accuracy"]
+    },
+    {
+      slot: "oh2",
+      type: "Sword",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force"]
+    },
+    {
+      slot: "oh1",
       type: "Shield",
       stat: "Berserker's",
       sigils: ["Superior Sigil of Force"]
@@ -373,7 +521,7 @@ var condiMesTrait = [
   }
 ];
 
-builds["#mesCondiVG"] = {
+builds["#mesCondiCC"] = {
   class: Mesmer,
   specializations: condiMesTrait,
   skills: [
@@ -389,7 +537,7 @@ builds["#mesCondiVG"] = {
   weapons: condiMesWeapons,
   food: condiMesFood
 };
-builds["#mesCondiVG2"] = builds["#mesCondiVG"];
+builds["#mesCondiCC2"] = builds["#mesCondiCC"];
 
 builds["#mesCondiMatt"] = {
   class: Mesmer,

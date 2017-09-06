@@ -56,7 +56,8 @@ var runes = {
     "Superior Rune of Balthazar": 24765,
     "Superior Rune of the Nightmare": 24848,
     "Superior Rune of the Trapper": 67339,
-    "Superior Rune of the Krait" : 24762
+    "Superior Rune of the Krait" : 24762,
+    "Superior Rune of Water" : 24839
 };
 
 var sigils = {

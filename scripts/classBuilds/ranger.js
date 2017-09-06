@@ -398,7 +398,7 @@ builds["#druidXera"] = {
 };
 builds["#druidXera2"] = builds["#druidXera"] ;
 
-builds["#druidCairn"] = {
+builds["#druidSpirit"] = {
   class: Ranger,
   specializations: [
     {
@@ -427,4 +427,35 @@ builds["#druidCairn"] = {
   weapons: healDruidWeapons,
   food: healDruidFood
 };
-builds["#druidCairn2"] = builds["#druidCairn"] ;
+builds["#druidSpirit2"] = builds["#druidSpirit"] ;
+
+builds["#druidSam"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Sharpened Edges", "Spotter", "Quick Draw"]
+    },
+    {
+      name: "Nature Magic",
+      traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+    },
+    {
+      name: "Druid",
+      traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+    }
+  ],
+  skills: [
+    "Glyph of Rejuvenation",
+    "Glyph of the Tides",
+    "Frost Spirit",
+    "Stone Spirit",
+    "Glyph of Unity"
+  ],
+  pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+  armor: healDruidArmor,
+  trinket: healDruidTrinket,
+  weapons: healDruidWeapons,
+  food: healDruidFood
+};
+builds["#druidSam2"] = builds["#druidSam"] ;
