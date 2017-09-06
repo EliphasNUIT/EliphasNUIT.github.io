@@ -6,7 +6,6 @@ body {
     border: 5px solid rgba(200, 200, 200, 0.5);
 }
 
-
 div[build] {
     display: none;
 }
@@ -14,6 +13,9 @@ div[build] {
 /* position stuff */
 div[center] {
     text-align: center;
+}
+div[bold] {
+    font-weight: bold;
 }
 div[left] {
     text-align: left;
@@ -26,38 +28,6 @@ img[small] {
     display: inline-block;
 }
 
-/* special tags before */
-div[spe] {
-    width: 600px;
-}
-div[spe]::before {
-    content: "Aptitudes";
-    font-weight: bold;
-}
-div[skills]::before {
-    content: "Compétences"; 
-    font-weight: bold;
-}
-div[trinket]::before {
-    content: "Bijoux";
-    font-weight: bold;
-}
-div[armor]::before {
-    content: "Armures";
-    font-weight: bold;
-}
-div[weapons1]::before {
-    content: "Armes set1";
-    font-weight: bold;
-}
-div[weapons2]::before {
-    content: "Armes set2";
-    font-weight: bold;
-}
-div[food]::before {
-    content: "Consommable";
-    font-weight: bold;
-}
 
 /* special tags */
 div[weapons1] {
@@ -66,20 +36,6 @@ div[weapons1] {
 }
 
 div[weapons2] {
-    padding-left: 100px;
-    display: inline-block;
-}
-
-div[sigil1] {
-    height: auto; 
-    width: auto; 
-    padding-left: 130px;
-    display: inline-block;
-}
-
-div[sigil2] {
-    height: auto; 
-    width: auto; 
     padding-left: 100px;
     display: inline-block;
 }
