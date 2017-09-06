@@ -1,3 +1,5 @@
+//// CONDI
+
 var condiDruidTrait = [
   {
     name: "Skirmishing",
@@ -64,7 +66,7 @@ var condiDruidWeapons = [
 
 var condiDruidFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 
-builds["#druidCondiPush"] = {
+builds["#druidCondiVg"] = {
   class: Ranger,
   specializations: condiDruidTrait,
   skills: [
@@ -81,7 +83,7 @@ builds["#druidCondiPush"] = {
   food: condiDruidFood
 };
 
-builds["#druidCondiFullBuff"] = {
+builds["#druidCondi"] = {
   class: Ranger,
   specializations: condiDruidTrait,
   skills: [
@@ -97,7 +99,7 @@ builds["#druidCondiFullBuff"] = {
   weapons: condiDruidWeapons,
   food: condiDruidFood
 };
-builds["#druidCondiFullBuff2"] = builds["#druidCondiFullBuff"];
+builds["#druidCondi2"] = builds["#druidCondi"];
 
 builds["#rangerCondi"] = {
   class: Ranger,
@@ -170,6 +172,7 @@ builds["#rangerCondi"] = {
   food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
 };
 
+////// HEAL
 
 var healDruidArmor = [
   { slot: "helm", stat: "Magi's", rune: "Superior Rune of the Monk" },
@@ -218,7 +221,7 @@ var healDruidTrinket = [
   { slot: "earring2", stat: "Minstrel's" }
 ];
 
-builds["#druidHealPush"] = {
+builds["#druidVg"] = {
   class: Ranger,
   specializations: [
     {
@@ -248,7 +251,7 @@ builds["#druidHealPush"] = {
   food: healDruidFood
 };
 
-builds["#druidHealFullBuffRegen"] = {
+builds["#druidSab"] = {
   class: Ranger,
   specializations: [
     {
@@ -277,9 +280,9 @@ builds["#druidHealFullBuffRegen"] = {
   weapons: healDruidWeapons,
   food: healDruidFood
 };
-builds["#druidHealFullBuffRegen2"] = builds["#druidHealFullBuffRegen"];
+builds["#druidSab2"] = builds["#druidSab"];
 
-builds["#druidHealFullBuffRegenPull"] = {
+builds["#druidSloth"] = {
   class: Ranger,
   specializations: [
     {
@@ -331,7 +334,7 @@ builds["#druidHealFullBuffRegenPull"] = {
   }],
   food: healDruidFood
 };
-builds["#druidHealFullBuffRegenPull2"] = builds["#druidHealFullBuffRegenPull"];
+builds["#druidSloth2"] = builds["#druidSloth"];
 
 builds["#druidMatt"] = {
   class: Ranger,
@@ -363,3 +366,65 @@ builds["#druidMatt"] = {
   food: healDruidFood
 };
 builds["#druidMatt2"] = builds["#druidMatt"] ;
+
+builds["#druidXera"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Trapper's Expertise", "Spotter", "Quick Draw"]
+    },
+    {
+      name: "Nature Magic",
+      traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+    },
+    {
+      name: "Druid",
+      traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+    }
+  ],
+  skills: [
+    "Healing Spring",
+    "Glyph of Empowerment",
+    "Frost Spirit",
+    "Stone Spirit",
+    "Glyph of Unity"
+  ],
+  pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+  armor: healDruidArmor,
+  trinket: healDruidTrinket,
+  weapons: healDruidWeapons,
+  food: healDruidFood
+};
+builds["#druidXera2"] = builds["#druidXera"] ;
+
+builds["#druidCairn"] = {
+  class: Ranger,
+  specializations: [
+    {
+      name: "Skirmishing",
+      traits: ["Sharpened Edges", "Spotter", "Quick Draw"]
+    },
+    {
+      name: "Nature Magic",
+      traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+    },
+    {
+      name: "Druid",
+      traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+    }
+  ],
+  skills: [
+    "Water Spirit",
+    "Stone Spirit",
+    "Frost Spirit",
+    "Sun Spirit",
+    "Spirit of Nature"
+  ],
+  pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+  armor: healDruidArmor,
+  trinket: healDruidTrinket,
+  weapons: healDruidWeapons,
+  food: healDruidFood
+};
+builds["#druidCairn2"] = builds["#druidCairn"] ;

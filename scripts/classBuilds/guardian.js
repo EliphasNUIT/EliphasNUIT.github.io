@@ -15,7 +15,7 @@ builds["#dhPowerZealRad"] = {
     }
   ],
   skills: [
-    "Shelter",
+    "Litany of Wrath",
     "Procession of Blades",
     "",
     "Bane Signet",

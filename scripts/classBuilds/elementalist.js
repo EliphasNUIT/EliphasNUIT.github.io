@@ -73,7 +73,7 @@ builds["#tempPS"] = {
   food: tempCondiFood
 };
 
-builds["#tempPSMobility"] = {
+builds["#tempPSSab"] = {
   class: Elementalist,
   specializations: tempCondiTrait,
   skills: [
@@ -153,7 +153,7 @@ builds["#tempCondi"] = {
   food: tempCondiFood
 };
 
-builds["#tempCondiMobility"] = {
+builds["#tempCondiSab"] = {
   class: Elementalist,
   specializations: tempCondiTrait,
   skills: [
@@ -282,3 +282,269 @@ builds["#tempPower2"] = builds["#tempPower"];
 builds["#tempPower3"] = builds["#tempPower"];
 
 builds["#tempPower4"] = builds["#tempPower"];
+
+builds["#tempPowerFA"] = {
+  class: Elementalist,
+  specializations: [
+    {
+      name: "Fire",
+      traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"]
+    },
+    {
+      name: "Air",
+      traits: ["Ferocious Winds", "Aeromancer's Training", "Fresh Air"]
+    },
+    {
+      name: "Tempest",
+      traits: ["Gale Song", "Harmonious Conduit", "Imbued Melodies"]
+    }
+  ],
+  skills: [
+    "Glyph of Elemental Harmony",
+    "Conjure Lightning Hammer",
+    "Glyph of Storms",
+    "Signet of Fire",
+    "Conjure Fiery Greatsword"
+  ],
+  pets: null,
+  armor: [
+    { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
+    {
+      slot: "shoulders",
+      stat: "Berserker's",
+      rune: "Superior Rune of the Scholar"
+    },
+    { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
+    {
+      slot: "gloves",
+      stat: "Berserker's",
+      rune: "Superior Rune of the Scholar"
+    },
+    {
+      slot: "leggings",
+      stat: "Berserker's",
+      rune: "Superior Rune of the Scholar"
+    },
+    { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
+  ],
+  trinket: [
+    { slot: "amulet", stat: "Berserker's" },
+    { slot: "ring1", stat: "Berserker's" },
+    { slot: "ring2", stat: "Berserker's" },
+    { slot: "back", stat: "Berserker's" },
+    { slot: "earring1", stat: "Berserker's" },
+    { slot: "earring2", stat: "Berserker's" }
+  ],
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Staff",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force", "Superior Sigil of Accuracy"]
+    },
+    {
+      slot: "oh1",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "oh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    }
+  ],
+  food: [
+    "Bowl of Sweet and Spicy Butternut Squash Soup",
+    "Superior Sharpening Stone"
+  ]
+};
+
+builds["#tempPowerFA2"] = builds["#tempPowerFA"];
+
+builds["#tempPowerFA3"] = builds["#tempPowerFA"];
+
+builds["#tempPowerFA4"] = builds["#tempPowerFA"];
+
+
+builds["#tempPowerKC"] = {
+  class: Elementalist,
+  specializations: [
+    {
+      name: "Fire",
+      traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"]
+    },
+    {
+      name: "Air",
+      traits: ["Ferocious Winds", "Tempest Defense", "Bolt to the Heart"]
+    },
+    {
+      name: "Tempest",
+      traits: ["Gale Song", "Harmonious Conduit", "Imbued Melodies"]
+    }
+  ],
+  skills: [
+    "Glyph of Elemental Harmony",
+    "Conjure Frost Bow",
+    "Glyph of Storms",
+    "Signet of Fire",
+    "Conjure Fiery Greatsword"
+  ],
+  pets: null,
+  armor: [
+    { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
+    {
+      slot: "shoulders",
+      stat: "Berserker's",
+      rune: "Superior Rune of the Scholar"
+    },
+    { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
+    {
+      slot: "gloves",
+      stat: "Berserker's",
+      rune: "Superior Rune of the Scholar"
+    },
+    {
+      slot: "leggings",
+      stat: "Berserker's",
+      rune: "Superior Rune of the Scholar"
+    },
+    { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
+  ],
+  trinket: [
+    { slot: "amulet", stat: "Berserker's" },
+    { slot: "ring1", stat: "Berserker's" },
+    { slot: "ring2", stat: "Berserker's" },
+    { slot: "back", stat: "Assassin's" },
+    { slot: "earring1", stat: "Berserker's" },
+    { slot: "earring2", stat: "Berserker's" }
+  ],
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Staff",
+      stat: "Assassin's",
+      sigils: ["Superior Sigil of Force", "Superior Sigil of Impact"]
+    },
+    {
+      slot: "oh1",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "oh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    }
+  ],
+  food: [
+    "Bowl of Sweet and Spicy Butternut Squash Soup",
+    "Superior Sharpening Stone"
+  ]
+};
+
+builds["#tempPowerKC2"] = builds["#tempPowerKC"];
+
+builds["#tempPowerKC3"] = builds["#tempPowerKC"];
+
+builds["#tempPowerKC4"] = builds["#tempPowerKC"];
+
+
+builds["#tempAura"] = {
+  class: Elementalist,
+  specializations: [
+    {
+      name: "Water",
+      traits: ["Soothing Ice", "Aquamancer's Training", "Soothing Power"]
+    },
+    {
+      name: "Arcane",
+      traits: ["Renewing Stamina", "Arcane Resurrection", "Evasive Arcana"]
+    },
+    {
+      name: "Tempest",
+      traits: ["Latent Stamina", "Invigorating Torrents", "Elemental Bastion"]
+    }
+  ],
+  skills: [
+    '"Wash the Pain Away!"',
+    '"Feel the Burn!"',
+    '"Flash-Freeze!"',
+    "Lightning Flash",
+    '"Rebound!"'
+  ],
+  pets: null,
+  armor: [
+    { slot: "helm", stat: "Magi's", rune: "Superior Rune of the Monk" },
+    {
+      slot: "shoulders",
+      stat: "Magi's",
+      rune: "Superior Rune of the Monk"
+    },
+    { slot: "coat", stat: "Magi's", rune: "Superior Rune of the Monk" },
+    {
+      slot: "gloves",
+      stat: "Magi's",
+      rune: "Superior Rune of the Monk"
+    },
+    {
+      slot: "leggings",
+      stat: "Magi's",
+      rune: "Superior Rune of the Monk"
+    },
+    { slot: "boots", stat: "Magi's", rune: "Superior Rune of the Monk" }
+  ],
+  trinket: [
+    { slot: "amulet", stat: "Magi's" },
+    { slot: "ring1", stat: "Magi's" },
+    { slot: "ring2", stat: "Magi's" },
+    { slot: "back", stat: "Magi's" },
+    { slot: "earring1", stat: "Magi's" },
+    { slot: "earring2", stat: "Magi's" }
+  ],
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Staff",
+      stat: "Magi's",
+      sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
+    },
+    {
+      slot: "oh1",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "oh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    }
+  ],
+  food: [
+    "Delicious Rice Ball",
+    "Bountiful Maintenance Oil"
+  ]
+};

@@ -82,7 +82,7 @@ builds["#drdPower"] = {
   ]
 };
 
-builds["#drdPowerMobility"] = {
+builds["#drdPowerSab"] = {
   class: Thief,
   specializations: [
     {
@@ -247,7 +247,7 @@ builds["#drdCondi"] = {
   food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
 };
 
-builds["#drdCondiMobility"] = {
+builds["#drdCondiSab"] = {
   class: Thief,
   specializations: [
     {

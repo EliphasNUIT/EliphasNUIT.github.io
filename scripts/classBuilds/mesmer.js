@@ -158,7 +158,7 @@ builds["#chrDPS"] = {
 
 builds["#chrDPS2"] = builds["#chrDPS"];
 
-builds["#chrDPSCCRef"] = {
+builds["#chrDPSMatt"] = {
   class: Mesmer,
   specializations: [
     {
@@ -221,7 +221,75 @@ builds["#chrDPSCCRef"] = {
   food: boonShareFood
 };
 
-builds["#chrDPSCCRef2"] = builds["#chrDPSCCRef"];
+builds["#chrDPSMatt2"] = builds["#chrDPSMatt"];
+
+builds["#chrDPSCairn"] = {
+  class: Mesmer,
+  specializations: [
+    {
+      name: "Domination",
+      traits: ["Empowered Illusions", "Blurred Inscriptions", "Mental Anguish"]
+    },
+    {
+      name: "Inspiration",
+      traits: [
+        "Persisting Images",
+        "Restorative Illusions",
+        "Illusionary Inspiration"
+      ]
+    },
+    {
+      name: "Chronomancer",
+      traits: [
+        "All's Well That Ends Well",
+        "Improved Alacrity",
+        "Chronophantasma"
+      ]
+    }
+  ],
+  skills: [
+    "Well of Eternity",
+    "Well of Action",
+    "Well of Recall",
+    "Signet of Inspiration",
+    "Gravity Well"
+  ],
+  pets: null,
+  armor: boonShareArmor,
+  trinket: boonShareTrinket,
+  weapons: [
+    {
+      slot: "mh1",
+      type: "Sword",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Concentration"]
+    },
+    {
+      slot: "mh2",
+      type: "",
+      stat: "",
+      sigils: [""]
+    },
+    {
+      slot: "oh1",
+      type: "Focus",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force"]
+    },
+    {
+      slot: "oh2",
+      type: "Shield",
+      stat: "Berserker's",
+      sigils: ["Superior Sigil of Force"]
+    }
+  ],
+  food: boonShareFood
+};
+
+builds["#chrDPSCairn2"] = builds["#chrDPSCairn"];
+
+////// CONDI
+
 
 var condiMesArmor = [
   { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Berserker" },
@@ -340,3 +408,21 @@ builds["#mesCondiMatt"] = {
   food: condiMesFood
 };
 builds["#mesCondiMatt2"] = builds["#mesCondiMatt"];
+
+builds["#mesCondiCairn"] = {
+  class: Mesmer,
+  specializations: condiMesTrait,
+  skills: [
+    "Signet of the Ether",
+    "Signet of Inspiration",
+    "Signet of Domination",
+    "Signet of Midnight",
+    "Time Warp"
+  ],
+  pets: null,
+  armor: condiMesArmor,
+  trinket: condiMesTrinket,
+  weapons: condiMesWeapons,
+  food: condiMesFood
+};
+builds["#mesCondiCairn2"] = builds["#mesCondiCairn"];

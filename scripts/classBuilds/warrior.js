@@ -137,6 +137,8 @@ builds["#bersCPSKC"] = {
   food: cpsFood
 };
 
+builds["#bersCPSKC2"] = builds["#bersCPSKC"];
+
 builds["#bersCPSCC"] = {
   class: Warrior,
   specializations: [
