@@ -1,9 +1,5 @@
-var builds = {};
-
-
 var Guardian = {
   name: "Guardian",
-  armor: "Heavy",
   specializations: {
     Zeal: 42,
     Radiance: 16,
@@ -128,7 +124,6 @@ var Guardian = {
 };
 var Warrior = {
   name: "Warrior",
-  armor: "Heavy",
   specializations: {
     Strength: 4,
     Arms: 36,
@@ -274,7 +269,6 @@ var Warrior = {
 };
 var Revenant = {
   name: "Revenant",
-  armor: "Heavy",
   specializations: {
     Corruption: 14,
     Retribution: 9,
@@ -395,7 +389,6 @@ var Revenant = {
 };
 var Necromancer = {
   name: "Necromancer",
-  armor: "Light",
   specializations: {
     Spite: 53,
     Curses: 39,
@@ -530,7 +523,6 @@ var Necromancer = {
 };
 var Elementalist = {
   name: "Elementalist",
-  armor: "Light",
   specializations: {
     Fire: 31,
     Air: 41,
@@ -653,7 +645,6 @@ var Elementalist = {
 };
 var Mesmer = {
   name: "Mesmer",
-  armor: "Light",
   specializations: {
     Domination: 10,
     Dueling: 1,
@@ -777,7 +768,6 @@ var Mesmer = {
 };
 var Ranger = {
   name: "Ranger",
-  armor: "Medium",
   specializations: {
     Skirmishing: 30,
     "Wilderness Survival": 33,
@@ -935,7 +925,6 @@ var Ranger = {
 };
 var Thief = {
   name: "Thief",
-  armor: "Medium",
   specializations: {
     "Critical Strikes": 35,
     "Deadly Arts": 28,
@@ -1069,7 +1058,6 @@ var Thief = {
 };
 var Engineer = {
   name: "Engineer",
-  armor: "Medium",
   specializations: {
     Explosives: 6,
     Firearms: 38,

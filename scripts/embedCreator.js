@@ -6,7 +6,7 @@ var DOMContentLoaded_event = document.createEvent("Event");
 DOMContentLoaded_event.initEvent("DOMContentLoaded", true, true);
 
 function readSpecializations(build) {
-  var divToAdd = '<div spe paddingTop data-armory-embed="specializations" ';
+  var divToAdd = '<div paddingTop data-armory-embed="specializations" ';
   var speIDS = 'data-armory-ids="';
   var totalTraits = "";
   var specializations = build.specializations;
@@ -32,7 +32,7 @@ function readSpecializations(build) {
 };
 
 function readPets(build) {
-  var divToAdd = '<div pets center> ';
+  var divToAdd = '<div center> ';
   for (var i = 0; i < build.pets.length; i++) {  
     var petData= pets[build.pets[i]] ? pets[build.pets[i]] : null;
     if (petData) {
@@ -48,7 +48,7 @@ function readPets(build) {
 };
 
 function readSkills(build) {
-  var divToAdd = '<div skills paddingTop center data-armory-embed="skills" ';
+  var divToAdd = '<div paddingTop center data-armory-embed="skills" ';
   var skillIDS = 'data-armory-ids="';
   for (var i = 0; i < build.skills.length; i++) {
     var skillID = build.class.skills[build.skills[i]] ? build.class.skills[build.skills[i]] : -1;
@@ -85,7 +85,7 @@ function readTrinket(build) {
 };
 
 function readArmor(build) {
-  var divToAdd = '<div armor paddingTop center data-armory-embed="items" ';
+  var divToAdd = '<div paddingTop center data-armory-embed="items" ';
   var runeDivToAdd = '<div paddingTop center data-armory-embed="items" ';
   var armorIDS = 'data-armory-ids="';
   var runeIDS = 'data-armory-ids="';
@@ -116,7 +116,7 @@ function readArmor(build) {
 
 function readWeapon1(build) {
   var divToAdd = '<div weapons1 paddingTop left data-armory-embed="items" ';
-  var sigilDivToAdd = '<div sigil1 paddingTop left data-armory-embed="items" ';
+  var sigilDivToAdd = '<div weapons1 paddingTop left data-armory-embed="items" ';
   var ids = 'data-armory-ids="';
   var sigilIDS = 'data-armory-ids="';
   var totalStats = "";
@@ -160,7 +160,7 @@ function readWeapon1(build) {
 
 function readWeapon2(build) {
   var divToAdd = '<div weapons2 paddingTop left data-armory-embed="items" ';
-  var sigilDivToAdd = '<div sigil2 paddingTop left data-armory-embed="items" ';
+  var sigilDivToAdd = '<div weapons2 paddingTop left data-armory-embed="items" ';
   var ids = 'data-armory-ids="';
   var sigilIDS = 'data-armory-ids="';
   var totalStats = "";
@@ -204,7 +204,7 @@ function readWeapon2(build) {
 };
 
 function readFoods(build) {
-  var divToAdd = '<div food paddingTop center data-armory-embed="items" ';
+  var divToAdd = '<div paddingTop center data-armory-embed="items" ';
   var foodIDS = 'data-armory-ids="';
   for (var i = 0; i < build.food.length; i++) {
     var foodID = foods[build.food[i]] ? foods[build.food[i]] : -1;
@@ -231,21 +231,27 @@ function displayBuild(divID) {
   var init = div.attr("init") === "true";
   if (!init) {
     var build = builds[divID];
+    div.append("<div center bold>Aptitudes</div>");
     div.append(readSpecializations(build));   
+    div.append("<div center bold>Compétences</div>");
     div.append(readSkills(build));
     if (build.pets) {
       div.append(readPets(build));
     }
+    div.append("<div center bold>Bijoux</div>");
     div.append(readTrinket(build));
+    div.append("<div center bold>Armure</div>");
     var equipement = readArmor(build);
     div.append(equipement.armor);
     div.append(equipement.rune);
+    div.append("<div center bold>Armes</div>");
     var wep1 = readWeapon1(build);
     var wep2 = readWeapon2(build)
     div.append(wep1.wep);
     div.append(wep2.wep);
     div.append(wep1.sig);
     div.append(wep2.sig);
+    div.append("<div center bold>Consommables</div>");
     div.append(readFoods(build));
     div.append('<script async src="https://gw2armory.com/gw2aEmbeds.js"></script>');
     //window.document.dispatchEvent(DOMContentLoaded_event);
