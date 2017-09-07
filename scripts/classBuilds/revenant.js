@@ -15,10 +15,7 @@ builds["#revCondi"] = {
         }
     ],
     pets: null,
-    skills: [
-        "Legendary Dwarf Stance",
-        "Legendary Demon Stance"
-    ],
+    skills: ["Legendary Dwarf Stance", "Legendary Demon Stance"],
     armor: [
         { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
         {
@@ -85,10 +82,7 @@ builds["#herVentari"] = {
         }
     ],
     pets: null,
-    skills: [
-        "Legendary Centaur Stance",
-        "Legendary Dragon Stance"
-    ],
+    skills: ["Legendary Centaur Stance", "Legendary Dragon Stance"],
     armor: [
         { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of Water" },
         {
@@ -126,7 +120,7 @@ builds["#herVentari"] = {
             slot: "mh2",
             type: "Staff",
             stat: "Magi's",
-            sigils: ["Superior Sigil of Transference","Superior Sigil of Water"]
+            sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
         },
         {
             slot: "oh2",

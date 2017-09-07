@@ -73,13 +73,7 @@ var condiReaperFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 builds["#reaperCondi"] = {
     class: Necromancer,
     specializations: condiReaperTraits,
-    skills: [
-        "Signet of Vampirism",
-        "Summon Bone Fiend",
-        "Blood Is Power",
-        "Epidemic",
-        "Plaguelands"
-    ],
+    skills: ["Signet of Vampirism", "Summon Bone Fiend", "Blood Is Power", "Epidemic", "Plaguelands"],
     pets: null,
     armor: condiReaperArmor,
     trinket: condiReaperTrinket,
@@ -90,13 +84,7 @@ builds["#reaperCondi"] = {
 builds["#reaperCondiDeimos"] = {
     class: Necromancer,
     specializations: condiReaperTraits,
-    skills: [
-        "Signet of Vampirism",
-        "Summon Bone Fiend",
-        "Blood Is Power",
-        "Epidemic",
-        "Summon Flesh Golem"
-    ],
+    skills: ["Signet of Vampirism", "Summon Bone Fiend", "Blood Is Power", "Epidemic", "Summon Flesh Golem"],
     pets: null,
     armor: condiReaperArmor,
     trinket: condiReaperTrinket,

@@ -4,7 +4,7 @@ var trinket = {
     amulet: 81658,
     earring1: 79745,
     earring2: 79444,
-    back: 79830,
+    back: 79830
 };
 
 var armor = {
@@ -14,7 +14,7 @@ var armor = {
         coat: 80811,
         gloves: 80838,
         leggings: 80755,
-        boots: 80815,
+        boots: 80815
     },
     Medium: {
         helm: 80753,
@@ -22,7 +22,7 @@ var armor = {
         coat: 80798,
         gloves: 80779,
         leggings: 80812,
-        boots: 80836,
+        boots: 80836
     },
     Heavy: {
         helm: 80832,
@@ -30,7 +30,7 @@ var armor = {
         coat: 80818,
         gloves: 80834,
         leggings: 80845,
-        boots: 80808,
+        boots: 80808
     }
 };
 
@@ -44,7 +44,6 @@ Elementalist.armor = "Light";
 Necromancer.armor = "Light";
 Mesmer.armor = "Light";
 
-
 var builds = {};
 
 var runes = {
@@ -56,8 +55,8 @@ var runes = {
     "Superior Rune of Balthazar": 24765,
     "Superior Rune of the Nightmare": 24848,
     "Superior Rune of the Trapper": 67339,
-    "Superior Rune of the Krait" : 24762,
-    "Superior Rune of Water" : 24839
+    "Superior Rune of the Krait": 24762,
+    "Superior Rune of Water": 24839
 };
 
 var sigils = {
@@ -76,22 +75,22 @@ var sigils = {
 };
 
 var weapons = {
-    "Axe": 81321,
-    "Dagger": 81451,
-    "Mace": 81514,
-    "Pistol": 81270,
-    "Scepter": 81400,
-    "Sword": 81376,
-    "Focus": 81503,
-    "Shield": 81339,
-    "Torch": 81327,
-    "Warhorn": 81337,
-    "Greatsword": 81309,
-    "Hammer": 81374,
-    "Longbow": 81289,
-    "Rifle": 81528,
-    "Shortbow": 81329,
-    "Staff": 81382
+    Axe: 81321,
+    Dagger: 81451,
+    Mace: 81514,
+    Pistol: 81270,
+    Scepter: 81400,
+    Sword: 81376,
+    Focus: 81503,
+    Shield: 81339,
+    Torch: 81327,
+    Warhorn: 81337,
+    Greatsword: 81309,
+    Hammer: 81374,
+    Longbow: 81289,
+    Rifle: 81528,
+    Shortbow: 81329,
+    Staff: 81382
 };
 
 var foods = {
