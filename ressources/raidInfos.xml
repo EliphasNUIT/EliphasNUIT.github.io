@@ -68,9 +68,39 @@
 				<image>240px-Samarog.jpg</image>
 				<shortRef>SamCM</shortRef>
 			</boss>
-			<boss name="DeimosCM">
+			<boss name="Deimos CM">
 				<image>240px-Deimos.jpg</image>
 				<shortRef>DeiCM</shortRef>
+			</boss>
+		</wing>
+	</raid>
+	<raid name="Fractals of the Mists">
+		<wing name="Nightmare">
+			<boss name="MAMA">
+				<image></image>
+				<shortRef>MAMA</shortRef>
+			</boss>
+			<boss name="Siax the Corrupted">
+				<image>230px-Siax_the_Corrupted.jpg</image>
+				<shortRef>Siax</shortRef>
+			</boss>
+			<boss name="Ensolyss of the Endless Torment">
+				<image>185px-Ensolyss_of_the_Endless_Torment.jpg</image>
+				<shortRef>Enso</shortRef>
+			</boss>
+		</wing>
+		<wing name="Shattered Observatory">
+			<boss name="Skorvald the Shattered">
+				<image>184px-Skorvald_the_Shattered.jpg</image>
+				<shortRef>Skor</shortRef>
+			</boss>
+			<boss name="Artsariiv">
+				<image>147px-Artsariiv.jpg</image>
+				<shortRef>Art</shortRef>
+			</boss>
+			<boss name="Arkk">
+				<image>150px-Arkk.jpg</image>
+				<shortRef>Arkk</shortRef>
 			</boss>
 		</wing>
 	</raid>
