@@ -58,8 +58,16 @@
             window.setTimeout(function () {
                 for (var i = data.length / 2; i < data.length; i++) {
                     FW_GW2().getItemstat(statData[i], 'en', function (data) {
-                        if (data.name.length === 0) {
+                        if (data.name.length === 0 || !data.attributes) {
                             return;
+                        }
+                        var attributes = data.attributes;
+                        for (k in attributes) {
+                            if (attributes.hasOwnProperty(k)) {
+                                if (attributes[k] === 0) {
+                                    return;
+                                }
+                            }
                         }
                         statstoDL[data.name] = data.id;
                         console.log("got " + data.name);
@@ -69,9 +77,17 @@
 
             for (var i = 0; i < data.length / 2; i++) {
                 FW_GW2().getItemstat(statData[i], 'en', function (data) {
-                    if (data.name.length === 0) {
-                        return;
-                    }
+                    if (data.name.length === 0 || !data.attributes) {
+                            return;
+                        }
+                        var attributes = data.attributes;
+                        for (k in attributes) {
+                            if (attributes.hasOwnProperty(k)) {
+                                if (attributes[k] === 0) {
+                                    return;
+                                }
+                            }
+                        }
                     statstoDL[data.name] = data.id;
                     console.log("got " + data.name);
                 }, errorFunc)

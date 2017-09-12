@@ -2,9 +2,6 @@ document.GW2A_EMBED_OPTIONS = {
     lang: "fr"
 };
 
-var DOMContentLoaded_event = document.createEvent("Event");
-DOMContentLoaded_event.initEvent("DOMContentLoaded", true, true);
-
 function readSpecializations(build) {
     var divToAdd = '<div spe paddingTop data-armory-embed="specializations" ';
     var speIDS = 'data-armory-ids="';

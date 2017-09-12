@@ -40,7 +40,7 @@ var condiDruidArmor = [
 var condiDruidWeapons = [
     {
         slot: "mh1",
-        type: "Longbow",
+        type: "Shortbow",
         stat: "Viper's",
         sigils: ["Superior Sigil of Malice", "Superior Sigil of Geomancy"]
     },
@@ -130,7 +130,7 @@ builds["#rangerCondi"] = {
     weapons: [
         {
             slot: "mh1",
-            type: "Longbow",
+            type: "Shortbow",
             stat: "Viper's",
             sigils: ["Superior Sigil of Geomancy", "Superior Sigil of Earth"]
         },
