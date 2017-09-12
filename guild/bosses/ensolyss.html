@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="../../scripts/classes.js"></script>
+<script src="../../scripts/stats.js"></script>
+<script src="../../scripts/items.js"></script>
+<script src="../../scripts/pets.js"></script>
+
+<script src="../../scripts/classBuilds/mesmer.js"></script>
+<script src="../../scripts/classBuilds/elementalist.js"></script>
+
+<script src="../../scripts/classBuilds/warrior.js"></script>
+
+<script src="../../scripts/classBuilds/ranger.js"></script>
+
+<script src="../../scripts/embedCreator.js"></script>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>[ODS] GW2 Logs</title>
+    <meta id="author" content="EliphasNUIT">
+    <link href="../../styles/html.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/table.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/composition.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>La composition - Ensolyss of the Endless Torment [ODS]</h1>
+    <img src="../../images/185px-Ensolyss_of_the_Endless_Torment.jpg">
+    <p> <a href="../../index.html">Index</a> </p>
+    <p> <a href="../composition.html">Composition</a> </p>
+
+    <h2 id="Ensolyss">Ensolyss of the Endless Torment</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <div smallpadding center>Player T1</div>
+                </td>
+                <td>
+                    <div padding center>Class</div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chrono</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#chrDPS')"> Chrono DPS</button> </div>
+                    <div id="chrDPS" build visibility="false" init="false"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Druide</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#druidSab')"> Druide Heal</button> </div>
+                    <div id="druidSab" build visibility="false" init="false"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>PS</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#bersCPS2Banners')"> Berserker CPS</button> </div>
+                    <div id="bersCPS2Banners" build visibility="false" init="false"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>DPS</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#tempPower2')"> Tempest Staff</button> </div>
+                    <div id="tempPower2" build visibility="false" init="false"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>DPS</td>
+                <td>
+                    <div center> <button onclick="displayBuild('#tempPower4')"> Tempest Staff</button> </div>
+                    <div id="tempPower4" build visibility="false" init="false"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
