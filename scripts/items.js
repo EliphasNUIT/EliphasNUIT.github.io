@@ -71,7 +71,8 @@ var sigils = {
     "Superior Sigil of Smoldering": 24624,
     "Superior Sigil of Bursting": 44944,
     "Superior Sigil of Earth": 24560,
-    "Superior Sigil of Impact": 24868
+    "Superior Sigil of Impact": 24868,
+    "Superior Sigil of Agility":72092
 };
 
 var weapons = {
