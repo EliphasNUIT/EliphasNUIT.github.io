@@ -19,12 +19,12 @@ var boonShareArmor = [
     { slot: "coat", stat: "Berserker's", rune: "Superior Rune of Leadership" },
     {
         slot: "gloves",
-        stat: "Commander's",
+        stat: "Berserker's",
         rune: "Superior Rune of Leadership"
     },
     {
         slot: "leggings",
-        stat: "Berserker's",
+        stat: "Commander's",
         rune: "Superior Rune of Leadership"
     },
     { slot: "boots", stat: "Berserker's", rune: "Superior Rune of Leadership" }
@@ -219,7 +219,7 @@ builds["#chrDPSDeimos"] = {
             traits: ["All's Well That Ends Well", "Improved Alacrity", "Chronophantasma"]
         }
     ],
-    skills: ["Well of Eternity", "Well of Action", "Well of Precognition", "Signet of Inspiration", "Time Warp"],
+    skills: ["Well of Eternity", "Well of Action", "Well of Recall", "Signet of Inspiration", "Time Warp"],
     pets: null,
     armor: boonShareArmor,
     trinket: boonShareTrinket,

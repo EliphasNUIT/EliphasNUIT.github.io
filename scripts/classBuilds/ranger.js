@@ -229,6 +229,8 @@ builds["#druidVg"] = {
     food: healDruidFood
 };
 
+builds["#druidVg2"] = builds["#druidVg"];
+
 builds["#druidSab"] = {
     class: Ranger,
     specializations: [
@@ -378,6 +380,55 @@ builds["#druidSpirit"] = {
     food: healDruidFood
 };
 builds["#druidSpirit2"] = builds["#druidSpirit"];
+
+builds["#druidKite"] = {
+    class: Ranger,
+    specializations: [
+        {
+            name: "Skirmishing",
+            traits: ["Sharpened Edges", "Spotter", "Quick Draw"]
+        },
+        {
+            name: "Nature Magic",
+            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+        },
+        {
+            name: "Druid",
+            traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+        }
+    ],
+    skills: ["Water Spirit", "Stone Spirit", "Frost Spirit", "Sun Spirit", "Spirit of Nature"],
+    pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+    armor: healDruidArmor,
+    trinket: healDruidTrinket,
+    weapons: [
+        {
+            slot: "mh1",
+            type: "Staff",
+            stat: "Magi's",
+            sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
+        },
+        {
+            slot: "oh1",
+            type: "",
+            stat: "",
+            sigils: [""]
+        },
+        {
+            slot: "mh2",
+            type: "Greatsword",
+            stat: "Magi's",
+            sigils: ["Superior Sigil of Transference", "Superior Sigil of Agility"]
+        },
+        {
+            slot: "oh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        }
+    ],
+    food: healDruidFood
+};
 
 builds["#druidSam"] = {
     class: Ranger,
