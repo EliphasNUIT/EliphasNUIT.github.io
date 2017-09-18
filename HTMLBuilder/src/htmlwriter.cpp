@@ -39,7 +39,7 @@ void writeIndexFoot(QTextStream& stream) {
 
     res << "<h2>Calendrier</h2>";
     res << "    <ul>";
-    res << "        <a href=\"https://framadate.org/rrMBmo8fGu5vaMqX\"> S'inscrire! </a>";
+    res << "        <a href=\"https://framadate.org/TOaODOIfn3cRoSba\"> S'inscrire! </a>";
     res << "    </ul>";
     //res << "    <iframe src=\"https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=fr&amp;bgcolor=%23AAAAAA&amp;src=vaqf4oa6gmj6saabljhjiti5cs%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FParis\" style=\"border-width:0\" width=\"700\" height=\"600\" frameborder=\"0\" scrolling=\"no\"></iframe>";
     res << QString::fromLatin1("    <p>Tous les logs ont été créés par <a href=\"https://www.deltaconnected.com/arcdps/\">ArcDPS</a> et parsés par <a href=\"https://raidheroes.tk/\">Raid Heroes</a>.</p>");
