@@ -7,6 +7,9 @@ body {
     border: 5px solid rgba(200, 200, 200, 0.5);
 }
 
+button {
+    font-size: 1.1em;
+}
 
 @media only screen and (max-device-width: 750px) {
     body {
