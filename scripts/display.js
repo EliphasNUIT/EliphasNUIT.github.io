@@ -13,13 +13,13 @@ function display(frameID) {
                 iframe.attr("frameborder", "3");
                 var height = contents[0].scrollingElement.clientHeight;
                 //if (isFirefox) {
-                    height = Math.max(heigth,contents[0].scrollingElement.offsetHeight);
+                    height = Math.max(height ,contents[0].scrollingElement.offsetHeight);
                 //}
                 iframe.attr("height", height);
                 iframe[0].timeout = setInterval(function() {
                     var height = contents[0].scrollingElement.clientHeight;
                     //if (isFirefox) {
-                        height = Math.max(heigth,contents[0].scrollingElement.offsetHeight);
+                        height = Math.max(height ,contents[0].scrollingElement.offsetHeight);
                     //}
                     iframe.attr("height", height);
                 }, 500);
