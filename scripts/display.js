@@ -1,5 +1,3 @@
-//var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
-
 function display(frameID) {
     var iframe = $(frameID);
     var status = iframe.attr("frameborder");
@@ -11,16 +9,12 @@ function display(frameID) {
             if (status === "1") {
                 var contents = iframe.contents();
                 iframe.attr("frameborder", "3");
-                var height = contents[0].scrollingElement.clientHeight;
-                //if (isFirefox) {
-                    height = Math.max(height ,contents[0].scrollingElement.offsetHeight);
-                //}
+                //var height = contents[0].scrollingElement.clientHeight;
+                var height = contents[0].scrollingElement.offsetHeight;
                 iframe.attr("height", height);
                 iframe[0].timeout = setInterval(function() {
-                    var height = contents[0].scrollingElement.clientHeight;
-                    //if (isFirefox) {
-                        height = Math.max(height ,contents[0].scrollingElement.offsetHeight);
-                    //}
+                    //var height = contents[0].scrollingElement.clientHeight;
+                    height = contents[0].scrollingElement.offsetHeight;
                     iframe.attr("height", height);
                 }, 500);
             } else {
