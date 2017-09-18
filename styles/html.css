@@ -54,11 +54,6 @@ img {
     margin: 0 auto;
 }
 
-a {
-    font-size: 1.2em
-}
-
-
 @media only screen and (max-device-width: 750px) {
     html {
         font-size: 20px;
