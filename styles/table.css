@@ -8,7 +8,8 @@ table caption {
 table {
     border: #000000 3px solid;
     border-spacing: 0px;
-    width: 500px
+    width: 80%;
+    min-width: 500px;
 }
 
 table caption {
@@ -33,7 +34,6 @@ table tbody {
 table td {
     border: #000000 1px solid;
     font-size: 1.8em;
-    padding-left: 4px;
 }
 
 table tfoot {

@@ -3,7 +3,7 @@ document.GW2A_EMBED_OPTIONS = {
 };
 
 function readSpecializations(build) {
-    var divToAdd = '<div spe paddingTop data-armory-embed="specializations" ';
+    var divToAdd = '<div data-armory-embed="specializations" ';
     var speIDS = 'data-armory-ids="';
     var totalTraits = "";
     var specializations = build.specializations;
@@ -48,7 +48,7 @@ function readPets(build) {
 }
 
 function readSkills(build) {
-    var divToAdd = '<div paddingTop center data-armory-embed="skills" ';
+    var divToAdd = '<div center data-armory-embed="skills" ';
     var skillIDS = 'data-armory-ids="';
     for (var i = 0; i < build.skills.length; i++) {
         var skillID = build.class.skills[build.skills[i]] ? build.class.skills[build.skills[i]] : -1;
@@ -63,7 +63,7 @@ function readSkills(build) {
 }
 
 function readAmuletRings(build) {
-    var divToAdd = '<div center paddingTop data-armory-embed="items" ';
+    var divToAdd = '<div center data-armory-embed="items" ';
     var trinketIDS = 'data-armory-ids="';
     var totalStats = "";
     for (var i = 0; i < build.trinket.length; i++) {
@@ -87,7 +87,7 @@ function readAmuletRings(build) {
 }
 
 function readBackAccessories(build) {
-    var divToAdd = '<div center paddingTop data-armory-embed="items" ';
+    var divToAdd = '<div center data-armory-embed="items" ';
     var trinketIDS = 'data-armory-ids="';
     var totalStats = "";
     for (var i = 0; i < build.trinket.length; i++) {
@@ -111,8 +111,8 @@ function readBackAccessories(build) {
 }
 
 function readArmor(build) {
-    var divToAdd = '<div paddingTop armor center data-armory-embed="items" ';
-    var runeDivToAdd = '<div paddingTop armor center data-armory-embed="items" ';
+    var divToAdd = '<div center data-armory-embed="items" ';
+    var runeDivToAdd = '<div center data-armory-embed="items" ';
     var armorIDS = 'data-armory-ids="';
     var runeIDS = 'data-armory-ids="';
     var totalStats = "";
@@ -141,8 +141,8 @@ function readArmor(build) {
 }
 
 function readWeapon1(build) {
-    var divToAdd = '<div center paddingTop data-armory-embed="items" ';
-    var sigilDivToAdd = '<div center paddingTop data-armory-embed="items" ';
+    var divToAdd = '<div center data-armory-embed="items" ';
+    var sigilDivToAdd = '<div center data-armory-embed="items" ';
     var ids = 'data-armory-ids="';
     var sigilIDS = 'data-armory-ids="';
     var totalStats = "";
@@ -185,8 +185,8 @@ function readWeapon1(build) {
 }
 
 function readWeapon2(build) {
-    var divToAdd = '<div center paddingTop data-armory-embed="items" ';
-    var sigilDivToAdd = '<div center paddingTop data-armory-embed="items" ';
+    var divToAdd = '<div center data-armory-embed="items" ';
+    var sigilDivToAdd = '<div center data-armory-embed="items" ';
     var ids = 'data-armory-ids="';
     var sigilIDS = 'data-armory-ids="';
     var totalStats = "";
@@ -230,7 +230,7 @@ function readWeapon2(build) {
 }
 
 function readFoods(build) {
-    var divToAdd = '<div paddingTop center data-armory-embed="items" ';
+    var divToAdd = '<div center data-armory-embed="items" ';
     var foodIDS = 'data-armory-ids="';
     for (var i = 0; i < build.food.length; i++) {
         var foodID = foods[build.food[i]] ? foods[build.food[i]] : -1;
@@ -259,13 +259,22 @@ function displayBuild(divID) {
     var init = div.attr("init") === "true";
     if (!init) {
         var build = builds[divID];
-        div.append("<div center bold>Aptitudes</div>");
-        div.append(readSpecializations(build));
-        div.append("<div center bold>Compétences</div>");
-        div.append(readSkills(build));
+        //traits
+        var traitBoxId = "traitBox" + nBox++;
+        div.append("<div id='" + traitBoxId + "' traitBox></div>");
+        var traitDiv = $("#" + traitBoxId);
+        traitDiv.append("<div center bold>Aptitudes</div>");
+        traitDiv.append(readSpecializations(build));
+        // skills
+        var skillBoxId = "traitBox" + nBox++;
+        div.append("<div id='" + skillBoxId + "' skillBox></div>");
+        var skillDiv = $("#" + skillBoxId);
+        skillDiv.append("<div center bold>Compétences</div>");
+        skillDiv.append(readSkills(build));
         if (build.pets) {
-            div.append(readPets(build));
+            skillDiv.append(readPets(build));
         }
+        // equipement
         var equipementBoxId = "equipementBox" + nBox++;
         div.append("<div id='" + equipementBoxId + "' equipementBox></div>");
         var equipementDiv = $("#" + equipementBoxId);

@@ -1,8 +1,8 @@
 body {
-    width: 900px;
+    width: 50%;
+    min-width: 500px;
     margin: 0 auto;
     background-color: rgba(222, 222, 222, 0.5);
-    padding: 0 20px 20px 20px;
     border: 5px solid rgba(200, 200, 200, 0.5);
 }
 
@@ -17,14 +17,7 @@ div[center] {
 div[bold] {
     font-weight: bold;
 }
-div[left] {
-    text-align: left;
-    padding-left: 5%;
-}
-div[right] {
-    text-align: right;
-    padding-right: 5%;
-}
+
 img[small] {
     height: auto;
     width: auto;
@@ -32,32 +25,21 @@ img[small] {
     max-height: 120px;
     display: inline-block;
 }
-div[padding] {
-    width: 600px;
-}
-div[paddingTop] {
-    padding-top: 1%;
-}
-div[smallpadding] {
-    width: 100px;
-}
-
-/* special tags */
-
-div[armor] {
-    width: 50%;
-}
-
-div[spe] {
-    width: 96%;
-    height: 5%;
-    padding-left: 2%;
-}
 
 /* boxes */
 
+div[traitBox] {
+    display: flex;
+    flex-direction: column;
+}
+
+div[skillBox] {
+    display: flex;
+    flex-direction: column;
+    text-align: column;
+}
+
 div[equipementBox] {
-    height: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,13 +48,11 @@ div[equipementBox] {
 div[armorTitle] {
     display: inline-flex;
     width: 30%;
-    height: 100%;
     flex-direction: column;
     align-items: center;
 }
 div[armorBox] {
     width: 80%;
-    height: 80%;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -81,7 +61,6 @@ div[armorBox] {
 div[wepTrinketTitle] {
     display: inline-flex;
     width: 70%;
-    height: 80%;
     flex-direction: column;
     align-items: center;
 }
@@ -89,7 +68,6 @@ div[wepTrinketTitle] {
 div[wepsBox] {
     display: inline-flex;
     width: 80%;
-    height: 50%;
     flex-direction: row;
     align-items: center;
 }
@@ -110,7 +88,6 @@ div[wepBox1] {
 div[trinketBox] {
     display: inline-flex;
     width: 65%;
-    height: 20%;
     align-items: center;
     flex-direction: column;
 }
