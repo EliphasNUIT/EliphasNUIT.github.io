@@ -7,6 +7,8 @@ html {
     background-size: cover;  
 }
 
+
+
 h1 {
     font-size: 60px;
     text-align: center;
@@ -50,4 +52,29 @@ body {
 img {
     display: block;
     margin: 0 auto;
+}
+
+
+@media screen and (max-device-width: 700px) {
+    html {
+        font-size: 50px;
+    }
+
+    h1 {
+        font-size: 100px;
+        padding: 50px 0;
+    }
+    
+    h2 {
+        font-size: 50px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+    
+    p,
+    li {
+        font-size: 20px;
+    }
 }
