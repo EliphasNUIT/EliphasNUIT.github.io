@@ -36,8 +36,8 @@ function display(frameID) {
     }
     if (status === "0") {
         iframe.attr("frameborder", "1");
-        iframe.attr("height", "10");
-        iframe.attr("width", "1200");
+        iframe.attr("height", "2%");
+        iframe.attr("width", "100%");
         iframe.attr("src", iframe.data("src"));
     } else {
         iframe.attr("src", "about:blank");

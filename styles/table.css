@@ -42,3 +42,14 @@ table tfoot {
     color: #996600;
     letter-spacing: 1px;
 }
+
+@media only screen and (max-device-width: 750px) {
+    table {
+        width: 100%;
+        min-width: 0px;
+    }
+
+    table thead {
+        font-size: 1.0em;
+    }
+}

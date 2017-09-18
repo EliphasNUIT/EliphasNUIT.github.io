@@ -55,26 +55,31 @@ img {
 }
 
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 750px) {
     html {
-        font-size: 50px;
+        font-size: 20px;
+    }
+
+    body {
+        width: 100%;
+        padding: 2px 2px 2px 2px;
     }
 
     h1 {
-        font-size: 100px;
-        padding: 50px 0;
+        font-size: 90px;
+        padding: 2px 0;
     }
     
     h2 {
-        font-size: 50px;
+        font-size: 70px;
     }
     
     h3 {
-        font-size: 30px;
+        font-size: 50px;
     }
     
     p,
     li {
-        font-size: 20px;
+        font-size: 30px;
     }
 }

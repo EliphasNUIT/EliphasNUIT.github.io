@@ -6,6 +6,8 @@ body {
     border: 5px solid rgba(200, 200, 200, 0.5);
 }
 
+
+
 div[build] {
     display: none;
 }
@@ -26,10 +28,12 @@ img[small] {
     display: inline-block;
 }
 
+
 /* boxes */
 
 div[traitBox] {
     display: flex;
+    width: 100%;
     flex-direction: column;
 }
 
@@ -95,4 +99,16 @@ div[trinketBox] {
 /* button */
 button {
     font-size: 1em;
+}
+
+
+@media only screen and (max-device-width: 750px) {
+    body {
+        width: 100%;
+    }
+
+    img[small] {
+        max-width: 190px;
+        max-height: 190px;
+    }
 }

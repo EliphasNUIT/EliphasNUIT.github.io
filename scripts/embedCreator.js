@@ -2,6 +2,24 @@ document.GW2A_EMBED_OPTIONS = {
     lang: "fr"
 };
 
+function detectmob() {
+    if (
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+var mobile = detectmob();
+
 function readSpecializations(build) {
     var divToAdd = '<div data-armory-embed="specializations" ';
     var speIDS = 'data-armory-ids="';
@@ -28,6 +46,11 @@ function readSpecializations(build) {
     speIDS = speIDS.slice(0, -1) + '" ';
     divToAdd += speIDS;
     divToAdd += totalTraits;
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="70" ';
+    }
     divToAdd += "></div>";
     return divToAdd;
 }
@@ -56,7 +79,11 @@ function readSkills(build) {
     }
     skillIDS = skillIDS.slice(0, -1) + '" ';
     divToAdd += skillIDS;
-    divToAdd += 'data-armory-size="70" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="70" ';
+    }
     divToAdd += 'data-armory-blank-text="Au choix ou voir avec l\'autre classe jouant le même build" ';
     divToAdd += "></div>";
     return divToAdd;
@@ -81,7 +108,11 @@ function readAmuletRings(build) {
     trinketIDS = trinketIDS.slice(0, -1) + '" ';
     divToAdd += totalStats;
     divToAdd += trinketIDS;
-    divToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="60" ';
+    }
     divToAdd += "></div>";
     return divToAdd;
 }
@@ -105,7 +136,11 @@ function readBackAccessories(build) {
     trinketIDS = trinketIDS.slice(0, -1) + '" ';
     divToAdd += totalStats;
     divToAdd += trinketIDS;
-    divToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="60" ';
+    }
     divToAdd += "></div>";
     return divToAdd;
 }
@@ -133,9 +168,17 @@ function readArmor(build) {
     divToAdd += totalStats;
     divToAdd += armorIDS;
     runeDivToAdd += runeIDS;
-    divToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="60" ';
+    }
     divToAdd += "></div>";
-    runeDivToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        runeDivToAdd += 'data-armory-size="100" ';
+    } else {
+        runeDivToAdd += 'data-armory-size="60" ';
+    }
     runeDivToAdd += "></div>";
     return { armor: divToAdd, rune: runeDivToAdd };
 }
@@ -171,13 +214,21 @@ function readWeapon1(build) {
     ids = ids.slice(0, -1) + '" ';
     divToAdd += totalStats;
     divToAdd += ids;
-    divToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="60" ';
+    }
     divToAdd += 'data-armory-blank-text="Vide" ';
     divToAdd += "></div>";
 
     sigilIDS = sigilIDS.slice(0, -1) + '" ';
     sigilDivToAdd += sigilIDS;
-    sigilDivToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        sigilDivToAdd += 'data-armory-size="100" ';
+    } else {
+        sigilDivToAdd += 'data-armory-size="60" ';
+    }
     sigilDivToAdd += 'data-armory-blank-text="Vide" ';
     sigilDivToAdd += "></div>";
 
@@ -216,13 +267,21 @@ function readWeapon2(build) {
     ids = ids.slice(0, -1) + '" ';
     divToAdd += totalStats;
     divToAdd += ids;
-    divToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="60" ';
+    }
     divToAdd += 'data-armory-blank-text="Vide" ';
     divToAdd += "></div>";
 
     sigilIDS = sigilIDS.slice(0, -1) + '" ';
     sigilDivToAdd += sigilIDS;
-    sigilDivToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        sigilDivToAdd += 'data-armory-size="100" ';
+    } else {
+        sigilDivToAdd += 'data-armory-size="60" ';
+    }
     sigilDivToAdd += 'data-armory-blank-text="Vide" ';
     sigilDivToAdd += "></div>";
 
@@ -238,7 +297,11 @@ function readFoods(build) {
     }
     foodIDS = foodIDS.slice(0, -1) + '" ';
     divToAdd += foodIDS;
-    divToAdd += 'data-armory-size="60" ';
+    if (mobile) {
+        divToAdd += 'data-armory-size="100" ';
+    } else {
+        divToAdd += 'data-armory-size="60" ';
+    }
     divToAdd += "></div>";
     return divToAdd;
 }
