@@ -18,6 +18,8 @@
 
 <script src="../../scripts/embedCreator.js"></script>
 
+<script src="../../scripts/tabs.js"></script>
+
 <head>
     <meta charset="utf-8">
     <title>[ODS] GW2 Logs</title>
@@ -36,50 +38,89 @@
 
     <h2 id="Sab">Sabetha</h2>
 
-
     <h3>Groupe 1</h3>
-    <li><div center ><a href="https://gw2armory.com/suzuca.3248/characters">Akitae</a></div>
-        <div center> <button onclick="displayBuild('#chrDPS2')"> Chrono DPS</button> </div>
-        <div id="chrDPS2" build visibility="false" init="false"></div>
-    </li>
-    <li><div center ><a href="https://gw2armory.com/damdidamdide.5209/characters">Dam</a></div>
-        <div center> <button onclick="displayBuild('#druidSab')"> Druide Heal</button> </div>
-        <div id="druidSab" build visibility="false" init="false"></div>
-    </li>
-    <li><div center ><a href="https://gw2armory.com/drazic.4795/characters">Arkness</a></div>
-        <div center> <button onclick="displayBuild('#bersCPS2Banners')"> Berserker CPS</button> </div>
-        <div id="bersCPS2Banners" build visibility="false" init="false"></div>
-    </li>
-    <li><div center ><a href="https://gw2armory.com/EliphasNUIT/c/Gorgutz%20Man%20Eater">Eliphas</a></div>
-        <div center> <button onclick="displayBuild('#engiCondi')"> Ingénieur Condi</button> </div>
-        <div id="engiCondi" build visibility="false" init="false"></div>
-    </li>
-    <li><div center ><a href="https://gw2armory.com/Genouw.2873/characters">Sakura</a> - Cannon 2-4</div>
-        <div center> <button onclick="displayBuild('#tempCondiSab')"> Tempest Condi</button> </div>
-        <div id="tempCondiSab" build visibility="false" init="false"></div>
-    </li>
+    <div center class="w3-bar w3-black">
+
+        <button onclick="openChar1('Akitae', event )" class="w3-bar-item w3-button tablinks1 w3-red">Akitae</button>
+        <button onclick="openChar1('Dam', event)" class="w3-bar-item w3-button tablinks1">Dam</button>
+        <button onclick="openChar1('Arkness', event)" class="w3-bar-item w3-button tablinks1">Arkness</button>
+        <button onclick="openChar1('Eliphas', event)" class="w3-bar-item w3-button tablinks1">Eliphas</button>
+        <button onclick="openChar1('Sakura', event)" class="w3-bar-item w3-button tablinks1">Sakura</button>
+
+    </div>
+
+    <div id="Akitae" class="t1" style="display:block">
+            <div center char><a href="https://gw2armory.com/suzuca.3248/characters">Akitae</a></div>
+            <div center> <button onclick="displayBuild('#chrDPS2')"> Chrono DPS</button> </div>
+            <div id="chrDPS2" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Dam" class="t1" style="display:none">
+            <div center char><a href="https://gw2armory.com/damdidamdide.5209/characters">Dam</a></div>
+            <div center> <button onclick="displayBuild('#druidSab')"> Druide Heal</button> </div>
+            <div id="druidSab" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Arkness" class="t1" style="display:none">
+            <div center char><a href="https://gw2armory.com/drazic.4795/characters">Arkness</a></div>
+            <div center> <button onclick="displayBuild('#bersCPS2Banners')"> Berserker CPS</button> </div>
+            <div id="bersCPS2Banners" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Eliphas" class="t1" style="display:none">
+            <div center char><a href="https://gw2armory.com/EliphasNUIT/c/Gorgutz%20Man%20Eater">Eliphas</a></div>
+            <div center> <button onclick="displayBuild('#engiCondi')"> Ingénieur Condi</button> </div>
+            <div id="engiCondi" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Sakura" class="t1" style="display:none">
+            <div center char><a href="https://gw2armory.com/Genouw.2873/characters">Sakura</a> - Cannon 2-4</div>
+            <div center> <button onclick="displayBuild('#tempCondiSab')"> Tempest Condi</button> </div>
+            <div id="tempCondiSab" build visibility="false" init="false"></div>
+    </div>
+
 
     <h3>Groupe 2</h3>
-    <li><div center ><a href="https://gw2armory.com/Kaeryh/c/Erylis%20Shanyra">Polgara</a></div>
-        <div center> <button onclick="displayBuild('#chrDPS')"> Chrono DPS</button> </div>
-        <div id="chrDPS" build visibility="false" init="false"></div>
-    </li>
-    <li><div center ><a href="https://gw2armory.com/winterflame/c/Nerylium">Winter</a></div>
-        <div center> <button onclick="displayBuild('#druidSab2')"> Druide Heal</button> </div>
-        <div id="druidSab2" build visibility="false" init="false"></div>
-    </li>
-    <li><div center ><a href="https://gw2armory.com/Bouhteille/c/Rand%20%C3%82l%20Th%C3%B6r">Bouhteille</a> - Backup Cannon 1</div>
-        <div center> <button onclick="displayBuild('#tempPSSab')"> Tempest PS</button> </div>
-        <div id="tempPSSab" build visibility="false" init="false"></div>
-    </li>
-    <li><div center >Mélo - Cannon 1-3</div>
-        <div center> <button onclick="displayBuild('#drdPowerSab')"> Daredevil Staff</button> </div>
-        <div id="drdPowerSab" build visibility="false" init="false"></div>
-    </li>
-    <li><div center >Vengeful - Backup Cannon 2</div>
-        <div center> <button onclick="displayBuild('#drdCondiSab')"> Daredevil Condi</button></div>
-        <div id="drdCondiSab" build visibility="false" init="false"></div>
-    </li>
+
+    <div center class="w3-bar w3-black">
+
+        <button onclick="openChar2('Polgara', event )" class="w3-bar-item w3-button tablinks2 w3-red">Polgara</button>
+        <button onclick="openChar2('Winter', event)" class="w3-bar-item w3-button tablinks2">Winter</button>
+        <button onclick="openChar2('Bouhteille', event)" class="w3-bar-item w3-button tablinks2">Bouhteille</button>
+        <button onclick="openChar2('Mélo', event)" class="w3-bar-item w3-button tablinks2">Mélo</button>
+        <button onclick="openChar2('Vengeful', event)" class="w3-bar-item w3-button tablinks2">Vengeful</button>
+
+    </div>
+
+    <div id="Polgara" class="t2" style="display:block">
+            <div center char><a href="https://gw2armory.com/Kaeryh/c/Erylis%20Shanyra">Polgara</a></div>
+            <div center> <button onclick="displayBuild('#chrDPS')"> Chrono DPS</button> </div>
+            <div id="chrDPS" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Winter" class="t2" style="display:none">
+            <div center char><a href="https://gw2armory.com/winterflame/c/Nerylium">Winter</a></div>
+            <div center> <button onclick="displayBuild('#druidSab2')"> Druide Heal</button> </div>
+            <div id="druidSab2" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Bouhteille" class="t2" style="display:none">
+            <div center char><a href="https://gw2armory.com/Bouhteille/c/Rand%20%C3%82l%20Th%C3%B6r">Bouhteille</a> - Backup Cannon 1</div>
+            <div center> <button onclick="displayBuild('#tempPSSab')"> Tempest PS</button> </div>
+            <div id="tempPSSab" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Mélo" class="t2" style="display:none">
+            <div center char>Mélo - Cannon 1-3</div>
+            <div center> <button onclick="displayBuild('#drdPowerSab')"> Daredevil Staff</button> </div>
+            <div id="drdPowerSab" build visibility="false" init="false"></div>
+    </div>
+
+    <div id="Vengeful" class="t2" style="display:none">
+            <div center char>Vengeful - Backup Cannon 2</div>
+            <div center> <button onclick="displayBuild('#drdCondiSab')"> Daredevil Condi</button></div>
+            <div id="drdCondiSab" build visibility="false" init="false"></div>
+    </div>
 </body>
 
 </html>
