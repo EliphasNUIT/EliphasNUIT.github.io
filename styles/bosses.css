@@ -9,14 +9,17 @@ body {
 
 button {
     font-size: 1.1em;
+    font-weight: bold;
 }
 
 @media only screen and (max-device-width: 750px) {
+    
     body {
         width: 100%;
+        padding: 2px 2px 2px 2px;
     }
 
     button {
-        font-size: 1.2em;
+        font-size: 0.9em;
     }
 }
