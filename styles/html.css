@@ -58,9 +58,9 @@ img {
 }
 
 button {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
-    background-color: #AAAAAA;
+    background-color: #EEEEEE;
 }
 
 @media only screen and (max-device-width: 750px) {
