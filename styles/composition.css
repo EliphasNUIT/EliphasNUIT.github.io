@@ -193,6 +193,7 @@ body {
 
 div[build] {
     display: none;
+    font-size: 1.4em;
     border: 5px solid rgba(0, 0, 0, 0.8);
 }
 div[char] {
