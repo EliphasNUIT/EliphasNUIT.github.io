@@ -189,9 +189,6 @@ https://www.w3schools.com/w3css/4/w3.css
 body {
     width: 35%;
     min-width: 600px;
-    margin: 0 auto;
-    background-color: rgba(222, 222, 222, 0.8);
-    border: 5px solid rgba(200, 200, 200, 0.5);
 }
 
 div[build] {
@@ -199,7 +196,7 @@ div[build] {
     border: 5px solid rgba(0, 0, 0, 0.8);
 }
 div[char] {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     border: 5px solid rgba(0, 0, 0, 0.8);
 }
@@ -299,10 +296,7 @@ div[trinketBox] {
 }
 
 /* button */
-button {
-    font-size: 1em;
-    font-weight: bold;
-}
+
 
 
 @media only screen and (max-device-width: 750px) {
@@ -315,7 +309,7 @@ button {
     }
 
     button {
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
 
     li {
