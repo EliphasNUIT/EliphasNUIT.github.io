@@ -12,20 +12,21 @@ void writeIndexHeader(QTextStream& stream) {
 
     res << "<!DOCTYPE html>";
     res << "<html>";
+    res << "<script>";
+    res << "$(function(){";
+    res << "    $(\"#includedContent\").load(\"./ressources/header.html\");";
+    res << "});";
+    res << "</script>";    
     res << "<head>";
     res << "    <meta charset=\"utf-8\">";
     res << "    <title>[ODS] GW2 Logs</title>";
     res << "    <meta name=\"author\" content=\"EliphasNUIT\">";
     res << "    <link href=\"styles/html.css\" rel=\"stylesheet\" type=\"text/css\"> ";
     res << "</head>";
+    res << "<div id=\"includedContent\"></div>";
     res << "<body>";
     res << "    <h1>Logs [ODS]</h1>";
-    res << "    <img src=\"images/raid.jpg\" width=\"50%\" height=\"50%\">";
-    res << "    <h2>Informations</h2>";
-    res << "    <li> <a href=\"./guild/composition.html\">La composition</a> </li>";
-    res << "    <li> <a href=\"./guild/usefulLinks.html\">Liens utiles</a> </li>";
-    res << "    <h2>Archives</h2>";
-    res << "    <li> <a href=\"./ressources/ressources.7z\" target=\"_blank\">Download</a></li>";
+    res << "    <img src=\"images/raid.jpg\">";
 
     QStringListIterator it(res);
     while(it.hasNext()) {
@@ -37,10 +38,6 @@ void writeIndexHeader(QTextStream& stream) {
 void writeIndexFoot(QTextStream& stream) {
     QStringList res;
 
-    res << "<h2>Calendrier</h2>";
-    res << "    <ul>";
-    res << "        <a href=\"https://framadate.org/TOaODOIfn3cRoSba\"> S'inscrire! </a>";
-    res << "    </ul>";
     //res << "    <iframe src=\"https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=fr&amp;bgcolor=%23AAAAAA&amp;src=vaqf4oa6gmj6saabljhjiti5cs%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FParis\" style=\"border-width:0\" width=\"700\" height=\"600\" frameborder=\"0\" scrolling=\"no\"></iframe>";
     res << QString::fromLatin1("    <p>Tous les logs ont été créés par <a href=\"https://www.deltaconnected.com/arcdps/\">ArcDPS</a> et parsés par <a href=\"https://raidheroes.tk/\">Raid Heroes</a>.</p>");
     res << "</body>";

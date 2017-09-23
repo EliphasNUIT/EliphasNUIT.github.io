@@ -21,6 +21,9 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res <<"<html>";
     res << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>";
     res << "<script src=\"../scripts/display.js\"></script>";
+    res << "$(function(){";
+    res << "    $(\"#includedContent\").load(\"../ressources/header.html\");";
+    res << "});";
     res << "<head>";
     res << "    <meta charset=\"latin\">";
     res << "    <title>[ODS] " + this->name + " Logs</title>";
@@ -28,10 +31,10 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "    <link href=\"../styles/html.css\" rel=\"stylesheet\" type=\"text/css\">";
     res << "    <link href=\"../styles/bosses.css\" rel=\"stylesheet\" type=\"text/css\">";
     res << "</head>";
+    res << "<div id=\"includedContent\"></div>";
     res << "<body>";
     res << "    <h1>" + this->name + " [ODS]</h1>";
     res << this->imagePath;
-    res << "    <p> <a href=\"../index.html\">Index</a> </p>";
     res << "    <p>Les try</p> ";
     res << "        <ul> ";
     res << this->getTries();
