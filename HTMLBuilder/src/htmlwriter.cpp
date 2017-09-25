@@ -12,7 +12,8 @@ void writeIndexHeader(QTextStream& stream) {
 
     res << "<!DOCTYPE html>";
     res << "<html>";
-    res << "<script>";
+    res << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>";
+    res << "<script>";   
     res << "$(function(){";
     res << "    $(\"#includedContent\").load(\"./ressources/header.html\");";
     res << "});";

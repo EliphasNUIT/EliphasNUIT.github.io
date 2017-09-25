@@ -21,9 +21,11 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res <<"<html>";
     res << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>";
     res << "<script src=\"../scripts/display.js\"></script>";
+    res << "<script>";
     res << "$(function(){";
-    res << "    $(\"#includedContent\").load(\"../ressources/header.html\");";
+    res << "    $(\"#includedContent\").load(\"./ressources/header.html\");";
     res << "});";
+    res << "</script>";
     res << "<head>";
     res << "    <meta charset=\"latin\">";
     res << "    <title>[ODS] " + this->name + " Logs</title>";

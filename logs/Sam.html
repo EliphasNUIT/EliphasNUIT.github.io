@@ -2,6 +2,11 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="../scripts/display.js"></script>
+<script>
+$(function(){
+    $("#includedContent").load("./ressources/header.html");
+});
+</script>
 <head>
     <meta charset="latin">
     <title>[ODS] Samarog Logs</title>
@@ -9,10 +14,10 @@
     <link href="../styles/html.css" rel="stylesheet" type="text/css">
     <link href="../styles/bosses.css" rel="stylesheet" type="text/css">
 </head>
+<div id="includedContent"></div>
 <body>
     <h1>Samarog [ODS]</h1>
 <img src="../images/240px-Samarog.jpg">
-    <p> <a href="../index.html">Index</a> </p>
     <p>Les try</p> 
         <ul> 
             <li> <button onclick="display('#2017_09_19')"> Afficher les logs du 19/09/2017</button> </li>
