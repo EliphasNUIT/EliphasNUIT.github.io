@@ -23,7 +23,7 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "<script src=\"../scripts/display.js\"></script>";
     res << "<script>";
     res << "$(function(){";
-    res << "    $(\"#includedContent\").load(\"./ressources/header.html\");";
+    res << "    $(\"#includedContent\").load(\"../ressources/header.html\");";
     res << "});";
     res << "</script>";
     res << "<head>";
