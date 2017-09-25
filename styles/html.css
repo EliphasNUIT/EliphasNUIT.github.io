@@ -65,6 +65,8 @@ button {
 
 img{
     zoom: 0.8;
+    max-width: 100%;
+    height: auto;
 }
 
 @media only screen and (max-device-width: 750px) {
