@@ -217,6 +217,10 @@ div[bold] {
     font-weight: bold;
 }
 
+img{
+    zoom: 1.5;
+}
+
 img[small] {
     height: auto;
     width: auto;

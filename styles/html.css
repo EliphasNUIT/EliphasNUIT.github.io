@@ -63,6 +63,10 @@ button {
     background-color: #EEEEEE;
 }
 
+img{
+    zoom: 0.8;
+}
+
 @media only screen and (max-device-width: 750px) {
 
     body {
@@ -71,7 +75,7 @@ button {
     }
 
     img{
-        zoom: 2.7;
+        zoom: 2.2;
     }
 
     h1 {
