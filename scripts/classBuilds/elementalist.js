@@ -184,7 +184,7 @@ builds["#tempCondiSab"] = {
     food: tempCondiFood
 };
 
-builds["#tempPower"] = {
+builds["#weavPower"] = {
     class: Elementalist,
     specializations: [
         {
@@ -196,8 +196,8 @@ builds["#tempPower"] = {
             traits: ["Ferocious Winds", "Tempest Defense", "Bolt to the Heart"]
         },
         {
-            name: "Tempest",
-            traits: ["Gale Song", "Harmonious Conduit", "Imbued Melodies"]
+            name: "Weaver",
+            traits: ["Superior Elements", "Swift Revenge", "Elements of Rage"]
         }
     ],
     skills: [
@@ -265,11 +265,11 @@ builds["#tempPower"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#tempPower2"] = builds["#tempPower"];
+builds["#weavPower2"] = builds["#weavPower"];
 
-builds["#tempPower3"] = builds["#tempPower"];
+builds["#weavPower3"] = builds["#weavPower"];
 
-builds["#tempPower4"] = builds["#tempPower"];
+builds["#weavPower4"] = builds["#weavPower"];
 
 builds["#tempPowerFA"] = {
     class: Elementalist,
@@ -358,7 +358,7 @@ builds["#tempPowerFA3"] = builds["#tempPowerFA"];
 
 builds["#tempPowerFA4"] = builds["#tempPowerFA"];
 
-builds["#tempPowerKC"] = {
+builds["#weavPowerKC"] = {
     class: Elementalist,
     specializations: [
         {
@@ -370,8 +370,8 @@ builds["#tempPowerKC"] = {
             traits: ["Ferocious Winds", "Tempest Defense", "Bolt to the Heart"]
         },
         {
-            name: "Tempest",
-            traits: ["Gale Song", "Harmonious Conduit", "Imbued Melodies"]
+            name: "Weaver",
+            traits: ["Superior Elements", "Swift Revenge", "Elements of Rage"]
         }
     ],
     skills: [
@@ -439,11 +439,11 @@ builds["#tempPowerKC"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#tempPowerKC2"] = builds["#tempPowerKC"];
+builds["#weavPowerKC2"] = builds["#weavPowerKC"];
 
-builds["#tempPowerKC3"] = builds["#tempPowerKC"];
+builds["#weavPowerKC3"] = builds["#weavPowerKC"];
 
-builds["#tempPowerKC4"] = builds["#tempPowerKC"];
+builds["#weavPowerKC4"] = builds["#weavPowerKC"];
 
 builds["#tempAura"] = {
     class: Elementalist,

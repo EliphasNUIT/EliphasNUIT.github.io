@@ -399,9 +399,9 @@ var condiMesWeapons = [
     },
     {
         slot: "mh2",
-        type: "",
-        stat: "",
-        sigils: [""]
+        type: "Axe",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Malice"]
     },
     {
         slot: "oh1",
@@ -423,16 +423,17 @@ var condiMesTrait = [
         traits: ["Duelist's Discipline", "Blinding Dissipation", "Superiority Complex"]
     },
     {
-        name: "Chaos",
-        traits: ["Descent into Madness", "Chaotic Transference", "Bountiful Disillusionment"]
-    },
-    {
         name: "Illusions",
         traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"]
+    },
+    {
+        name: "Mirage",
+        traits: ["Riddle of Sand", "Mirrored Axes", "Dune Cloak"]
     }
+    
 ];
 
-builds["#mesCondiCC"] = {
+builds["#mirageCondiCC"] = {
     class: Mesmer,
     specializations: condiMesTrait,
     skills: [
@@ -448,21 +449,60 @@ builds["#mesCondiCC"] = {
     weapons: condiMesWeapons,
     food: condiMesFood
 };
-builds["#mesCondiCC2"] = builds["#mesCondiCC"];
+builds["#mirageCondiCC2"] = builds["#mirageCondiCC"];
 
-builds["#mesCondiMatt"] = {
+builds["#mirageCondiMatt"] = {
     class: Mesmer,
-    specializations: condiMesTrait,
+    specializations: [
+        {
+            name: "Dueling",
+            traits: ["Duelist's Discipline", "Blinding Dissipation", "Superiority Complex"]
+        },
+        {
+            name: "Illusions",
+            traits: ["Compounding Power", "Phantasmal Haste", "Phantasmal Force"]
+        },
+        {
+            name: "Mirage",
+            traits: ["Riddle of Sand", "Mirrored Axes", "Dune Cloak"]
+        }
+        
+    ],
     skills: ["Signet of the Ether", "Feedback", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
     pets: null,
     armor: condiMesArmor,
     trinket: condiMesTrinket,
-    weapons: condiMesWeapons,
+    weapons: [
+        {
+            slot: "mh1",
+            type: "Axe",
+            stat: "Viper's",
+            sigils: ["Superior Sigil of Malice"]
+        },
+        {
+            slot: "mh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        },
+        {
+            slot: "oh1",
+            type: "Pistol",
+            stat: "Viper's",
+            sigils: ["Superior Sigil of Geomancy"]
+        },
+        {
+            slot: "oh2",
+            type: "Torch",
+            stat: "Viper's",
+            sigils: ["Superior Sigil of Geomancy"]
+        }
+    ],
     food: condiMesFood
 };
-builds["#mesCondiMatt2"] = builds["#mesCondiMatt"];
+builds["#mirageCondiMatt2"] = builds["#mirageCondiMatt"];
 
-builds["#mesCondiCairn"] = {
+builds["#mirageCondiCairn"] = {
     class: Mesmer,
     specializations: condiMesTrait,
     skills: ["Signet of the Ether", "Signet of Inspiration", "Signet of Domination", "Signet of Midnight", "Time Warp"],
@@ -472,4 +512,4 @@ builds["#mesCondiCairn"] = {
     weapons: condiMesWeapons,
     food: condiMesFood
 };
-builds["#mesCondiCairn2"] = builds["#mesCondiCairn"];
+builds["#mirageCondiCairn2"] = builds["#mirageCondiCairn"];

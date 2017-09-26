@@ -1,4 +1,4 @@
-builds["#revCondi"] = {
+builds["#renCondi"] = {
     class: Revenant,
     specializations: [
         {
@@ -6,16 +6,17 @@ builds["#revCondi"] = {
             traits: ["Venom Enhancement", "Abyssal Chill", "Diabolic Inferno"]
         },
         {
-            name: "Invocation",
-            traits: ["Cruel Repercussion", "Equilibrium", "Roiling Mists"]
-        },
-        {
             name: "Devastation",
             traits: ["Ferocious Strikes", "Assassin's Presence", "Swift Termination"]
+        },
+        {
+            name: "Renegade",
+            traits: ["Blood Fury", "Heartpiercer", "Lasting Legacy"]
         }
+        
     ],
     pets: null,
-    skills: ["Legendary Dwarf Stance", "Legendary Demon Stance"],
+    skills: ["Legendary Renegade Stance", "Legendary Demon Stance"],
     armor: [
         { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
         {

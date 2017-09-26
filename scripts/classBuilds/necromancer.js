@@ -68,7 +68,7 @@ var condiReaperWeapons = [
     }
 ];
 
-var condiReaperFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
+var condiNecroFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 
 builds["#reaperCondi"] = {
     class: Necromancer,
@@ -78,7 +78,7 @@ builds["#reaperCondi"] = {
     armor: condiReaperArmor,
     trinket: condiReaperTrinket,
     weapons: condiReaperWeapons,
-    food: condiReaperFood
+    food: condiNecroFood
 };
 
 builds["#reaperCondiDeimos"] = {
@@ -89,5 +89,99 @@ builds["#reaperCondiDeimos"] = {
     armor: condiReaperArmor,
     trinket: condiReaperTrinket,
     weapons: condiReaperWeapons,
-    food: condiReaperFood
+    food: condiNecroFood
+};
+
+var condiScourgeTraits = [
+    {
+        name: "Curses",
+        traits: ["Chilling Darkness", "Master of Corruption", "Lingering Curse"]
+    },
+    {
+        name: "Soul Reaping",
+        traits: ["Unyielding Blast", "Vital Persistence", "Dhuumfire"]
+    },
+    {
+        name: "Scourge",
+        traits: ["Fell Beacon", "Sadistic Searing", "Demonic Lore"]
+    }
+];
+
+var condiScourgeArmor = [
+    { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
+    {
+        slot: "shoulders",
+        stat: "Viper's",
+        rune: "Superior Rune of the Nightmare"
+    },
+    { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
+    {
+        slot: "gloves",
+        stat: "Viper's",
+        rune: "Superior Rune of the Nightmare"
+    },
+    {
+        slot: "leggings",
+        stat: "Viper's",
+        rune: "Superior Rune of the Trapper"
+    },
+    { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Trapper" }
+];
+
+var condiScourgeTrinket = [
+    { slot: "amulet", stat: "Viper's" },
+    { slot: "ring1", stat: "Viper's" },
+    { slot: "ring2", stat: "Viper's" },
+    { slot: "back", stat: "Sinister" },
+    { slot: "earring1", stat: "Viper's" },
+    { slot: "earring2", stat: "Viper's" }
+];
+
+var condiScourgeWeapons = [
+    {
+        slot: "mh1",
+        type: "Scepter",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Malice"]
+    },
+    {
+        slot: "oh1",
+        type: "Dagger",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Geomancy"]
+    },
+    {
+        slot: "mh2",
+        type: "",
+        stat: "",
+        sigils: [""]
+    },
+    {
+        slot: "oh2",
+        type: "Torch",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Geomancy"]
+    }
+];
+
+builds["#scourgeCondi"] = {
+    class: Necromancer,
+    specializations: condiScourgeTraits,
+    skills: ["Signet of Vampirism", "Summon Shadow Fiend", "Trail of Anguish", "Epidemic", "Plaguelands"],
+    pets: null,
+    armor: condiScourgeArmor,
+    trinket: condiScourgeTrinket,
+    weapons: condiScourgeWeapons,
+    food: condiNecroFood
+};
+
+builds["#scourgeCondiDei"] = {
+    class: Necromancer,
+    specializations: condiScourgeTraits,
+    skills: ["Summon Blood Fiend", "Summon Shadow Fiend", "Blood Is Power", "Epidemic", "Summon Flesh Golem"],
+    pets: null,
+    armor: condiScourgeArmor,
+    trinket: condiScourgeTrinket,
+    weapons: condiScourgeWeapons,
+    food: condiNecroFood
 };

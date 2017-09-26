@@ -89,7 +89,7 @@ builds["#druidCondi"] = {
 };
 builds["#druidCondi2"] = builds["#druidCondi"];
 
-builds["#rangerCondi"] = {
+builds["#soulbeastCondi"] = {
     class: Ranger,
     specializations: [
         {
@@ -101,23 +101,23 @@ builds["#rangerCondi"] = {
             traits: ["Taste for Danger", "Ambidexterity", "Poison Master"]
         },
         {
-            name: "Beastmastery",
-            traits: ["Potent Ally", "Natural Healing", "Honed Axes"]
+            name: "Soulbeast",
+            traits: ["Live Fast", "Predator's Cunning", "Oppressive Superiority"]
         }
     ],
     skills: ['"We Heal As One!"', "Viper's Nest", "Flame Trap", "Sharpening Stone", "Entangle"],
     pets: ["Juvenile Lynx", "Juvenile Electric Wyvern"],
     armor: [
-        { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Krait" },
+        { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
         {
             slot: "shoulders",
             stat: "Viper's",
-            rune: "Superior Rune of the Krait"
+            rune: "Superior Rune of the Nightmare"
         },
-        { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Krait" },
-        { slot: "gloves", stat: "Viper's", rune: "Superior Rune of the Krait" },
-        { slot: "leggings", stat: "Viper's", rune: "Superior Rune of the Krait" },
-        { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Krait" }
+        { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
+        { slot: "gloves", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
+        { slot: "leggings", stat: "Viper's", rune: "Superior Rune of the Trapper" },
+        { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Trapper" }
     ],
     trinket: [
         { slot: "amulet", stat: "Viper's" },
@@ -132,7 +132,7 @@ builds["#rangerCondi"] = {
             slot: "mh1",
             type: "Longbow",
             stat: "Viper's",
-            sigils: ["Superior Sigil of Geomancy", "Superior Sigil of Earth"]
+            sigils: ["Superior Sigil of Malice", "Superior Sigil of Geomancy"]
         },
         {
             slot: "oh1",
@@ -142,15 +142,15 @@ builds["#rangerCondi"] = {
         },
         {
             slot: "mh2",
-            type: "Axe",
+            type: "Dagger",
             stat: "Viper's",
-            sigils: ["Superior Sigil of Geomancy"]
+            sigils: ["Superior Sigil of Malice"]
         },
         {
             slot: "oh2",
             type: "Torch",
             stat: "Viper's",
-            sigils: ["Superior Sigil of Earth"]
+            sigils: ["Superior Sigil of Geomancy"]
         }
     ],
     food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
@@ -272,7 +272,7 @@ builds["#druidSloth"] = {
             traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
         }
     ],
-    skills: ["Glyph of Rejuvenation", "Glyph of Empowerment", "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
+    skills: ["Glyph of Rejuvenation", '"Protect Me!"', "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
     pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
