@@ -276,7 +276,7 @@ builds["#weavCondiSab"] = {
 
 ////// POWER
 
-builds["#weavPower"] = {
+builds["#weavPower1"] = {
     class: Elementalist,
     specializations: [
         {
@@ -357,11 +357,98 @@ builds["#weavPower"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#weavPower2"] = builds["#weavPower"];
+builds["#weavPower12"] = builds["#weavPower1"];
 
-builds["#weavPower3"] = builds["#weavPower"];
+builds["#weavPower13"] = builds["#weavPower1"];
 
-builds["#weavPower4"] = builds["#weavPower"];
+builds["#weavPower14"] = builds["#weavPower1"];
+
+builds["#weavPower2"] = {
+    class: Elementalist,
+    specializations: [
+        {
+            name: "Fire",
+            traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"]
+        },
+        {
+            name: "Arcane",
+            traits: ["Renewing Stamina", "Elemental Contingency", "Bountiful Power"]
+        },
+        {
+            name: "Weaver",
+            traits: ["Superior Elements", "Swift Revenge", "Elements of Rage"]
+        }
+    ],
+    skills: [
+        "Glyph of Elemental Harmony",
+        "Conjure Frost Bow",
+        "Glyph of Storms",
+        "Primordial Stance",
+        "Conjure Fiery Greatsword"
+    ],
+    pets: null,
+    armor: [
+        { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
+        {
+            slot: "shoulders",
+            stat: "Berserker's",
+            rune: "Superior Rune of the Scholar"
+        },
+        { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
+        {
+            slot: "gloves",
+            stat: "Berserker's",
+            rune: "Superior Rune of the Scholar"
+        },
+        {
+            slot: "leggings",
+            stat: "Berserker's",
+            rune: "Superior Rune of the Scholar"
+        },
+        { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
+    ],
+    trinket: [
+        { slot: "amulet", stat: "Berserker's" },
+        { slot: "ring1", stat: "Berserker's" },
+        { slot: "ring2", stat: "Berserker's" },
+        { slot: "back", stat: "Berserker's" },
+        { slot: "earring1", stat: "Berserker's" },
+        { slot: "earring2", stat: "Berserker's" }
+    ],
+    weapons: [
+        {
+            slot: "mh1",
+            type: "Staff",
+            stat: "Berserker's",
+            sigils: ["Superior Sigil of Force", "Superior Sigil of Accuracy"]
+        },
+        {
+            slot: "oh1",
+            type: "",
+            stat: "",
+            sigils: [""]
+        },
+        {
+            slot: "mh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        },
+        {
+            slot: "oh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        }
+    ],
+    food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
+};
+
+builds["#weavPower22"] = builds["#weavPower2"];
+
+builds["#weavPower23"] = builds["#weavPower2"];
+
+builds["#weavPower24"] = builds["#weavPower2"];
 
 builds["#tempPowerFA"] = {
     class: Elementalist,

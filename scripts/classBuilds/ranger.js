@@ -221,7 +221,7 @@ builds["#druidVg"] = {
             traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
         }
     ],
-    skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
+    skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Sun Spirit", "Frost Spirit", "Entangle"],
     pets: ["Juvenile Tiger", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
@@ -369,7 +369,7 @@ builds["#druidSpirit"] = {
         },
         {
             name: "Druid",
-            traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+            traits: ["Primal Echoes", "Celestial Shadow", "Grace of the Land"]
         }
     ],
     skills: ["Water Spirit", "Stone Spirit", "Frost Spirit", "Sun Spirit", "Spirit of Nature"],
@@ -394,7 +394,7 @@ builds["#druidKite"] = {
         },
         {
             name: "Druid",
-            traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
+            traits: ["Primal Echoes", "Celestial Shadow", "Grace of the Land"]
         }
     ],
     skills: ["Water Spirit", "Stone Spirit", "Frost Spirit", "Sun Spirit", "Spirit of Nature"],
@@ -446,7 +446,7 @@ builds["#druidSam"] = {
             traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
         }
     ],
-    skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Frost Spirit", "Stone Spirit", "Glyph of Unity"],
+    skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Frost Spirit", "Stone Spirit", "Entangle"],
     pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
