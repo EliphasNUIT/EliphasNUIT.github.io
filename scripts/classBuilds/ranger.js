@@ -64,7 +64,7 @@ var condiDruidWeapons = [
     }
 ];
 
-var condiDruidFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
+var condiDruidFood = ["Prickly Pear Pie", "Toxic Focusing Crystal"];
 
 builds["#druidCondiVg"] = {
     class: Ranger,
@@ -159,19 +159,19 @@ builds["#soulbeastCondi"] = {
 ////// HEAL
 
 var healDruidArmor = [
-    { slot: "helm", stat: "Magi's", rune: "Superior Rune of the Monk" },
-    { slot: "shoulders", stat: "Magi's", rune: "Superior Rune of the Monk" },
-    { slot: "coat", stat: "Magi's", rune: "Superior Rune of the Monk" },
-    { slot: "gloves", stat: "Minstrel's", rune: "Superior Rune of the Monk" },
-    { slot: "leggings", stat: "Magi's", rune: "Superior Rune of the Monk" },
-    { slot: "boots", stat: "Magi's", rune: "Superior Rune of the Monk" }
+    { slot: "helm", stat: "Harrier's", rune: "Superior Rune of the Monk" },
+    { slot: "shoulders", stat: "Harrier's", rune: "Superior Rune of the Monk" },
+    { slot: "coat", stat: "Harrier's", rune: "Superior Rune of the Monk" },
+    { slot: "gloves", stat: "Harrier's", rune: "Superior Rune of the Monk" },
+    { slot: "leggings", stat: "Harrier's", rune: "Superior Rune of the Monk" },
+    { slot: "boots", stat: "Harrier's", rune: "Superior Rune of the Monk" }
 ];
 
 var healDruidWeapons = [
     {
         slot: "mh1",
         type: "Staff",
-        stat: "Magi's",
+        stat: "Harrier's",
         sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
     },
     {
@@ -183,13 +183,13 @@ var healDruidWeapons = [
     {
         slot: "mh2",
         type: "Axe",
-        stat: "Magi's",
+        stat: "Harrier's",
         sigils: ["Superior Sigil of Transference"]
     },
     {
         slot: "oh2",
         type: "Warhorn",
-        stat: "Magi's",
+        stat: "Harrier's",
         sigils: ["Superior Sigil of Water"]
     }
 ];
@@ -197,12 +197,12 @@ var healDruidWeapons = [
 var healDruidFood = ["Delicious Rice Ball", "Bountiful Maintenance Oil"];
 
 var healDruidTrinket = [
-    { slot: "amulet", stat: "Minstrel's" },
-    { slot: "ring1", stat: "Minstrel's" },
-    { slot: "ring2", stat: "Magi's" },
-    { slot: "back", stat: "Minstrel's" },
-    { slot: "earring1", stat: "Magi's" },
-    { slot: "earring2", stat: "Minstrel's" }
+    { slot: "amulet", stat: "Harrier's" },
+    { slot: "ring1", stat: "Harrier's" },
+    { slot: "ring2", stat: "Harrier's" },
+    { slot: "back", stat: "Harrier's" },
+    { slot: "earring1", stat: "Harrier's" },
+    { slot: "earring2", stat: "Harrier's" }
 ];
 
 builds["#druidVg"] = {

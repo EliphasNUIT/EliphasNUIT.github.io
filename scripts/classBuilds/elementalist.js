@@ -184,6 +184,98 @@ builds["#tempCondiSab"] = {
     food: tempCondiFood
 };
 
+var weavCondiArmor = [
+    { slot: "helm", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "shoulders", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "coat", stat: "Viper's", rune: "Superior Rune of Balthazar" },
+    { slot: "gloves", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "leggings", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "boots", stat: "Sinister", rune: "Superior Rune of Balthazar" }
+];
+
+var weavCondiTrait = [
+    {
+        name: "Fire",
+        traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"]
+    },
+    {
+        name: "Arcane",
+        traits: ["Arcane Precision", "Final Shielding", "Elemental Surge"]
+    },
+    {
+        name: "Weaver",
+        traits: ["Superior Elements", "Weaver's Prowess", "Elements of Rage"]
+    }
+];
+
+var weavCondiTrinket = [
+    { slot: "amulet", stat: "Sinister" },
+    { slot: "ring1", stat: "Sinister" },
+    { slot: "ring2", stat: "Sinister" },
+    { slot: "back", stat: "Sinister" },
+    { slot: "earring1", stat: "Sinister" },
+    { slot: "earring2", stat: "Sinister" }
+];
+
+var weavCondiWeapons = [
+    {
+        slot: "mh1",
+        type: "Dagger",
+        stat: "Sinister",
+        sigils: ["Superior Sigil of Bursting"]
+    },
+    {
+        slot: "oh1",
+        type: "Focus",
+        stat: "Viper's",
+        sigils: ["Major Sigil of Bursting"]
+    },
+    {
+        slot: "mh2",
+        type: "",
+        stat: "",
+        sigils: [""]
+    },
+    {
+        slot: "oh2",
+        type: "",
+        stat: "",
+        sigils: [""]
+    }
+];
+
+var weavCondiFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
+
+builds["#weavCondi"] = {
+    class: Elementalist,
+    specializations: weavCondiTrait,
+    skills: [
+        "Arcane Brilliance",
+        "Signet of Fire",
+        "Arcane Power",
+        "Primordial Stance",
+        "Conjure Fiery Greatsword"
+    ],
+    pets: null,
+    armor: weavCondiArmor,
+    trinket: weavCondiTrinket,
+    weapons: weavCondiWeapons,
+    food: weavCondiFood
+};
+
+builds["#weavCondiSab"] = {
+    class: Elementalist,
+    specializations: weavCondiTrait,
+    skills: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Lightning Flash", "Conjure Fiery Greatsword"],
+    pets: null,
+    armor: weavCondiArmor,
+    trinket: weavCondiTrinket,
+    weapons: weavCondiWeapons,
+    food: weavCondiFood
+};
+
+////// POWER
+
 builds["#weavPower"] = {
     class: Elementalist,
     specializations: [
@@ -192,8 +284,8 @@ builds["#weavPower"] = {
             traits: ["Burning Precision", "Pyromancer's Training", "Persisting Flames"]
         },
         {
-            name: "Air",
-            traits: ["Ferocious Winds", "Tempest Defense", "Bolt to the Heart"]
+            name: "Arcane",
+            traits: ["Renewing Stamina", "Elemental Contingency", "Bountiful Power"]
         },
         {
             name: "Weaver",
@@ -284,7 +376,7 @@ builds["#tempPowerFA"] = {
         },
         {
             name: "Tempest",
-            traits: ["Gale Song", "Harmonious Conduit", "Imbued Melodies"]
+            traits: ["Unstable Conduit", "Harmonious Conduit", "Imbued Melodies"]
         }
     ],
     skills: [

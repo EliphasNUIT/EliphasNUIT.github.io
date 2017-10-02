@@ -148,3 +148,78 @@ builds["#dhPowerZealRadKC"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
+builds["#fbDPS"] = {
+    class: Guardian,
+    specializations: [
+        {
+            name: "Zeal",
+            traits: ["Fiery Wrath", "Kindled Zeal", "Symbolic Avenger"]
+        },
+        {
+            name: "Radiance",
+            traits: ["Right-Hand Strength", "Radiant Fire", "Amplified Wrath"]
+        },
+        {
+            name: "Firebrand",
+            traits: ["Archivist of Whispers", "Legendary Lore", "Quickfire"]
+        }
+    ],
+    skills: ["Mantra of Solace", "Mantra of Potence", "Mantra of Flame", "Signet of Wrath", "Renewed Focus"],
+    pets: null,
+    armor: [
+        { slot: "helm", stat: "Grieving", rune: "Superior Rune of Balthazar" },
+        {
+            slot: "shoulders",
+            stat: "Grieving",
+            rune: "Superior Rune of Balthazar"
+        },
+        { slot: "coat", stat: "Grieving", rune: "Superior Rune of Balthazar" },
+        {
+            slot: "gloves",
+            stat: "Grieving",
+            rune: "Superior Rune of Balthazar"
+        },
+        {
+            slot: "leggings",
+            stat: "Grieving",
+            rune: "Superior Rune of Balthazar"
+        },
+        { slot: "boots", stat: "Grieving", rune: "Superior Rune of Balthazar" }
+    ],
+    trinket: [
+        { slot: "amulet", stat: "Grieving" },
+        { slot: "ring1", stat: "Grieving" },
+        { slot: "ring2", stat: "Grieving" },
+        { slot: "back", stat: "Grieving" },
+        { slot: "earring1", stat: "Grieving" },
+        { slot: "earring2", stat: "Grieving" }
+    ],
+    weapons: [
+        {
+            slot: "mh1",
+            type: "Scepter",
+            stat: "Grieving",
+            sigils: ["Superior Sigil of Bursting"]
+        },
+        {
+            slot: "oh1",
+            type: "Torch",
+            stat: "Grieving",
+            sigils: ["Superior Sigil of Smoldering"]
+        },
+        {
+            slot: "mh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        },
+        {
+            slot: "oh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        }
+    ],
+    food: ["Bowl of Fire Meat Chili", "Toxic Focusing Crystal"]
+};
+

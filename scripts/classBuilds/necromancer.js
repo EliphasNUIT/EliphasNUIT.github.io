@@ -92,21 +92,6 @@ builds["#reaperCondiDeimos"] = {
     food: condiNecroFood
 };
 
-var condiScourgeTraits = [
-    {
-        name: "Curses",
-        traits: ["Chilling Darkness", "Master of Corruption", "Lingering Curse"]
-    },
-    {
-        name: "Soul Reaping",
-        traits: ["Unyielding Blast", "Vital Persistence", "Dhuumfire"]
-    },
-    {
-        name: "Scourge",
-        traits: ["Fell Beacon", "Sadistic Searing", "Demonic Lore"]
-    }
-];
-
 var condiScourgeArmor = [
     { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
     {
@@ -166,7 +151,20 @@ var condiScourgeWeapons = [
 
 builds["#scourgeCondi"] = {
     class: Necromancer,
-    specializations: condiScourgeTraits,
+    specializations: [
+        {
+            name: "Curses",
+            traits: ["Terrifying Descent", "Master of Corruption", "Lingering Curse"]
+        },
+        {
+            name: "Soul Reaping",
+            traits: ["Unyielding Blast", "Vital Persistence", "Dhuumfire"]
+        },
+        {
+            name: "Scourge",
+            traits: ["Fell Beacon", "Sadistic Searing", "Demonic Lore"]
+        }
+    ],
     skills: ["Signet of Vampirism", "Summon Shadow Fiend", "Trail of Anguish", "Epidemic", "Plaguelands"],
     pets: null,
     armor: condiScourgeArmor,
@@ -177,7 +175,20 @@ builds["#scourgeCondi"] = {
 
 builds["#scourgeCondiDei"] = {
     class: Necromancer,
-    specializations: condiScourgeTraits,
+    specializations: [
+        {
+            name: "Curses",
+            traits: ["Terrifying Descent", "Master of Corruption", "Lingering Curse"]
+        },
+        {
+            name: "Soul Reaping",
+            traits: ["Unyielding Blast", "Vital Persistence", "Dhuumfire"]
+        },
+        {
+            name: "Scourge",
+            traits: ["Fell Beacon", "Desert Empowerment", "Demonic Lore"]
+        }
+    ],
     skills: ["Summon Blood Fiend", "Summon Shadow Fiend", "Blood Is Power", "Epidemic", "Summon Flesh Golem"],
     pets: null,
     armor: condiScourgeArmor,

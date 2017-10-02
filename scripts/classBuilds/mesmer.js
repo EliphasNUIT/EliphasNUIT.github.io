@@ -79,16 +79,91 @@ builds["#chrTank"] = {
     food: boonShareFood
 };
 
-builds["#chrTankDeimos"] = {
+builds["#chrTankMinstrel"] = {
     class: Mesmer,
     specializations: [
         {
-            name: "Illusions",
-            traits: ["Compounding Power", "Phantasmal Haste", "Phantasmal Force"]
+            name: "Domination",
+            traits: ["Empowered Illusions", "Blurred Inscriptions", "Mental Anguish"]
         },
         {
-            name: "Chaos",
-            traits: ["Illusionary Defense", "Chaotic Dampening", "Bountiful Disillusionment"]
+            name: "Inspiration",
+            traits: ["Persisting Images", "Restorative Illusions", "Illusionary Inspiration"]
+        },
+        {
+            name: "Chronomancer",
+            traits: ["All's Well That Ends Well", "Improved Alacrity", "Chronophantasma"]
+        }
+    ],
+    skills: ["Well of Eternity", "Well of Action", "Signet of Inspiration", "Well of Recall", "Signet of Humility"],
+    pets: null,
+    armor: [
+        { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of Water" },
+        {
+            slot: "shoulders",
+            stat: "Minstrel's",
+            rune: "Superior Rune of Water"
+        },
+        { slot: "coat", stat: "Minstrel's", rune: "Superior Rune of Water" },
+        {
+            slot: "gloves",
+            stat: "Minstrel's",
+            rune: "Superior Rune of Water"
+        },
+        {
+            slot: "leggings",
+            stat: "Minstrel's",
+            rune: "Superior Rune of Water"
+        },
+        { slot: "boots", stat: "Minstrel's", rune: "Superior Rune of Water" }
+    ],
+    trinket: [
+        { slot: "amulet", stat: "Minstrel's" },
+        { slot: "ring1", stat: "Minstrel's" },
+        { slot: "ring2", stat: "Minstrel's" },
+        { slot: "back", stat: "Minstrel's" },
+        { slot: "earring1", stat: "Minstrel's" },
+        { slot: "earring2", stat: "Minstrel's" }
+    ],
+    weapons: [
+        {
+            slot: "mh1",
+            type: "Sword",
+            stat: "Minstrel's",
+            sigils: ["Superior Sigil of Concentration"]
+        },
+        {
+            slot: "mh2",
+            type: "",
+            stat: "",
+            sigils: [""]
+        },
+        {
+            slot: "oh1",
+            type: "Shield",
+            stat: "Minstrel's",
+            sigils: ["Superior Sigil of Transference"]
+        },
+        {
+            slot: "oh2",
+            type: "Focus",
+            stat: "Minstrel's",
+            sigils: ["Superior Sigil of Transference"]
+        }
+    ],
+    food: boonShareFood
+};
+
+builds["#chrTankDei"] = {
+    class: Mesmer,
+    specializations: [
+        {
+            name: "Domination",
+            traits: ["Empowered Illusions", "Blurred Inscriptions", "Mental Anguish"]
+        },
+        {
+            name: "Inspiration",
+            traits: ["Persisting Images", "Restorative Illusions", "Illusionary Inspiration"]
         },
         {
             name: "Chronomancer",
@@ -129,26 +204,26 @@ builds["#chrTankDeimos"] = {
         {
             slot: "mh1",
             type: "Sword",
-            stat: "Berserker's",
+            stat: "Minstrel's",
             sigils: ["Superior Sigil of Concentration"]
         },
         {
             slot: "mh2",
-            type: "Staff",
-            stat: "Berserker's",
-            sigils: ["Superior Sigil of Force", "Superior Sigil of Accuracy"]
+            type: "",
+            stat: "",
+            sigils: [""]
         },
         {
             slot: "oh1",
             type: "Shield",
-            stat: "Commander's",
-            sigils: ["Superior Sigil of Force"]
+            stat: "Minstrel's",
+            sigils: ["Superior Sigil of Transference"]
         },
         {
             slot: "oh2",
-            type: "",
-            stat: "",
-            sigils: [""]
+            type: "Focus",
+            stat: "Minstrel's",
+            sigils: ["Superior Sigil of Transference"]
         }
     ],
     food: boonShareFood
@@ -393,15 +468,15 @@ var condiMesTrinket = [
 var condiMesWeapons = [
     {
         slot: "mh1",
-        type: "Scepter",
+        type: "Axe",
         stat: "Viper's",
         sigils: ["Superior Sigil of Malice"]
     },
     {
         slot: "mh2",
-        type: "Axe",
-        stat: "Viper's",
-        sigils: ["Superior Sigil of Malice"]
+        type: "",
+        stat: "",
+        sigils: [""]
     },
     {
         slot: "oh1",
@@ -424,7 +499,7 @@ var condiMesTrait = [
     },
     {
         name: "Illusions",
-        traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"]
+        traits: ["Compounding Power", "Phantasmal Haste", "Phantasmal Force"]
     },
     {
         name: "Mirage",
@@ -435,7 +510,21 @@ var condiMesTrait = [
 
 builds["#mirageCondiCC"] = {
     class: Mesmer,
-    specializations: condiMesTrait,
+    specializations: [
+        {
+            name: "Dueling",
+            traits: ["Duelist's Discipline", "Blinding Dissipation", "Superiority Complex"]
+        },
+        {
+            name: "Illusions",
+            traits: ["Compounding Power", "Phantasmal Haste", "Malicious Sorcery"]
+        },
+        {
+            name: "Mirage",
+            traits: ["Riddle of Sand", "Mirage Mantle", "Dune Cloak"]
+        }
+        
+    ],
     skills: [
         "Signet of the Ether",
         "Mantra of Distraction",
@@ -446,36 +535,10 @@ builds["#mirageCondiCC"] = {
     pets: null,
     armor: condiMesArmor,
     trinket: condiMesTrinket,
-    weapons: condiMesWeapons,
-    food: condiMesFood
-};
-builds["#mirageCondiCC2"] = builds["#mirageCondiCC"];
-
-builds["#mirageCondiMatt"] = {
-    class: Mesmer,
-    specializations: [
-        {
-            name: "Dueling",
-            traits: ["Duelist's Discipline", "Blinding Dissipation", "Superiority Complex"]
-        },
-        {
-            name: "Illusions",
-            traits: ["Compounding Power", "Phantasmal Haste", "Phantasmal Force"]
-        },
-        {
-            name: "Mirage",
-            traits: ["Riddle of Sand", "Mirrored Axes", "Dune Cloak"]
-        }
-        
-    ],
-    skills: ["Signet of the Ether", "Feedback", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
-    pets: null,
-    armor: condiMesArmor,
-    trinket: condiMesTrinket,
     weapons: [
         {
             slot: "mh1",
-            type: "Axe",
+            type: "Scepter",
             stat: "Viper's",
             sigils: ["Superior Sigil of Malice"]
         },
@@ -500,12 +563,24 @@ builds["#mirageCondiMatt"] = {
     ],
     food: condiMesFood
 };
+builds["#mirageCondiCC2"] = builds["#mirageCondiCC"];
+
+builds["#mirageCondiMatt"] = {
+    class: Mesmer,
+    specializations: condiMesTrait,
+    skills: ["Signet of the Ether", "Feedback", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
+    pets: null,
+    armor: condiMesArmor,
+    trinket: condiMesTrinket,
+    weapons: condiMesWeapons,
+    food: condiMesFood
+};
 builds["#mirageCondiMatt2"] = builds["#mirageCondiMatt"];
 
 builds["#mirageCondiCairn"] = {
     class: Mesmer,
     specializations: condiMesTrait,
-    skills: ["Signet of the Ether", "Signet of Inspiration", "Signet of Domination", "Signet of Midnight", "Time Warp"],
+    skills: ["Signet of the Ether", "Crystal Sands", "Signet of Domination", "Signet of Midnight", "Jaunt"],
     pets: null,
     armor: condiMesArmor,
     trinket: condiMesTrinket,
