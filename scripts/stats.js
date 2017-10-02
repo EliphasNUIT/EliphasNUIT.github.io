@@ -52,5 +52,8 @@ var stats = {
     Marauder: 1145,
     "Commander's": 1227,
     "Wanderer's": 1225,
-    Seraph: 1222
+    Seraph: 1222,
+    "Marshal's":1378,
+    Grieving:1379,
+    "Harrier's":1377
 };

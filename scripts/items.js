@@ -72,7 +72,8 @@ var sigils = {
     "Superior Sigil of Bursting": 44944,
     "Superior Sigil of Earth": 24560,
     "Superior Sigil of Impact": 24868,
-    "Superior Sigil of Agility":72092
+    "Superior Sigil of Agility":72092,
+    "Major Sigil of Bursting":44943
 };
 
 var weapons = {
@@ -104,5 +105,7 @@ var foods = {
     "Bountiful Maintenance Oil": 67528,
     "Fried Golden Dumpling": 68633,
     "Bowl of Nopalitos Sauté": 66530,
-    "Magnanimous Maintenance Oil": 81157
+    "Magnanimous Maintenance Oil": 81157,
+    "Prickly Pear Pie": 66538,
+    "Bowl of Fire Meat Chili":12484
 };
