@@ -1,4 +1,4 @@
-builds["#engiCondi"] = {
+builds["engiCondi"] = {
     class: Engineer,
     specializations: [
         {

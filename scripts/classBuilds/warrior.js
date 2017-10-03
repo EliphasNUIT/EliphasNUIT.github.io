@@ -57,7 +57,7 @@ var cpsWeapons = [
     }
 ];
 
-builds["#bersCPS2Banners"] = {
+builds["bersCPS2Banners"] = {
     class: Warrior,
     specializations: [
         { name: "Arms", traits: ["Wounding Precision", "Blademaster", "Furious"] },
@@ -78,7 +78,7 @@ builds["#bersCPS2Banners"] = {
     food: cpsFood
 };
 
-builds["#bersCPS"] = {
+builds["bersCPS"] = {
     class: Warrior,
     specializations: [
         { name: "Arms", traits: ["Wounding Precision", "Blademaster", "Furious"] },
@@ -99,9 +99,8 @@ builds["#bersCPS"] = {
     food: cpsFood
 };
 
-builds["#bersCPS2"] = builds["#bersCPS"];
 
-builds["#bersCPSKC"] = {
+builds["bersCPSKC"] = {
     class: Warrior,
     specializations: [
         { name: "Arms", traits: ["Wounding Precision", "Blademaster", "Furious"] },
@@ -122,9 +121,7 @@ builds["#bersCPSKC"] = {
     food: cpsFood
 };
 
-builds["#bersCPSKC2"] = builds["#bersCPSKC"];
-
-builds["#bersCPSCC"] = {
+builds["bersCPSCC"] = {
     class: Warrior,
     specializations: [
         { name: "Arms", traits: ["Wounding Precision", "Blademaster", "Furious"] },
@@ -144,5 +141,3 @@ builds["#bersCPSCC"] = {
     weapons: cpsWeapons,
     food: cpsFood
 };
-
-builds["#bersCPSCC2"] = builds["#bersCPSCC"];

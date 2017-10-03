@@ -70,7 +70,7 @@ var condiReaperWeapons = [
 
 var condiNecroFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 
-builds["#reaperCondi"] = {
+builds["reaperCondi"] = {
     class: Necromancer,
     specializations: condiReaperTraits,
     skills: ["Signet of Vampirism", "Summon Bone Fiend", "Blood Is Power", "Epidemic", "Plaguelands"],
@@ -81,7 +81,7 @@ builds["#reaperCondi"] = {
     food: condiNecroFood
 };
 
-builds["#reaperCondiDeimos"] = {
+builds["reaperCondiDeimos"] = {
     class: Necromancer,
     specializations: condiReaperTraits,
     skills: ["Signet of Vampirism", "Summon Bone Fiend", "Blood Is Power", "Epidemic", "Summon Flesh Golem"],
@@ -149,7 +149,7 @@ var condiScourgeWeapons = [
     }
 ];
 
-builds["#scourgeCondi"] = {
+builds["scourgeCondi"] = {
     class: Necromancer,
     specializations: [
         {
@@ -173,7 +173,7 @@ builds["#scourgeCondi"] = {
     food: condiNecroFood
 };
 
-builds["#scourgeCondiDei"] = {
+builds["scourgeCondiDei"] = {
     class: Necromancer,
     specializations: [
         {

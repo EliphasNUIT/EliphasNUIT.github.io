@@ -1,4 +1,4 @@
-builds["#drdPower"] = {
+builds["drdPower"] = {
     class: Thief,
     specializations: [
         {
@@ -73,7 +73,7 @@ builds["#drdPower"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#drdPowerSab"] = {
+builds["drdPowerSab"] = {
     class: Thief,
     specializations: [
         {
@@ -148,7 +148,7 @@ builds["#drdPowerSab"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#drdCondi"] = {
+builds["drdCondi"] = {
     class: Thief,
     specializations: [
         {
@@ -223,7 +223,7 @@ builds["#drdCondi"] = {
     food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
 };
 
-builds["#drdCondiSab"] = {
+builds["drdCondiSab"] = {
     class: Thief,
     specializations: [
         {

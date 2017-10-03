@@ -1,4 +1,4 @@
-builds["#renCondi"] = {
+builds["renCondi"] = {
     class: Revenant,
     specializations: [
         {
@@ -66,7 +66,7 @@ builds["#renCondi"] = {
     food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
 };
 
-builds["#herVentari"] = {
+builds["herVentari"] = {
     class: Revenant,
     specializations: [
         {

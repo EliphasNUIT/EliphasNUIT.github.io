@@ -66,7 +66,7 @@ var condiDruidWeapons = [
 
 var condiDruidFood = ["Prickly Pear Pie", "Toxic Focusing Crystal"];
 
-builds["#druidCondiVg"] = {
+builds["druidCondiVg"] = {
     class: Ranger,
     specializations: condiDruidTrait,
     skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
@@ -77,7 +77,7 @@ builds["#druidCondiVg"] = {
     food: condiDruidFood
 };
 
-builds["#druidCondi"] = {
+builds["druidCondi"] = {
     class: Ranger,
     specializations: condiDruidTrait,
     skills: ["Glyph of Rejuvenation", "Glyph of Empowerment", "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
@@ -87,9 +87,8 @@ builds["#druidCondi"] = {
     weapons: condiDruidWeapons,
     food: condiDruidFood
 };
-builds["#druidCondi2"] = builds["#druidCondi"];
 
-builds["#soulbeastCondi"] = {
+builds["soulbeastCondi"] = {
     class: Ranger,
     specializations: [
         {
@@ -197,15 +196,15 @@ var healDruidWeapons = [
 var healDruidFood = ["Delicious Rice Ball", "Bountiful Maintenance Oil"];
 
 var healDruidTrinket = [
-    { slot: "amulet", stat: "Harrier's" },
-    { slot: "ring1", stat: "Harrier's" },
-    { slot: "ring2", stat: "Harrier's" },
+    { slot: "amulet", stat: "Minstrel's" },
+    { slot: "ring1", stat: "Minstrel's" },
+    { slot: "ring2", stat: "Minstrel's" },
     { slot: "back", stat: "Harrier's" },
-    { slot: "earring1", stat: "Harrier's" },
+    { slot: "earring1", stat: "Minstrel's" },
     { slot: "earring2", stat: "Harrier's" }
 ];
 
-builds["#druidVg"] = {
+builds["druidVg"] = {
     class: Ranger,
     specializations: [
         {
@@ -229,9 +228,7 @@ builds["#druidVg"] = {
     food: healDruidFood
 };
 
-builds["#druidVg2"] = builds["#druidVg"];
-
-builds["#druidSab"] = {
+builds["druidSab"] = {
     class: Ranger,
     specializations: [
         {
@@ -254,9 +251,8 @@ builds["#druidSab"] = {
     weapons: healDruidWeapons,
     food: healDruidFood
 };
-builds["#druidSab2"] = builds["#druidSab"];
 
-builds["#druidSloth"] = {
+builds["druidSloth"] = {
     class: Ranger,
     specializations: [
         {
@@ -304,9 +300,8 @@ builds["#druidSloth"] = {
     ],
     food: healDruidFood
 };
-builds["#druidSloth2"] = builds["#druidSloth"];
 
-builds["#druidMatt"] = {
+builds["druidMatt"] = {
     class: Ranger,
     specializations: [
         {
@@ -329,9 +324,8 @@ builds["#druidMatt"] = {
     weapons: healDruidWeapons,
     food: healDruidFood
 };
-builds["#druidMatt2"] = builds["#druidMatt"];
 
-builds["#druidXera"] = {
+builds["druidXera"] = {
     class: Ranger,
     specializations: [
         {
@@ -354,9 +348,8 @@ builds["#druidXera"] = {
     weapons: healDruidWeapons,
     food: healDruidFood
 };
-builds["#druidXera2"] = builds["#druidXera"];
 
-builds["#druidSpirit"] = {
+builds["druidSpirit"] = {
     class: Ranger,
     specializations: [
         {
@@ -379,9 +372,8 @@ builds["#druidSpirit"] = {
     weapons: healDruidWeapons,
     food: healDruidFood
 };
-builds["#druidSpirit2"] = builds["#druidSpirit"];
 
-builds["#druidKite"] = {
+builds["druidKite"] = {
     class: Ranger,
     specializations: [
         {
@@ -430,7 +422,7 @@ builds["#druidKite"] = {
     food: healDruidFood
 };
 
-builds["#druidSam"] = {
+builds["druidSam"] = {
     class: Ranger,
     specializations: [
         {
@@ -453,4 +445,3 @@ builds["#druidSam"] = {
     weapons: healDruidWeapons,
     food: healDruidFood
 };
-builds["#druidSam2"] = builds["#druidSam"];

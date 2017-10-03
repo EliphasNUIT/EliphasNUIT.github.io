@@ -1,4 +1,4 @@
-builds["#dhPowerZealRad"] = {
+builds["dhPowerZealRad"] = {
     class: Guardian,
     specializations: [
         {
@@ -73,7 +73,7 @@ builds["#dhPowerZealRad"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#dhPowerZealRadKC"] = {
+builds["dhPowerZealRadKC"] = {
     class: Guardian,
     specializations: [
         {
@@ -148,7 +148,7 @@ builds["#dhPowerZealRadKC"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#fbDPS"] = {
+builds["fbDPS"] = {
     class: Guardian,
     specializations: [
         {
@@ -191,8 +191,8 @@ builds["#fbDPS"] = {
         { slot: "ring1", stat: "Grieving" },
         { slot: "ring2", stat: "Grieving" },
         { slot: "back", stat: "Grieving" },
-        { slot: "earring1", stat: "Grieving" },
-        { slot: "earring2", stat: "Grieving" }
+        { slot: "earring1", stat: "Sinister" },
+        { slot: "earring2", stat: "Sinister" }
     ],
     weapons: [
         {

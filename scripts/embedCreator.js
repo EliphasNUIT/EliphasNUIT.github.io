@@ -308,7 +308,7 @@ function readFoods(build) {
 
 var nBox = 0;
 
-function displayBuild(divID) {
+function displayBuild(divID, buildId) {
     var div = $(divID);
     var visibility = div.attr("visibility") === "true";
     div.css("display", "block");
@@ -321,7 +321,7 @@ function displayBuild(divID) {
     }
     var init = div.attr("init") === "true";
     if (!init) {
-        var build = builds[divID];
+        var build = builds[buildId];
         //traits
         var traitBoxId = "traitBox" + nBox++;
         div.append("<div id='" + traitBoxId + "' traitBox></div>");

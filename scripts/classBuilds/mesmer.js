@@ -30,7 +30,7 @@ var boonShareArmor = [
     { slot: "boots", stat: "Berserker's", rune: "Superior Rune of Leadership" }
 ];
 
-builds["#chrTank"] = {
+builds["chrTank"] = {
     class: Mesmer,
     specializations: [
         {
@@ -79,7 +79,7 @@ builds["#chrTank"] = {
     food: boonShareFood
 };
 
-builds["#chrTankMinstrel"] = {
+builds["chrTankMinstrel"] = {
     class: Mesmer,
     specializations: [
         {
@@ -154,7 +154,7 @@ builds["#chrTankMinstrel"] = {
     food: boonShareFood
 };
 
-builds["#chrTankDei"] = {
+builds["chrTankDei"] = {
     class: Mesmer,
     specializations: [
         {
@@ -229,7 +229,7 @@ builds["#chrTankDei"] = {
     food: boonShareFood
 };
 
-builds["#chrDPS"] = {
+builds["chrDPS"] = {
     class: Mesmer,
     specializations: [
         {
@@ -278,7 +278,7 @@ builds["#chrDPS"] = {
     food: boonShareFood
 };
 
-builds["#chrDPSDeimos"] = {
+builds["chrDPSDeimos"] = {
     class: Mesmer,
     specializations: [
         {
@@ -327,9 +327,8 @@ builds["#chrDPSDeimos"] = {
     food: boonShareFood
 };
 
-builds["#chrDPS2"] = builds["#chrDPS"];
 
-builds["#chrDPSMatt"] = {
+builds["chrDPSMatt"] = {
     class: Mesmer,
     specializations: [
         {
@@ -378,9 +377,8 @@ builds["#chrDPSMatt"] = {
     food: boonShareFood
 };
 
-builds["#chrDPSMatt2"] = builds["#chrDPSMatt"];
 
-builds["#chrDPSCairn"] = {
+builds["chrDPSCairn"] = {
     class: Mesmer,
     specializations: [
         {
@@ -429,7 +427,6 @@ builds["#chrDPSCairn"] = {
     food: boonShareFood
 };
 
-builds["#chrDPSCairn2"] = builds["#chrDPSCairn"];
 
 ////// CONDI
 
@@ -508,7 +505,7 @@ var condiMesTrait = [
     
 ];
 
-builds["#mirageCondiCC"] = {
+builds["mirageCondiCC"] = {
     class: Mesmer,
     specializations: [
         {
@@ -563,9 +560,8 @@ builds["#mirageCondiCC"] = {
     ],
     food: condiMesFood
 };
-builds["#mirageCondiCC2"] = builds["#mirageCondiCC"];
 
-builds["#mirageCondiMatt"] = {
+builds["mirageCondiMatt"] = {
     class: Mesmer,
     specializations: condiMesTrait,
     skills: ["Signet of the Ether", "Feedback", "Signet of Domination", "Signet of Midnight", "Signet of Humility"],
@@ -575,9 +571,8 @@ builds["#mirageCondiMatt"] = {
     weapons: condiMesWeapons,
     food: condiMesFood
 };
-builds["#mirageCondiMatt2"] = builds["#mirageCondiMatt"];
 
-builds["#mirageCondiCairn"] = {
+builds["mirageCondiCairn"] = {
     class: Mesmer,
     specializations: condiMesTrait,
     skills: ["Signet of the Ether", "Crystal Sands", "Signet of Domination", "Signet of Midnight", "Jaunt"],
@@ -587,4 +582,3 @@ builds["#mirageCondiCairn"] = {
     weapons: condiMesWeapons,
     food: condiMesFood
 };
-builds["#mirageCondiCairn2"] = builds["#mirageCondiCairn"];

@@ -33,7 +33,7 @@ var tempCondiTrinket = [
 
 var tempCondiFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 
-builds["#tempPS"] = {
+builds["tempPS"] = {
     class: Elementalist,
     specializations: tempCondiTrait,
     skills: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Glyph of Elemental Power", "Glyph of Elementals"],
@@ -70,7 +70,7 @@ builds["#tempPS"] = {
 };
 
 
-builds["#tempPSSab"] = {
+builds["tempPSSab"] = {
     class: Elementalist,
     specializations: tempCondiTrait,
     skills: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Lightning Flash", "Glyph of Elementals"],
@@ -106,7 +106,7 @@ builds["#tempPSSab"] = {
     food: tempCondiFood
 };
 
-builds["#tempCondi"] = {
+builds["tempCondi"] = {
     class: Elementalist,
     specializations: tempCondiTrait,
     skills: [
@@ -148,7 +148,7 @@ builds["#tempCondi"] = {
     food: tempCondiFood
 };
 
-builds["#tempCondiSab"] = {
+builds["tempCondiSab"] = {
     class: Elementalist,
     specializations: tempCondiTrait,
     skills: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Lightning Flash", "Conjure Fiery Greatsword"],
@@ -246,7 +246,7 @@ var weavCondiWeapons = [
 
 var weavCondiFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
 
-builds["#weavCondi"] = {
+builds["weavCondi"] = {
     class: Elementalist,
     specializations: weavCondiTrait,
     skills: [
@@ -263,7 +263,7 @@ builds["#weavCondi"] = {
     food: weavCondiFood
 };
 
-builds["#weavCondiSab"] = {
+builds["weavCondiSab"] = {
     class: Elementalist,
     specializations: weavCondiTrait,
     skills: ["Arcane Brilliance", "Signet of Fire", "Arcane Power", "Lightning Flash", "Conjure Fiery Greatsword"],
@@ -276,7 +276,7 @@ builds["#weavCondiSab"] = {
 
 ////// POWER
 
-builds["#weavPower1"] = {
+builds["weavPower1"] = {
     class: Elementalist,
     specializations: [
         {
@@ -357,13 +357,7 @@ builds["#weavPower1"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#weavPower12"] = builds["#weavPower1"];
-
-builds["#weavPower13"] = builds["#weavPower1"];
-
-builds["#weavPower14"] = builds["#weavPower1"];
-
-builds["#weavPower2"] = {
+builds["weavPower2"] = {
     class: Elementalist,
     specializations: [
         {
@@ -444,13 +438,8 @@ builds["#weavPower2"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#weavPower22"] = builds["#weavPower2"];
 
-builds["#weavPower23"] = builds["#weavPower2"];
-
-builds["#weavPower24"] = builds["#weavPower2"];
-
-builds["#tempPowerFA"] = {
+builds["tempPowerFA"] = {
     class: Elementalist,
     specializations: [
         {
@@ -531,13 +520,8 @@ builds["#tempPowerFA"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#tempPowerFA2"] = builds["#tempPowerFA"];
 
-builds["#tempPowerFA3"] = builds["#tempPowerFA"];
-
-builds["#tempPowerFA4"] = builds["#tempPowerFA"];
-
-builds["#weavPowerKC"] = {
+builds["weavPowerKC"] = {
     class: Elementalist,
     specializations: [
         {
@@ -618,13 +602,7 @@ builds["#weavPowerKC"] = {
     food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
 };
 
-builds["#weavPowerKC2"] = builds["#weavPowerKC"];
-
-builds["#weavPowerKC3"] = builds["#weavPowerKC"];
-
-builds["#weavPowerKC4"] = builds["#weavPowerKC"];
-
-builds["#tempAura"] = {
+builds["tempAura"] = {
     class: Elementalist,
     specializations: [
         {
