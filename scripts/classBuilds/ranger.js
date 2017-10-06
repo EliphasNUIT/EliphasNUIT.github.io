@@ -104,8 +104,8 @@ builds["soulbeastCondi"] = {
             traits: ["Live Fast", "Predator's Cunning", "Oppressive Superiority"]
         }
     ],
-    skills: ['"We Heal As One!"', "Viper's Nest", "Flame Trap", "Sharpening Stone", "Entangle"],
-    pets: ["Juvenile Lynx", "Juvenile Electric Wyvern"],
+    skills: ['"We Heal As One!"', "Viper's Nest", "Flame Trap", "Sharpening Stone", "One Wolf Pack"],
+    pets: ["Juvenile Lynx"],
     armor: [
         { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
         {
@@ -213,7 +213,7 @@ builds["druidVg"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",
@@ -237,7 +237,7 @@ builds["druidSab"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",
@@ -358,7 +358,7 @@ builds["druidSpirit"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",
@@ -382,7 +382,7 @@ builds["druidKite"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",
@@ -431,7 +431,7 @@ builds["druidSam"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",

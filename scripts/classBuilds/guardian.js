@@ -167,10 +167,10 @@ builds["fbDPS"] = {
     skills: ["Mantra of Solace", "Mantra of Potence", "Mantra of Flame", "Signet of Wrath", "Renewed Focus"],
     pets: null,
     armor: [
-        { slot: "helm", stat: "Grieving", rune: "Superior Rune of Balthazar" },
+        { slot: "helm", stat: "Sinister", rune: "Superior Rune of Balthazar" },
         {
             slot: "shoulders",
-            stat: "Grieving",
+            stat: "Sinister",
             rune: "Superior Rune of Balthazar"
         },
         { slot: "coat", stat: "Grieving", rune: "Superior Rune of Balthazar" },
@@ -191,8 +191,8 @@ builds["fbDPS"] = {
         { slot: "ring1", stat: "Grieving" },
         { slot: "ring2", stat: "Grieving" },
         { slot: "back", stat: "Grieving" },
-        { slot: "earring1", stat: "Sinister" },
-        { slot: "earring2", stat: "Sinister" }
+        { slot: "earring1", stat: "Grieving" },
+        { slot: "earring2", stat: "Grieving" }
     ],
     weapons: [
         {
