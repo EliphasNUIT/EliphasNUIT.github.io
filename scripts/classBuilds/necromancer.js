@@ -39,9 +39,9 @@ var condiScourgeWeapons = [
     },
     {
         slot: "oh1",
-        type: "Dagger",
-        stat: "Viper's",
-        sigils: ["Superior Sigil of Geomancy"]
+        type: "",
+        stat: "",
+        sigils: [""]
     },
     {
         slot: "mh2",
