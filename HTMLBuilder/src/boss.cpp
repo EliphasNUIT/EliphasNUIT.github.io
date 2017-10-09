@@ -27,7 +27,7 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "});";
     res << "</script>";
     res << "<head>";
-    res << "    <meta charset=\"latin\">";
+    res << "    <meta charset=\"utf-8\">";
     res << "    <title>[ODS] " + this->name + " Logs</title>";
     res << "    <meta name=\"author\" content=\"EliphasNUIT\">";
     res << "    <link href=\"../styles/html.css\" rel=\"stylesheet\" type=\"text/css\">";
@@ -43,6 +43,7 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "        </ul>";
 
     res << QString::fromLatin1("    <p>Tous les logs ont été créés par <a href=\"https://www.deltaconnected.com/arcdps/\">ArcDPS</a> et parsés par <a href=\"https://raidheroes.tk/\">Raid Heroes</a>.</p>");
+    res << QString::fromLatin1("<div licensing>This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. All other trademarks are the property of their respective owners.</div>");
     res << "</body>";
     res <<"</html>";
 

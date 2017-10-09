@@ -11,6 +11,10 @@ a[href] {
     color: #0202FF;
 }
 
+div[licensing] {
+    font-size: 0.7em;
+}
+
 h1 {
     font-size: 4.5em;
     text-align: center;

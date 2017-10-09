@@ -41,6 +41,7 @@ void writeIndexFoot(QTextStream& stream) {
 
     //res << "    <iframe src=\"https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=fr&amp;bgcolor=%23AAAAAA&amp;src=vaqf4oa6gmj6saabljhjiti5cs%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=Europe%2FParis\" style=\"border-width:0\" width=\"700\" height=\"600\" frameborder=\"0\" scrolling=\"no\"></iframe>";
     res << QString::fromLatin1("    <p>Tous les logs ont été créés par <a href=\"https://www.deltaconnected.com/arcdps/\">ArcDPS</a> et parsés par <a href=\"https://raidheroes.tk/\">Raid Heroes</a>.</p>");
+    res << QString::fromLatin1("<div licensing>This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. All other trademarks are the property of their respective owners.</div>");
     res << "</body>";
     res << " </html>";
 
