@@ -152,7 +152,7 @@ var healDruidWeapons = [
     {
         slot: "mh1",
         type: "Staff",
-        stat: "Harrier's",
+        stat: "Magi's",
         sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
     },
     {
@@ -164,13 +164,13 @@ var healDruidWeapons = [
     {
         slot: "mh2",
         type: "Axe",
-        stat: "Harrier's",
+        stat: "Magi's",
         sigils: ["Superior Sigil of Transference"]
     },
     {
         slot: "oh2",
         type: "Warhorn",
-        stat: "Harrier's",
+        stat: "Magi's",
         sigils: ["Superior Sigil of Water"]
     }
 ];
