@@ -86,7 +86,7 @@ builds["scourgeCondiMO"] = {
 builds["scourgeCondiGorse"] = {
     class: Necromancer,
     specializations: condiScourgeTraits,
-    skills: ["Sand Flare", "Summon Shadow Fiend", "Trail of Anguish", "Epidemic", "Summon Flesh Golem"],
+    skills: ["Sand Flare", "Summon Shadow Fiend", "Trail of Anguish", "Blood Is Power", "Summon Flesh Golem"],
     pets: null,
     armor: condiScourgeArmor,
     trinket: condiScourgeTrinket,
