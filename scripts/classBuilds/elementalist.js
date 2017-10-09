@@ -1,10 +1,10 @@
 var tempCondiArmor = [
-    { slot: "helm", stat: "Grieving", rune: "Superior Rune of Balthazar" },
-    { slot: "shoulders", stat: "Grieving", rune: "Superior Rune of Balthazar" },
+    { slot: "helm", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "shoulders", stat: "Sinister", rune: "Superior Rune of Balthazar" },
     { slot: "coat", stat: "Viper's", rune: "Superior Rune of Balthazar" },
-    { slot: "gloves", stat: "Grieving", rune: "Superior Rune of Balthazar" },
-    { slot: "leggings", stat: "Grieving", rune: "Superior Rune of Balthazar" },
-    { slot: "boots", stat: "Grieving", rune: "Superior Rune of Balthazar" }
+    { slot: "gloves", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "leggings", stat: "Sinister", rune: "Superior Rune of Balthazar" },
+    { slot: "boots", stat: "Sinister", rune: "Superior Rune of Balthazar" }
 ];
 
 var tempCondiTrait = [
@@ -23,12 +23,12 @@ var tempCondiTrait = [
 ];
 
 var tempCondiTrinket = [
-    { slot: "amulet", stat: "Grieving" },
-    { slot: "ring1", stat: "Grieving" },
-    { slot: "ring2", stat: "Grieving" },
-    { slot: "back", stat: "Grieving" },
-    { slot: "earring1", stat: "Grieving" },
-    { slot: "earring2", stat: "Grieving" }
+    { slot: "amulet", stat: "Sinister" },
+    { slot: "ring1", stat: "Sinister" },
+    { slot: "ring2", stat: "Sinister" },
+    { slot: "back", stat: "Sinister" },
+    { slot: "earring1", stat: "Sinister" },
+    { slot: "earring2", stat: "Sinister" }
 ];
 
 var tempCondiFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
@@ -44,7 +44,7 @@ builds["tempPS"] = {
         {
             slot: "mh1",
             type: "Scepter",
-            stat: "Grieving",
+            stat: "Sinister",
             sigils: ["Superior Sigil of Bursting"]
         },
         {
@@ -81,7 +81,7 @@ builds["tempPSSab"] = {
         {
             slot: "mh1",
             type: "Scepter",
-            stat: "Grieving",
+            stat: "Sinister",
             sigils: ["Superior Sigil of Bursting"]
         },
         {
@@ -107,12 +107,12 @@ builds["tempPSSab"] = {
 };
 
 var weavCondiArmor = [
-    { slot: "helm", stat: "Sinister", rune: "Superior Rune of Balthazar" },
-    { slot: "shoulders", stat: "Sinister", rune: "Superior Rune of Balthazar" },
-    { slot: "coat", stat: "Viper's", rune: "Superior Rune of Balthazar" },
-    { slot: "gloves", stat: "Sinister", rune: "Superior Rune of Balthazar" },
-    { slot: "leggings", stat: "Sinister", rune: "Superior Rune of Balthazar" },
-    { slot: "boots", stat: "Sinister", rune: "Superior Rune of Balthazar" }
+    { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Renegade" },
+    { slot: "shoulders", stat: "Grieving", rune: "Superior Rune of the Renegade" },
+    { slot: "coat", stat: "Grieving", rune: "Superior Rune of the Renegade" },
+    { slot: "gloves", stat: "Grieving", rune: "Superior Rune of the Renegade" },
+    { slot: "leggings", stat: "Viper's", rune: "Superior Rune of the Renegade" },
+    { slot: "boots", stat: "Grieving", rune: "Superior Rune of the Renegade" }
 ];
 
 var weavCondiTrait = [
@@ -131,26 +131,26 @@ var weavCondiTrait = [
 ];
 
 var weavCondiTrinket = [
-    { slot: "amulet", stat: "Sinister" },
-    { slot: "ring1", stat: "Sinister" },
-    { slot: "ring2", stat: "Sinister" },
-    { slot: "back", stat: "Sinister" },
-    { slot: "earring1", stat: "Sinister" },
-    { slot: "earring2", stat: "Sinister" }
+    { slot: "amulet", stat: "Viper's" },
+    { slot: "ring1", stat: "Viper's" },
+    { slot: "ring2", stat: "Viper's" },
+    { slot: "back", stat: "Viper's" },
+    { slot: "earring1", stat: "Viper's" },
+    { slot: "earring2", stat: "Viper's" }
 ];
 
 var weavCondiWeapons = [
     {
         slot: "mh1",
         type: "Dagger",
-        stat: "Sinister",
+        stat: "Viper's",
         sigils: ["Superior Sigil of Bursting"]
     },
     {
         slot: "oh1",
         type: "Focus",
         stat: "Viper's",
-        sigils: ["Major Sigil of Bursting"]
+        sigils: ["Superior Sigil of Smoldering"]
     },
     {
         slot: "mh2",
@@ -336,7 +336,7 @@ builds["weavPower2"] = {
             slot: "mh1",
             type: "Staff",
             stat: "Berserker's",
-            sigils: ["Superior Sigil of Force", "Superior Sigil of Accuracy"]
+            sigils: ["Superior Sigil of Force", "Superior Sigil of Air"]
         },
         {
             slot: "oh1",

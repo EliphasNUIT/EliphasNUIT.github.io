@@ -209,9 +209,9 @@ builds["fbDPS"] = {
         },
         {
             slot: "mh2",
-            type: "",
-            stat: "",
-            sigils: [""]
+            type: "Sword",
+            stat: "Grieving",
+            sigils: ["Superior Sigil of Bursting"]
         },
         {
             slot: "oh2",

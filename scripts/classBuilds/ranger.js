@@ -105,27 +105,9 @@ builds["soulbeastCondi"] = {
         }
     ],
     skills: ['"We Heal As One!"', "Viper's Nest", "Flame Trap", "Sharpening Stone", "One Wolf Pack"],
-    pets: ["Juvenile Lynx"],
-    armor: [
-        { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
-        {
-            slot: "shoulders",
-            stat: "Viper's",
-            rune: "Superior Rune of the Nightmare"
-        },
-        { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
-        { slot: "gloves", stat: "Viper's", rune: "Superior Rune of the Nightmare" },
-        { slot: "leggings", stat: "Viper's", rune: "Superior Rune of the Trapper" },
-        { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Trapper" }
-    ],
-    trinket: [
-        { slot: "amulet", stat: "Viper's" },
-        { slot: "ring1", stat: "Viper's" },
-        { slot: "ring2", stat: "Viper's" },
-        { slot: "back", stat: "Viper's" },
-        { slot: "earring1", stat: "Viper's" },
-        { slot: "earring2", stat: "Viper's" }
-    ],
+    pets: ["Juvenile Lynx", "Juvenile Warthog", "Juvenile Fanged Iboga"],
+    armor: condiDruidArmor,
+    trinket: condiDruidTrinket,
     weapons: [
         {
             slot: "mh1",
@@ -199,9 +181,9 @@ var healDruidTrinket = [
     { slot: "amulet", stat: "Minstrel's" },
     { slot: "ring1", stat: "Minstrel's" },
     { slot: "ring2", stat: "Minstrel's" },
-    { slot: "back", stat: "Harrier's" },
+    { slot: "back", stat: "Magi's" },
     { slot: "earring1", stat: "Minstrel's" },
-    { slot: "earring2", stat: "Harrier's" }
+    { slot: "earring2", stat: "Magi's" }
 ];
 
 builds["druidVg"] = {
@@ -213,7 +195,7 @@ builds["druidVg"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",
@@ -221,7 +203,7 @@ builds["druidVg"] = {
         }
     ],
     skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Sun Spirit", "Frost Spirit", "Entangle"],
-    pets: ["Juvenile Tiger", "Juvenile Electric Wyvern"],
+    pets: ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
     weapons: healDruidWeapons,
@@ -237,7 +219,7 @@ builds["druidSab"] = {
         },
         {
             name: "Nature Magic",
-            traits: ["Instinctive Reaction", "Windborne Notes", "Nature's Vengeance"]
+            traits: ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]
         },
         {
             name: "Druid",
@@ -245,7 +227,7 @@ builds["druidSab"] = {
         }
     ],
     skills: ["Glyph of Rejuvenation", "Glyph of Empowerment", "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
-    pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+    pets: ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
     weapons: healDruidWeapons,
@@ -269,35 +251,10 @@ builds["druidSloth"] = {
         }
     ],
     skills: ["Glyph of Rejuvenation", '"Protect Me!"', "Sun Spirit", "Frost Spirit", "Glyph of Unity"],
-    pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+    pets: ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
-    weapons: [
-        {
-            slot: "mh1",
-            type: "Staff",
-            stat: "Magi's",
-            sigils: ["Superior Sigil of Transference", "Superior Sigil of Water"]
-        },
-        {
-            slot: "oh1",
-            type: "",
-            stat: "",
-            sigils: [""]
-        },
-        {
-            slot: "mh2",
-            type: "Axe",
-            stat: "Magi's",
-            sigils: ["Superior Sigil of Transference"]
-        },
-        {
-            slot: "oh2",
-            type: "Axe",
-            stat: "Magi's",
-            sigils: ["Superior Sigil of Water"]
-        }
-    ],
+    weapons: healDruidWeapons,
     food: healDruidFood
 };
 
@@ -318,7 +275,7 @@ builds["druidMatt"] = {
         }
     ],
     skills: ["Healing Spring", "Glyph of the Tides", "Sun Spirit", "Stone Spirit", "Spirit of Nature"],
-    pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+    pets: ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
     weapons: healDruidWeapons,
@@ -342,7 +299,7 @@ builds["druidXera"] = {
         }
     ],
     skills: ["Healing Spring", "Glyph of Empowerment", "Frost Spirit", "Stone Spirit", "Glyph of Unity"],
-    pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+    pets: ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
     weapons: healDruidWeapons,
@@ -438,8 +395,8 @@ builds["druidSam"] = {
             traits: ["Primal Echoes", "Verdant Etching", "Grace of the Land"]
         }
     ],
-    skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Frost Spirit", "Stone Spirit", "Entangle"],
-    pets: ["Juvenile Fern Hound", "Juvenile Electric Wyvern"],
+    skills: ["Glyph of Rejuvenation", "Glyph of the Tides", "Frost Spirit", "Stone Spirit", "Glyph of Unity"],
+    pets: ["Juvenile Jacaranda", "Juvenile Electric Wyvern"],
     armor: healDruidArmor,
     trinket: healDruidTrinket,
     weapons: healDruidWeapons,
