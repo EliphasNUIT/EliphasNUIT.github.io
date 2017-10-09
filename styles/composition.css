@@ -300,7 +300,20 @@ div[trinketBox] {
     flex-direction: column;
 }
 
-/* button */
+button {
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 0%;
+    background-color: #AAAAAA;
+    border: 3px solid #777777;
+    text-align: center;
+}
+
+button:hover {
+    border-radius: 0%;
+    background-color: #AAFFAA;
+    border: 3px solid #77BB77;
+}
 
 
 
@@ -314,7 +327,11 @@ div[trinketBox] {
     }
 
     button {
-        font-size: 2.8em;
+        font-size: 2.7em;
+    }
+
+    img{
+        zoom: 2.0;
     }
 
     li {
