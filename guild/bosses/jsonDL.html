@@ -115,6 +115,7 @@
         var doPet = function (i) {
             FW_GW2().getPet(i, "en", function (data) {
                 if (data.name) {
+                    console.log("got " + data.name);
                     petsToDL[data.name] = { id: data.id, icon: data.icon };
                 }
             }, errorFunc);
@@ -140,7 +141,7 @@
             a.textContent = "Download " + a.download;
 
             document.getElementById('content').appendChild(a);
-        }, timeout);
+        }, 10000);
     }
 
 </script>
