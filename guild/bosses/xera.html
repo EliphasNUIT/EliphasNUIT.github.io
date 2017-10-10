@@ -24,6 +24,12 @@
     $(function () {
         $("#includedContent").load("../../ressources/header.html");
     });
+    $(function () {
+        $("#team1").load("team1.html");
+    });
+    $(function () {
+        $("#team2").load("team2.html");
+    });
 </script>
 
 
@@ -34,27 +40,25 @@
     <link href="../../styles/html.css" rel="stylesheet" type="text/css">
     <link href="../../styles/table.css" rel="stylesheet" type="text/css">
     <link href="../../styles/composition.css" rel="stylesheet" type="text/css">
+    <style media="screen" type="text/css">
+        html {
+            background-image: url(../../images/raids/StrongholdoftheFaithful.png);
+        }
+    </style>
 </head>
 
 <div id="includedContent"></div>
+
 <body>
     <h1>La composition - Xera [ODS]</h1>
-    <img src="../../images/228px-Xera_(Illusion).jpg">
+    <img src="../../images/bosses/228px-Xera_(Illusion).jpg">
     <p> <a href="../../index.html">Index</a> </p>
     <p> <a href="../composition.html">Composition</a> </p>
 
     <h2 id="Xera">Xera</h2>
 
     <h3>Groupe 1</h3>
-    <div center class="w3-bar w3-black">
-
-        <button onclick="openChar1('Akitae', event )" class="w3-bar-item w3-button tablinks1 w3-red">Akitae</button>
-        <button onclick="openChar1('Dam', event)" class="w3-bar-item w3-button tablinks1">Dam</button>
-        <button onclick="openChar1('Arkness', event)" class="w3-bar-item w3-button tablinks1">Arkness</button>
-        <button onclick="openChar1('Eliphas', event)" class="w3-bar-item w3-button tablinks1">Eliphas</button>
-        <button onclick="openChar1('Sakura', event)" class="w3-bar-item w3-button tablinks1">Sakura</button>
-
-    </div>
+    <div id="team1"></div>
 
     <div id="Akitae" class="t1" style="display:block">
         <div center char><a href="https://gw2armory.com/suzuca.3248/characters">Akitae</a></div>
@@ -89,15 +93,7 @@
 
     <h3>Groupe 2</h3>
 
-    <div center class="w3-bar w3-black">
-
-        <button onclick="openChar2('Polgara', event )" class="w3-bar-item w3-button tablinks2 w3-red">Polgara</button>
-        <button onclick="openChar2('Winter', event)" class="w3-bar-item w3-button tablinks2">Winter</button>
-        <button onclick="openChar2('Bouhteille', event)" class="w3-bar-item w3-button tablinks2">Bouhteille</button>
-        <button onclick="openChar2('Mélo', event)" class="w3-bar-item w3-button tablinks2">Mélo</button>
-        <button onclick="openChar2('Vengeful', event)" class="w3-bar-item w3-button tablinks2">Vengeful</button>
-
-    </div>
+    <div id="team2"></div>
 
     <div id="Polgara" class="t2" style="display:block">
         <div center char><a href="https://gw2armory.com/Kaeryh/c/Erylis%20Shanyra">Polgara</a></div>
@@ -129,8 +125,8 @@
         <div id="VengefulB" build visibility="false" init="false"></div>
     </div>
 
-    <div licensing>This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. 
-        All other trademarks are the property of their respective owners.</div>
+    <div licensing>This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. All other trademarks
+        are the property of their respective owners.</div>
 
 </body>
 

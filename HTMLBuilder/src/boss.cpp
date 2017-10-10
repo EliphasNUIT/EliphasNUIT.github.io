@@ -32,6 +32,13 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "    <meta name=\"author\" content=\"EliphasNUIT\">";
     res << "    <link href=\"../styles/html.css\" rel=\"stylesheet\" type=\"text/css\">";
     res << "    <link href=\"../styles/bosses.css\" rel=\"stylesheet\" type=\"text/css\">";
+    res << "    <style media=\"screen\" type=\"text/css\">";
+    
+    res << "html {";
+    res << "    background-image: url("+this->background+") ;";
+    res << "}";
+    
+    res << "    </style>";
     res << "</head>";
     res << "<div id=\"includedContent\"></div>";
     res << "<body>";
@@ -85,22 +92,25 @@ QStringList Boss::getTries() {
 
 void Boss::read(QXmlStreamReader& reader) {
     qInfo() << "        reading " + this->name ;
-	QString image, shortRef;
+	QString image, shortRef, bg;
 	while (reader.readNextStartElement()) {
 		if (reader.name() == "image") {
 			image = reader.readElementText();
 		} else if (reader.name() == "shortRef") {
 			shortRef = reader.readElementText();
-        } else {
+        } else if (reader.name() == "bg") {
+			bg = reader.readElementText();
+        }  else {
             reader.skipCurrentElement();
         }
 	}
     qInfo() << "        read " + this->name ;
     this->shortRef = shortRef;
-	this->imagePath = "<img src=\"../images/" + image + "\">";
+	this->imagePath = "<img src=\"../images/bosses/" + image + "\">";
 	this->htmlFile = "../../logs/" + shortRef + ".html";
     this->ressourceDir = "\"../ressources/" + shortRef + "/";
     this->ressourcePath = "../../ressources/" + shortRef;
+    this->background = "../images/raids/" + bg;
 }
 
 

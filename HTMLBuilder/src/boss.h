@@ -25,6 +25,7 @@ private:
     QString ressourcePath;
     QString ressourceDir;
     QString shortRef;
+    QString background;
 private:
     QStringList getTries();
 };
