@@ -5,34 +5,41 @@
 			<boss name="Vale Guardian">
 				<image>214px-Vale_Guardian.jpg</image>
 				<shortRef>VG</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Gorseval the Multifarious">
 				<image>240px-Gorseval_the_Multifarious.jpg</image>
 				<shortRef>Gorse</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Sabetha the Saboteur">
 				<image>173px-Sabetha_the_Saboteur.jpg</image>
 				<shortRef>Sab</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 		</wing>
 		<wing name="Salvation Pass">
 			<boss name="Slothasor">
 				<image>240px-Slothasor.jpg</image>
 				<shortRef>Sloth</shortRef>
+				<bg>SalvationPass.png</bg>
 			</boss>
 			<boss name="Matthias Gabrel">
 				<image>131px-Matthias_Gabrel.jpg</image>
 				<shortRef>Mat</shortRef>
+				<bg>SalvationPass.png</bg>
 			</boss>
 		</wing>
 		<wing name="Stronghold of the Faithful">
 			<boss name="Keep Construct">
 				<image>240px-Keep_Construct.jpg</image>
 				<shortRef>KC</shortRef>
+				<bg>StrongholdoftheFaithful.png</bg>
 			</boss>
 			<boss name="Xera">
 				<image>228px-Xera_(Illusion).jpg</image>
 				<shortRef>Xera</shortRef>
+				<bg>StrongholdoftheFaithful.png</bg>
 			</boss>
 		</wing>
 	</raid>
@@ -41,36 +48,44 @@
 			<boss name="Cairn the Indomitable">
 				<image>240px-Cairn_the_Indomitable.jpg</image>
 				<shortRef>Cairn</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Mursaat Overseer">
 				<image>151px-Mursaat_Overseer.jpg</image>
 				<shortRef>MO</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Samarog">
 				<image>240px-Samarog.jpg</image>
 				<shortRef>Sam</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Deimos">
 				<image>240px-Deimos.jpg</image>
 				<shortRef>Dei</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 		</wing>
 		<wing name="Bastion of the Penitent CM">
 			<boss name="Cairn the Indomitable CM">
 				<image>240px-Cairn_the_Indomitable.jpg</image>
 				<shortRef>CairnCM</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Mursaat Overseer CM">
 				<image>151px-Mursaat_Overseer.jpg</image>
 				<shortRef>MOCM</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Samarog CM">
 				<image>240px-Samarog.jpg</image>
 				<shortRef>SamCM</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Deimos CM">
 				<image>240px-Deimos.jpg</image>
 				<shortRef>DeiCM</shortRef>
+				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 		</wing>
 	</raid>
@@ -79,28 +94,34 @@
 			<boss name="MAMA">
 				<image></image>
 				<shortRef>MAMA</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Siax the Corrupted">
 				<image>230px-Siax_the_Corrupted.jpg</image>
 				<shortRef>Siax</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Ensolyss of the Endless Torment">
 				<image>185px-Ensolyss_of_the_Endless_Torment.jpg</image>
 				<shortRef>Enso</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 		</wing>
 		<wing name="Shattered Observatory">
 			<boss name="Skorvald the Shattered">
 				<image>184px-Skorvald_the_Shattered.jpg</image>
 				<shortRef>Skor</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Artsariiv">
 				<image>147px-Artsariiv.jpg</image>
 				<shortRef>Art</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Arkk">
 				<image>150px-Arkk.jpg</image>
 				<shortRef>Arkk</shortRef>
+				<bg>SpiritVale.png</bg>
 			</boss>
 		</wing>
 	</raid>
