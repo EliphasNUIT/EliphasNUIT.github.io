@@ -8,18 +8,7 @@ body {
 }
 
 button {
-    font-weight: bold;
     font-size: 0.9em;
-    border-radius: 0%;
-    background-color: #AAAAAA;
-    border: 3px solid #777777;
-    text-align: center;
-}
-
-button:hover {
-    border-radius: 0%;
-    background-color: #AAFFAA;    
-    border: 3px solid #77BB77;
 }
 
 

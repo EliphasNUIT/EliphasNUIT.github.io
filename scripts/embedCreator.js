@@ -84,6 +84,7 @@ function readSkills(build) {
     } else {
         divToAdd += 'data-armory-size="70" ';
     }
+    //divToAdd += 'data-armory-inline-text="wiki" ';
     divToAdd += 'data-armory-blank-text="Au choix ou voir avec l\'autre classe jouant le même build" ';
     divToAdd += "></div>";
     return divToAdd;
@@ -113,6 +114,7 @@ function readAmuletRings(build) {
     } else {
         divToAdd += 'data-armory-size="60" ';
     }
+    //divToAdd += 'data-armory-inline-text="wiki" ';
     divToAdd += "></div>";
     return divToAdd;
 }
@@ -141,6 +143,7 @@ function readBackAccessories(build) {
     } else {
         divToAdd += 'data-armory-size="60" ';
     }
+    //divToAdd += 'data-armory-inline-text="wiki" ';
     divToAdd += "></div>";
     return divToAdd;
 }
@@ -173,12 +176,14 @@ function readArmor(build) {
     } else {
         divToAdd += 'data-armory-size="60" ';
     }
+    //divToAdd += 'data-armory-inline-text="wiki" ';
     divToAdd += "></div>";
     if (mobile) {
         runeDivToAdd += 'data-armory-size="130" ';
     } else {
         runeDivToAdd += 'data-armory-size="60" ';
     }
+    //runeDivToAdd += 'data-armory-inline-text="wiki" ';
     runeDivToAdd += "></div>";
     return { armor: divToAdd, rune: runeDivToAdd };
 }
@@ -220,6 +225,7 @@ function readWeapon1(build) {
         divToAdd += 'data-armory-size="60" ';
     }
     divToAdd += 'data-armory-blank-text="Vide" ';
+    //divToAdd += 'data-armory-inline-text="wiki" ';
     divToAdd += "></div>";
 
     sigilIDS = sigilIDS.slice(0, -1) + '" ';
@@ -230,6 +236,7 @@ function readWeapon1(build) {
         sigilDivToAdd += 'data-armory-size="60" ';
     }
     sigilDivToAdd += 'data-armory-blank-text="Vide" ';
+    //sigilDivToAdd += 'data-armory-inline-text="wiki" ';
     sigilDivToAdd += "></div>";
 
     return { wep: divToAdd, sig: sigilDivToAdd };
@@ -273,6 +280,7 @@ function readWeapon2(build) {
         divToAdd += 'data-armory-size="60" ';
     }
     divToAdd += 'data-armory-blank-text="Vide" ';
+    //divToAdd += 'data-armory-inline-text="wiki" ';
     divToAdd += "></div>";
 
     sigilIDS = sigilIDS.slice(0, -1) + '" ';
@@ -283,6 +291,7 @@ function readWeapon2(build) {
         sigilDivToAdd += 'data-armory-size="60" ';
     }
     sigilDivToAdd += 'data-armory-blank-text="Vide" ';
+    //sigilDivToAdd += 'data-armory-inline-text="wiki" ';
     sigilDivToAdd += "></div>";
 
     return { wep: divToAdd, sig: sigilDivToAdd };
@@ -381,7 +390,7 @@ function displayBuild(divID, buildId) {
         // Food
         wepTrinketDiv.append("<div center bold>Consommables</div>");
         wepTrinketDiv.append(readFoods(build));
-        div.append('<script async src="https://gw2armory.com/gw2aEmbeds.js"></script>');
+        div.append('<script async src="https://unpkg.com/armory-embeds/armory-embeds.js"></script>');
         //window.document.dispatchEvent(DOMContentLoaded_event);
         div.attr("init", "true");
     }

@@ -64,6 +64,29 @@ img {
     height: auto;
 }
 
+button {
+    font-weight: bold;
+    border-radius: 0%;
+    background-color: #AAAAAA;
+    border: 3px solid #777777;
+    text-align: center;
+}
+
+@media (hover: hover) {
+    button:hover {
+        border-radius: 0%;
+        background-color: #AAFFAA;    
+        border: 3px solid #77BB77;
+    }
+}
+
+button:active{
+    background-color: #AAFFAA; 
+    border: 3px solid #77BB77
+}
+
+button:focus{ outline-color: #999999 }
+
 @media only screen and (max-device-width: 750px) {
 
     body {
