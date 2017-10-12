@@ -1,15 +1,17 @@
 .container {
-    background-color: rgba(70, 70, 70, 0.8);
+    
     font-family: Arial;
     position: fixed;
     display: inline-flex;
     flex-direction: column;
+    flex-wrap: wrap;
     z-index: 50;
     left: 5%;
     top: 5%;
 }
 
 .container a {
+    background-color: rgba(70, 70, 70, 0.8);
     float: left;
     font-size: 1.8em;
     color: white;

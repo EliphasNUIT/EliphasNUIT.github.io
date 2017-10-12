@@ -21,7 +21,7 @@ function detectmob() {
 var mobile = detectmob();
 
 function readSpecializations(build) {
-    var divToAdd = '<div spe data-armory-embed="specializations" ';
+    var divToAdd = '<div data-armory-embed="specializations" ';
     var speIDS = 'data-armory-ids="';
     var totalTraits = "";
     var specializations = build.specializations;

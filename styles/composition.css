@@ -237,7 +237,7 @@ img[small] {
 
 div[traitBox] {
     display: flex;
-    min-width: 400px;    
+    min-width: 500px;    
     flex-direction: column;
 }
 
