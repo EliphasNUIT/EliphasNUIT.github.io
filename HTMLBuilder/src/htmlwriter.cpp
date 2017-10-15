@@ -52,20 +52,8 @@ void writeIndexFoot(QTextStream& stream) {
 
 }
 
-//////////////////////
 
-HtmlWriter::HtmlWriter(QObject *parent) : QObject(parent)
-{
-}
-
-HtmlWriter::~HtmlWriter() {
-    for (int i = 0; i < this->raidList.length(); i++) {
-        delete this->raidList[i];
-    }
-    this->raidList.clear();
-}
-
-void HtmlWriter::removeOld() {
+void removeOld() {
     QString path = "../../logs/";
     QDir dir(path);
     dir.setNameFilters(QStringList() << "*.html*");
@@ -87,10 +75,25 @@ void HtmlWriter::removeOld() {
     }
 }
 
+//////////////////////
+
+HtmlWriter::HtmlWriter(QObject *parent) : QObject(parent)
+{
+}
+
+HtmlWriter::~HtmlWriter() {
+    for (int i = 0; i < this->raidList.length(); i++) {
+        delete this->raidList[i];
+    }
+    this->raidList.clear();
+}
+
+
+
 void HtmlWriter::execute(){
 
     qInfo() << "removing old files";
-    this->removeOld();
+    removeOld();
     qInfo() << "old files removed";
 
     // read ressources

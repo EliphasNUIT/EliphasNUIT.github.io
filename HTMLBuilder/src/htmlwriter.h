@@ -18,7 +18,6 @@ public:
 public slots:
 private:
     void read(QXmlStreamReader& reader);
-    void removeOld();
 private:
     QVector<Raid*> raidList;
 };
