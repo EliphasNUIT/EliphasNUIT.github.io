@@ -102,20 +102,20 @@ builds["chrTankMinstrel"] = {
         {
             slot: "shoulders",
             stat: "Minstrel's",
-            rune: "Superior Rune of Water"
+            rune: "Superior Rune of the Firebrand"
         },
-        { slot: "coat", stat: "Minstrel's", rune: "Superior Rune of Water" },
+        { slot: "coat", stat: "Minstrel's", rune: "Superior Rune of the Firebrand" },
         {
             slot: "gloves",
             stat: "Minstrel's",
-            rune: "Superior Rune of Water"
+            rune: "Superior Rune of the Firebrand"
         },
         {
             slot: "leggings",
             stat: "Minstrel's",
-            rune: "Superior Rune of Water"
+            rune: "Superior Rune of the Firebrand"
         },
-        { slot: "boots", stat: "Minstrel's", rune: "Superior Rune of Water" }
+        { slot: "boots", stat: "Minstrel's", rune: "Superior Rune of the Firebrand" }
     ],
     trinket: [
         { slot: "amulet", stat: "Minstrel's" },
@@ -130,7 +130,7 @@ builds["chrTankMinstrel"] = {
             slot: "mh1",
             type: "Sword",
             stat: "Minstrel's",
-            sigils: ["Superior Sigil of Concentration"]
+            sigils: ["Superior Sigil of Transference"]
         },
         {
             slot: "mh2",
@@ -142,13 +142,13 @@ builds["chrTankMinstrel"] = {
             slot: "oh1",
             type: "Shield",
             stat: "Minstrel's",
-            sigils: ["Superior Sigil of Transference"]
+            sigils: ["Superior Sigil of Water"]
         },
         {
             slot: "oh2",
             type: "Focus",
             stat: "Minstrel's",
-            sigils: ["Superior Sigil of Transference"]
+            sigils: ["Superior Sigil of Water"]
         }
     ],
     food: boonShareFood
@@ -173,24 +173,24 @@ builds["chrTankDei"] = {
     skills: ["Well of Eternity", "Well of Action", "Well of Precognition", "Well of Recall", "Time Warp"],
     pets: null,
     armor: [
-        { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of Water" },
+        { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of the Firebrand" },
         {
             slot: "shoulders",
             stat: "Minstrel's",
-            rune: "Superior Rune of Water"
+            rune: "Superior Rune of the Firebrand"
         },
-        { slot: "coat", stat: "Minstrel's", rune: "Superior Rune of Water" },
+        { slot: "coat", stat: "Minstrel's", rune: "Superior Rune of the Firebrand" },
         {
             slot: "gloves",
             stat: "Minstrel's",
-            rune: "Superior Rune of Water"
+            rune: "Superior Rune of the Firebrand"
         },
         {
             slot: "leggings",
             stat: "Minstrel's",
-            rune: "Superior Rune of Water"
+            rune: "Superior Rune of the Firebrand"
         },
-        { slot: "boots", stat: "Minstrel's", rune: "Superior Rune of Water" }
+        { slot: "boots", stat: "Minstrel's", rune: "Superior Rune of the Firebrand" }
     ],
     trinket: [
         { slot: "amulet", stat: "Minstrel's" },
@@ -205,7 +205,7 @@ builds["chrTankDei"] = {
             slot: "mh1",
             type: "Sword",
             stat: "Minstrel's",
-            sigils: ["Superior Sigil of Concentration"]
+            sigils: ["Superior Sigil of Transference"]
         },
         {
             slot: "mh2",
@@ -217,13 +217,13 @@ builds["chrTankDei"] = {
             slot: "oh1",
             type: "Shield",
             stat: "Minstrel's",
-            sigils: ["Superior Sigil of Transference"]
+            sigils: ["Superior Sigil of Water"]
         },
         {
             slot: "oh2",
             type: "Focus",
             stat: "Minstrel's",
-            sigils: ["Superior Sigil of Transference"]
+            sigils: ["Superior Sigil of Water"]
         }
     ],
     food: boonShareFood

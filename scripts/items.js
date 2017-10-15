@@ -57,7 +57,8 @@ var runes = {
     "Superior Rune of the Trapper": 67339,
     "Superior Rune of the Krait": 24762,
     "Superior Rune of Water": 24839,
-    "Superior Rune of the Renegade": 83502
+    "Superior Rune of the Renegade": 83502,
+    "Superior Rune of the Firebrand": 83338
 };
 
 var sigils = {
