@@ -21,7 +21,7 @@ function detectmob() {
 var mobile = detectmob();
 
 function readSpecializations(build) {
-    var divToAdd = '<div data-armory-embed="specializations" ';
+    var divToAdd = '<div trait data-armory-embed="specializations" ';
     var speIDS = 'data-armory-ids="';
     var totalTraits = "";
     var specializations = build.specializations;
@@ -338,7 +338,7 @@ function displayBuild(divID, buildId) {
         traitDiv.append("<div center bold>Aptitudes</div>");
         traitDiv.append(readSpecializations(build));
         // skills
-        var skillBoxId = "traitBox" + nBox++;
+        var skillBoxId = "skillBox" + nBox++;
         div.append("<div id='" + skillBoxId + "' skillBox></div>");
         var skillDiv = $("#" + skillBoxId);
         skillDiv.append("<div center bold>Compétences</div>");
