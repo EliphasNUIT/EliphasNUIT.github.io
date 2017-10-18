@@ -42,7 +42,7 @@ builds["renCondi"] = {
             slot: "mh1",
             type: "Mace",
             stat: "Viper's",
-            sigils: ["Superior Sigil of Malice"]
+            sigils: ["Superior Sigil of Smoldering"]
         },
         {
             slot: "oh1",
