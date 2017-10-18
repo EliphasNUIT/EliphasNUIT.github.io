@@ -35,7 +35,7 @@ var condiScourgeWeapons = [
         slot: "mh1",
         type: "Scepter",
         stat: "Viper's",
-        sigils: ["Superior Sigil of Malice"]
+        sigils: ["Superior Sigil of Geomancy"]
     },
     {
         slot: "oh1",
@@ -53,7 +53,7 @@ var condiScourgeWeapons = [
         slot: "oh2",
         type: "Torch",
         stat: "Viper's",
-        sigils: ["Superior Sigil of Geomancy"]
+        sigils: ["Superior Sigil of Malice"]
     }
 ];
 
@@ -86,7 +86,7 @@ builds["scourgeCondiMO"] = {
 builds["scourgeCondiGorse"] = {
     class: Necromancer,
     specializations: condiScourgeTraits,
-    skills: ["Sand Flare", "Summon Shadow Fiend", "Trail of Anguish", "Blood Is Power", "Summon Flesh Golem"],
+    skills: ["Sand Flare", "Summon Shadow Fiend", "Trail of Anguish", "Blood Is Power", "Plaguelands"],
     pets: null,
     armor: condiScourgeArmor,
     trinket: condiScourgeTrinket,
@@ -105,3 +105,90 @@ builds["scourgeCondiSab"] = {
     food: condiScourgeFood
 };
 
+
+
+var condiReaperFood = ["Rare Veggie Pizza", "Toxic Focusing Crystal"];
+
+var condiReaperArmor = [
+    { slot: "helm", stat: "Grieving", rune: "Superior Rune of the Krait" },
+    {
+        slot: "shoulders",
+        stat: "Grieving",
+        rune: "Superior Rune of the Krait"
+    },
+    { slot: "coat", stat: "Grieving", rune: "Superior Rune of the Krait" },
+    {
+        slot: "gloves",
+        stat: "Grieving",
+        rune: "Superior Rune of the Krait"
+    },
+    {
+        slot: "leggings",
+        stat: "Grieving",
+        rune: "Superior Rune of the Krait"
+    },
+    { slot: "boots", stat: "Grieving", rune: "Superior Rune of the Krait" }
+];
+
+var condiReaperTrinket = [
+    { slot: "amulet", stat: "Viper's" },
+    { slot: "ring1", stat: "Viper's" },
+    { slot: "ring2", stat: "Viper's" },
+    { slot: "back", stat: "Viper's" },
+    { slot: "earring1", stat: "Viper's" },
+    { slot: "earring2", stat: "Viper's" }
+];
+
+var condiReaperWeapons = [
+    {
+        slot: "mh1",
+        type: "Scepter",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Geomancy"]
+    },
+    {
+        slot: "oh1",
+        type: "Dagger",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Earth"]
+    },
+    {
+        slot: "mh2",
+        type: "Greatsword",
+        stat: "Viper's",
+        sigils: ["Superior Sigil of Geomancy","Superior Sigil of Earth"]
+    },
+    {
+        slot: "oh2",
+        type: "",
+        stat: "",
+        sigils: [""]
+    }
+];
+
+var condiReaperTraits = [
+    {
+        name: "Curses",
+        traits: ["Chilling Darkness", "Master of Corruption", "Lingering Curse"]
+    },
+    {
+        name: "Soul Reaping",
+        traits: ["Unyielding Blast", "Vital Persistence", "Dhuumfire"]
+    },
+    {
+        name: "Reaper",
+        traits: ["Chilling Nova", "Decimate Defenses", "Deathly Chill"]
+    }
+];
+
+
+builds["reaperCondiMO"] = {
+    class: Necromancer,
+    specializations: condiReaperTraits,
+    skills: ["Summon Blood Fiend", "Summon Shadow Fiend", "Blood Is Power", "Epidemic", "Plaguelands"],
+    pets: null,
+    armor: condiReaperArmor,
+    trinket: condiReaperTrinket,
+    weapons: condiReaperWeapons,
+    food: condiReaperFood
+};
