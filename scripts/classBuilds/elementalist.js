@@ -626,7 +626,7 @@ builds["weavPowerKC"] = {
         "Conjure Frost Bow",
         "Glyph of Storms",
         "Signet of Fire",
-        "Conjure Fiery Greatsword"
+        "Weave Self"
     ],
     pets: null,
     armor: [
