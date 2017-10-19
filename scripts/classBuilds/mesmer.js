@@ -98,7 +98,7 @@ builds["chrTankMinstrel"] = {
     skills: ["Well of Eternity", "Well of Action", "Signet of Inspiration", "Well of Recall", "Signet of Humility"],
     pets: null,
     armor: [
-        { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of Water" },
+        { slot: "helm", stat: "Minstrel's", rune: "Superior Rune of the Firebrand" },
         {
             slot: "shoulders",
             stat: "Minstrel's",
