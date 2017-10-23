@@ -1,4 +1,4 @@
-var stats = {
+define({
     Mighty: 137,
     Resilient: 140,
     Precise: 138,
@@ -56,4 +56,4 @@ var stats = {
     "Marshal's":1378,
     Grieving:1379,
     "Harrier's":1377
-};
+});

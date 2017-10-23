@@ -1,4 +1,4 @@
-var pets = {
+define({
     "Juvenile Jungle Stalker": {
         id: 1,
         icon: "https://render.guildwars2.com/file/EF1CBC60372CC60E420AD479A3504D90207A9A3F/52535.png"
@@ -219,4 +219,4 @@ var pets = {
         id: 47,
         icon: "https://render.guildwars2.com/file/A41953A8682309700FA17601FE05DB040C6CD07B/1128514.png"
     }
-};
+});
