@@ -1,6 +1,6 @@
 define(
     [
-        "builds",
+        "dataBuilds",
         "classBuilds/mesmer",
         "classBuilds/elementalist",
         "classBuilds/engineer",
