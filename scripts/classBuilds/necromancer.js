@@ -95,7 +95,7 @@ define(["../dataBuilds", "../utilities/classes"], function(buildData, classes) {
 
     // Scourge - Condi
     {
-        var condiScourgeFood = ["Rare Veggie Pizza", "Master Tuning Crystal"];
+        var condiScourgeFood = ["Rare Veggie Pizza", "Furious Tuning Crystal"];
 
         var condiScourgeArmor = [
             { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Renegade" },
