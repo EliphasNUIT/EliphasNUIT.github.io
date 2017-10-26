@@ -7,6 +7,12 @@ TARGET = HTMLBuilder
 CONFIG += console
 CONFIG -= app_bundle
 
+
+INCLUDEPATH += libs/zlib-1.2.11
+LIBS += -Llibs/zlib-1.2.11 -lz
+INCLUDEPATH += libs/quazip-0.7.3/quazip
+LIBS += -Llibs/quazip-0.7.3/quazip/release
+
 TEMPLATE = app
 
 release: DESTDIR = release

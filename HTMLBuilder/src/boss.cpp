@@ -1,8 +1,12 @@
 #include "boss.h"
 
 #include <QDebug>
+#include <QFile>
 #include <QTextStream>
 #include <QDate>
+#include <QDateTime>
+#include <QFileInfo>
+#include <JlCompress.h>
 
 Boss::Boss(const QString& name,QObject *parent) : QObject(parent)
 {
@@ -74,10 +78,20 @@ QString toDate(const QString& date) {
 QStringList Boss::getTries() {
     QDir triesDir(this->ressourcePath);
     QStringList tries = triesDir.entryList(QDir::Files, QDir::Name | QDir::Reversed );
+    QStringList toDelete;
     QStringList res;
     QStringListIterator it(tries);
    while(it.hasNext()) {
         QString aux(it.next());
+        // Auto archive
+        QFileInfo info(this->ressourcePath+ '/' + aux);
+        qint64 fileTime = QDateTime::currentSecsSinceEpoch() - info.lastModified().toSecsSinceEpoch();
+        if ( fileTime > qint64(1814400)) {
+            toDelete << this->ressourcePath+ '/' + aux;
+            qInfo() << aux + " archived";
+            continue;
+        }
+        //
         QString date = aux.split("-").at(0);
         date.insert(4,"_");
         date.insert(7,"_");

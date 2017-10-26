@@ -1,4 +1,4 @@
-define(["utilities/items", "utilities/classes", "utilities/stats", "utilities/pets"], function(items, classes, stats, pets) {
+define(["utilities/items", "utilities/stats", "utilities/pets"], function(items, stats, pets) {
     "use strict";
     
     var sigils = items.sigils;
