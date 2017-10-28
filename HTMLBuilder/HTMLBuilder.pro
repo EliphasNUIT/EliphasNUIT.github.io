@@ -7,12 +7,6 @@ TARGET = HTMLBuilder
 CONFIG += console
 CONFIG -= app_bundle
 
-
-INCLUDEPATH += libs/zlib-1.2.11
-LIBS += -Llibs/zlib-1.2.11 -lz
-INCLUDEPATH += libs/quazip-0.7.3/quazip
-LIBS += -Llibs/quazip-0.7.3/quazip/release
-
 TEMPLATE = app
 
 release: DESTDIR = release
@@ -23,14 +17,14 @@ MOC_DIR = $$DESTDIR/.moc
 RCC_DIR = $$DESTDIR/.qrc
 UI_DIR = $$DESTDIR/.ui
 
-SOURCES += main.cpp \
-    src/htmlwriter.cpp \
-    src/boss.cpp \
-    src/wing.cpp \
-    src/raid.cpp
+SOURCES += src/main.cpp \
+    src/utilities/htmlwriter.cpp \
+    src/utilities/boss.cpp \
+    src/utilities/wing.cpp \
+    src/utilities/raid.cpp
 
 HEADERS += \
-    src/htmlwriter.h \
-    src/boss.h \
-    src/wing.h \
-    src/raid.h
+    src/utilities/htmlwriter.h \
+    src/utilities/boss.h \
+    src/utilities/wing.h \
+    src/utilities/raid.h
