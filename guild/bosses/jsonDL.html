@@ -4,9 +4,9 @@
 
 <script src="https://gw2armory.com/gw2aEmbeds.js"></script>
 
-<script src="../../scripts/APIWrapper.js"></script>
+<script src="../../scripts/utilities/APIWrapper.js"></script>
 
-<script src="../../scripts/classReader.js"></script>
+<script src="../../scripts/utilities/classReader.js"></script>
 
 <script type="text/javascript">
     var timeout = 90000;
@@ -18,7 +18,7 @@
             var url = URL.createObjectURL(blob);
 
             var a = document.createElement('a');
-            a.download = "classes.js";
+            a.download = "professions.js";
             a.href = url;
             a.textContent = "Download " + a.download;
 

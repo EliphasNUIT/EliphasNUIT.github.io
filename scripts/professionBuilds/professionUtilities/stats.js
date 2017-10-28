@@ -1,4 +1,5 @@
-define({
+define([], function() {
+  var stats = {
     Mighty: 137,
     Resilient: 140,
     Precise: 138,
@@ -53,7 +54,9 @@ define({
     "Commander's": 1227,
     "Wanderer's": 1225,
     Seraph: 1222,
-    "Marshal's":1378,
-    Grieving:1379,
-    "Harrier's":1377
+    "Marshal's": 1378,
+    Grieving: 1379,
+    "Harrier's": 1377
+  };
+  return stats;
 });

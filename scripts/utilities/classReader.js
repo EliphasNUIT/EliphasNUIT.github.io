@@ -7,6 +7,7 @@ var Class = function(name) {
     this.specializations = {};
     this.traits = {};
     this.skills = {};
+    this.weapons = {};
 };
 
 Class.prototype.buildFromAPI = function() {
@@ -16,6 +17,7 @@ Class.prototype.buildFromAPI = function() {
         "en",
         function(data) {
             var classData = data;
+            _this.weapons = data.weapons;
             for (var i = 0; i < classData.specializations.length; i++) {
                 var speID = classData.specializations[i];
                 FW_GW2().getSpecialization(
@@ -31,7 +33,7 @@ Class.prototype.buildFromAPI = function() {
                                 "en",
                                 function(data) {
                                     var traitData = data;
-                                    _this.traits[traitData.name] = traitData.id;
+                                    _this.traits[traitData.name] = {id:traitData.id, spe: traitData.specialization};
                                 },
                                 errorFunc
                             );
@@ -46,7 +48,7 @@ Class.prototype.buildFromAPI = function() {
                     skillID,
                     "en",
                     function(data) {
-                        _this.skills[data.name] = data.id;
+                        _this.skills[data.name] = {id:data.id, slot: data.slot};
                     },
                     errorFunc
                 );
