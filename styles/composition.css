@@ -246,6 +246,15 @@ div[skillBox] {
     text-align: center;
 }
 
+div[skillList] {
+    padding-left: 18%;
+    padding-right: 18%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
 div[equipementBox] {
     padding-left: 10%;
     padding-right: 10%;
@@ -342,6 +351,11 @@ button {
         font-size: 2.5em;;
     }
 
+    div[skillList] {
+        padding-left:10%;
+        padding-right: 10%;
+    }
+
     div[class^="gw2a--17V11"] {
         font-size: 1.05em;
     }
@@ -360,7 +374,7 @@ button {
 
 @media only screen and (max-device-width: 450px) {
     button {
-        font-size: 2.9em;
+        font-size: 2.7em;
     }
 
     div[build] {
@@ -373,6 +387,11 @@ button {
 
     div[class^="gw2a--17V11"] {
         font-size: 1.6em;
+    }
+
+    div[skillList] {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     div[class^="gw2a--35pJR"] {

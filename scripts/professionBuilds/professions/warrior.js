@@ -1,4 +1,4 @@
-define(["../dataBuilds", "../utilities/classes"], function(buildData, classes) {
+define(["professionBuilds/dataBuilds", "professionBuilds/utilities/classes"], function(buildData, classes) {
     "use strict";
     var builds = buildData.builds;
     var build = buildData.build;

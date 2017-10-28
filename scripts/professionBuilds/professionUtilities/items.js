@@ -87,7 +87,7 @@ define([], function() {
       Staff: 81382
     },
 
-    foods: {
+    consumable: {
       "Rare Veggie Pizza": 12464,
       "Toxic Focusing Crystal": 48917,
       "Furious Tuning Crystal": 67524,
