@@ -53,17 +53,24 @@ define(
       wepTrinketDiv.append("<div id='" + wepsBoxId + "' wepsBox></div>");
       var wepsBox = $("#" + wepsBoxId);
       var wepBox1Id = "wepBox1" + nBox++;
+      
       wepsBox.append("<div id='" + wepBox1Id + "' wepBox1></div>");
       var wepBox1 = $("#" + wepBox1Id);
-      var wepBox2Id = "wepBox2" + nBox++;
-      wepsBox.append("<div id='" + wepBox2Id + "' wepBox2></div>");
-      var wepBox2 = $("#" + wepBox2Id);
+      if (build.wep2 !== null) {
+        wepBox1.append("<div center bold>Set 1</div>");
+      }
       var wep1 = build.getWeapon1();
-      var wep2 = build.getWeapon2();
       wepBox1.append(wep1.wep);
       wepBox1.append(wep1.sig);
-      wepBox2.append(wep2.wep);
-      wepBox2.append(wep2.sig);
+      if (build.wep2 !== null) {
+        var wepBox2Id = "wepBox2" + nBox++;
+        wepsBox.append("<div id='" + wepBox2Id + "' wepBox2></div>");
+        var wepBox2 = $("#" + wepBox2Id);
+        wepBox2.append("<div center bold>Set 2</div>");      
+        var wep2 = build.getWeapon2();          
+        wepBox2.append(wep2.wep);
+        wepBox2.append(wep2.sig);
+      }     
     }
 
     function trinketBox(wepTrinketDiv, build) {

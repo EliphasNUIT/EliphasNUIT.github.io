@@ -271,10 +271,11 @@ div[armorTitle] {
     align-items: center;
 }
 div[armorBox] {
-    width: 80%;
+    width: 100%;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 
 div[wepTrinketTitle] {
@@ -285,28 +286,28 @@ div[wepTrinketTitle] {
 }
 
 div[wepsBox] {
-    display: inline-flex;
-    width: 80%;
+    display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 
 div[wepBox2] {
+    width: 100%;
     display: inline-flex;
-    width: 40%;
-    flex-direction: row;
-    padding-left: 20%;
+    flex-direction: column;
 }
 
 div[wepBox1] {
-    width: 40%;
+    width: 100%;
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 div[trinketBox] {
+    width: 100%;
     display: inline-flex;
-    width: 65%;
     align-items: center;
     flex-direction: column;
 }

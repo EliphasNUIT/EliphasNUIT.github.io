@@ -36,6 +36,7 @@ define(
       var wepID = weapons[type];
 
       if (!this._argumentCheck(wepID, statID, sigilID)) {
+        console.warn("Warning: Invalid parameters in setMainHand");
         return;
       }
 
@@ -65,6 +66,7 @@ define(
       var wepID = weapons[type];
 
       if (!this._argumentCheck(wepID, statID, sigilID)) {
+        console.warn("Warning: Invalid parameters in setOffHand");
         return;
       }
 
@@ -88,13 +90,14 @@ define(
       this.offHand.sigil = sigilID;
     };
 
-    Weapons.prototype.setTwoHand = function(type, stat, sigilArray) {
+    Weapons.prototype.setTwoHand = function(type, stat, sigil1, sigil2) {
       var statID = stats[stat];
-      var sigil1ID = sigils[sigilArray[0]];
-      var sigil2ID = sigils[sigilArray[1]];
+      var sigil1ID = sigils[sigil1];
+      var sigil2ID = sigils[sigil2];
       var wepID = weapons[type];
 
       if (!this._argumentCheck(wepID, statID, sigil1ID)) {
+        console.warn("Warning: Invalid parameters in setTwoHand");
         return;
       }
 

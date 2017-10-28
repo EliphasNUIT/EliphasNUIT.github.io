@@ -13,6 +13,10 @@ define(
       this.ring2 = 1;
     };
 
+    Trinket.prototype.setSingleStat = function(stat) {
+      this.setStats([stat,stat,stat,stat,stat,stat]);
+  };
+
 
     Trinket.prototype.setStats = function(trinketStats) {
         if (trinketStats.length !== 6) {

@@ -16,6 +16,10 @@ define(
       this.boots = { stat: -1, rune: -1 };
     };
 
+    Armor.prototype.setSingleStat = function(stat) {
+      this.setStats([stat,stat,stat,stat,stat,stat]);
+    }
+
     Armor.prototype.setStats = function(armorStats) {
       if (armorStats.length !== 6) {
         console.warn("Warning: invalid parameters in Trinkek::setStats");
