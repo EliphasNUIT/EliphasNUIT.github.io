@@ -7,16 +7,16 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
     {
         var build = new Build("reaperCondiMO",Necromancer);
 
-        build.armor.setStats(["Grieving","Grieving","Grieving","Grieving","Grieving","Grieving"]);
+        build.armor.setSingleStat("Grieving");
         build.armor.setSingleRune("Superior Rune of the Krait");
 
         build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);
+        build.trinket.setSingleStat("Viper's");      
 
         build.wep1.setMainHand("Scepter","Viper's","Superior Sigil of Geomancy");
         build.wep1.setOffHand("Dagger","Viper's","Superior Sigil of Earth");
 
-        build.wep2.setTwoHand("Greatsword","Viper's",["Superior Sigil of Geomancy", "Superior Sigil of Earth"]);
+        build.wep2.setTwoHand("Greatsword","Viper's","Superior Sigil of Geomancy", "Superior Sigil of Earth");
 
         build.specialization.setSpec("spec1","Curses",["Chilling Darkness", "Master of Corruption", "Lingering Curse"]);
         build.specialization.setSpec("spec2","Soul Reaping",["Unyielding Blast", "Vital Persistence", "Dhuumfire"]);
@@ -32,10 +32,10 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
 
         var build = new Build("scourgeCondiMO",Necromancer);
         
-        build.armor.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);
+        build.armor.setSingleStat("Viper's");
         build.armor.setSingleRune("Superior Rune of the Renegade");      
         build.consumable.setConsumable("Rare Veggie Pizza", "Furious Tuning Crystal");
-        build.trinket.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);      
+        build.trinket.setSingleStat("Viper's");      
         build.wep1.setMainHand("Scepter","Viper's","Superior Sigil of Geomancy");      
         build.wep2.setOffHand("Torch","Viper's","Superior Sigil of Malice");      
         build.specialization.setSpec("spec1","Curses",["Terrifying Descent", "Master of Corruption", "Lingering Curse"]);
@@ -46,10 +46,10 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setEliteSkill("Plaguelands");
 
         build = new Build("scourgeCondiGorse",Necromancer);
-        build.armor.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);
+        build.armor.setSingleStat("Viper's");
         build.armor.setSingleRune("Superior Rune of the Renegade");       
         build.consumable.setConsumable("Rare Veggie Pizza", "Furious Tuning Crystal");
-        build.trinket.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);       
+        build.trinket.setSingleStat("Viper's");            
         build.wep1.setMainHand("Scepter","Viper's","Superior Sigil of Geomancy");        
         build.wep2.setOffHand("Torch","Viper's","Superior Sigil of Malice");       
         build.specialization.setSpec("spec1","Curses",["Terrifying Descent", "Master of Corruption", "Lingering Curse"]);
@@ -60,10 +60,10 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setEliteSkill("Plaguelands");
 
         build = new Build("scourgeCondiSab",Necromancer);
-        build.armor.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);
+        build.armor.setSingleStat("Viper's");
         build.armor.setSingleRune("Superior Rune of the Renegade");       
         build.consumable.setConsumable("Rare Veggie Pizza", "Furious Tuning Crystal");
-        build.trinket.setStats(["Viper's","Viper's","Viper's","Viper's","Viper's","Viper's"]);       
+        build.trinket.setSingleStat("Viper's");            
         build.wep1.setMainHand("Scepter","Viper's","Superior Sigil of Geomancy");        
         build.wep2.setOffHand("Torch","Viper's","Superior Sigil of Malice");       
         build.specialization.setSpec("spec1","Curses",["Terrifying Descent", "Master of Corruption", "Lingering Curse"]);
