@@ -48,7 +48,7 @@ define(
       }
     };
 
-    Armor.prototype.set24Rune = function(rune1, rune2) {
+    Armor.prototype.set42Rune = function(rune1, rune2) {
       var slots = ["helm", "shoulders", "coat", "gloves", "leggings", "boots"];
       var runeID = runes[rune1];
       if (runeID) {
@@ -58,7 +58,7 @@ define(
       } else {
         console.warn("Warning: unknown rune " + rune1);
       }
-      runeID = runes[rune22];
+      runeID = runes[rune2];
       if (runeID) {
         for (var i = 4; i < 6; i++) {
           this[slots[i]].rune = runeID;

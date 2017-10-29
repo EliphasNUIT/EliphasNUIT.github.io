@@ -21,30 +21,43 @@ define(
     function skillBox(div, build) {
       var skillBoxId = "skillBox" + nBox++;
       div.append("<div id='" + skillBoxId + "' skillBox></div>");
-      var skillDiv = $("#" + skillBoxId);
-      skillDiv.append("<div center bold>Compétences</div>");
-      var skills = build.getSkills();    
-      var skillListID = "skillList" + nBox++;
-      skillDiv.append("<div id='" + skillListID + "' skillList></div>");
-      var skillListDiv = $("#" + skillListID)
-      skillListDiv.append(skills.heal);
-      skillListDiv.append(skills.utilities);
-      skillListDiv.append(skills.elite);
+      {
+        var skillDiv = $("#" + skillBoxId);
+        skillDiv.append("<div center bold>Compétences</div>");
+        var profSkill = build.getProfessionSkills();
+        skillDiv.append(profSkill);
+        if (build.profSkills.noSkills) {
+          return;
+        }
+        var skillListID = "skillList" + nBox++;
+        skillDiv.append("<div id='" + skillListID + "' skillList></div>");
+        var skillListDiv = $("#" + skillListID);
+        var skills = build.getSkills();
+        {
+          skillListDiv.append(skills.heal);
+          skillListDiv.append(skills.utilities);
+          skillListDiv.append(skills.elite);
+        }
 
-      skillDiv.append(build.getPets());
+        skillDiv.append(build.getPets());
+      }
     }
 
     function armorBox(equipementDiv, build) {
       var armorTitleId = "armorTitle" + nBox++;
       equipementDiv.append("<div id='" + armorTitleId + "' armorTitle></div>");
-      var armorDiv = $("#" + armorTitleId);
-      armorDiv.append("<div center bold>Armure</div>");
-      var armorBoxId = "armorBox" + nBox++;
-      armorDiv.append("<div id='" + armorBoxId + "' armorBox></div>");
-      var armorBox = $("#" + armorBoxId);
-      var equipement = build.getArmor();
-      armorBox.append(equipement.armor);
-      armorBox.append(equipement.rune);
+      {
+        var armorDiv = $("#" + armorTitleId);
+        armorDiv.append("<div center bold>Armure</div>");
+        var armorBoxId = "armorBox" + nBox++;
+        armorDiv.append("<div id='" + armorBoxId + "' armorBox></div>");
+        {
+          var armorBox = $("#" + armorBoxId);
+          var equipement = build.getArmor();
+          armorBox.append(equipement.armor);
+          armorBox.append(equipement.rune);
+        }
+      }
     }
 
     function weaponsBox(wepTrinketDiv, build) {
@@ -52,25 +65,32 @@ define(
       var wepsBoxId = "wepsBox" + nBox++;
       wepTrinketDiv.append("<div id='" + wepsBoxId + "' wepsBox></div>");
       var wepsBox = $("#" + wepsBoxId);
-      var wepBox1Id = "wepBox1" + nBox++;
-      
-      wepsBox.append("<div id='" + wepBox1Id + "' wepBox1></div>");
-      var wepBox1 = $("#" + wepBox1Id);
-      if (build.wep2 !== null) {
-        wepBox1.append("<div center bold>Set 1</div>");
+      {
+        var wepBox1Id = "wepBox1" + nBox++;
+
+        wepsBox.append("<div id='" + wepBox1Id + "' wepBox1></div>");
+        {
+          var wepBox1 = $("#" + wepBox1Id);
+          if (build.wep2 !== null) {
+            wepBox1.append("<div center bold>Set 1</div>");
+          }
+          var wep1 = build.getWeapon1();
+          wepBox1.append(wep1.wep);
+          wepBox1.append(wep1.sig);
+        }
+
+        if (build.wep2 !== null) {
+          var wepBox2Id = "wepBox2" + nBox++;
+          wepsBox.append("<div id='" + wepBox2Id + "' wepBox2></div>");
+          {
+            var wepBox2 = $("#" + wepBox2Id);
+            wepBox2.append("<div center bold>Set 2</div>");
+            var wep2 = build.getWeapon2();
+            wepBox2.append(wep2.wep);
+            wepBox2.append(wep2.sig);
+          }
+        }
       }
-      var wep1 = build.getWeapon1();
-      wepBox1.append(wep1.wep);
-      wepBox1.append(wep1.sig);
-      if (build.wep2 !== null) {
-        var wepBox2Id = "wepBox2" + nBox++;
-        wepsBox.append("<div id='" + wepBox2Id + "' wepBox2></div>");
-        var wepBox2 = $("#" + wepBox2Id);
-        wepBox2.append("<div center bold>Set 2</div>");      
-        var wep2 = build.getWeapon2();          
-        wepBox2.append(wep2.wep);
-        wepBox2.append(wep2.sig);
-      }     
     }
 
     function trinketBox(wepTrinketDiv, build) {

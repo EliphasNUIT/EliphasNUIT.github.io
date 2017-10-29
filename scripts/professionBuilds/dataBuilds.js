@@ -2,12 +2,13 @@ define(
   [
     "professionBuilds/data/specialization",
     "professionBuilds/data/skills",
+    "professionBuilds/data/professionSkills",
     "professionBuilds/data/weapons",
     "professionBuilds/data/trinket",
     "professionBuilds/data/consumable",
     "professionBuilds/data/armor"
   ],
-  function(Specialization, Skills, Weapons, Trinket, Consumable, Armor) {
+  function(Specialization, Skills,ProfessionSkills, Weapons, Trinket, Consumable, Armor) {
     "use strict";
 
     function detectmob() {
@@ -33,6 +34,7 @@ define(
     var Build = function(name, profession) {
       this.profession = profession;
       this.skills = new Skills(profession);
+      this.profSkills = new ProfessionSkills(profession);
       this.specialization = new Specialization(profession);
       this.wep1 = new Weapons(profession);
       this.wep2 = new Weapons(profession);
@@ -53,6 +55,10 @@ define(
 
     Build.prototype.getSkills = function() {
       return this.skills.getSDiv(mobile);
+    };
+
+    Build.prototype.getProfessionSkills = function() {
+      return this.profSkills.getSDiv(mobile);
     };
 
     Build.prototype.getTrinket = function() {
