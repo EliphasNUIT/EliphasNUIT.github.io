@@ -7,10 +7,11 @@
 #include <QStringListIterator>
 #include <QDate>
 #include <QDateTime>
+#include <JlCompress.h>
 
 Boss::Boss(const QString& name,QObject *parent) : QObject(parent)
 {
-	this->name = name;
+    this->name = name;
 }
 
 void Boss::generateHTMLs(QTextStream& streamIndex){
@@ -81,7 +82,7 @@ QStringList Boss::getTries() {
     QStringList toMove;
     QStringList res;
     QStringListIterator it(tries);
-   while(it.hasNext()) {
+    while(it.hasNext()) {
         QString aux(it.next());
         // Auto archive
         QFileInfo info(this->ressourcePath+ '/' + aux);
@@ -101,27 +102,37 @@ QStringList Boss::getTries() {
         res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + toDate(date) + "</button> </li>";
         res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" frameborder=\"0\"> </iframe>";
     }
+    QStringListIterator it2(toMove);
+    while(it2.hasNext()) {
+        QString aux(it2.next());
+        QFileInfo info(aux);
+        QFile file(aux);
+        QString path = info.absoluteFilePath();
+        JlCompress::compressFile("../../ressources/test.zip",path);
+        //JlCompress::compressFile(path,"../../ressources/test.zip");path.replace(this->shortRef+"/","");
+        //file.rename(path);
+    }
     return res;
 }
 
 void Boss::read(QXmlStreamReader& reader) {
     qInfo() << "        reading " + this->name ;
-	QString image, shortRef, bg;
-	while (reader.readNextStartElement()) {
-		if (reader.name() == "image") {
-			image = reader.readElementText();
-		} else if (reader.name() == "shortRef") {
-			shortRef = reader.readElementText();
+    QString image, shortRef, bg;
+    while (reader.readNextStartElement()) {
+        if (reader.name() == "image") {
+            image = reader.readElementText();
+        } else if (reader.name() == "shortRef") {
+            shortRef = reader.readElementText();
         } else if (reader.name() == "bg") {
-			bg = reader.readElementText();
+            bg = reader.readElementText();
         }  else {
             reader.skipCurrentElement();
         }
-	}
+    }
     qInfo() << "        read " + this->name ;
     this->shortRef = shortRef;
-	this->imagePath = "<img src=\"../images/bosses/" + image + "\">";
-	this->htmlFile = "../../logs/" + shortRef + ".html";
+    this->imagePath = "<img src=\"../images/bosses/" + image + "\">";
+    this->htmlFile = "../../logs/" + shortRef + ".html";
     this->ressourceDir = "\"../ressources/" + shortRef + "/";
     this->ressourcePath = "../../ressources/" + shortRef;
     this->background = "../images/raids/" + bg;

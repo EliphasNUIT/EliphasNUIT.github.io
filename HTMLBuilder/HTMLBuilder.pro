@@ -9,6 +9,9 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
+INCLUDEPATH += libs/quazip-0.7.3/quazip
+LIBS += -Llibs/quazip-0.7.3/quazip/release -lquazip
+
 release: DESTDIR = release
 debug:   DESTDIR = debug
 
