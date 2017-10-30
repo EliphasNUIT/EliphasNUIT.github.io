@@ -85,7 +85,7 @@ bool writeInZipPath(QString& pathToZip, QString& name, const QString& toWrite)
     QuaZipFile zfile(&zip);
     zfile.open(QIODevice::WriteOnly, QuaZipNewInfo(name));
     QTextStream out(&zfile);
-    out << toWrite;
+    out << QString::fromLatin1(toWrite);
     return true;
 }
 
