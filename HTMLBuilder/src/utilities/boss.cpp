@@ -2,12 +2,15 @@
 
 #include <QDir>
 #include <QFile>
+#include <QTextStream>
 #include <QFileInfo>
 #include <QDebug>
 #include <QStringListIterator>
 #include <QDate>
 #include <QDateTime>
-#include <JlCompress.h>
+
+#include <quazip.h>
+#include <quazipfile.h>
 
 Boss::Boss(const QString& name,QObject *parent) : QObject(parent)
 {
@@ -72,8 +75,18 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     qInfo() << "        treated " +this->name;  ;
 }
 
-inline QString toDate(const QString& date) {
-    return QDate::fromString(date,"yyyy_MM_dd").toString("dd/MM/yyyy");
+bool writeInZipPath(QString& pathToZip, QString& name, const QString& toWrite)
+{
+    QuaZip zip(pathToZip);
+    if (!zip.open(QuaZip::mdAdd)) {
+        qInfo() << "Error!";
+        return false;
+    }
+    QuaZipFile zfile(&zip);
+    zfile.open(QIODevice::WriteOnly, QuaZipNewInfo(name));
+    QTextStream out(&zfile);
+    out << toWrite;
+    return true;
 }
 
 QStringList Boss::getTries() {
@@ -83,34 +96,36 @@ QStringList Boss::getTries() {
     QStringList res;
     QStringListIterator it(tries);
     while(it.hasNext()) {
-        QString aux(it.next());
-        // Auto archive
-        QFileInfo info(this->ressourcePath+ '/' + aux);
-        qint64 fileTime = QDateTime::currentSecsSinceEpoch() - info.lastModified().toSecsSinceEpoch();
-        if ( fileTime > qint64(1814400)) {
-            toMove << this->ressourcePath+ '/' + aux;
-            qInfo() << aux + " archived";
-            continue;
-        }
+        QString name(it.next());
         //
-        QString date = aux.split("-").at(0);
+        QString date = name.split("-").at(0);
         date.insert(4,"_");
         date.insert(7,"_");
-        const QString path = this->ressourceDir + aux;
+        QDate qDate = QDate::fromString(date,"yyyy_MM_dd");
+        date = qDate.toString("dd/MM/yyyy");
+        qint64 fileTime = QDateTime::currentSecsSinceEpoch() - QDateTime(qDate).toSecsSinceEpoch();
+        if ( fileTime > qint64(1814400)) {
+            toMove << name;
+            qInfo() << name + " archived";
+            continue;
+        }
+        const QString path = this->ressourceDir + name;
         const QString iFrameName = "#" + date;
         const QString displayName = "display(\'"+iFrameName+"\')";
-        res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + toDate(date) + "</button> </li>";
+        res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + date + "</button> </li>";
         res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" frameborder=\"0\"> </iframe>";
     }
     QStringListIterator it2(toMove);
     while(it2.hasNext()) {
-        QString aux(it2.next());
-        QFileInfo info(aux);
-        QFile file(aux);
-        QString path = info.absoluteFilePath();
-        JlCompress::compressFile("../../ressources/test.zip",path);
-        //JlCompress::compressFile(path,"../../ressources/test.zip");path.replace(this->shortRef+"/","");
-        //file.rename(path);
+        QString name(it2.next());
+        QFile myFile(this->ressourcePath+ '/' + name);
+        myFile.open(QFile::ReadOnly);
+        QString zipPath = "../../ressources/ressources.zip";
+        bool toDelete = writeInZipPath(zipPath,name,myFile.readAll());
+        myFile.close();
+        if (toDelete){
+            myFile.remove();
+        }
     }
     return res;
 }
