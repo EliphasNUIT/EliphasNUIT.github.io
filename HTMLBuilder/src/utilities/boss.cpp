@@ -5,6 +5,7 @@
 #include <QTextStream>
 #include <QFileInfo>
 #include <QDebug>
+#include <QString>
 #include <QStringListIterator>
 #include <QDate>
 #include <QDateTime>
@@ -85,7 +86,7 @@ bool writeInZipPath(QString& pathToZip, QString& name, const QString& toWrite)
     QuaZipFile zfile(&zip);
     zfile.open(QIODevice::WriteOnly, QuaZipNewInfo(name));
     QTextStream out(&zfile);
-    out << QString::fromLatin1(toWrite);
+    out << toWrite.toLatin1();
     return true;
 }
 
@@ -102,7 +103,6 @@ QStringList Boss::getTries() {
         date.insert(4,"_");
         date.insert(7,"_");
         QDate qDate = QDate::fromString(date,"yyyy_MM_dd");
-        date = qDate.toString("dd/MM/yyyy");
         qint64 fileTime = QDateTime::currentSecsSinceEpoch() - QDateTime(qDate).toSecsSinceEpoch();
         if ( fileTime > qint64(1814400)) {
             toMove << name;
@@ -112,9 +112,10 @@ QStringList Boss::getTries() {
         const QString path = this->ressourceDir + name;
         const QString iFrameName = "#" + date;
         const QString displayName = "display(\'"+iFrameName+"\')";
-        res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + date + "</button> </li>";
+        res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + qDate.toString("dd/MM/yyyy") + "</button> </li>";
         res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" frameborder=\"0\"> </iframe>";
     }
+
     QStringListIterator it2(toMove);
     while(it2.hasNext()) {
         QString name(it2.next());
