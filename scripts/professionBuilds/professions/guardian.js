@@ -1,258 +1,75 @@
-define(["professionBuilds/dataBuilds", "professionBuilds/utilities/classes"], function(buildData, classes) {
+define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/professions"], function(
+    buildData,
+    professions
+) {
     "use strict";
-    var builds = buildData.builds;
-    var build = buildData.build;
-    var Guardian = classes.Guardian;
-
+    var Build = buildData.build;
+    var Profession = professions.Guardian;
+    var build = null;
     // Power
     {
-        builds.set(
-            "dhPowerZealRad",
-            new build({
-                class: Guardian,
-                specializations: [
-                    {
-                        name: "Zeal",
-                        traits: ["Fiery Wrath", "Zealous Blade", "Symbolic Avenger"]
-                    },
-                    {
-                        name: "Radiance",
-                        traits: ["Healer's Retribution", "Retribution", "Righteous Instincts"]
-                    },
-                    {
-                        name: "Dragonhunter",
-                        traits: ["Piercing Light", "Zealot's Aggression", "Big Game Hunter"]
-                    }
-                ],
-                skills: [
-                    "Litany of Wrath",
-                    "Procession of Blades",
-                    '"Stand Your Ground!"',
-                    "Bane Signet",
-                    "Dragon's Maw"
-                ],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "shoulders",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "gloves",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Berserker's" },
-                    { slot: "ring1", stat: "Berserker's" },
-                    { slot: "ring2", stat: "Berserker's" },
-                    { slot: "back", stat: "Berserker's" },
-                    { slot: "earring1", stat: "Berserker's" },
-                    { slot: "earring2", stat: "Berserker's" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Scepter",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Force"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "Torch",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Air"]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "Greatsword",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Force", "Superior Sigil of Air"]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    }
-                ],
-                food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
-            })
-        );
+        build = new Build("dhPowerZealRad", Profession);
+        build.armor.setSingleStat("Berserker's");
+        build.armor.setSingleRune("Superior Rune of the Scholar");
+        build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
+        build.trinket.setSingleStat("Berserker's");
+        build.wep1.setMainHand("Scepter", "Berserker's", "Superior Sigil of Force");
+        build.wep1.setOffHand("Torch", "Berserker's", "Superior Sigil of Air");
+        build.wep2.setTwoHand("Greatsword", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+        build.specialization.setSpec("spec1", "Zeal", ["Fiery Wrath", "Zealous Blade", "Symbolic Avenger"]);
+        build.specialization.setSpec("spec2", "Radiance", [
+            "Healer's Retribution",
+            "Retribution",
+            "Righteous Instincts"
+        ]);
+        build.specialization.setSpec("spec3", "Dragonhunter", [
+            "Piercing Light",
+            "Zealot's Aggression",
+            "Big Game Hunter"
+        ]);
+        build.skills.setHealSkill("Litany of Wrath");
+        build.skills.setUtilitySkills(["Procession of Blades", '"Stand Your Ground!"', "Bane Signet"]);
+        build.skills.setEliteSkill("Dragon's Maw");
 
-        builds.set(
-            "dhPowerZealRadKC",
-            new build({
-                class: Guardian,
-                specializations: [
-                    {
-                        name: "Zeal",
-                        traits: ["Fiery Wrath", "Zealous Blade", "Symbolic Avenger"]
-                    },
-                    {
-                        name: "Radiance",
-                        traits: ["Healer's Retribution", "Retribution", "Righteous Instincts"]
-                    },
-                    {
-                        name: "Dragonhunter",
-                        traits: ["Piercing Light", "Zealot's Aggression", "Big Game Hunter"]
-                    }
-                ],
-                skills: ["Litany of Wrath", "Procession of Blades", "Hallowed Ground", "Bane Signet", "Dragon's Maw"],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "shoulders",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "gloves",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Berserker's" },
-                    { slot: "ring1", stat: "Berserker's" },
-                    { slot: "ring2", stat: "Berserker's" },
-                    { slot: "back", stat: "Berserker's" },
-                    { slot: "earring1", stat: "Berserker's" },
-                    { slot: "earring2", stat: "Berserker's" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Scepter",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Force"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "Torch",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Impact"]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "Greatsword",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Force", "Superior Sigil of Impact"]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    }
-                ],
-                food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
-            })
-        );
+        build = new Build("dhPowerZealRadKC", Profession);
+        build.armor.setSingleStat("Berserker's");
+        build.armor.setSingleRune("Superior Rune of the Scholar");
+        build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
+        build.trinket.setSingleStat("Berserker's");
+        build.wep1.setMainHand("Scepter", "Berserker's", "Superior Sigil of Force");
+        build.wep1.setOffHand("Torch", "Berserker's", "Superior Sigil of Impact");
+        build.wep2.setTwoHand("Greatsword", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Impact");
+        build.specialization.setSpec("spec1", "Zeal", ["Fiery Wrath", "Zealous Blade", "Symbolic Avenger"]);
+        build.specialization.setSpec("spec2", "Radiance", [
+            "Healer's Retribution",
+            "Retribution",
+            "Righteous Instincts"
+        ]);
+        build.specialization.setSpec("spec3", "Dragonhunter", [
+            "Piercing Light",
+            "Zealot's Aggression",
+            "Big Game Hunter"
+        ]);
+        build.skills.setHealSkill("Litany of Wrath");
+        build.skills.setUtilitySkills(["Procession of Blades", "Hallowed Ground", "Bane Signet"]);
+        build.skills.setEliteSkill("Dragon's Maw");
     }
 
     // Condi
     {
-        builds.set(
-            "fbDPS",
-            new build({
-                class: Guardian,
-                specializations: [
-                    {
-                        name: "Zeal",
-                        traits: ["Fiery Wrath", "Kindled Zeal", "Symbolic Avenger"]
-                    },
-                    {
-                        name: "Radiance",
-                        traits: ["Right-Hand Strength", "Radiant Fire", "Amplified Wrath"]
-                    },
-                    {
-                        name: "Firebrand",
-                        traits: ["Archivist of Whispers", "Legendary Lore", "Quickfire"]
-                    }
-                ],
-                skills: [
-                    "Mantra of Solace",
-                    "Mantra of Potence",
-                    "Mantra of Flame",
-                    "Signet of Wrath",
-                    "Renewed Focus"
-                ],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Sinister", rune: "Superior Rune of Balthazar" },
-                    {
-                        slot: "shoulders",
-                        stat: "Sinister",
-                        rune: "Superior Rune of Balthazar"
-                    },
-                    { slot: "coat", stat: "Grieving", rune: "Superior Rune of Balthazar" },
-                    {
-                        slot: "gloves",
-                        stat: "Grieving",
-                        rune: "Superior Rune of Balthazar"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Grieving",
-                        rune: "Superior Rune of Balthazar"
-                    },
-                    { slot: "boots", stat: "Grieving", rune: "Superior Rune of Balthazar" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Grieving" },
-                    { slot: "ring1", stat: "Grieving" },
-                    { slot: "ring2", stat: "Grieving" },
-                    { slot: "back", stat: "Grieving" },
-                    { slot: "earring1", stat: "Grieving" },
-                    { slot: "earring2", stat: "Grieving" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Scepter",
-                        stat: "Grieving",
-                        sigils: ["Superior Sigil of Bursting"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "Torch",
-                        stat: "Grieving",
-                        sigils: ["Superior Sigil of Smoldering"]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "Sword",
-                        stat: "Grieving",
-                        sigils: ["Superior Sigil of Bursting"]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    }
-                ],
-                food: ["Bowl of Fire Meat Chili", "Toxic Focusing Crystal"]
-            })
-        );
+        build = new Build("fbDPS", Profession);
+        build.armor.setStats(["Sinister", "Sinister", "Grieving", "Grieving", "Grieving", "Grieving"]);
+        build.armor.setSingleRune("Superior Rune of Balthazar");
+        build.consumable.setConsumable("Bowl of Fire Meat Chili", "Toxic Focusing Crystal");
+        build.trinket.setSingleStat("Grieving");
+        build.wep1.setMainHand("Scepter", "Grieving", "Superior Sigil of Bursting");
+        build.wep1.setOffHand("Torch", "Grieving", "Superior Sigil of Smoldering");
+        build.wep2.setMainHand("Sword", "Grieving", "Superior Sigil of Bursting");
+        build.specialization.setSpec("spec1", "Zeal", ["Fiery Wrath", "Kindled Zeal", "Symbolic Avenger"]);
+        build.specialization.setSpec("spec2", "Radiance", ["Right-Hand Strength", "Radiant Fire", "Amplified Wrath"]);
+        build.specialization.setSpec("spec3", "Firebrand", ["Archivist of Whispers", "Legendary Lore", "Quickfire"]);
+        build.skills.setHealSkill("Mantra of Solace");
+        build.skills.setUtilitySkills(["Mantra of Potence", "Mantra of Flame", "Signet of Wrath"]);
+        build.skills.setEliteSkill("Renewed Focus");
     }
 });
