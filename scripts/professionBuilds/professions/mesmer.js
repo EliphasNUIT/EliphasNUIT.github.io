@@ -216,7 +216,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
         build.wep2.setMainHand("Scepter", "Berserker's", "Superior Sigil of Accuracy");
         build.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
+        build.wep2.setOffHand("Sword", "Berserker's", "Superior Sigil of Force");
         build.specialization.setSpec("spec1", "Illusions", [
             "Compounding Power",
             "Phantasmal Haste",
