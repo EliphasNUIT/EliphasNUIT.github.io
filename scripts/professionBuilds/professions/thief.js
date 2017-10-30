@@ -15,6 +15,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
         build.trinket.setSingleStat("Berserker's");
         build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+        build.wep2 = null;
         build.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
         build.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
         build.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
@@ -28,6 +29,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
         build.trinket.setSingleStat("Berserker's");
         build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+        build.wep2 = null;
         build.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
         build.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
         build.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
