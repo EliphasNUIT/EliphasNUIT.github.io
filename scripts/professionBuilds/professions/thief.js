@@ -1,324 +1,77 @@
-define(["professionBuilds/dataBuilds", "professionBuilds/utilities/classes"], function(buildData, classes) {
+define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/professions"], function(
+    buildData,
+    professions
+) {
     "use strict";
-    var builds = buildData.builds;
-    var build = buildData.build;
-    var Thief = classes.Thief;
+    var Build = buildData.build;
+    var Profession = professions.Thief;
+    var build = null;
 
     // Power
     {
-        builds.set(
-            "drdPower",
-            new build({
-                class: Thief,
-                specializations: [
-                    {
-                        name: "Deadly Arts",
-                        traits: ["Mug", "Revealed Training", "Executioner"]
-                    },
-                    {
-                        name: "Critical Strikes",
-                        traits: ["Twin Fangs", "Practiced Tolerance", "No Quarter"]
-                    },
-                    {
-                        name: "Daredevil",
-                        traits: ["Havoc Mastery", "Staff Master", "Bounding Dodger"]
-                    }
-                ],
-                skills: ["Signet of Malice", "Assassin's Signet", "Spider Venom", "Fist Flurry", "Basilisk Venom"],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "shoulders",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "gloves",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Berserker's" },
-                    { slot: "ring1", stat: "Berserker's" },
-                    { slot: "ring2", stat: "Berserker's" },
-                    { slot: "back", stat: "Berserker's" },
-                    { slot: "earring1", stat: "Berserker's" },
-                    { slot: "earring2", stat: "Berserker's" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Staff",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Force", "Superior Sigil of Air"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    }
-                ],
-                food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
-            })
-        );
+        build = new Build("drdPower", Profession);
+        build.armor.setSingleStat("Berserker's");
+        build.armor.setSingleRune("Superior Rune of the Scholar");
+        build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
+        build.trinket.setSingleStat("Berserker's");
+        build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+        build.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
+        build.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
+        build.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
+        build.skills.setHealSkill("Signet of Malice");
+        build.skills.setUtilitySkills(["Assassin's Signet", "Spider Venom", "Fist Flurry"]);
+        build.skills.setEliteSkill("Basilisk Venom");
 
-        builds.set(
-            "drdPowerSab",
-            new build({
-                class: Thief,
-                specializations: [
-                    {
-                        name: "Deadly Arts",
-                        traits: ["Mug", "Revealed Training", "Executioner"]
-                    },
-                    {
-                        name: "Critical Strikes",
-                        traits: ["Twin Fangs", "Practiced Tolerance", "No Quarter"]
-                    },
-                    {
-                        name: "Daredevil",
-                        traits: ["Havoc Mastery", "Staff Master", "Bounding Dodger"]
-                    }
-                ],
-                skills: ["Signet of Malice", "Assassin's Signet", "Shadowstep", "Fist Flurry", "Basilisk Venom"],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "shoulders",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "coat", stat: "Berserker's", rune: "Superior Rune of the Scholar" },
-                    {
-                        slot: "gloves",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Berserker's",
-                        rune: "Superior Rune of the Scholar"
-                    },
-                    { slot: "boots", stat: "Berserker's", rune: "Superior Rune of the Scholar" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Berserker's" },
-                    { slot: "ring1", stat: "Berserker's" },
-                    { slot: "ring2", stat: "Berserker's" },
-                    { slot: "back", stat: "Berserker's" },
-                    { slot: "earring1", stat: "Berserker's" },
-                    { slot: "earring2", stat: "Berserker's" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Staff",
-                        stat: "Berserker's",
-                        sigils: ["Superior Sigil of Force", "Superior Sigil of Air"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    }
-                ],
-                food: ["Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone"]
-            })
-        );
+        build = new Build("drdPowerSab", Profession);
+        build.armor.setSingleStat("Berserker's");
+        build.armor.setSingleRune("Superior Rune of the Scholar");
+        build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
+        build.trinket.setSingleStat("Berserker's");
+        build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+        build.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
+        build.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
+        build.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
+        build.skills.setHealSkill("Signet of Malice");
+        build.skills.setUtilitySkills(["Assassin's Signet", "Shadowstep", "Fist Flurry"]);
+        build.skills.setEliteSkill("Basilisk Venom");
     }
 
     // Condi
     {
-        builds.set(
-            "drdCondi",
-            new build({
-                class: Thief,
-                specializations: [
-                    {
-                        name: "Deadly Arts",
-                        traits: ["Dagger Training", "Panic Strike", "Potent Poison"]
-                    },
-                    {
-                        name: "Trickery",
-                        traits: ["Uncatchable", "Trickster", "Sleight of Hand"]
-                    },
-                    {
-                        name: "Daredevil",
-                        traits: ["Havoc Mastery", "Escapist's Absolution", "Lotus Training"]
-                    }
-                ],
-                skills: ["Signet of Malice", "Spider Venom", "Devourer Venom", "Caltrops", "Basilisk Venom"],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Krait" },
-                    {
-                        slot: "shoulders",
-                        stat: "Viper's",
-                        rune: "Superior Rune of the Krait"
-                    },
-                    { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Krait" },
-                    {
-                        slot: "gloves",
-                        stat: "Viper's",
-                        rune: "Superior Rune of the Krait"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Viper's",
-                        rune: "Superior Rune of the Krait"
-                    },
-                    { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Krait" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Viper's" },
-                    { slot: "ring1", stat: "Viper's" },
-                    { slot: "ring2", stat: "Viper's" },
-                    { slot: "back", stat: "Viper's" },
-                    { slot: "earring1", stat: "Viper's" },
-                    { slot: "earring2", stat: "Viper's" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Dagger",
-                        stat: "Viper's",
-                        sigils: ["Superior Sigil of Geomancy"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "Dagger",
-                        stat: "Viper's",
-                        sigils: ["Superior Sigil of Malice"]
-                    }
-                ],
-                food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
-            })
-        );
+        build = new Build("drdCondi", Profession);
+        build.armor.setSingleStat("Viper's");
+        build.armor.setSingleRune("Superior Rune of the Krait");
+        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
+        build.trinket.setSingleStat("Viper's");
+        build.wep1.setMainHand("Dagger", "Viper's", "Superior Sigil of Geomancy");
+        build.wep2.setOffHand("Dagger", "Viper's", "Superior Sigil of Malice");
+        build.specialization.setSpec("spec1", "Deadly Arts", ["Dagger Training", "Panic Strike", "Potent Poison"]);
+        build.specialization.setSpec("spec2", "Trickery", ["Uncatchable", "Trickster", "Sleight of Hand"]);
+        build.specialization.setSpec("spec3", "Daredevil", [
+            "Havoc Mastery",
+            "Escapist's Absolution",
+            "Lotus Training"
+        ]);
+        build.skills.setHealSkill("Signet of Malice");
+        build.skills.setUtilitySkills(["Spider Venom", "Devourer Venom", "Caltrops"]);
+        build.skills.setEliteSkill("Basilisk Venom");
 
-        builds.set(
-            "drdCondiSab",
-            new build({
-                class: Thief,
-                specializations: [
-                    {
-                        name: "Deadly Arts",
-                        traits: ["Dagger Training", "Panic Strike", "Potent Poison"]
-                    },
-                    {
-                        name: "Trickery",
-                        traits: ["Uncatchable", "Trickster", "Sleight of Hand"]
-                    },
-                    {
-                        name: "Daredevil",
-                        traits: ["Havoc Mastery", "Escapist's Absolution", "Lotus Training"]
-                    }
-                ],
-                skills: ["Signet of Malice", "Spider Venom", "Shadowstep", "Caltrops", "Basilisk Venom"],
-                pets: null,
-                armor: [
-                    { slot: "helm", stat: "Viper's", rune: "Superior Rune of the Krait" },
-                    {
-                        slot: "shoulders",
-                        stat: "Viper's",
-                        rune: "Superior Rune of the Krait"
-                    },
-                    { slot: "coat", stat: "Viper's", rune: "Superior Rune of the Krait" },
-                    {
-                        slot: "gloves",
-                        stat: "Viper's",
-                        rune: "Superior Rune of the Krait"
-                    },
-                    {
-                        slot: "leggings",
-                        stat: "Viper's",
-                        rune: "Superior Rune of the Krait"
-                    },
-                    { slot: "boots", stat: "Viper's", rune: "Superior Rune of the Krait" }
-                ],
-                trinket: [
-                    { slot: "amulet", stat: "Viper's" },
-                    { slot: "ring1", stat: "Viper's" },
-                    { slot: "ring2", stat: "Viper's" },
-                    { slot: "back", stat: "Viper's" },
-                    { slot: "earring1", stat: "Viper's" },
-                    { slot: "earring2", stat: "Viper's" }
-                ],
-                weapons: [
-                    {
-                        slot: "mh1",
-                        type: "Dagger",
-                        stat: "Viper's",
-                        sigils: ["Superior Sigil of Geomancy"]
-                    },
-                    {
-                        slot: "oh1",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "mh2",
-                        type: "",
-                        stat: "",
-                        sigils: [""]
-                    },
-                    {
-                        slot: "oh2",
-                        type: "Dagger",
-                        stat: "Viper's",
-                        sigils: ["Superior Sigil of Malice"]
-                    }
-                ],
-                food: ["Rare Veggie Pizza", "Toxic Focusing Crystal"]
-            })
-        );
+        build = new Build("drdCondiSab", Profession);
+        build.armor.setSingleStat("Viper's");
+        build.armor.setSingleRune("Superior Rune of the Krait");
+        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
+        build.trinket.setSingleStat("Viper's");
+        build.wep1.setMainHand("Dagger", "Viper's", "Superior Sigil of Geomancy");
+        build.wep2.setOffHand("Dagger", "Viper's", "Superior Sigil of Malice");
+        build.specialization.setSpec("spec1", "Deadly Arts", ["Dagger Training", "Panic Strike", "Potent Poison"]);
+        build.specialization.setSpec("spec2", "Trickery", ["Uncatchable", "Trickster", "Sleight of Hand"]);
+        build.specialization.setSpec("spec3", "Daredevil", [
+            "Havoc Mastery",
+            "Escapist's Absolution",
+            "Lotus Training"
+        ]);
+        build.skills.setHealSkill("Signet of Malice");
+        build.skills.setUtilitySkills(["Spider Venom", "Shadowstep", "Caltrops"]);
+        build.skills.setEliteSkill("Basilisk Venom");
     }
 });
