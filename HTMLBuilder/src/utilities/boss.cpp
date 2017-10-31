@@ -28,12 +28,11 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
 
     res << "<!DOCTYPE html>";
     res <<"<html>";
-    res << "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>";
-    res << "<script src=\"../scripts/display.js\"></script>";
+    res << "<script src='../scripts/display.js'></script>";
     res << "<script>";
-    res << "$(function(){";
-    res << "    $(\"#includedContent\").load(\"../ressources/header.html\");";
-    res << "});";
+    res << "window.onload = function () {";
+    res << "   loadHTML('includedContent', 'https://eliphasnuit.github.io/ressources/header.html');";
+    res << "};";
     res << "</script>";
     res << "<head>";
     res << "    <meta charset=\"utf-8\">";
@@ -42,11 +41,11 @@ void Boss::generateHTMLs(QTextStream& streamIndex){
     res << "    <link href=\"../styles/html.css\" rel=\"stylesheet\" type=\"text/css\">";
     res << "    <link href=\"../styles/bosses.css\" rel=\"stylesheet\" type=\"text/css\">";
     res << "    <style media=\"screen\" type=\"text/css\">";
-    
+
     res << "html {";
     res << "    background-image: url("+this->background+") ;";
     res << "}";
-    
+
     res << "    </style>";
     res << "</head>";
     res << "<div id=\"includedContent\"></div>";
@@ -113,7 +112,7 @@ QStringList Boss::getTries() {
         const QString iFrameName = date;
         const QString displayName = "display(\'"+iFrameName+"\')";
         res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + qDate.toString("dd/MM/yyyy") + "</button> </li>";
-        res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" frameborder=\"0\"> </iframe>";
+        res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" frameborder=\"0\" style=\"display:none\"> </iframe>";
     }
 
     QStringListIterator it2(toMove);

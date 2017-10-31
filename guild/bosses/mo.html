@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script data-main="../../scripts/embedCreator.js" src="../../scripts/require.js"></script>
 <script src="../../scripts/display.js"></script>
 
 <script>
-    $(function () {
-        $("#includedContent").load("../../ressources/header.html");
-    });
-    $(function () {
-        $("#team1").load("team1.html");
-    });
-    $(function () {
-        $("#team2").load("team2.html");
-    });
+
+window.onload = function () {
+    loadHTML("includedContent", "https://eliphasnuit.github.io/ressources/header.html");
+    loadHTML("team1", "https://eliphasnuit.github.io/guild/bosses/team1.html");
+    loadHTML("team2", "https://eliphasnuit.github.io/guild/bosses/team2.html");
+};
 
 </script>
 
