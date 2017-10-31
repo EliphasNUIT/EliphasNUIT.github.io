@@ -110,7 +110,7 @@ QStringList Boss::getTries() {
             continue;
         }
         const QString path = this->ressourceDir + name;
-        const QString iFrameName = "#" + date;
+        const QString iFrameName = date;
         const QString displayName = "display(\'"+iFrameName+"\')";
         res << "            <li> <button onclick=\""+displayName+"\"> Afficher les logs du " + qDate.toString("dd/MM/yyyy") + "</button> </li>";
         res << "            <iframe id=\"" + date + "\" data-src="+path+"\" width=\"0\" height=\"0\" src=\"about:blank\" frameborder=\"0\"> </iframe>";
