@@ -12,6 +12,20 @@ window.onload = function () {
     loadHTML("team2", "https://eliphasnuit.github.io/guild/bosses/team2.html");
 };
 
+requirejs.config({
+	paths: {
+        'react': 'https://unpkg.com/react@15.3.2/dist/react',
+        'react-dom': 'https://unpkg.com/react-dom@15.3.2/dist/react-dom'
+    }
+});
+
+requirejs(['react', 'react-dom'], function(React, ReactDOM) {
+	ReactDOM.render(
+    	React.createElement('p', {}, 'Hello, AMD!'),
+        document.getElementById('root')
+    );
+});
+
 </script>
 
 
@@ -33,6 +47,7 @@ window.onload = function () {
 
 <body>
     <h1>La composition - Deimos [ODS]</h1>
+    <div id="root"></div>
     <img src="../../images/bosses/240px-Deimos.jpg">
 
     <h2 id="Dei">Deimos</h2>
