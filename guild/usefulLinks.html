@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script>
-    $(function () {
-        $("#includedContent").load("../ressources/header.html");
-    });
-
-</script>
+	<script src="../scripts/display.js"></script>
+    
+    <script>
+    window.onload = function () {
+        loadHTML("includedContent", "https://eliphasnuit.github.io/ressources/header.html");
+    };
+    
+    </script>
 
 
 <head>
