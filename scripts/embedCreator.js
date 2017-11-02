@@ -1,3 +1,5 @@
+
+
 define(["professionBuilds/dataBuilds", "professionBuilds/professions/total"], function(buildData, total) {
     "use strict";
     document.GW2A_EMBED_OPTIONS = {
@@ -10,82 +12,82 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professions/total"], fu
 
     function traitBox(div, build) {
         var traitBoxId = "traitBox" + nBox++;
-        div.append("<div id='" + traitBoxId + "' traitBox></div>");
-        var traitDiv = $("#" + traitBoxId);
-        traitDiv.append("<div center bold>Aptitudes</div>");
-        traitDiv.append(build.getSpecializations());
+        div.innerHTML += "<div id='" + traitBoxId + "' traitBox></div>";
+        var traitDiv = document.getElementById(traitBoxId);
+        traitDiv.innerHTML += "<div center bold>Aptitudes</div>";
+        traitDiv.innerHTML += build.getSpecializations();
     }
 
     function skillBox(div, build) {
         var skillBoxId = "skillBox" + nBox++;
-        div.append("<div id='" + skillBoxId + "' skillBox></div>");
+        div.innerHTML += "<div id='" + skillBoxId + "' skillBox></div>";
         {
-            var skillDiv = $("#" + skillBoxId);
-            skillDiv.append("<div center bold>Compétences</div>");
+            var skillDiv = document.getElementById(skillBoxId);
+            skillDiv.innerHTML += "<div center bold>Compétences</div>";
             var profSkill = build.getProfessionSkills();
-            skillDiv.append(profSkill);
+            skillDiv.innerHTML += profSkill;
             if (build.profSkills.noSkills) {
                 return;
             }
             var skillListID = "skillList" + nBox++;
-            skillDiv.append("<div id='" + skillListID + "' skillList></div>");
-            var skillListDiv = $("#" + skillListID);
+            skillDiv.innerHTML += "<div id='" + skillListID + "' skillList></div>";
+            var skillListDiv = document.getElementById(skillListID);
             var skills = build.getSkills();
             {
-                skillListDiv.append(skills.heal);
-                skillListDiv.append(skills.utilities);
-                skillListDiv.append(skills.elite);
+                skillListDiv.innerHTML += skills.heal;
+                skillListDiv.innerHTML += skills.utilities;
+                skillListDiv.innerHTML += skills.elite;
             }
 
-            skillDiv.append(build.getPets());
+            skillDiv.innerHTML += build.getPets();
         }
     }
 
     function armorBox(equipementDiv, build) {
         var armorTitleId = "armorTitle" + nBox++;
-        equipementDiv.append("<div id='" + armorTitleId + "' armorTitle></div>");
+        equipementDiv.innerHTML += "<div id='" + armorTitleId + "' armorTitle></div>";
         {
-            var armorDiv = $("#" + armorTitleId);
-            armorDiv.append("<div center bold>Armure</div>");
+            var armorDiv = document.getElementById(armorTitleId);
+            armorDiv.innerHTML += "<div center bold>Armure</div>";
             var armorBoxId = "armorBox" + nBox++;
-            armorDiv.append("<div id='" + armorBoxId + "' armorBox></div>");
+            armorDiv.innerHTML += "<div id='" + armorBoxId + "' armorBox></div>";
             {
-                var armorBox = $("#" + armorBoxId);
+                var armorBox = document.getElementById(armorBoxId);
                 var equipement = build.getArmor();
-                armorBox.append(equipement.armor);
-                armorBox.append(equipement.rune);
+                armorBox.innerHTML += equipement.armor;
+                armorBox.innerHTML += equipement.rune;
             }
         }
     }
 
     function weaponsBox(wepTrinketDiv, build) {
-        wepTrinketDiv.append("<div center bold>Armes</div>");
+        wepTrinketDiv.innerHTML += "<div center bold>Armes</div>";
         var wepsBoxId = "wepsBox" + nBox++;
-        wepTrinketDiv.append("<div id='" + wepsBoxId + "' wepsBox></div>");
-        var wepsBox = $("#" + wepsBoxId);
+        wepTrinketDiv.innerHTML += "<div id='" + wepsBoxId + "' wepsBox></div>";
+        var wepsBox = document.getElementById(wepsBoxId);
         {
             var wepBox1Id = "wepBox1" + nBox++;
 
-            wepsBox.append("<div id='" + wepBox1Id + "' wepBox1></div>");
+            wepsBox.innerHTML += "<div id='" + wepBox1Id + "' wepBox1></div>";
             {
-                var wepBox1 = $("#" + wepBox1Id);
+                var wepBox1 = document.getElementById(wepBox1Id);
                 if (build.wep2 !== null) {
-                    wepBox1.append("<div center bold>Set 1</div>");
+                    wepBox1.innerHTML += "<div center bold>Set 1</div>";
                 }
                 var wep1 = build.getWeapon1();
-                wepBox1.append(wep1.wep);
-                wepBox1.append(wep1.sig);
+                wepBox1.innerHTML += wep1.wep;
+                wepBox1.innerHTML += wep1.sig;
             }
 
             if (build.wep2 !== null) {
                 var wepBox2Id = "wepBox2" + nBox++;
-                wepsBox.append("<div id='" + wepBox2Id + "' wepBox2></div>");
+                wepsBox.innerHTML += "<div id='" + wepBox2Id + "' wepBox2></div>";
                 {
-                    var wepBox2 = $("#" + wepBox2Id);
-                    wepBox2.append("<div center bold>Set 2</div>");
+                    var wepBox2 = document.getElementById(wepBox2Id);
+                    wepBox2.innerHTML += "<div center bold>Set 2</div>";
                     var wep2 = build.getWeapon2();
-                    wepBox2.append(wep2.wep);
-                    wepBox2.append(wep2.sig);
+                    wepBox2.innerHTML += wep2.wep;
+                    wepBox2.innerHTML += wep2.sig;
                 }
             }
         }
@@ -93,49 +95,48 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professions/total"], fu
 
     function trinketBox(wepTrinketDiv, build) {
         var trinketBoxId = "trinketBox" + nBox++;
-        wepTrinketDiv.append("<div id='" + trinketBoxId + "' trinketBox></div>");
+        wepTrinketDiv.innerHTML += "<div id='" + trinketBoxId + "' trinketBox></div>";
         var trinket = build.getTrinket();
-        $("#" + trinketBoxId).append(trinket.BA);
-        $("#" + trinketBoxId).append(trinket.AR);
+        document.getElementById(trinketBoxId).innerHTML += trinket.BA;
+        document.getElementById(trinketBoxId).innerHTML += trinket.AR;
     }
 
     function displayBuild(divID, buildId) {
-        var div = $(divID);
-        var visibility = div.attr("visibility") === "true";
-        div.css("display", "block");
+        var div = document.getElementById(divID)
+        var visibility = div.style.display === 'block';
         if (visibility) {
-            div.hide(100);
-            div.attr("visibility", "false");
+            div.style.display = 'none';
         } else {
-            div.show(100);
-            div.attr("visibility", "true");
+            div.style.display = 'block';;
         }
-        var init = div.attr("init") === "true";
+        var init = div.getAttribute("init") === "true";
         if (!init && builds.has(buildId)) {
             var build = builds.get(buildId);
             traitBox(div, build);
             skillBox(div, build);
             // equipement
             var equipementBoxId = "equipementBox" + nBox++;
-            div.append("<div id='" + equipementBoxId + "' equipementBox></div>");
-            var equipementDiv = $("#" + equipementBoxId);
+            div.innerHTML += "<div id='" + equipementBoxId + "' equipementBox></div>";
+            var equipementDiv = document.getElementById(equipementBoxId);
             {
                 armorBox(equipementDiv, build);
                 var wepTrinketTitleId = "wepTrinketTitle" + nBox++;
-                equipementDiv.append("<div id='" + wepTrinketTitleId + "' wepTrinketTitle></div>");
-                var wepTrinketDiv = $("#" + wepTrinketTitleId);
-                wepTrinketDiv.append("<div center bold>Bijoux</div>");
+                equipementDiv.innerHTML += "<div id='" + wepTrinketTitleId + "' wepTrinketTitle></div>";
+                var wepTrinketDiv = document.getElementById(wepTrinketTitleId);
+                wepTrinketDiv.innerHTML += "<div center bold>Bijoux</div>";
                 {
                     trinketBox(wepTrinketDiv, build);
                     weaponsBox(wepTrinketDiv, build);
                     // Food
-                    wepTrinketDiv.append("<div center bold>Consommables</div>");
-                    wepTrinketDiv.append(build.getConsumable());
+                    wepTrinketDiv.innerHTML += "<div center bold>Consommables</div>";
+                    wepTrinketDiv.innerHTML += build.getConsumable();
                 }
             }
-
-            div.append('<script async src="https://unpkg.com/armory-embeds/armory-embeds.js"></script>');
-            div.attr("init", "true");
+            var script = document.createElement('script');
+            script.setAttribute('async','');
+            script.setAttribute("src","https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js");
+            div.appendChild(script);
+            div.setAttribute("init", "true");
         }
     }
 
