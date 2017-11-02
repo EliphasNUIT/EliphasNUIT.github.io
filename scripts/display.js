@@ -33,8 +33,6 @@ function observeMutations(id, target) {
         });
         observerMap.set(id, observer);
     }
-    frame.setAttribute("width", "100%");    
-    frame.setAttribute("frameborder", "3");
     frame.setAttribute("height", target.scrollHeight);
 
     var observer = observerMap.get(id);
@@ -57,6 +55,9 @@ function display(frameID) {
     if (init === "about:blank") {
         frame.style.display = "block";
         frame.setAttribute("src", frame.getAttribute("data-src"));
+        frame.setAttribute("width", "100%");  
+        frame.setAttribute("height", "50");
+        frame.setAttribute("frameborder", "3");
         // init the button
         frame.onload = function() {
             observeMutations(frameID, frame.contentDocument.body);             
