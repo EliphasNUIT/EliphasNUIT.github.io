@@ -2,7 +2,7 @@ var errorFunc = function(data) {
   console.error("oh shit");
 };
 
-var Class = function(name) {
+var Profession = function(name) {
   this.name = name;
   this.specializations = {};
   this.traits = {};
@@ -10,7 +10,7 @@ var Class = function(name) {
   this.weapons = {};
 };
 
-Class.prototype.buildFromAPI = function() {
+Profession.prototype.buildFromAPI = function() {
   var _this = this;
   FW_GW2().getProfession(
     this.name,
@@ -63,13 +63,13 @@ Class.prototype.buildFromAPI = function() {
 };
 
 var myClasses = [
-  new Class("Guardian"),
-  new Class("Warrior"),
-  new Class("Revenant"),
-  new Class("Necromancer"),
-  new Class("Elementalist"),
-  new Class("Mesmer"),
-  new Class("Ranger"),
-  new Class("Thief"),
-  new Class("Engineer")
+  new Profession("Guardian"),
+  new Profession("Warrior"),
+  new Profession("Revenant"),
+  new Profession("Necromancer"),
+  new Profession("Elementalist"),
+  new Profession("Mesmer"),
+  new Profession("Ranger"),
+  new Profession("Thief"),
+  new Profession("Engineer")
 ];
