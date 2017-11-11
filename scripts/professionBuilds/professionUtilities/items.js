@@ -65,6 +65,8 @@ define([], function() {
             "Superior Sigil of Earth": 24560,
             "Superior Sigil of Impact": 24868,
             "Superior Sigil of Agility": 72092,
+            "Superior Sigil of Agony": 24612,
+            "Superior Sigil of Energy": 24607,
             "Major Sigil of Bursting": 44943
         },
 

@@ -119,12 +119,12 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
                 "Superiority Complex"
             ]);
             this.specialization.setSpec("spec2", "Chaos", [
-                "Descend into Madness",
+                "Descent into Madness",
                 "Chaotic Transference",
                 "Bountiful Disillusionment"
             ]);
             this.specialization.setSpec("spec3", "Mirage", ["Self-Deception", "Mirrored Axes", "Infinite Horizon"]);
-            this.skills.setHealSkill("Mirage Mirror");
+            this.skills.setHealSkill("False Oasis");
         };
     };
 
