@@ -99,7 +99,8 @@ define([], function() {
             "Bowl of Nopalitos Sauté": 66530,
             "Magnanimous Maintenance Oil": 81157,
             "Prickly Pear Pie": 66538,
-            "Bowl of Fire Meat Chili": 12484
+            "Bowl of Fire Meat Chili": 12484,
+            "Bowl of Orrian Truffle and Meat Stew":12488
         }
     };
     return items;

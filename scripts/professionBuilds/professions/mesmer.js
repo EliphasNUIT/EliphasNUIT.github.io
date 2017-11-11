@@ -1,63 +1,148 @@
-define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/professions"], function(
+define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/professions"], function (
     buildData,
     professions
 ) {
     "use strict";
     var Build = buildData.build;
-    var Profession = professions.Mesmer;
+
+    class MesBuild extends Build {
+        constructor(name) {
+            super(name, professions.Mesmer);
+        };
+    };
+
+    class MinstrelShareBuild extends MesBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setSingleStat("Minstrel's");
+            this.armor.setSingleRune("Superior Rune of the Firebrand");
+            this.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
+            this.trinket.setSingleStat("Minstrel's");
+            this.wep1.setMainHand("Sword", "Minstrel's", "Superior Sigil of Concentration");
+            this.wep1.setOffHand("Shield", "Minstrel's", "Superior Sigil of Water");
+            this.wep2.setOffHand("Focus", "Minstrel's", "Superior Sigil of Water");
+            this.specialization.setSpec("spec1", "Domination", [
+                "Empowered Illusions",
+                "Blurred Inscriptions",
+                "Mental Anguish"
+            ]);
+            this.specialization.setSpec("spec2", "Inspiration", [
+                "Persisting Images",
+                "Restorative Illusions",
+                "Illusionary Inspiration"
+            ]);
+            this.specialization.setSpec("spec3", "Chronomancer", [
+                "All's Well That Ends Well",
+                "Improved Alacrity",
+                "Chronophantasma"
+            ]);
+        };
+    };
+
+    class BoonShareBuild extends MesBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setStats([
+                "Berserker's",
+                "Berserker's",
+                "Berserker's",
+                "Berserker's",
+                "Commander's",
+                "Berserker's"
+            ]);
+            this.armor.setSingleRune("Superior Rune of Leadership");
+            this.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
+            this.trinket.setSingleStat("Commander's");
+            this.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
+            this.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
+            this.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
+            this.specialization.setSpec("spec1", "Domination", [
+                "Empowered Illusions",
+                "Blurred Inscriptions",
+                "Mental Anguish"
+            ]);
+            this.specialization.setSpec("spec3", "Chronomancer", [
+                "All's Well That Ends Well",
+                "Improved Alacrity",
+                "Chronophantasma"
+            ]);
+            this.skills.setHealSkill("Well of Eternity");
+            this.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
+        };
+    };
+
+    class BoonShareTankBuild extends BoonShareBuild {
+        constructor(name) {
+            super(name);
+            this.wep1.setOffHand("Shield", "Commander's", "Superior Sigil of Force");
+            this.wep2.setOffHand("Focus", "Commander's", "Superior Sigil of Force");
+        };
+    };
+
+    class CondiMiragePhantasmBuild extends MesBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setSingleStat("Viper's");
+            this.armor.setSingleRune("Superior Rune of the Renegade");
+            this.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
+            this.trinket.setSingleStat("Viper's");
+            this.wep1.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
+            this.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Geomancy");
+            this.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
+            this.specialization.setSpec("spec1", "Dueling", [
+                "Duelist's Discipline",
+                "Blinding Dissipation",
+                "Superiority Complex"
+            ]);
+            this.specialization.setSpec("spec2", "Illusions", [
+                "Compounding Power",
+                "Phantasmal Haste",
+                "Phantasmal Force"
+            ]);
+            this.specialization.setSpec("spec3", "Mirage", ["Riddle of Sand", "Mirrored Axes", "Dune Cloak"]);
+            this.skills.setHealSkill("Signet of the Ether");
+        };
+    };
+
+    class CondiMirageCloneBuild extends MesBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setSingleStat("Viper's");
+            this.armor.setSingleRune("Superior Rune of the Renegade");
+            this.consumable.setConsumable("Bowl of Orrian Truffle and Meat Stew", "Toxic Focusing Crystal");
+            this.trinket.setSingleStat("Viper's");
+            this.wep1.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
+            this.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Energy");
+            this.specialization.setSpec("spec1", "Dueling", [
+                "Duelist's Discipline",
+                "Blinding Dissipation",
+                "Superiority Complex"
+            ]);
+            this.specialization.setSpec("spec2", "Chaos", [
+                "Descend into Madness",
+                "Chaotic Transference",
+                "Bountiful Disillusionment"
+            ]);
+            this.specialization.setSpec("spec3", "Mirage", ["Self-Deception", "Mirrored Axes", "Infinite Horizon"]);
+            this.skills.setHealSkill("Mirage Mirror");
+        };
+    };
+
+
     var build = null;
     // minstrel
     {
-        build = new Build("chrTankMinstrel", Profession);
-        build.armor.setSingleStat("Minstrel's");
-        build.armor.setSingleRune("Superior Rune of the Firebrand");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Minstrel's");
-        build.wep1.setMainHand("Sword", "Minstrel's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Minstrel's", "Superior Sigil of Water");
-        build.wep2.setOffHand("Focus", "Minstrel's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
+        build = new MinstrelShareBuild("chrTankMinstrel");     
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Restorative Illusions",
             "Illusionary Inspiration"
-        ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
         ]);
         build.skills.setHealSkill("Well of Eternity");
         build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
         build.skills.setEliteSkill("Signet of Humility");
 
-        build = new Build("chrTankDei", Profession);
-        build.armor.setSingleStat("Minstrel's");
-        build.armor.setSingleRune("Superior Rune of the Firebrand");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Minstrel's");
-        build.wep1.setMainHand("Sword", "Minstrel's", "Superior Sigil of Transference");
-        build.wep1.setOffHand("Shield", "Minstrel's", "Superior Sigil of Water");
-        build.wep2.setOffHand("Focus", "Minstrel's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
-        build.specialization.setSpec("spec2", "Inspiration", [
-            "Persisting Images",
-            "Restorative Illusions",
-            "Illusionary Inspiration"
-        ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
-        ]);
+        build = new MinstrelShareBuild("chrTankDei");  
         build.skills.setHealSkill("Mantra of Recovery");
         build.skills.setUtilitySkills(["Well of Action", "Well of Precognition", "Well of Recall"]);
         build.skills.setEliteSkill("Time Warp");
@@ -65,314 +150,98 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
 
     // boon share
     {
-        build = new Build("chrTank", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Commander's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Commander's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
+        build = new BoonShareTankBuild("chrTank");   
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Warden's Feedback",
             "Illusionary Inspiration"
-        ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
-        build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
+        ]);        
         build.skills.setEliteSkill("Gravity Well");
 
-        build = new Build("chrTankKC", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Commander's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Commander's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Dueling", [
-            "Phantasmal Fury",
-            "Fencer's Finesse",
-            "Superiority Complex"
-        ]);
+        build = new BoonShareTankBuild("chrTankKC");   
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Warden's Feedback",
             "Illusionary Inspiration"
-        ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Danger Time",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
-        build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
+        ]);        
         build.skills.setEliteSkill("Signet of Humility");
 
-        build = new Build("chrDPSKC", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Dueling", [
-            "Phantasmal Fury",
-            "Fencer's Finesse",
-            "Superiority Complex"
-        ]);
+        build = new BoonShareBuild("chrDPS");
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Warden's Feedback",
             "Illusionary Inspiration"
         ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Danger Time",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
-        build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
         build.skills.setEliteSkill("Signet of Humility");
 
-        build = new Build("chrDPS", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
+        build = new BoonShareBuild("chrDPSKC");
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Warden's Feedback",
             "Illusionary Inspiration"
         ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
-        build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
         build.skills.setEliteSkill("Gravity Well");
 
-        build = new Build("chrDPSDeimos", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
+        build = new BoonShareBuild("chrDPSDeimos");
         build.wep2.setMainHand("Scepter", "Berserker's", "Superior Sigil of Accuracy");
-        build.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Sword", "Berserker's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Illusions", [
+        build.specialization.setSpec("spec2", "Illusions", [
             "Compounding Power",
             "Phantasmal Haste",
             "Phantasmal Force"
         ]);
-        build.specialization.setSpec("spec2", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
-        build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
         build.skills.setEliteSkill("Time Warp");
 
-        build = new Build("chrDPSMatt", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
+        build = new BoonShareBuild("chrDPSMatt");
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Warden's Feedback",
             "Illusionary Inspiration"
         ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
         build.skills.setUtilitySkills(["Well of Action", "Feedback", "Signet of Inspiration"]);
         build.skills.setEliteSkill("Signet of Humility");
 
-        build = new Build("chrDPSCairn", Profession);
-        build.armor.setStats([
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Berserker's",
-            "Commander's",
-            "Berserker's"
-        ]);
-        build.armor.setSingleRune("Superior Rune of Leadership");
-        build.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
-        build.trinket.setSingleStat("Commander's");
-        build.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-        build.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-        build.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
-        build.specialization.setSpec("spec1", "Domination", [
-            "Empowered Illusions",
-            "Blurred Inscriptions",
-            "Mental Anguish"
-        ]);
+        build = new BoonShareBuild("chrDPSCairn");
         build.specialization.setSpec("spec2", "Inspiration", [
             "Persisting Images",
             "Restorative Illusions",
             "Illusionary Inspiration"
         ]);
-        build.specialization.setSpec("spec3", "Chronomancer", [
-            "All's Well That Ends Well",
-            "Improved Alacrity",
-            "Chronophantasma"
-        ]);
-        build.skills.setHealSkill("Well of Eternity");
-        build.skills.setUtilitySkills(["Well of Action", "Well of Recall", "Signet of Inspiration"]);
         build.skills.setEliteSkill("Time Warp");
     }
 
-    // condi
+    // condi phantasme
     {
-        build = new Build("mirageCondiMatt", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.setSingleRune("Superior Rune of the Berserker");
-        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
-        build.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Geomancy");
-        build.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
-        build.specialization.setSpec("spec1", "Dueling", [
-            "Duelist's Discipline",
-            "Blinding Dissipation",
-            "Superiority Complex"
-        ]);
-        build.specialization.setSpec("spec2", "Illusions", [
-            "Compounding Power",
-            "Phantasmal Haste",
-            "Phantasmal Force"
-        ]);
-        build.specialization.setSpec("spec3", "Mirage", ["Riddle of Sand", "Mirrored Axes", "Dune Cloak"]);
-        build.skills.setHealSkill("Signet of the Ether");
+        build = new CondiMiragePhantasmBuild("mirageCondiMatt");
         build.skills.setUtilitySkills(["Feedback", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Signet of Humility");
 
-        build = new Build("mirageCondiCairn", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.setSingleRune("Superior Rune of the Berserker");
-        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
-        build.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Geomancy");
-        build.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
-        build.specialization.setSpec("spec1", "Dueling", [
-            "Duelist's Discipline",
-            "Blinding Dissipation",
-            "Superiority Complex"
-        ]);
-        build.specialization.setSpec("spec2", "Illusions", [
-            "Compounding Power",
-            "Phantasmal Haste",
-            "Phantasmal Force"
-        ]);
-        build.specialization.setSpec("spec3", "Mirage", ["Riddle of Sand", "Mirrored Axes", "Dune Cloak"]);
-        build.skills.setHealSkill("Signet of the Ether");
+        build = new CondiMiragePhantasmBuild("mirageCondiCairn");
         build.skills.setUtilitySkills(["Crystal Sands", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Jaunt");
 
-        build = new Build("mirageCondiCC", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.setSingleRune("Superior Rune of the Berserker");
-        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
+        build = new CondiMiragePhantasmBuild("mirageCondiCC");
         build.wep1.setMainHand("Scepter", "Viper's", "Superior Sigil of Malice");
-        build.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Geomancy");
-        build.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
-        build.specialization.setSpec("spec1", "Dueling", [
-            "Duelist's Discipline",
-            "Blinding Dissipation",
-            "Superiority Complex"
-        ]);
         build.specialization.setSpec("spec2", "Illusions", [
             "Compounding Power",
             "Phantasmal Haste",
             "Malicious Sorcery"
         ]);
         build.specialization.setSpec("spec3", "Mirage", ["Riddle of Sand", "Mirage Mantle", "Dune Cloak"]);
-        build.skills.setHealSkill("Signet of the Ether");
+        build.skills.setUtilitySkills(["Mantra of Distraction", "Signet of Domination", "Signet of Midnight"]);
+        build.skills.setEliteSkill("Signet of Humility");
+    }
+
+    // condi clone
+    {
+        build = new CondiMirageCloneBuild("mirageCondiCMatt");
+        build.skills.setUtilitySkills(["Feedback", "Signet of Domination", "Signet of Midnight"]);
+        build.skills.setEliteSkill("Signet of Humility");
+
+        build = new CondiMirageCloneBuild("mirageCondiCCairn");
+        build.skills.setUtilitySkills(["Crystal Sands", "Signet of Domination", "Signet of Midnight"]);
+        build.skills.setEliteSkill("Jaunt");
+
+        build = new CondiMirageCloneBuild("mirageCondiCCC");
         build.skills.setUtilitySkills(["Mantra of Distraction", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Signet of Humility");
     }

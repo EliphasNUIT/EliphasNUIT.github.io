@@ -51,14 +51,23 @@ define(
             }
 
             getPets() {
+                if (this.skills === null) {
+                    return "";
+                }
                 return this.skills.getPDiv();
             }
 
             getSkills() {
+                if (this.skills === null) {
+                    return "";
+                }
                 return this.skills.getSDiv(mobile);
             }
 
             getProfessionSkills() {
+                if (this.profSkills === null) {
+                    return "";
+                }
                 return this.profSkills.getSDiv(mobile);
             }
 
@@ -71,10 +80,16 @@ define(
             }
 
             getWeapon1() {
+                if (this.wep1 === null) {
+                    return "";
+                }
                 return this.wep1.getDiv(mobile);
             }
 
             getWeapon2() {
+                if (this.wep2 === null) {
+                    return "";
+                }
                 return this.wep2.getDiv(mobile);
             }
 
