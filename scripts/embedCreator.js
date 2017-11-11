@@ -26,7 +26,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professions/total"], fu
             skillDiv.innerHTML += "<div center bold>Compétences</div>";
             var profSkill = build.getProfessionSkills();
             skillDiv.innerHTML += profSkill;
-            if (build.profSkills.noSkills) {
+            if (build.skills === null) {
                 return;
             }
             var skillListID = "skillList" + nBox++;

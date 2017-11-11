@@ -5,7 +5,6 @@ define(["professionBuilds/professionUtilities/pets"], function(pets) {
         constructor(profession) {
             this.profession = profession;
             this.skills = [];
-            this.noSkills = false;
         }
 
         _setSkill(slotType, skillName) {
