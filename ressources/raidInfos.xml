@@ -4,41 +4,41 @@
 		<wing name="Spirit Vale">
 			<boss name="Vale Guardian">
 				<image>214px-Vale_Guardian.jpg</image>
-				<shortRef>VG</shortRef>
+				<shortRef>vg</shortRef>
 				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Gorseval the Multifarious">
 				<image>240px-Gorseval_the_Multifarious.jpg</image>
-				<shortRef>Gorse</shortRef>
+				<shortRef>gorse</shortRef>
 				<bg>SpiritVale.png</bg>
 			</boss>
 			<boss name="Sabetha the Saboteur">
 				<image>173px-Sabetha_the_Saboteur.jpg</image>
-				<shortRef>Sab</shortRef>
+				<shortRef>sab</shortRef>
 				<bg>SpiritVale.png</bg>
 			</boss>
 		</wing>
 		<wing name="Salvation Pass">
 			<boss name="Slothasor">
 				<image>240px-Slothasor.jpg</image>
-				<shortRef>Sloth</shortRef>
+				<shortRef>sloth</shortRef>
 				<bg>SalvationPass.png</bg>
 			</boss>
 			<boss name="Matthias Gabrel">
 				<image>131px-Matthias_Gabrel.jpg</image>
-				<shortRef>Mat</shortRef>
+				<shortRef>matt</shortRef>
 				<bg>SalvationPass.png</bg>
 			</boss>
 		</wing>
 		<wing name="Stronghold of the Faithful">
 			<boss name="Keep Construct">
 				<image>240px-Keep_Construct.jpg</image>
-				<shortRef>KC</shortRef>
+				<shortRef>kc</shortRef>
 				<bg>StrongholdoftheFaithful.png</bg>
 			</boss>
 			<boss name="Xera">
 				<image>228px-Xera_(Illusion).jpg</image>
-				<shortRef>Xera</shortRef>
+				<shortRef>xera</shortRef>
 				<bg>StrongholdoftheFaithful.png</bg>
 			</boss>
 		</wing>
@@ -47,44 +47,44 @@
 		<wing name="Bastion of the Penitent">
 			<boss name="Cairn the Indomitable">
 				<image>240px-Cairn_the_Indomitable.jpg</image>
-				<shortRef>Cairn</shortRef>
+				<shortRef>cairn</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Mursaat Overseer">
 				<image>151px-Mursaat_Overseer.jpg</image>
-				<shortRef>MO</shortRef>
+				<shortRef>mo</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Samarog">
 				<image>240px-Samarog.jpg</image>
-				<shortRef>Sam</shortRef>
+				<shortRef>sam</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Deimos">
 				<image>240px-Deimos.jpg</image>
-				<shortRef>Dei</shortRef>
+				<shortRef>dei</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 		</wing>
 		<wing name="Bastion of the Penitent CM">
 			<boss name="Cairn the Indomitable CM">
 				<image>240px-Cairn_the_Indomitable.jpg</image>
-				<shortRef>CairnCM</shortRef>
+				<shortRef>cairncm</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Mursaat Overseer CM">
 				<image>151px-Mursaat_Overseer.jpg</image>
-				<shortRef>MOCM</shortRef>
+				<shortRef>mocm</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Samarog CM">
 				<image>240px-Samarog.jpg</image>
-				<shortRef>SamCM</shortRef>
+				<shortRef>samcm</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 			<boss name="Deimos CM">
 				<image>240px-Deimos.jpg</image>
-				<shortRef>DeiCM</shortRef>
+				<shortRef>deicm</shortRef>
 				<bg>Bastion_of_the_Penitent.jpg</bg>
 			</boss>
 		</wing>
