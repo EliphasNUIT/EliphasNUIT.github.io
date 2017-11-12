@@ -65,7 +65,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
             this.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
             this.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
             this.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-            this.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
+            this.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Concentration");
             this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
             this.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
             this.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
