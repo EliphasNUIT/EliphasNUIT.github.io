@@ -104,6 +104,8 @@ define(["professionBuilds/professionUtilities/stats", "professionBuilds/professi
             this.mainHand.id = wepID;
             this.mainHand.stat = statID;
             this.mainHand.sigil = sigil1ID;
+            this.offHand.id = -1;
+            this.offHand.stat = -1;
             this.offHand.sigil = sigil2ID;
         }
 

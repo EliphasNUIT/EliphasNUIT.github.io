@@ -237,7 +237,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setUtilitySkills(["Feedback", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Signet of Humility");
 
-        build = new CondiMirageCloneBuild("mirageCondiCCairn");
+        build = new CondiMirageCloneBuild("mirageCondiC");
         build.skills.setUtilitySkills(["Crystal Sands", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Jaunt");
 
