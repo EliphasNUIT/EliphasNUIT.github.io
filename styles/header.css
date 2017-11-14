@@ -9,16 +9,21 @@
     left: 5%;
     top: 5%;
 }
-
 .logsContent {
+    font-family: Arial;
     display: none;
-    position: absolute;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 51;
+}
+.compoContent {
+    font-family: Arial;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 51;
 }
 
-.compoContent {
-    display: none;
-    position: absolute;
-}
 
 .container a {
     background-color: rgba(70, 70, 70, 0.8);
@@ -29,23 +34,48 @@
     padding: 14px 16px;
     text-decoration: none;
 }
-
-@media (hover: hover) {
-    .container a:hover {
-        background-color: red;
-    }
-    .logsDrop:hover .logsContent {
-        display: inline-flex;
-    }
-    .compoDrop:hover .compoContent {
-        display: inline-flex;
-    }
+.compoContent a {
+    background-color: rgba(70, 70, 70, 0.8);
+    float: left;
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+.logsContent a {
+    background-color: rgba(70, 70, 70, 0.8);
+    float: left;
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.container a:hover {
+    background-color: red;
+}
+.compoContent a:hover {
+    background-color: red;
+}
+.logsContent a:hover {
+    background-color: red;
+}
+
+
+.logsDrop:hover .logsContent {
+    display: inline-flex;
+}
+.compoDrop:hover .compoContent {
+    display: inline-flex;
+}
+
 
 .container a:active {
     background-color: red;
 }
-
 
 
 @media only screen and (max-width: 1000px) {
@@ -53,18 +83,7 @@
         flex-direction: row;     
         left: 0%;
     }
-
-    .logsContent {
-        flex-direction: column;     
-        position: absolute;
-    }
-
-    .compoContent {
-        flex-direction: column;     
-        position: absolute;
-    }
 }
-
 
 
 @media only screen and (max-device-width: 750px) {
@@ -73,18 +92,13 @@
         left: 0%; 
         top: 0%;
     }
-
-    .logsContent {
-        flex-direction: column;     
-        position: absolute;
-    }
-
-    .compoContent {
-        flex-direction: column;     
-        position: absolute;
-    }
-
     .container a {
+        font-size: 2.75em;
+    }
+    .logsContent a {
+        font-size: 2.75em;
+    }
+    .compoContent a {
         font-size: 2.75em;
     }
 }
