@@ -10,6 +10,16 @@
     top: 5%;
 }
 
+.logsContent {
+    display: none;
+    position: absolute;
+}
+
+.compoContent {
+    display: none;
+    position: absolute;
+}
+
 .container a {
     background-color: rgba(70, 70, 70, 0.8);
     float: left;
@@ -21,12 +31,18 @@
 }
 
 @media (hover: hover) {
-    .container a:hover, .dropdown:hover .dropbtn {
+    .container a:hover {
         background-color: red;
+    }
+    .logsDrop:hover .logsContent {
+        display: inline-flex;
+    }
+    .compoDrop:hover .compoContent {
+        display: inline-flex;
     }
 }
 
-.container a:active, .dropdown:active .dropbtn {
+.container a:active {
     background-color: red;
 }
 
@@ -37,6 +53,16 @@
         flex-direction: row;     
         left: 0%;
     }
+
+    .logsContent {
+        flex-direction: column;     
+        position: absolute;
+    }
+
+    .compoContent {
+        flex-direction: column;     
+        position: absolute;
+    }
 }
 
 
@@ -46,6 +72,16 @@
         flex-direction: row;     
         left: 0%; 
         top: 0%;
+    }
+
+    .logsContent {
+        flex-direction: column;     
+        position: absolute;
+    }
+
+    .compoContent {
+        flex-direction: column;     
+        position: absolute;
     }
 
     .container a {
