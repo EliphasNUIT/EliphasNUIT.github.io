@@ -4,189 +4,125 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
 ) {
     "use strict";
     var Build = buildData.build;
-    var Profession = professions.Ranger;
     var build = null;
+
+    class RangerBuild extends Build {
+        constructor(name) {
+            super(name, professions.Ranger);
+        };
+    };
+
+    class CondiRangerBuild extends RangerBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setSingleStat("Viper's");
+            this.armor.set42Rune("Superior Rune of the Nightmare","Superior Rune of the Trapper");
+            this.wep1.setTwoHand("Longbow", "Viper's", "Superior Sigil of Agony", "Superior Sigil of Geomancy");
+            this.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
+            this.trinket.setSingleStat("Viper's");
+            this.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
+        };
+    };
+
+    class CondiDruidBuild extends CondiRangerBuild {
+        constructor(name) {
+            super(name);
+            this.wep2.setMainHand("Axe", "Viper's", "Superior Sigil of Agony");
+            this.consumable.setConsumable("Prickly Pear Pie", "Toxic Focusing Crystal");
+            this.skills.pets =  ["Juvenile Lynx", "Juvenile Electric Wyvern"];
+            this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
+            this.specialization.setSpec("spec3", "Druid", ["Cultivated Synergy", "Verdant Etching", "Grace of the Land"]);
+            this.skills.setHealSkill("Glyph of Rejuvenation");
+            this.skills.setEliteSkill("Glyph of Unity");
+        };
+    };
+
+    class CondiSoulbeastBuild extends CondiRangerBuild {
+        constructor(name) {
+            super(name);
+            this.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
+            this.wep2.setMainHand("Dagger", "Viper's", "Superior Sigil of Agony");
+
+            this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Hidden Barbs", "Quick Draw"]);
+            this.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
+            this.specialization.setSpec("spec3", "Soulbeast", ["Live Fast", "Predator's Cunning", "Oppressive Superiority"]);
+
+            this.skills.pets =  ["Juvenile Lynx", "Juvenile Warthog", "Juvenile Fanged Iboga"];
+            this.skills.setHealSkill('Bear Stance');
+
+            this.skills.setUtilitySkills(["Viper's Nest", "Vulture Stance", "Sharpening Stone"]);
+            this.skills.setEliteSkill("One Wolf Pack");
+        };
+    };
+
+
+    class BoonDruidBuild extends RangerBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setSingleStat("Harrier's");
+            this.armor.setSingleRune("Superior Rune of the Monk");
+            this.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
+            this.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
+            this.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
+            this.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
+            this.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Concentration");
+            this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
+            this.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
+            this.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
+            this.skills.pets =  ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"];
+            this.skills.setHealSkill("Glyph of Rejuvenation");
+            this.skills.setUtilitySkills(["Glyph of Empowerment", "", ""]);
+            this.skills.setEliteSkill("Glyph of Unity");
+        };
+    };
+
+    class TrapperBoonDruidBuild extends BoonDruidBuild {
+        constructor(name) {
+            super(name);
+            this.specialization.setSpec("spec1", "Skirmishing", ["Trapper's Expertise", "Spotter", "Quick Draw"]);
+            this.skills.setHealSkill("Healing Spring");
+        };
+    };
 
     // Condi
     {
-        build = new Build("druidCondiVg", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.set42Rune("Superior Rune of the Nightmare","Superior Rune of the Trapper");
-        build.consumable.setConsumable("Prickly Pear Pie", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setTwoHand("Longbow", "Viper's", "Superior Sigil of Malice", "Superior Sigil of Geomancy");
-        build.wep2.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
-        build.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
-        build.specialization.setSpec("spec3", "Druid", ["Cultivated Synergy", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Lynx", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Glyph of Rejuvenation");
+        build = new CondiDruidBuild("druidCondiVg");      
         build.skills.setUtilitySkills(["Glyph of the Tides", "Sun Spirit", "Frost Spirit"]);
-        build.skills.setEliteSkill("Glyph of Unity");
 
-        build = new Build("druidCondi", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.set42Rune("Superior Rune of the Nightmare","Superior Rune of the Trapper");
-        build.consumable.setConsumable("Prickly Pear Pie", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setTwoHand("Longbow", "Viper's", "Superior Sigil of Malice", "Superior Sigil of Geomancy");
-        build.wep2.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
-        build.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
-        build.specialization.setSpec("spec3", "Druid", ["Cultivated Synergy", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Lynx", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Glyph of Rejuvenation");
+        build = new CondiDruidBuild("druidCondi");
         build.skills.setUtilitySkills(["Glyph of Empowerment", "Sun Spirit", "Frost Spirit"]);
-        build.skills.setEliteSkill("Glyph of Unity");
 
-        build = new Build("soulbeastCondi", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.set42Rune("Superior Rune of the Nightmare","Superior Rune of the Trapper");
-        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setTwoHand("Longbow", "Viper's", "Superior Sigil of Malice", "Superior Sigil of Geomancy");
-        build.wep2.setMainHand("Dagger", "Viper's", "Superior Sigil of Malice");
-        build.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Hidden Barbs", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
-        build.specialization.setSpec("spec3", "Soulbeast", ["Live Fast", "Predator's Cunning", "Oppressive Superiority"]);
-        build.skills.pets =  ["Juvenile Lynx", "Juvenile Warthog", "Juvenile Fanged Iboga"];
-        build.skills.setHealSkill('"We Heal As One!"');
-        build.skills.setUtilitySkills(["Viper's Nest", "Flame Trap", "Sharpening Stone"]);
-        build.skills.setEliteSkill("One Wolf Pack");
+        build = new CondiSoulbeastBuild("soulbeastCondi");
         
     }
 
     // Heal
     {
-        build = new Build("druidVg", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Glyph of Rejuvenation");
-        build.skills.setUtilitySkills(["Glyph of the Tides", "Sun Spirit", "Frost Spirit"]);
+        build = new BoonDruidBuild("druidVg");  
+        build.skills.setUtilitySkills(["Glyph of the Tides", "", ""]);
         build.skills.setEliteSkill("Entangle");
 
-        build = new Build("druidSab", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Glyph of Rejuvenation");
-        build.skills.setUtilitySkills(["Glyph of Empowerment", "Sun Spirit", "Frost Spirit"]);
-        build.skills.setEliteSkill("Glyph of Unity");
+        build = new BoonDruidBuild("druidSab");
 
-        build = new Build("druidSloth", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Glyph of Rejuvenation");
-        build.skills.setUtilitySkills(['"Protect Me!"', "Sun Spirit", "Frost Spirit"]);
-        build.skills.setEliteSkill("Glyph of Unity");
+        build = new BoonDruidBuild("druidSloth");
+        build.skills.setUtilitySkills(['"Protect Me!"', "", ""]);
 
-        build = new Build("druidMatt", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Trapper's Expertise", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Healing Spring");
-        build.skills.setUtilitySkills(["Glyph of the Tides", "Sun Spirit", "Stone Spirit"]);
+        build = new TrapperBoonDruidBuild("druidMatt");
+        build.skills.setUtilitySkills(["Glyph of the Tides", "", ""]);
         build.skills.setEliteSkill("Spirit of Nature");
 
-        build = new Build("druidXera", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Trapper's Expertise", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Rock Gazelle", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Healing Spring");
-        build.skills.setUtilitySkills(["Glyph of Empowerment", "Frost Spirit", "Stone Spirit"]);
-        build.skills.setEliteSkill("Glyph of Unity");
+        build = new TrapperBoonDruidBuild("druidXera");
 
-        build = new Build("druidSpirit", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Celestial Shadow", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Fern Hound", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Water Spirit");
-        build.skills.setUtilitySkills(["Stone Spirit", "Frost Spirit", "Sun Spirit"]);
+        build = new BoonDruidBuild("druidSpirit");
         build.skills.setEliteSkill("Spirit of Nature");
 
-        build = new Build("druidKite", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
+        build = new BoonDruidBuild("druidKite");
         build.wep2.setTwoHand("Greatsword", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Agility");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Celestial Shadow", "Grace of the Land"]);
-        build.skills.pets =  ["Juvenile Fern Hound", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Water Spirit");
-        build.skills.setUtilitySkills(["Stone Spirit", "Frost Spirit", "Sun Spirit"]);
         build.skills.setEliteSkill("Spirit of Nature");
 
-        build = new Build("druidSam", Profession);
-        build.armor.setSingleStat("Harrier's");
-        build.armor.setSingleRune("Superior Rune of the Monk");
-        build.consumable.setConsumable("Delicious Rice Ball", "Bountiful Maintenance Oil");
-        build.trinket.setStats(["Magi's","Minstrel's","Magi's","Minstrel's","Minstrel's","Minstrel's"]);
-        build.wep1.setTwoHand("Staff", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Water");
-        build.wep2.setMainHand("Axe", "Magi's", "Superior Sigil of Transference");
-        build.wep2.setOffHand("Warhorn", "Magi's", "Superior Sigil of Water");
-        build.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
-        build.specialization.setSpec("spec2", "Nature Magic", ["Allies' Aid", "Windborne Notes", "Nature's Vengeance"]);
-        build.specialization.setSpec("spec3", "Druid", ["Primal Echoes", "Verdant Etching", "Grace of the Land"]);
+        build = new BoonDruidBuild("druidSam");
         build.skills.pets =  ["Juvenile Jacaranda", "Juvenile Electric Wyvern"];
-        build.skills.setHealSkill("Glyph of Rejuvenation");
-        build.skills.setUtilitySkills(["Glyph of the Tides", "Frost Spirit", "Stone Spirit"]);
-        build.skills.setEliteSkill("Glyph of Unity");
+        build.skills.setUtilitySkills(["Glyph of the Tides", "", ""]);
         
     }
 });

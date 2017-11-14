@@ -4,76 +4,68 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
 ) {
     "use strict";
     var Build = buildData.build;
-    var Profession = professions.Thief;
     var build = null;
+
+    class ThiefBuild extends Build {
+        constructor(name) {
+            super(name, professions.Thief);
+            
+        };
+    };
+
+    class PowerDaredevilBuild extends ThiefBuild {
+        constructor(name) {
+            super(name);
+            this.wep2 = null;
+            this.armor.setSingleStat("Berserker's");
+            this.armor.setSingleRune("Superior Rune of the Scholar");
+            this.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
+            this.trinket.setSingleStat("Berserker's");
+            this.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+            this.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
+            this.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
+            this.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
+            this.skills.setHealSkill("Signet of Malice");
+            this.skills.setUtilitySkills(["Assassin's Signet", "Spider Venom", "Fist Flurry"]);
+            this.skills.setEliteSkill("Basilisk Venom");
+        };
+    };
+
+    class CondiDaredevilBuild extends ThiefBuild {
+        constructor(name) {
+            super(name);
+            this.armor.setSingleStat("Viper's");
+            this.armor.setSingleRune("Superior Rune of the Krait");
+            this.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
+            this.trinket.setSingleStat("Viper's");
+            this.wep1.setMainHand("Dagger", "Viper's", "Superior Sigil of Geomancy");
+            this.wep2.setOffHand("Dagger", "Viper's", "Superior Sigil of Malice");
+            this.specialization.setSpec("spec1", "Deadly Arts", ["Dagger Training", "Panic Strike", "Potent Poison"]);
+            this.specialization.setSpec("spec2", "Trickery", ["Uncatchable", "Trickster", "Sleight of Hand"]);
+            this.specialization.setSpec("spec3", "Daredevil", [
+                "Havoc Mastery",
+                "Escapist's Absolution",
+                "Lotus Training"
+            ]);
+            this.skills.setHealSkill("Signet of Malice");
+            this.skills.setUtilitySkills(["Spider Venom", "Devourer Venom", "Caltrops"]);
+            this.skills.setEliteSkill("Basilisk Venom");
+        };
+    };
 
     // Power
     {
-        build = new Build("drdPower", Profession);
-        build.armor.setSingleStat("Berserker's");
-        build.armor.setSingleRune("Superior Rune of the Scholar");
-        build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
-        build.trinket.setSingleStat("Berserker's");
-        build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
-        build.wep2 = null;
-        build.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
-        build.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
-        build.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
-        build.skills.setHealSkill("Signet of Malice");
-        build.skills.setUtilitySkills(["Assassin's Signet", "Spider Venom", "Fist Flurry"]);
-        build.skills.setEliteSkill("Basilisk Venom");
-
-        build = new Build("drdPowerSab", Profession);
-        build.armor.setSingleStat("Berserker's");
-        build.armor.setSingleRune("Superior Rune of the Scholar");
-        build.consumable.setConsumable("Bowl of Sweet and Spicy Butternut Squash Soup", "Superior Sharpening Stone");
-        build.trinket.setSingleStat("Berserker's");
-        build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
-        build.wep2 = null;
-        build.specialization.setSpec("spec1", "Deadly Arts", ["Mug", "Revealed Training", "Executioner"]);
-        build.specialization.setSpec("spec2", "Critical Strikes", ["Twin Fangs", "Practiced Tolerance", "No Quarter"]);
-        build.specialization.setSpec("spec3", "Daredevil", ["Havoc Mastery", "Staff Master", "Bounding Dodger"]);
-        build.skills.setHealSkill("Signet of Malice");
+        build = new PowerDaredevilBuild("drdPower");
+    
+        build = new PowerDaredevilBuild("drdPowerSab");
         build.skills.setUtilitySkills(["Assassin's Signet", "Shadowstep", "Fist Flurry"]);
-        build.skills.setEliteSkill("Basilisk Venom");
     }
 
     // Condi
     {
-        build = new Build("drdCondi", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.setSingleRune("Superior Rune of the Krait");
-        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setMainHand("Dagger", "Viper's", "Superior Sigil of Geomancy");
-        build.wep2.setOffHand("Dagger", "Viper's", "Superior Sigil of Malice");
-        build.specialization.setSpec("spec1", "Deadly Arts", ["Dagger Training", "Panic Strike", "Potent Poison"]);
-        build.specialization.setSpec("spec2", "Trickery", ["Uncatchable", "Trickster", "Sleight of Hand"]);
-        build.specialization.setSpec("spec3", "Daredevil", [
-            "Havoc Mastery",
-            "Escapist's Absolution",
-            "Lotus Training"
-        ]);
-        build.skills.setHealSkill("Signet of Malice");
-        build.skills.setUtilitySkills(["Spider Venom", "Devourer Venom", "Caltrops"]);
-        build.skills.setEliteSkill("Basilisk Venom");
-
-        build = new Build("drdCondiSab", Profession);
-        build.armor.setSingleStat("Viper's");
-        build.armor.setSingleRune("Superior Rune of the Krait");
-        build.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
-        build.trinket.setSingleStat("Viper's");
-        build.wep1.setMainHand("Dagger", "Viper's", "Superior Sigil of Geomancy");
-        build.wep2.setOffHand("Dagger", "Viper's", "Superior Sigil of Malice");
-        build.specialization.setSpec("spec1", "Deadly Arts", ["Dagger Training", "Panic Strike", "Potent Poison"]);
-        build.specialization.setSpec("spec2", "Trickery", ["Uncatchable", "Trickster", "Sleight of Hand"]);
-        build.specialization.setSpec("spec3", "Daredevil", [
-            "Havoc Mastery",
-            "Escapist's Absolution",
-            "Lotus Training"
-        ]);
-        build.skills.setHealSkill("Signet of Malice");
+        build = new CondiDaredevilBuild("drdCondi");
+       
+        build = new CondiDaredevilBuild("drdCondiSab");
         build.skills.setUtilitySkills(["Spider Venom", "Shadowstep", "Caltrops"]);
-        build.skills.setEliteSkill("Basilisk Venom");
     }
 });

@@ -65,6 +65,8 @@ define([], function() {
             "Superior Sigil of Earth": 24560,
             "Superior Sigil of Impact": 24868,
             "Superior Sigil of Agility": 72092,
+            "Superior Sigil of Agony": 24612,
+            "Superior Sigil of Energy": 24607,
             "Major Sigil of Bursting": 44943
         },
 
@@ -99,7 +101,8 @@ define([], function() {
             "Bowl of Nopalitos Sauté": 66530,
             "Magnanimous Maintenance Oil": 81157,
             "Prickly Pear Pie": 66538,
-            "Bowl of Fire Meat Chili": 12484
+            "Bowl of Fire Meat Chili": 12484,
+            "Bowl of Orrian Truffle and Meat Stew":12488
         }
     };
     return items;

@@ -91,12 +91,16 @@ bool writeInZipPath(QString& pathToZip, QString& name, const QString& toWrite)
 
 QStringList Boss::getTries() {
     QDir triesDir(this->ressourcePath);
+    triesDir.setNameFilters(QStringList() << "*.html*");
     QStringList tries = triesDir.entryList(QDir::Files, QDir::Name | QDir::Reversed );
     QStringList toMove;
     QStringList res;
     QStringListIterator it(tries);
     while(it.hasNext()) {
         QString name(it.next());
+        if (!name.contains("_" + this->shortRef)) {
+            continue;
+        }
         //
         QString date = name.split("-").at(0);
         date.insert(4,"_");
@@ -148,8 +152,8 @@ void Boss::read(QXmlStreamReader& reader) {
     this->shortRef = shortRef;
     this->imagePath = "<img src=\"../images/bosses/" + image + "\">";
     this->htmlFile = "../../logs/" + shortRef + ".html";
-    this->ressourceDir = "\"../ressources/" + shortRef + "/";
-    this->ressourcePath = "../../ressources/" + shortRef;
+    this->ressourceDir = "\"../ressources/";
+    this->ressourcePath = "../../ressources/";
     this->background = "../images/raids/" + bg;
 }
 
