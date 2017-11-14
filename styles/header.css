@@ -53,25 +53,27 @@
     text-decoration: none;
 }
 
-
-.container a:hover {
-    background-color: red;
+@media (hover: hover) {
+    .container a:hover {
+        background-color: red;
+    }
+    
+    .compoContent a:hover {
+        background-color: red;
+    }
+    .logsContent a:hover {
+        background-color: red;
+    }
+    
+    
+    .logsDrop:hover .logsContent {
+        display: inline-flex;
+    }
+    .compoDrop:hover .compoContent {
+        display: inline-flex;
+    }
 }
 
-.compoContent a:hover {
-    background-color: red;
-}
-.logsContent a:hover {
-    background-color: red;
-}
-
-
-.logsDrop:hover .logsContent {
-    display: inline-flex;
-}
-.compoDrop:hover .compoContent {
-    display: inline-flex;
-}
 
 
 .container a:active {
