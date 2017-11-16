@@ -7,13 +7,20 @@ TARGET = HTMLBuilder
 CONFIG += console
 CONFIG -= app_bundle
 
+
+
 TEMPLATE = app
 
 INCLUDEPATH += libs/quazip/include/quazip5
 LIBS += -Llibs/quazip/lib -lquazip5
 
 release: DESTDIR = release
-debug:   DESTDIR = debug
+
+extralibs.path = $$DESTDIR
+extralibs.files += libs/quazip/lib/libquazip5.dll
+extralibs.files += libs/zlib/bin/libzlib.dll
+
+INSTALLS += extralibs
 
 OBJECTS_DIR = $$DESTDIR/.obj
 MOC_DIR = $$DESTDIR/.moc
