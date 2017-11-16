@@ -219,7 +219,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setUtilitySkills(["Crystal Sands", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Jaunt");
 
-        build = new CondiMiragePhantasmBuild("mirageCondiCC");
+        build = new CondiMiragePhantasmBuild("mirageCondiVG");
         build.wep1.setMainHand("Scepter", "Viper's", "Superior Sigil of Malice");
         build.specialization.setSpec("spec2", "Illusions", [
             "Compounding Power",

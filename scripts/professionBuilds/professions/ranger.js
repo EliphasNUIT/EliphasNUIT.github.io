@@ -45,7 +45,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
 
             this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Hidden Barbs", "Quick Draw"]);
             this.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
-            this.specialization.setSpec("spec3", "Soulbeast", ["Live Fast", "Predator's Cunning", "Oppressive Superiority"]);
+            this.specialization.setSpec("spec3", "Soulbeast", ["Live Fast", "Predator's Cunning", "Leader of the Pack"]);
 
             this.skills.pets =  ["Juvenile Lynx", "Juvenile Warthog", "Juvenile Fanged Iboga"];
             this.skills.setHealSkill('Bear Stance');

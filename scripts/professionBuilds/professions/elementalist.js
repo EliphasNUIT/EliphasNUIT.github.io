@@ -30,7 +30,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
             this.specialization.setSpec("spec2", "Arcane", ["Arcane Precision", "Final Shielding", "Elemental Surge"]);
             this.specialization.setSpec("spec3", "Weaver", ["Superior Elements", "Weaver's Prowess", "Elements of Rage"]);
             this.skills.setHealSkill("Arcane Brilliance");
-            this.skills.setEliteSkill("Conjure Fiery Greatsword");
+            this.skills.setEliteSkill("Weave Self");
         };
     };
 

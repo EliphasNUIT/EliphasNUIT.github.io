@@ -71,5 +71,9 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
     {
         build = new CondiFBBuild("fbDPS");                      
         build.skills.setEliteSkill("Renewed Focus");
+
+        build = new CondiFBBuild("fbDPSAxe");     
+        build.wep2.setMainHand("Axe", "Grieving", "Superior Sigil of Bursting");                 
+        build.skills.setEliteSkill("Renewed Focus");
     }
 });
