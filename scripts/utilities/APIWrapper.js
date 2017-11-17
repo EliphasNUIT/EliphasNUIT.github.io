@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * GW2 class
  * Last change: 2017-05-25
@@ -1708,7 +1710,7 @@ var FW_GW2 = function(debug) {
 								node.page = typeof next.page == 'boolean' ? next.page : last.page;
 								
 								// Debug
-								if (debugHierarchy) console.debug('next...');;
+								if (debugHierarchy) console.debug('next...');
 							}
 							
 							// Next node not found
@@ -1904,16 +1906,16 @@ var FW_GW2 = function(debug) {
 			if (typeof e.lang == 'boolean' && e.lang == true) {
 				if (typeof p.lang != 'undefined' && p.lang != null && p.lang.length == 2) {
 					switch (p.lang) {
-						case 'de':
-						case 'en':
-						case 'es':
-						case 'fr':
-						case 'zh':
-							q += '&lang='+p.lang;
+					case 'de':
+					case 'en':
+					case 'es':
+					case 'fr':
+					case 'zh':
+						q += '&lang='+p.lang;
 						break;
-						default:
-							_onError(doError)(400,'Unknown language: "'+p.lang+'"',{'endpoint':endpoint,'error':true,'parameters':p,'status':400,'text':'Unknown language: "'+p.lang+'"'},null);
-							return this;
+					default:
+						_onError(doError)(400,'Unknown language: "'+p.lang+'"',{'endpoint':endpoint,'error':true,'parameters':p,'status':400,'text':'Unknown language: "'+p.lang+'"'},null);
+						return this;
 						break;
 					}
 				}
@@ -1928,11 +1930,11 @@ var FW_GW2 = function(debug) {
 			// Execute in right format
 			if (typeof e.format == 'string' && e.format.length > 0) {
 				switch (e.format) {
-					case 'json': _getJSON(u,doSuccess,doError); break;
-					case 'text': _getText(u,doSuccess,doError); break;
-					default:
-						_onError(doError)(400,'Unknown format: "'+e.format+'"',{'endpoint':endpoint,'error':true,'parameters':p,'status':400,'text':'Unknown format: "'+e.format+'"'},null);
-						return this;
+				case 'json': _getJSON(u,doSuccess,doError); break;
+				case 'text': _getText(u,doSuccess,doError); break;
+				default:
+					_onError(doError)(400,'Unknown format: "'+e.format+'"',{'endpoint':endpoint,'error':true,'parameters':p,'status':400,'text':'Unknown format: "'+e.format+'"'},null);
+					return this;
 					break;
 				}
 			} else _getJSON(u,doSuccess,doError);
@@ -2400,7 +2402,7 @@ var FW_GW2 = function(debug) {
 			for (var key in data) optimized[data[key]['id']] = data[key];
 			doSuccess(optimized);
 		},doError);
-	}
+	};
 	
 	/**
 	 * @description Get backstory answer/question by ID
@@ -2470,15 +2472,15 @@ var FW_GW2 = function(debug) {
 	this.getBuild = function(doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1:
-				return that.fetch('/v1/build.json',{},function(data) {
-					doSuccess(data['build_id']);
-				},doError);
+		case 1:
+			return that.fetch('/v1/build.json',{},function(data) {
+				doSuccess(data['build_id']);
+			},doError);
 			break;
-			case 2:
-				return that.fetch('/v2/build',{},function(data) {
-					doSuccess(data['id']);
-				},doError);
+		case 2:
+			return that.fetch('/v2/build',{},function(data) {
+				doSuccess(data['id']);
+			},doError);
 			break;
 		}
 		return this;
@@ -2733,13 +2735,13 @@ var FW_GW2 = function(debug) {
 	this.getColors = function(lang,doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1:
-				return that.fetch('/v1/colors.json',{'lang':lang},function(data) {
-					doSuccess(data['colors']);
-				},doError);
+		case 1:
+			return that.fetch('/v1/colors.json',{'lang':lang},function(data) {
+				doSuccess(data['colors']);
+			},doError);
 			break;
-			case 2:
-				return that.fetch('/v2/colors',{'lang':lang},doSuccess,doError);
+		case 2:
+			return that.fetch('/v2/colors',{'lang':lang},doSuccess,doError);
 			break;
 		}
 		return this;
@@ -2952,13 +2954,13 @@ var FW_GW2 = function(debug) {
 		if (typeof lang != 'string') lang = 'en';
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1:
-				return that.fetch('/v1/continents.json',{'lang':lang},function(data) {
-					doSuccess(data['continents']);
-				},doError);
+		case 1:
+			return that.fetch('/v1/continents.json',{'lang':lang},function(data) {
+				doSuccess(data['continents']);
+			},doError);
 			break;
-			case 2:
-				return that.fetch('/v2/continents',{'ids':'all','lang':lang},doSuccess,doError);
+		case 2:
+			return that.fetch('/v2/continents',{'ids':'all','lang':lang},doSuccess,doError);
 			break;
 		}
 		return this;
@@ -3241,8 +3243,8 @@ var FW_GW2 = function(debug) {
 	this.getFiles = function(doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1: return that.fetch('/v1/files.json',{},doSuccess,doError); break;
-			case 2: return that.fetch('/v2/files',{'ids':'all'},doSuccess,doError); break;
+		case 1: return that.fetch('/v1/files.json',{},doSuccess,doError); break;
+		case 2: return that.fetch('/v2/files',{'ids':'all'},doSuccess,doError); break;
 		}
 		return this;
 	};
@@ -3391,7 +3393,7 @@ var FW_GW2 = function(debug) {
 		if (typeof name != 'string') return '';
 		var fname = encodeURI(name.toLowerCase()).replace(/%20/g,'-');
 		return 'https://guilds.gw2w2w.com/guilds/'+fname+'/256.svg';
-	}
+	};
 	
 	/**
 	 * @description Get guild log list from guild leader
@@ -3606,21 +3608,21 @@ var FW_GW2 = function(debug) {
 		if (typeof version != 'number') version = 1;
 		var matchID = false;
 		switch (version) {
-			case 1:
-				for (var key in matches) {
-					if (matches[key]['red_world_id'] == id || matches[key]['green_world_id'] == id || matches[key]['blue_world_id'] == id) {
-						matchID = key;
-						break;
-					}
+		case 1:
+			for (var key in matches) {
+				if (matches[key]['red_world_id'] == id || matches[key]['green_world_id'] == id || matches[key]['blue_world_id'] == id) {
+					matchID = key;
+					break;
 				}
+			}
 			break;
-			case 2:
-				for (var key in matches) {
-					if (matches[key].worlds.red == id || matches[key].worlds.green == id || matches[key].worlds.blue == id) {
-						matchID = matches[key].id;
-						break;
-					}
+		case 2:
+			for (var key in matches) {
+				if (matches[key].worlds.red == id || matches[key].worlds.green == id || matches[key].worlds.blue == id) {
+					matchID = matches[key].id;
+					break;
 				}
+			}
 			break;
 		}
 		return matchID;
@@ -3668,8 +3670,8 @@ var FW_GW2 = function(debug) {
 	this.getItem = function(id,lang,doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1: return that.fetch('/v1/item_details.json',{'item_id':id,'lang':lang},doSuccess,doError); break;
-			case 2: return that.fetch('/v2/items',{'id':id,'lang':lang},doSuccess,doError); break;
+		case 1: return that.fetch('/v1/item_details.json',{'item_id':id,'lang':lang},doSuccess,doError); break;
+		case 2: return that.fetch('/v2/items',{'id':id,'lang':lang},doSuccess,doError); break;
 		}
 		return this;
 	};
@@ -3797,13 +3799,13 @@ var FW_GW2 = function(debug) {
 	this.getMap = function(id,lang,doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1:
-				return that.fetch('/v1/maps.json',{'map_id':id,'lang':lang},function(data) {
-					doSuccess(data['maps'][id+'']);
-				},doError);
+		case 1:
+			return that.fetch('/v1/maps.json',{'map_id':id,'lang':lang},function(data) {
+				doSuccess(data['maps'][id+'']);
+			},doError);
 			break;
-			case 2:
-				return that.fetch('/v2/maps',{'id':id,'lang':lang},doSuccess,doError);
+		case 2:
+			return that.fetch('/v2/maps',{'id':id,'lang':lang},doSuccess,doError);
 			break;
 		}
 		return this;
@@ -3822,13 +3824,13 @@ var FW_GW2 = function(debug) {
 	this.getMaps = function(lang,doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1:
-				return that.fetch('/v1/maps.json',{'lang':lang},function(data) {
-					doSuccess(data['maps']);
-				},doError);
+		case 1:
+			return that.fetch('/v1/maps.json',{'lang':lang},function(data) {
+				doSuccess(data['maps']);
+			},doError);
 			break;
-			case 2:
-				return that.fetch('/v2/maps',{'lang':lang},doSuccess,doError);
+		case 2:
+			return that.fetch('/v2/maps',{'lang':lang},doSuccess,doError);
 			break;
 		}
 		return this;
@@ -4557,8 +4559,8 @@ var FW_GW2 = function(debug) {
 	this.getRecipe = function(id,lang,doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1: return that.fetch('/v1/recipe_details.json',{'recipe_id':id,'lang':lang},doSuccess,doError); break;
-			case 2: return that.fetch('/v2/recipes',{'id':id,'lang':lang},doSuccess,doError); break;
+		case 1: return that.fetch('/v1/recipe_details.json',{'recipe_id':id,'lang':lang},doSuccess,doError); break;
+		case 2: return that.fetch('/v2/recipes',{'id':id,'lang':lang},doSuccess,doError); break;
 		}
 		return this;
 	};
@@ -4604,8 +4606,8 @@ var FW_GW2 = function(debug) {
 	 */
 	this.getRecipeSearch = function(method,id,lang,doSuccess,doError) {
 		switch (method) {
-			case 'input': return that.fetch('/v2/recipes/search',{'input':id,'lang':lang},doSuccess,doError); break;
-			case 'output': return that.fetch('/v2/recipes/search',{'output':id,'lang':lang},doSuccess,doError); break;
+		case 'input': return that.fetch('/v2/recipes/search',{'input':id,'lang':lang},doSuccess,doError); break;
+		case 'output': return that.fetch('/v2/recipes/search',{'output':id,'lang':lang},doSuccess,doError); break;
 		}
 		return this;
 	};
@@ -4679,8 +4681,8 @@ var FW_GW2 = function(debug) {
 	 */
 	this.getSkin = function(id,lang,doSuccess,doError,version) {
 		switch (version) {
-			case 1: return that.fetch('/v1/skin_details.json',{'skin_id':id,'lang':lang},doSuccess,doError); break;
-			case 2: return that.fetch('/v2/skins',{'id':id,'lang':lang},doSuccess,doError); break;
+		case 1: return that.fetch('/v1/skin_details.json',{'skin_id':id,'lang':lang},doSuccess,doError); break;
+		case 2: return that.fetch('/v2/skins',{'id':id,'lang':lang},doSuccess,doError); break;
 		}
 		return this;
 	};
@@ -4698,13 +4700,13 @@ var FW_GW2 = function(debug) {
 	this.getSkins = function(doSuccess,doError,version) {
 		if (typeof version != 'number') version = 1;
 		switch (version) {
-			case 1:
-				return that.fetch('/v1/skins.json',{},function(data) {
-					doSuccess(data['skins']);
-				},doError);
+		case 1:
+			return that.fetch('/v1/skins.json',{},function(data) {
+				doSuccess(data['skins']);
+			},doError);
 			break;
-			case 2:
-				return that.fetch('/v2/skins',{},doSuccess,doError);
+		case 2:
+			return that.fetch('/v2/skins',{},doSuccess,doError);
 			break;
 		}
 		return this;
@@ -4986,7 +4988,7 @@ var FW_GW2 = function(debug) {
 	 */
 	this.getTradeTransactions = function(apiKey,category,type,doSuccess,doError) {
 		return that.fetch('/v2/commerce/transactions'+(!category?'':'/'+category)+(!type?'':'/'+type),{'apiKey':apiKey,'page':0,'pageSize':200},doSuccess,doError);
-	}
+	};
 	
 	/**
 	 * @description Get trait by ID
