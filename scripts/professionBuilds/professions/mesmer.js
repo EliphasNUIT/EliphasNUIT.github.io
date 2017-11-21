@@ -15,12 +15,12 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         constructor(name) {
             super(name);
             this.armor.setSingleStat("Minstrel's");
-            this.armor.setSingleRune("Superior Rune of the Firebrand");
+            this.armor.setSingleRune("Superior Rune of Durability");
             this.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
             this.trinket.setSingleStat("Minstrel's");
             this.wep1.setMainHand("Sword", "Minstrel's", "Superior Sigil of Concentration");
-            this.wep1.setOffHand("Shield", "Minstrel's", "Superior Sigil of Water");
-            this.wep2.setOffHand("Focus", "Minstrel's", "Superior Sigil of Water");
+            this.wep1.setOffHand("Shield", "Minstrel's", "Superior Sigil of Transference");
+            this.wep2.setOffHand("Focus", "Minstrel's", "Superior Sigil of Transference");
             this.specialization.setSpec("spec1", "Domination", [
                 "Empowered Illusions",
                 "Blurred Inscriptions",
@@ -54,8 +54,8 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
             this.consumable.setConsumable("Bowl of Nopalitos Sauté", "Magnanimous Maintenance Oil");
             this.trinket.setSingleStat("Commander's");
             this.wep1.setMainHand("Sword", "Berserker's", "Superior Sigil of Concentration");
-            this.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Force");
-            this.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Force");
+            this.wep1.setOffHand("Shield", "Berserker's", "Superior Sigil of Paralyzation");
+            this.wep2.setOffHand("Focus", "Berserker's", "Superior Sigil of Paralyzation");
             this.specialization.setSpec("spec1", "Domination", [
                 "Empowered Illusions",
                 "Blurred Inscriptions",
@@ -74,8 +74,8 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
     class BoonShareTankBuild extends BoonShareBuild {
         constructor(name) {
             super(name);
-            this.wep1.setOffHand("Shield", "Commander's", "Superior Sigil of Force");
-            this.wep2.setOffHand("Focus", "Commander's", "Superior Sigil of Force");
+            this.wep1.setOffHand("Shield", "Commander's", "Superior Sigil of Paralyzation");
+            this.wep2.setOffHand("Focus", "Commander's", "Superior Sigil of Paralyzation");
         }
     }
 
@@ -87,8 +87,8 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
             this.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
             this.trinket.setSingleStat("Viper's");
             this.wep1.setMainHand("Axe", "Viper's", "Superior Sigil of Malice");
-            this.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Geomancy");
-            this.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
+            this.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Energy");
+            this.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Energy");
             this.specialization.setSpec("spec1", "Dueling", [
                 "Duelist's Discipline",
                 "Blinding Dissipation",
@@ -221,13 +221,8 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
 
         build = new CondiMiragePhantasmBuild("mirageCondiVG");
         build.wep1.setMainHand("Scepter", "Viper's", "Superior Sigil of Malice");
-        build.specialization.setSpec("spec2", "Illusions", [
-            "Compounding Power",
-            "Phantasmal Haste",
-            "Malicious Sorcery"
-        ]);
         build.specialization.setSpec("spec3", "Mirage", ["Riddle of Sand", "Mirage Mantle", "Dune Cloak"]);
-        build.skills.setUtilitySkills(["Mantra of Distraction", "Signet of Domination", "Signet of Midnight"]);
+        build.skills.setUtilitySkills(["Crystal Sands", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Signet of Humility");
     }
 
@@ -246,7 +241,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setEliteSkill("Jaunt");
 
         build = new CondiMirageCloneBuild("mirageCondiCVG");
-        build.skills.setUtilitySkills(["Mantra of Distraction", "Signet of Domination", "Signet of Midnight"]);
+        build.skills.setUtilitySkills(["Crystal Sands", "Signet of Domination", "Signet of Midnight"]);
         build.skills.setEliteSkill("Signet of Humility");
     }
 });

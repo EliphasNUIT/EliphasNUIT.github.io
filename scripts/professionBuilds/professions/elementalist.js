@@ -99,7 +99,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         ]);
         build.skills.setUtilitySkills(["Conjure Lightning Hammer", "Glyph of Storms", "Signet of Fire"]);
 
-        build = new PowerWeaverBuild("weavPower2");
+        build = new PowerWeaverBuild("weavPower2SH");
         build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
         build.specialization.setSpec("spec2", "Arcane", [
             "Renewing Stamina",
@@ -107,6 +107,15 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
             "Bountiful Power"
         ]);
         build.skills.setUtilitySkills(["Conjure Lightning Hammer", "Glyph of Storms", "Primordial Stance"]);
+
+        build = new PowerWeaverBuild("weavPower2BH");
+        build.wep1.setTwoHand("Staff", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Air");
+        build.specialization.setSpec("spec2", "Arcane", [
+            "Renewing Stamina",
+            "Elemental Contingency",
+            "Bountiful Power"
+        ]);
+        build.skills.setUtilitySkills(["Conjure Frost Bow", "Glyph of Storms", "Primordial Stance"]);
 
         build = new PowerWeaverBuild("weavPowerKC");
         build.wep1.setTwoHand("Staff", "Assassin's", "Superior Sigil of Force", "Superior Sigil of Impact");

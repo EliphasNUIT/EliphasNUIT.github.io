@@ -48,7 +48,8 @@ define([], function() {
             "Superior Rune of the Krait": 24762,
             "Superior Rune of Water": 24839,
             "Superior Rune of the Renegade": 83502,
-            "Superior Rune of the Firebrand": 83338
+            "Superior Rune of the Firebrand": 83338,
+            "Superior Rune of Durability": 72361
         },
 
         sigils: {
@@ -67,7 +68,8 @@ define([], function() {
             "Superior Sigil of Agility": 72092,
             "Superior Sigil of Agony": 24612,
             "Superior Sigil of Energy": 24607,
-            "Major Sigil of Bursting": 44943
+            "Major Sigil of Bursting": 44943,
+            "Superior Sigil of Paralyzation":24639
         },
 
         weapons: {
