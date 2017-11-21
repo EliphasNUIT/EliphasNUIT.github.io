@@ -114,6 +114,12 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build = new BoonDruidBuild("druidSpirit");
         build.skills.setEliteSkill("Spirit of Nature");
 
+        build = new BoonDruidBuild("druidCairnKite");
+        build.armor.setSingleStat("Minstrel's");
+        build.armor.setSingleRune("Superior Rune of Water");
+        build.trinket.setSingleStat("Minstrel's");
+        build.skills.setEliteSkill("Spirit of Nature");
+
         build = new BoonDruidBuild("druidKite");
         build.wep2.setTwoHand("Greatsword", "Magi's", "Superior Sigil of Transference", "Superior Sigil of Agility");
         build.skills.setEliteSkill("Spirit of Nature");
