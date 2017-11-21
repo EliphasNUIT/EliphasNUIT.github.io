@@ -16,7 +16,6 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         constructor(name) {
             super(name);
             this.armor.setSingleStat("Viper's");
-            this.armor.set42Rune("Superior Rune of the Nightmare","Superior Rune of the Trapper");
             this.wep1.setTwoHand("Longbow", "Viper's", "Superior Sigil of Agony", "Superior Sigil of Geomancy");
             this.wep2.setOffHand("Torch", "Viper's", "Superior Sigil of Geomancy");
             this.trinket.setSingleStat("Viper's");
@@ -27,12 +26,14 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
     class CondiDruidBuild extends CondiRangerBuild {
         constructor(name) {
             super(name);
+            this.armor.set42Rune("Superior Rune of the Traveler","Superior Rune of the Trapper");
             this.wep2.setMainHand("Axe", "Viper's", "Superior Sigil of Agony");
-            this.consumable.setConsumable("Prickly Pear Pie", "Toxic Focusing Crystal");
+            this.consumable.setConsumable("Prickly Pear Pie", "Toxic Maintenance Oil");
             this.skills.pets =  ["Juvenile Lynx", "Juvenile Electric Wyvern"];
             this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Spotter", "Quick Draw"]);
             this.specialization.setSpec("spec3", "Druid", ["Cultivated Synergy", "Verdant Etching", "Grace of the Land"]);
-            this.skills.setHealSkill("Glyph of Rejuvenation");
+            this.skills.setHealSkill("Glyph of Rejuvenation");        
+            this.skills.setUtilitySkills(["Glyph of Empowerment", "Sun Spirit", "Frost Spirit"]);
             this.skills.setEliteSkill("Glyph of Unity");
         }
     }
@@ -40,16 +41,14 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
     class CondiSoulbeastBuild extends CondiRangerBuild {
         constructor(name) {
             super(name);
+            this.armor.set42Rune("Superior Rune of the Nightmare","Superior Rune of the Trapper");
             this.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
             this.wep2.setMainHand("Dagger", "Viper's", "Superior Sigil of Agony");
-
             this.specialization.setSpec("spec1", "Skirmishing", ["Sharpened Edges", "Hidden Barbs", "Quick Draw"]);
             this.specialization.setSpec("spec2", "Wilderness Survival", ["Taste for Danger", "Ambidexterity", "Poison Master"]);
             this.specialization.setSpec("spec3", "Soulbeast", ["Live Fast", "Predator's Cunning", "Leader of the Pack"]);
-
             this.skills.pets =  ["Juvenile Lynx", "Juvenile Warthog", "Juvenile Fanged Iboga"];
             this.skills.setHealSkill("Bear Stance");
-
             this.skills.setUtilitySkills(["Viper's Nest", "Vulture Stance", "Sharpening Stone"]);
             this.skills.setEliteSkill("One Wolf Pack");
         }
@@ -90,7 +89,6 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setUtilitySkills(["Glyph of the Tides", "Sun Spirit", "Frost Spirit"]);
 
         build = new CondiDruidBuild("druidCondi");
-        build.skills.setUtilitySkills(["Glyph of Empowerment", "Sun Spirit", "Frost Spirit"]);
 
         build = new CondiSoulbeastBuild("soulbeastCondi");
         

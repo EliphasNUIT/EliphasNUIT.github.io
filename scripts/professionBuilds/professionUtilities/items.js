@@ -49,7 +49,8 @@ define([], function() {
             "Superior Rune of Water": 24839,
             "Superior Rune of the Renegade": 83502,
             "Superior Rune of the Firebrand": 83338,
-            "Superior Rune of Durability": 72361
+            "Superior Rune of Durability": 72361,
+            "Superior Rune of the Traveler":24691
         },
 
         sigils: {
@@ -104,7 +105,8 @@ define([], function() {
             "Magnanimous Maintenance Oil": 81157,
             "Prickly Pear Pie": 66538,
             "Bowl of Fire Meat Chili": 12484,
-            "Bowl of Orrian Truffle and Meat Stew":12488
+            "Bowl of Orrian Truffle and Meat Stew":12488,
+            "Toxic Maintenance Oil":48916
         }
     };
     return items;

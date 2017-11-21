@@ -47,7 +47,7 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
                 "Escapist's Absolution",
                 "Lotus Training"
             ]);
-            this.skills.setHealSkill("Signet of Malice");
+            this.skills.setHealSkill("Channeled Vigor");
             this.skills.setUtilitySkills(["Spider Venom", "Devourer Venom", "Caltrops"]);
             this.skills.setEliteSkill("Basilisk Venom");
         }

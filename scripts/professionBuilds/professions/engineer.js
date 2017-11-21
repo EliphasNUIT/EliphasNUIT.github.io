@@ -18,8 +18,8 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         constructor(name) {
             super(name);
             this.armor.setSingleStat("Viper's");
-            this.armor.setSingleRune("Superior Rune of the Berserker");
-            this.consumable.setConsumable("Rare Veggie Pizza", "Furious Tuning Crystal");
+            this.armor.setSingleRune("Superior Rune of the Renegade");
+            this.consumable.setConsumable("Rare Veggie Pizza", "Toxic Focusing Crystal");
             this.trinket.setSingleStat("Viper's");
             this.wep1.setMainHand("Pistol", "Viper's", "Superior Sigil of Geomancy");
             this.wep1.setOffHand("Pistol", "Viper's", "Superior Sigil of Malice");
@@ -30,6 +30,9 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
                 "Incendiary Powder"
             ]);
             this.specialization.setSpec("spec3", "Tools", ["Static Discharge", "Streamlined Kits", "Kinetic Battery"]);
+            this.skills.setHealSkill("Healing Turret");
+            this.skills.setUtilitySkills(["Bomb Kit", "Grenade Kit", "Flamethrower"]);
+            this.skills.setEliteSkill("Elite Mortar Kit");
         }
     }
 
@@ -52,6 +55,10 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
                 "Crystal Configuration: Eclipse",
                 "Photonic Blasting Module"
             ]);
+            
+            this.skills.setHealSkill("Healing Turret");
+            this.skills.setUtilitySkills(["Bomb Kit", "Grenade Kit", "Laser Disk"]);
+            this.skills.setEliteSkill("Prime Light Beam");
         }
     }
 
@@ -59,16 +66,11 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
     // Condi
     {
         build = new CondiEngiBuild("engiCondi");      
-        build.skills.setHealSkill("Healing Turret");
-        build.skills.setUtilitySkills(["Bomb Kit", "Grenade Kit", "Flamethrower"]);
-        build.skills.setEliteSkill("Elite Mortar Kit");
+        
     }
 
     // Power
     {
         build = new PowerHolosmithBuild("holoPower");  
-        build.skills.setHealSkill("Healing Turret");
-        build.skills.setUtilitySkills(["Bomb Kit", "Grenade Kit", "Laser Disk"]);
-        build.skills.setEliteSkill("Prime Light Beam");
     }
 });
