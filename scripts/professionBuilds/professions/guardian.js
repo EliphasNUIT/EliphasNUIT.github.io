@@ -63,6 +63,9 @@ define(["professionBuilds/dataBuilds", "professionBuilds/professionUtilities/pro
         build.skills.setUtilitySkills(["Procession of Blades", "\"Stand Your Ground!\"", "Bane Signet"]);
 
         build = new PowerDHBuild("dhPowerZealRadKC");          
+        build.wep1.setMainHand("Scepter", "Berserker's", "Superior Sigil of Force");
+        build.wep1.setOffHand("Torch", "Berserker's", "Superior Sigil of Impact");
+        build.wep2.setTwoHand("Greatsword", "Berserker's", "Superior Sigil of Force", "Superior Sigil of Impact");
         build.skills.setUtilitySkills(["Procession of Blades", "Hallowed Ground", "Bane Signet"]);
         
     }
