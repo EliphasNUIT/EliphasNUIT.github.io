@@ -106,8 +106,8 @@ QStringList Boss::getTries() {
         date.insert(4,"_");
         date.insert(7,"_");
         QDate qDate = QDate::fromString(date,"yyyy_MM_dd");
-        qint64 fileTime = QDateTime::currentSecsSinceEpoch() - QDateTime(qDate).toSecsSinceEpoch();
-        if ( fileTime > qint64(1814400)) {
+        qint32 fileTime = QDateTime::currentSecsSinceEpoch() - QDateTime(qDate).toSecsSinceEpoch();
+        if ( fileTime > qint32(1555200)) {
             toMove << name;
             qInfo() << name + " archived";
             continue;
