@@ -1,0 +1,174 @@
+{
+    "cairn": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21cairn",
+            "url": "assets/logs/20171121-221508_cairn.html"
+        },
+        {
+            "date": "14/11/2017",
+            "id": "2017_11_14cairn",
+            "url": "assets/logs/20171114-225322_cairn.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07cairn",
+            "url": "assets/logs/20171107-223338_cairn.html"
+        }
+    ],
+    "dei": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21dei",
+            "url": "assets/logs/20171121-232430_dei.html"
+        },
+        {
+            "date": "16/11/2017",
+            "id": "2017_11_16dei",
+            "url": "assets/logs/20171116-213609_dei.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07dei",
+            "url": "assets/logs/20171107-230628_dei.html"
+        }
+    ],
+    "gorse": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21gorse",
+            "url": "assets/logs/20171121-213857_gorse.html"
+        },
+        {
+            "date": "14/11/2017",
+            "id": "2017_11_14gorse",
+            "url": "assets/logs/20171114-221841_gorse.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07gorse",
+            "url": "assets/logs/20171107-220832_gorse.html"
+        }
+    ],
+    "kc": [
+        {
+            "date": "23/11/2017",
+            "id": "2017_11_23kc",
+            "url": "assets/logs/20171123-223745_kc.html"
+        },
+        {
+            "date": "09/11/2017",
+            "id": "2017_11_09kc",
+            "url": "assets/logs/20171109-213317_kc.html"
+        }
+    ],
+    "matt": [
+        {
+            "date": "23/11/2017",
+            "id": "2017_11_23matt",
+            "url": "assets/logs/20171123-221250_matt.html"
+        },
+        {
+            "date": "16/11/2017",
+            "id": "2017_11_16matt",
+            "url": "assets/logs/20171116-231439_matt.html"
+        },
+        {
+            "date": "09/11/2017",
+            "id": "2017_11_09matt",
+            "url": "assets/logs/20171109-222002_matt.html"
+        }
+    ],
+    "mo": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21mo",
+            "url": "assets/logs/20171121-222141_mo.html"
+        },
+        {
+            "date": "14/11/2017",
+            "id": "2017_11_14mo",
+            "url": "assets/logs/20171114-230052_mo.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07mo",
+            "url": "assets/logs/20171107-224120_mo.html"
+        }
+    ],
+    "sab": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21sab",
+            "url": "assets/logs/20171121-220032_sab.html"
+        },
+        {
+            "date": "14/11/2017",
+            "id": "2017_11_14sab",
+            "url": "assets/logs/20171114-224429_sab.html"
+        },
+        {
+            "date": "09/11/2017",
+            "id": "2017_11_09sab",
+            "url": "assets/logs/20171109-231519_sab.html"
+        }
+    ],
+    "sam": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21sam",
+            "url": "assets/logs/20171121-223316_sam.html"
+        },
+        {
+            "date": "14/11/2017",
+            "id": "2017_11_14sam",
+            "url": "assets/logs/20171114-231237_sam.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07sam",
+            "url": "assets/logs/20171107-225253_sam.html"
+        }
+    ],
+    "sloth": [
+        {
+            "date": "23/11/2017",
+            "id": "2017_11_23sloth",
+            "url": "assets/logs/20171123-212528_sloth.html"
+        },
+        {
+            "date": "16/11/2017",
+            "id": "2017_11_16sloth",
+            "url": "assets/logs/20171116-223642_sloth.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07sloth",
+            "url": "assets/logs/20171107-232148_sloth.html"
+        }
+    ],
+    "vg": [
+        {
+            "date": "21/11/2017",
+            "id": "2017_11_21vg",
+            "url": "assets/logs/20171121-212053_vg.html"
+        },
+        {
+            "date": "14/11/2017",
+            "id": "2017_11_14vg",
+            "url": "assets/logs/20171114-212801_vg.html"
+        },
+        {
+            "date": "07/11/2017",
+            "id": "2017_11_07vg",
+            "url": "assets/logs/20171107-214706_vg.html"
+        }
+    ],
+    "xera": [
+        {
+            "date": "23/11/2017",
+            "id": "2017_11_23xera",
+            "url": "assets/logs/20171123-230913_xera.html"
+        }
+    ]
+}

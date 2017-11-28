@@ -1,0 +1,21 @@
+<div *ngIf="character && bossData">
+  <div char>
+    <div charName>
+      {{character.name}}
+    </div>
+
+    <div *ngIf="character.gw2Armory.length > 0" charLink>
+      <a [href]="character.gw2Armory" target='armory'>Lien Armory</a>
+    </div>
+
+    <div *ngIf="character.getRole(bossRole).length > 0" charRole>
+      {{character.getRole(bossRole).toUpperCase()}}
+    </div>
+
+  </div>
+
+
+  <div buildDiv>
+    <app-display-build [build]="character.getBuild(bossData)"></app-display-build>
+  </div>
+</div>

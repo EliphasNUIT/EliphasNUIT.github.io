@@ -1,0 +1,134 @@
+
+  div[center] {
+    text-align: center;
+}
+ div[bold] {
+    font-weight: bold;
+}
+
+div[buildDisplayDiv] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div[padding] {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.selector{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+  }
+
+.selector .selected {  
+    border: 3px solid rgba(0, 200, 0, 1.0) !important;
+    font-size: 1.3em;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+.selector span {
+    display: inline-flex;
+    flex-direction: row;   
+    justify-content:center;
+    cursor: pointer;    
+    align-items: center;
+    
+    margin-right:15px;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: bold; 
+    height: 80px;
+    width: 200px;
+  }
+.selector span.selected:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+.selector span:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 3px solid rgb(200, 0, 0);
+  }
+
+/* boxes */
+ 
+ div[traitBox] {
+    display: flex;   
+    flex-direction: column;
+    width: 600px;
+    padding-left: 75px;
+}
+
+ div[skillBox] {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ div[skillList] {
+    padding-left: 175px;
+    display: inline-flex;
+    width: 400px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+ div[equipementBox] {
+    width: 600px;
+    padding-left: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ div[armorTitle] {
+    
+    display: inline-flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+}
+ div[armorBox] {
+    width: 130px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ div[wepTrinketTitle] {
+    display: inline-flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+}
+
+ div[wepsBox] {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ div[wepBox2] {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+ div[wepBox1] {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+ div[trinketBox] {
+    width: 300px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}

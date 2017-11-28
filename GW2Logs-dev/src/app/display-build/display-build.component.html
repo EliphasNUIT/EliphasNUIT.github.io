@@ -1,0 +1,66 @@
+<div buildDisplayDiv *ngIf="build">
+    <div class='selector'>
+        <span (click)="onSelectDisplay('traits')" [class.selected]="display === 'traits'">
+            Aptitudes
+        </span>
+        <span (click)="onSelectDisplay('skills')" [class.selected]="display === 'skills'">
+            Compétences
+        </span>
+        <span (click)="onSelectDisplay('equip')" [class.selected]="display === 'equip'">
+            Equipement
+        </span>
+    </div>
+
+    <div padding *ngIf="display === 'traits'">
+        <div center bold>Aptitudes</div>
+        <div traitBox [innerHTML]='traits()'></div>
+    </div>
+
+    <div padding *ngIf="display === 'skills'">
+        <div center bold>Compétences</div>
+        <div skillBox>
+            <div [innerHTML]='profSkills()'></div>
+            <div skillList [innerHTML]='skills()'></div>
+            <div [innerHTML]='pets()'></div>
+        </div>
+    </div>
+
+    <div padding *ngIf="display === 'equip'">
+        <div equipementBox>
+
+            <div armorTitle>
+
+                <div center bold>Armure</div>
+                <div armorBox center [innerHTML]='armor()'></div>
+
+            </div>
+
+            <div wepTrinketTitle>
+
+                <div center bold>Bijoux</div>
+                <div trinketBox [innerHTML]='trinket()'></div>
+
+                <div center bold>Armes</div>
+                <div wepsBox>
+
+                    <div wepBox1>
+                        <div *ngIf="build.wep2" center bold>Set 1</div>
+                        <div center [innerHTML]='wep1()'></div>
+                    </div>
+                    <div *ngIf="build.wep2" wepBox2>
+                        <div center bold>Set 2</div>
+                        <div center [innerHTML]='wep2()'></div>
+                    </div>
+
+                </div>
+
+
+                <div center bold>Consommables</div>
+                <div [innerHTML]='consumables()'></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
