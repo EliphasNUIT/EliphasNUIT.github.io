@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LinksComponent } from './links/links.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { MainComponent } from './main/main.component';
 import { BuildDetailComponent } from './build-detail/build-detail.component';
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
@@ -25,8 +24,7 @@ import { DisplayBuildComponent } from './display-build/display-build.component';
     DisplayBuildComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

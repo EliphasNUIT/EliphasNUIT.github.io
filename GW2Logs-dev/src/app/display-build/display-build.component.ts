@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked , Input, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewChecked , Input } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -8,19 +8,15 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./display-build.component.css']
 })
 export class DisplayBuildComponent implements OnInit, AfterViewChecked {
-  display: string;
 
   @Input() build: ProfBuild;
 
-  constructor(private sanitizer: DomSanitizer, private elementRef: ElementRef) {
+  constructor(private sanitizer: DomSanitizer) {
    }
 
   ngOnInit() {
   }
 
-  onSelectDisplay(display: string) {
-    this.display = display;
-  }
 
   ngAfterViewChecked() {
     const toDestroy = document.body.querySelector('script[async]');
