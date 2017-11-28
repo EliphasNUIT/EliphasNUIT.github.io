@@ -12,6 +12,41 @@
         loadHTML("team2", "https://eliphasnuit.github.io/guild/bosses/team2.html");
     };
 
+requirejs.config({
+	paths: {
+        'react': 'https://unpkg.com/react@15.3.2/dist/react',
+        'react-dom': 'https://unpkg.com/react-dom@15.3.2/dist/react-dom'
+    }
+});
+
+requirejs(['react', 'react-dom'], function(React, ReactDOM) {
+	class Toggle extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { isToggleOn: true };
+      
+          // This binding is necessary to make `this` work in the callback
+          this.handleClick = this.handleClick.bind(this);
+        }
+      
+        handleClick() {
+          this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+          }));
+        }
+      
+        render() {
+          return React.createElement(
+            'button',
+            { onClick: this.handleClick },
+            this.state.isToggleOn ? 'ON' : 'OFF'
+          );
+        }
+      }
+      
+      ReactDOM.render(React.createElement(Toggle, null), document.getElementById('root'));
+});
+
 </script>
 
 
@@ -33,6 +68,7 @@
 
 <body>
     <h1>La composition - Deimos [ODS]</h1>
+    <div id="root"></div>
     <img src="../../images/bosses/240px-Deimos.jpg">
 
     <h2 id="Dei">Deimos</h2>
