@@ -1,6 +1,11 @@
 {
     "cairn": [
         {
+            "date": "28/11/2017",
+            "id": "2017_11_28cairn",
+            "url": "assets/logs/20171128-233259_cairn.html"
+        },
+        {
             "date": "21/11/2017",
             "id": "2017_11_21cairn",
             "url": "assets/logs/20171121-221508_cairn.html"
@@ -9,11 +14,6 @@
             "date": "14/11/2017",
             "id": "2017_11_14cairn",
             "url": "assets/logs/20171114-225322_cairn.html"
-        },
-        {
-            "date": "07/11/2017",
-            "id": "2017_11_07cairn",
-            "url": "assets/logs/20171107-223338_cairn.html"
         }
     ],
     "dei": [
@@ -35,6 +35,11 @@
     ],
     "gorse": [
         {
+            "date": "28/11/2017",
+            "id": "2017_11_28gorse",
+            "url": "assets/logs/20171128-224516_gorse.html"
+        },
+        {
             "date": "21/11/2017",
             "id": "2017_11_21gorse",
             "url": "assets/logs/20171121-213857_gorse.html"
@@ -43,11 +48,6 @@
             "date": "14/11/2017",
             "id": "2017_11_14gorse",
             "url": "assets/logs/20171114-221841_gorse.html"
-        },
-        {
-            "date": "07/11/2017",
-            "id": "2017_11_07gorse",
-            "url": "assets/logs/20171107-220832_gorse.html"
         }
     ],
     "kc": [
@@ -81,6 +81,11 @@
     ],
     "mo": [
         {
+            "date": "28/11/2017",
+            "id": "2017_11_28mo",
+            "url": "assets/logs/20171128-234058_mo.html"
+        },
+        {
             "date": "21/11/2017",
             "id": "2017_11_21mo",
             "url": "assets/logs/20171121-222141_mo.html"
@@ -89,14 +94,14 @@
             "date": "14/11/2017",
             "id": "2017_11_14mo",
             "url": "assets/logs/20171114-230052_mo.html"
-        },
-        {
-            "date": "07/11/2017",
-            "id": "2017_11_07mo",
-            "url": "assets/logs/20171107-224120_mo.html"
         }
     ],
     "sab": [
+        {
+            "date": "28/11/2017",
+            "id": "2017_11_28sab",
+            "url": "assets/logs/20171128-225606_sab.html"
+        },
         {
             "date": "21/11/2017",
             "id": "2017_11_21sab",
@@ -106,14 +111,14 @@
             "date": "14/11/2017",
             "id": "2017_11_14sab",
             "url": "assets/logs/20171114-224429_sab.html"
-        },
-        {
-            "date": "09/11/2017",
-            "id": "2017_11_09sab",
-            "url": "assets/logs/20171109-231519_sab.html"
         }
     ],
     "sam": [
+        {
+            "date": "28/11/2017",
+            "id": "2017_11_28sam",
+            "url": "assets/logs/20171128-235225_sam.html"
+        },
         {
             "date": "21/11/2017",
             "id": "2017_11_21sam",
@@ -123,11 +128,6 @@
             "date": "14/11/2017",
             "id": "2017_11_14sam",
             "url": "assets/logs/20171114-231237_sam.html"
-        },
-        {
-            "date": "07/11/2017",
-            "id": "2017_11_07sam",
-            "url": "assets/logs/20171107-225253_sam.html"
         }
     ],
     "sloth": [
@@ -149,6 +149,11 @@
     ],
     "vg": [
         {
+            "date": "28/11/2017",
+            "id": "2017_11_28vg",
+            "url": "assets/logs/20171128-222352_vg.html"
+        },
+        {
             "date": "21/11/2017",
             "id": "2017_11_21vg",
             "url": "assets/logs/20171121-212053_vg.html"
@@ -157,11 +162,6 @@
             "date": "14/11/2017",
             "id": "2017_11_14vg",
             "url": "assets/logs/20171114-212801_vg.html"
-        },
-        {
-            "date": "07/11/2017",
-            "id": "2017_11_07vg",
-            "url": "assets/logs/20171107-214706_vg.html"
         }
     ],
     "xera": [
