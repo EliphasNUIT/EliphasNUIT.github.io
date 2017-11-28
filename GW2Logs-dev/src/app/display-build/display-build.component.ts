@@ -23,14 +23,14 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    const toDestroy = this.elementRef.nativeElement.querySelector('script[async]');
+    const toDestroy = document.body.querySelector('script[async]');
     if (toDestroy) {
-      toDestroy.parentNode.removeChild(toDestroy);
+      toDestroy.remove();
     }
     const script = document.createElement('script');
-    script.setAttribute('defer', '');
+    script.setAttribute('async', '');
     script.setAttribute('src', 'https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js');
-    this.elementRef.nativeElement.appendChild(script);
+    document.body.appendChild(script);
   }
 
   traits(): SafeHtml {
