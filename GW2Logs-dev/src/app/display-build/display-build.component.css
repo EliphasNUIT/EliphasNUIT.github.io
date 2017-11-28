@@ -15,43 +15,6 @@ div[padding] {
     padding-bottom: 25px;
 }
 
-.selector{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center;
-  }
-
-.selector .selected {  
-    border: 3px solid rgba(0, 200, 0, 1.0) !important;
-    font-size: 1.3em;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-.selector span {
-    display: inline-flex;
-    flex-direction: row;   
-    justify-content:center;
-    cursor: pointer;    
-    align-items: center;
-    
-    margin-right:15px;
-    box-sizing: border-box;  
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.3);
-    font-size: 1.2em;
-    color: rgba(0, 0, 0, 1.0);
-    font-weight: bold; 
-    height: 80px;
-    width: 200px;
-  }
-.selector span.selected:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-.selector span:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 3px solid rgb(200, 0, 0);
-  }
 
 /* boxes */
  

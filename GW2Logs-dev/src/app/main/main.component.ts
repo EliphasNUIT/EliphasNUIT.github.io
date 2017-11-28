@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { BOSSES } from '../helpers/bosses';
 import { Boss } from '../helpers/boss';
-import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-main',
