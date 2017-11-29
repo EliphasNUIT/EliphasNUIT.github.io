@@ -290,7 +290,7 @@
             "builds": {
                 "vg": "weavPower1",
                 "gorse": "soulbeastCondi",
-                "sab": "chrsoulbeastCondiDPS",
+                "sab": "soulbeastCondi",
                 "sloth": "weavPower2SH",
                 "matt": "mirageCondiCMatt",
                 "kc": "weavPowerKC",

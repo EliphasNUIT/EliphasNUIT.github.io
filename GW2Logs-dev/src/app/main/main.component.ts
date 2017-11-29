@@ -58,7 +58,6 @@ export class MainComponent implements OnInit {
 
   onSelect(boss: Boss): void {
     this.selectedBoss = boss;
-    this.selectedDisplay = '';
   }
 
   onSelectDisplay(display: string): void {
