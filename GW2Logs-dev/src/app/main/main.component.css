@@ -1,0 +1,102 @@
+
+h1 {
+    font-size: 5.5em;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 1px black;
+}
+
+h2 {
+    font-size: 3.5em;
+    color: #22334F;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+.selector{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+  }
+
+.selector .selected {  
+    border: 5px solid rgba(0, 200, 0, 1.0) !important;
+    font-size: 2.2em;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+.selector span {
+    display: inline-flex;
+    flex-direction: row;   
+    justify-content:center;
+    cursor: pointer;    
+    align-items: center;
+    
+    margin-right:15px;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 2.0em;
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: bold; 
+    height: 100px;
+    width: 250px;
+  }
+.selector span.selected:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+.selector span:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 5px solid rgb(200, 0, 0);
+  }
+
+
+
+
+.bosses div {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top:10px;
+    margin-left:10px;
+  }
+
+.bosses div .selected {  
+    border: 5px solid rgba(0, 200, 0, 1.0) !important;
+    font-size: 1.05em;
+  }
+.bosses div span {
+    display: inline-flex;
+    flex-direction: row;   
+    justify-content:center;
+    cursor: pointer;    
+    align-items: center;
+    border-radius: 25%;
+
+    
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    opacity: 0.9;
+    font-size: 1.0em;
+    color: rgba(255, 255, 255, 1.0);
+    font-weight: bold; 
+    background-position: center;
+    background-size: cover;  
+
+    height: 120px;
+    width: 140px;
+  }
+.bosses div span.selected:hover {
+    color: rgba(210, 210, 210,1.0);
+  }
+.bosses div span:hover {
+    border: 5px solid rgb(200, 0, 0);
+    color: rgba(210, 210, 210,1.0);
+  }
