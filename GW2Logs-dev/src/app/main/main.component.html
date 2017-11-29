@@ -5,7 +5,7 @@
   <ul class="bosses">
     <div *ngFor="let boss of bosses">
       <span (click)="onSelect(boss)" [class.selected]="boss === selectedBoss" [ngStyle]="boss.style">
-        {{boss.name}}
+        {{boss.shortName | uppercase}}
       </span>
     </div>
 

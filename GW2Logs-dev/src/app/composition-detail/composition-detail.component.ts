@@ -1,9 +1,31 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import {team1, team2} from '../helpers/characters';
 import { Character } from '../helpers/character';
 import { Boss } from '../helpers/boss';
-import { DataBuild, BossBuilds, BossRoles, DataRole } from '../helpers/dataBuild';
+
+import * as $ from 'jquery';
+
+const team1: Character[] = [];
+
+const team2: Character[] = [];
+
+$.getJSON('assets/characters.json', function (data) {
+  if (!data) {
+    return;
+  }
+  console.log('characters.json loaded');
+  const t1 = data.team1;
+  for (let i = 0; i < t1.length; i++) {
+    const char = t1[i];
+    team1.push(new Character(char.name, char.roles, char.builds, char.armoryLink));
+  }
+  const t2 = data.team2;
+  for (let i = 0; i < t2.length; i++) {
+    const char = t2[i];
+    team2.push(new Character(char.name, char.roles, char.builds, char.armoryLink));
+  }
+  console.log('characters done');
+});
 
 @Component({
   selector: 'app-composition-detail',
@@ -19,21 +41,14 @@ export class CompositionDetailComponent implements OnInit {
 
   @Input() boss: Boss;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   onSelect(char: Character): void {
     this.selectedChar = char;
-  }
-
-  getBossBuildData(): DataBuild {
-    return BossBuilds[this.boss.shortName];
-  }
-
-  getBossRoleData(): DataRole {
-    return BossRoles[this.boss.shortName];
   }
 
 }

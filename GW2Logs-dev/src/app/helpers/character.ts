@@ -1,27 +1,33 @@
-import { DataBuild, DataRole } from './dataBuild';
-import { ProfBuild } from './profBuild';
+import { ProfBuild, buildDatabase } from './profBuild';
+
+import * as $ from 'jquery';
+
+import { makeAllBuild } from './profBuildHelpers/professions/_full';
+
+makeAllBuild();
 
 export class Character  {
     name: string;
-    role: string;
     gw2Armory: string;
-    builds: any[] = [];
+    builds: any;
+    roles: any;
 
-    constructor(name: string, role: string, gw2Armory: string) {
+    constructor(name: string, roles: any, builds: any, gw2Armory: string) {
         this.name = name;
-        this.role = role;
+        this.roles = roles;
+        this.builds = builds;
         this.gw2Armory = gw2Armory;
     }
 
-    getIcon(dataBuild: DataBuild): string {
-        return dataBuild[this.role].getIcon();
+    getIcon(bossName: string): string {
+        return buildDatabase.get(this.builds[bossName]).getIcon();
     }
 
-    getBuild(dataBuild: DataBuild): ProfBuild {
-        return dataBuild[this.role];
+    getBuild(bossName: string): ProfBuild {
+        return buildDatabase.get(this.builds[bossName]);
     }
 
-    getRole(dataRole: DataRole): string {
-        return dataRole[this.role];
+    getRole(bossName: string): string {
+        return this.roles[bossName];
     }
 }

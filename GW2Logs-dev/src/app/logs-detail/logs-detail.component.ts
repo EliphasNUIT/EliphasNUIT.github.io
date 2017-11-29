@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { Boss } from '../helpers/boss';
-import { Logs } from '../helpers/logs';
-import { OnDestroy, OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
+import { OnDestroy, OnChanges } from '@angular/core';
 
 @Component({
     selector: 'app-logs-detail',
@@ -59,7 +58,7 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
         }
     }
 
-    display(log: Logs): void {
+    display(log: {id: string, date: string, url: string}): void {
         const frameID = log.id;
         const frame = <HTMLIFrameElement>document.getElementById(frameID);
         if (!frame) {

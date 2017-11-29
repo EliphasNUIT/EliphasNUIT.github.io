@@ -1,6 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Character } from '../helpers/character';
-import { DataBuild, DataRole } from '../helpers/dataBuild';
 
 @Component({
   selector: 'app-build-detail',
@@ -10,8 +9,7 @@ import { DataBuild, DataRole } from '../helpers/dataBuild';
 export class BuildDetailComponent implements OnInit {
 
   @Input() character: Character;
-  @Input() bossData: DataBuild;
-  @Input() bossRole: DataRole;
+  @Input() bossName: string;
 
   constructor() { }
 
