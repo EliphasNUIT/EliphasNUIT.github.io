@@ -11,7 +11,7 @@
 #include <quazip.h>
 #include <quazipfile.h>
 
-#define PATH QString("../../logs/")
+#define PATH QString("../../docs/logs/")
 
 ///////////////////////
 
