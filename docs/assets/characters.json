@@ -1,0 +1,306 @@
+{
+    "team1": [
+        {
+            "name": "Damano",
+            "roles": {
+                "vg": "tank",
+                "gorse": "tank",
+                "sab": "",
+                "sloth": "",
+                "matt": "",
+                "kc": "tank",
+                "xera": "tank",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": "tank"
+            },
+            "builds": {
+                "vg": "chrTankMinstrel",
+                "gorse": "chrTank",
+                "sab": "chrDPS",
+                "sloth": "chrDPS",
+                "matt": "chrDPSMatt",
+                "kc": "chrTankKC",
+                "xera": "chrTank",
+                "cairn": "chrDPSCairn",
+                "mo": "chrDPS",
+                "sam": "chrDPS",
+                "dei": "chrTankDei"
+            },
+            "armoryLink": "https:gw2armory.com/Damano/characters/"
+        },
+        {
+            "name": "Dam",
+            "roles": {
+                "vg": "backup zone verte",
+                "gorse": "",
+                "sab": "kite",
+                "sloth": "",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "kite",
+                "mo": "protect",
+                "sam": "",
+                "dei": "black kite"
+            },
+            "builds": {
+                "vg": "druidVg",
+                "gorse": "druidSab",
+                "sab": "druidSab",
+                "sloth": "druidSloth",
+                "matt": "druidMatt",
+                "kc": "druidSab",
+                "xera": "druidXera",
+                "cairn": "druidCairnKite",
+                "mo": "druidSab",
+                "sam": "druidSam",
+                "dei": "druidKite"
+            },
+            "armoryLink": ""
+        },
+        {
+            "name": "Winter",
+            "roles": {
+                "vg": "rouge",
+                "gorse": "",
+                "sab": "cannon 2-4",
+                "sloth": "",
+                "matt": "",
+                "kc": "orb pusher",
+                "xera": "",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": ""
+            },
+            "builds": {
+                "vg": "bers",
+                "gorse": "bers",
+                "sab": "bers",
+                "sloth": "bers",
+                "matt": "bersCC",
+                "kc": "bers",
+                "xera": "bers",
+                "cairn": "bers",
+                "mo": "bers",
+                "sam": "bersCC",
+                "dei": "bers"
+            },
+            "armoryLink": "https:gw2armory.com/winterflame/characters/"
+        },
+        {
+            "name": "Eliphas",
+            "roles": {
+                "vg": "zone verte + rouge",
+                "gorse": "",
+                "sab": "",
+                "sloth": "champignon 3",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": "hand kite"
+            },
+            "builds": {
+                "vg": "mirageCondiVG",
+                "gorse": "fbDPS",
+                "sab": "fbDPSAxe",
+                "sloth": "weavPower2SH",
+                "matt": "mirageCondiCMatt",
+                "kc": "weavPowerKC",
+                "xera": "weavPowerKC",
+                "cairn": "mirageCondiC",
+                "mo": "mirageCondiC",
+                "sam": "mirageCondiCCC",
+                "dei": "herDeiVentari"
+            },
+            "armoryLink": "https:gw2armory.com/EliphasNUIT/characters/"
+        },
+        {
+            "name": "Sakura",
+            "roles": {
+                "vg": "zone verte + rouge",
+                "gorse": "",
+                "sab": "cannon 1-3",
+                "sloth": "champignon 1",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": ""
+            },
+            "builds": {
+                "vg": "mirageCondiVG",
+                "gorse": "mirageCondiC",
+                "sab": "mirageCondiC",
+                "sloth": "weavPower2SH",
+                "matt": "mirageCondiCMatt",
+                "kc": "weavPowerKC",
+                "xera": "weavPower1",
+                "cairn": "mirageCondiC",
+                "mo": "mirageCondiC",
+                "sam": "mirageCondiCCC",
+                "dei": "weavPower2SH"
+            },
+            "armoryLink": ""
+        }
+    ],
+    "team2": [
+        {
+            "name": "Polga",
+            "roles": {
+                "vg": "",
+                "gorse": "",
+                "sab": "",
+                "sloth": "",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "claim",
+                "sam": "",
+                "dei": ""
+            },
+            "builds": {
+                "vg": "chrDPS",
+                "gorse": "chrDPS",
+                "sab": "chrDPS",
+                "sloth": "chrDPS",
+                "matt": "chrDPSMatt",
+                "kc": "chrDPSKC",
+                "xera": "chrDPS",
+                "cairn": "chrDPSCairn",
+                "mo": "chrDPS",
+                "sam": "chrDPS",
+                "dei": "chrDPSDeimos"
+            },
+            "armoryLink": "https:gw2armory.com/Kaeryh/characters/"
+        },
+        {
+            "name": "Arkness",
+            "roles": {
+                "vg": "zone verte",
+                "gorse": "",
+                "sab": "",
+                "sloth": "",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "dispel",
+                "sam": "",
+                "dei": ""
+            },
+            "builds": {
+                "vg": "druidVg",
+                "gorse": "druidSab",
+                "sab": "druidSab",
+                "sloth": "druidSloth",
+                "matt": "druidMatt",
+                "kc": "druidSab",
+                "xera": "druidXera",
+                "cairn": "druidSpirit",
+                "mo": "druidSab",
+                "sam": "druidSam",
+                "dei": "druidSpirit"
+            },
+            "armoryLink": ""
+        },
+        {
+            "name": "Bouhteille",
+            "roles": {
+                "vg": "zone verte",
+                "gorse": "",
+                "sab": "",
+                "sloth": "",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": "tank"
+            },
+            "builds": {
+                "vg": "mirageCondiVG",
+                "gorse": "fbDPS",
+                "sab": "fbDPSAxe",
+                "sloth": "weavPower2SH",
+                "matt": "mirageCondiCMatt",
+                "kc": "weavPowerKC",
+                "xera": "weavPower1",
+                "cairn": "mirageCondiC",
+                "mo": "weavPower2SH",
+                "sam": "mirageCondiCCC",
+                "dei": "weavPower2SH"
+            },
+            "armoryLink": "https:gw2armory.com/Bouhteille/characters/"
+        },
+        {
+            "name": "Suzuca",
+            "roles": {
+                "vg": "",
+                "gorse": "",
+                "sab": "backup cannon",
+                "sloth": "champignon 2",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": ""
+            },
+            "builds": {
+                "vg": "weavPower1",
+                "gorse": "mirageCondiC",
+                "sab": "mirageCondiC",
+                "sloth": "weavPower2SH",
+                "matt": "mirageCondiCMatt",
+                "kc": "weavPowerKC",
+                "xera": "weavPower1",
+                "cairn": "mirageCondiC",
+                "mo": "weavPower2SH",
+                "sam": "mirageCondiCCC",
+                "dei": "weavPower2SH"
+            },
+            "armoryLink": "https:gw2armory.com/Suzuca/characters/"
+        },
+        {
+            "name": "Bob",
+            "roles": {
+                "vg": "",
+                "gorse": "",
+                "sab": "",
+                "sloth": "champignon 4",
+                "matt": "",
+                "kc": "",
+                "xera": "",
+                "cairn": "",
+                "mo": "",
+                "sam": "",
+                "dei": ""
+            },
+            "builds": {
+                "vg": "weavPower1",
+                "gorse": "soulbeastCondi",
+                "sab": "soulbeastCondi",
+                "sloth": "weavPower2SH",
+                "matt": "mirageCondiCMatt",
+                "kc": "weavPowerKC",
+                "xera": "weavPower1",
+                "cairn": "mirageCondiC",
+                "mo": "soulbeastCondi",
+                "sam": "soulbeastCondi",
+                "dei": "weavPower2SH"
+            },
+            "armoryLink": ""
+        }
+    ]
+}
