@@ -14,20 +14,20 @@ class CondiWeaverBuild extends EleBuild {
     constructor(name) {
         super(name);
         this.icon += 'weaver.png';
-        this.armor.setStats(['Viper\'s', 'Grieving', 'Grieving', 'Grieving', 'Viper\'s', 'Grieving']);
+        this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
         this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
         this.trinket.setSingleStat('Viper\'s');
-        this.wep1.setMainHand('Sword', 'Viper\'s', 'Superior Sigil of Bursting');
-        this.wep1.setOffHand('Focus', 'Viper\'s', 'Superior Sigil of Smoldering');
+        this.wep1.setMainHand('Sword', 'Viper\'s', 'Superior Sigil of Malice');
+        this.wep1.setOffHand('Dagger', 'Viper\'s', 'Superior Sigil of Geomancy');
         this.specialization.setSpec('spec1', 'Fire', [
             'Burning Precision',
-            'Pyromancer\'s Training',
+            'Power Overwhelming',
             'Persisting Flames'
         ]);
-        this.specialization.setSpec('spec2', 'Arcane', ['Arcane Precision', 'Final Shielding', 'Elemental Surge']);
+        this.specialization.setSpec('spec2', 'Earth', ['Serrated Stones', 'Strength of Stone', 'Written in Stone']);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Weaver\'s Prowess', 'Elements of Rage']);
-        this.skills.setHealSkill('Arcane Brilliance');
+        this.skills.setHealSkill('Glyph of Elemental Harmony');
         this.skills.setEliteSkill('Weave Self');
     }
 }
@@ -51,57 +51,19 @@ class PowerWeaverBuild extends EleBuild {
     }
 }
 
-class CondiTempestBuild extends EleBuild {
-    constructor(name) {
-        super(name);
-        this.icon += 'tempest.png';
-        this.armor.setStats(['Sinister', 'Sinister', 'Viper\'s', 'Sinister', 'Sinister', 'Sinister']);
-        this.armor.setSingleRune('Superior Rune of Balthazar');
-        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
-        this.trinket.setSingleStat('Sinister');
-        this.wep1.setMainHand('Scepter', 'Sinister', 'Superior Sigil of Bursting');
-        this.wep1.setOffHand('Warhorn', 'Viper\'s', 'Superior Sigil of Smoldering');
-        this.specialization.setSpec('spec1', 'Fire', [
-            'Burning Precision',
-            'Pyromancer\'s Training',
-            'Persisting Flames'
-        ]);
-        this.specialization.setSpec('spec2', 'Arcane', ['Arcane Precision', 'Final Shielding', 'Elemental Surge']);
-        this.specialization.setSpec('spec3', 'Tempest', ['Unstable Conduit', 'Harmonious Conduit', 'Imbued Melodies']);
-        this.skills.setHealSkill('Arcane Brilliance');
-    }
-}
-
 export function eleBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiTempestBuild('tempPS');
-        build.skills.setUtilitySkills(['Signet of Fire', 'Arcane Power', 'Glyph of Elemental Power']);
-        build.skills.setEliteSkill('Glyph of Elementals');
-
-        build = new CondiTempestBuild('tempPSSab');
-        build.skills.setUtilitySkills(['Signet of Fire', 'Arcane Power', 'Lightning Flash']);
-        build.skills.setEliteSkill('Glyph of Elementals');
-
         build = new CondiWeaverBuild('weavCondi');
-        build.skills.setUtilitySkills(['Signet of Fire', 'Arcane Power', 'Primordial Stance']);
+        build.skills.setUtilitySkills(['Signet of Fire', 'Glyph of Elemental Power', 'Primordial Stance']);
         build = new CondiWeaverBuild('weavCondiSab');
-        build.skills.setUtilitySkills(['Signet of Fire', 'Arcane Power', 'Lightning Flash']);
+        build.skills.setUtilitySkills(['Signet of Fire', 'Glyph of Elemental Power', 'Lightning Flash']);
     }
 
     // Power
     {
-        build = new PowerWeaverBuild('weavPower1');
-        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Accuracy');
-        build.specialization.setSpec('spec2', 'Arcane', [
-            'Renewing Stamina',
-            'Elemental Contingency',
-            'Bountiful Power'
-        ]);
-        build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Signet of Fire']);
-
-        build = new PowerWeaverBuild('weavPower2SH');
+        build = new PowerWeaverBuild('weavPowerSHArc');
         build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
@@ -110,7 +72,7 @@ export function eleBuildMaker() {
         ]);
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPower2BH');
+        build = new PowerWeaverBuild('weavPowerBHArc');
         build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
@@ -119,10 +81,20 @@ export function eleBuildMaker() {
         ]);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
+        build = new PowerWeaverBuild('weavPowerSHAir');
+        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
+        build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
+        build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
+
+        build = new PowerWeaverBuild('weavPowerBHAir');
+        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
+        build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
+        build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
+
         build = new PowerWeaverBuild('weavPowerKC');
         build.wep1.setTwoHand('Staff', 'Assassin\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Tempest Defense', 'Bolt to the Heart']);
-        build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Signet of Fire']);
+        build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
     }
 
     // Special

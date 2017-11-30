@@ -108,14 +108,14 @@
             "builds": {
                 "vg": "mirageCondiVG",
                 "gorse": "fbDPS",
-                "sab": "fbDPSAxe",
-                "sloth": "weavPower2SH",
-                "matt": "mirageCondiCMatt",
+                "sab": "fbDPS",
+                "sloth": "weavPowerSHAir",
+                "matt": "mirageCondiMatt",
                 "kc": "weavPowerKC",
-                "xera": "weavPowerKC",
-                "cairn": "mirageCondiC",
-                "mo": "mirageCondiC",
-                "sam": "mirageCondiCCC",
+                "xera": "weavPowerSHArc",
+                "cairn": "mirageCondi",
+                "mo": "fbDPS",
+                "sam": "weavPowerBHArc",
                 "dei": "herDeiVentari"
             },
             "armoryLink": "https:gw2armory.com/EliphasNUIT/characters/"
@@ -137,16 +137,16 @@
             },
             "builds": {
                 "vg": "mirageCondiVG",
-                "gorse": "mirageCondiC",
-                "sab": "mirageCondiC",
-                "sloth": "weavPower2SH",
-                "matt": "mirageCondiCMatt",
+                "gorse": "mirageCondi",
+                "sab": "mirageCondi",
+                "sloth": "weavPowerSHAir",
+                "matt": "mirageCondiMatt",
                 "kc": "weavPowerKC",
-                "xera": "weavPower1",
-                "cairn": "mirageCondiC",
-                "mo": "mirageCondiC",
-                "sam": "mirageCondiCCC",
-                "dei": "weavPower2SH"
+                "xera": "weavPowerSHArc",
+                "cairn": "mirageCondi",
+                "mo": "weavPowerSHArc",
+                "sam": "weavPowerBHArc",
+                "dei": "weavPowerSHAir"
             },
             "armoryLink": ""
         }
@@ -215,7 +215,7 @@
         {
             "name": "Bouhteille",
             "roles": {
-                "vg": "zone verte",
+                "vg": "",
                 "gorse": "",
                 "sab": "",
                 "sloth": "",
@@ -228,24 +228,24 @@
                 "dei": "tank"
             },
             "builds": {
-                "vg": "mirageCondiVG",
+                "vg": "dhPowerZealRad",
                 "gorse": "fbDPS",
-                "sab": "fbDPSAxe",
-                "sloth": "weavPower2SH",
-                "matt": "mirageCondiCMatt",
+                "sab": "fbDPS",
+                "sloth": "weavPowerSHAir",
+                "matt": "mirageCondiMatt",
                 "kc": "weavPowerKC",
-                "xera": "weavPower1",
-                "cairn": "mirageCondiC",
-                "mo": "weavPower2SH",
-                "sam": "mirageCondiCCC",
-                "dei": "weavPower2SH"
+                "xera": "weavPowerSHArc",
+                "cairn": "mirageCondi",
+                "mo": "fbDPS",
+                "sam": "weavPowerBHArc",
+                "dei": "weavPowerSHAir"
             },
             "armoryLink": "https:gw2armory.com/Bouhteille/characters/"
         },
         {
             "name": "Suzuca",
             "roles": {
-                "vg": "",
+                "vg": "zone verte",
                 "gorse": "",
                 "sab": "backup cannon",
                 "sloth": "champignon 2",
@@ -258,17 +258,17 @@
                 "dei": ""
             },
             "builds": {
-                "vg": "weavPower1",
-                "gorse": "mirageCondiC",
-                "sab": "mirageCondiC",
-                "sloth": "weavPower2SH",
-                "matt": "mirageCondiCMatt",
+                "vg": "mirageCondiVG",
+                "gorse": "mirageCondi",
+                "sab": "mirageCondi",
+                "sloth": "weavPowerSHAir",
+                "matt": "mirageCondiMatt",
                 "kc": "weavPowerKC",
-                "xera": "weavPower1",
-                "cairn": "mirageCondiC",
-                "mo": "weavPower2SH",
-                "sam": "mirageCondiCCC",
-                "dei": "weavPower2SH"
+                "xera": "weavPowerSHArc",
+                "cairn": "mirageCondi",
+                "mo": "weavPowerSHArc",
+                "sam": "weavPowerBHArc",
+                "dei": "weavPowerSHAir"
             },
             "armoryLink": "https:gw2armory.com/Suzuca/characters/"
         },
@@ -288,17 +288,17 @@
                 "dei": ""
             },
             "builds": {
-                "vg": "weavPower1",
+                "vg": "dhPowerZealRad",
                 "gorse": "soulbeastCondi",
                 "sab": "soulbeastCondi",
-                "sloth": "weavPower2SH",
-                "matt": "mirageCondiCMatt",
+                "sloth": "weavPowerSHAir",
+                "matt": "mirageCondiMatt",
                 "kc": "weavPowerKC",
-                "xera": "weavPower1",
-                "cairn": "mirageCondiC",
+                "xera": "weavPowerSHArc",
+                "cairn": "mirageCondi",
                 "mo": "soulbeastCondi",
-                "sam": "soulbeastCondi",
-                "dei": "weavPower2SH"
+                "sam": "weavPowerBHArc",
+                "dei": "weavPowerSHAir"
             },
             "armoryLink": ""
         }

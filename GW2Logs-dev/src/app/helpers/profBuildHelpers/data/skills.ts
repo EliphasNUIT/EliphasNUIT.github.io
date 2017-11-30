@@ -112,7 +112,7 @@ export class Skills {
         for (let i = 0; i < this.pets.length; i++) {
             const petData = pets[this.pets[i]] ? pets[this.pets[i]] : null;
             if (petData) {
-                let img = '<img small src="';
+                let img = '<img style="zoom: 0.8" src="';
                 img += petData.icon + '" ';
                 img += 'title="' + this.pets[i] + '">';
                 divToAdd += img;

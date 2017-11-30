@@ -39,18 +39,19 @@ class CondiFBBuild extends GuardBuild {
     constructor(name) {
         super(name);
         this.icon += 'firebrand.png';
-        this.armor.setStats(['Sinister', 'Sinister', 'Grieving', 'Grieving', 'Grieving', 'Grieving']);
+        this.armor.setStats(['Sinister', 'Sinister', 'Viper\'s', 'Sinister', 'Sinister', 'Sinister']);
         this.armor.setSingleRune('Superior Rune of Balthazar');
-        this.consumable.setConsumable('Bowl of Fire Meat Chili', 'Toxic Focusing Crystal');
-        this.trinket.setSingleStat('Grieving');
-        this.wep1.setMainHand('Scepter', 'Grieving', 'Superior Sigil of Bursting');
-        this.wep1.setOffHand('Torch', 'Grieving', 'Superior Sigil of Smoldering');
-        this.wep2.setMainHand('Sword', 'Grieving', 'Superior Sigil of Bursting');
-        this.specialization.setSpec('spec1', 'Zeal', ['Fiery Wrath', 'Kindled Zeal', 'Symbolic Avenger']);
+        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
+        this.trinket.setSingleStat('Sinister');
+        this.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Bursting');
+        this.wep1.setOffHand('Torch', 'Sinister', 'Superior Sigil of Smoldering');
+        this.wep2.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Bursting');
+        this.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
         this.specialization.setSpec('spec2', 'Radiance', ['Right-Hand Strength', 'Radiant Fire', 'Amplified Wrath']);
         this.specialization.setSpec('spec3', 'Firebrand', ['Archivist of Whispers', 'Legendary Lore', 'Loremaster']);
         this.skills.setHealSkill('Mantra of Solace');
-        this.skills.setUtilitySkills(['Mantra of Potence', 'Mantra of Flame', 'Signet of Wrath']);
+        this.skills.setUtilitySkills(['Mantra of Flame', 'Sword of Justice', 'Signet of Wrath']);
+        this.skills.setEliteSkill('Renewed Focus');
     }
 }
 
@@ -72,11 +73,12 @@ export function guardBuildMaker() {
     // Condi
     {
         build = new CondiFBBuild('fbDPS');
-        build.skills.setEliteSkill('Renewed Focus');
 
-        build = new CondiFBBuild('fbDPSAxe');
-        build.wep2.setMainHand('Axe', 'Grieving', 'Superior Sigil of Bursting');
-        build.skills.setEliteSkill('Renewed Focus');
+        build = new CondiFBBuild('fbDPSSword');
+        build.wep2.setMainHand('Sword', 'Viper\'s', 'Superior Sigil of Bursting');
+
+        build = new CondiFBBuild('fbDPSCC');
+        build.skills.setUtilitySkills(['Mantra of Flame', 'Hammer of Wisdom', 'Signet of Wrath']);
     }
 }
 

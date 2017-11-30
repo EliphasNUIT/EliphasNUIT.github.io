@@ -32,12 +32,12 @@ $.getJSON('assets/characters.json', function (data) {
   templateUrl: './composition-detail.component.html',
   styleUrls: ['./composition-detail.component.css']
 })
-export class CompositionDetailComponent implements OnInit {
+export class CompositionDetailComponent implements OnInit  {
   t1: Character[] = team1;
 
   t2: Character[] = team2;
 
-  selectedChar: Character;
+  selectedChar: Character = null;
 
   @Input() boss: Boss;
 

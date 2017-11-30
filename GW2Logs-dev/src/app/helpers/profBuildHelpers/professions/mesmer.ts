@@ -83,7 +83,7 @@ class CondiMiragePhantasmBuild extends MesBuild {
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
-        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
+        this.consumable.setConsumable('Bowl of Orrian Truffle and Meat Stew', 'Toxic Focusing Crystal');
         this.trinket.setSingleStat('Viper\'s');
         this.wep1.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Malice');
         this.wep1.setOffHand('Pistol', 'Viper\'s', 'Superior Sigil of Energy');
@@ -100,33 +100,11 @@ class CondiMiragePhantasmBuild extends MesBuild {
         ]);
         this.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirrored Axes', 'Dune Cloak']);
         this.skills.setHealSkill('Signet of the Ether');
+        this.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
+        this.skills.setEliteSkill('Jaunt');
     }
 }
 
-class CondiMirageCloneBuild extends MesBuild {
-    constructor(name) {
-        super(name);
-        this.icon += 'mirage.png';
-        this.armor.setSingleStat('Viper\'s');
-        this.armor.setSingleRune('Superior Rune of the Renegade');
-        this.consumable.setConsumable('Bowl of Orrian Truffle and Meat Stew', 'Toxic Focusing Crystal');
-        this.trinket.setSingleStat('Viper\'s');
-        this.wep1.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Malice');
-        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Energy');
-        this.specialization.setSpec('spec1', 'Dueling', [
-            'Duelist\'s Discipline',
-            'Blinding Dissipation',
-            'Superiority Complex'
-        ]);
-        this.specialization.setSpec('spec2', 'Chaos', [
-            'Descent into Madness',
-            'Chaotic Transference',
-            'Bountiful Disillusionment'
-        ]);
-        this.specialization.setSpec('spec3', 'Mirage', ['Self-Deception', 'Mirrored Axes', 'Infinite Horizon']);
-        this.skills.setHealSkill('False Oasis');
-    }
-}
 
 export function mesBuildMaker() {
     let build: ProfBuild = null;
@@ -215,32 +193,11 @@ export function mesBuildMaker() {
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new CondiMiragePhantasmBuild('mirageCondiCairn');
-        build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Jaunt');
+        build = new CondiMiragePhantasmBuild('mirageCondi');
 
         build = new CondiMiragePhantasmBuild('mirageCondiVG');
         build.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Malice');
         build.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirage Mantle', 'Dune Cloak']);
-        build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Signet of Humility');
-    }
-
-    // condi clone
-    {
-        build = new CondiMirageCloneBuild('mirageCondiCMatt');
-        build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Signet of Humility');
-
-        build = new CondiMirageCloneBuild('mirageCondiCCC');
-        build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Signet of Humility');
-
-        build = new CondiMirageCloneBuild('mirageCondiC');
-        build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Jaunt');
-
-        build = new CondiMirageCloneBuild('mirageCondiCVG');
         build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
     }

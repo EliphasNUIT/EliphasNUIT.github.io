@@ -30,7 +30,7 @@ table thead {
 
 
 tr.selected {  
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4) !important;
   }
 tr.selected:hover {
     background-color: rgba(0, 0, 0, 0.2);
