@@ -43,22 +43,17 @@ class BoonShareBuild extends MesBuild {
         this.armor.setStats([
             'Berserker\'s',
             'Berserker\'s',
-            'Berserker\'s',
+            'Commander\'s',
             'Berserker\'s',
             'Commander\'s',
             'Berserker\'s'
         ]);
         this.armor.setSingleRune('Superior Rune of Leadership');
-        this.consumable.setConsumable('Bowl of Nopalitos Sauté', 'Magnanimous Maintenance Oil');
+        this.consumable.setConsumable('Fried Golden Dumpling', 'Toxic Maintenance Oil');
         this.trinket.setSingleStat('Commander\'s');
         this.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Concentration');
         this.wep1.setOffHand('Shield', 'Berserker\'s', 'Superior Sigil of Paralyzation');
         this.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Paralyzation');
-        this.specialization.setSpec('spec1', 'Domination', [
-            'Empowered Illusions',
-            'Blurred Inscriptions',
-            'Mental Anguish'
-        ]);
         this.specialization.setSpec('spec3', 'Chronomancer', [
             'All\'s Well That Ends Well',
             'Improved Alacrity',
@@ -66,10 +61,75 @@ class BoonShareBuild extends MesBuild {
         ]);
         this.skills.setHealSkill('Well of Eternity');
         this.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        this.skills.setEliteSkill('Gravity Well');
     }
 }
 
-class BoonShareTankBuild extends BoonShareBuild {
+class DomiInspi extends BoonShareBuild {
+    constructor(name) {
+        super(name);
+        this.specialization.setSpec('spec1', 'Domination', [
+            'Empowered Illusions',
+            'Blurred Inscriptions',
+            'Mental Anguish'
+        ]);
+        this.specialization.setSpec('spec2', 'Inspiration', [
+            'Persisting Images',
+            'Restorative Illusions',
+            'Illusionary Inspiration'
+        ]);
+    }
+}
+
+class DomiIllu extends BoonShareBuild {
+    constructor(name) {
+        super(name);
+        this.specialization.setSpec('spec1', 'Domination', [
+            'Empowered Illusions',
+            'Blurred Inscriptions',
+            'Mental Anguish'
+        ]);
+        this.specialization.setSpec('spec2', 'Illusions', [
+            'Compounding Power',
+            'Phantasmal Haste',
+            'Phantasmal Force'
+        ]);
+    }
+}
+
+class DuelIllu extends BoonShareBuild {
+    constructor(name) {
+        super(name);
+        this.specialization.setSpec('spec1', 'Dueling', [
+            'Phantasmal Fury',
+            'Fencer\'s Finesse',
+            'Superiority Complex'
+        ]);
+        this.specialization.setSpec('spec2', 'Illusions', [
+            'Compounding Power',
+            'Phantasmal Haste',
+            'Phantasmal Force'
+        ]);
+    }
+}
+
+class IlluInspi extends BoonShareBuild {
+    constructor(name) {
+        super(name);
+        this.specialization.setSpec('spec2', 'Inspiration', [
+            'Persisting Images',
+            'Restorative Illusions',
+            'Illusionary Inspiration'
+        ]);
+        this.specialization.setSpec('spec1', 'Illusions', [
+            'Compounding Power',
+            'Phantasmal Haste',
+            'Phantasmal Force'
+        ]);
+    }
+}
+
+class DomiInspiTank extends DomiInspi {
     constructor(name) {
         super(name);
         this.wep1.setOffHand('Shield', 'Commander\'s', 'Superior Sigil of Paralyzation');
@@ -122,69 +182,58 @@ export function mesBuildMaker() {
 
         build = new MinstrelShareBuild('chrTankDei');
         build.skills.setHealSkill('Mantra of Recovery');
-        build.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Well of Recall']);
-        build.skills.setEliteSkill('Time Warp');
+        build.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Signet of Inspiration']);
+        build.skills.setEliteSkill('Gravity Well');
     }
 
     // boon share
     {
-        build = new BoonShareTankBuild('chrTank');
-        build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
-            'Warden\'s Feedback',
-            'Illusionary Inspiration'
-        ]);
-        build.skills.setEliteSkill('Gravity Well');
 
-        build = new BoonShareTankBuild('chrTankKC');
-        build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
-            'Warden\'s Feedback',
-            'Illusionary Inspiration'
-        ]);
+
+        build = new DomiInspi('chrVG');
+        build.skills.setEliteSkill('Signet of Humility');
+        build = new DomiInspiTank('chrVGTank');
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new BoonShareBuild('chrDPS');
-        build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
-            'Warden\'s Feedback',
-            'Illusionary Inspiration'
-        ]);
+        build = new DomiInspi('chrGorse');
+        build.skills.setEliteSkill('Signet of Humility');
+        build = new DomiInspiTank('chrGorseTank');
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new BoonShareBuild('chrDPSKC');
-        build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
-            'Warden\'s Feedback',
-            'Illusionary Inspiration'
-        ]);
-        build.skills.setEliteSkill('Gravity Well');
-
-        build = new BoonShareBuild('chrDPSDeimos');
-        build.wep2.setMainHand('Scepter', 'Berserker\'s', 'Superior Sigil of Accuracy');
-        build.specialization.setSpec('spec2', 'Illusions', [
-            'Compounding Power',
-            'Phantasmal Haste',
-            'Phantasmal Force'
-        ]);
+        build = new DomiIllu('chrSab');
         build.skills.setEliteSkill('Time Warp');
 
-        build = new BoonShareBuild('chrDPSMatt');
+        build = new DomiInspi('chrSloth');
         build.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Warden\'s Feedback',
             'Illusionary Inspiration'
         ]);
+        build.skills.setEliteSkill('Signet of Humility');
+
+        build = new IlluInspi('chrMatt');
         build.skills.setUtilitySkills(['Well of Action', 'Feedback', 'Signet of Inspiration']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new BoonShareBuild('chrDPSCairn');
-        build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
-            'Restorative Illusions',
-            'Illusionary Inspiration'
-        ]);
+        build = new DomiInspi('chrKC');
+        build.skills.setEliteSkill('Signet of Humility');
+        build = new DomiInspiTank('chrKCTank');
+        build.skills.setEliteSkill('Signet of Humility');
+
+        build = new DomiInspi('chrXera');
+        build = new DomiInspiTank('chrXeraTank');
+
+        build = new DomiIllu('chrCairn');
         build.skills.setEliteSkill('Time Warp');
+
+        build = new DuelIllu('chrMO');
+
+        build = new DomiIllu('chrSam');
+        build.skills.setEliteSkill('Signet of Humility');
+
+        build = new DomiInspi('chrDei');
+        build.skills.setEliteSkill('Time Warp');
+
     }
 
     // condi phantasme

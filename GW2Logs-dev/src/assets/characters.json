@@ -16,16 +16,16 @@
                 "dei": "tank"
             },
             "builds": {
-                "vg": "chrTankMinstrel",
-                "gorse": "chrTank",
-                "sab": "chrDPS",
-                "sloth": "chrDPS",
-                "matt": "chrDPSMatt",
-                "kc": "chrTankKC",
-                "xera": "chrTank",
-                "cairn": "chrDPSCairn",
-                "mo": "chrDPS",
-                "sam": "chrDPS",
+                "vg": "chrVGTank",
+                "gorse": "chrGorseTank",
+                "sab": "chrSab",
+                "sloth": "chrSloth",
+                "matt": "chrSloth",
+                "kc": "chrKCTank",
+                "xera": "chrXeraTank",
+                "cairn": "chrCairn",
+                "mo": "chrMO",
+                "sam": "chrSam",
                 "dei": "chrTankDei"
             },
             "armoryLink": "https:gw2armory.com/Damano/characters/"
@@ -168,17 +168,17 @@
                 "dei": ""
             },
             "builds": {
-                "vg": "chrDPS",
-                "gorse": "chrDPS",
-                "sab": "chrDPS",
-                "sloth": "chrDPS",
-                "matt": "chrDPSMatt",
-                "kc": "chrDPSKC",
-                "xera": "chrDPS",
-                "cairn": "chrDPSCairn",
-                "mo": "chrDPS",
-                "sam": "chrDPS",
-                "dei": "chrDPSDeimos"
+                "vg": "chrVG",
+                "gorse": "chrGorse",
+                "sab": "chrSab",
+                "sloth": "chrSloth",
+                "matt": "chrMatt",
+                "kc": "chrKC",
+                "xera": "chrXera",
+                "cairn": "chrCairn",
+                "mo": "chrMO",
+                "sam": "chrSam",
+                "dei": "chrDei"
             },
             "armoryLink": "https:gw2armory.com/Kaeryh/characters/"
         },
