@@ -26,9 +26,8 @@ h2 {
   }
 
 .selector .selected {  
-    border: 5px solid rgba(0, 200, 0, 1.0) !important;
+    border: 5px solid rgba(0, 220, 0, 0.7) !important;
     font-size: 2.2em;
-    background-color: rgba(0, 0, 0, 0.6);
   }
 .selector span {
     display: inline-flex;
@@ -41,19 +40,16 @@ h2 {
     box-sizing: border-box;  
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-size: auto;
     font-size: 2.0em;
-    color: rgba(0, 0, 0, 1.0);
+    color: rgba(0, 0, 0, 0.8);
     font-weight: bold; 
     height: 100px;
     width: 250px;
   }
-.selector span.selected:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
 .selector span:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 5px solid rgb(200, 0, 0);
+    border: 5px solid rgba(180, 0, 0,0.5);
   }
 
 
@@ -67,7 +63,7 @@ h2 {
   }
 
 .bosses div .selected {  
-    border: 5px solid rgba(0, 200, 0, 1.0) !important;
+    border: 5px solid rgba(0, 220, 0, 0.7) !important;
     font-size: 1.05em;
   }
 .bosses div span {
@@ -76,7 +72,7 @@ h2 {
     justify-content:center;
     cursor: pointer;    
     align-items: center;
-    border-radius: 25%;
+    border-radius: 50%;
 
     
     box-sizing: border-box;  
@@ -85,18 +81,14 @@ h2 {
     
     opacity: 0.9;
     font-size: 1.0em;
-    color: rgba(255, 255, 255, 1.0);
+    color: rgba(255, 255, 255, 0.0);
     font-weight: bold; 
     background-position: center;
-    background-size: cover;  
+    background-size: auto;
 
-    height: 120px;
-    width: 140px;
-  }
-.bosses div span.selected:hover {
-    color: rgba(210, 210, 210,1.0);
+    height: 128px;
+    width: 128px;
   }
 .bosses div span:hover {
-    border: 5px solid rgb(200, 0, 0);
-    color: rgba(210, 210, 210,1.0);
+    border: 5px solid rgba(180, 0, 0, 0.5);
   }

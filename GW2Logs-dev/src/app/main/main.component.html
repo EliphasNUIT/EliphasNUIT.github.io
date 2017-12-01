@@ -14,10 +14,10 @@
   <div *ngIf="selectedBoss">
     <h2>{{ selectedBoss.displayName | uppercase }}</h2>
     <div class='selector'>
-      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'">
+      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle">
         Composition
       </span>
-      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'">
+      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle">
         Logs
       </span>
     </div>

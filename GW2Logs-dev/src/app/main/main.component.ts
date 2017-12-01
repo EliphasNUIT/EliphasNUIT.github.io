@@ -49,6 +49,8 @@ export class MainComponent implements OnInit {
   bosses = BOSSES;
   selectedBoss: Boss;
   selectedDisplay: string;
+  logsStyle = { 'background-image': 'url(assets/logs.png)' };
+  compoStyle = { 'background-image': 'url(assets/compo.png)' };
 
   constructor() {
   }
