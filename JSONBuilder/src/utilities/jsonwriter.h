@@ -2,8 +2,6 @@
 #define HTMLWRITER_H
 
 #include <QObject>
-#include <QVector>
-#include <QXmlStreamReader>
 
 
 class JsonWriter : public QObject

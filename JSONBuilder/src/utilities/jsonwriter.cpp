@@ -54,15 +54,15 @@ JsonWriter::~JsonWriter() {
 
 void JsonWriter::execute(){
 
-    qInfo() << "removing old file";
+    qInfo() << "removing old json file";
     removeOld();
-    qInfo() << "old file removed";
+    qInfo() << "old json file removed";
 
-    qInfo() << "writing new file";
+    qInfo() << "writing new json file";
 
     QFile saveFile(PATH+'/'+"logs.json");
     if (!saveFile.open(QIODevice::WriteOnly)) {
-            qWarning("Couldn't open save file.");
+            qWarning("Couldn't open json file. Aborting");
             return;
     }
 
@@ -72,9 +72,9 @@ void JsonWriter::execute(){
     QStringList tries = logsDir.entryList(QDir::Files, QDir::Name | QDir::Reversed );
     QHash<QString, int> boss;
     QHash<QString, QJsonArray> bossJS;
-    QJsonObject myJSObject;
-    QStringList toZip;
 
+    QStringList toZip;
+    qInfo() << "getting logs' information";
     foreach(QString logFile, tries)
     {
         QString bossName = logFile.split("_").at(1);
@@ -83,7 +83,7 @@ void JsonWriter::execute(){
 
         if (boss[bossName] <= 3) {
             QJsonObject myJSBoss;
-            qInfo() << "treating " + logFile + " for boss " + bossName;
+            qInfo() << "    treating " + logFile + " for boss " + bossName;
             QString id = logFile.split("-").at(0);
             id.insert(4,"_");
             id.insert(7,"_");
@@ -93,11 +93,13 @@ void JsonWriter::execute(){
             myJSBoss["url"] = "logs/" + logFile;
             bossJS[bossName].append(myJSBoss);
         } else {
-            qInfo() << "Archiving " + logFile;
+            qInfo() << "    Archiving " + logFile+ " for boss " + bossName;
             toZip << logFile;
         }
     }
+    qInfo() << "writing new json file";
     QHashIterator<QString, QJsonArray> i(bossJS);
+    QJsonObject myJSObject;
     while (i.hasNext()) {
         i.next();
         myJSObject[i.key()] = i.value();
@@ -105,6 +107,7 @@ void JsonWriter::execute(){
     QJsonDocument saveDoc(myJSObject);
     saveFile.write(saveDoc.toJson());
     saveFile.close();
+    qInfo() << "new json file written";
 
     foreach(QString toZipFile, toZip)
     {
@@ -117,6 +120,6 @@ void JsonWriter::execute(){
             myFile.remove();
         }
     }
+    qInfo() << "old logs have been archived";
 
-    qInfo() << "new file written";
 }
