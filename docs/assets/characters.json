@@ -28,7 +28,7 @@
                 "sam": "chrSam",
                 "dei": "chrTankDei"
             },
-            "armoryLink": "https:gw2armory.com/Damano/characters/"
+            "armoryLink": "http://gw2armory.com/Damano/characters/"
         },
         {
             "name": "Dam",
@@ -88,7 +88,7 @@
                 "sam": "bersCC",
                 "dei": "bers"
             },
-            "armoryLink": "https:gw2armory.com/winterflame/characters/"
+            "armoryLink": "http://gw2armory.com/winterflame/characters/"
         },
         {
             "name": "Eliphas",
@@ -118,7 +118,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "herDeiVentari"
             },
-            "armoryLink": "https:gw2armory.com/EliphasNUIT/characters/"
+            "armoryLink": "http://gw2armory.com/EliphasNUIT/characters/"
         },
         {
             "name": "Sakura",
@@ -180,7 +180,7 @@
                 "sam": "chrSam",
                 "dei": "chrDei"
             },
-            "armoryLink": "https:gw2armory.com/Kaeryh/characters/"
+            "armoryLink": "http://gw2armory.com/Kaeryh/characters/"
         },
         {
             "name": "Arkness",
@@ -240,7 +240,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir"
             },
-            "armoryLink": "https:gw2armory.com/Bouhteille/characters/"
+            "armoryLink": "http://gw2armory.com/Bouhteille/characters/"
         },
         {
             "name": "Suzuca",
@@ -270,7 +270,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir"
             },
-            "armoryLink": "https:gw2armory.com/Suzuca/characters/"
+            "armoryLink": "http://gw2armory.com/Suzuca/characters/"
         },
         {
             "name": "Bob",
