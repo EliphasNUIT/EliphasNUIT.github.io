@@ -24,7 +24,7 @@ function detectmob() {
 
 export let buildDatabase: Map<string, ProfBuild> = new Map<string, ProfBuild>();
 
-const mobile = detectmob();
+const mobile = false;
 
 
 export class ProfBuild {

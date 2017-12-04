@@ -2,34 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Boss } from '../helpers/boss';
-import * as $ from 'jquery';
 
-const BOSSES: Boss[] = [
-  new Boss('Forsaken Thicket', 'Spirit Vale',
-    { 'background-image': 'url(assets/bosses/vg.png)' }, 'vg', 'Vale Guardian'),
-  new Boss('Forsaken Thicket', 'Spirit Vale',
-    { 'background-image': 'url(assets/bosses/gorse.png)' }, 'gorse', 'Gorseval the Multifarious'),
-  new Boss('Forsaken Thicket', 'Spirit Vale',
-    { 'background-image': 'url(assets/bosses/sab.png)' }, 'sab', 'Sabetha the Saboteur'),
-  new Boss('Forsaken Thicket', 'Salvation Pass',
-    { 'background-image': 'url(assets/bosses/sloth.png)' }, 'sloth', 'Slothasor'),
-  new Boss('Forsaken Thicket', 'Salvation Pass',
-    { 'background-image': 'url(assets/bosses/matt.png)' }, 'matt', 'Matthias Gabrel'),
-  new Boss('Forsaken Thicket', 'Fortress of the Faithful',
-    { 'background-image': 'url(assets/bosses/kc.png)' }, 'kc', 'Keep Construct'),
-  new Boss('Forsaken Thicket', 'Fortress of the Faithful',
-    { 'background-image': 'url(assets/bosses/xera.png)' }, 'xera', 'Xera'),
-  new Boss('Bastion of the Penitent', 'Bastion of the Penitent',
-    { 'background-image': 'url(assets/bosses/cairn.png)' }, 'cairn', 'Cairn the Indomitable'),
-  new Boss('Bastion of the Penitent', 'Bastion of the Penitent',
-    { 'background-image': 'url(assets/bosses/mo.png)' }, 'mo', 'Mursaat Overseer'),
-  new Boss('Bastion of the Penitent', 'Bastion of the Penitent',
-    { 'background-image': 'url(assets/bosses/sam.png)' }, 'sam', 'Samarog'),
-  new Boss('Bastion of the Penitent', 'Bastion of the Penitent',
-    { 'background-image': 'url(assets/bosses/dei.png)' }, 'dei', 'Deimos')
-];
+import { HttpClient } from '@angular/common/http';
 
-$.getJSON('logs/logs.json', function (data) {
+/*$.getJSON('assets/logs.json', function (data) {
   if (!data) {
     return;
   }
@@ -38,7 +14,7 @@ $.getJSON('logs/logs.json', function (data) {
     BOSSES[i].buildLogs(data);
   }
   console.log('logs done');
-});
+});*/
 
 @Component({
   selector: 'app-main',
@@ -46,13 +22,29 @@ $.getJSON('logs/logs.json', function (data) {
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  bosses = BOSSES;
+  bosses: Boss[] = [];
   selectedBoss: Boss;
-  selectedDisplay: string;
+  selectedDisplay = 'compo';
   logsStyle = { 'background-image': 'url(assets/logs.png)' };
   compoStyle = { 'background-image': 'url(assets/compo.png)' };
 
-  constructor() {
+  constructor(private http: HttpClient) {
+    const _this = this;
+    this.http.get('assets/bosses.json')
+      .subscribe(function (data: { bosses: any[] }) {
+        console.log('characters.json loaded');
+        _this.bosses = data.bosses.map(bossData => new Boss(bossData));
+        console.log('characters done');
+        _this.http.get('assets/logs.json')
+          .subscribe(function (logs: any) {
+            console.log('logs json loaded');
+            for (let i = 0; i < _this.bosses.length; i++) {
+              _this.bosses[i].buildLogs(logs);
+            }
+            console.log('logs done');
+            _this.selectedBoss = _this.bosses[0];
+          });
+      });
   }
 
   ngOnInit() {

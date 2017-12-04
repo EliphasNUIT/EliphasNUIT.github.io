@@ -2,7 +2,7 @@
 
   <h1>Les Boss de raids</h1>
 
-  <ul class="bosses">
+  <ul class="bosses" *ngIf="bosses.length > 0">
     <div *ngFor="let boss of bosses">
       <span (click)="onSelect(boss)" [class.selected]="boss === selectedBoss" [ngStyle]="boss.style">
         {{boss.shortName | uppercase}}

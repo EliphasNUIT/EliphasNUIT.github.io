@@ -12,6 +12,7 @@
 #include <quazipfile.h>
 
 #define PATH QString("../../docs/logs/")
+#define JSONPATH QString("../../GW2Logs-dev/src/assets/")
 
 ///////////////////////
 
@@ -60,7 +61,7 @@ void JsonWriter::execute(){
 
     qInfo() << "writing new json file";
 
-    QFile saveFile(PATH+'/'+"logs.json");
+    QFile saveFile(JSONPATH+'/'+"logs.json");
     if (!saveFile.open(QIODevice::WriteOnly)) {
             qWarning("Couldn't open json file. Aborting");
             return;

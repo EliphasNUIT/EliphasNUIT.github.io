@@ -4,19 +4,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { LinksComponent } from './links/links.component';
 import { MainComponent } from './main/main.component';
 import { BuildDetailComponent } from './build-detail/build-detail.component';
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
 import { CompositionDetailComponent } from './composition-detail/composition-detail.component';
 import { DisplayBuildComponent } from './display-build/display-build.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    LinksComponent,
     MainComponent,
     BuildDetailComponent,
     LogsDetailComponent,
@@ -24,7 +23,8 @@ import { DisplayBuildComponent } from './display-build/display-build.component';
     DisplayBuildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
