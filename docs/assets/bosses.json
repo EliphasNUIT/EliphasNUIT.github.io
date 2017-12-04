@@ -1,0 +1,81 @@
+{
+    "bosses": [
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Spirit Vale",
+            "style": { "background-image": "url(assets/bosses/vg.png)" },
+            "shortName": "vg",
+            "displayName": "Vale Guardian"
+        },
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Spirit Vale",
+            "style": { "background-image": "url(assets/bosses/gorse.png)" },
+            "shortName": "gorse",
+            "displayName": "Gorseval the Multifarious"
+        },
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Spirit Vale",
+            "style": { "background-image": "url(assets/bosses/sab.png)" },
+            "shortName": "sab",
+            "displayName": "Sabetha the Saboteur"
+        },
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Salvation Pass",
+            "style": { "background-image": "url(assets/bosses/sloth.png)" },
+            "shortName": "sloth",
+            "displayName": "Slothasor"
+        },
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Salvation Pass",
+            "style": { "background-image": "url(assets/bosses/matt.png)" },
+            "shortName": "matt",
+            "displayName": "Matthias Gabrel"
+        },
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Fortress of the Faithful",
+            "style": { "background-image": "url(assets/bosses/kc.png)" },
+            "shortName": "kc",
+            "displayName": "Keep Construct"
+        },
+        {
+            "raid": "Forsaken Thicket",
+            "wing": "Fortress of the Faithful",
+            "style": { "background-image": "url(assets/bosses/xera.png)" },
+            "shortName": "xera",
+            "displayName": "Xera"
+        },
+        {
+            "raid": "Bastion of the Penitent",
+            "wing": "Bastion of the Penitent",
+            "style": { "background-image": "url(assets/bosses/cairn.png)" },
+            "shortName": "cairn",
+            "displayName": "Cairn the Indomitable"
+        },
+        {
+            "raid": "Bastion of the Penitent",
+            "wing": "Bastion of the Penitent",
+            "style": { "background-image": "url(assets/bosses/mo.png)" },
+            "shortName": "mo",
+            "displayName": "Mursaat Overseer"
+        },
+        {
+            "raid": "Bastion of the Penitent",
+            "wing": "Bastion of the Penitent",
+            "style": { "background-image": "url(assets/bosses/sam.png)" },
+            "shortName": "sam",
+            "displayName": "Samarog"
+        },
+        {
+            "raid": "Bastion of the Penitent",
+            "wing": "Bastion of the Penitent",
+            "style": { "background-image": "url(assets/bosses/dei.png)" },
+            "shortName": "dei",
+            "displayName": "Deimos"
+        }
+    ]
+}

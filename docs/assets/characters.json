@@ -28,7 +28,7 @@
                 "sam": "chrSam",
                 "dei": "chrTankDei"
             },
-            "armoryLink": "http://gw2armory.com/Damano/characters/"
+            "gw2Armory": "http://gw2armory.com/Damano/characters/"
         },
         {
             "name": "Dam",
@@ -58,7 +58,7 @@
                 "sam": "druidSam",
                 "dei": "druidKite"
             },
-            "armoryLink": ""
+            "gw2Armory": ""
         },
         {
             "name": "Winter",
@@ -88,7 +88,7 @@
                 "sam": "bersCC",
                 "dei": "bers"
             },
-            "armoryLink": "http://gw2armory.com/winterflame/characters/"
+            "gw2Armory": "http://gw2armory.com/winterflame/characters/"
         },
         {
             "name": "Eliphas",
@@ -118,7 +118,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "herDeiVentari"
             },
-            "armoryLink": "http://gw2armory.com/EliphasNUIT/characters/"
+            "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
         },
         {
             "name": "Sakura",
@@ -148,7 +148,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir"
             },
-            "armoryLink": ""
+            "gw2Armory": ""
         }
     ],
     "team2": [
@@ -180,7 +180,7 @@
                 "sam": "chrSam",
                 "dei": "chrDei"
             },
-            "armoryLink": "http://gw2armory.com/Kaeryh/characters/"
+            "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
         },
         {
             "name": "Arkness",
@@ -210,7 +210,7 @@
                 "sam": "druidSam",
                 "dei": "druidSpirit"
             },
-            "armoryLink": ""
+            "gw2Armory": ""
         },
         {
             "name": "Bouhteille",
@@ -240,7 +240,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir"
             },
-            "armoryLink": "http://gw2armory.com/Bouhteille/characters/"
+            "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
         },
         {
             "name": "Suzuca",
@@ -270,7 +270,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir"
             },
-            "armoryLink": "http://gw2armory.com/Suzuca/characters/"
+            "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
         },
         {
             "name": "Bob",
@@ -300,7 +300,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir"
             },
-            "armoryLink": ""
+            "gw2Armory": ""
         }
     ]
 }
