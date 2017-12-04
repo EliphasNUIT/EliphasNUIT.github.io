@@ -49,7 +49,9 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     const toDestroyDiv = document.body.querySelectorAll('div');
     if (toDestroyDiv.length > 0) {
         const divToRemove = toDestroyDiv[toDestroyDiv.length - 1];
-        divToRemove.remove();
+        if (divToRemove.innerHTML === '') {
+          divToRemove.remove();
+        }
     }
     const script = document.createElement('script');
     script.setAttribute('async', '');
