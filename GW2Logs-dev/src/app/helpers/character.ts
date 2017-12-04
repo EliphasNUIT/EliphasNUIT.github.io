@@ -9,14 +9,14 @@ makeAllBuild();
 export class Character  {
     name: string;
     gw2Armory: string;
-    builds: any;
-    roles: any;
+    builds: string[];
+    roles: string[];
 
-    constructor(name: string, roles: any, builds: any, gw2Armory: string) {
-        this.name = name;
-        this.roles = roles;
-        this.builds = builds;
-        this.gw2Armory = gw2Armory;
+    constructor(params: {name: string, roles: string[], builds: string[], gw2Armory: string}) {
+        this.name = params.name;
+        this.roles = params.roles;
+        this.builds = params.builds;
+        this.gw2Armory = params.gw2Armory;
     }
 
     getIcon(bossName: string): string {

@@ -65,7 +65,6 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
             return;
         }
         const init = frame.getAttribute('src');
-        const _this = this;
         if (init === 'about:blank') {
             frame.style.display = 'block';
             frame.setAttribute('src', log.url);
@@ -73,15 +72,13 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
             frame.setAttribute('height', '50');
             frame.setAttribute('frameborder', '3');
             // init the button
-            frame.onload = function () {
-                _this.observeMutations(frameID, frame.contentDocument.body);
-            };
+            frame.onload = () => this.observeMutations(frameID, frame.contentDocument.body);
         } else {
             frame.style.display = (frame.style.display === 'block') ? 'none' : 'block';
             if (frame.style.display !== 'block') {
                 this.stopObserveMutations(frameID);
             } else {
-                _this.observeMutations(frameID, frame.contentDocument.body);
+                this.observeMutations(frameID, frame.contentDocument.body);
             }
         }
     }

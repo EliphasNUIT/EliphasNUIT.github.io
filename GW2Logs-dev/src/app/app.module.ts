@@ -10,6 +10,7 @@ import { BuildDetailComponent } from './build-detail/build-detail.component';
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
 import { CompositionDetailComponent } from './composition-detail/composition-detail.component';
 import { DisplayBuildComponent } from './display-build/display-build.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DisplayBuildComponent } from './display-build/display-build.component';
     DisplayBuildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

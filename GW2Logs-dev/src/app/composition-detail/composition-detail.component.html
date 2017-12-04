@@ -4,7 +4,7 @@
     <div class='compoContainer'>
       <table class='t1'>
         <thead>Groupe 1</thead>
-        <tbody>
+        <tbody *ngIf="t1.length > 1">         
           <tr *ngFor="let character of t1" (click)="onSelect(character)" [class.selected]="character === selectedChar">
             <td>
               <img [src]='character.getIcon(boss.shortName)'>
@@ -16,7 +16,7 @@
 
       <table class='t2'>
         <thead>Groupe 2</thead>
-        <tbody>
+        <tbody *ngIf="t2.length > 1">
           <tr *ngFor="let character of t2" (click)="onSelect(character)" [class.selected]="character === selectedChar">
             <td>
               <img [src]='character.getIcon(boss.shortName)'>

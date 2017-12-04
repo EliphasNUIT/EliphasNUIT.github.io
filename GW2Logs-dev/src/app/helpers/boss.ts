@@ -7,13 +7,13 @@ export class Boss {
     style: object;
     logs: { id: string, date: string, url: string }[] = [];
 
-    constructor(raid: string, wing: string, style: object, shortName: string,
-            displayName: string) {
-        this.raid = raid;
-        this.wing = wing;
-        this.style = style;
-        this.shortName = shortName;
-        this.displayName = displayName;
+    constructor(params: {raid: string, wing: string, style: object, shortName: string,
+            displayName: string}) {
+        this.raid = params.raid;
+        this.wing = params.wing;
+        this.style = params.style;
+        this.shortName = params.shortName;
+        this.displayName = params.displayName;
     }
 
     buildLogs(logsSrc: any[]) {
