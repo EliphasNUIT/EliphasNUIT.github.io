@@ -9,6 +9,8 @@
 div[buildDisplayDiv] {
     padding-top: 10px;
     padding-bottom: 10px;
+    min-height: 600px;
+    color: #000000;
 }
 div[padding] {
     padding-top: 25px;

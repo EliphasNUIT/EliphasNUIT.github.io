@@ -2,30 +2,33 @@
   <ul>
     <h3>La composition</h3>
     <div class='compoContainer'>
-      <table class='t1'>
-        <thead>Groupe 1</thead>
-        <tbody *ngIf="t1.length > 1">         
-          <tr *ngFor="let character of t1" (click)="onSelect(character)" [class.selected]="character === selectedChar">
-            <td>
-              <img [src]='character.getIcon(boss.shortName)'>
-              <span class='char'>{{character.name}}</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class='teamContainer'>
+        <table class='t1'>
+          <thead>Groupe 1</thead>
+          <tbody *ngIf="t1.length > 1">
+            <tr *ngFor="let character of t1" (click)="onSelect(character)" [class.selected]="character === selectedChar">
+              <td>
+                <img [src]='character.getIcon(boss.shortName)'>
+                <span class='char'>{{character.name}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-      <table class='t2'>
-        <thead>Groupe 2</thead>
-        <tbody *ngIf="t2.length > 1">
-          <tr *ngFor="let character of t2" (click)="onSelect(character)" [class.selected]="character === selectedChar">
-            <td>
-              <img [src]='character.getIcon(boss.shortName)'>
-              <span class='char'>{{character.name}}</span>
-            </td>
-          </tr>
-        </tbody>
+        <table class='t2'>
+          <thead>Groupe 2</thead>
+          <tbody *ngIf="t2.length > 1">
+            <tr *ngFor="let character of t2" (click)="onSelect(character)" [class.selected]="character === selectedChar">
+              <td>
+                <img [src]='character.getIcon(boss.shortName)'>
+                <span class='char'>{{character.name}}</span>
+              </td>
+            </tr>
+          </tbody>
 
-      </table>
+        </table>
+      </div>
+
       <app-build-detail [character]="selectedChar" [bossName]="boss.shortName"></app-build-detail>
     </div>
   </ul>

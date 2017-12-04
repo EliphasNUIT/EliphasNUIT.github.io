@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { LinksComponent } from './links/links.component';
 import { MainComponent } from './main/main.component';
 import { BuildDetailComponent } from './build-detail/build-detail.component';
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
@@ -17,7 +16,6 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    LinksComponent,
     MainComponent,
     BuildDetailComponent,
     LogsDetailComponent,

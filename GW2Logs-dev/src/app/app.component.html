@@ -7,22 +7,8 @@
 
 <app-navigation-bar></app-navigation-bar>
 
-<div class='selector'>
-  <span (click)="onSelectDisplay('boss')" [class.selected]="selectedDisplay === 'boss'">
-    Les Boss
-  </span>
-  <span (click)="onSelectDisplay('links')" [class.selected]="selectedDisplay === 'links'">
-    Les Liens Utiles
-  </span>
-</div>
-
 <body>
-  <div *ngIf="selectedDisplay === 'boss'">
     <app-main></app-main>
-  </div>
-  <div *ngIf="selectedDisplay === 'links'">
-    <app-links></app-links>
-  </div>
 </body>
 
 <div licensing>This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. All other trademarks

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked , Input } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, Input } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -12,21 +12,49 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
   @Input() build: ProfBuild;
 
   constructor(private sanitizer: DomSanitizer) {
-   }
+  }
 
   ngOnInit() {
   }
 
 
   ngAfterViewChecked() {
-    const toDestroy = document.body.querySelector('script[async]');
-    if (toDestroy) {
-      toDestroy.remove();
+    const toDestroyScript = document.head.querySelectorAll('script');
+    if (toDestroyScript.length > 0) {
+      for (let i = 0; i < toDestroyScript.length; i++) {
+        const scriptToRemove = toDestroyScript[i];
+        if (scriptToRemove.src.indexOf('armory') !== -1) {
+          scriptToRemove.remove();
+        }
+      }
+    }
+    const toDestroyLink = document.head.querySelectorAll('link');
+    if (toDestroyLink.length > 0) {
+      for (let i = 0; i < toDestroyLink.length; i++) {
+        const linkToRemove = toDestroyLink[i];
+        if (linkToRemove.href.indexOf('armory') !== -1) {
+          linkToRemove.remove();
+        }
+      }
+    }
+    const toDestroyStyle = document.head.querySelectorAll('style');
+    if (toDestroyStyle.length > 0) {
+      for (let i = 0; i < toDestroyStyle.length; i++) {
+        const styleToRemove = toDestroyStyle[i];
+        if (styleToRemove.innerHTML.indexOf('gw2a') !== -1) {
+          styleToRemove.remove();
+        }
+      }
+    }
+    const toDestroyDiv = document.body.querySelectorAll('div');
+    if (toDestroyDiv.length > 0) {
+        const divToRemove = toDestroyDiv[toDestroyDiv.length - 1];
+        divToRemove.remove();
     }
     const script = document.createElement('script');
     script.setAttribute('async', '');
     script.setAttribute('src', 'https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js');
-    document.body.appendChild(script);
+    document.head.appendChild(script);
   }
 
   traits(): SafeHtml {

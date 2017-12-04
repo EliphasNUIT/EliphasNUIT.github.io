@@ -1,5 +1,59 @@
-<nav class="container">
-  <a href="assets/logs/ressources.zip">Archives</a>
-  <a href="assets/logs/ressources2.zip">Archives 2</a>
-  <a href="https://framadate.org/TOaODOIfn3cRoSba" target="calendar">Inscription</a>
-</nav>
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-dark" uk-navbar>
+        <div class="uk-navbar-center">
+
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a class="titleNav" href="assets/logs/ressources.zip">Archives</a>
+                </li>
+                <li>
+                    <a class="titleNav" href="assets/logs/ressources2.zip">Archives 2</a>
+                </li>
+                <li>
+                    <a class="titleNav" href="https://framadate.org/TOaODOIfn3cRoSba" target="calendar">Inscription</a>
+                </li>
+                <li>
+                    <a class="titleNav" href="#">Liens Utiles</a>
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-nav-header">Addons</li>
+                                    <li *ngFor="let addon of Addons">
+                                        <a href={{addon.ref}} target={{addon.target}}> {{addon.text}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-nav-header">Builds</li>
+                                    <li *ngFor="let build of Builds">
+                                        <a href={{build.ref}} target={{build.target}}> {{build.text}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-nav-header">Strats</li>
+                                    <li *ngFor="let strat of Strats">
+                                        <a href={{strat.ref}} target={{strat.target}}> {{strat.text}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-nav-header">Divers</li>
+                                    <li *ngFor="let diver of Divers">
+                                        <a href={{diver.ref}} target={{diver.target}}> {{diver.text}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+</div>
