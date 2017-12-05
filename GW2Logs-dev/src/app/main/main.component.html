@@ -1,23 +1,24 @@
+<h1>
+  Les Boss de raids
+</h1>
 
+<ul class="bosses" *ngIf="bosses.length > 0">
+  <div *ngFor="let boss of bosses" class="uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top">
+      <span (click)="onSelect(boss)" class="uk-background-center-center uk-border-rounded uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap" [class.selected]="boss === selectedBoss"
+      [ngStyle]="boss.style">
+      {{boss.shortName | uppercase}}
+    </span>
+  </div>
 
-  <h1>Les Boss de raids</h1>
+</ul>
 
-  <ul class="bosses" *ngIf="bosses.length > 0">
-    <div *ngFor="let boss of bosses">
-      <span (click)="onSelect(boss)" [class.selected]="boss === selectedBoss" [ngStyle]="boss.style">
-        {{boss.shortName | uppercase}}
-      </span>
-    </div>
-
-  </ul>
-
-  <div *ngIf="selectedBoss">
+<div *ngIf="selectedBoss">
     <h2>{{ selectedBoss.displayName | uppercase }}</h2>
-    <div class='selector'>
-      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle">
+    <div class='selector uk-flex uk-flex-center uk-flex-middle'>
+      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top">
         Composition
       </span>
-      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle">
+      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top">
         Logs
       </span>
     </div>
@@ -28,4 +29,4 @@
       <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
     </div>
 
-  </div>
+</div>

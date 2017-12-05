@@ -1,6 +1,5 @@
 <div *ngIf="boss">
   <ul class="logs">
-    <h3>Les try</h3>
     <div *ngFor="let log of boss.logs">
       <span (click)="display(log)">
         Afficher les logs du {{log.date}}

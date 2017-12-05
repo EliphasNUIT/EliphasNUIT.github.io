@@ -10,79 +10,44 @@ h1 {
 }
 
 h2 {
-    font-size: 3.5em;
+    font-size: 3.0em;
     color: #22334F;
     font-weight: bold;
     text-decoration: underline;
     text-align: center;
 }
 
-
-.selector{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center;
-  }
-
 .selector .selected {  
-    border: 5px solid rgba(0, 220, 0, 0.7) !important;
-    font-size: 2.2em;
-  }
+  border: 5px solid rgba(0, 220, 0, 0.7) !important;
+  font-size: 2.2em;
+}
 .selector span {
-    display: inline-flex;
-    flex-direction: row;   
-    justify-content:center;
-    cursor: pointer;    
-    align-items: center;
-    
-    margin-right:15px;
-    box-sizing: border-box;  
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    background-position: center;
-    background-size: auto;
-    font-size: 2.0em;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: bold; 
-    height: 100px;
-    width: 250px;
-  }
+  cursor: pointer;    
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 2.0em;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold; 
+  height: 100px;
+  width: 250px;
+}
 .selector span:hover {
-    border: 5px solid rgba(180, 0, 0,0.5);
-  }
+  border: 5px solid rgba(180, 0, 0,0.5);
+}
 
 
-.bosses div {
-    display: inline-flex;
-    flex-direction: row;
-    margin-top:10px;
-    margin-left:10px;
-  }
 
 .bosses div .selected {  
     border: 5px solid rgba(0, 220, 0, 0.7) !important;
   }
 .bosses div span {
-    display: inline-flex;
-    flex-direction: row;   
-    justify-content:center;
     cursor: pointer;    
-    align-items: center;
-    border-radius: 5%;
-
-    
     box-sizing: border-box;  
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    
+    -webkit-box-sizing: border-box;   
     opacity: 0.9;
     font-size: 0.01em;
-    color: rgba(255, 255, 255, 0.0);
-    font-weight: bold; 
-    background-position: center;
-    background-size: auto;
-
     height: 128px;
     width: 128px;
   }

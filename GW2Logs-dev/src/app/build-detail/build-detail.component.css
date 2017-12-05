@@ -1,23 +1,23 @@
 
-div[buildDiv] {
+.buildDiv {
     font-size: 1.4em;
     border: 5px solid rgba(0, 0, 0, 0.8);
     width: 750px;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-div[char] {
+.char {
     background-color: rgba(0, 0, 0, 0.2);
     border: 3px solid rgba(0, 0, 0, 0.8)
 }
-div[charName] {
+.charName {
     text-align: center;
     font-size: 3.5em;
     text-decoration: underline;
     color: rgb(50, 50, 150);
 }
 
-div[charRole] {
+.charRole {
     text-align: center;
     font-size: 2.5em;
     color: rgb(50, 50, 100);
@@ -25,7 +25,7 @@ div[charRole] {
     padding-bottom: 10px;
 }
 
-div[charLink] {
+.charLink {
     text-align: center;
     font-size: 0.8em;
     color: rgb(50, 50, 150);
