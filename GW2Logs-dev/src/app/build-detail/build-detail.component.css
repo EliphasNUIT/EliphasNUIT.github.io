@@ -2,10 +2,14 @@
 .char {
     background-color: rgba(50, 50, 50, 0.2);
     border: 3px solid rgba(0, 0, 0, 0.8);
-    width: 750px;
+    width: 725px;
 }
 
 .charHeader {
+    color: rgb(50, 50, 100);
+}
+
+a {
     color: rgb(50, 50, 100);
 }
 

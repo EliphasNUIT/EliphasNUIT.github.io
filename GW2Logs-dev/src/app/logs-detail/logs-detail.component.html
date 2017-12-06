@@ -1,16 +1,17 @@
 <div *ngIf="boss">
-  <ul class="logs">
-    <div *ngFor="let log of boss.logs">
-      <span (click)="display(log)">
-        Afficher les logs du {{log.date}}
-      </span>
-      <iframe [id]='log.id' width="0" height="0" src='about:blank' frameborder="0" style="display:none"> </iframe>
+  <ul class="uk-margin-top uk-margin-bottom">
+    <div *ngFor="let log of boss.logs" class="uk-margin-top">
+      <button (click)="display(log)" class="uk-button uk-button-default uk-text-large uk-text-bold">Afficher les logs du {{log.date}}</button>
+      <iframe [id]='log.id' width="0" height="0" src='about:blank' frameborder="0" style="display:none" class="uk-margin-small-top">
+      </iframe>
     </div>
 
   </ul>
 
-  <p class='disclaimer'>Tous les logs ont été créés par
-    <a href="https://www.deltaconnected.com/arcdps/">ArcDPS</a> et parsés par
-    <a href="https://raidheroes.tk/">Raid Heroes</a>.</p>
+  <div class="uk-flex uk-flex-center">
+    <p class='disclaimer uk-text-small uk-text-bold'>Tous les logs ont été créés par
+      <a href="https://www.deltaconnected.com/arcdps/">ArcDPS</a> et parsés par
+      <a href="https://raidheroes.tk/">Raid Heroes</a>.</p>
+  </div>
 
 </div>

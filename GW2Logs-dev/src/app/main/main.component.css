@@ -1,46 +1,30 @@
 
 h1 {
-    font-size: 5.5em;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    padding: 20px 0;
     color: #00539F;
-    text-shadow: 3px 3px 1px black;
+    text-shadow: 2px 2px 2px black;
 }
 
 h2 {
-    font-size: 3.0em;
-    color: #22334F;
-    font-weight: bold;
-    text-decoration: underline;
-    text-align: center;
+    color: #2283AF;
+    text-shadow: 2px 2px 2px black;
 }
 
-.selector .selected {  
+.selected {  
   border: 5px solid rgba(0, 220, 0, 0.7) !important;
-  font-size: 2.2em;
 }
 .selector span {
   cursor: pointer;    
   box-sizing: border-box;  
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-size: 2.0em;
   color: rgba(0, 0, 0, 0.8);
-  font-weight: bold; 
   height: 100px;
   width: 250px;
 }
-.selector span:hover {
+span:hover {
   border: 5px solid rgba(180, 0, 0,0.5);
 }
 
-
-
-.bosses div .selected {  
-    border: 5px solid rgba(0, 220, 0, 0.7) !important;
-  }
 .bosses div span {
     cursor: pointer;    
     box-sizing: border-box;  
@@ -50,7 +34,4 @@ h2 {
     font-size: 0.01em;
     height: 128px;
     width: 128px;
-  }
-.bosses div span:hover {
-    border: 5px solid rgba(180, 0, 0, 0.5);
   }

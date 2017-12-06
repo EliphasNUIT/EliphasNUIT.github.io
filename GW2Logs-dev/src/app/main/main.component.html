@@ -1,4 +1,4 @@
-<h1>
+<h1 class="uk-text-center uk-text-bold uk-heading-primary">
   Les Boss de raids
 </h1>
 
@@ -11,14 +11,14 @@
   </div>
 
 </ul>
-
+<hr class="uk-divider-icon">
 <div *ngIf="selectedBoss">
-    <h2>{{ selectedBoss.displayName | uppercase }}</h2>
+    <h2 class="uk-text-center uk-text-bold">{{ selectedBoss.displayName | uppercase }}</h2>
     <div class='selector uk-flex uk-flex-center uk-flex-middle'>
-      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top">
+      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
         Composition
       </span>
-      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top">
+      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
         Logs
       </span>
     </div>

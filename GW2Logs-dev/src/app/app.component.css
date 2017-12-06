@@ -1,7 +1,6 @@
 
 h1 {
     color: #00539F;
-    font-size: 120px;
     text-shadow: 5px 5px 5px black;
 }
 
@@ -12,7 +11,7 @@ h1 {
 }
 
 html {
-    min-width: 1400px;
+    min-width: 1350px;
 }
 
 .my-main {
