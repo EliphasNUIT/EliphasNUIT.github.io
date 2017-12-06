@@ -1,15 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{title}}
-  </h1>
-</div>
+<h1 class="uk-text-center uk-text-middle uk-text-bold">
+  {{title}}
+</h1>
 
 <app-navigation-bar></app-navigation-bar>
 
-<body>
+<body class="uk-flex uk-flex-center">
+  <div class="my-main">
     <app-main></app-main>
+  </div>
 </body>
 
-<div licensing>This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. All other trademarks
-  are the property of their respective owners.</div>
+<div class="uk-flex uk-flex-center">
+  <div class="licensing uk-text-bold uk-text-small uk-text-center uk-text-middle">This unofficial site includes art and other assets that are © 2015 ArenaNet, Inc. All rights reserved. All other trademarks
+    are the property of their respective owners.</div>
+</div>
