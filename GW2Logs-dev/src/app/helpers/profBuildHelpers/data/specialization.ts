@@ -33,7 +33,7 @@ export class Specialization {
 
     getDiv(mobile: boolean): string {
         const specs = [this.spec1, this.spec2, this.spec3];
-        let divToAdd = '<div trait data-armory-embed="specializations" ';
+        let divToAdd = '<div data-armory-embed="specializations" ';
         let speIDS = 'data-armory-ids="';
         let totalTraits = '';
         for (let i = 0; i < 3; i++) {

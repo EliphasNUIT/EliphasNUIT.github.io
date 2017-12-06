@@ -31,7 +31,7 @@ export class ProfessionSkills {
         if (skills.length === 0) {
             return '';
         }
-        let divToAdd = '<div center data-armory-embed="skills" ';
+        let divToAdd = '<div data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
         for (let i = 0; i < skills.length; i++) {
             const skillID = skills[i];

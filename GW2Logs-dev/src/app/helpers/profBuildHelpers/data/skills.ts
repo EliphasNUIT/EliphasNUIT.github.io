@@ -48,7 +48,7 @@ export class Skills {
     }
 
     _getHealDiv(mobile: boolean): string {
-        let divToAdd = '<div center data-armory-embed="skills" ';
+        let divToAdd = '<div data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
         skillIDS += this.healSkill;
         skillIDS += '" ';
@@ -64,7 +64,7 @@ export class Skills {
     }
 
     _getEliteDiv(mobile): string {
-        let divToAdd = '<div center data-armory-embed="skills" ';
+        let divToAdd = '<div class="uk-margin-left" data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
         skillIDS += this.eliteSkill;
         skillIDS += '" ';
@@ -81,7 +81,7 @@ export class Skills {
 
     _getUtilitiesDiv(mobile): string {
         const skills = [this.utilitySkill0, this.utilitySkill1, this.utilitySkill2];
-        let divToAdd = '<div center data-armory-embed="skills" ';
+        let divToAdd = '<div class="uk-margin-left" data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
         for (let i = 0; i < skills.length; i++) {
             const skillID = skills[i];

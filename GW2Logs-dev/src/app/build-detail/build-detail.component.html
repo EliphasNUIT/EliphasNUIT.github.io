@@ -1,9 +1,5 @@
 <div *ngIf="character && bossName">
   <div class="char uk-margin-top">
-    <div class="charName">
-      {{character.name}}
-    </div>
-
     <div *ngIf="character.gw2Armory.length > 0" class="charLink" >
       <a [href]="character.gw2Armory" target='armory' title="Lien vers les persos sur GW2Armory" uk-tooltip="pos: top">Lien Armory</a>
     </div>

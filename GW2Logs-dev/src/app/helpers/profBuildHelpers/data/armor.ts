@@ -79,8 +79,8 @@ export class Armor {
     }
 
     getDiv(mobile: boolean): {armor: string, rune: string} {
-        let divToAdd = '<div center data-armory-embed="items" ';
-        let runeDivToAdd = '<div center data-armory-embed="items" ';
+        let divToAdd = '<div data-armory-embed="items" ';
+        let runeDivToAdd = '<div data-armory-embed="items" ';
         let armorIDS = 'data-armory-ids="';
         let runeIDS = 'data-armory-ids="';
         let totalStats = '';

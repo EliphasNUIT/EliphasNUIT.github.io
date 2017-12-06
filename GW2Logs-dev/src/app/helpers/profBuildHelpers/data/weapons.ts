@@ -112,8 +112,8 @@ export class Weapons {
     }
 
     getDiv(mobile): {wep: string, sig: string} {
-        let divToAdd = '<div center data-armory-embed="items" ';
-        let sigilDivToAdd = '<div center data-armory-embed="items" ';
+        let divToAdd = '<div data-armory-embed="items" ';
+        let sigilDivToAdd = '<div data-armory-embed="items" ';
         let ids = 'data-armory-ids="';
         let sigilIDS = 'data-armory-ids="';
         let totalStats = '';

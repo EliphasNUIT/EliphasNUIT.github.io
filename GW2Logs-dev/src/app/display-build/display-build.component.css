@@ -1,99 +1,20 @@
 
-  div[center] {
-    text-align: center;
-}
- div[bold] {
-    font-weight: bold;
-}
-
-div[buildDisplayDiv] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    min-height: 600px;
+.buildDisplayDiv {
     color: #000000;
 }
-div[padding] {
-    padding-top: 25px;
-    padding-bottom: 25px;
+
+.my-accordion-title {
+    background-color: rgba(150, 150, 150, 0.8)
 }
 
-
-/* boxes */
- 
- div[traitBox] {
-    display: flex;   
-    flex-direction: column;
-    width: 600px;
-    padding-left: 75px;
-}
-
- div[skillBox] {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
- div[skillList] {
-    padding-left: 175px;
-    display: inline-flex;
-    width: 400px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
- div[equipementBox] {
-    width: 600px;
-    padding-left: 75px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
- div[armorTitle] {
-    
-    display: inline-flex;
-    width: 30%;
-    flex-direction: column;
-    align-items: center;
-}
- div[armorBox] {
+.armor {
     width: 130px;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
 }
 
- div[wepTrinketTitle] {
-    display: inline-flex;
-    width: 70%;
-    flex-direction: column;
-    align-items: center;
-}
-
- div[wepsBox] {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
- div[wepBox2] {
-    width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-}
-
- div[wepBox1] {
-    width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-}
-
- div[trinketBox] {
+.weapon {
     width: 300px;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
+}
+
+.trinket {
+    width: 200px;
 }

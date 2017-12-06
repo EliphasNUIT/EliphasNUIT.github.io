@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.my-composition {
+height: 700px;
+}
+
 .teamContainer {
     display: inline-flex;
     flex-direction: row;

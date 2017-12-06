@@ -41,7 +41,7 @@ export class Trinket {
     }
 
     _getDiv(slots: string[], mobile: boolean): string {
-        let divToAdd = '<div center data-armory-embed="items" ';
+        let divToAdd = '<div data-armory-embed="items" ';
         let trinketIDS = 'data-armory-ids="';
         let totalStats = '';
         for (let i = 0; i < slots.length; i++) {

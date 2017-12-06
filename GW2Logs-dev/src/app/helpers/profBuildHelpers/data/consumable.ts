@@ -28,7 +28,7 @@ export class Consumable {
     }
 
     getDiv(mobile: boolean): string {
-        let divToAdd = '<div center data-armory-embed="items" ';
+        let divToAdd = '<div data-armory-embed="items" ';
         let foodIDS = 'data-armory-ids="';
         foodIDS += this.food + ',';
         foodIDS += this.utility + '" ';

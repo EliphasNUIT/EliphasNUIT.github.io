@@ -32,9 +32,9 @@ export class MainComponent implements OnInit {
     const _this = this;
     this.http.get('assets/bosses.json')
       .subscribe(function (data: { bosses: any[] }) {
-        console.log('characters.json loaded');
+        console.log('bosses.json loaded');
         _this.bosses = data.bosses.map(bossData => new Boss(bossData));
-        console.log('characters done');
+        console.log('bosses done');
         _this.http.get('assets/logs.json')
           .subscribe(function (logs: any) {
             console.log('logs json loaded');
