@@ -2,6 +2,11 @@ import { Component, OnInit, AfterViewChecked, Input } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
+(<any>document).GW2A_EMBED_OPTIONS = {
+  lang: 'fr',
+  persistToLocalStorage: true,
+};
+
 @Component({
   selector: 'app-display-build',
   templateUrl: './display-build.component.html',

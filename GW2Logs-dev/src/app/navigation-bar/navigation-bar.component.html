@@ -1,14 +1,14 @@
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-    <nav class="uk-navbar-container uk-dark" uk-navbar>
+    <nav class="uk-navbar-container uk-dark my-navbar" uk-navbar>
         <div class="uk-navbar-center">
 
             <ul class="uk-navbar-nav">
                 <li>
-                    <a class="titleNav" href="https://framadate.org/TOaODOIfn3cRoSba" target="calendar">Inscription</a>
+                    <a class="my-title-nav uk-text-large uk-text-bold" href="https://framadate.org/TOaODOIfn3cRoSba" target="calendar">Inscription</a>
                 </li>
                 <li>
-                    <a class="titleNav" href="#">Les Archives</a>
-                    <div class="uk-navbar-dropdown">
+                    <a class="my-title-nav uk-text-large uk-text-bold" href="#">Les Archives</a>
+                    <div class="uk-navbar-dropdown my-navbar-dropdown">
                         <div class="uk-navbar-dropdown-grid" uk-grid>
                             <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -26,12 +26,12 @@
 
 
                 <li>
-                    <a class="titleNav" href="#">Liens Utiles</a>
-                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                    <a class="my-title-nav uk-text-large uk-text-bold" href="#">Liens Utiles</a>
+                    <div class="uk-navbar-dropdown my-navbar-dropdown uk-navbar-dropdown-width-2">
                         <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
                             <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">Addons</li>
+                                    <li class="uk-nav-header uk-text-bold">Addons</li>
                                     <li *ngFor="let addon of Addons">
                                         <a href={{addon.ref}} target={{addon.target}}> {{addon.text}}</a>
                                     </li>
@@ -39,7 +39,7 @@
                             </div>
                             <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">Builds</li>
+                                    <li class="uk-nav-header uk-text-bold">Builds</li>
                                     <li *ngFor="let build of Builds">
                                         <a href={{build.ref}} target={{build.target}}> {{build.text}}</a>
                                     </li>
@@ -47,7 +47,7 @@
                             </div>
                             <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">Strats</li>
+                                    <li class="uk-nav-header uk-text-bold">Strats</li>
                                     <li *ngFor="let strat of Strats">
                                         <a href={{strat.ref}} target={{strat.target}}> {{strat.text}}</a>
                                     </li>
@@ -55,7 +55,7 @@
                             </div>
                             <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-nav-header">Divers</li>
+                                    <li class="uk-nav-header uk-text-bold">Divers</li>
                                     <li *ngFor="let diver of Divers">
                                         <a href={{diver.ref}} target={{diver.target}}> {{diver.text}}</a>
                                     </li>

@@ -13,6 +13,7 @@
 
 #define PATH QString("../../docs/logs/")
 #define JSONPATH QString("../../GW2Logs-dev/src/assets/")
+#define SITEJSONPATH QString("../../docs/assets/")
 
 ///////////////////////
 
@@ -30,43 +31,7 @@ bool writeInZipPath(const QString& pathToZip, const QString& name, const QString
     return true;
 }
 
-
-void removeOld() {
-    QDir dir(PATH);
-    dir.setNameFilters(QStringList() << "*.json*");
-    dir.setFilter(QDir::Files);
-    foreach(QString dirFile, dir.entryList())
-    {
-        qInfo() << "removing " + dirFile;
-        dir.remove(dirFile);
-    }
-}
-
-//////////////////////
-
-JsonWriter::JsonWriter(QObject *parent) : QObject(parent)
-{
-}
-
-JsonWriter::~JsonWriter() {
-}
-
-
-
-void JsonWriter::execute(){
-
-    qInfo() << "removing old json file";
-    removeOld();
-    qInfo() << "old json file removed";
-
-    qInfo() << "writing new json file";
-
-    QFile saveFile(JSONPATH+'/'+"logs.json");
-    if (!saveFile.open(QIODevice::WriteOnly)) {
-            qWarning("Couldn't open json file. Aborting");
-            return;
-    }
-
+void buildJSONObject(QJsonObject& myJSObject, QStringList& toZip) {
     QDir logsDir(PATH);
     logsDir.setNameFilters(QStringList() << "*.html*");
     logsDir.setFilter(QDir::Files);
@@ -74,7 +39,6 @@ void JsonWriter::execute(){
     QHash<QString, int> boss;
     QHash<QString, QJsonArray> bossJS;
 
-    QStringList toZip;
     qInfo() << "getting logs' information";
     foreach(QString logFile, tries)
     {
@@ -100,16 +64,48 @@ void JsonWriter::execute(){
     }
     qInfo() << "writing new json file";
     QHashIterator<QString, QJsonArray> i(bossJS);
-    QJsonObject myJSObject;
     while (i.hasNext()) {
         i.next();
         myJSObject[i.key()] = i.value();
     }
+}
+
+//////////////////////
+
+JsonWriter::JsonWriter(QObject *parent) : QObject(parent)
+{
+}
+
+JsonWriter::~JsonWriter() {
+}
+
+
+
+void JsonWriter::execute(){
+
+    qInfo() << "writing new json file";
+    QFile saveFile(JSONPATH+'/'+"logs.json");
+    if (!saveFile.open(QIODevice::WriteOnly)) {
+            qWarning("Couldn't open json file. Aborting");
+            return;
+    }   
+    QJsonObject myJSObject;
+    QStringList toZip;
+    buildJSONObject(myJSObject,toZip);
     QJsonDocument saveDoc(myJSObject);
     saveFile.write(saveDoc.toJson());
     saveFile.close();
     qInfo() << "new json file written";
 
+    QFile saveFile2(SITEJSONPATH+'/'+"logs.json");
+    if (saveFile2.open(QIODevice::WriteOnly)) {
+        qInfo() << "writting new json files in docs";
+        saveFile2.write(saveDoc.toJson());
+        saveFile2.close();
+        qInfo() << "new json file written in docs";
+    }
+
+    qInfo() << "archiving old files, please wait";
     foreach(QString toZipFile, toZip)
     {
         QFile myFile(PATH+ '/' + toZipFile);
@@ -121,6 +117,6 @@ void JsonWriter::execute(){
             myFile.remove();
         }
     }
-    qInfo() << "old logs have been archived";
+    qInfo() << "old logs have been archived, you can close the window";
 
 }

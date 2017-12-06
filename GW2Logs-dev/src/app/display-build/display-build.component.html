@@ -1,4 +1,4 @@
-<div class="buildDisplayDiv" *ngIf="build">
+<div class="build" *ngIf="build">
 
     <div uk-accordion="collapsible: false">
         <li>
@@ -17,26 +17,26 @@
             <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">Equipement</div>
             <div class="uk-accordion-content uk-flex uk-flex-around uk-flex-middle uk-flex-nowrap uk-margin-large-left uk-margin-large-right">
                 <li class="armor">
-                    <div class="uk-text-bold uk-text-center uk-text-middle">Armure</div>
+                    <div class="uk-text-bold uk-text-center uk-text-middle uk-text-large">Armure</div>
                     <div class="uk-flex uk-flex-center uk-flex-row uk-flex-middle" [innerHTML]='armor()'></div>
                 </li>
 
                 <div class="uk-flex uk-flex-center uk-flex-column uk-flex-middle">
                     <li class="trinket">
-                        <div class="uk-text-bold uk-text-center uk-text-middle">Bijoux</div>
+                        <div class="uk-text-bold uk-text-center uk-text-middle uk-text-large">Bijoux</div>
                         <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" [innerHTML]='trinket()'></div>
                     </li>
-
+                    <div class="uk-divider-small"></div>
                     <li class="weapon">
-                        <div class="uk-text-bold uk-text-center uk-text-middle">Armes</div>
+                        <div class="uk-text-bold uk-text-center uk-text-middle uk-text-large">Armes</div>
                         <div class="uk-flex uk-flex-center">
 
                             <div>
-                                <div *ngIf="build.wep2" class="uk-text-bold uk-text-center uk-text-middle">Set 1</div>
+                                <div *ngIf="build.wep2" class="uk-text-bold uk-text-center uk-text-middle uk-text-large">Set 1</div>
                                 <div [innerHTML]='wep1()'></div>
                             </div>
                             <div *ngIf="build.wep2" class="uk-margin-left">
-                                <div class="uk-text-bold uk-text-center uk-text-middle">Set 2</div>
+                                <div class="uk-text-bold uk-text-center uk-text-middle uk-text-large">Set 2</div>
                                 <div [innerHTML]='wep2()'></div>
                             </div>
 

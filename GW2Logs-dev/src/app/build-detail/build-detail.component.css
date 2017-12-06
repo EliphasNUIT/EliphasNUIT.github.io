@@ -1,28 +1,12 @@
 
-.buildDiv {
-    font-size: 1.4em;
-    border: 5px solid rgba(0, 0, 0, 0.8);
-    width: 750px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
 .char {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 3px solid rgba(0, 0, 0, 0.8)
+    background-color: rgba(50, 50, 50, 0.2);
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    width: 750px;
 }
 
-.charRole {
-    text-align: center;
-    font-size: 1.5em;
+.charHeader {
     color: rgb(50, 50, 100);
-    padding-bottom: 5px;
-}
-
-.charLink {
-    text-align: center;
-    font-size: 0.8em;
-    color: rgb(50, 50, 150);
-    padding-bottom: 2px;
 }
 
 

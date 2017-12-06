@@ -1,6 +1,8 @@
 
-.buildDisplayDiv {
+.build {
     color: #000000;
+    border: 5px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(50, 50, 50, 0.2);
 }
 
 .my-accordion-title {

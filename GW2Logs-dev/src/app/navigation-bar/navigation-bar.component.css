@@ -1,21 +1,15 @@
 
-.uk-navbar {
+.my-navbar {
     position: relative;
     z-index: 980;
     background-color: rgba(250, 250, 250, 0.0);
 }
 
-a.titleNav {
+.my-title-nav {
     color:black;
-    font-weight: bold;
-    font-size: 1.5em;
     background-color: rgba(250, 250, 250, 0.9);
 }
 
-.uk-nav-header {
-    font-weight: bold;
-}
-
-.uk-navbar-dropdown {
-    background-color: rgba(250, 250, 250, 0.95);
+.my-navbar-dropdown {
+    background-color: rgba(250, 250, 250, 0.9);
 }
