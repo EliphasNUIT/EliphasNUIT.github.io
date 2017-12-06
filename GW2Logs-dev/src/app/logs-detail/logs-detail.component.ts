@@ -68,7 +68,7 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
         if (init === 'about:blank') {
             frame.style.display = 'block';
             frame.setAttribute('src', log.url);
-            frame.setAttribute('width', '100%');
+            frame.setAttribute('width', '1250px');
             frame.setAttribute('height', '50');
             frame.setAttribute('frameborder', '3');
             // init the button

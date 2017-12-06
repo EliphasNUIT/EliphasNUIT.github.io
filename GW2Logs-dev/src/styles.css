@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html {
     font-family:sans-serif;
-    min-width: 1300px;
+    min-width: 1400px;
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url(./assets/bg2.jpg);
 }
