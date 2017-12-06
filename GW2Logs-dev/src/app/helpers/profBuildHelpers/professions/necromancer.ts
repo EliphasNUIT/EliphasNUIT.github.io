@@ -41,6 +41,9 @@ export function necroBuildMaker() {
 
         build = new CondiScourgeBuild('scourgeCondiSab');
         build.skills.setUtilitySkills(['Blood Is Power', 'Trail of Anguish', 'Epidemic']);
+
+        build = new CondiScourgeBuild('scourgeCondiDes');
+        build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
     }
 }
 

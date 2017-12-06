@@ -13,7 +13,9 @@
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": "tank"
+                "dei": "tank",
+                "desmina": "main tank",
+                "dhuum": "tank"
             },
             "builds": {
                 "vg": "chrVGTank",
@@ -26,7 +28,9 @@
                 "cairn": "chrCairn",
                 "mo": "chrMO",
                 "sam": "chrSam",
-                "dei": "chrTankDei"
+                "dei": "chrTankDei",
+                "desmina": "chrTankMinstrel",
+                "dhuum": "chrTankMinstrel"
             },
             "gw2Armory": "http://gw2armory.com/Damano/characters/"
         },
@@ -43,7 +47,9 @@
                 "cairn": "kite",
                 "mo": "protect",
                 "sam": "",
-                "dei": "black kite"
+                "dei": "black kite",
+                "desmina": "",
+                "dhuum": "kite"
             },
             "builds": {
                 "vg": "druidVg",
@@ -56,7 +62,9 @@
                 "cairn": "druidCairnKite",
                 "mo": "druidSab",
                 "sam": "druidSam",
-                "dei": "druidKite"
+                "dei": "druidKite",
+                "desmina": "druidVg",
+                "dhuum": "druidSab"
             },
             "gw2Armory": ""
         },
@@ -73,7 +81,9 @@
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": ""
+                "dei": "",
+                "desmina": "",
+                "dhuum": "Orb 1"
             },
             "builds": {
                 "vg": "bers",
@@ -86,39 +96,45 @@
                 "cairn": "bers",
                 "mo": "bers",
                 "sam": "bersCC",
-                "dei": "bers"
+                "dei": "bers",
+                "desmina": "bersCC",
+                "dhuum": "bers"
             },
             "gw2Armory": "http://gw2armory.com/winterflame/characters/"
         },
         {
-            "name": "Eliphas",
+            "name": "Suzuca",
             "roles": {
-                "vg": "zone verte + rouge",
+                "vg": "zone verte",
                 "gorse": "",
-                "sab": "",
-                "sloth": "champignon 3",
+                "sab": "backup cannon",
+                "sloth": "champignon 2",
                 "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": "hand kite"
+                "dei": "",
+                "desmina": "",
+                "dhuum": ""
             },
             "builds": {
                 "vg": "mirageCondiVG",
-                "gorse": "fbDPS",
-                "sab": "fbDPS",
+                "gorse": "mirageCondi",
+                "sab": "mirageCondi",
                 "sloth": "weavPowerSHAir",
                 "matt": "mirageCondiMatt",
                 "kc": "weavPowerKC",
                 "xera": "weavPowerSHArc",
                 "cairn": "mirageCondi",
-                "mo": "fbDPS",
+                "mo": "weavPowerSHArc",
                 "sam": "weavPowerBHArc",
-                "dei": "herDeiVentari"
+                "dei": "weavPowerSHAir",
+                "desmina": "mirageCondi",
+                "dhuum": "weavPowerBHAir"
             },
-            "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+            "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
         },
         {
             "name": "Sakura",
@@ -133,7 +149,9 @@
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": ""
+                "dei": "",
+                "desmina": "",
+                "dhuum": "Orb 2"
             },
             "builds": {
                 "vg": "mirageCondiVG",
@@ -146,7 +164,9 @@
                 "cairn": "mirageCondi",
                 "mo": "weavPowerSHArc",
                 "sam": "weavPowerBHArc",
-                "dei": "weavPowerSHAir"
+                "dei": "weavPowerSHAir",
+                "desmina": "mirageCondi",
+                "dhuum": "weavPowerBHAir"
             },
             "gw2Armory": ""
         }
@@ -165,7 +185,9 @@
                 "cairn": "",
                 "mo": "claim",
                 "sam": "",
-                "dei": ""
+                "dei": "",
+                "desmina": "off tank",
+                "dhuum": ""
             },
             "builds": {
                 "vg": "chrVG",
@@ -178,7 +200,9 @@
                 "cairn": "chrCairn",
                 "mo": "chrMO",
                 "sam": "chrSam",
-                "dei": "chrDei"
+                "dei": "chrDei",
+                "desmina": "chrGorse",
+                "dhuum": "chrGorse"
             },
             "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
         },
@@ -195,7 +219,9 @@
                 "cairn": "",
                 "mo": "dispel",
                 "sam": "",
-                "dei": ""
+                "dei": "",
+                "desmina": "",
+                "dhuum": ""
             },
             "builds": {
                 "vg": "druidVg",
@@ -208,7 +234,9 @@
                 "cairn": "druidSpirit",
                 "mo": "druidSab",
                 "sam": "druidSam",
-                "dei": "druidSpirit"
+                "dei": "druidSpirit",
+                "desmina": "druidVg",
+                "dhuum": "druidSab"
             },
             "gw2Armory": ""
         },
@@ -225,55 +253,63 @@
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": ""
+                "dei": "",
+                "desmina": "",
+                "dhuum": "Boon removal"
             },
             "builds": {
                 "vg": "dhPowerZealRad",
                 "gorse": "fbDPS",
                 "sab": "fbDPS",
-                "sloth": "weavPowerSHAir",
-                "matt": "mirageCondiMatt",
+                "sloth": "dhPowerZealRad",
+                "matt": "renCondi",
                 "kc": "weavPowerKC",
-                "xera": "weavPowerSHArc",
-                "cairn": "mirageCondi",
-                "mo": "fbDPS",
-                "sam": "weavPowerBHArc",
-                "dei": "weavPowerSHAir"
+                "xera": "renCondi",
+                "cairn": "renCondi",
+                "mo": "renCondi",
+                "sam": "renCondi",
+                "dei": "weavPowerSHAir",
+                "desmina": "renCondi",
+                "dhuum": "renCondi"
             },
             "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
         },
         {
-            "name": "Suzuca",
+            "name": "Eliphas",
             "roles": {
-                "vg": "zone verte",
+                "vg": "zone verte + rouge",
                 "gorse": "",
-                "sab": "backup cannon",
-                "sloth": "champignon 2",
+                "sab": "",
+                "sloth": "champignon 3",
                 "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": ""
+                "dei": "hand kite",
+                "desmina": "Wurm killer",
+                "dhuum": ""
             },
             "builds": {
                 "vg": "mirageCondiVG",
-                "gorse": "mirageCondi",
-                "sab": "mirageCondi",
-                "sloth": "weavPowerSHAir",
-                "matt": "mirageCondiMatt",
+                "gorse": "fbDPS",
+                "sab": "fbDPS",
+                "sloth": "dhPowerZealRad",
+                "matt": "holoPower",
                 "kc": "weavPowerKC",
-                "xera": "weavPowerSHArc",
-                "cairn": "mirageCondi",
-                "mo": "weavPowerSHArc",
-                "sam": "weavPowerBHArc",
-                "dei": "weavPowerSHAir"
+                "xera": "holoPower",
+                "cairn": "holoPower",
+                "mo": "holoPower",
+                "sam": "holoPower",
+                "dei": "herDeiVentari",
+                "desmina": "scourgeCondiDes",
+                "dhuum": "holoPower"
             },
-            "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+            "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
         },
         {
-            "name": "Bob",
+            "name": "Pedna",
             "roles": {
                 "vg": "",
                 "gorse": "",
@@ -285,20 +321,24 @@
                 "cairn": "",
                 "mo": "",
                 "sam": "",
-                "dei": ""
+                "dei": "",
+                "desmina": "",
+                "dhuum": "Orb 3"
             },
             "builds": {
-                "vg": "dhPowerZealRad",
+                "vg": "soulbeastCondi",
                 "gorse": "soulbeastCondi",
                 "sab": "soulbeastCondi",
                 "sloth": "weavPowerSHAir",
-                "matt": "mirageCondiMatt",
+                "matt": "soulbeastCondi",
                 "kc": "weavPowerKC",
                 "xera": "weavPowerSHArc",
-                "cairn": "mirageCondi",
+                "cairn": "soulbeastCondi",
                 "mo": "soulbeastCondi",
                 "sam": "weavPowerBHArc",
-                "dei": "weavPowerSHAir"
+                "dei": "weavPowerSHAir",
+                "desmina": "soulbeastCondi",
+                "dhuum": "soulbeastCondi"
             },
             "gw2Armory": ""
         }
