@@ -45,7 +45,7 @@ class CondiSoulbeastBuild extends CondiRangerBuild {
         this.specialization.setSpec('spec2', 'Wilderness Survival', ['Taste for Danger', 'Ambidexterity', 'Poison Master']);
         this.specialization.setSpec('spec3', 'Soulbeast', ['Live Fast', 'Predator\'s Cunning', 'Leader of the Pack']);
         this.skills.pets = ['Juvenile Lynx', 'Juvenile Warthog', 'Juvenile Fanged Iboga'];
-        this.skills.setHealSkill('Bear Stance');
+        this.skills.setHealSkill('"We Heal As One!"');
         this.skills.setUtilitySkills(['Viper\'s Nest', 'Vulture Stance', 'Sharpening Stone']);
         this.skills.setEliteSkill('One Wolf Pack');
     }

@@ -187,7 +187,7 @@
                 "sam": "",
                 "dei": "",
                 "desmina": "off tank",
-                "dhuum": ""
+                "dhuum": "orb 3"
             },
             "builds": {
                 "vg": "chrVG",
@@ -296,15 +296,15 @@
                 "gorse": "fbDPS",
                 "sab": "fbDPS",
                 "sloth": "dhPowerZealRad",
-                "matt": "holoPower",
+                "matt": "sholoPowerMatt",
                 "kc": "weavPowerKC",
-                "xera": "holoPower",
-                "cairn": "holoPower",
-                "mo": "holoPower",
-                "sam": "holoPower",
+                "xera": "sholoPowerXera",
+                "cairn": "sholoPowerCairn",
+                "mo": "sholoPowerMO",
+                "sam": "sholoPowerSam",
                 "dei": "herDeiVentari",
                 "desmina": "scourgeCondiDes",
-                "dhuum": "holoPower"
+                "dhuum": "sholoPowerDhuum"
             },
             "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
         },
@@ -323,7 +323,7 @@
                 "sam": "",
                 "dei": "",
                 "desmina": "",
-                "dhuum": "Orb 3"
+                "dhuum": ""
             },
             "builds": {
                 "vg": "soulbeastCondi",
@@ -338,7 +338,7 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir",
                 "desmina": "soulbeastCondi",
-                "dhuum": "soulbeastCondi"
+                "dhuum": "weavPowerBHAir"
             },
             "gw2Armory": ""
         }
