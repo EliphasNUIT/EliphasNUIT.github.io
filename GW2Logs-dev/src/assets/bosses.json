@@ -4,109 +4,133 @@
             "raid": "Forsaken Thicket",
             "wing": "Spirit Vale",
             "style": {
-                "background-image": "url(assets/bosses/vg.png)"
+                "background-image": "url(assets/bosses/vg.png)",
+                "font-size": "12px"
             },
             "shortName": "vg",
+            "buttonName": "Vale Guardian",
             "displayName": "Vale Guardian"
         },
         {
             "raid": "Forsaken Thicket",
             "wing": "Spirit Vale",
             "style": {
-                "background-image": "url(assets/bosses/gorse.png)"
+                "background-image": "url(assets/bosses/gorse.png)",
+                "font-size": "13px"
             },
             "shortName": "gorse",
+            "buttonName": "Gorseval",
             "displayName": "Gorseval the Multifarious"
         },
         {
             "raid": "Forsaken Thicket",
             "wing": "Spirit Vale",
             "style": {
-                "background-image": "url(assets/bosses/sab.png)"
+                "background-image": "url(assets/bosses/sab.png)",
+                "font-size": "13px"
             },
             "shortName": "sab",
+            "buttonName": "Sabetha",
             "displayName": "Sabetha the Saboteur"
         },
         {
             "raid": "Forsaken Thicket",
             "wing": "Salvation Pass",
             "style": {
-                "background-image": "url(assets/bosses/sloth.png)"
+                "background-image": "url(assets/bosses/sloth.png)",
+                "font-size": "12px"
             },
             "shortName": "sloth",
+            "buttonName": "Slothasor",
             "displayName": "Slothasor"
         },
         {
             "raid": "Forsaken Thicket",
             "wing": "Salvation Pass",
             "style": {
-                "background-image": "url(assets/bosses/matt.png)"
+                "background-image": "url(assets/bosses/matt.png)",
+                "font-size": "13px"
             },
             "shortName": "matt",
+            "buttonName": "Matthias",
             "displayName": "Matthias Gabrel"
         },
         {
             "raid": "Forsaken Thicket",
             "wing": "Fortress of the Faithful",
             "style": {
-                "background-image": "url(assets/bosses/kc.png)"
+                "background-image": "url(assets/bosses/kc.png)",
+                "font-size": "11px"
             },
             "shortName": "kc",
+            "buttonName": "Keep Construct",
             "displayName": "Keep Construct"
         },
         {
             "raid": "Forsaken Thicket",
             "wing": "Fortress of the Faithful",
             "style": {
-                "background-image": "url(assets/bosses/xera.png)"
+                "background-image": "url(assets/bosses/xera.png)",
+                "font-size": "13px"
             },
             "shortName": "xera",
+            "buttonName": "Xera",
             "displayName": "Xera"
         },
         {
             "raid": "Bastion of the Penitent",
             "wing": "Bastion of the Penitent",
             "style": {
-                "background-image": "url(assets/bosses/cairn.png)"
+                "background-image": "url(assets/bosses/cairn.png)",
+                "font-size": "13px"
             },
             "shortName": "cairn",
+            "buttonName": "Cairn",
             "displayName": "Cairn the Indomitable"
         },
         {
             "raid": "Bastion of the Penitent",
             "wing": "Bastion of the Penitent",
             "style": {
-                "background-image": "url(assets/bosses/mo.png)"
+                "background-image": "url(assets/bosses/mo.png)",
+                "font-size": "13px"
             },
             "shortName": "mo",
+            "buttonName": "Mursaat",
             "displayName": "Mursaat Overseer"
         },
         {
             "raid": "Bastion of the Penitent",
             "wing": "Bastion of the Penitent",
             "style": {
-                "background-image": "url(assets/bosses/sam.png)"
+                "background-image": "url(assets/bosses/sam.png)",
+                "font-size": "13px"
             },
             "shortName": "sam",
+            "buttonName": "Samarog",
             "displayName": "Samarog"
         },
         {
             "raid": "Bastion of the Penitent",
             "wing": "Bastion of the Penitent",
             "style": {
-                "background-image": "url(assets/bosses/dei.png)"
+                "background-image": "url(assets/bosses/dei.png)",
+                "font-size": "13px"
             },
             "shortName": "dei",
+            "buttonName": "Deimos",
             "displayName": "Deimos"
         },
         {
             "raid": "Hall of Chains",
             "wing": "Hall of Chains",
             "style": {
-                "background-image": "url(assets/bosses/desmina.png)",
-                "background-size": "128px 128px"
+                "background-image": "url(assets/bosses/ssh.png)",
+                "background-size": "128px 128px",
+                "font-size": "11px"
             },
             "shortName": "desmina",
+            "buttonName": "Soulless Horror",
             "displayName": "Soulless Horror"
         },
         {
@@ -114,9 +138,11 @@
             "wing": "Hall of Chains",
             "style": {
                 "background-image": "url(assets/bosses/dhuum.png)",
-                "background-size": "128px 128px"
+                "background-size": "128px 128px",
+                "font-size": "13px"
             },
             "shortName": "dhuum",
+            "buttonName": "Dhuum",
             "displayName": "Dhuum"
         }
     ]

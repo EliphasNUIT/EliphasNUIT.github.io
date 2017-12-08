@@ -1,38 +1,45 @@
 
 .my-composition {
-    height: 730px;
-}
-
+    height: 750px;
+    color: black;
+}/*
 table {
-    border: #000000 5px solid;
     border-spacing: 0px;
     background-color: rgba(50, 50, 50, 0.2);
+}*/
+th {
+    background-color: rgba(200,100,0,0.2);   
+    border: 4px solid black;
 }
-
-table thead {
+th span{
     color: black;
-    background-color: #FFCC66;
 }
 
-
-
-tr.selected {  
+table tbody tr.selected {  
     background-color: rgba(0, 0, 0, 0.40) !important;
   }
-tr.selected:hover {
+table tbody tr.selected:hover {
     background-color: rgba(0, 0, 0, 0.25);
   }
-tr:hover {
+table tbody tr:hover {
     background-color: rgba(0, 0, 0, 0.25);
   }
+
+table tbody tr {
+    border-top: 2px solid black;
+    width: 250px;
+}
 
 img {
     zoom: 0.8;
 }
 
-table tr {
-    cursor: pointer;    
-    border: #000000 1px solid;
-    color: #000000;
-    min-width: 250px;
+table tbody{  
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.selectable {
+    cursor: pointer; 
 }

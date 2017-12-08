@@ -63,6 +63,13 @@ export function revBuildMaker() {
     // Condi
     {
         build = new CondiRenegadeBuild('renCondi');
+
+        build = new CondiRenegadeBuild('renCondiSupp');
+        build.specialization.setSpec('spec2', 'Salvation', [
+            'Tranquil Balance',
+            'Invoking Harmony',
+            'Selfless Amplification'
+        ]);
     }
 
     // Special

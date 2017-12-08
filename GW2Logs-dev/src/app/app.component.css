@@ -7,7 +7,10 @@ h1 {
 .licensing {
     width: 675px;
     color: black;
-    background-color: rgba(222, 222, 222, 0.5);
+    background-color: rgba(222, 222, 222, 0.5);    
+    border-bottom: 5px solid rgba(200, 200, 200, 0.5);
+    border-left: 5px solid rgba(200, 200, 200, 0.5);
+    border-right: 5px solid rgba(200, 200, 200, 0.5);
 }
 
 .my-main {

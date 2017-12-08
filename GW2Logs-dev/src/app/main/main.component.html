@@ -3,15 +3,18 @@
 </h1>
 
 <ul class="bosses" *ngIf="bosses.length > 0">
-  <div *ngFor="let boss of bosses" class="uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top">
-      <span (click)="onSelect(boss)" class="uk-background-center-center uk-border-rounded uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap" [class.selected]="boss === selectedBoss"
+  <div *ngFor="let boss of bosses" class="uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-transition-toggle">
+      <span (click)="onSelect(boss)" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap" [class.selected]="boss === selectedBoss"
       [ngStyle]="boss.style">
-      {{boss.shortName | uppercase}}
+      <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
+        {{boss.buttonName | uppercase}}
+      </div>
     </span>
   </div>
-
 </ul>
+
 <hr class="uk-divider-icon">
+
 <div *ngIf="selectedBoss">
     <h2 class="uk-text-center uk-text-bold">{{ selectedBoss.displayName | uppercase }}</h2>
     <div class='selector uk-flex uk-flex-center uk-flex-middle'>
@@ -28,5 +31,6 @@
     <div *ngIf="selectedDisplay === 'logs'">
       <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
     </div>
-
+    
 </div>
+<a href="#" style="background-color: rgba(250,250,250,0.4)" uk-totop uk-scroll title="retour top" uk-tooltip></a>

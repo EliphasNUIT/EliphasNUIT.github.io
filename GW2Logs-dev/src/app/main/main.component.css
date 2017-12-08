@@ -9,29 +9,28 @@ h2 {
     text-shadow: 2px 2px 2px black;
 }
 
-.selected {  
-  border: 5px solid rgba(0, 220, 0, 0.7) !important;
+
+span.selected {  
+  box-shadow: 0px 6px 10px rgba(0,30,0,0.7),6px 0px 10px rgba(0,30,0,0.7),-6px 0px 10px rgba(0,30,0,0.7),0px -6px 10px rgba(0,30,0,0.7)   !important;
 }
 .selector span {
   cursor: pointer;    
-  box-sizing: border-box;  
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   color: rgba(0, 0, 0, 0.8);
   height: 100px;
   width: 250px;
+  border-radius: 10%;
 }
 span:hover {
-  border: 5px solid rgba(180, 0, 0,0.5);
+  box-shadow: 0px 3px 4px rgba(30,0,0,0.5),3px 0px 4px rgba(30,0,0,0.5),-3px 0px 4px rgba(30,0,0,0.5),0px -3px 4px rgba(30,0,0,0.5);
 }
 
 .bosses div span {
     cursor: pointer;    
-    box-sizing: border-box;  
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;   
-    opacity: 0.9;
-    font-size: 0.01em;
     height: 128px;
     width: 128px;
+    border-radius: 15%;
   }
+.my-button-title {
+  color: white;  
+  text-shadow: 0px 0px 1px black, 0px 0px 4px black;
+}
