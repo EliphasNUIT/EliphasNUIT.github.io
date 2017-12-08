@@ -16,18 +16,19 @@ th span{
 }
 
 table tbody tr.selected {  
-    background-color: rgba(0, 0, 0, 0.40) !important;
+    background-color: rgba(0, 0, 0, 0.40);
   }
-table tbody tr.selected:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+  table tbody tr.selected:hover {  
+    background-color: rgba(0, 0, 0, 0.40);
   }
 table tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
 table tbody tr {
     border-top: 2px solid black;
     width: 250px;
+    transition: background-color 0.2s linear;
 }
 
 img {

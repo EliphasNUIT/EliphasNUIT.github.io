@@ -2,9 +2,9 @@
   Les Boss de raids
 </h1>
 
-<ul class="bosses" *ngIf="bosses.length > 0">
+<ul *ngIf="bosses.length > 0">
   <div *ngFor="let boss of bosses" class="uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-transition-toggle">
-      <span (click)="onSelect(boss)" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap" [class.selected]="boss === selectedBoss"
+      <span (click)="onSelect(boss)" class="uk-border-rounded selector bosses uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap" [class.selected]="boss === selectedBoss"
       [ngStyle]="boss.style">
       <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
         {{boss.buttonName | uppercase}}
@@ -17,11 +17,11 @@
 
 <div *ngIf="selectedBoss">
     <h2 class="uk-text-center uk-text-bold">{{ selectedBoss.displayName | uppercase }}</h2>
-    <div class='selector uk-flex uk-flex-center uk-flex-middle'>
-      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
+    <div class='uk-flex uk-flex-center uk-flex-middle'>
+      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-border-rounded selector switcher uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
         Composition
       </span>
-      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
+      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-border-rounded selector switcher uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
         Logs
       </span>
     </div>
