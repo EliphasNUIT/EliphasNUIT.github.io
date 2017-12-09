@@ -19,10 +19,14 @@
     <h2 class="uk-text-center uk-text-bold">{{ selectedBoss.displayName | uppercase }}</h2>
     <div class='uk-flex uk-flex-center uk-flex-middle'>
       <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-border-rounded selector switcher uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
-        Composition
+        <div class="my-button-title uk-text-bold uk-text-center">
+          Composition
+        </div>
       </span>
       <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-border-rounded selector switcher uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
-        Logs
+        <div class="my-button-title uk-text-bold uk-text-center">
+          Logs
+        </div>
       </span>
     </div>
     <div *ngIf="selectedDisplay === 'compo'">

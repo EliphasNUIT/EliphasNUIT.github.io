@@ -1,7 +1,6 @@
 
 .my-composition {
     height: 750px;
-    color: black;
 }/*
 table {
     border-spacing: 0px;
@@ -13,26 +12,31 @@ th {
 }
 th span{
     color: black;
+    text-shadow: 0px 0px 1px rgb(80,80,80);
 }
 
 table tbody tr.selected {  
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(100,150,0,0.3);
   }
   table tbody tr.selected:hover {  
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(100,150,0,0.3);
   }
 table tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+    background-color: rgba(100,100,0,0.2);
+}
 
 table tbody tr {
     border-top: 2px solid black;
-    width: 250px;
+    color: black;  
+    text-shadow: 0px 0px 1px rgb(80,80,80);
+    background-color: rgba(50, 50, 50, 0.2);
     transition: background-color 0.2s linear;
 }
 
 img {
-    zoom: 0.8;
+    zoom: 0.6;
+    -webkit-filter: drop-shadow(5px 5px 5px #222) ;
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 table tbody{  

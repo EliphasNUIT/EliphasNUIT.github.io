@@ -1,12 +1,12 @@
 
 .char {
-    background-color: rgba(50, 50, 50, 0.2);
-    border: 2px solid black;
-    width: 750px;
+    width: 700px;
 }
 
 .charHeader {
     color: rgb(50, 50, 100);
+    background-color: rgba(50, 50, 50, 0.2);
+    border: 2px solid black;
 }
 
 a {

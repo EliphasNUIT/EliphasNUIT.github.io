@@ -1,5 +1,5 @@
 {
-    "team1": [
+    "team": [
         {
             "name": "Damano",
             "roles": {
@@ -31,6 +31,36 @@
                 "dei": "chrTankDei",
                 "desmina": "chrTankMinstrel",
                 "dhuum": "chrTankMinstrel"
+            },
+            "slotID": {
+                "vg": 0,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
+            },
+            "teamID": {
+                "vg": 0,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
             },
             "gw2Armory": "http://gw2armory.com/Damano/characters/"
         },
@@ -66,6 +96,36 @@
                 "desmina": "druidVg",
                 "dhuum": "druidSab"
             },
+            "slotID": {
+                "vg": 1,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 1,
+                "desmina": 1,
+                "dhuum": 1
+            },
+            "teamID": {
+                "vg": 0,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
+            },
             "gw2Armory": ""
         },
         {
@@ -99,6 +159,36 @@
                 "dei": "bers",
                 "desmina": "bersCC",
                 "dhuum": "bers"
+            },
+            "slotID": {
+                "vg": 2,
+                "gorse": 2,
+                "sab": 2,
+                "sloth": 2,
+                "matt": 2,
+                "kc": 2,
+                "xera": 2,
+                "cairn": 2,
+                "mo": 2,
+                "sam": 2,
+                "dei": 2,
+                "desmina": 2,
+                "dhuum": 2
+            },
+            "teamID": {
+                "vg": 0,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
             },
             "gw2Armory": "http://gw2armory.com/winterflame/characters/"
         },
@@ -134,6 +224,36 @@
                 "desmina": "mirageCondi",
                 "dhuum": "weavPowerBHAir"
             },
+            "slotID": {
+                "vg": 3,
+                "gorse": 3,
+                "sab": 3,
+                "sloth": 3,
+                "matt": 3,
+                "kc": 3,
+                "xera": 3,
+                "cairn": 3,
+                "mo": 3,
+                "sam": 3,
+                "dei": 3,
+                "desmina": 3,
+                "dhuum": 3
+            },
+            "teamID": {
+                "vg": 0,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
+            },
             "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
         },
         {
@@ -168,10 +288,38 @@
                 "desmina": "mirageCondi",
                 "dhuum": "weavPowerBHAir"
             },
+            "slotID": {
+                "vg": 4,
+                "gorse": 3,
+                "sab": 3,
+                "sloth": 4,
+                "matt": 4,
+                "kc": 4,
+                "xera": 4,
+                "cairn": 4,
+                "mo": 4,
+                "sam": 4,
+                "dei": 4,
+                "desmina": 4,
+                "dhuum": 4
+            },
+            "teamID": {
+                "vg": 0,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
+            },
             "gw2Armory": ""
-        }
-    ],
-    "team2": [
+        },
         {
             "name": "Polga",
             "roles": {
@@ -203,6 +351,36 @@
                 "dei": "chrDei",
                 "desmina": "chrGorse",
                 "dhuum": "chrGorse"
+            },
+            "slotID": {
+                "vg": 0,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 0,
+                "matt": 0,
+                "kc": 0,
+                "xera": 0,
+                "cairn": 0,
+                "mo": 0,
+                "sam": 0,
+                "dei": 0,
+                "desmina": 0,
+                "dhuum": 0
+            },
+            "teamID": {
+                "vg": 1,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 1,
+                "desmina": 1,
+                "dhuum": 1
             },
             "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
         },
@@ -238,6 +416,36 @@
                 "desmina": "druidVg",
                 "dhuum": "druidSab"
             },
+            "slotID": {
+                "vg": 1,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 1,
+                "desmina": 1,
+                "dhuum": 1
+            },
+            "teamID": {
+                "vg": 1,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 1,
+                "desmina": 1,
+                "dhuum": 1
+            },
             "gw2Armory": ""
         },
         {
@@ -271,6 +479,36 @@
                 "dei": "weavPowerSHAir",
                 "desmina": "renCondi",
                 "dhuum": "renCondi"
+            },
+            "slotID": {
+                "vg": 2,
+                "gorse": 2,
+                "sab": 2,
+                "sloth": 2,
+                "matt": 2,
+                "kc": 2,
+                "xera": 2,
+                "cairn": 2,
+                "mo": 2,
+                "sam": 2,
+                "dei": 2,
+                "desmina": 2,
+                "dhuum": 2
+            },
+            "teamID": {
+                "vg": 1,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 1,
+                "desmina": 1,
+                "dhuum": 1
             },
             "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
         },
@@ -306,6 +544,36 @@
                 "desmina": "scourgeCondiDes",
                 "dhuum": "sholoPowerDhuum"
             },
+            "slotID": {
+                "vg": 3,
+                "gorse": 4,
+                "sab": 4,
+                "sloth": 3,
+                "matt": 3,
+                "kc": 3,
+                "xera": 3,
+                "cairn": 3,
+                "mo": 3,
+                "sam": 3,
+                "dei": 0,
+                "desmina": 3,
+                "dhuum": 3
+            },
+            "teamID": {
+                "vg": 1,
+                "gorse": 0,
+                "sab": 0,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 2,
+                "desmina": 1,
+                "dhuum": 1
+            },
             "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
         },
         {
@@ -339,6 +607,36 @@
                 "dei": "weavPowerSHAir",
                 "desmina": "soulbeastCondi",
                 "dhuum": "weavPowerBHAir"
+            },
+            "slotID": {
+                "vg": 4,
+                "gorse": 4,
+                "sab": 4,
+                "sloth": 4,
+                "matt": 4,
+                "kc": 4,
+                "xera": 4,
+                "cairn": 4,
+                "mo": 4,
+                "sam": 4,
+                "dei": 3,
+                "desmina": 4,
+                "dhuum": 4
+            },
+            "teamID": {
+                "vg": 1,
+                "gorse": 1,
+                "sab": 1,
+                "sloth": 1,
+                "matt": 1,
+                "kc": 1,
+                "xera": 1,
+                "cairn": 1,
+                "mo": 1,
+                "sam": 1,
+                "dei": 1,
+                "desmina": 1,
+                "dhuum": 1
             },
             "gw2Armory": ""
         }

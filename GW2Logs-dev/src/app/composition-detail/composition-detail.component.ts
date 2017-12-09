@@ -4,7 +4,7 @@ import { Character } from '../helpers/character';
 import { Boss } from '../helpers/boss';
 import { HttpClient } from '@angular/common/http';
 
-let team1: Character[], team2: Character[];
+let team: Character[];
 
 /*(<any>window).myBuildCache = {};
 let needDLCache = true;
@@ -31,30 +31,23 @@ let needDLCache = true;
   styleUrls: ['./composition-detail.component.css']
 })
 export class CompositionDetailComponent implements OnInit, OnChanges {
+
   t1: Character[] = [];
-
   t2: Character[] = [];
-
+  t3: Character[] = [];
   selectedChar: Character = null;
 
   @Input() boss: Boss;
 
   constructor(private http: HttpClient) {
-    if (team1 && team2) {
-      this.t1 = team1;
-      this.t2 = team2;
-    } else {
-      const _this = this;
-      this.http.get('assets/characters.json')
-        .subscribe(function (data: { team1: any[], team2: any[] }) {
-          console.log('characters.json loaded');
-          const buildTeam = teamData => teamData.map(charData => new Character(charData));
-          [team1, team2] = [data.team1, data.team2].map(buildTeam);
-          console.log('characters done');
-          _this.t1 = team1;
-          _this.t2 = team2;
-        });
-    }
+    const _this = this;
+    this.http.get('assets/characters.json')
+      .subscribe(function (data: { team: any[] }) {
+        console.log('characters.json loaded');
+        team = data.team.map(charData => new Character(charData));
+        _this.buildTeams();
+        console.log('characters done');
+      });
     /*if (needDLCache) {
       const _this = this;
       this.http.get('assets/cache.json')
@@ -67,11 +60,41 @@ export class CompositionDetailComponent implements OnInit, OnChanges {
     }*/
   }
 
+
+  buildTeams() {
+    if (!this.boss || !team) {
+      return;
+    }
+    this.t1 = [];
+    this.t2 = [];
+    this.t3 = [];
+    const bossID = this.boss.shortName;
+    for (let i = 0; i < team.length; i++) {
+      const chara = team[i];
+      const slotID = chara.slotID[bossID];
+      switch (chara.teamID[bossID]) {
+        case 0:
+          this.t1[slotID] = chara;
+          break;
+        case 1:
+          this.t2[slotID] = chara;
+          break;
+        case 2:
+          this.t3[slotID] = chara;
+          break;
+        default:
+          console.warn('invalid number of team of character ' + chara.name);
+          break;
+      }
+    }
+  }
+
   ngOnInit() {
   }
 
   ngOnChanges() {
     this.selectedChar = null;
+    this.buildTeams();
   }
 
   onSelect(char: Character): void {
