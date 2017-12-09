@@ -1,22 +1,20 @@
 import { Component, OnInit, AfterViewChecked, Input } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { DoCheck, OnChanges, OnDestroy } from '@angular/core';
 
 (<any>document).GW2A_EMBED_OPTIONS = {
   lang: 'fr',
   persistToLocalStorage: true,
 };
 
-const cache = new Map<string, any>();
-const scriptCache = new Map<string, boolean>();
+// let armoryScriptPut = false;
 
 @Component({
   selector: 'app-display-build',
   templateUrl: './display-build.component.html',
   styleUrls: ['./display-build.component.css']
 })
-export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck, OnChanges, OnDestroy {
+export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDestroy /*, DoCheck, OnChanges*/ {
 
   @Input() build: ProfBuild;
   oldName = '';
@@ -29,50 +27,43 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck,
   ngOnInit() {
   }
 
-  ngOnChanges() {
-    this.cleanScriptCache();
+  /*ngOnChanges() {
+    this.currentCache = (<any>window).myBuildCache[this.build.name];
   }
 
   ngOnDestroy() {
     this.build = null;
   }
 
-  cacheBuild() {
-    if (!cache.has(this.oldName)) {
+  /*cacheBuild() {
+    if (!(<any>window).myBuildCache[this.oldName]) {
       const oldValue = {};
       let aux: HTMLDivElement;
       for (let i = 0; i < this.cacheArray.length; i++) {
         const cacheValue = this.cacheArray[i];
         aux = <HTMLDivElement>document.getElementById(cacheValue);
         if (aux === null && cacheValue !== 'wep2') {
-          scriptCache.delete(this.oldName);
           return;
         }
-        oldValue[cacheValue] = aux === null ? this.sanitizer.bypassSecurityTrustHtml('')
-                             : this.sanitizer.bypassSecurityTrustHtml(aux.innerHTML);
+        oldValue[cacheValue] = aux === null ? ''
+          : aux.innerHTML;
       }
-      cache.set(this.oldName, oldValue);
+      (<any>window).myBuildCache[this.oldName] = oldValue;
       console.log('cached ' + this.oldName);
-    }
-  }
-
-  cleanScriptCache() {
-    this.currentCache = cache.get(this.build.name);
-    if (!this.currentCache) {
-      scriptCache.delete(this.build.name);
     }
   }
 
   ngDoCheck() {
     this.cacheBuild();
-    this.cleanScriptCache();
-  }
+    this.currentCache = (<any>window).myBuildCache[this.build.name];
+  }*/
 
   ngAfterViewChecked() {
-    this.oldName = this.build.name;
-    if (scriptCache.has(this.build.name)) {
+    /*this.oldName = this.build.name;
+    if ((<any>window).myBuildCache[this.build.name] && armoryScriptPut) {
       return;
     }
+    armoryScriptPut = true;*/
     const toDestroyScript = document.head.querySelectorAll('script');
     if (toDestroyScript.length > 0) {
       for (let i = 0; i < toDestroyScript.length; i++) {
@@ -111,19 +102,18 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck,
     script.setAttribute('async', '');
     script.setAttribute('src', 'https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js');
     document.head.appendChild(script);
-    scriptCache.set(this.build.name, true);
   }
 
   traits(): SafeHtml {
-    if (this.currentCache && this.currentCache.traits) {
-      return this.currentCache.traits;
-    }
+    /*if (this.currentCache && this.currentCache.traits) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.traits);
+    }*/
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getSpecializations());
   }
   skills(): SafeHtml {
-    if (this.currentCache && this.currentCache.skills) {
-      return this.currentCache.skills;
-    }
+    /*if (this.currentCache && this.currentCache.skills) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.skills);
+    }*/
     let res = '';
     if (this.build.skills !== null) {
       const skills = this.build.getSkills();
@@ -134,21 +124,21 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck,
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
   profSkills(): SafeHtml {
-    if (this.currentCache && this.currentCache.profSkills) {
-      return this.currentCache.profSkills;
-    }
+    /*if (this.currentCache && this.currentCache.profSkills) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.profSkills);
+    }*/
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getProfessionSkills());
   }
   pets(): SafeHtml {
-    if (this.currentCache && this.currentCache.pets) {
-      return this.currentCache.pets;
-    }
+    /*if (this.currentCache && this.currentCache.pets) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.pets);
+    }*/
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getPets());
   }
   armor(): SafeHtml {
-    if (this.currentCache && this.currentCache.armor) {
-      return this.currentCache.armor;
-    }
+    /*if (this.currentCache && this.currentCache.armor) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.armor);
+    }*/
     let res = '';
     const equipement = this.build.getArmor();
     res += equipement.armor;
@@ -156,15 +146,15 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck,
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
   consumables(): SafeHtml {
-    if (this.currentCache && this.currentCache.consum) {
-      return this.currentCache.consum;
-    }
+    /*if (this.currentCache && this.currentCache.consum) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.consum);
+    }*/
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getConsumable());
   }
   trinket(): SafeHtml {
-    if (this.currentCache && this.currentCache.trinket) {
-      return this.currentCache.trinket;
-    }
+    /*if (this.currentCache && this.currentCache.trinket) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.trinket);
+    }*/
     let res = '';
     const trinket = this.build.getTrinket();
     res += trinket.BA;
@@ -173,9 +163,9 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck,
   }
 
   wep1(): SafeHtml {
-    if (this.currentCache && this.currentCache.wep1) {
-      return this.currentCache.wep1;
-    }
+    /*if (this.currentCache && this.currentCache.wep1) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.wep1);
+    }*/
     let res = '';
     const wep1 = this.build.getWeapon1();
     res += wep1.wep;
@@ -183,9 +173,9 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked, DoCheck,
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
   wep2(): SafeHtml {
-    if (this.currentCache && this.currentCache.wep2) {
-      return this.currentCache.wep2;
-    }
+    /*if (this.currentCache && this.currentCache.wep2) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.currentCache.wep2);
+    }*/
     let res = '';
     if (this.build.wep2 !== null) {
       const wep2 = this.build.getWeapon2();
