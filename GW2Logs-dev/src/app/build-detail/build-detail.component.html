@@ -4,7 +4,7 @@
       <a [href]="character.gw2Armory" target='armory' title="Lien vers les persos sur GW2Armory" uk-tooltip="pos: top">Lien Armory</a>
     </div>
 
-    <div *ngIf="character.getRole(bossName).length > 0" class="charHeader uk-text-center uk-margin-small-bottom uk-text-large uk-text-bold">
+    <div *ngIf="character.getRole(bossName).length > 0" title="Le rôle du joueur" uk-tooltip="pos: top" class="charHeader uk-text-center uk-margin-small-bottom uk-text-large uk-text-bold">
       {{character.getRole(bossName).toUpperCase()}}
     </div>
     <app-display-build [build]="character.getBuild(bossName)"></app-display-build>

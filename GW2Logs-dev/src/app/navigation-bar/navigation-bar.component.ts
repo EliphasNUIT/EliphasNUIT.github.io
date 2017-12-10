@@ -64,6 +64,11 @@ export class NavigationBarComponent implements OnInit {
 
   Strats = [
     {
+      text: 'TCI',
+      ref: 'https://discord.gg/nZg52r3',
+      target: 'TCI'
+    },
+    {
       text: 'Wiki officiel',
       ref: 'https://wiki.guildwars2.com/wiki/Raid/',
       target: 'Wiki'
