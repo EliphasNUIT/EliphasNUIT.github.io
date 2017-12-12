@@ -24,10 +24,18 @@ export class Character  {
     }
 
     getIcon(bossName: string): string {
+        if  (!buildDatabase.has(this.builds[bossName])) {
+            console.warn('Warning: the build ' + this.builds[bossName] + ' does not exist.');
+            return 'assets/profIcons/any.png';
+        }
         return buildDatabase.get(this.builds[bossName]).getIcon();
     }
 
     getBuild(bossName: string): ProfBuild {
+        if  (!buildDatabase.has(this.builds[bossName])) {
+            console.warn('Warning: the build ' + this.builds[bossName] + ' does not exist.');
+            return null;
+        }
         return buildDatabase.get(this.builds[bossName]);
     }
 
