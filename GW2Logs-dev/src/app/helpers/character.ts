@@ -24,6 +24,10 @@ export class Character  {
     }
 
     getIcon(bossName: string): string {
+        if (!this.builds[bossName]) {
+            console.warn('Warning: no data for ' + this.name + ' for boss' + bossName + ' does not exist');
+            return 'assets/profIcons/any.png';
+        }
         if  (!buildDatabase.has(this.builds[bossName])) {
             console.warn('Warning: the build ' + this.builds[bossName] + ' does not exist.');
             return 'assets/profIcons/any.png';
@@ -32,6 +36,10 @@ export class Character  {
     }
 
     getBuild(bossName: string): ProfBuild {
+        if (!this.builds[bossName]) {
+            console.warn('Warning: no data for ' + this.name + ' for boss' + bossName + ' does not exist');
+            return null;
+        }
         if  (!buildDatabase.has(this.builds[bossName])) {
             console.warn('Warning: the build ' + this.builds[bossName] + ' does not exist.');
             return null;
