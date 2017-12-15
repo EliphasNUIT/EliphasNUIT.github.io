@@ -4,3 +4,49 @@ html {
     min-width: 1400px;
     background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55) ), url(./assets/bg2.jpg);
 }
+
+
+
+/* Ele */
+.Elementalist {
+    background-color: rgba(255, 50, 50, 0.3);
+}
+
+/* Mes */
+.Mesmer {
+    background-color: rgba(150, 120, 165, 0.3);
+}
+
+/* Nec */
+.Necromancer {
+    background-color: rgba(80, 170, 80, 0.3);
+}
+/* Thief */
+.Thief {
+    background-color: rgba(130, 160, 180, 0.3);
+}
+
+/* Ranger */
+.Ranger {
+    background-color: rgba(140, 195, 95, 0.3);
+}
+
+/* Engi */
+.Engineer {
+    background-color: rgba(170, 125, 50, 0.3);
+}
+
+/* War */
+.Warrior {
+    background-color: rgba(210, 175, 90, 0.3);
+}
+
+/* Guard */
+.Guardian {
+    background-color: rgba(140, 215, 225, 0.3);
+}
+
+/* Rev */
+.Revenant {
+    background-color: rgba(165, 50, 50, 0.3);
+}

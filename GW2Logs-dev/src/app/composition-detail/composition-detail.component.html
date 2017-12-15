@@ -6,12 +6,12 @@
           <thead>
             <tr>
               <th>
-               <span class="uk-text-large uk-text-bold" >Groupe 1</span> 
+                <span class="uk-text-large uk-text-bold">Groupe 1</span>
               </th>
             </tr>
           </thead>
-          <tbody  class="uk-flex-inline uk-flex-column">
-            <tr class="selectable" *ngFor="let character of t1" (click)="onSelect(character)" [class.selected]="character === selectedChar">
+          <tbody class="uk-flex-inline uk-flex-column">
+            <tr *ngFor="let character of t1" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar" >
               <td>
                 <img [src]='character.getIcon(boss.shortName)'>
                 <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
@@ -24,17 +24,18 @@
           <thead>
             <tr>
               <th>
-                  <span class="uk-text-large uk-text-bold">Groupe 2</span> 
+                <span class="uk-text-large uk-text-bold">Groupe 2</span>
               </th>
             </tr>
           </thead>
           <tbody class="uk-flex-inline uk-flex-column">
-            <tr class="selectable" *ngFor="let character of t2" (click)="onSelect(character)" [class.selected]="character === selectedChar">
+            <tr *ngFor="let character of t2" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar">
               <td>
                 <img [src]='character.getIcon(boss.shortName)'>
                 <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
               </td>
             </tr>
+
           </tbody>
 
         </table>
@@ -43,12 +44,12 @@
           <thead>
             <tr>
               <th>
-                  <span class="uk-text-large uk-text-bold">Groupe 3</span> 
+                <span class="uk-text-large uk-text-bold">Groupe 3</span>
               </th>
             </tr>
           </thead>
           <tbody class="uk-flex-inline uk-flex-column">
-            <tr class="selectable" *ngFor="let character of t3" (click)="onSelect(character)" [class.selected]="character === selectedChar">
+            <tr *ngFor="let character of t3" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar" >
               <td>
                 <img [src]='character.getIcon(boss.shortName)'>
                 <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>

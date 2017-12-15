@@ -12,10 +12,12 @@ import { OnDestroy, OnChanges } from '@angular/core';
 export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
     @Input() boss: Boss;
     observerMap = new Map();
+    logsTab: boolean;
     constructor(public sanitizer: DomSanitizer) { }
 
     ngOnInit() {
         this.clearMutations();
+        this.logsTab = localStorage.getItem('logsTab') === 'true';
     }
 
     ngOnDestroy() {
@@ -24,6 +26,11 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
 
     ngOnChanges() {
         this.clearMutations();
+    }
+
+    toggleLogsTab() {
+        this.logsTab = !this.logsTab;
+        localStorage.setItem('logsTab', this.logsTab.toString());
     }
 
     observeMutations(id: string, target: HTMLElement): void {
@@ -46,7 +53,7 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
 
     clearMutations(): void {
         const _this = this;
-        this.observerMap.forEach(function(observer, id, map) {
+        this.observerMap.forEach(function (observer, id, map) {
             _this.stopObserveMutations(id);
         });
     }
@@ -58,29 +65,34 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
         }
     }
 
-    display(log: {id: string, date: string, url: string}): void {
-        const frameID = log.id;
-        const frame = <HTMLIFrameElement>document.getElementById(frameID);
-        if (!frame) {
-            return;
-        }
-        const init = frame.getAttribute('src');
-        if (init === 'about:blank') {
-            frame.style.display = 'block';
-            frame.setAttribute('src', log.url);
-            frame.setAttribute('width', '1250px');
-            frame.setAttribute('height', '50');
-            frame.setAttribute('frameborder', '3');
-            // init the button
-            frame.onload = () => this.observeMutations(frameID, frame.contentDocument.body);
+    display(log: { id: string, date: string, url: string }): void {
+        if (this.logsTab) {
+            window.open(log.url, '_blank');
         } else {
-            frame.style.display = (frame.style.display === 'block') ? 'none' : 'block';
-            if (frame.style.display !== 'block') {
-                this.stopObserveMutations(frameID);
+            const frameID = log.id;
+            const frame = <HTMLIFrameElement>document.getElementById(frameID);
+            if (!frame) {
+                return;
+            }
+            const init = frame.getAttribute('src');
+            if (init === 'about:blank') {
+                frame.style.display = 'block';
+                frame.setAttribute('src', log.url);
+                frame.setAttribute('width', '1250px');
+                frame.setAttribute('height', '50');
+                frame.setAttribute('frameborder', '3');
+                // init the button
+                frame.onload = () => this.observeMutations(frameID, frame.contentDocument.body);
             } else {
-                this.observeMutations(frameID, frame.contentDocument.body);
+                frame.style.display = (frame.style.display === 'block') ? 'none' : 'block';
+                if (frame.style.display !== 'block') {
+                    this.stopObserveMutations(frameID);
+                } else {
+                    this.observeMutations(frameID, frame.contentDocument.body);
+                }
             }
         }
+
     }
 
 }

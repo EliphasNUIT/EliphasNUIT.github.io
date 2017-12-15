@@ -92,6 +92,13 @@ export class CompositionDetailComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
+  getClasses(char: Character): any {
+    const res: any = {};
+    res.selectable = true;
+    res[char.getBuild(this.boss.shortName).profession.name] = true;
+    return res;
+  }
+
   ngOnChanges() {
     this.selectedChar = null;
     this.buildTeams();
