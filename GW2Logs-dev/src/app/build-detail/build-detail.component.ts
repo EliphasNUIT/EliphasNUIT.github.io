@@ -13,6 +13,18 @@ export class BuildDetailComponent implements OnInit {
 
   constructor() { }
 
+  getClasses(big: boolean): any {
+    const res: any = {};
+    res['charHeader'] = true;
+    res['uk-text-center'] = true;
+    res['uk-margin-small-bottom'] = true;
+    res['uk-text-bold'] = true;
+    res['uk-text-small'] = !big;
+    res['uk-text-large'] = big;
+    res[this.character.getBuild(this.bossName).profession.name] = true;
+    return res;
+  }
+
   ngOnInit() {
   }
 

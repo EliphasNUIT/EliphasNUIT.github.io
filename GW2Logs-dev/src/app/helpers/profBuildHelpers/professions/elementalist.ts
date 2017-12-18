@@ -37,6 +37,7 @@ class PowerWeaverBuild extends EleBuild {
         super(name);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Berserker\'s');
+        this.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         this.armor.setSingleRune('Superior Rune of the Scholar');
         this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
         this.trinket.setSingleStat('Berserker\'s');
@@ -46,8 +47,8 @@ class PowerWeaverBuild extends EleBuild {
             'Persisting Flames'
         ]);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
-        this.skills.setHealSkill('Glyph of Elemental Harmony');
-        this.skills.setEliteSkill('Weave Self');
+        this.skills.setHealSkill('Aquatic Stance');
+        this.skills.setEliteSkill('Conjure Fiery Greatsword');
     }
 }
 
@@ -56,15 +57,14 @@ export function eleBuildMaker() {
     // Condi
     {
         build = new CondiWeaverBuild('weavCondi');
-        build.skills.setUtilitySkills(['Signet of Fire', 'Glyph of Elemental Power', 'Primordial Stance']);
+        build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Primordial Stance']);
         build = new CondiWeaverBuild('weavCondiSab');
-        build.skills.setUtilitySkills(['Signet of Fire', 'Glyph of Elemental Power', 'Lightning Flash']);
+        build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Lightning Flash']);
     }
 
     // Power
     {
         build = new PowerWeaverBuild('weavPowerSHArc');
-        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
             'Elemental Contingency',
@@ -73,7 +73,6 @@ export function eleBuildMaker() {
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
         build = new PowerWeaverBuild('weavPowerBHArc');
-        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
             'Elemental Contingency',
@@ -82,19 +81,18 @@ export function eleBuildMaker() {
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
         build = new PowerWeaverBuild('weavPowerSHAir');
-        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
         build = new PowerWeaverBuild('weavPowerBHAir');
-        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
         build = new PowerWeaverBuild('weavPowerKC');
-        build.wep1.setTwoHand('Staff', 'Assassin\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
+        build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Tempest Defense', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
+        build.skills.setEliteSkill('Weave Self');
     }
 
     // Special
@@ -106,10 +104,10 @@ export function eleBuildMaker() {
         build.trinket.setSingleStat('Magi\'s');
         build.wep1.setTwoHand('Staff', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
 
-        build.specialization.setSpec('spec1', 'Water', ['Soothing Ice', 'Aquamancer\'s Training', 'Soothing Power']);
-        build.specialization.setSpec('spec2', 'Arcane', ['Renewing Stamina', 'Arcane Resurrection', 'Evasive Arcana']);
+        build.specialization.setSpec('spec1', 'Water', ['Soothing Ice', 'Aquamancer\'s Training', 'Powerful Aura']);
+        build.specialization.setSpec('spec2', 'Arcane', ['Renewing Stamina', 'Arcane Resurrection', 'Bountiful Power']);
         build.specialization.setSpec('spec3', 'Tempest', [
-            'Latent Stamina',
+            'Unstable Conduit',
             'Invigorating Torrents',
             'Elemental Bastion'
         ]);

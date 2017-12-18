@@ -64,6 +64,24 @@ export function revBuildMaker() {
     {
         build = new CondiRenegadeBuild('renCondi');
 
+        build = new CondiRenegadeBuild('renCondiBH');
+        build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
+
+        build = new CondiRenegadeBuild('renCondiInvo');
+        build.specialization.setSpec('spec2', 'Invocation', [
+            'Forceful Persistence',
+            'Spirit Boon',
+            'Charged Mists'
+        ]);
+
+        build = new CondiRenegadeBuild('renCondiInvoBH');
+        build.specialization.setSpec('spec2', 'Invocation', [
+            'Forceful Persistence',
+            'Spirit Boon',
+            'Charged Mists'
+        ]);
+        build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
+
         build = new CondiRenegadeBuild('renCondiSupp');
         build.specialization.setSpec('spec2', 'Salvation', [
             'Tranquil Balance',

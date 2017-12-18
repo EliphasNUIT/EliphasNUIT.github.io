@@ -3,12 +3,16 @@
         <div class="build">
             <div uk-accordion="collapsible: false">
                 <span>
-                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">Aptitudes</div>
+                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">
+                        <span class="uk-margin-small-left">Aptitudes</span>
+                    </div>
                     <div id="traits" class="uk-margin-bottom uk-accordion-content uk-flex uk-flex-column uk-flex-between uk-margin-large-left uk-margin-large-right"
                         [innerHTML]='traits()'></div>
                 </span>
                 <span>
-                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">Compétences</div>
+                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">
+                        <span class="uk-margin-small-left">Compétences</span>
+                    </div>
                     <div class="uk-accordion-content uk-flex uk-flex-center uk-flex-column uk-flex-nowrap">
                         <div id="profSkills" class="uk-flex uk-flex-center	uk-flex-middle uk-flex-row" [innerHTML]='profSkills()'></div>
                         <div id="skills" class="uk-flex uk-flex-center uk-flex-middle uk-flex-row" [innerHTML]='skills()'></div>
@@ -16,7 +20,9 @@
                     </div>
                 </span>
                 <span>
-                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">Equipement</div>
+                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">
+                        <span class="uk-margin-small-left">Equipement</span>
+                    </div>
                     <div class="uk-accordion-content uk-flex uk-flex-around uk-flex-middle uk-flex-nowrap uk-margin-large-left uk-margin-large-right">
                         <span class="armor">
                             <div class="uk-text-bold uk-text-center uk-text-middle uk-text-large">Armure</div>
@@ -48,7 +54,9 @@
                     </div>
                 </span>
                 <span>
-                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">Consommables</div>
+                    <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">
+                        <span class="uk-margin-small-left">Consommables</span>
+                    </div>
                     <div id="consum" class="uk-accordion-content uk-flex uk-flex-center uk-flex-middle" [innerHTML]='consumables()'></div>
                 </span>
 

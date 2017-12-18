@@ -81,6 +81,23 @@ class DomiInspi extends BoonShareBuild {
     }
 }
 
+
+class IlluInspi extends BoonShareBuild {
+    constructor(name) {
+        super(name);
+        this.specialization.setSpec('spec2', 'Inspiration', [
+            'Persisting Images',
+            'Restorative Illusions',
+            'Illusionary Inspiration'
+        ]);
+        this.specialization.setSpec('spec1', 'Illusions', [
+            'Compounding Power',
+            'Phantasmal Haste',
+            'Phantasmal Force'
+        ]);
+    }
+}
+
 class DomiIllu extends BoonShareBuild {
     constructor(name) {
         super(name);
@@ -113,21 +130,6 @@ class DuelIllu extends BoonShareBuild {
     }
 }
 
-class IlluInspi extends BoonShareBuild {
-    constructor(name) {
-        super(name);
-        this.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
-            'Restorative Illusions',
-            'Illusionary Inspiration'
-        ]);
-        this.specialization.setSpec('spec1', 'Illusions', [
-            'Compounding Power',
-            'Phantasmal Haste',
-            'Phantasmal Force'
-        ]);
-    }
-}
 
 class DomiInspiTank extends DomiInspi {
     constructor(name) {
@@ -143,11 +145,11 @@ class CondiMiragePhantasmBuild extends MesBuild {
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
-        this.consumable.setConsumable('Bowl of Orrian Truffle and Meat Stew', 'Toxic Focusing Crystal');
+        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
         this.trinket.setSingleStat('Viper\'s');
         this.wep1.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Malice');
-        this.wep1.setOffHand('Pistol', 'Viper\'s', 'Superior Sigil of Energy');
-        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Energy');
+        this.wep1.setOffHand('Pistol', 'Viper\'s', 'Superior Sigil of Geomancy');
+        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Geomancy');
         this.specialization.setSpec('spec1', 'Dueling', [
             'Duelist\'s Discipline',
             'Blinding Dissipation',
@@ -160,6 +162,33 @@ class CondiMiragePhantasmBuild extends MesBuild {
         ]);
         this.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirrored Axes', 'Dune Cloak']);
         this.skills.setHealSkill('Signet of the Ether');
+        this.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
+        this.skills.setEliteSkill('Jaunt');
+    }
+}
+
+class CondiMirageCloneBuild extends MesBuild {
+    constructor(name) {
+        super(name);
+        this.icon += 'mirage.png';
+        this.armor.setSingleStat('Viper\'s');
+        this.armor.setSingleRune('Superior Rune of the Renegade');
+        this.consumable.setConsumable('Bowl of Orrian Truffle and Meat Stew', 'Toxic Focusing Crystal');
+        this.trinket.setSingleStat('Viper\'s');
+        this.wep1.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Malice');
+        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Energy');
+        this.specialization.setSpec('spec1', 'Dueling', [
+            'Duelist\'s Discipline',
+            'Blinding Dissipation',
+            'Superiority Complex'
+        ]);
+        this.specialization.setSpec('spec2', 'Chaos', [
+            'Descent into Madness',
+            'Chaotic Transference',
+            'Prismatic Understanding'
+        ]);
+        this.specialization.setSpec('spec3', 'Mirage', ['Self-Deception', 'Mirrored Axes', 'Infinite Horizon']);
+        this.skills.setHealSkill('False Oasis');
         this.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
         this.skills.setEliteSkill('Jaunt');
     }
@@ -190,7 +219,7 @@ export function mesBuildMaker() {
     {
 
 
-        build = new DomiInspi('chrVG');
+        build = new IlluInspi('chrVG');
         build.skills.setEliteSkill('Signet of Humility');
         build = new DomiInspiTank('chrVGTank');
         build.skills.setEliteSkill('Signet of Humility');
@@ -203,7 +232,7 @@ export function mesBuildMaker() {
         build = new DomiIllu('chrSab');
         build.skills.setEliteSkill('Time Warp');
 
-        build = new DomiInspi('chrSloth');
+        build = new IlluInspi('chrSloth');
         build.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Warden\'s Feedback',
@@ -234,6 +263,11 @@ export function mesBuildMaker() {
         build = new DomiInspi('chrDei');
         build.skills.setEliteSkill('Time Warp');
 
+        build = new DomiInspi('chrSS');
+        build = new DomiInspiTank('chrSSTank');
+
+        build = new IlluInspi('chrDhuum');
+
     }
 
     // condi phantasme
@@ -249,6 +283,15 @@ export function mesBuildMaker() {
         build.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirage Mantle', 'Dune Cloak']);
         build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
+    }
+
+    // condi clone
+    {
+        build = new CondiMirageCloneBuild('mirageCondiCMatt');
+        build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
+        build.skills.setEliteSkill('Signet of Humility');
+
+        build = new CondiMirageCloneBuild('mirageCondiC');
     }
 
 }
