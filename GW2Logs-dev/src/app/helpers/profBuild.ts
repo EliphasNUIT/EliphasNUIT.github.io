@@ -28,6 +28,7 @@ const mobile = false;
 
 
 export class ProfBuild {
+    id: string;
     name: string;
     armor: Armor;
     consumable: Consumable;
@@ -40,7 +41,8 @@ export class ProfBuild {
     profession: any;
     icon = 'assets/profIcons/';
 
-    constructor(name: string, profession: any) {
+    constructor(id: string, profession: any, name: string) {
+        this.id = id;
         this.name = name;
         this.profession = profession;
         this.skills = new Skills(profession);
@@ -51,7 +53,7 @@ export class ProfBuild {
         this.armor = new Armor(profession.armor);
         this.trinket = new Trinket();
         this.consumable = new Consumable();
-        buildDatabase.set(name, this);
+        buildDatabase.set(id, this);
     }
 
     getSpecializations(): string {

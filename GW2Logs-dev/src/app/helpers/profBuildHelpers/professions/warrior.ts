@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class WarriorBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Warrior);
+    constructor(id) {
+        super(id, Professions.Warrior);
     }
 }
 
 class BerserkerBuild extends WarriorBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'berserker.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');

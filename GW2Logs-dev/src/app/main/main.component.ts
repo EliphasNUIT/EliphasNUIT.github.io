@@ -30,6 +30,7 @@ export class MainComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     const _this = this;
+    const localBoss = localStorage.getItem('selectedBoss') ? localStorage.getItem('selectedBoss') : null;
     this.http.get('assets/bosses.json')
       .subscribe(function (data: { bosses: any[] }) {
         console.log('bosses.json loaded');
@@ -40,9 +41,14 @@ export class MainComponent implements OnInit {
             console.log('logs json loaded');
             for (let i = 0; i < _this.bosses.length; i++) {
               _this.bosses[i].buildLogs(logs);
+              if (_this.bosses[i].shortName === localBoss) {
+                _this.selectedBoss = _this.bosses[i];
+              }
             }
             console.log('logs done');
-            _this.selectedBoss = _this.bosses[0];
+            if (!localBoss) {
+              _this.selectedBoss = _this.bosses[0];
+            }
           });
       });
   }
@@ -52,6 +58,7 @@ export class MainComponent implements OnInit {
 
   onSelect(boss: Boss): void {
     this.selectedBoss = boss;
+    localStorage.setItem('selectedBoss', this.selectedBoss.shortName);
   }
 
   onSelectDisplay(display: string): void {

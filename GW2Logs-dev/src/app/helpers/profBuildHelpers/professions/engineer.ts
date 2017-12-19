@@ -2,16 +2,16 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class EngiBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Engineer);
+    constructor(id) {
+        super(id, Professions.Engineer);
         this.wep2 = null;
     }
 }
 
 
 class CondiEngiBuild extends EngiBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'engineer.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -33,8 +33,8 @@ class CondiEngiBuild extends EngiBuild {
 }
 
 class PowerHolosmithBuild extends EngiBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'holosmith.png';
         this.armor.setSingleStat('Berserker\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');

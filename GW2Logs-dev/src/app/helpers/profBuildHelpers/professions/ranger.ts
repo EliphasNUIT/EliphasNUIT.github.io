@@ -2,22 +2,22 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class RangerBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Ranger);
+    constructor(id) {
+        super(id, Professions.Ranger);
     }
 }
 
 class CondiRangerBuild extends RangerBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.armor.setSingleStat('Viper\'s');
         this.trinket.setSingleStat('Viper\'s');
     }
 }
 
 class CondiDruidBuild extends CondiRangerBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'druid.png';
         this.armor.set42Rune('Superior Rune of the Traveler', 'Superior Rune of the Trapper');
         this.wep1.setTwoHand('Longbow', 'Viper\'s', 'Superior Sigil of Concentration', 'Superior Sigil of Malice');
@@ -35,8 +35,8 @@ class CondiDruidBuild extends CondiRangerBuild {
 }
 
 class CondiSoulbeastBuild extends CondiRangerBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'soulbeast.png';
         this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
         this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
@@ -55,8 +55,8 @@ class CondiSoulbeastBuild extends CondiRangerBuild {
 
 
 class BoonDruidBuild extends RangerBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'druid.png';
         this.armor.setSingleStat('Harrier\'s');
         this.armor.setSingleRune('Superior Rune of the Monk');
@@ -76,8 +76,8 @@ class BoonDruidBuild extends RangerBuild {
 }
 
 class TrapperBoonDruidBuild extends BoonDruidBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.specialization.setSpec('spec1', 'Skirmishing', ['Trapper\'s Expertise', 'Spotter', 'Quick Draw']);
         this.skills.setHealSkill('Healing Spring');
     }

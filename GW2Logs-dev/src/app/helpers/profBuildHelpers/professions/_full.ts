@@ -11,6 +11,7 @@ import { warBuildMaker } from './warrior';
 
 
 export function makeAllBuild() {
+    console.log('creating builds');
     eleBuildMaker();
     engiBuildMaker();
     guardBuildMaker();
@@ -20,4 +21,5 @@ export function makeAllBuild() {
     revBuildMaker();
     thiefBuildMaker();
     warBuildMaker();
+    console.log('builds done');
 }

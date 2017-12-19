@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class ThiefBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Thief);
+    constructor(id) {
+        super(id, Professions.Thief);
     }
 }
 
 class PowerDaredevilBuild extends ThiefBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'daredevil.png';
         this.wep2 = null;
         this.armor.setSingleStat('Berserker\'s');
@@ -27,8 +27,8 @@ class PowerDaredevilBuild extends ThiefBuild {
 }
 
 class CondiDaredevilBuild extends ThiefBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'daredevil.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Krait');

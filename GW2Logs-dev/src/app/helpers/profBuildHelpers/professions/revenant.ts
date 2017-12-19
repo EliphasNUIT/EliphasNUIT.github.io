@@ -2,15 +2,15 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class RevenantBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Revenant);
+    constructor(id) {
+        super(id, Professions.Revenant);
         this.skills = null;
     }
 }
 
 class CondiRenegadeBuild extends RevenantBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'renegade.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
@@ -30,8 +30,8 @@ class CondiRenegadeBuild extends RevenantBuild {
 }
 
 class KiteHeraldBuild extends RevenantBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'herald.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Water');

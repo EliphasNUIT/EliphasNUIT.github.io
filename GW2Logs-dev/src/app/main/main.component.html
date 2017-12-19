@@ -3,38 +3,41 @@
 </h1>
 
 <ul *ngIf="bosses.length > 0">
-  <div *ngFor="let boss of bosses" class="uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-transition-toggle">
-      <span (click)="onSelect(boss)" class="uk-border-rounded selector bosses uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap" [class.selected]="boss === selectedBoss"
-      [ngStyle]="boss.style">
-      <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
-        {{boss.buttonName | uppercase}}
-      </div>
-    </span>
+  <div class="uk-flex uk-flex-wrap uk-margin-top">
+    <div *ngFor="let boss of bosses" class="uk-margin-top uk-margin-small-left uk-margin-small-right uk-transition-toggle">
+      <span (click)="onSelect(boss)" class="uk-border-rounded selector bosses uk-background-center-center uk-flex uk-flex-around uk-flex-middle"
+        [class.selected]="boss === selectedBoss" [ngStyle]="boss.style">
+        <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
+          {{boss.buttonName | uppercase}}
+        </div>
+      </span>
+    </div>
   </div>
+
 </ul>
 
 <hr class="uk-divider-icon">
 
 <div *ngIf="selectedBoss">
-    <h2 class="uk-text-center uk-text-bold">{{ selectedBoss.displayName | uppercase }}</h2>
-    <div class='uk-flex uk-flex-center uk-flex-middle'>
-      <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-border-rounded selector switcher uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
-        <div class="my-button-title uk-text-bold uk-text-center">
-          Composition
-        </div>
-      </span>
-      <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-border-rounded selector switcher uk-background-center-center uk-flex-inline uk-flex-around uk-flex-middle uk-flex-row uk-flex-wrap uk-margin-left uk-margin-top uk-text-bold uk-text-large">
-        <div class="my-button-title uk-text-bold uk-text-center">
-          Logs
-        </div>
-      </span>
-    </div>
-    <div *ngIf="selectedDisplay === 'compo'">
-      <app-composition-detail [boss]="selectedBoss"></app-composition-detail>
-    </div>
-    <div *ngIf="selectedDisplay === 'logs'">
-      <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
-    </div>
-    
+  <h2 class="uk-text-center uk-text-bold">{{ selectedBoss.displayName | uppercase }}</h2>
+  <div class='uk-flex uk-flex-center uk-flex-middle uk-margin-top'>
+    <span (click)="onSelectDisplay('compo')" [class.selected]="selectedDisplay === 'compo'" [ngStyle]="compoStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
+      <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
+        Composition
+      </div>
+    </span>
+    <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
+      <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
+        Logs
+      </div>
+    </span>
+  </div>
+  <div *ngIf="selectedDisplay === 'compo'">
+    <app-composition-detail [boss]="selectedBoss"></app-composition-detail>
+  </div>
+  <div *ngIf="selectedDisplay === 'logs'">
+    <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
+  </div>
+
 </div>
 <a href="#" style="background-color: rgba(250,250,250,0.4)" uk-totop uk-scroll title="retour top" uk-tooltip></a>

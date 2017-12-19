@@ -6,6 +6,15 @@ html {
 }
 
 
+h1 {
+    color: #00539F;
+    text-shadow: 2px 2px 2px black;
+}
+
+h2 {
+    color: #2283AF;
+    text-shadow: 2px 2px 2px black;
+}
 
 /* Ele */
 .Elementalist {

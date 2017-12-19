@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class MesBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Mesmer);
+    constructor(id) {
+        super(id, Professions.Mesmer);
     }
 }
 
 class MinstrelShareBuild extends MesBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'chronomancer.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Durability');
@@ -37,8 +37,8 @@ class MinstrelShareBuild extends MesBuild {
 }
 
 class BoonShareBuild extends MesBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'chronomancer.png';
         this.armor.setStats([
             'Berserker\'s',
@@ -66,8 +66,8 @@ class BoonShareBuild extends MesBuild {
 }
 
 class DomiInspi extends BoonShareBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.specialization.setSpec('spec1', 'Domination', [
             'Empowered Illusions',
             'Blurred Inscriptions',
@@ -83,8 +83,8 @@ class DomiInspi extends BoonShareBuild {
 
 
 class IlluInspi extends BoonShareBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Restorative Illusions',
@@ -99,8 +99,8 @@ class IlluInspi extends BoonShareBuild {
 }
 
 class DomiIllu extends BoonShareBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.specialization.setSpec('spec1', 'Domination', [
             'Empowered Illusions',
             'Blurred Inscriptions',
@@ -115,8 +115,8 @@ class DomiIllu extends BoonShareBuild {
 }
 
 class DuelIllu extends BoonShareBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.specialization.setSpec('spec1', 'Dueling', [
             'Phantasmal Fury',
             'Fencer\'s Finesse',
@@ -132,16 +132,16 @@ class DuelIllu extends BoonShareBuild {
 
 
 class DomiInspiTank extends DomiInspi {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.wep1.setOffHand('Shield', 'Commander\'s', 'Superior Sigil of Paralyzation');
         this.wep2.setOffHand('Focus', 'Commander\'s', 'Superior Sigil of Paralyzation');
     }
 }
 
 class CondiMiragePhantasmBuild extends MesBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -168,8 +168,8 @@ class CondiMiragePhantasmBuild extends MesBuild {
 }
 
 class CondiMirageCloneBuild extends MesBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');

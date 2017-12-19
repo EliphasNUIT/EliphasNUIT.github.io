@@ -1,7 +1,7 @@
 <div *ngIf="boss">
   <ul class="my-composition">
     <div class='uk-flex uk-flex-row uk-flex-between'>
-      <div class='uk-flex-inline uk-flex-row uk-margin-large-top'>
+      <div class='uk-flex uk-flex-row uk-margin-large-top'>
         <table *ngIf="t1.length > 0" class='uk-margin-left uk-margin-right'>
           <thead>
             <tr>
@@ -10,7 +10,7 @@
               </th>
             </tr>
           </thead>
-          <tbody class="uk-flex-inline uk-flex-column">
+          <tbody class="uk-flex uk-flex-column">
             <tr *ngFor="let character of t1" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar" >
               <td>
                 <img [src]='character.getIcon(boss.shortName)'>
@@ -28,7 +28,7 @@
               </th>
             </tr>
           </thead>
-          <tbody class="uk-flex-inline uk-flex-column">
+          <tbody class="uk-flex uk-flex-column">
             <tr *ngFor="let character of t2" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar">
               <td>
                 <img [src]='character.getIcon(boss.shortName)'>
@@ -48,7 +48,7 @@
               </th>
             </tr>
           </thead>
-          <tbody class="uk-flex-inline uk-flex-column">
+          <tbody class="uk-flex uk-flex-column">
             <tr *ngFor="let character of t3" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar" >
               <td>
                 <img [src]='character.getIcon(boss.shortName)'>

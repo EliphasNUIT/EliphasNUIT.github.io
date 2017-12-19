@@ -20,6 +20,7 @@ table {
 .selectable {
     cursor: pointer;     
     border-top: 2px solid black;
+    width: 200px;
     transition: background-color 0.2s linear;
 }
 /* Classes */

@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class NecroBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Necromancer);
+    constructor(id) {
+        super(id, Professions.Necromancer);
     }
 }
 
 class CondiScourgeBuild extends NecroBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'scourge.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');

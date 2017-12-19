@@ -4,15 +4,15 @@ import { Professions } from '../professionUtilities/professions';
 
 
 class EleBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Elementalist);
+    constructor(id) {
+        super(id, Professions.Elementalist);
         this.wep2 = null;
     }
 }
 
 class CondiWeaverBuild extends EleBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -33,8 +33,8 @@ class CondiWeaverBuild extends EleBuild {
 }
 
 class PowerWeaverBuild extends EleBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Berserker\'s');
         this.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');

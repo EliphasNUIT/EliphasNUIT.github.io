@@ -3,14 +3,14 @@ import { Professions } from '../professionUtilities/professions';
 
 
 class GuardBuild extends ProfBuild {
-    constructor(name) {
-        super(name, Professions.Guardian);
+    constructor(id) {
+        super(id, Professions.Guardian);
     }
 }
 
 class PowerDHBuild extends GuardBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'dragonhunter.png';
         this.armor.setSingleStat('Berserker\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
@@ -36,8 +36,8 @@ class PowerDHBuild extends GuardBuild {
 }
 
 class CondiFBBuild extends GuardBuild {
-    constructor(name) {
-        super(name);
+    constructor(id) {
+        super(id);
         this.icon += 'firebrand.png';
         this.armor.setStats(['Sinister', 'Sinister', 'Viper\'s', 'Sinister', 'Sinister', 'Sinister']);
         this.armor.setSingleRune('Superior Rune of Balthazar');
