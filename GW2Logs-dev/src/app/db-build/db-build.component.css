@@ -1,0 +1,21 @@
+
+h1 {
+    color: #00539F;
+    text-shadow: 2px 2px 2px black;
+}
+
+h2 {
+    color: #2283AF;
+    text-shadow: 2px 2px 2px black;
+}
+.class-selector {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    background-position: 0px -40px;
+}
+
+.my-button-title {
+    color:white;
+    text-shadow: 0px 0px 1px black, 0px 0px 4px black, 0px 0px 10px black;
+  }

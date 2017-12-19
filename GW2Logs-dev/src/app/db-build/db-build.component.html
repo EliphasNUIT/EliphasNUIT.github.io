@@ -1,0 +1,15 @@
+<h1 class="uk-text-center uk-text-bold uk-heading-primary">
+  Les Builds
+</h1>
+
+<div class='uk-margin-large-left uk-margin-large-right uk-flex uk-flex-center uk-flex-wrap uk-flex-middle'>
+  
+  <div *ngFor="let profession of professions" class="uk-inline uk-margin-small-left uk-margin-small-right uk-margin-top uk-margin-bottom uk-transition-toggle">
+    <span class="uk-border-rounded class-selector uk-flex uk-flex-around uk-background-cover uk-flex-middle " [ngStyle]='profession.getStyle()' [ngClass]='profession.getClass()'>
+      <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
+        {{profession.name | uppercase}}
+      </div>
+      
+    </span>
+  </div>
+</div>

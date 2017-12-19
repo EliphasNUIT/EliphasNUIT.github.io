@@ -10,6 +10,8 @@ import { LogsDetailComponent } from './logs-detail/logs-detail.component';
 import { CompositionDetailComponent } from './composition-detail/composition-detail.component';
 import { DisplayBuildComponent } from './display-build/display-build.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule } from './/app-routing.module';
+import { DbBuildComponent } from './db-build/db-build.component';
 
 
 @NgModule({
@@ -20,11 +22,13 @@ import {HttpClientModule} from '@angular/common/http';
     BuildDetailComponent,
     LogsDetailComponent,
     CompositionDetailComponent,
-    DisplayBuildComponent
+    DisplayBuildComponent,
+    DbBuildComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
