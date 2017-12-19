@@ -3,7 +3,7 @@ import { Professions } from '../professionUtilities/professions';
 
 class NecroBuild extends ProfBuild {
     constructor(id) {
-        super(id, Professions.Necromancer);
+        super(id, Professions.Necromancer, '');
     }
 }
 

@@ -3,7 +3,7 @@ import { Professions } from '../professionUtilities/professions';
 
 class MesBuild extends ProfBuild {
     constructor(id) {
-        super(id, Professions.Mesmer);
+        super(id, Professions.Mesmer, '');
     }
 }
 

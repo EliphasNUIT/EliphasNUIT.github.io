@@ -3,7 +3,7 @@ import { Professions } from '../professionUtilities/professions';
 
 class EngiBuild extends ProfBuild {
     constructor(id) {
-        super(id, Professions.Engineer);
+        super(id, Professions.Engineer, '');
         this.wep2 = null;
     }
 }

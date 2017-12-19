@@ -4,7 +4,7 @@ import { Professions } from '../professionUtilities/professions';
 
 class GuardBuild extends ProfBuild {
     constructor(id) {
-        super(id, Professions.Guardian);
+        super(id, Professions.Guardian, '');
     }
 }
 

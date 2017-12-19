@@ -3,7 +3,7 @@ import { Professions } from '../professionUtilities/professions';
 
 class RevenantBuild extends ProfBuild {
     constructor(id) {
-        super(id, Professions.Revenant);
+        super(id, Professions.Revenant, '');
         this.skills = null;
     }
 }

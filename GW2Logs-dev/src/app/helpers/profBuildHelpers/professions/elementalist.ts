@@ -5,7 +5,7 @@ import { Professions } from '../professionUtilities/professions';
 
 class EleBuild extends ProfBuild {
     constructor(id) {
-        super(id, Professions.Elementalist);
+        super(id, Professions.Elementalist, '');
         this.wep2 = null;
     }
 }
