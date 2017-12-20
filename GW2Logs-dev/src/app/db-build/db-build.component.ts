@@ -24,6 +24,10 @@ class ProfessionHandler {
   add(build: ProfBuild) {
     this.builds.push({ name: build.name, id: build.id });
   }
+
+  validate() {
+    this.builds.sort((a, b) => a.name < b.name ? -1 : 1);
+  }
 }
 
 const professions: Map<string, ProfessionHandler> = new Map<string, ProfessionHandler>();
@@ -34,7 +38,9 @@ buildDatabase.forEach(function (build, id, map) {
   }
   professions.get(profName).add(build);
 });
-
+professions.forEach(function (profHand, id, map) {
+  profHand.validate();
+});
 
 
 @Component({

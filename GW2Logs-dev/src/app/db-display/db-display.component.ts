@@ -11,6 +11,7 @@ export class DbDisplayComponent implements OnInit, OnChanges {
   @Input() profName: string;
   @Input() builds: { name: string, id: string }[];
   selectedBuild: { name: string, id: string };
+  filter = '';
 
   constructor() { }
 

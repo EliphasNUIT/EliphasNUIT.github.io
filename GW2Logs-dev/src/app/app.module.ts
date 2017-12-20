@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { DbBuildComponent } from './db-build/db-build.component';
 import { DbDisplayComponent } from './db-display/db-display.component';
+import { DbSearchPipe } from './db-search.pipe';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -25,12 +27,14 @@ import { DbDisplayComponent } from './db-display/db-display.component';
     CompositionDetailComponent,
     DisplayBuildComponent,
     DbBuildComponent,
-    DbDisplayComponent
+    DbDisplayComponent,
+    DbSearchPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
