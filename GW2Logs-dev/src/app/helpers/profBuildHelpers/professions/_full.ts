@@ -12,14 +12,14 @@ import { warBuildMaker } from './warrior';
 
 export function makeAllBuild() {
     console.log('creating builds');
-    eleBuildMaker();
-    engiBuildMaker();
-    guardBuildMaker();
     mesBuildMaker();
     necroBuildMaker();
+    eleBuildMaker();
     rangerBuildMaker();
-    revBuildMaker();
+    engiBuildMaker();
     thiefBuildMaker();
     warBuildMaker();
+    revBuildMaker();
+    guardBuildMaker();
     console.log('builds done');
 }

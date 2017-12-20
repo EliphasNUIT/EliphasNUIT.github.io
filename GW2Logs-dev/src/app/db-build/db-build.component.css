@@ -2,20 +2,41 @@
 h1 {
     color: #00539F;
     text-shadow: 2px 2px 2px black;
+    font-size: 75px;
 }
 
 h2 {
     color: #2283AF;
     text-shadow: 2px 2px 2px black;
 }
+
+.my-grid {
+    width: 1000px;
+}
 .class-selector {
     width: 300px;
     height: 150px;
-    border: 2px solid black;
     background-position: 0px -40px;
 }
 
 .my-button-title {
     color:white;
     text-shadow: 0px 0px 1px black, 0px 0px 4px black, 0px 0px 10px black;
+  }
+
+  .selector.selected {  
+    outline-color: rgba(255,255,255,1.0);
+    outline-offset: 4px ;
+  }
+  .selector {
+    cursor: pointer;    
+    transition: box-shadow 0.3s linear, outline-color 0.3s linear, outline-offset 0.3s linear;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: rgba(0,0,0,0);
+    outline-offset: 10px ;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.2),3px 0px 4px rgba(0,0,0,0.2),-3px 0px 4px rgba(0,0,0,0.2),0px -3px 4px rgba(0,0,0,0.2);
+  }
+  .selector:hover {
+    box-shadow: 0px 3px 4px rgba(255,255,255,0.5),3px 0px 4px rgba(255,255,255,0.5),-3px 0px 4px rgba(255,255,255,0.5),0px -3px 4px rgba(255,255,255,0.5);
   }

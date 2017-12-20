@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { buildDatabase } from '../helpers/profBuild';
+import { buildDatabase, ProfBuild } from '../helpers/profBuild';
 
 
 class ProfessionHandler {
   name: string;
-  builds: string[] = [];
+  builds: { id: string, name: string }[] = [];
 
   constructor(name: string) {
     this.name = name;
@@ -20,7 +20,21 @@ class ProfessionHandler {
     res[this.name] = true;
     return res;
   }
+
+  add(build: ProfBuild) {
+    this.builds.push({ name: build.name, id: build.id });
+  }
 }
+
+const professions: Map<string, ProfessionHandler> = new Map<string, ProfessionHandler>();
+buildDatabase.forEach(function (build, id, map) {
+  const profName = build.profession.name;
+  if (!professions.has(profName)) {
+    professions.set(profName, new ProfessionHandler(profName));
+  }
+  professions.get(profName).add(build);
+});
+
 
 
 @Component({
@@ -32,26 +46,21 @@ export class DbBuildComponent implements OnInit {
 
   professions: ProfessionHandler[];
 
+  selectedProfession: ProfessionHandler;
+
   constructor() {
     this.professions = [];
-    // light
-    this.professions.push(new ProfessionHandler('Mesmer'));
-    this.professions.push(new ProfessionHandler('Necromancer'));
-    this.professions.push(new ProfessionHandler('Elementalist'));
-    // medium
-    this.professions.push(new ProfessionHandler('Ranger'));
-    this.professions.push(new ProfessionHandler('Engineer'));
-    this.professions.push(new ProfessionHandler('Thief'));
-    // heavy
-    this.professions.push(new ProfessionHandler('Warrior'));
-    this.professions.push(new ProfessionHandler('Revenant'));
-    this.professions.push(new ProfessionHandler('Guardian'));
-    buildDatabase.forEach(function (build, id, map) {
-
+    const _this = this;
+    professions.forEach(function(profHand, name, map) {
+      _this.professions.push(profHand);
     });
   }
 
   ngOnInit() {
+  }
+
+  onSelect(professionHandler: ProfessionHandler) {
+    this.selectedProfession = professionHandler;
   }
 
 }
