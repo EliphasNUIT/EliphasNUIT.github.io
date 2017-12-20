@@ -25,12 +25,13 @@ h2 {
   }
 
   .selector.selected {  
-    outline-color: rgba(255,255,255,1.0);
+    outline-color: rgba(255,255,255,0.8);
     outline-offset: 4px ;
+    outline-width: 3px !important; 
   }
   .selector {
     cursor: pointer;    
-    transition: box-shadow 0.3s linear, outline-color 0.3s linear, outline-offset 0.3s linear;
+    transition: box-shadow 0.3s linear, outline-color 0.3s linear, outline-offset 0.3s linear, outline-width 0.1s linear;
     outline-width: 1px;
     outline-style: solid;
     outline-color: rgba(0,0,0,0);

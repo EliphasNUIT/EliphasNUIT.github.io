@@ -51,9 +51,15 @@ export class DbBuildComponent implements OnInit {
   constructor() {
     this.professions = [];
     const _this = this;
-    professions.forEach(function(profHand, name, map) {
+    professions.forEach(function (profHand, name, map) {
       _this.professions.push(profHand);
+      if (localStorage.getItem('selectedProfession') && localStorage.getItem('selectedProfession') === profHand.name) {
+        _this.selectedProfession = profHand;
+      }
     });
+    if (!localStorage.getItem('selectedProfession')) {
+      this.selectedProfession = this.professions[0];
+    }
   }
 
   ngOnInit() {
@@ -61,6 +67,7 @@ export class DbBuildComponent implements OnInit {
 
   onSelect(professionHandler: ProfessionHandler) {
     this.selectedProfession = professionHandler;
+    localStorage.setItem('selectedProfession', professionHandler.name);
   }
 
 }

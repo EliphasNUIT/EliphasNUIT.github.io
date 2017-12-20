@@ -1,0 +1,35 @@
+<div *ngIf='profName && builds' class='my-db-display'>
+  <div class='uk-flex uk-flex-center uk-margin-bottom'>
+    <h2 class='uk-text-bold uk-text-center uk-margin-bottom'>{{profName | uppercase}}</h2>
+  </div>
+
+  <div class='uk-flex uk-flex-row uk-flex-between uk-margin-large-right uk-margin-large-left'>
+    <div class='uk-flex uk-flex-column '>
+      <div class='uk-flex uk-flex-column '>
+        <div *ngIf="selectedBuild" [class.selected]="true" [ngClass]='getClass()'>
+          <span class='uk-text-large uk-text-bold'>{{selectedBuild.id}}</span>
+        </div>
+
+        <div *ngIf="!selectedBuild" [class.selected]="true" [ngClass]='getClass()'>
+          <span class='uk-text-large uk-text-bold'>Build sélectionné</span>
+        </div>
+
+      </div>
+      <div class="my-scrollable-panel uk-margin-top">
+
+        <div *ngFor="let build of builds" (click)="onSelect(build)" [class.selected]="selectedBuild && build.id === selectedBuild.id"
+          [ngClass]='getClass()'>
+          <span class='uk-text-large uk-text-bold'>{{build.id}}</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class='uk-margin-large-left my-build-display'>
+      <app-display-build [build]="getBuild()"></app-display-build>
+    </div>
+
+  </div>
+
+</div>

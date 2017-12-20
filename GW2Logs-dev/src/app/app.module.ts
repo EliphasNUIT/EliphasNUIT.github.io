@@ -12,6 +12,7 @@ import { DisplayBuildComponent } from './display-build/display-build.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { DbBuildComponent } from './db-build/db-build.component';
+import { DbDisplayComponent } from './db-display/db-display.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DbBuildComponent } from './db-build/db-build.component';
     LogsDetailComponent,
     CompositionDetailComponent,
     DisplayBuildComponent,
-    DbBuildComponent
+    DbBuildComponent,
+    DbDisplayComponent
   ],
   imports: [
     BrowserModule,
