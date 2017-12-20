@@ -12,7 +12,7 @@ class EleBuild extends ProfBuild {
 
 class CondiWeaverBuild extends EleBuild {
     constructor(id, name) {
-        super(id, name);
+        super(id, 'Weaver - Condition - ' + name);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -34,7 +34,7 @@ class CondiWeaverBuild extends EleBuild {
 
 class PowerWeaverBuild extends EleBuild {
     constructor(id, name) {
-        super(id, name);
+        super(id, 'Weaver - Staff Power - ' + name);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Berserker\'s');
         this.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
@@ -56,15 +56,15 @@ export function eleBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiWeaverBuild('weavCondi', 'Weaver - Condition Sw/Dg');
+        build = new CondiWeaverBuild('weavCondi', 'Standart');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Primordial Stance']);
-        build = new CondiWeaverBuild('weavCondiSab', 'Weaver - Condition Sw/Dg - Cannons');
+        build = new CondiWeaverBuild('weavCondiSab', 'Cannons');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Lightning Flash']);
     }
 
     // Power
     {
-        build = new PowerWeaverBuild('weavPowerSHArc', 'Weaver - Arcane Staff Power - Small Hitbox');
+        build = new PowerWeaverBuild('weavPowerSHArc', 'Arcane - Small Hitbox');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
             'Elemental Contingency',
@@ -72,7 +72,7 @@ export function eleBuildMaker() {
         ]);
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerBHArc', 'Weaver - Arcane Staff Power - Big Hitbox');
+        build = new PowerWeaverBuild('weavPowerBHArc', 'Arcane - Big Hitbox');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
             'Elemental Contingency',
@@ -80,15 +80,15 @@ export function eleBuildMaker() {
         ]);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerSHAir', 'Weaver - Air Staff Power - Small Hitbox');
+        build = new PowerWeaverBuild('weavPowerSHAir', 'Air - Small Hitbox');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerBHAir', 'Weaver - Air Staff Power - Big Hitbox');
+        build = new PowerWeaverBuild('weavPowerBHAir', 'Air - Big Hitbox');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerKC', 'Weaver - Air Staff Power - KC');
+        build = new PowerWeaverBuild('weavPowerKC', 'Air - KC');
         build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Tempest Defense', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);

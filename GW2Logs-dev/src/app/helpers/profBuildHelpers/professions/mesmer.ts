@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class MesBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Mesmer, '');
+    constructor(id, name) {
+        super(id, Professions.Mesmer, name);
     }
 }
 
 class MinstrelShareBuild extends MesBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Chronomancer - Minstrel - ' + name);
         this.icon += 'chronomancer.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Durability');
@@ -37,8 +37,8 @@ class MinstrelShareBuild extends MesBuild {
 }
 
 class BoonShareBuild extends MesBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Chronomancer - ' + name);
         this.icon += 'chronomancer.png';
         this.armor.setStats([
             'Berserker\'s',
@@ -66,8 +66,8 @@ class BoonShareBuild extends MesBuild {
 }
 
 class DomiInspi extends BoonShareBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Domination/Inspiration - ' + name);
         this.specialization.setSpec('spec1', 'Domination', [
             'Empowered Illusions',
             'Blurred Inscriptions',
@@ -83,8 +83,8 @@ class DomiInspi extends BoonShareBuild {
 
 
 class IlluInspi extends BoonShareBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Illusions/Inspiration - ' + name);
         this.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Restorative Illusions',
@@ -99,8 +99,8 @@ class IlluInspi extends BoonShareBuild {
 }
 
 class DomiIllu extends BoonShareBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Domination/Illusions - ' + name);
         this.specialization.setSpec('spec1', 'Domination', [
             'Empowered Illusions',
             'Blurred Inscriptions',
@@ -115,8 +115,8 @@ class DomiIllu extends BoonShareBuild {
 }
 
 class DuelIllu extends BoonShareBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Dueling/Illusions - ' + name);
         this.specialization.setSpec('spec1', 'Dueling', [
             'Phantasmal Fury',
             'Fencer\'s Finesse',
@@ -132,16 +132,16 @@ class DuelIllu extends BoonShareBuild {
 
 
 class DomiInspiTank extends DomiInspi {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Tank - ' + name);
         this.wep1.setOffHand('Shield', 'Commander\'s', 'Superior Sigil of Paralyzation');
         this.wep2.setOffHand('Focus', 'Commander\'s', 'Superior Sigil of Paralyzation');
     }
 }
 
 class CondiMiragePhantasmBuild extends MesBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Mirage - Phantasm - ' + name);
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -168,8 +168,8 @@ class CondiMiragePhantasmBuild extends MesBuild {
 }
 
 class CondiMirageCloneBuild extends MesBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, 'Mirage - Clone - ' + name);
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -199,7 +199,7 @@ export function mesBuildMaker() {
     let build: ProfBuild = null;
     // minstrel
     {
-        build = new MinstrelShareBuild('chrTankMinstrel');
+        build = new MinstrelShareBuild('chrTankMinstrel', 'Standart');
         build.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Restorative Illusions',
@@ -209,7 +209,7 @@ export function mesBuildMaker() {
         build.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new MinstrelShareBuild('chrTankDei');
+        build = new MinstrelShareBuild('chrTankDei', 'Deimos');
         build.skills.setHealSkill('Mantra of Recovery');
         build.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Signet of Inspiration']);
         build.skills.setEliteSkill('Gravity Well');
@@ -219,20 +219,20 @@ export function mesBuildMaker() {
     {
 
 
-        build = new IlluInspi('chrVG');
+        build = new IlluInspi('chrVG', 'VG');
         build.skills.setEliteSkill('Signet of Humility');
-        build = new DomiInspiTank('chrVGTank');
-        build.skills.setEliteSkill('Signet of Humility');
-
-        build = new DomiInspi('chrGorse');
-        build.skills.setEliteSkill('Signet of Humility');
-        build = new DomiInspiTank('chrGorseTank');
+        build = new DomiInspiTank('chrVGTank', 'VG');
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new DomiIllu('chrSab');
+        build = new DomiInspi('chrGorse', 'Gorseval');
+        build.skills.setEliteSkill('Signet of Humility');
+        build = new DomiInspiTank('chrGorseTank', 'Gorseval');
+        build.skills.setEliteSkill('Signet of Humility');
+
+        build = new DomiIllu('chrSab', 'Sabetha');
         build.skills.setEliteSkill('Time Warp');
 
-        build = new IlluInspi('chrSloth');
+        build = new IlluInspi('chrSloth', 'Slothasor');
         build.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Warden\'s Feedback',
@@ -240,45 +240,45 @@ export function mesBuildMaker() {
         ]);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new IlluInspi('chrMatt');
+        build = new IlluInspi('chrMatt', 'Matthias');
         build.skills.setUtilitySkills(['Well of Action', 'Feedback', 'Signet of Inspiration']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new DomiInspi('chrKC');
+        build = new DomiInspi('chrKC', 'KC');
         build.skills.setEliteSkill('Signet of Humility');
-        build = new DomiInspiTank('chrKCTank');
+        build = new DomiInspiTank('chrKCTank', 'KC');
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new DomiInspi('chrXera');
-        build = new DomiInspiTank('chrXeraTank');
+        build = new DomiInspi('chrXera', 'Xera');
+        build = new DomiInspiTank('chrXeraTank', 'Xera');
 
-        build = new DomiIllu('chrCairn');
+        build = new DomiIllu('chrCairn', 'Cairn');
         build.skills.setEliteSkill('Time Warp');
 
-        build = new DuelIllu('chrMO');
+        build = new DuelIllu('chrMO', 'Mursaat');
 
-        build = new DomiIllu('chrSam');
+        build = new DomiIllu('chrSam', 'Samarog');
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new DomiInspi('chrDei');
+        build = new DomiInspi('chrDei', 'Deimos');
         build.skills.setEliteSkill('Time Warp');
 
-        build = new DomiInspi('chrSS');
-        build = new DomiInspiTank('chrSSTank');
+        build = new DomiInspi('chrSS', 'Soulless Horror');
+        build = new DomiInspiTank('chrSSTank', 'Soulless Horror');
 
-        build = new IlluInspi('chrDhuum');
+        build = new IlluInspi('chrDhuum', 'Dhuum');
 
     }
 
     // condi phantasme
     {
-        build = new CondiMiragePhantasmBuild('mirageCondiMatt');
+        build = new CondiMiragePhantasmBuild('mirageCondiMatt', 'Matthias');
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new CondiMiragePhantasmBuild('mirageCondi');
+        build = new CondiMiragePhantasmBuild('mirageCondi', 'Standart');
 
-        build = new CondiMiragePhantasmBuild('mirageCondiVG');
+        build = new CondiMiragePhantasmBuild('mirageCondiVG', 'VG');
         build.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Malice');
         build.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirage Mantle', 'Dune Cloak']);
         build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
@@ -287,11 +287,11 @@ export function mesBuildMaker() {
 
     // condi clone
     {
-        build = new CondiMirageCloneBuild('mirageCondiCMatt');
+        build = new CondiMirageCloneBuild('mirageCondiCMatt', 'Matthias');
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new CondiMirageCloneBuild('mirageCondiC');
+        build = new CondiMirageCloneBuild('mirageCondiC', 'Standart');
     }
 
 }

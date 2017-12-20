@@ -7,9 +7,9 @@ class WarriorBuild extends ProfBuild {
     }
 }
 
-class BerserkerBuild extends WarriorBuild {
+class BerserkerBannerBuild extends WarriorBuild {
     constructor(id, name) {
-        super(id, name);
+        super(id, 'Berserker - Banner - ' + name);
         this.icon += 'berserker.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -31,9 +31,9 @@ export function warBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new BerserkerBuild('bers', 'Berserker - Banner');
+        build = new BerserkerBannerBuild('bers', 'Standart');
 
-        build = new BerserkerBuild('bersCC', 'Berserker - CC Banner');
+        build = new BerserkerBannerBuild('bersCC', 'CC');
         build.skills.setUtilitySkills(['Wild Blow', 'Banner of Discipline', 'Banner of Strength']);
     }
 }

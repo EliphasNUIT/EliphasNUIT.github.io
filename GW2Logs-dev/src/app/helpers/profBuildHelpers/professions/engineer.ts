@@ -11,7 +11,7 @@ class EngiBuild extends ProfBuild {
 
 class CondiEngiBuild extends EngiBuild {
     constructor(id, name) {
-        super(id, name);
+        super(id, 'Engineer - Condition - ' + name);
         this.icon += 'engineer.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -34,7 +34,7 @@ class CondiEngiBuild extends EngiBuild {
 
 class PowerHolosmithBuild extends EngiBuild {
     constructor(id, name) {
-        super(id, name);
+        super(id, 'Holosmith - Power - ' + name);
         this.icon += 'holosmith.png';
         this.armor.setSingleStat('Berserker\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
@@ -64,20 +64,20 @@ export function engiBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiEngiBuild('engiCondi', 'Engineer - Condition');
+        build = new CondiEngiBuild('engiCondi', 'Standart');
 
     }
 
     // Power
     {
-        build = new PowerHolosmithBuild('holoPowerCairn', 'Holosmith - Power - Cairn');
+        build = new PowerHolosmithBuild('holoPowerCairn', 'Cairn');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
             'No Scope',
             'Modified Ammunition'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerSam', 'Holosmith - Power - Samarog');
+        build = new PowerHolosmithBuild('holoPowerSam', 'Samarog');
         build.skills.setHealSkill('A.E.D.');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
@@ -85,7 +85,7 @@ export function engiBuildMaker() {
             'Modified Ammunition'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerMO', 'Holosmith - Power - Mursaat');
+        build = new PowerHolosmithBuild('holoPowerMO', 'Mursaat');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
             'No Scope',
@@ -93,7 +93,7 @@ export function engiBuildMaker() {
         ]);
         build.skills.setHealSkill('Healing Turret');
 
-        build = new PowerHolosmithBuild('holoPowerMatt', 'Holosmith - Power - Matthias');
+        build = new PowerHolosmithBuild('holoPowerMatt', 'Matthias');
         build.skills.setHealSkill('Healing Turret');
         build.specialization.setSpec('spec3', 'Holosmith', [
             'Solar Focusing Lens',
@@ -101,10 +101,10 @@ export function engiBuildMaker() {
             'Photonic Blasting Module'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerXera', 'Holosmith - Power - Xera');
+        build = new PowerHolosmithBuild('holoPowerXera', 'Xera');
         build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
 
-        build = new PowerHolosmithBuild('holoPowerDhuum', 'Holosmith - Power - Dhuum');
+        build = new PowerHolosmithBuild('holoPowerDhuum', 'Dhuum');
         build.specialization.setSpec('spec3', 'Holosmith', [
             'Solar Focusing Lens',
             'Crystal Configuration: Storm',

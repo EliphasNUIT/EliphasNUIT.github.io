@@ -25,7 +25,7 @@
 
         <div *ngFor="let build of builds | dbSearch: filter" (click)="onSelect(build)" [class.selected]="selectedBuild && build.id === selectedBuild.id"
           [ngClass]='getClass()'>
-          <span class='uk-text-large uk-text-bold'>{{build.name}}</span>
+          <span class='my-text-large uk-text-bold'>{{build.name}}</span>
         </div>
 
       </div>

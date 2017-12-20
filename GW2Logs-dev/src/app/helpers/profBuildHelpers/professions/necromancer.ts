@@ -9,7 +9,7 @@ class NecroBuild extends ProfBuild {
 
 class CondiScourgeBuild extends NecroBuild {
     constructor(id, name) {
-        super(id, name);
+        super(id, 'Scourge - Condition - ' + name);
         this.icon += 'scourge.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -33,16 +33,16 @@ export function necroBuildMaker() {
     let build: ProfBuild = null;
     // Scourge - Condi
     {
-        build = new CondiScourgeBuild('scourgeCondiMO', 'Scourge - Condition - Mursaat');
+        build = new CondiScourgeBuild('scourgeCondiMO', 'Mursaat');
         build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Epidemic']);
 
-        build = new CondiScourgeBuild('scourgeCondiGorse', 'Scourge - Condition - Gorseval');
+        build = new CondiScourgeBuild('scourgeCondiGorse', 'Gorseval');
         build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
 
-        build = new CondiScourgeBuild('scourgeCondiSab', 'Scourge - Condition - Sabetha');
+        build = new CondiScourgeBuild('scourgeCondiSab', 'Sabetha');
         build.skills.setUtilitySkills(['Blood Is Power', 'Trail of Anguish', 'Epidemic']);
 
-        build = new CondiScourgeBuild('scourgeCondiDes', 'Scourge - Condition - Soulless Horror');
+        build = new CondiScourgeBuild('scourgeCondiDes', 'Soulless Horror');
         build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
     }
 }
