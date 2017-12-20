@@ -4,15 +4,15 @@ import { Professions } from '../professionUtilities/professions';
 
 
 class EleBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Elementalist, '');
+    constructor(id, name) {
+        super(id, Professions.Elementalist, name);
         this.wep2 = null;
     }
 }
 
 class CondiWeaverBuild extends EleBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -33,8 +33,8 @@ class CondiWeaverBuild extends EleBuild {
 }
 
 class PowerWeaverBuild extends EleBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'weaver.png';
         this.armor.setSingleStat('Berserker\'s');
         this.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
@@ -56,15 +56,15 @@ export function eleBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiWeaverBuild('weavCondi');
+        build = new CondiWeaverBuild('weavCondi', 'Weaver - Condition Sw/Dg');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Primordial Stance']);
-        build = new CondiWeaverBuild('weavCondiSab');
+        build = new CondiWeaverBuild('weavCondiSab', 'Weaver - Condition Sw/Dg - Cannons');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Lightning Flash']);
     }
 
     // Power
     {
-        build = new PowerWeaverBuild('weavPowerSHArc');
+        build = new PowerWeaverBuild('weavPowerSHArc', 'Weaver - Arcane Staff Power - Small Hitbox');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
             'Elemental Contingency',
@@ -72,7 +72,7 @@ export function eleBuildMaker() {
         ]);
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerBHArc');
+        build = new PowerWeaverBuild('weavPowerBHArc', 'Weaver - Arcane Staff Power - Big Hitbox');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',
             'Elemental Contingency',
@@ -80,15 +80,15 @@ export function eleBuildMaker() {
         ]);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerSHAir');
+        build = new PowerWeaverBuild('weavPowerSHAir', 'Weaver - Air Staff Power - Small Hitbox');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerBHAir');
+        build = new PowerWeaverBuild('weavPowerBHAir', 'Weaver - Air Staff Power - Big Hitbox');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
 
-        build = new PowerWeaverBuild('weavPowerKC');
+        build = new PowerWeaverBuild('weavPowerKC', 'Weaver - Air Staff Power - KC');
         build.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
         build.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Tempest Defense', 'Bolt to the Heart']);
         build.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
@@ -97,7 +97,7 @@ export function eleBuildMaker() {
 
     // Special
     {
-        build = new EleBuild('tempAura');
+        build = new EleBuild('tempAura', 'Tempest - Auramancer');
         build.armor.setSingleStat('Magi\'s');
         build.armor.setSingleRune('Superior Rune of the Monk');
         build.consumable.setConsumable('Delicious Rice Ball', 'Bountiful Maintenance Oil');

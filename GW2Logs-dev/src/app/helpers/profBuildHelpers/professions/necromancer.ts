@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class NecroBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Necromancer, '');
+    constructor(id, name) {
+        super(id, Professions.Necromancer, name);
     }
 }
 
 class CondiScourgeBuild extends NecroBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'scourge.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -33,16 +33,16 @@ export function necroBuildMaker() {
     let build: ProfBuild = null;
     // Scourge - Condi
     {
-        build = new CondiScourgeBuild('scourgeCondiMO');
+        build = new CondiScourgeBuild('scourgeCondiMO', 'Scourge - Condition - Mursaat');
         build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Epidemic']);
 
-        build = new CondiScourgeBuild('scourgeCondiGorse');
+        build = new CondiScourgeBuild('scourgeCondiGorse', 'Scourge - Condition - Gorseval');
         build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
 
-        build = new CondiScourgeBuild('scourgeCondiSab');
+        build = new CondiScourgeBuild('scourgeCondiSab', 'Scourge - Condition - Sabetha');
         build.skills.setUtilitySkills(['Blood Is Power', 'Trail of Anguish', 'Epidemic']);
 
-        build = new CondiScourgeBuild('scourgeCondiDes');
+        build = new CondiScourgeBuild('scourgeCondiDes', 'Scourge - Condition - Soulless Horror');
         build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
     }
 }

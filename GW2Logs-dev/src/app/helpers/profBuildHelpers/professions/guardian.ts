@@ -3,14 +3,14 @@ import { Professions } from '../professionUtilities/professions';
 
 
 class GuardBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Guardian, '');
+    constructor(id, name) {
+        super(id, Professions.Guardian, name);
     }
 }
 
 class PowerDHBuild extends GuardBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'dragonhunter.png';
         this.armor.setSingleStat('Berserker\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
@@ -36,8 +36,8 @@ class PowerDHBuild extends GuardBuild {
 }
 
 class CondiFBBuild extends GuardBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'firebrand.png';
         this.armor.setStats(['Sinister', 'Sinister', 'Viper\'s', 'Sinister', 'Sinister', 'Sinister']);
         this.armor.setSingleRune('Superior Rune of Balthazar');
@@ -59,25 +59,25 @@ export function guardBuildMaker() {
     let build: ProfBuild = null;
     // Power
     {
-        build = new PowerDHBuild('dhPowerZealRad');
+        build = new PowerDHBuild('dhPowerZealRad', 'Dragonhunter - Power - Zeal/Radiance');
         build.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
-
-        build = new PowerDHBuild('dhPowerZealRadKC');
-        build.wep1.setMainHand('Scepter', 'Berserker\'s', 'Superior Sigil of Force');
-        build.wep1.setOffHand('Torch', 'Berserker\'s', 'Superior Sigil of Impact');
-        build.wep2.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
-        build.skills.setUtilitySkills(['Procession of Blades', 'Hallowed Ground', 'Bane Signet']);
-
     }
 
     // Condi
     {
-        build = new CondiFBBuild('fbDPS');
+        build = new CondiFBBuild('fbDPS', 'Firebrand - UC Condition - Adds');
 
-        build = new CondiFBBuild('fbDPSSword');
-        build.wep2.setMainHand('Sword', 'Viper\'s', 'Superior Sigil of Bursting');
+        build = new CondiFBBuild('fbDPSPurg', 'Firebrand - UC Condition - No Adds');
+        build.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
 
-        build = new CondiFBBuild('fbDPSCC');
+        build = new CondiFBBuild('fbDPSCon', 'Firebrand - Consecration Condition - Adds');
+        build.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
+
+        build = new CondiFBBuild('fbDPSConPurge', 'Firebrand - Consecration Condition - No Adds');
+        build.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
+        build.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
+
+        build = new CondiFBBuild('fbDPSCC', 'Firebrand - UC CC Condition');
         build.skills.setUtilitySkills(['Mantra of Flame', 'Hammer of Wisdom', 'Signet of Wrath']);
     }
 }

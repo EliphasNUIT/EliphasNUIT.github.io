@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class WarriorBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Warrior, '');
+    constructor(id, name) {
+        super(id, Professions.Warrior, name);
     }
 }
 
 class BerserkerBuild extends WarriorBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'berserker.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -31,9 +31,9 @@ export function warBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new BerserkerBuild('bers');
+        build = new BerserkerBuild('bers', 'Berserker - Banner');
 
-        build = new BerserkerBuild('bersCC');
+        build = new BerserkerBuild('bersCC', 'Berserker - CC Banner');
         build.skills.setUtilitySkills(['Wild Blow', 'Banner of Discipline', 'Banner of Strength']);
     }
 }

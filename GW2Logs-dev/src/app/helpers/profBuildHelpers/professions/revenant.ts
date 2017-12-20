@@ -2,15 +2,15 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class RevenantBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Revenant, '');
+    constructor(id, name) {
+        super(id, Professions.Revenant, name);
         this.skills = null;
     }
 }
 
 class CondiRenegadeBuild extends RevenantBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'renegade.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
@@ -30,8 +30,8 @@ class CondiRenegadeBuild extends RevenantBuild {
 }
 
 class KiteHeraldBuild extends RevenantBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'herald.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Water');
@@ -62,19 +62,19 @@ export function revBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiRenegadeBuild('renCondi');
+        build = new CondiRenegadeBuild('renCondi', 'Renegade - Devastation Condition - Small Hitbox');
 
-        build = new CondiRenegadeBuild('renCondiBH');
+        build = new CondiRenegadeBuild('renCondiBH', 'Renegade - Devastation Condition - Big Hitbox');
         build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
 
-        build = new CondiRenegadeBuild('renCondiInvo');
+        build = new CondiRenegadeBuild('renCondiInvo', 'Renegade - Invocation Condition - Small Hitbox');
         build.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',
             'Spirit Boon',
             'Charged Mists'
         ]);
 
-        build = new CondiRenegadeBuild('renCondiInvoBH');
+        build = new CondiRenegadeBuild('renCondiInvoBH', 'Renegade - Invocation Condition - Big Hitbox');
         build.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',
             'Spirit Boon',
@@ -82,22 +82,23 @@ export function revBuildMaker() {
         ]);
         build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
 
-        build = new CondiRenegadeBuild('renCondiSupp');
+        build = new CondiRenegadeBuild('renCondiSupp', 'Renegade - Support Condition');
         build.specialization.setSpec('spec2', 'Salvation', [
             'Tranquil Balance',
             'Invoking Harmony',
-            'Selfless Amplification'
+            'Natural Abundance'
         ]);
+        build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Righteous Rebel']);
     }
 
     // Special
     {
-        build = new KiteHeraldBuild('herDeiVentari');
+        build = new KiteHeraldBuild('herDeiVentari', 'Herald - Hand Kite');
 
         build.wep1.setMainHand('Sword', 'Minstrel\'s', 'Superior Sigil of Transference');
         build.wep1.setOffHand('Shield', 'Magi\'s', 'Superior Sigil of Water');
 
-        build = new KiteHeraldBuild('herCairnVentari');
+        build = new KiteHeraldBuild('herCairnVentari', 'Herald - Cairn Kite');
 
         build.wep1.setTwoHand('Hammer', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
 

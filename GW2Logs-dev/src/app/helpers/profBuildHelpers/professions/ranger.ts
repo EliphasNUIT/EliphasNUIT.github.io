@@ -2,22 +2,22 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class RangerBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Ranger, '');
+    constructor(id, name) {
+        super(id, Professions.Ranger, name);
     }
 }
 
 class CondiRangerBuild extends RangerBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.armor.setSingleStat('Viper\'s');
         this.trinket.setSingleStat('Viper\'s');
     }
 }
 
 class CondiDruidBuild extends CondiRangerBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'druid.png';
         this.armor.set42Rune('Superior Rune of the Traveler', 'Superior Rune of the Trapper');
         this.wep1.setTwoHand('Longbow', 'Viper\'s', 'Superior Sigil of Concentration', 'Superior Sigil of Malice');
@@ -35,8 +35,8 @@ class CondiDruidBuild extends CondiRangerBuild {
 }
 
 class CondiSoulbeastBuild extends CondiRangerBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'soulbeast.png';
         this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
         this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
@@ -55,8 +55,8 @@ class CondiSoulbeastBuild extends CondiRangerBuild {
 
 
 class BoonDruidBuild extends RangerBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'druid.png';
         this.armor.setSingleStat('Harrier\'s');
         this.armor.setSingleRune('Superior Rune of the Monk');
@@ -76,8 +76,8 @@ class BoonDruidBuild extends RangerBuild {
 }
 
 class TrapperBoonDruidBuild extends BoonDruidBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.specialization.setSpec('spec1', 'Skirmishing', ['Trapper\'s Expertise', 'Spotter', 'Quick Draw']);
         this.skills.setHealSkill('Healing Spring');
     }
@@ -87,50 +87,50 @@ export function rangerBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiDruidBuild('druidCondiVg');
+        build = new CondiDruidBuild('druidCondiVg', 'Druide - Condition - VG');
         build.skills.setUtilitySkills(['Glyph of the Tides', 'Sun Spirit', 'Frost Spirit']);
 
-        build = new CondiDruidBuild('druidCondi');
+        build = new CondiDruidBuild('druidCondi', 'Druide - Condition');
 
-        build = new CondiSoulbeastBuild('soulbeastCondi');
+        build = new CondiSoulbeastBuild('soulbeastCondi', 'Soulbeast - Condition');
 
 
-        build = new CondiSoulbeastBuild('soulbeastCondiMatt');
+        build = new CondiSoulbeastBuild('soulbeastCondiMatt', 'Soulbeast - Condition - Matthias');
         build.skills.setHealSkill('Healing Spring');
 
     }
 
     // Heal
     {
-        build = new BoonDruidBuild('druidVg');
+        build = new BoonDruidBuild('druidVg', 'Druide - Boons - VG');
         build.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         build.skills.setEliteSkill('Entangle');
 
-        build = new BoonDruidBuild('druidSab');
+        build = new BoonDruidBuild('druidSab', 'Druide - Boons - Sabetha');
 
-        build = new BoonDruidBuild('druidSloth');
+        build = new BoonDruidBuild('druidSloth', 'Druide - Boons - Slothasor');
         build.skills.setUtilitySkills(['"Protect Me!"', '', '']);
 
-        build = new TrapperBoonDruidBuild('druidMatt');
+        build = new TrapperBoonDruidBuild('druidMatt', 'Druide - Boons - Matthias');
         build.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         build.skills.setEliteSkill('Spirit of Nature');
 
-        build = new TrapperBoonDruidBuild('druidXera');
+        build = new TrapperBoonDruidBuild('druidXera', 'Druide - Boons - Xera');
 
-        build = new BoonDruidBuild('druidSpirit');
+        build = new BoonDruidBuild('druidSpirit', 'Druide - Boons - Spirit');
         build.skills.setEliteSkill('Spirit of Nature');
 
-        build = new BoonDruidBuild('druidCairnKite');
+        build = new BoonDruidBuild('druidCairnKite', 'Druide - Boons - Cairn Kite');
         build.armor.setSingleStat('Minstrel\'s');
         build.armor.setSingleRune('Superior Rune of Water');
         build.trinket.setSingleStat('Minstrel\'s');
         build.skills.setEliteSkill('Spirit of Nature');
 
-        build = new BoonDruidBuild('druidKite');
+        build = new BoonDruidBuild('druidKite', 'Druide - Boons - Black Kite');
         build.wep2.setTwoHand('Greatsword', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Agility');
         build.skills.setEliteSkill('Spirit of Nature');
 
-        build = new BoonDruidBuild('druidSam');
+        build = new BoonDruidBuild('druidSam', 'Druide - Boons - Samarog');
         build.skills.pets = ['Juvenile Jacaranda', 'Juvenile Electric Wyvern'];
         build.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
 

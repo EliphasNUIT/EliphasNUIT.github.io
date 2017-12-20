@@ -2,14 +2,14 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 
 class ThiefBuild extends ProfBuild {
-    constructor(id) {
-        super(id, Professions.Thief, '');
+    constructor(id, name) {
+        super(id, Professions.Thief, name);
     }
 }
 
 class PowerDaredevilBuild extends ThiefBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'daredevil.png';
         this.wep2 = null;
         this.armor.setSingleStat('Berserker\'s');
@@ -27,8 +27,8 @@ class PowerDaredevilBuild extends ThiefBuild {
 }
 
 class CondiDaredevilBuild extends ThiefBuild {
-    constructor(id) {
-        super(id);
+    constructor(id, name) {
+        super(id, name);
         this.icon += 'daredevil.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Krait');
@@ -53,17 +53,17 @@ export function thiefBuildMaker() {
     let build: ProfBuild = null;
     // Power
     {
-        build = new PowerDaredevilBuild('drdPower');
+        build = new PowerDaredevilBuild('drdPower', 'Daredevil - Staff Power');
 
-        build = new PowerDaredevilBuild('drdPowerSab');
+        build = new PowerDaredevilBuild('drdPowerSab', 'Daredevil - Staff Power - Cannons');
         build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
     }
 
     // Condi
     {
-        build = new CondiDaredevilBuild('drdCondi');
+        build = new CondiDaredevilBuild('drdCondi', 'Daredevil - Condition');
 
-        build = new CondiDaredevilBuild('drdCondiSab');
+        build = new CondiDaredevilBuild('drdCondiSab', 'Daredevil - Condition - Cannons');
         build.skills.setUtilitySkills(['Spider Venom', 'Shadowstep', 'Caltrops']);
     }
 }
