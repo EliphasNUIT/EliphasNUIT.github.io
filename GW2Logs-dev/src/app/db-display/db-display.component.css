@@ -9,7 +9,7 @@
 }
 
 .my-text-large {
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .my-scrollable-panel {
@@ -51,109 +51,109 @@
 
 /* Classes */
 .Elementalist.my-prof-build.selected {  
-    background-color: rgba(180, 0, 0, 0.6);
+    background-color: rgba(180, 0, 0, 1.0);
 }
 
 .Elementalist.my-prof-build.selected:hover {  
-    background-color: rgba(180, 0, 0, 0.6);
+    background-color: rgba(180, 0, 0, 1.0);
 }
 
 .Elementalist.my-prof-build:hover {
-    background-color: rgba(180, 0, 0, 0.4);
+    background-color: rgba(180, 0, 0, 0.6);
 }
 
 .Mesmer.my-prof-build.selected {  
-    background-color: rgba(150, 60, 200, 0.6);
+    background-color: rgba(150, 60, 200, 1.0);
 }
 
 .Mesmer.my-prof-build.selected:hover {  
-    background-color: rgba(150, 60, 200, 0.6);
+    background-color: rgba(150, 60, 200, 1.0);
 }
 
 .Mesmer.my-prof-build:hover {
-    background-color: rgba(150, 60, 200, 0.4);
+    background-color: rgba(150, 60, 200, 0.6);
 }
 
 .Necromancer.my-prof-build.selected {  
-    background-color: rgba(15, 105, 20, 0.6);
+    background-color: rgba(15, 105, 20, 1.0);
 }
 
 .Necromancer.my-prof-build.selected:hover {  
-    background-color: rgba(15, 105, 20, 0.6);
+    background-color: rgba(15, 105, 20, 1.0);
 }
 
 .Necromancer.my-prof-build:hover {
-    background-color: rgba(15, 105, 20, 0.4);
+    background-color: rgba(15, 105, 20, 0.6);
 }
 
 .Engineer.my-prof-build.selected {  
-    background-color: rgba(150, 85, 15, 0.6);
+    background-color: rgba(150, 85, 15, 1.0);
 }
 
 .Engineer.my-prof-build.selected:hover {  
-    background-color: rgba(150, 85, 15, 0.6);
+    background-color: rgba(150, 85, 15, 1.0);
 }
 
 .Engineer.my-prof-build:hover {
-    background-color: rgba(150, 85, 15, 0.4);
+    background-color: rgba(150, 85, 15, 0.6);
 }
 
 .Thief.my-prof-build.selected {  
-    background-color: rgba(40, 75, 95, 0.6);
+    background-color: rgba(40, 75, 95, 1.0);
 }
 
 .Thief.my-prof-build.selected:hover {  
-    background-color: rgba(40, 75, 95, 0.6);
+    background-color: rgba(40, 75, 95, 1.0);
 }
 
 .Thief.my-prof-build:hover {
-    background-color: rgba(40, 75, 95, 0.4);
+    background-color: rgba(40, 75, 95, 0.6);
 }
 
 .Ranger.my-prof-build.selected {  
-    background-color: rgba(10, 160, 10, 0.6);
+    background-color: rgba(10, 160, 10, 1.0);
 }
 
 .Ranger.my-prof-build.selected:hover {  
-    background-color: rgba(10, 160, 10, 0.6);
+    background-color: rgba(10, 160, 10, 1.0);
 }
 
 .Ranger.my-prof-build:hover {
-    background-color: rgba(10, 160, 10, 0.4);
+    background-color: rgba(10, 160, 10, 0.6);
 }
 
 .Revenant.my-prof-build.selected {  
-    background-color: rgba(85, 10, 20, 0.6);
+    background-color: rgba(85, 10, 20, 1.0);
 }
 
 .Revenant.my-prof-build.selected:hover {  
-    background-color: rgba(85, 10, 20, 0.6);
+    background-color: rgba(85, 10, 20, 1.0);
 }
 
 .Revenant.my-prof-build:hover {
-    background-color: rgba(85, 10, 20, 0.4);
+    background-color: rgba(85, 10, 20, 0.6);
 }
 
 .Guardian.my-prof-build.selected {  
-    background-color: rgba(45, 135, 160, 0.6);
+    background-color: rgba(45, 135, 160, 1.0);
 }
 
 .Guardian.my-prof-build.selected:hover {  
-    background-color: rgba(45, 135, 160, 0.6);
+    background-color: rgba(45, 135, 160, 1.0);
 }
 
 .Guardian.my-prof-build:hover {
-    background-color: rgba(45, 135, 160, 0.4);
+    background-color: rgba(45, 135, 160, 0.6);
 }
 
 .Warrior.my-prof-build.selected {  
-    background-color: rgba(245, 150, 15, 0.6);
+    background-color: rgba(245, 150, 15, 1.0);
 }
 
 .Warrior.my-prof-build.selected:hover {  
-    background-color: rgba(245, 150, 15, 0.6);
+    background-color: rgba(245, 150, 15, 1.0);
 }
 
 .Warrior.my-prof-build:hover {
-    background-color: rgba(245, 150, 15, 0.4);
+    background-color: rgba(245, 150, 15, 0.6);
 }

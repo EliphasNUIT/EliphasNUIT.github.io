@@ -95,7 +95,7 @@ export class CompositionDetailComponent implements OnInit, OnChanges {
   getClasses(char: Character): any {
     const res: any = {};
     res.selectable = true;
-    res[char.getBuild(this.boss.shortName).profession.name] = true;
+    res[char.getProfessionName(this.boss.shortName)] = true;
     return res;
   }
 

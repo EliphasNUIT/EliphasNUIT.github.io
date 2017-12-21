@@ -47,6 +47,14 @@ export class Character  {
         return buildDatabase.get(this.builds[bossName]);
     }
 
+    getProfessionName(bossName: string): string {
+        const build = this.getBuild(bossName);
+        if (build) {
+            return build.profession.name;
+        }
+        return 'any';
+    }
+
     getRole(bossName: string): string {
         return this.roles[bossName];
     }

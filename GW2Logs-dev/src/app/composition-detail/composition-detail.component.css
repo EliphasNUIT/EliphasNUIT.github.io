@@ -7,7 +7,7 @@ table {
     background-color: rgba(50, 50, 50, 0.2);
 }*/
 th {
-    background-color: rgba(200,100,0,0.4);   
+    background-color: rgba(200,100,0,0.6);   
     border: 4px solid black;
 }
 
@@ -25,111 +25,111 @@ table {
 }
 /* Classes */
 .Elementalist.selectable.selected {  
-    background-color: rgba(180, 0, 0, 0.6);
+    background-color: rgba(180, 0, 0, 1.0);
 }
 
 .Elementalist.selectable.selected:hover {  
-    background-color: rgba(180, 0, 0, 0.6);
+    background-color: rgba(180, 0, 0, 1.0);
 }
 
 .Elementalist.selectable:hover {
-    background-color: rgba(180, 0, 0, 0.4);
+    background-color: rgba(180, 0, 0, 0.6);
 }
 
 .Mesmer.selectable.selected {  
-    background-color: rgba(150, 60, 200, 0.6);
+    background-color: rgba(150, 60, 200, 1.0);
 }
 
 .Mesmer.selectable.selected:hover {  
-    background-color: rgba(150, 60, 200, 0.6);
+    background-color: rgba(150, 60, 200, 1.0);
 }
 
 .Mesmer.selectable:hover {
-    background-color: rgba(150, 60, 200, 0.4);
+    background-color: rgba(150, 60, 200, 0.6);
 }
 
 .Necromancer.selectable.selected {  
-    background-color: rgba(15, 105, 20, 0.6);
+    background-color: rgba(15, 105, 20, 1.0);
 }
 
 .Necromancer.selectable.selected:hover {  
-    background-color: rgba(15, 105, 20, 0.6);
+    background-color: rgba(15, 105, 20, 1.0);
 }
 
 .Necromancer.selectable:hover {
-    background-color: rgba(15, 105, 20, 0.4);
+    background-color: rgba(15, 105, 20, 0.6);
 }
 
 .Engineer.selectable.selected {  
-    background-color: rgba(150, 85, 15, 0.6);
+    background-color: rgba(150, 85, 15, 1.0);
 }
 
 .Engineer.selectable.selected:hover {  
-    background-color: rgba(150, 85, 15, 0.6);
+    background-color: rgba(150, 85, 15, 1.0);
 }
 
 .Engineer.selectable:hover {
-    background-color: rgba(150, 85, 15, 0.4);
+    background-color: rgba(150, 85, 15, 0.6);
 }
 
 .Thief.selectable.selected {  
-    background-color: rgba(40, 75, 95, 0.6);
+    background-color: rgba(40, 75, 95, 1.0);
 }
 
 .Thief.selectable.selected:hover {  
-    background-color: rgba(40, 75, 95, 0.6);
+    background-color: rgba(40, 75, 95, 1.0);
 }
 
 .Thief.selectable:hover {
-    background-color: rgba(40, 75, 95, 0.4);
+    background-color: rgba(40, 75, 95, 0.6);
 }
 
 .Ranger.selectable.selected {  
-    background-color: rgba(10, 160, 10, 0.6);
+    background-color: rgba(10, 160, 10, 1.0);
 }
 
 .Ranger.selectable.selected:hover {  
-    background-color: rgba(10, 160, 10, 0.6);
+    background-color: rgba(10, 160, 10, 1.0);
 }
 
 .Ranger.selectable:hover {
-    background-color: rgba(10, 160, 10, 0.4);
+    background-color: rgba(10, 160, 10, 0.6);
 }
 
 .Revenant.selectable.selected {  
-    background-color: rgba(85, 10, 20, 0.6);
+    background-color: rgba(85, 10, 20, 1.0);
 }
 
 .Revenant.selectable.selected:hover {  
-    background-color: rgba(85, 10, 20, 0.6);
+    background-color: rgba(85, 10, 20, 1.0);
 }
 
 .Revenant.selectable:hover {
-    background-color: rgba(85, 10, 20, 0.4);
+    background-color: rgba(85, 10, 20, 0.6);
 }
 
 .Guardian.selectable.selected {  
-    background-color: rgba(45, 135, 160, 0.6);
+    background-color: rgba(45, 135, 160, 1.0);
 }
 
 .Guardian.selectable.selected:hover {  
-    background-color: rgba(45, 135, 160, 0.6);
+    background-color: rgba(45, 135, 160, 1.0);
 }
 
 .Guardian.selectable:hover {
-    background-color: rgba(45, 135, 160, 0.4);
+    background-color: rgba(45, 135, 160, 0.6);
 }
 
 .Warrior.selectable.selected {  
-    background-color: rgba(245, 150, 15, 0.6);
+    background-color: rgba(245, 150, 15, 1.0);
 }
 
 .Warrior.selectable.selected:hover {  
-    background-color: rgba(245, 150, 15, 0.6);
+    background-color: rgba(245, 150, 15, 1.0);
 }
 
 .Warrior.selectable:hover {
-    background-color: rgba(245, 150, 15, 0.4);
+    background-color: rgba(245, 150, 15, 0.6);
 }
 /* */
 img {

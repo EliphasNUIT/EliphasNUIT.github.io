@@ -20,7 +20,7 @@ h2 {
   cursor: pointer;    
   transition: box-shadow 0.3s linear, outline-color 0.3s linear, outline-offset 0.3s linear, outline-width 0.1s linear;
   outline-width: 1px;
-  outline-style: solid;
+  outline-style: ridge;
   outline-color: rgba(0,0,0,0);
   outline-offset: 10px ;
 }

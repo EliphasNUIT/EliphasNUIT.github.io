@@ -70,10 +70,7 @@ export function guardBuildMaker() {
         build = new CondiFBBuild('fbDPSPurg', 'UC - No Adds');
         build.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
 
-        build = new CondiFBBuild('fbDPSCon', 'Consecration - Adds');
-        build.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
-
-        build = new CondiFBBuild('fbDPSConPurge', 'Consecration - No Adds');
+        build = new CondiFBBuild('fbDPSConPurge', 'Consecration');
         build.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
         build.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
 

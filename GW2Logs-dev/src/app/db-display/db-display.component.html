@@ -7,11 +7,11 @@
     <div class='uk-flex uk-flex-column '>
       <div class='uk-flex uk-flex-column '>
         <div *ngIf="selectedBuild" (click)="onSelect(null)" [class.selected]="true" [ngClass]='getClass()'>
-          <span class='uk-text-large uk-text-bold'>{{selectedBuild.name}}</span>
+          <span class='my-text-large uk-text-bold'>{{selectedBuild.name}}</span>
         </div>
 
         <div *ngIf="!selectedBuild" [class.selected]="true" [ngClass]='getClass()'>
-          <span class='uk-text-large uk-text-bold'>Build sélectionné</span>
+          <span class='my-text-large uk-text-bold'>Build sélectionné</span>
         </div>
         <!--<div class="uk-flex uk-flex-center uk-margin-top">
           <div >
@@ -23,7 +23,7 @@
       </div>
       <div class="my-scrollable-panel uk-margin-top">
 
-        <div *ngFor="let build of builds | dbSearch: filter" (click)="onSelect(build)" [class.selected]="selectedBuild && build.id === selectedBuild.id"
+        <div *ngFor="let build of builds" (click)="onSelect(build)" [class.selected]="selectedBuild && build.id === selectedBuild.id"
           [ngClass]='getClass()'>
           <span class='my-text-large uk-text-bold'>{{build.name}}</span>
         </div>

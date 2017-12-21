@@ -70,14 +70,19 @@ export function engiBuildMaker() {
 
     // Power
     {
-        build = new PowerHolosmithBuild('holoPowerCairn', 'Cairn');
+        build = new PowerHolosmithBuild('holoPower', 'Standart');
+
+        build = new PowerHolosmithBuild('holoPowerCC', 'CC');
+        build.skills.setHealSkill('A.E.D.');
+
+        build = new PowerHolosmithBuild('holoPowerDPS', 'Full DPS');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
             'No Scope',
             'Modified Ammunition'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerSam', 'Samarog');
+        build = new PowerHolosmithBuild('holoPowerDPSCC', 'Full DPS - CC');
         build.skills.setHealSkill('A.E.D.');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
@@ -85,7 +90,7 @@ export function engiBuildMaker() {
             'Modified Ammunition'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerMO', 'Mursaat');
+        build = new PowerHolosmithBuild('holoPowerDPSTurret', 'Full DPS - Turret');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
             'No Scope',
@@ -93,7 +98,7 @@ export function engiBuildMaker() {
         ]);
         build.skills.setHealSkill('Healing Turret');
 
-        build = new PowerHolosmithBuild('holoPowerMatt', 'Matthias');
+        build = new PowerHolosmithBuild('holoPowerStormTurret', 'Storm - Turret');
         build.skills.setHealSkill('Healing Turret');
         build.specialization.setSpec('spec3', 'Holosmith', [
             'Solar Focusing Lens',
@@ -101,10 +106,10 @@ export function engiBuildMaker() {
             'Photonic Blasting Module'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerXera', 'Xera');
+        build = new PowerHolosmithBuild('holoPowerOrbital', 'Orbital');
         build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
 
-        build = new PowerHolosmithBuild('holoPowerDhuum', 'Dhuum');
+        build = new PowerHolosmithBuild('holoPowerStorm', 'Storm');
         build.specialization.setSpec('spec3', 'Holosmith', [
             'Solar Focusing Lens',
             'Crystal Configuration: Storm',

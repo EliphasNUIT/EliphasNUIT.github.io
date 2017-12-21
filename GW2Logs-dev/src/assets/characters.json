@@ -67,7 +67,7 @@
         {
             "name": "Dam",
             "roles": {
-                "vg": "backup zone verte",
+                "vg": "gardien rouge",
                 "gorse": "",
                 "sab": "kite",
                 "sloth": "",
@@ -131,7 +131,7 @@
         {
             "name": "Winter",
             "roles": {
-                "vg": "rouge",
+                "vg": "gardien rouge",
                 "gorse": "",
                 "sab": "cannon 2-4",
                 "sloth": "",
@@ -195,9 +195,9 @@
         {
             "name": "Suzuca",
             "roles": {
-                "vg": "zone verte",
+                "vg": "",
                 "gorse": "",
-                "sab": "backup cannon",
+                "sab": "",
                 "sloth": "champignon 3",
                 "matt": "",
                 "kc": "",
@@ -210,9 +210,9 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "mirageCondiVG",
-                "gorse": "weavPowerBHArc",
-                "sab": "mirageCondi",
+                "vg": "weavPowerSHArc",
+                "gorse": "weavPowerBHAir",
+                "sab": "weavPowerSHArc",
                 "sloth": "weavPowerSHAir",
                 "matt": "mirageCondiCMatt",
                 "kc": "weavPowerKC",
@@ -259,7 +259,7 @@
         {
             "name": "Sakura",
             "roles": {
-                "vg": "zone verte + rouge",
+                "vg": "",
                 "gorse": "",
                 "sab": "cannon 1-3",
                 "sloth": "champignon 4",
@@ -274,8 +274,8 @@
                 "dhuum": "Orb 2"
             },
             "builds": {
-                "vg": "mirageCondiVG",
-                "gorse": "mirageCondiC",
+                "vg": "weavPowerSHArc",
+                "gorse": "weavPowerBHAir",
                 "sab": "mirageCondi",
                 "sloth": "weavPowerSHAir",
                 "matt": "mirageCondiCMatt",
@@ -286,12 +286,12 @@
                 "sam": "weavPowerBHArc",
                 "dei": "weavPowerSHAir",
                 "desmina": "mirageCondi",
-                "dhuum": "weavPowerBHAir"
+                "dhuum": "mirageCondiC"
             },
             "slotID": {
                 "vg": 4,
-                "gorse": 3,
-                "sab": 3,
+                "gorse": 4,
+                "sab": 4,
                 "sloth": 4,
                 "matt": 4,
                 "kc": 4,
@@ -305,8 +305,8 @@
             },
             "teamID": {
                 "vg": 0,
-                "gorse": 1,
-                "sab": 1,
+                "gorse": 0,
+                "sab": 0,
                 "sloth": 0,
                 "matt": 0,
                 "kc": 0,
@@ -454,7 +454,7 @@
                 "vg": "",
                 "gorse": "",
                 "sab": "",
-                "sloth": "",
+                "sloth": "champignon 1",
                 "matt": "",
                 "kc": "",
                 "xera": "",
@@ -467,8 +467,8 @@
             },
             "builds": {
                 "vg": "dhPowerZealRad",
-                "gorse": "fbDPS",
-                "sab": "fbDPS",
+                "gorse": "renCondiBH",
+                "sab": "renCondi",
                 "sloth": "dhPowerZealRad",
                 "matt": "renCondi",
                 "kc": "weavPowerKC",
@@ -515,10 +515,10 @@
         {
             "name": "Eliphas",
             "roles": {
-                "vg": "zone verte + rouge",
+                "vg": "",
                 "gorse": "",
                 "sab": "",
-                "sloth": "champignon 1",
+                "sloth": "champignon 2",
                 "matt": "",
                 "kc": "",
                 "xera": "",
@@ -530,24 +530,24 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "mirageCondiVG",
-                "gorse": "fbDPS",
-                "sab": "fbDPS",
+                "vg": "dhPowerZealRad",
+                "gorse": "holoPowerCC",
+                "sab": "holoPowerOrbital",
                 "sloth": "dhPowerZealRad",
-                "matt": "holoPowerMatt",
+                "matt": "holoPowerStormTurret",
                 "kc": "weavPowerKC",
-                "xera": "holoPowerXera",
-                "cairn": "holoPowerCairn",
-                "mo": "holoPowerMO",
-                "sam": "holoPowerSam",
+                "xera": "holoPowerOrbital",
+                "cairn": "holoPowerDPS",
+                "mo": "holoPowerDPSTurret",
+                "sam": "holoPowerDPSCC",
                 "dei": "herDeiVentari",
                 "desmina": "scourgeCondiDes",
-                "dhuum": "holoPowerDhuum"
+                "dhuum": "holoPowerStorm"
             },
             "slotID": {
                 "vg": 3,
-                "gorse": 4,
-                "sab": 4,
+                "gorse": 3,
+                "sab": 3,
                 "sloth": 3,
                 "matt": 3,
                 "kc": 3,
@@ -561,8 +561,8 @@
             },
             "teamID": {
                 "vg": 1,
-                "gorse": 0,
-                "sab": 0,
+                "gorse": 1,
+                "sab": 1,
                 "sloth": 1,
                 "matt": 1,
                 "kc": 1,
@@ -579,9 +579,9 @@
         {
             "name": "Pedna",
             "roles": {
-                "vg": "",
+                "vg": "gardien rouge",
                 "gorse": "",
-                "sab": "",
+                "sab": "Backup cannon",
                 "sloth": "",
                 "matt": "",
                 "kc": "",
@@ -594,11 +594,11 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "weavPowerSHArc",
-                "gorse": "weavPowerBHArc",
+                "vg": "soulbeastCondi",
+                "gorse": "soulbeastCondi",
                 "sab": "soulbeastCondi",
                 "sloth": "weavPowerSHAir",
-                "matt": "soulbeastCondiMatt",
+                "matt": "soulbeastCondiTrap",
                 "kc": "weavPowerKC",
                 "xera": "weavPowerSHArc",
                 "cairn": "soulbeastCondi",

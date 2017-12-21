@@ -95,7 +95,7 @@ export function rangerBuildMaker() {
         build = new CondiSoulbeastBuild('soulbeastCondi', 'Standart');
 
 
-        build = new CondiSoulbeastBuild('soulbeastCondiMatt', 'Matthias');
+        build = new CondiSoulbeastBuild('soulbeastCondiTrap', 'Trap');
         build.skills.setHealSkill('Healing Spring');
 
     }
