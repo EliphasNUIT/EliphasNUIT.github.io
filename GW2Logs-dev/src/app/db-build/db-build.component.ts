@@ -30,19 +30,6 @@ class ProfessionHandler {
   }
 }
 
-const professions: Map<string, ProfessionHandler> = new Map<string, ProfessionHandler>();
-buildDatabase.forEach(function (build, id, map) {
-  const profName = build.profession.name;
-  if (!professions.has(profName)) {
-    professions.set(profName, new ProfessionHandler(profName));
-  }
-  professions.get(profName).add(build);
-});
-professions.forEach(function (profHand, id, map) {
-  profHand.validate();
-});
-
-
 @Component({
   selector: 'app-db-build',
   templateUrl: './db-build.component.html',
@@ -57,7 +44,16 @@ export class DbBuildComponent implements OnInit {
   constructor() {
     this.professions = [];
     const _this = this;
-    professions.forEach(function (profHand, name, map) {
+    const myprofessions: Map<string, ProfessionHandler> = new Map<string, ProfessionHandler>();
+    buildDatabase.forEach(function (build, id, map) {
+      const profName = build.profession.name;
+      if (!myprofessions.has(profName)) {
+        myprofessions.set(profName, new ProfessionHandler(profName));
+      }
+      myprofessions.get(profName).add(build);
+    });
+    myprofessions.forEach(function (profHand, name, map) {
+      profHand.validate();
       _this.professions.push(profHand);
       if (localStorage.getItem('selectedProfession') && localStorage.getItem('selectedProfession') === profHand.name) {
         _this.selectedProfession = profHand;
