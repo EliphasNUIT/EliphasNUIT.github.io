@@ -29,6 +29,32 @@ class CondiRenegadeBuild extends RevenantBuild {
     }
 }
 
+class HealRenegadeBuild extends RevenantBuild {
+    constructor(id, name) {
+        super(id, 'Renegade - Heal - ' + name);
+        this.icon += 'renegade.png';
+        this.armor.setSingleStat('Harrier\'s');
+        this.armor.setSingleRune('Superior Rune of the Monk');
+        this.consumable.setConsumable('Delicious Rice Ball', 'Bountiful Maintenance Oil');
+        this.trinket.setSingleStat('Harrier\'s');
+        this.wep1.setMainHand('Sword', 'Harrier\'s', 'Superior Sigil of Transference');
+        this.wep1.setOffHand('Axe', 'Harrier\'s', 'Superior Sigil of Water');
+        this.wep2.setTwoHand('Staff', 'Harrier\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
+        this.specialization.setSpec('spec1', 'Salvation', [
+            'Tranquil Balance',
+            'Invoking Harmony',
+            'Selfless Amplification'
+        ]);
+        this.specialization.setSpec('spec2', 'Devastation', [
+            'Vicious Lacerations',
+            'Assassin\'s Presence',
+            'Assassin\'s Annihilation'
+        ]);
+        this.specialization.setSpec('spec3', 'Renegade', ['Wrought-Iron Will', 'All for One', 'Righteous Rebel']);
+        this.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Centaur Stance']);
+    }
+}
+
 class KiteHeraldBuild extends RevenantBuild {
     constructor(id, name) {
         super(id, 'Herald - Kite - ' + name);
@@ -93,6 +119,9 @@ export function revBuildMaker() {
 
     // Special
     {
+
+        build = new HealRenegadeBuild('renHeal', 'Standard');
+
         build = new KiteHeraldBuild('herDeiVentari', 'Deimos');
 
         build.wep1.setMainHand('Sword', 'Minstrel\'s', 'Superior Sigil of Transference');

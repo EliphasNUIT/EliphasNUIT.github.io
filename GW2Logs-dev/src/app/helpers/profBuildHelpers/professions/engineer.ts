@@ -66,6 +66,15 @@ export function engiBuildMaker() {
     {
         build = new CondiEngiBuild('engiCondi', 'Standart');
 
+        build = new CondiEngiBuild('engiCondiMob', 'Mobility');
+        build.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
+
+        build = new CondiEngiBuild('engiCondiCC', 'CC');
+        build.skills.setHealSkill('A.E.D.');
+
+        build = new CondiEngiBuild('engiCondiSB', 'Stun Break');
+        build.specialization.setSpec('spec3', 'Tools', ['Reactive Lenses', 'Streamlined Kits', 'Kinetic Battery']);
+
     }
 
     // Power
