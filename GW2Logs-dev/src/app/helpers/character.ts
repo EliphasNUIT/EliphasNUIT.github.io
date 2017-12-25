@@ -1,7 +1,5 @@
 import { ProfBuild, buildDatabase } from './profBuild';
 
-import * as $ from 'jquery';
-
 import { makeAllBuild } from './profBuildHelpers/professions/_full';
 
 makeAllBuild();
@@ -9,53 +7,36 @@ makeAllBuild();
 export class Character  {
     name: string;
     gw2Armory: string;
-    builds: any;
-    roles: any;
-    teamID: any;
-    slotID: any;
+    build: ProfBuild;
+    role: string;
 
-    constructor(params: {name: string, roles: any, builds: any, gw2Armory: string, teamID: any, slotID: any}) {
+    constructor(params: {name: string, build: string, gw2Armory: string, role: string}) {
         this.name = params.name;
-        this.roles = params.roles;
-        this.builds = params.builds;
+        this.build = buildDatabase.get(params.build);
         this.gw2Armory = params.gw2Armory;
-        this.teamID = params.teamID;
-        this.slotID = params.slotID;
+        this.role = params.role;
     }
 
-    getIcon(bossName: string): string {
-        if (!this.builds[bossName]) {
-            console.warn('Warning: no data for ' + this.name + ' for boss' + bossName + ' does not exist');
+    getIcon(): string {
+        if (!this.build) {
+            console.warn('Warning: data for ' + this.name + ' does not exist');
             return 'assets/profIcons/any.png';
         }
-        if  (!buildDatabase.has(this.builds[bossName])) {
-            console.warn('Warning: the build ' + this.builds[bossName] + ' does not exist.');
-            return 'assets/profIcons/any.png';
-        }
-        return buildDatabase.get(this.builds[bossName]).getIcon();
+        return this.build.getIcon();
     }
 
-    getBuild(bossName: string): ProfBuild {
-        if (!this.builds[bossName]) {
-            console.warn('Warning: no data for ' + this.name + ' for boss' + bossName + ' does not exist');
-            return null;
-        }
-        if  (!buildDatabase.has(this.builds[bossName])) {
-            console.warn('Warning: the build ' + this.builds[bossName] + ' does not exist.');
-            return null;
-        }
-        return buildDatabase.get(this.builds[bossName]);
+    getBuild(): ProfBuild {
+        return this.build;
     }
 
-    getProfessionName(bossName: string): string {
-        const build = this.getBuild(bossName);
-        if (build) {
-            return build.profession.name;
+    getProfessionName(): string {
+        if (this.build) {
+            return this.build.profession.name;
         }
         return 'any';
     }
 
-    getRole(bossName: string): string {
-        return this.roles[bossName];
+    getRole(): string {
+        return this.role;
     }
 }

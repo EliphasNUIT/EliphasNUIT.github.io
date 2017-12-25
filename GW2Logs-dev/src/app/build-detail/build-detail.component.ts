@@ -21,7 +21,7 @@ export class BuildDetailComponent implements OnInit {
     res['uk-text-bold'] = true;
     res['uk-text-small'] = !big;
     res['uk-text-large'] = big;
-    res[this.character.getProfessionName(this.bossName)] = true;
+    res[this.character.getProfessionName()] = true;
     return res;
   }
 
