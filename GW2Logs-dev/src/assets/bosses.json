@@ -92,31 +92,31 @@
                     {
                         "name": "Damano",
                         "role": "Tank",
-                        "build": "chrVGTank",
+                        "build": "chrGorseTank",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
                         "name": "Dam",
-                        "role": "Guardien Rouge",
-                        "build": "druidVg",
+                        "role": "",
+                        "build": "druidSab",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Winter",
-                        "role": "gardien rouge",
+                        "role": "",
                         "build": "bers",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Suzuca",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "weavPowerBHAir",
                         "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
                     },
                     {
                         "name": "Sakura",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "weavPowerBHAir",
                         "gw2Armory": ""
                     }
                 ],
@@ -124,30 +124,30 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrVG",
+                        "build": "chrGorse",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Arkness",
                         "role": "",
-                        "build": "druidVg",
+                        "build": "druidSab",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "renCondiBH",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "holoPowerCC",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Pedna",
-                        "role": "Guardien Rouge",
+                        "role": "",
                         "build": "soulbeastCondi",
                         "gw2Armory": ""
                     }
@@ -168,19 +168,19 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "Tank",
-                        "build": "chrVGTank",
+                        "role": "",
+                        "build": "chrSab",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
                         "name": "Dam",
-                        "role": "Guardien Rouge",
-                        "build": "druidVg",
+                        "role": "Kite",
+                        "build": "druidSab",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Winter",
-                        "role": "gardien rouge",
+                        "role": "cannon 2-4",
                         "build": "bers",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
@@ -192,8 +192,8 @@
                     },
                     {
                         "name": "Sakura",
-                        "role": "",
-                        "build": "weavPowerSHArc",
+                        "role": "cannon 1-3",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     }
                 ],
@@ -201,30 +201,30 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrVG",
+                        "build": "chrSab",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Arkness",
                         "role": "",
-                        "build": "druidVg",
+                        "build": "druidSab",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "renCondi",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "holoPowerOrbital",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Pedna",
-                        "role": "Guardien Rouge",
+                        "role": "backup cannon",
                         "build": "soulbeastCondi",
                         "gw2Armory": ""
                     }
@@ -245,32 +245,32 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "Tank",
-                        "build": "chrVGTank",
+                        "role": "",
+                        "build": "chrSloth",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
                         "name": "Dam",
-                        "role": "Guardien Rouge",
-                        "build": "druidVg",
+                        "role": "",
+                        "build": "druidSloth",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Winter",
-                        "role": "gardien rouge",
+                        "role": "",
                         "build": "bers",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Suzuca",
-                        "role": "",
-                        "build": "weavPowerSHArc",
+                        "role": "Champignon 3",
+                        "build": "weavPowerSHAir",
                         "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
                     },
                     {
                         "name": "Sakura",
-                        "role": "",
-                        "build": "weavPowerSHArc",
+                        "role": "champignon 4",
+                        "build": "weavPowerSHAir",
                         "gw2Armory": ""
                     }
                 ],
@@ -278,31 +278,31 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrVG",
+                        "build": "chrSloth",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Arkness",
                         "role": "",
-                        "build": "druidVg",
+                        "build": "druidSloth",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
-                        "role": "",
+                        "role": "Champignon 1",
                         "build": "dhPowerZealRad",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": "Eliphas",
-                        "role": "",
+                        "role": "Champignon 2",
                         "build": "dhPowerZealRad",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Pedna",
-                        "role": "Guardien Rouge",
-                        "build": "soulbeastCondi",
+                        "role": "",
+                        "build": "weavPowerSHAir",
                         "gw2Armory": ""
                     }
                 ]
@@ -322,32 +322,32 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "Tank",
-                        "build": "chrVGTank",
+                        "role": "",
+                        "build": "chrMatt",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
                         "name": "Dam",
-                        "role": "Guardien Rouge",
-                        "build": "druidVg",
+                        "role": "",
+                        "build": "druidMatt",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Winter",
-                        "role": "gardien rouge",
-                        "build": "bers",
+                        "role": "",
+                        "build": "bersCC",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Suzuca",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "mirageCondiCMatt",
                         "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
                     },
                     {
                         "name": "Sakura",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "mirageCondiCMatt",
                         "gw2Armory": ""
                     }
                 ],
@@ -355,31 +355,31 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrVG",
+                        "build": "chrMatt",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Arkness",
                         "role": "",
-                        "build": "druidVg",
+                        "build": "druidMatt",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "renCondi",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "holoPowerStormTurret",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Pedna",
-                        "role": "Guardien Rouge",
-                        "build": "soulbeastCondi",
+                        "role": "",
+                        "build": "soulbeastCondiTrap",
                         "gw2Armory": ""
                     }
                 ]

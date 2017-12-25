@@ -3,10 +3,6 @@
         {
             "name": "Damano",
             "roles": {
-                "gorse": "tank",
-                "sab": "",
-                "sloth": "",
-                "matt": "",
                 "kc": "tank",
                 "xera": "tank",
                 "cairn": "",
@@ -17,10 +13,6 @@
                 "dhuum": "tank"
             },
             "builds": {
-                "gorse": "chrGorseTank",
-                "sab": "chrSab",
-                "sloth": "chrSloth",
-                "matt": "chrSloth",
                 "kc": "chrKCTank",
                 "xera": "chrXeraTank",
                 "cairn": "chrCairn",
@@ -29,17 +21,11 @@
                 "dei": "chrTankDei",
                 "desmina": "chrSSTank",
                 "dhuum": "chrTankMinstrel"
-            },
-            "gw2Armory": "http://gw2armory.com/Damano/characters/"
+            }
         },
         {
             "name": "Dam",
             "roles": {
-                "vg": "gardien rouge",
-                "gorse": "",
-                "sab": "kite",
-                "sloth": "",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "kite",
@@ -50,11 +36,6 @@
                 "dhuum": "kite"
             },
             "builds": {
-                "vg": "druidVg",
-                "gorse": "druidSab",
-                "sab": "druidSab",
-                "sloth": "druidSloth",
-                "matt": "druidMatt",
                 "kc": "druidSab",
                 "xera": "druidXera",
                 "cairn": "druidCairnKite",
@@ -63,17 +44,11 @@
                 "dei": "druidKite",
                 "desmina": "druidVg",
                 "dhuum": "druidSab"
-            },
-            "gw2Armory": ""
+            }
         },
         {
             "name": "Winter",
             "roles": {
-                "vg": "gardien rouge",
-                "gorse": "",
-                "sab": "cannon 2-4",
-                "sloth": "",
-                "matt": "",
                 "kc": "orb pusher",
                 "xera": "",
                 "cairn": "",
@@ -84,11 +59,6 @@
                 "dhuum": "Orb 1"
             },
             "builds": {
-                "vg": "bers",
-                "gorse": "bers",
-                "sab": "bers",
-                "sloth": "bers",
-                "matt": "bersCC",
                 "kc": "bers",
                 "xera": "bers",
                 "cairn": "bers",
@@ -97,17 +67,11 @@
                 "dei": "bers",
                 "desmina": "bersCC",
                 "dhuum": "bers"
-            },
-            "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+            }
         },
         {
             "name": "Suzuca",
             "roles": {
-                "vg": "",
-                "gorse": "",
-                "sab": "",
-                "sloth": "champignon 3",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -118,11 +82,6 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "weavPowerSHArc",
-                "gorse": "weavPowerBHAir",
-                "sab": "weavPowerSHArc",
-                "sloth": "weavPowerSHAir",
-                "matt": "mirageCondiCMatt",
                 "kc": "weavPowerKC",
                 "xera": "weavPowerSHArc",
                 "cairn": "mirageCondiC",
@@ -131,17 +90,11 @@
                 "dei": "weavPowerSHAir",
                 "desmina": "mirageCondi",
                 "dhuum": "weavPowerBHAir"
-            },
-            "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+            }
         },
         {
             "name": "Sakura",
             "roles": {
-                "vg": "",
-                "gorse": "",
-                "sab": "cannon 1-3",
-                "sloth": "champignon 4",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -152,11 +105,6 @@
                 "dhuum": "Orb 2"
             },
             "builds": {
-                "vg": "weavPowerSHArc",
-                "gorse": "weavPowerBHAir",
-                "sab": "mirageCondi",
-                "sloth": "weavPowerSHAir",
-                "matt": "mirageCondiCMatt",
                 "kc": "weavPowerKC",
                 "xera": "weavPowerSHArc",
                 "cairn": "mirageCondiC",
@@ -165,17 +113,11 @@
                 "dei": "weavPowerSHAir",
                 "desmina": "mirageCondi",
                 "dhuum": "mirageCondiC"
-            },
-            "gw2Armory": ""
+            }
         },
         {
             "name": "Polga",
             "roles": {
-                "vg": "",
-                "gorse": "",
-                "sab": "",
-                "sloth": "",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -186,11 +128,6 @@
                 "dhuum": "orb 3"
             },
             "builds": {
-                "vg": "chrVG",
-                "gorse": "chrGorse",
-                "sab": "chrSab",
-                "sloth": "chrSloth",
-                "matt": "chrMatt",
                 "kc": "chrKC",
                 "xera": "chrXera",
                 "cairn": "chrCairn",
@@ -199,17 +136,11 @@
                 "dei": "chrDei",
                 "desmina": "chrSS",
                 "dhuum": "chrDhuum"
-            },
-            "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+            }
         },
         {
             "name": "Arkness",
             "roles": {
-                "vg": "zone verte",
-                "gorse": "",
-                "sab": "",
-                "sloth": "",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -220,11 +151,6 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "druidVg",
-                "gorse": "druidSab",
-                "sab": "druidSab",
-                "sloth": "druidSloth",
-                "matt": "druidMatt",
                 "kc": "druidSab",
                 "xera": "druidXera",
                 "cairn": "druidSpirit",
@@ -233,17 +159,11 @@
                 "dei": "druidSpirit",
                 "desmina": "druidVg",
                 "dhuum": "druidSab"
-            },
-            "gw2Armory": ""
+            }
         },
         {
             "name": "Bouhteille",
             "roles": {
-                "vg": "",
-                "gorse": "",
-                "sab": "",
-                "sloth": "champignon 1",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -254,11 +174,6 @@
                 "dhuum": "Boon removal"
             },
             "builds": {
-                "vg": "dhPowerZealRad",
-                "gorse": "renCondiBH",
-                "sab": "renCondi",
-                "sloth": "dhPowerZealRad",
-                "matt": "renCondi",
                 "kc": "weavPowerKC",
                 "xera": "renCondi",
                 "cairn": "renCondiInvoBH",
@@ -267,17 +182,11 @@
                 "dei": "weavPowerSHAir",
                 "desmina": "renCondi",
                 "dhuum": "renCondiBH"
-            },
-            "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+            }
         },
         {
             "name": "Eliphas",
             "roles": {
-                "vg": "",
-                "gorse": "",
-                "sab": "",
-                "sloth": "champignon 2",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -288,11 +197,6 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "dhPowerZealRad",
-                "gorse": "holoPowerCC",
-                "sab": "holoPowerOrbital",
-                "sloth": "dhPowerZealRad",
-                "matt": "holoPowerStormTurret",
                 "kc": "weavPowerKC",
                 "xera": "holoPowerOrbital",
                 "cairn": "holoPowerDPS",
@@ -301,17 +205,11 @@
                 "dei": "herDeiVentari",
                 "desmina": "scourgeCondiDes",
                 "dhuum": "holoPowerStorm"
-            },
-            "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+            }
         },
         {
             "name": "Pedna",
             "roles": {
-                "vg": "gardien rouge",
-                "gorse": "",
-                "sab": "Backup cannon",
-                "sloth": "",
-                "matt": "",
                 "kc": "",
                 "xera": "",
                 "cairn": "",
@@ -322,11 +220,6 @@
                 "dhuum": ""
             },
             "builds": {
-                "vg": "soulbeastCondi",
-                "gorse": "soulbeastCondi",
-                "sab": "soulbeastCondi",
-                "sloth": "weavPowerSHAir",
-                "matt": "soulbeastCondiTrap",
                 "kc": "weavPowerKC",
                 "xera": "weavPowerSHArc",
                 "cairn": "soulbeastCondi",
@@ -335,8 +228,7 @@
                 "dei": "weavPowerSHAir",
                 "desmina": "soulbeastCondi",
                 "dhuum": "weavPowerBHAir"
-            },
-            "gw2Armory": ""
+            }
         }
     ]
 }
