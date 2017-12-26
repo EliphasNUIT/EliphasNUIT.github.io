@@ -9,7 +9,73 @@
             },
             "shortName": "vg",
             "buttonName": "Vale Guardian",
-            "displayName": "Vale Guardian"
+            "displayName": "Vale Guardian",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Tank",
+                        "build": "chrVGTank",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "Guardien Rouge",
+                        "build": "druidVg",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "gardien rouge",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrVG",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidVg",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "Guardien Rouge",
+                        "build": "soulbeastCondi",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Forsaken Thicket",
@@ -20,7 +86,73 @@
             },
             "shortName": "gorse",
             "buttonName": "Gorseval",
-            "displayName": "Gorseval the Multifarious"
+            "displayName": "Gorseval the Multifarious",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Tank",
+                        "build": "chrGorseTank",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerBHAir",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerBHAir",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrGorse",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondiBH",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerCC",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "soulbeastCondi",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Forsaken Thicket",
@@ -31,7 +163,73 @@
             },
             "shortName": "sab",
             "buttonName": "Sabetha",
-            "displayName": "Sabetha the Saboteur"
+            "displayName": "Sabetha the Saboteur",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrSab",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "Kite",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "cannon 2-4",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "cannon 1-3",
+                        "build": "mirageCondi",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrSab",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondi",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerOrbital",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "backup cannon",
+                        "build": "soulbeastCondi",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Forsaken Thicket",
@@ -42,7 +240,73 @@
             },
             "shortName": "sloth",
             "buttonName": "Slothasor",
-            "displayName": "Slothasor"
+            "displayName": "Slothasor",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrSloth",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidSloth",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "Champignon 3",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "champignon 4",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrSloth",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSloth",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "Champignon 1",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "Champignon 2",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Forsaken Thicket",
@@ -53,7 +317,73 @@
             },
             "shortName": "matt",
             "buttonName": "Matthias",
-            "displayName": "Matthias Gabrel"
+            "displayName": "Matthias Gabrel",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrMatt",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidMatt",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bersCC",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "mirageCondiCMatt",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "mirageCondiCMatt",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrMatt",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidMatt",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondi",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerStormTurret",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "soulbeastCondiTrap",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Forsaken Thicket",
@@ -64,7 +394,73 @@
             },
             "shortName": "kc",
             "buttonName": "Keep Construct",
-            "displayName": "Keep Construct"
+            "displayName": "Keep Construct",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Tank",
+                        "build": "chrKCTank",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "orb pusher",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerKC",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerKC",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrKC",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "weavPowerKC",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "weavPowerKC",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "weavPowerKC",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Forsaken Thicket",
@@ -75,7 +471,73 @@
             },
             "shortName": "xera",
             "buttonName": "Xera",
-            "displayName": "Xera"
+            "displayName": "Xera",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Tank",
+                        "build": "chrXeraTank",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidXera",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrXera",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidXera",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondi",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerOrbital",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Bastion of the Penitent",
@@ -86,7 +548,73 @@
             },
             "shortName": "cairn",
             "buttonName": "Cairn",
-            "displayName": "Cairn the Indomitable"
+            "displayName": "Cairn the Indomitable",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrCairn",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "Kite",
+                        "build": "druidCairnKite",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "mirageCondiC",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "mirageCondiC",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrCairn",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSpirit",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondiInvoBH",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerDPS",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "soulbeastCondi",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Bastion of the Penitent",
@@ -97,7 +625,73 @@
             },
             "shortName": "mo",
             "buttonName": "Mursaat",
-            "displayName": "Mursaat Overseer"
+            "displayName": "Mursaat Overseer",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrMO",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "protect",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerSHArc",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "claim",
+                        "build": "chrMO",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "dispel",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondiInvo",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerDPSTurret",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "soulbeastCondi",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Bastion of the Penitent",
@@ -108,7 +702,73 @@
             },
             "shortName": "sam",
             "buttonName": "Samarog",
-            "displayName": "Samarog"
+            "displayName": "Samarog",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrSam",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidSam",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bersCC",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerBHArc",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerBHArc",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrSam",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSam",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "weavPowerBHArc",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerDPSCC",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "weavPowerBHArc",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Bastion of the Penitent",
@@ -119,7 +779,75 @@
             },
             "shortName": "dei",
             "buttonName": "Deimos",
-            "displayName": "Deimos"
+            "displayName": "Deimos",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Tank",
+                        "build": "chrTankDei",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "black kite",
+                        "build": "druidKite",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrDei",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSpirit",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "weavPowerSHAir",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t3": [
+                    {
+                        "name": "Eliphas",
+                        "role": "hand kite",
+                        "build": "herDeiVentari",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    }
+                ]
+            }
         },
         {
             "raid": "Hall of Chains",
@@ -131,7 +859,73 @@
             },
             "shortName": "desmina",
             "buttonName": "Soulless Horror",
-            "displayName": "Soulless Horror"
+            "displayName": "Soulless Horror",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Main Tank",
+                        "build": "chrSSTank",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Dam",
+                        "role": "",
+                        "build": "druidVg",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bersCC",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "mirageCondi",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "mirageCondi",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrSS",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidVg",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "renCondi",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "scourgeCondiDes",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "soulbeastCondi",
+                        "gw2Armory": ""
+                    }
+                ]
+            }
         },
         {
             "raid": "Hall of Chains",
@@ -143,7 +937,75 @@
             },
             "shortName": "dhuum",
             "buttonName": "Dhuum",
-            "displayName": "Dhuum"
+            "displayName": "Dhuum",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "Tank",
+                        "build": "chrTankMinstrel",
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "orb 1",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Suzuca",
+                        "role": "",
+                        "build": "weavPowerBHAir",
+                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "Orb 2",
+                        "build": "mirageCondiC",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "orb 3",
+                        "build": "chrDhuum",
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "Boon removal",
+                        "build": "renCondiBH",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerStorm",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Pedna",
+                        "role": "",
+                        "build": "weavPowerBHAir",
+                        "gw2Armory": ""
+                    }
+                ],
+                "t3": [
+                    {
+                        "name": "Dam",
+                        "role": "Kite",
+                        "build": "druidVg",
+                        "gw2Armory": "druidSab"
+                    }
+                ]
+            }
         }
     ]
 }
