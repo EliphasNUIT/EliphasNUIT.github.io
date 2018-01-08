@@ -272,13 +272,13 @@ export function mesBuildMaker() {
 
     // condi phantasme
     {
-        build = new CondiMiragePhantasmBuild('mirageCondiMatt', 'Matthias');
+        build = new CondiMiragePhantasmBuild('mirageCondiMatt', 'Reflect CC');
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
         build = new CondiMiragePhantasmBuild('mirageCondi', 'Standart');
 
-        build = new CondiMiragePhantasmBuild('mirageCondiVG', 'VG');
+        build = new CondiMiragePhantasmBuild('mirageCondiVG', 'Long Range');
         build.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Malice');
         build.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirage Mantle', 'Dune Cloak']);
         build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
@@ -287,7 +287,7 @@ export function mesBuildMaker() {
 
     // condi clone
     {
-        build = new CondiMirageCloneBuild('mirageCondiCMatt', 'Matthias');
+        build = new CondiMirageCloneBuild('mirageCondiCMatt', 'Reflect CC');
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 

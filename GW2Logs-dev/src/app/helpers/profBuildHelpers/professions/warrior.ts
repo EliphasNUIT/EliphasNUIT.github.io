@@ -62,6 +62,10 @@ export function warBuildMaker() {
 
         build = new BerserkerBannerBuild('bersSplit', 'Split');
         build.skills.setUtilitySkills(['Shattering Blow', 'Outrage', '']);
+
+        build = new BerserkerBannerBuild('bersDPS', 'DPS');
+        build.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Burning Arrows', 'Powerful Synergy']);
+        build.skills.setUtilitySkills(['Shattering Blow', 'Outrage', 'Signet of Fury']);
     }
     // power
     {

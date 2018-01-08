@@ -47,7 +47,30 @@ class PowerWeaverBuild extends EleBuild {
             'Persisting Flames'
         ]);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
-        this.skills.setHealSkill('Aquatic Stance');
+        this.skills.setHealSkill('Glyph of Elemental Harmony');
+        this.skills.setEliteSkill('Conjure Fiery Greatsword');
+    }
+}
+
+class PowerSwordWeaverBuild extends EleBuild {
+    constructor(id, name) {
+        super(id, 'Weaver - Sword Power - ' + name);
+        this.icon += 'weaver.png';
+        this.armor.setSingleStat('Berserker\'s');
+        this.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
+        this.armor.setSingleRune('Superior Rune of the Scholar');
+        this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
+        this.trinket.setSingleStat('Berserker\'s');
+        this.specialization.setSpec('spec1', 'Fire', [
+            'Burning Precision',
+            'Pyromancer\'s Training',
+            'Persisting Flames'
+        ]);
+        this.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Aeromancer\'s Training', 'Bolt to the Heart']);
+        this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
+        this.skills.setHealSkill('Glyph of Elemental Harmony');
+        this.skills.setUtilitySkills(['Arcane Blast', 'Glyph of Storms', 'Primordial Stance']);
         this.skills.setEliteSkill('Conjure Fiery Greatsword');
     }
 }
@@ -64,6 +87,8 @@ export function eleBuildMaker() {
 
     // Power
     {
+        build = new PowerSwordWeaverBuild('weavPowerSword', 'Standart');
+
         build = new PowerWeaverBuild('weavPowerSHArc', 'Arcane - Small Hitbox');
         build.specialization.setSpec('spec2', 'Arcane', [
             'Renewing Stamina',

@@ -40,12 +40,12 @@ class CondiFBBuild extends GuardBuild {
     constructor(id, name) {
         super(id, 'Firebrand - Condition - ' + name);
         this.icon += 'firebrand.png';
-        this.armor.setStats(['Sinister', 'Sinister', 'Viper\'s', 'Sinister', 'Sinister', 'Sinister']);
+        this.armor.setStats(['Grieving', 'Sinister', 'Viper\'s', 'Sinister', 'Grieving', 'Sinister']);
         this.armor.setSingleRune('Superior Rune of Balthazar');
         this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
         this.trinket.setSingleStat('Sinister');
         this.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Smoldering');
-        this.wep1.setOffHand('Torch', 'Sinister', 'Superior Sigil of Bursting');
+        this.wep1.setOffHand('Torch', 'Grieving', 'Superior Sigil of Bursting');
         this.wep2.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Smoldering');
         this.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
         this.specialization.setSpec('spec2', 'Radiance', ['Right-Hand Strength', 'Radiant Fire', 'Amplified Wrath']);
