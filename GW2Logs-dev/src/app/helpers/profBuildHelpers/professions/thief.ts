@@ -26,6 +26,27 @@ class PowerDaredevilBuild extends ThiefBuild {
     }
 }
 
+
+class PowerDeadeyeBuild extends ThiefBuild {
+    constructor(id, name) {
+        super(id, 'Deadeye - Dagger/Dagger Power - ' + name);
+        this.icon += 'deadeye.png';
+        this.wep2 = null;
+        this.armor.setSingleStat('Berserker\'s');
+        this.armor.setSingleRune('Superior Rune of the Scholar');
+        this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
+        this.trinket.setSingleStat('Berserker\'s');
+        this.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
+        this.specialization.setSpec('spec1', 'Deadly Arts', ['Mug', 'Revealed Training', 'Executioner']);
+        this.specialization.setSpec('spec2', 'Critical Strikes', ['Twin Fangs', 'Practiced Tolerance', 'No Quarter']);
+        this.specialization.setSpec('spec3', 'Deadeye', ['Revealed Malice', 'Peripheral Vision', 'Be Quick or Be Killed']);
+        this.skills.setHealSkill('Signet of Malice');
+        this.skills.setUtilitySkills(['Assassin\'s Signet', 'Spider Venom', 'Shadow Flare']);
+        this.skills.setEliteSkill('Basilisk Venom');
+    }
+}
+
 class CondiDaredevilBuild extends ThiefBuild {
     constructor(id, name) {
         super(id, 'Daredevil - Condition - ' + name);
@@ -55,16 +76,42 @@ export function thiefBuildMaker() {
     {
         build = new PowerDaredevilBuild('drdPower', 'Standart');
 
-        build = new PowerDaredevilBuild('drdPowerSab', 'Cannons');
+        build = new PowerDaredevilBuild('drdPowerMob', 'Mobility');
         build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
+
+        build = new PowerDaredevilBuild('drdPowerFastCC', 'Fast CC');
+        build.skills.setEliteSkill('Impact Strike');
+
+        build = new PowerDaredevilBuild('drdPowerNoCC', 'No CC');
+        build.skills.setEliteSkill('Thieves Guild');
+
+        build = new PowerDeadeyeBuild('deadeyePower', 'Standart');
+
+        build = new PowerDeadeyeBuild('deadeyePowerMob', 'Mobility');
+        build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Shadow Flare']);
+
+        build = new PowerDeadeyeBuild('deadeyePowerNoCC', 'No CC');
+        build.skills.setEliteSkill('Thieves Guild');
     }
 
     // Condi
     {
         build = new CondiDaredevilBuild('drdCondi', 'Standart');
 
-        build = new CondiDaredevilBuild('drdCondiSab', 'Cannons');
+        build = new CondiDaredevilBuild('drdCondiMob', 'Mobility');
         build.skills.setUtilitySkills(['Spider Venom', 'Shadowstep', 'Caltrops']);
+
+        build = new CondiDaredevilBuild('drdCondiAdd', 'Add');
+        build.skills.setUtilitySkills(['Spider Venom', 'Needle Trap', 'Caltrops']);
+
+        build = new CondiDaredevilBuild('drdCondiMobTar', 'Mobile Target');
+        build.skills.setUtilitySkills(['Spider Venom', 'Skale Venom', 'Caltrops']);
+
+        build = new CondiDaredevilBuild('drdCondiFastCC', 'Fast CC');
+        build.skills.setEliteSkill('Impact Strike');
+
+        build = new CondiDaredevilBuild('drdCondiNoCC', 'No CC');
+        build.skills.setEliteSkill('Thieves Guild');
     }
 }
 
