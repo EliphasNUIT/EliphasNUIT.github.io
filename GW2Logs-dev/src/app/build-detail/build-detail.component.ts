@@ -9,7 +9,6 @@ import { Character } from '../helpers/character';
 export class BuildDetailComponent implements OnInit {
 
   @Input() character: Character;
-  @Input() bossName: string;
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked, Input } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -11,7 +11,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-display-build',
   templateUrl: './display-build.component.html',
-  styleUrls: ['./display-build.component.css']
+  styleUrls: ['./display-build.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDestroy /*, DoCheck, OnChanges*/ {
 
@@ -56,10 +57,15 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDest
     }
     const toDestroyDiv = document.body.querySelectorAll('div');
     if (toDestroyDiv.length > 0) {
-      const divToRemove = toDestroyDiv[toDestroyDiv.length - 1];
-      if (divToRemove.innerHTML.indexOf('react') !== -1) {
-        divToRemove.remove();
+      for (let i = toDestroyDiv.length - 1; i >= 0; i--) {
+        const divToRemove = toDestroyDiv[toDestroyDiv.length - 1];
+        if (divToRemove.innerHTML.indexOf('react') !== -1 || divToRemove.innerHTML.length === 0) {
+          divToRemove.remove();
+        } else {
+          break;
+        }
       }
+
     }
     const script = document.createElement('script');
     script.setAttribute('async', '');

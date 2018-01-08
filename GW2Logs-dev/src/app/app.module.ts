@@ -14,7 +14,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DbBuildComponent } from './db-build/db-build.component';
 import { DbDisplayComponent } from './db-display/db-display.component';
 import { DbSearchPipe } from './db-search.pipe';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { DbSelectorComponent } from './db-selector/db-selector.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     DisplayBuildComponent,
     DbBuildComponent,
     DbDisplayComponent,
-    DbSearchPipe
+    DbSearchPipe,
+    DbSelectorComponent
   ],
   imports: [
     BrowserModule,

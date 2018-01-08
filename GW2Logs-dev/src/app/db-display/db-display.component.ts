@@ -11,7 +11,6 @@ export class DbDisplayComponent implements OnInit, OnChanges {
   @Input() profName: string;
   @Input() builds: { name: string, id: string }[];
   selectedBuild: { name: string, id: string };
-  filter = '';
 
   constructor() { }
 
@@ -22,7 +21,7 @@ export class DbDisplayComponent implements OnInit, OnChanges {
     this.selectedBuild = null;
   }
 
-  onSelect(selectedBuild: { name: string, id: string }) {
+  selectBuild(selectedBuild: { name: string, id: string }) {
     this.selectedBuild = selectedBuild;
   }
 
@@ -31,14 +30,6 @@ export class DbDisplayComponent implements OnInit, OnChanges {
       return buildDatabase.get(this.selectedBuild.id);
     }
     return null;
-  }
-
-  getClass() {
-    const res: any = {};
-    res[this.profName] = true;
-    res['my-prof-build'] = true;
-    res['uk-text-center'] = true;
-    return res;
   }
 
 }

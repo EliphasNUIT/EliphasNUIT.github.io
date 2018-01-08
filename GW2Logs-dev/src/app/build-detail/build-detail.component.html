@@ -1,13 +1,13 @@
-<div *ngIf="character && bossName">
+<div *ngIf="character">
   <div class="char uk-margin-top">
     <div *ngIf="character.gw2Armory.length > 0" [ngClass]="getClasses(true)" >
       <a [href]="character.gw2Armory" target='armory' title="Lien vers les persos sur GW2Armory" uk-tooltip="pos: top">Lien Armory</a>
     </div>
 
-    <div *ngIf="character.getRole(bossName).length > 0" [ngClass]="getClasses(false)" >
-      <span title="Le rôle du joueur" uk-tooltip="pos: top">{{character.getRole(bossName).toUpperCase()}}</span>
+    <div *ngIf="character.getRole().length > 0" [ngClass]="getClasses(false)" >
+      <span title="Le rôle du joueur" uk-tooltip="pos: top">{{character.getRole().toUpperCase()}}</span>
     </div>
-    <app-display-build [build]="character.getBuild(bossName)"></app-display-build>
+    <app-display-build [build]="character.getBuild()"></app-display-build>
 
   </div>
 

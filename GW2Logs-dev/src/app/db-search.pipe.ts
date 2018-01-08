@@ -29,7 +29,7 @@ export class DbSearchPipe implements PipeTransform {
         }
         return res;
       } else {*/
-      return elt.id.toUpperCase().includes(filter.toLocaleUpperCase());
+      return elt.name.toUpperCase().includes(filter.toLocaleUpperCase());
       // }
     });
   }
