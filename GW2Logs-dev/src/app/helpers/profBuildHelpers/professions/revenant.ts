@@ -114,6 +114,7 @@ export function revBuildMaker() {
             'Invoking Harmony',
             'Natural Abundance'
         ]);
+        build.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Centaur Stance']);
         build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Righteous Rebel']);
     }
 

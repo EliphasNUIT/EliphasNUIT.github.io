@@ -106,6 +106,9 @@ export function rangerBuildMaker() {
         build.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         build.skills.setEliteSkill('Entangle');
 
+        build = new BoonDruidBuild('druidGorse', 'Gorse');
+        build.skills.setEliteSkill('Entangle');
+
         build = new BoonDruidBuild('druidSab', 'Sabetha');
 
         build = new BoonDruidBuild('druidSloth', 'Slothasor');
