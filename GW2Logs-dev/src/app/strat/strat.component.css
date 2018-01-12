@@ -1,0 +1,9 @@
+.my-subnav{
+    background-color: rgba(50,50,50,0.5);
+}
+
+.switcher-container {
+    background-color: rgba(100,100,100,0.5);
+    color:rgb(240,240,240);
+    text-shadow: 0px 0px 2px black;
+}

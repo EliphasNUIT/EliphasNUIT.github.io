@@ -31,13 +31,24 @@
         Logs
       </div>
     </span>
+    <span (click)="onSelectDisplay('strat')" [class.selected]="selectedDisplay === 'strat'" [ngStyle]="logsStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
+      <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
+        Stratégie
+      </div>
+    </span>
   </div>
-  <div *ngIf="selectedDisplay === 'compo'">
-    <app-composition-detail [boss]="selectedBoss"></app-composition-detail>
+  <div [ngSwitch]="selectedDisplay">
+    <div *ngSwitchCase="'compo'">
+      <app-composition-detail [boss]="selectedBoss"></app-composition-detail>
+    </div>
+    <div *ngSwitchCase="'logs'">
+      <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
+    </div>
+    <div *ngSwitchCase="'strat'">
+      <app-strat [boss]="selectedBoss"></app-strat>
+    </div>
   </div>
-  <div *ngIf="selectedDisplay === 'logs'">
-    <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
-  </div>
+
 
 </div>
 <a href="#" style="background-color: rgba(250,250,250,0.4)" uk-totop uk-scroll title="retour top" uk-tooltip></a>

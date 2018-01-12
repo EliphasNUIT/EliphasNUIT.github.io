@@ -15,7 +15,9 @@ import { DbBuildComponent } from './db-build/db-build.component';
 import { DbDisplayComponent } from './db-display/db-display.component';
 import { DbSearchPipe } from './db-search.pipe';
 import { FormsModule } from '@angular/forms';
-import { DbSelectorComponent } from './db-selector/db-selector.component'; // <-- NgModel lives here
+import { DbSelectorComponent } from './db-selector/db-selector.component';
+import { StratComponent } from './strat/strat.component';
+import { StratVgComponent } from './strat-vg/strat-vg.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { DbSelectorComponent } from './db-selector/db-selector.component'; // <-
     DbBuildComponent,
     DbDisplayComponent,
     DbSearchPipe,
-    DbSelectorComponent
+    DbSelectorComponent,
+    StratComponent,
+    StratVgComponent
   ],
   imports: [
     BrowserModule,

@@ -57,7 +57,7 @@ export class NavigationBarComponent implements OnInit {
     },
     {
       text: 'Ez',
-      ref: 'https://docs.google.com/spreadsheets/d/1phzuqND5_rWfx9dqrU0KaCyukEzWg_icTrEM4GdehEY/edit#gid=0',
+      ref: 'http://ez.gw2discord.eu/builds.html',
       target: 'Ez'
     }
   ];
