@@ -21,6 +21,7 @@ export class ProfessionSkills {
     }
 
     setSkills(skills: string[]) {
+        this.skills = [];
         for (let i = 0; i < skills.length; i++) {
             this._setSkill('Profession', skills[i]);
         }

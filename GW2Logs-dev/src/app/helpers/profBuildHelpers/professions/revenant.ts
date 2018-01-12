@@ -8,9 +8,9 @@ class RevenantBuild extends ProfBuild {
     }
 }
 
-class CondiRenegadeBuild extends RevenantBuild {
+class CondiRenegadeSHBuild extends RevenantBuild {
     constructor(id, name) {
-        super(id, 'Renegade - Condition - ' + name);
+        super(id, 'Renegade - Condition - Small Hitbox - ' + name);
         this.icon += 'renegade.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
@@ -26,6 +26,49 @@ class CondiRenegadeBuild extends RevenantBuild {
         ]);
         this.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Lasting Legacy']);
         this.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Demon Stance']);
+    }
+}
+
+class CondiRenegadeBHBuild extends RevenantBuild {
+    constructor(id, name) {
+        super(id, 'Renegade - Condition - Big Hitbox - ' + name);
+        this.icon += 'renegade.png';
+        this.armor.setSingleStat('Viper\'s');
+        this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
+        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
+        this.trinket.setSingleStat('Viper\'s');
+        this.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
+        this.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
+        this.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy')
+        this.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Pulsating Pestilence']);
+        this.specialization.setSpec('spec2', 'Devastation', [
+            'Ferocious Strikes',
+            'Assassin\'s Presence',
+            'Swift Termination'
+        ]);
+        this.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Lasting Legacy']);
+        this.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Demon Stance']);
+    }
+}
+
+class CondiRenegadeSuppBuild extends RevenantBuild {
+    constructor(id, name) {
+        super(id, 'Renegade - Support - ' + name);
+        this.icon += 'renegade.png';
+        this.armor.setSingleStat('Viper\'s');
+        this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
+        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
+        this.trinket.setSingleStat('Viper\'s');
+        this.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
+        this.wep2.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
+        this.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Diabolic Inferno']);
+        this.specialization.setSpec('spec2', 'Salvation', [
+            'Tranquil Balance',
+            'Invoking Harmony',
+            'Natural Abundance'
+        ]);
+        this.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Centaur Stance']);
+        this.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Righteous Rebel']);
     }
 }
 
@@ -50,7 +93,7 @@ class HealRenegadeBuild extends RevenantBuild {
             'Assassin\'s Presence',
             'Assassin\'s Annihilation'
         ]);
-        this.specialization.setSpec('spec3', 'Renegade', ['Wrought-Iron Will', 'All for One', 'Righteous Rebel']);
+        this.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
         this.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Centaur Stance']);
     }
 }
@@ -88,34 +131,25 @@ export function revBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiRenegadeBuild('renCondi', 'Devastation - Small Hitbox');
+        build = new CondiRenegadeSHBuild('renCondi', 'Devastation');
 
-        build = new CondiRenegadeBuild('renCondiBH', 'Devastation - Big Hitbox');
-        build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
+        build = new CondiRenegadeBHBuild('renCondiBH', 'Devastation');
 
-        build = new CondiRenegadeBuild('renCondiInvo', 'Invocation - Small Hitbox');
+        build = new CondiRenegadeSHBuild('renCondiInvo', 'Invocation');
         build.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',
             'Spirit Boon',
             'Charged Mists'
         ]);
 
-        build = new CondiRenegadeBuild('renCondiInvoBH', 'Invocation - Big Hitbox');
+        build = new CondiRenegadeBHBuild('renCondiInvoBH', 'Invocation');
         build.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',
             'Spirit Boon',
             'Charged Mists'
         ]);
-        build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
 
-        build = new CondiRenegadeBuild('renCondiSupp', 'Support');
-        build.specialization.setSpec('spec2', 'Salvation', [
-            'Tranquil Balance',
-            'Invoking Harmony',
-            'Natural Abundance'
-        ]);
-        build.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Centaur Stance']);
-        build.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Righteous Rebel']);
+        build = new CondiRenegadeSuppBuild('renCondiSupp', 'Standard');
     }
 
     // Special

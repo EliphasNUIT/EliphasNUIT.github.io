@@ -108,11 +108,14 @@ export class Skills {
     }
 
     getPDiv(): string {
+        if (this.pets.length === 0) {
+            return '';
+        }
         let divToAdd = '<div center> ';
         for (let i = 0; i < this.pets.length; i++) {
             const petData = pets[this.pets[i]] ? pets[this.pets[i]] : null;
             if (petData) {
-                let img = '<img style="zoom: 0.8" src="';
+                let img = '<img style="width: 196px; heigth: 196px" src="';
                 img += petData.icon + '" ';
                 img += 'title="' + this.pets[i] + '">';
                 divToAdd += img;

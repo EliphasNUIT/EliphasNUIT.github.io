@@ -20,7 +20,7 @@ class CondiDruidBuild extends CondiRangerBuild {
         super(id, 'Druide - Condition - ' + name);
         this.icon += 'druid.png';
         this.armor.set42Rune('Superior Rune of the Traveler', 'Superior Rune of the Trapper');
-        this.wep1.setTwoHand('Longbow', 'Viper\'s', 'Superior Sigil of Concentration', 'Superior Sigil of Malice');
+        this.wep1.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Concentration', 'Superior Sigil of Malice');
         this.wep2.setMainHand('Dagger', 'Viper\'s', 'Superior Sigil of Concentration');
         this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Malice');
         this.consumable.setConsumable('Prickly Pear Pie', 'Toxic Maintenance Oil');
@@ -40,7 +40,7 @@ class CondiSoulbeastBuild extends CondiRangerBuild {
         this.icon += 'soulbeast.png';
         this.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
         this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
-        this.wep1.setTwoHand('Longbow', 'Viper\'s', 'Superior Sigil of Agony', 'Superior Sigil of Geomancy');
+        this.wep1.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Agony', 'Superior Sigil of Geomancy');
         this.wep2.setMainHand('Dagger', 'Viper\'s', 'Superior Sigil of Agony');
         this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Geomancy');
         this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Hidden Barbs', 'Quick Draw']);

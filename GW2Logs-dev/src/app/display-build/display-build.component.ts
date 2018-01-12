@@ -4,7 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 (<any>document).GW2A_EMBED_OPTIONS = {
   lang: 'fr',
-  persistToLocalStorage: true,
+  persistToLocalStorage: true
 };
 
 
