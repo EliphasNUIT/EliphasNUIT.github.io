@@ -52,7 +52,7 @@ export function warBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new BerserkerBannerBuild('bers', 'Standart');
+        build = new BerserkerBannerBuild('bers', 'standard');
 
         build = new BerserkerBannerBuild('bersCC', 'CC');
         build.skills.setUtilitySkills(['Wild Blow', 'Banner of Discipline', 'Banner of Strength']);
@@ -69,7 +69,7 @@ export function warBuildMaker() {
     }
     // power
     {
-        build = new SpellbreakerBannerBuild('spellbrk', 'Standart');
+        build = new SpellbreakerBannerBuild('spellbrk', 'standard');
 
         build = new SpellbreakerBannerBuild('spellbrkFury', 'Fury');
         build.skills.setUtilitySkills(['"For Great Justice!"', 'Banner of Discipline', 'Banner of Strength']);

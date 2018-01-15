@@ -149,13 +149,13 @@ export function revBuildMaker() {
             'Charged Mists'
         ]);
 
-        build = new CondiRenegadeSuppBuild('renCondiSupp', 'Standart');
+        build = new CondiRenegadeSuppBuild('renCondiSupp', 'standard');
     }
 
     // Special
     {
 
-        build = new HealRenegadeBuild('renHeal', 'Standart');
+        build = new HealRenegadeBuild('renHeal', 'standard');
 
         build = new KiteHeraldBuild('herDeiVentari', 'Deimos');
 

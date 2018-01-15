@@ -199,7 +199,7 @@ export function mesBuildMaker() {
     let build: ProfBuild = null;
     // minstrel
     {
-        build = new MinstrelShareBuild('chrTankMinstrel', 'Standart');
+        build = new MinstrelShareBuild('chrTankMinstrel', 'standard');
         build.specialization.setSpec('spec2', 'Inspiration', [
             'Persisting Images',
             'Restorative Illusions',
@@ -276,7 +276,7 @@ export function mesBuildMaker() {
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new CondiMiragePhantasmBuild('mirageCondi', 'Standart');
+        build = new CondiMiragePhantasmBuild('mirageCondi', 'standard');
 
         build = new CondiMiragePhantasmBuild('mirageCondiVG', 'Long Range');
         build.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Malice');
@@ -291,7 +291,7 @@ export function mesBuildMaker() {
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new CondiMirageCloneBuild('mirageCondiC', 'Standart');
+        build = new CondiMirageCloneBuild('mirageCondiC', 'standard');
     }
 
 }

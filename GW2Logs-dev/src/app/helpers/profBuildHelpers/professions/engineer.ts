@@ -64,7 +64,7 @@ export function engiBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiEngiBuild('engiCondi', 'Standart');
+        build = new CondiEngiBuild('engiCondi', 'standard');
 
         build = new CondiEngiBuild('engiCondiMob', 'Mobility');
         build.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
@@ -79,7 +79,7 @@ export function engiBuildMaker() {
 
     // Power
     {
-        build = new PowerHolosmithBuild('holoPower', 'Standart');
+        build = new PowerHolosmithBuild('holoPower', 'standard');
 
         build = new PowerHolosmithBuild('holoPowerCC', 'CC');
         build.skills.setHealSkill('A.E.D.');

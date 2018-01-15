@@ -74,7 +74,7 @@ export function thiefBuildMaker() {
     let build: ProfBuild = null;
     // Power
     {
-        build = new PowerDaredevilBuild('drdPower', 'Standart');
+        build = new PowerDaredevilBuild('drdPower', 'standard');
 
         build = new PowerDaredevilBuild('drdPowerMob', 'Mobility');
         build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
@@ -85,7 +85,7 @@ export function thiefBuildMaker() {
         build = new PowerDaredevilBuild('drdPowerNoCC', 'No CC');
         build.skills.setEliteSkill('Thieves Guild');
 
-        build = new PowerDeadeyeBuild('deadeyePower', 'Standart');
+        build = new PowerDeadeyeBuild('deadeyePower', 'standard');
 
         build = new PowerDeadeyeBuild('deadeyePowerMob', 'Mobility');
         build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Shadow Flare']);
@@ -96,7 +96,7 @@ export function thiefBuildMaker() {
 
     // Condi
     {
-        build = new CondiDaredevilBuild('drdCondi', 'Standart');
+        build = new CondiDaredevilBuild('drdCondi', 'standard');
 
         build = new CondiDaredevilBuild('drdCondiMob', 'Mobility');
         build.skills.setUtilitySkills(['Spider Venom', 'Shadowstep', 'Caltrops']);
