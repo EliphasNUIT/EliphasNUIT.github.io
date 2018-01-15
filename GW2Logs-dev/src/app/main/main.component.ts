@@ -25,8 +25,12 @@ export class MainComponent implements OnInit {
   bosses: Boss[] = [];
   selectedBoss: Boss;
   selectedDisplay = 'compo';
-  logsStyle = { 'background-image': 'url(assets/logs.png)' };
-  compoStyle = { 'background-image': 'url(assets/compo.png)' };
+  logsStyle = { 'background-image': 'url(assets/logs.png)', 'width': '250px', 'heigth' : '100px',
+       'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
+  compoStyle = { 'background-image': 'url(assets/compo.png)', 'width': '250px', 'heigth' : '100px',
+        'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
+  stratStyle = { 'background-image': 'url(assets/raid.jpg)', 'width': '250px', 'heigth' : '100px',
+        'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
 
   constructor(private http: HttpClient) {
     const _this = this;

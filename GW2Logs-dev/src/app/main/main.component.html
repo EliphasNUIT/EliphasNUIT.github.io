@@ -31,11 +31,11 @@
         Logs
       </div>
     </span>
-    <!-- <span (click)="onSelectDisplay('strat')" [class.selected]="selectedDisplay === 'strat'" [ngStyle]="logsStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
+    <span (click)="onSelectDisplay('strat')" [class.selected]="selectedDisplay === 'strat'" [ngStyle]="stratStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
       <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
         Stratégie
       </div>
-    </span>-->
+    </span>
   </div>
   <div [ngSwitch]="selectedDisplay">
     <div *ngSwitchCase="'compo'">
