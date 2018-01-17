@@ -7,6 +7,10 @@
     text-shadow: 0px 0px 2px black;
 }
 
+ul.sublist {
+    list-style-type: circle;
+}
+
 .uk-list {
     width: 1100px;
     background-color: rgba(100,100,100,0.5);
