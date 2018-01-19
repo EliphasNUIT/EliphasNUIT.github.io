@@ -1,0 +1,70 @@
+<div class='uk-margin-large-top uk-flex uk-flex-middle uk-flex-column'>
+  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">
+    <div>
+      <a href="#">Mécaniques de base</a>
+    </div>
+    <div>
+      <a href="#">Split</a>
+    </div>
+  </ul>
+
+</div>
+<div class='uk-margin-left uk-margin-right'>
+  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center" [ngStyle]="style">
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Split - </span> Le boss split à 75%, 50% et 25%, laissant sa place à un mini-boss. Le boss revient après un certain
+          temps ou quand le mini-boss n'a plus que 15% de sa vie et lance directement son mur de flamme.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Aura - </span> Pas d'aura.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Tanking - </span> Pas de mécanique de tanking.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Platform integrity - </span> Durant tous le combat, la plateforme prend des dégats par diverses sources, si elle
+          est détruite c'est le wipe.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Cannons - </span> Un cannon va apparaître toutes les 30 secondes en suivant le pattern Sud-Ouest-Nort-Est-Sud-Nord-Ouest-Est.
+          Il tire sur la plateforme endommageant cette dernière et les joueurs se trouvant dans l'explosion. Un joueur qui
+          part sur un cannon ne peut pas aller sur un autre cannon pendant 50 secondes. Après l'enrage, toutes les 30 secondes,
+          les 4 cannons réapparaissent.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Firestorm - </span> En moyenne toutes les 45 secondes le boss lancer un mur de flamme qui tourne dans le sens contraire
+          des aiguilles d'une montre. Tue instantanément tous les joueurs touchés. Non esquivable mais distortable et blinkable.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Heavy Bomb (Bombe lourde) - </span> Durant le split, des bombes apparaissent régulièrement sur la plateforme et
+          explosent 10 secondes plus tard, infligeant des dégats lourds à la plateforme. Il faut aller intéragir avec la
+          bombe pour la détruire.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Sapper Bomb (Grenade) - </span> Grenade à lancer sur les plateformes de lancement afin d'envoyer un joueur vers
+          un cannon. La grenade est perdue si elle n'est pas lancée en 5 secondes.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Time Bomb - </span> Le joueur le plus proche du boss est choisi et provoque une explosion 3 secondes plus tard
+          dans une zone assez large provoquant des dégats importants à ses alliés. Les joueurs au sol sont tués directement.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Flak Shot - </span> Envoie 3 boules de feu sur le joueur le plus éloigné. Les boules crééent une zone de feu à
+          l'impact endommageant et brulant les joueurs se trouvant dessus.
+        </li>
+      </ul>
+    </div>
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Split - </span> Le boss retourne au centre et se met dans une bulle d'invincibilité. Quatre grands esprits apparaissent
+          autour du boss (Nord-Est, Nort-Ouest, Sud-Est, Sud-Ouest) et se dirigent vers le boss. Tuer les 4 esprits provoquent
+          la fin de la phase.
+        </li>
+
+      </ul>
+    </div>
+  </ul>
+</div>

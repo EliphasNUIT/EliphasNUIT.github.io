@@ -18,7 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { DbSelectorComponent } from './db-selector/db-selector.component';
 import { StratComponent } from './strat/strat.component';
 import { StratVgComponent } from './strat-vg/strat-vg.component';
-import { StratGorseComponent } from './strat-gorse/strat-gorse.component'; // <-- NgModel lives here
+import { StratGorseComponent } from './strat-gorse/strat-gorse.component';
+import { StratSabComponent } from './strat-sab/strat-sab.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { StratGorseComponent } from './strat-gorse/strat-gorse.component'; // <-
     DbSelectorComponent,
     StratComponent,
     StratVgComponent,
-    StratGorseComponent
+    StratGorseComponent,
+    StratSabComponent
   ],
   imports: [
     BrowserModule,
