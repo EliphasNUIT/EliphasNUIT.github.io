@@ -20,26 +20,26 @@
                     },
                     {
                         "name": "Dam",
-                        "role": "Guardien Rouge",
+                        "role": "",
                         "build": "druidVg",
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Winter",
-                        "role": "gardien rouge",
-                        "build": "bers",
-                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "weavPowerSHArc",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Sakura",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -57,21 +57,21 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Bouhteille",
-                        "role": "",
-                        "build": "dhPowerZealRad",
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                        "name": "Winter",
+                        "role": "gardien rouge",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Eliphas",
-                        "role": "",
-                        "build": "dhPowerZealRad",
+                        "role": "Gardien Rouge",
+                        "build": "holoPower",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
-                        "role": "Guardien Rouge",
-                        "build": "soulbeastCondi",
+                        "name": "Sakura",
+                        "role": "Gardien Rouge",
+                        "build": "mirageCondiC",
                         "gw2Armory": ""
                     }
                 ]
@@ -108,15 +108,15 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "weavPowerBHAir",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Sakura",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerBHAir",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -146,9 +146,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Sakura",
                         "role": "",
-                        "build": "soulbeastCondi",
+                        "build": "weavPowerBHAir",
                         "gw2Armory": ""
                     }
                 ]
@@ -175,25 +175,25 @@
                     {
                         "name": "Dam",
                         "role": "Kite",
-                        "build": "druidSab",
+                        "build": "scourgeCondiSabKite",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Winter",
                         "role": "cannon 2-4",
-                        "build": "bers",
+                        "build": "bersFury",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
-                    },
-                    {
-                        "name": "Suzuca",
-                        "role": "",
-                        "build": "weavPowerSHArc",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
                     },
                     {
                         "name": "Sakura",
                         "role": "cannon 1-3",
-                        "build": "mirageCondi",
+                        "build": "mirageCondiC",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Torsina",
+                        "role": "backup cannon",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -223,9 +223,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
-                        "role": "backup cannon",
-                        "build": "soulbeastCondi",
+                        "name": "Vengeful",
+                        "role": "",
+                        "build": "fbDPS",
                         "gw2Armory": ""
                     }
                 ]
@@ -258,14 +258,14 @@
                     {
                         "name": "Winter",
                         "role": "",
-                        "build": "bers",
+                        "build": "bersCC",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "Champignon 3",
-                        "build": "weavPowerSHAir",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Sakura",
@@ -296,13 +296,13 @@
                     {
                         "name": "Eliphas",
                         "role": "Champignon 2",
-                        "build": "dhPowerZealRad",
+                        "build": "weavPowerSHAir",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
-                        "role": "",
-                        "build": "weavPowerSHAir",
+                        "name": "Torsinal",
+                        "role": "Champignon 1",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ]
@@ -333,16 +333,16 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Winter",
+                        "name": "Arkness",
                         "role": "",
                         "build": "bersCC",
-                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "mirageCondiCMatt",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "fbDPSPurg",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Sakura",
@@ -359,10 +359,10 @@
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
-                        "name": "Arkness",
+                        "name": "Winter",
                         "role": "",
-                        "build": "druidMatt",
-                        "gw2Armory": ""
+                        "build": "tempAura",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Bouhteille",
@@ -373,13 +373,13 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "holoPowerStormTurret",
+                        "build": "holoPowerTurret",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "soulbeastCondiTrap",
+                        "build": "dhPowerZealRadFury",
                         "gw2Armory": ""
                     }
                 ]
@@ -416,15 +416,15 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "weavPowerKC",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "dhPowerVirtRad",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Sakura",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerKC",
+                        "build": "dhPowerVirtRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -454,7 +454,7 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Sakura",
                         "role": "",
                         "build": "weavPowerKC",
                         "gw2Armory": ""
@@ -493,15 +493,15 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "weavPowerSHArc",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Sakura",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -531,7 +531,7 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Sakura",
                         "role": "",
                         "build": "weavPowerSHArc",
                         "gw2Armory": ""
@@ -558,10 +558,10 @@
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Dam",
+                        "name": "Eliphas",
                         "role": "Kite",
                         "build": "druidCairnKite",
-                        "gw2Armory": ""
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Winter",
@@ -570,10 +570,10 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "mirageCondiC",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "fbDPSPurg",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Sakura",
@@ -602,15 +602,15 @@
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Eliphas",
+                        "name": "Dam",
                         "role": "",
-                        "build": "holoPowerDPS",
-                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                        "build": "",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "soulbeastCondi",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ]
@@ -635,27 +635,27 @@
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Dam",
-                        "role": "protect",
-                        "build": "druidSab",
-                        "gw2Armory": ""
-                    },
-                    {
                         "name": "Winter",
                         "role": "",
-                        "build": "bers",
+                        "build": "bersFury",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Bouhteille",
                         "role": "",
-                        "build": "weavPowerSHArc",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "renCondiInvo",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Sakura",
+                        "name": "Vegenful",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Torsina",
+                        "role": "",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -668,26 +668,26 @@
                     },
                     {
                         "name": "Arkness",
-                        "role": "dispel",
+                        "role": "Protect",
                         "build": "druidSab",
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Bouhteille",
-                        "role": "",
-                        "build": "renCondiInvo",
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                        "name": "Dam",
+                        "role": "Epi Bouncer",
+                        "build": "scourgeCondiMO",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Eliphas",
-                        "role": "",
-                        "build": "holoPowerDPSTurret",
+                        "role": "Dispel",
+                        "build": "scourgeCondiMO",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Sakura",
                         "role": "",
-                        "build": "soulbeastCondi",
+                        "build": "mirageCondiC",
                         "gw2Armory": ""
                     }
                 ]
@@ -724,15 +724,15 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "weavPowerBHArc",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Sakura",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerBHArc",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -762,7 +762,7 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Sakura",
                         "role": "",
                         "build": "weavPowerBHArc",
                         "gw2Armory": ""
@@ -795,21 +795,15 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Winter",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "bers",
-                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                        "build": "fbDPSPurg",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerSHAir",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
-                    },
-                    {
-                        "name": "Sakura",
-                        "role": "",
-                        "build": "weavPowerSHAir",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -827,13 +821,19 @@
                         "gw2Armory": ""
                     },
                     {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
                         "name": "Bouhteille",
                         "role": "",
                         "build": "weavPowerSHAir",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Sakura",
                         "role": "",
                         "build": "weavPowerSHAir",
                         "gw2Armory": ""
@@ -881,10 +881,10 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "mirageCondi",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "fbDPSPurg",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Sakura",
@@ -919,9 +919,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "soulbeastCondi",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ]
@@ -953,10 +953,10 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Suzuca",
+                        "name": "Vengeful",
                         "role": "",
-                        "build": "weavPowerBHAir",
-                        "gw2Armory": "http://gw2armory.com/Suzuca/characters/"
+                        "build": "fbDPSPurg",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Sakura",
@@ -987,13 +987,13 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "holoPowerStorm",
+                        "build": "holoPowerTurret",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Pedna",
+                        "name": "Torsina",
                         "role": "",
-                        "build": "weavPowerBHAir",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],

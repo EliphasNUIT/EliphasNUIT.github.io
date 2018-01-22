@@ -99,6 +99,9 @@ export function engiBuildMaker() {
             'Modified Ammunition'
         ]);
 
+        build = new PowerHolosmithBuild('holoPowerTurret', 'Turret');
+        build.skills.setHealSkill('Healing Turret');
+
         build = new PowerHolosmithBuild('holoPowerDPSTurret', 'Full DPS - Turret');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',

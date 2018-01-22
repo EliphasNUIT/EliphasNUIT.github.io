@@ -123,16 +123,17 @@ export function eleBuildMaker() {
     // Special
     {
         build = new EleBuild('tempAura', 'Tempest - Auramancer');
+        build.icon += 'tempest.png';
         build.armor.setSingleStat('Magi\'s');
         build.armor.setSingleRune('Superior Rune of the Monk');
         build.consumable.setConsumable('Delicious Rice Ball', 'Bountiful Maintenance Oil');
         build.trinket.setSingleStat('Magi\'s');
         build.wep1.setTwoHand('Staff', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
 
-        build.specialization.setSpec('spec1', 'Water', ['Soothing Ice', 'Aquamancer\'s Training', 'Powerful Aura']);
+        build.specialization.setSpec('spec1', 'Water', ['Soothing Ice', 'Aquamancer\'s Training', 'Soothing Power']);
         build.specialization.setSpec('spec2', 'Arcane', ['Renewing Stamina', 'Arcane Resurrection', 'Bountiful Power']);
         build.specialization.setSpec('spec3', 'Tempest', [
-            'Unstable Conduit',
+            'Gale Song',
             'Invigorating Torrents',
             'Elemental Bastion'
         ]);

@@ -69,7 +69,7 @@ class BoonDruidBuild extends RangerBuild {
         this.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
         this.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
         this.skills.pets = ['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern'];
-        this.skills.setHealSkill('Water Spirit');
+        this.skills.setHealSkill('Glyph of Rejuvenation');
         this.skills.setUtilitySkills(['Glyph of Empowerment', '', '']);
         this.skills.setEliteSkill('Glyph of Unity');
     }
@@ -127,6 +127,7 @@ export function rangerBuildMaker() {
         build.armor.setSingleStat('Minstrel\'s');
         build.armor.setSingleRune('Superior Rune of Water');
         build.trinket.setSingleStat('Minstrel\'s');
+        build.skills.setHealSkill('Water Spirit');
         build.skills.setEliteSkill('Spirit of Nature');
 
         build = new BoonDruidBuild('druidKite', 'Black Kite');

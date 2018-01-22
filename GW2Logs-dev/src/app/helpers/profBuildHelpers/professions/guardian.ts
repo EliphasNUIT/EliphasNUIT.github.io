@@ -100,6 +100,9 @@ export function guardBuildMaker() {
     {
         build = new PowerDHBuild('dhPowerZealRad', 'Zeal/Radiance');
 
+        build = new PowerDHBuild('dhPowerZealRadFury', 'Zeal/Radiance - Fury');
+        build.skills.setEliteSkill('"Feel My Wrath!"');
+
         build = new PowerDHBuild('dhPowerVirtRad', 'Virtues/Radiance');
         build.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
 

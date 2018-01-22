@@ -46,7 +46,7 @@ class CondiRenegadeBHBuild extends RevenantBuild {
             'Assassin\'s Presence',
             'Swift Termination'
         ]);
-        this.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Lasting Legacy']);
+        this.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
         this.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Demon Stance']);
     }
 }
