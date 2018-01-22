@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StratSabComponent implements OnInit {
 
   style= {
-    'height' : '100%'
+    'height' : '650px'
   };
 
   constructor() { }
