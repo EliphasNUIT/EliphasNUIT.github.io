@@ -1,7 +1,4 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
-// import { buildDatabase, ProfBuild } from './helpers/profBuild';
-
-
 
 @Pipe({
   name: 'dbSearch'
@@ -14,23 +11,18 @@ export class DbSearchPipe implements PipeTransform {
       return [];
     }
     return items.filter(function (elt) {
-      // const filters = filter.split('&');
-      /*if (filters.length > 1) {
-        const build = buildDatabase.get(elt.id);
-        if (!build) {
-          return false;
-        }
-        let res = true;
+      const filters = filter.split(' ');
+      if (filters.length > 1) {
         for (let i = 0; i < filters.length; i++) {
-          const pair = filters[i].split('=');
-          const id = pair[0];
-          const value = pair[1];
-          res = true;
+          const value = filters[i];
+          if (!elt.name.toUpperCase().includes(value.toLocaleUpperCase())) {
+            return false;
+          }
         }
-        return res;
-      } else {*/
-      return elt.name.toUpperCase().includes(filter.toLocaleUpperCase());
-      // }
+        return true;
+      } else {
+        return elt.name.toUpperCase().includes(filter.toLocaleUpperCase());
+      }
     });
   }
 
