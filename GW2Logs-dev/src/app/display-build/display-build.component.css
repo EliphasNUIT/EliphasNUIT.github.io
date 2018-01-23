@@ -10,6 +10,7 @@
 
 .my-accordion-title {
     border-top: 1px solid black;
+    color: rgb(230,230,230);
     border-bottom: 1px solid black;
     transition: background-color 0.2s linear;
 }
