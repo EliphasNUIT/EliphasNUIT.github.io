@@ -23,13 +23,13 @@
     "@angular/router": "^5.1.2",
     "core-js": "^2.5.3",
     "handlebars": "^4.0.11",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "rxjs": "^5.5.6",
-    "uikit": "^3.0.0-beta.35",
-    "zone.js": "^0.8.18"
+    "uikit": "^3.0.0-beta.38",
+    "zone.js": "^0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.2",
+    "@angular/cli": "1.6.5",
     "@angular/compiler-cli": "^5.1.2",
     "@angular/language-service": "^5.1.2",
     "@types/jasmine": "~2.5.53",
