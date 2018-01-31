@@ -19,7 +19,8 @@ import { DbSelectorComponent } from './db-selector/db-selector.component';
 import { StratComponent } from './strat/strat.component';
 import { StratVgComponent } from './strat-vg/strat-vg.component';
 import { StratGorseComponent } from './strat-gorse/strat-gorse.component';
-import { StratSabComponent } from './strat-sab/strat-sab.component'; // <-- NgModel lives here
+import { StratSabComponent } from './strat-sab/strat-sab.component';
+import { StratSlothComponent } from './strat-sloth/strat-sloth.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { StratSabComponent } from './strat-sab/strat-sab.component'; // <-- NgMo
     StratComponent,
     StratVgComponent,
     StratGorseComponent,
-    StratSabComponent
+    StratSabComponent,
+    StratSlothComponent
   ],
   imports: [
     BrowserModule,
