@@ -90,9 +90,9 @@ export function rangerBuildMaker() {
         build = new CondiDruidBuild('druidCondiVg', 'VG');
         build.skills.setUtilitySkills(['Glyph of the Tides', 'Sun Spirit', 'Frost Spirit']);
 
-        build = new CondiDruidBuild('druidCondi', 'standard');
+        build = new CondiDruidBuild('druidCondi', 'Standard');
 
-        build = new CondiSoulbeastBuild('soulbeastCondi', 'standard');
+        build = new CondiSoulbeastBuild('soulbeastCondi', 'Standard');
 
 
         build = new CondiSoulbeastBuild('soulbeastCondiTrap', 'Trap');

@@ -79,7 +79,7 @@ export function eleBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new CondiWeaverBuild('weavCondi', 'standard');
+        build = new CondiWeaverBuild('weavCondi', 'Standard');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Primordial Stance']);
         build = new CondiWeaverBuild('weavCondiSab', 'Cannons');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Lightning Flash']);
@@ -87,7 +87,7 @@ export function eleBuildMaker() {
 
     // Power
     {
-        build = new PowerSwordWeaverBuild('weavPowerSword', 'standard');
+        build = new PowerSwordWeaverBuild('weavPowerSword', 'Standard');
 
         build = new PowerWeaverBuild('weavPowerSHArc', 'Arcane - Small Hitbox');
         build.specialization.setSpec('spec2', 'Arcane', [

@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StratVgComponent implements OnInit {
 
-  style= {
-    'height' : '300px'
-  };
-
   constructor() { }
 
   ngOnInit() {

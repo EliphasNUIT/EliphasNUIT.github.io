@@ -125,9 +125,9 @@ export function guardBuildMaker() {
 
     // Support
     {
-        build = new MinstrelFBBuild('fbMins', 'standard');
+        build = new MinstrelFBBuild('fbMins', 'Standard');
 
-        build = new SuppFBBuild('fbSupp', 'standard');
+        build = new SuppFBBuild('fbSupp', 'Standard');
     }
 }
 
