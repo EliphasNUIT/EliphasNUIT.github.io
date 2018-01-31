@@ -14,8 +14,8 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "Tank",
-                        "build": "chrVGTank",
+                        "role": "",
+                        "build": "chrVG",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -46,8 +46,8 @@
                 "t2": [
                     {
                         "name": "Polga",
-                        "role": "",
-                        "build": "chrVG",
+                        "role": "Tank",
+                        "build": "chrVGTank",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -91,8 +91,8 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "Tank",
-                        "build": "chrGorseTank",
+                        "role": "",
+                        "build": "chrGorse",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -123,8 +123,8 @@
                 "t2": [
                     {
                         "name": "Polga",
-                        "role": "",
-                        "build": "chrGorse",
+                        "role": "Tank",
+                        "build": "chrGorseTank",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -399,8 +399,8 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "Tank",
-                        "build": "chrKCTank",
+                        "role": "",
+                        "build": "chrKC",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -431,8 +431,8 @@
                 "t2": [
                     {
                         "name": "Polga",
-                        "role": "",
-                        "build": "chrKC",
+                        "role": "Tank",
+                        "build": "chrKCTank",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
