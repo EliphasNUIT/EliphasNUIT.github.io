@@ -20,7 +20,8 @@ import { StratComponent } from './strat/strat.component';
 import { StratVgComponent } from './strat-vg/strat-vg.component';
 import { StratGorseComponent } from './strat-gorse/strat-gorse.component';
 import { StratSabComponent } from './strat-sab/strat-sab.component';
-import { StratSlothComponent } from './strat-sloth/strat-sloth.component'; // <-- NgModel lives here
+import { StratSlothComponent } from './strat-sloth/strat-sloth.component';
+import { StratMatComponent } from './strat-mat/strat-mat.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { StratSlothComponent } from './strat-sloth/strat-sloth.component'; // <-
     StratVgComponent,
     StratGorseComponent,
     StratSabComponent,
-    StratSlothComponent
+    StratSlothComponent,
+    StratMatComponent
   ],
   imports: [
     BrowserModule,

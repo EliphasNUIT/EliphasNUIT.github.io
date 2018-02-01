@@ -1,0 +1,126 @@
+<div class='uk-margin-large-top uk-flex uk-flex-middle uk-flex-column'>
+  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">
+    <div>
+      <a href="#">Mécaniques de base</a>
+    </div>
+    <div>
+      <a href="#">Glace</a>
+    </div>
+    <div>
+      <a href="#">Feu</a>
+    </div>
+    <div>
+      <a href="#">Pluie</a>
+    </div>
+    <div>
+      <a href="#">Abomination</a>
+    </div>
+  </ul>
+
+</div>
+<div class='uk-margin-left uk-margin-right'>
+  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center">
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Phase - </span> Le boss phase à 80% (Feu), 60% (Pluie) et 40% (Abomination).
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Tanking - </span> Pas de tanking, mais le boss a tendance à viser le joueur le plus eloigné.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Shards of Rage (Les éclats) - </span> Le boss tire des éclats sur 360 degrés. Il ne faut pas réflechir ces projectiles
+          car le boss reçoit un bonus de 10% de dégats par projectiles reçus pendant quelques secondes.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Bouclier - </span> Le boss se met dans un bouclier avec 18 stacks et commence à tirer sur un joueur. Ces projectiles
+          doivent être refléchis sur le boss afin de lui enlever son bouclier.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Corruption - </span> Un joueur va être corrompu toutes les 30 secondes. Le joueur corrompu doit se purifier sur
+          l'une des 4 fontaines. Les fontaines ont un cooldown de 90 secondes. Le joueur corrompu va avoir une zone autour
+          de lui infligeant des dégâts catastrophiques à ses alliés.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Sacrifice - </span> Un joueur va être sacrifié toutes les 45 secondes. Le joueur sacrifié doit être stun en 10
+          secondes pour être libéré sans quoi il meurt.
+        </li>
+      </ul>
+    </div>
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Snowstorm (Tempête de neige) - </span> Effet d'arène. Les joueurs sont ralentis et subissent givre toutes les 10
+          secondes.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Zone de glace - </span> Des zones de glace vont apparaître sur l'arène appliquant givre et renversant aux joueurs
+          tentant de les traverser. Appliquer un stack de brûlure enlève la zone.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Hadoken - </span> Le boss lance une orbe rapide et provoquant d'importants dégâts sur les joueurs touchés. Vise
+          généralement la personne la plus éloignée.
+        </li>
+      </ul>
+    </div>
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Heat Wave (Canicule) - </span> Effet d'arène. Les joueurs immobiles subissent des dégâts. Tous les joueurs reçoivent
+          un stack de brulûre toutes les 10 secondes.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Tornade - </span> 2 tornades de feu vont se promener dans l'arène. Dégâts mineurs sur le joueur mais ce dernier
+          perd contrôle pendant quelques secondes.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Well of the Profane (Zone rouge) - </span> Toutes les 10 secondes un joueur va recevoir une action spéciale. Il
+          faut déposer la zone sur les côtés sans bloquer les accès aux fontaines. La zone provoque des dégâts catastrophiques
+        </li>
+      </ul>
+    </div>
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Downpur (Averse) - </span> Effet d'arène. Les joueurs qui bougent reçoivent des stacks de debuff, à 10 stacks le
+          joueur est renversé. Les joueurs reçoivent un stack de poison toutes les 10 secondes.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Tempête - </span> Une zone de tempête va se promener dans l'arène. Provoque des dégâts mineurs sur les joueurs
+          mais augmente leurs stacks de debuff.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Bombes - </span> 5 joueurs aléatoires reçoivent une bombe qui provoque des dégâts mineurs sur le joueur choisi
+          mais catastrophiques sur ses alliés. Attention au debuff de renversement.
+        </li>
+      </ul>
+    </div>
+    <div class='uk-margin-left uk-margin-right'>
+      <ul class="uk-list uk-list-divider">
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Phase - </span> Toutes les 30 sec le boss change de phase dans l'ordre Glace - Feu - Pluie. Chaque phase garde
+          ses mécaniques. En Feu, 4 tornades au lieu de 2. En Pluie, 2 tempêtes au lieu de 1.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Sacrifice - </span> Il n'y a plus de sacrifice durant la phase abomination.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Bombes - </span> Les bombes ne sont plus propres à la phase Pluie et affectent 10 personnes au lieu de 5.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Hadoken - </span> Cette mécanique n'est plus propre à la phase Glace. L'animation est plus rapide.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Shards of Rage (Les éclats) - </span> Cette mécanique change d'animation: au lieu de tirer dans toutes les directions,
+          le boss va lancer les éclats en l'air.
+        </li>
+        <li>
+          <span class='uk-text-uppercase uk-text-bold'>Ghostly Spirit (les esprits) - </span> Sur un cycle de 45 secondes. Un esprit va apparaître dans un coin de la
+          salle et va la traverser en longueur (15 secondes). Un deuxième esprit va apparaître dès que le premier termine
+          son trajet (15 secondes). Dès que le deuxième a fini son trajet, le raid a 15 secondes de répit avant que le cycle
+          ne recommence. Les esprits ont une zone autour d'eux, les joueurs touchés subissent des dégâts catastrophiques.
+        </li>
+      </ul>
+    </div>
+  </ul>
+</div>
