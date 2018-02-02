@@ -21,7 +21,15 @@ import { StratVgComponent } from './strat-vg/strat-vg.component';
 import { StratGorseComponent } from './strat-gorse/strat-gorse.component';
 import { StratSabComponent } from './strat-sab/strat-sab.component';
 import { StratSlothComponent } from './strat-sloth/strat-sloth.component';
-import { StratMatComponent } from './strat-mat/strat-mat.component'; // <-- NgModel lives here
+import { StratMatComponent } from './strat-mat/strat-mat.component';
+import { StratKcComponent } from './strat-kc/strat-kc.component';
+import { StratXeraComponent } from './strat-xera/strat-xera.component';
+import { StratCairnComponent } from './strat-cairn/strat-cairn.component';
+import { StratMoComponent } from './strat-mo/strat-mo.component';
+import { StratSamComponent } from './strat-sam/strat-sam.component';
+import { StratDeiComponent } from './strat-dei/strat-dei.component';
+import { StratSsComponent } from './strat-ss/strat-ss.component';
+import { StratDhuumComponent } from './strat-dhuum/strat-dhuum.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -42,7 +50,15 @@ import { StratMatComponent } from './strat-mat/strat-mat.component'; // <-- NgMo
     StratGorseComponent,
     StratSabComponent,
     StratSlothComponent,
-    StratMatComponent
+    StratMatComponent,
+    StratKcComponent,
+    StratXeraComponent,
+    StratCairnComponent,
+    StratMoComponent,
+    StratSamComponent,
+    StratDeiComponent,
+    StratSsComponent,
+    StratDhuumComponent
   ],
   imports: [
     BrowserModule,
