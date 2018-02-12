@@ -67,9 +67,9 @@ class PowerSwordWeaverBuild extends EleBuild {
             'Pyromancer\'s Training',
             'Persisting Flames'
         ]);
-        this.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Aeromancer\'s Training', 'Bolt to the Heart']);
+        this.specialization.setSpec('spec2', 'Arcane', ['Renewing Stamina', 'Elemental Contingency', 'Bountiful Power']);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
-        this.skills.setHealSkill('Glyph of Elemental Harmony');
+        this.skills.setHealSkill('Arcane Brilliance');
         this.skills.setUtilitySkills(['Arcane Blast', 'Glyph of Storms', 'Primordial Stance']);
         this.skills.setEliteSkill('Conjure Fiery Greatsword');
     }
@@ -81,7 +81,7 @@ export function eleBuildMaker() {
     {
         build = new CondiWeaverBuild('weavCondi', 'Standard');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Primordial Stance']);
-        build = new CondiWeaverBuild('weavCondiSab', 'Cannons');
+        build = new CondiWeaverBuild('weavCondiSab', 'Mobility');
         build.skills.setUtilitySkills(['Signet of Fire', 'Signet of Earth', 'Lightning Flash']);
     }
 
