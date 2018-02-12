@@ -7,6 +7,34 @@ class MesBuild extends ProfBuild {
     }
 }
 
+
+class ChronoPowerBuild extends MesBuild {
+    constructor(id, name) {
+        super(id, 'Chronomancer - Power - ' + name);
+        this.icon += 'chronomancer.png';
+        this.armor.setStats(['Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s']);
+        this.armor.setSingleRune('Superior Rune of the Scholar');
+        this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
+        this.trinket.setSingleStat('Berserker\'s');
+        this.wep1.setMainHand('Sword', 'Assassin\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Sword', 'Assassin\'s', 'Superior Sigil of Accuracy');
+        this.wep2.setOffHand('Focus', 'Assassin\'s', 'Superior Sigil of Accuracy');
+        this.specialization.setSpec('spec1', 'Dueling', [
+            'Phantasmal Fury',
+            'Fencer\'s Finesse',
+            'Superiority Complex'
+        ]);
+        this.specialization.setSpec('spec3', 'Chronomancer', [
+            'Time Catches Up',
+            'Improved Alacrity',
+            'Chronophantasma'
+        ]);
+        this.skills.setHealSkill('Signet of the Ether');
+        this.skills.setUtilitySkills(['Phantasmal Defender', 'Well of Calamity', 'Phantasmal Disenchanter']);
+        this.skills.setEliteSkill('Gravity Well');
+    }
+}
+
 class MinstrelShareBuild extends MesBuild {
     constructor(id, name) {
         super(id, 'Chronomancer - Minstrel - ' + name);
@@ -189,6 +217,23 @@ export function mesBuildMaker() {
         build.skills.setEliteSkill('Gravity Well');
     }
 
+    // power
+    {
+        build = new ChronoPowerBuild('chrPowerSword', 'Sword/Sword + Focus');
+        build.specialization.setSpec('spec2', 'Illusions', [
+            'Shatter Storm',
+            'Phantasmal Haste',
+            'Phantasmal Force'
+        ]);
+
+        build = new ChronoPowerBuild('chrPowerG', 'Sword/Sword + GS');
+        build.specialization.setSpec('spec2', 'Domination', [
+            'Empowered Illusions',
+            'Blurred Inscriptions',
+            'Imagined Burden'
+        ]);
+    }
+
     // boon share
     {
 
@@ -243,7 +288,7 @@ export function mesBuildMaker() {
         build = new IlluInspi('chrDhuum', 'Dhuum');
 
     }
-     // condi clone
+    // condi clone
     {
         build = new CondiMirageCloneBuild('mirageCondiMatt', 'Reflect CC');
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
