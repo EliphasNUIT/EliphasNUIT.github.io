@@ -19,7 +19,7 @@ class CondiEngiBuild extends EngiBuild {
         this.trinket.setSingleStat('Viper\'s');
         this.wep1.setMainHand('Pistol', 'Viper\'s', 'Superior Sigil of Geomancy');
         this.wep1.setOffHand('Pistol', 'Viper\'s', 'Superior Sigil of Malice');
-        this.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Aim-Assisted Rocket', 'Shrapnel']);
+        this.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Shrapnel']);
         this.specialization.setSpec('spec2', 'Firearms', [
             'Chemical Rounds',
             'Pinpoint Distribution',
@@ -87,7 +87,7 @@ export function engiBuildMaker() {
         build = new PowerHolosmithBuild('holoPowerDPS', 'Full DPS');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
-            'No Scope',
+            'Thermal Vision',
             'Modified Ammunition'
         ]);
 
@@ -95,7 +95,7 @@ export function engiBuildMaker() {
         build.skills.setHealSkill('A.E.D.');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
-            'No Scope',
+            'Thermal Vision',
             'Modified Ammunition'
         ]);
 
@@ -105,7 +105,7 @@ export function engiBuildMaker() {
         build = new PowerHolosmithBuild('holoPowerDPSTurret', 'Full DPS - Turret');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
-            'No Scope',
+            'Thermal Vision',
             'Modified Ammunition'
         ]);
         build.skills.setHealSkill('Healing Turret');
