@@ -71,7 +71,7 @@
                     {
                         "name": "Sakura",
                         "role": "Gardien Rouge",
-                        "build": "mirageCondiC",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     }
                 ]
@@ -175,7 +175,7 @@
                     {
                         "name": "Dam",
                         "role": "Kite",
-                        "build": "scourgeCondiSabKite",
+                        "build": "scourgeCondiKite",
                         "gw2Armory": ""
                     },
                     {
@@ -187,7 +187,7 @@
                     {
                         "name": "Sakura",
                         "role": "cannon 1-3",
-                        "build": "mirageCondiC",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     },
                     {
@@ -295,13 +295,13 @@
                     },
                     {
                         "name": "Eliphas",
-                        "role": "Champignon 2",
+                        "role": "",
                         "build": "weavPowerSHAir",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Torsinal",
-                        "role": "Champignon 1",
+                        "role": "Champignon 2",
                         "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
@@ -347,7 +347,7 @@
                     {
                         "name": "Sakura",
                         "role": "",
-                        "build": "mirageCondiCMatt",
+                        "build": "mirageCondiMatt",
                         "gw2Armory": ""
                     }
                 ],
@@ -578,7 +578,7 @@
                     {
                         "name": "Sakura",
                         "role": "",
-                        "build": "mirageCondiC",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     }
                 ],
@@ -647,7 +647,7 @@
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Vegenful",
+                        "name": "Vengeful",
                         "role": "",
                         "build": "dhPowerZealRad",
                         "gw2Armory": ""
@@ -675,19 +675,19 @@
                     {
                         "name": "Dam",
                         "role": "Epi Bouncer",
-                        "build": "scourgeCondiMO",
+                        "build": "scourgeCondiEpi",
                         "gw2Armory": ""
                     },
                     {
                         "name": "Eliphas",
                         "role": "Dispel",
-                        "build": "scourgeCondiMO",
+                        "build": "scourgeCondiEpi",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Sakura",
                         "role": "",
-                        "build": "mirageCondiC",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     }
                 ]
@@ -915,7 +915,7 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "scourgeCondiDes",
+                        "build": "scourgeCondiPortal",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
@@ -961,7 +961,7 @@
                     {
                         "name": "Sakura",
                         "role": "Orb 2",
-                        "build": "mirageCondiC",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     }
                 ],
