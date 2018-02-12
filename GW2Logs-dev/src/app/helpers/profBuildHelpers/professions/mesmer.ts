@@ -24,7 +24,7 @@ class MinstrelShareBuild extends MesBuild {
             'Mental Anguish'
         ]);
         this.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
+            'Sympathetic Visage',
             'Restorative Illusions',
             'Illusionary Inspiration'
         ]);
@@ -74,7 +74,7 @@ class DomiInspi extends BoonShareBuild {
             'Mental Anguish'
         ]);
         this.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
+            'Sympathetic Visage',
             'Restorative Illusions',
             'Illusionary Inspiration'
         ]);
@@ -86,12 +86,12 @@ class IlluInspi extends BoonShareBuild {
     constructor(id, name) {
         super(id, 'Illusions/Inspiration - ' + name);
         this.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
+            'Sympathetic Visage',
             'Restorative Illusions',
             'Illusionary Inspiration'
         ]);
         this.specialization.setSpec('spec1', 'Illusions', [
-            'Compounding Power',
+            'Persistence of Memory',
             'Phantasmal Haste',
             'Phantasmal Force'
         ]);
@@ -107,7 +107,7 @@ class DomiIllu extends BoonShareBuild {
             'Mental Anguish'
         ]);
         this.specialization.setSpec('spec2', 'Illusions', [
-            'Compounding Power',
+            'Persistence of Memory',
             'Phantasmal Haste',
             'Phantasmal Force'
         ]);
@@ -123,7 +123,7 @@ class DuelIllu extends BoonShareBuild {
             'Superiority Complex'
         ]);
         this.specialization.setSpec('spec2', 'Illusions', [
-            'Compounding Power',
+            'Persistence of Memory',
             'Phantasmal Haste',
             'Phantasmal Force'
         ]);
@@ -139,33 +139,6 @@ class DomiInspiTank extends DomiInspi {
     }
 }
 
-class CondiMiragePhantasmBuild extends MesBuild {
-    constructor(id, name) {
-        super(id, 'Mirage - Phantasm - ' + name);
-        this.icon += 'mirage.png';
-        this.armor.setSingleStat('Viper\'s');
-        this.armor.setSingleRune('Superior Rune of the Renegade');
-        this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
-        this.trinket.setSingleStat('Viper\'s');
-        this.wep1.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Malice');
-        this.wep1.setOffHand('Pistol', 'Viper\'s', 'Superior Sigil of Geomancy');
-        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Geomancy');
-        this.specialization.setSpec('spec1', 'Dueling', [
-            'Duelist\'s Discipline',
-            'Blinding Dissipation',
-            'Superiority Complex'
-        ]);
-        this.specialization.setSpec('spec2', 'Illusions', [
-            'Compounding Power',
-            'Phantasmal Haste',
-            'Phantasmal Force'
-        ]);
-        this.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirrored Axes', 'Dune Cloak']);
-        this.skills.setHealSkill('Signet of the Ether');
-        this.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
-        this.skills.setEliteSkill('Jaunt');
-    }
-}
 
 class CondiMirageCloneBuild extends MesBuild {
     constructor(id, name) {
@@ -176,6 +149,7 @@ class CondiMirageCloneBuild extends MesBuild {
         this.consumable.setConsumable('Bowl of Orrian Truffle and Meat Stew', 'Toxic Focusing Crystal');
         this.trinket.setSingleStat('Viper\'s');
         this.wep1.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Malice');
+        this.wep1.setOffHand('Pistol', 'Viper\'s', 'Superior Sigil of Energy');
         this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Energy');
         this.specialization.setSpec('spec1', 'Dueling', [
             'Duelist\'s Discipline',
@@ -185,7 +159,7 @@ class CondiMirageCloneBuild extends MesBuild {
         this.specialization.setSpec('spec2', 'Chaos', [
             'Descent into Madness',
             'Chaotic Transference',
-            'Prismatic Understanding'
+            'Bountiful Disillusionment'
         ]);
         this.specialization.setSpec('spec3', 'Mirage', ['Self-Deception', 'Mirrored Axes', 'Infinite Horizon']);
         this.skills.setHealSkill('False Oasis');
@@ -201,7 +175,7 @@ export function mesBuildMaker() {
     {
         build = new MinstrelShareBuild('chrTankMinstrel', 'Standard');
         build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
+            'Sympathetic Visage',
             'Restorative Illusions',
             'Illusionary Inspiration'
         ]);
@@ -234,7 +208,7 @@ export function mesBuildMaker() {
 
         build = new IlluInspi('chrSloth', 'Slothasor');
         build.specialization.setSpec('spec2', 'Inspiration', [
-            'Persisting Images',
+            'Sympathetic Visage',
             'Warden\'s Feedback',
             'Illusionary Inspiration'
         ]);
@@ -269,29 +243,13 @@ export function mesBuildMaker() {
         build = new IlluInspi('chrDhuum', 'Dhuum');
 
     }
-
-    // condi phantasme
+     // condi clone
     {
-        build = new CondiMiragePhantasmBuild('mirageCondiMatt', 'Reflect CC');
+        build = new CondiMirageCloneBuild('mirageCondiMatt', 'Reflect CC');
         build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
         build.skills.setEliteSkill('Signet of Humility');
 
-        build = new CondiMiragePhantasmBuild('mirageCondi', 'Standard');
-
-        build = new CondiMiragePhantasmBuild('mirageCondiVG', 'Long Range');
-        build.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Malice');
-        build.specialization.setSpec('spec3', 'Mirage', ['Riddle of Sand', 'Mirage Mantle', 'Dune Cloak']);
-        build.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Signet of Humility');
-    }
-
-    // condi clone
-    {
-        build = new CondiMirageCloneBuild('mirageCondiCMatt', 'Reflect CC');
-        build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Signet of Humility');
-
-        build = new CondiMirageCloneBuild('mirageCondiC', 'Standard');
+        build = new CondiMirageCloneBuild('mirageCondi', 'Standard');
     }
 
 }
