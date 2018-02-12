@@ -29,18 +29,17 @@ class PowerDaredevilBuild extends ThiefBuild {
 
 class PowerDeadeyeBuild extends ThiefBuild {
     constructor(id, name) {
-        super(id, 'Deadeye - Dagger/Dagger Power - ' + name);
+        super(id, 'Deadeye - Rifle Power - ' + name);
         this.icon += 'deadeye.png';
         this.wep2 = null;
         this.armor.setSingleStat('Berserker\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
         this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
         this.trinket.setSingleStat('Berserker\'s');
-        this.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
-        this.wep1.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
+        this.wep1.setTwoHand('Rifle', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         this.specialization.setSpec('spec1', 'Deadly Arts', ['Mug', 'Revealed Training', 'Executioner']);
         this.specialization.setSpec('spec2', 'Critical Strikes', ['Twin Fangs', 'Practiced Tolerance', 'No Quarter']);
-        this.specialization.setSpec('spec3', 'Deadeye', ['Revealed Malice', 'Peripheral Vision', 'Be Quick or Be Killed']);
+        this.specialization.setSpec('spec3', 'Deadeye', ['One in the Chamber', 'Silent Scope', 'Maleficent Seven']);
         this.skills.setHealSkill('Signet of Malice');
         this.skills.setUtilitySkills(['Assassin\'s Signet', 'Spider Venom', 'Shadow Flare']);
         this.skills.setEliteSkill('Basilisk Venom');
