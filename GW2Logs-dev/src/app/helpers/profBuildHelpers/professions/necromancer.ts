@@ -18,7 +18,7 @@ class CondiScourgeBuild extends NecroBuild {
         this.wep1.setMainHand('Scepter', 'Viper\'s', 'Superior Sigil of Geomancy');
         this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Malice');
         this.specialization.setSpec('spec1', 'Curses', [
-            'Terrifying Descent',
+            'Plague Sending',
             'Master of Corruption',
             'Lingering Curse'
         ]);
@@ -33,20 +33,17 @@ export function necroBuildMaker() {
     let build: ProfBuild = null;
     // Scourge - Condi
     {
-        build = new CondiScourgeBuild('scourgeCondiMO', 'Mursaat');
-        build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Epidemic']);
-
-        build = new CondiScourgeBuild('scourgeCondiGorse', 'Gorseval');
+        build = new CondiScourgeBuild('scourgeCondi', 'Standard');
         build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
 
-        build = new CondiScourgeBuild('scourgeCondiSab', 'Sabetha');
-        build.skills.setUtilitySkills(['Blood Is Power', 'Trail of Anguish', 'Epidemic']);
+        build = new CondiScourgeBuild('scourgeCondiEpi', 'Epidemic');
+        build.skills.setUtilitySkills(['Epidemic', 'Trail of Anguish', 'Blood Is Power']);
 
-        build = new CondiScourgeBuild('scourgeCondiSabKite', 'Sabetha - Kite');
+        build = new CondiScourgeBuild('scourgeCondiKite', 'Sabetha - Kite');
         build.skills.setHealSkill('Summon Blood Fiend');
         build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
 
-        build = new CondiScourgeBuild('scourgeCondiDes', 'Soulless Horror');
+        build = new CondiScourgeBuild('scourgeCondiPortal', 'Portal');
         build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
     }
 }
