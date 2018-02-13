@@ -12,13 +12,13 @@ class ChronoPowerBuild extends MesBuild {
     constructor(id, name) {
         super(id, 'Chronomancer - Power - ' + name);
         this.icon += 'chronomancer.png';
-        this.armor.setStats(['Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s']);
+        this.armor.setSingleStat('Assassin\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
         this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
-        this.trinket.setSingleStat('Berserker\'s');
-        this.wep1.setMainHand('Sword', 'Assassin\'s', 'Superior Sigil of Force');
-        this.wep1.setOffHand('Sword', 'Assassin\'s', 'Superior Sigil of Accuracy');
-        this.wep2.setOffHand('Focus', 'Assassin\'s', 'Superior Sigil of Accuracy');
+        this.trinket.setStats(['Assassin\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s']);
+        this.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Sword', 'Berserker\'s', 'Superior Sigil of Accuracy');
+        this.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Accuracy');
         this.specialization.setSpec('spec1', 'Dueling', [
             'Phantasmal Fury',
             'Fencer\'s Finesse',
@@ -227,6 +227,7 @@ export function mesBuildMaker() {
         ]);
 
         build = new ChronoPowerBuild('chrPowerG', 'Sword/Sword + GS');
+        build.wep2.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Accuracy');
         build.specialization.setSpec('spec2', 'Domination', [
             'Empowered Illusions',
             'Blurred Inscriptions',

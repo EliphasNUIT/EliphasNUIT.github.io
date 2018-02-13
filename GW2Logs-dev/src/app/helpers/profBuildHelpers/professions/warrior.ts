@@ -111,7 +111,21 @@ export function warBuildMaker() {
         build = new SpellbreakerBannerBuild('spellbrkFury', 'Fury');
         build.skills.setUtilitySkills(['"For Great Justice!"', 'Banner of Discipline', 'Banner of Strength']);
 
-        build = new SpellbreakerDPSBuild('spellbrkDPS', 'Standard');
+        build = new SpellbreakerDPSBuild('spellbrkDPS', 'GS + Axe/Axe');
+
+        build = new SpellbreakerDPSBuild('spellbrkDPSDualMace', 'Mace/Axe + Axe/Dagger');
+        build.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
+        build.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
+        build.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
+        build.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
+        build.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Accuracy');
+
+        build = new SpellbreakerDPSBuild('spellbrkDPSDualDag', 'Dagger/Axe + Axe/Dagger');
+        build.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
+        build.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
+        build.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
+        build.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
+        build.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Accuracy');
     }
 }
 
