@@ -24,7 +24,7 @@ import { HttpClient } from '@angular/common/http';
 export class MainComponent implements OnInit {
   bosses: Boss[] = [];
   selectedBoss: Boss;
-  selectedDisplay = 'compo';
+  selectedDisplay: string;
   logsStyle = { 'background-image': 'url(assets/logs.png)', 'width': '250px', 'heigth' : '100px',
        'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
   compoStyle = { 'background-image': 'url(assets/compo.png)', 'width': '250px', 'heigth' : '100px',
@@ -55,6 +55,7 @@ export class MainComponent implements OnInit {
             }
           });
       });
+      this.selectedDisplay = localStorage.getItem('selectedDisplay') ? localStorage.getItem('selectedDisplay') : 'compo';
   }
 
   ngOnInit() {
@@ -67,6 +68,7 @@ export class MainComponent implements OnInit {
 
   onSelectDisplay(display: string): void {
     this.selectedDisplay = display;
+    localStorage.setItem('selectedDisplay', this.selectedDisplay);
   }
 
 }
