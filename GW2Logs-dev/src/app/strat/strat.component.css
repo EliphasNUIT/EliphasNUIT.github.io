@@ -11,6 +11,11 @@ ul.sublist {
     list-style-type: circle;
 }
 
+a.acknowledge{
+    color: rgb(100, 200, 250);
+    text-shadow: 0px 0px 2px rgb(0,0,0);
+}
+
 .uk-list {
     width: 1100px;
     background-color: rgba(100,100,100,0.5);
