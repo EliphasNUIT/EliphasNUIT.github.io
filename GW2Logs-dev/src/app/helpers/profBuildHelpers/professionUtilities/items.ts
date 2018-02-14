@@ -105,6 +105,7 @@ export const items = {
         'Prickly Pear Pie': 66538,
         'Bowl of Fire Meat Chili': 12484,
         'Bowl of Orrian Truffle and Meat Stew': 12488,
-        'Toxic Maintenance Oil': 48916
+        'Toxic Maintenance Oil': 48916,
+        'Bowl of Refugee\'s Beet Soup': 41562
     }
 };
