@@ -4,6 +4,8 @@ import { makeAllBuild } from './profBuildHelpers/professions/_full';
 
 makeAllBuild();
 
+let warningLimit = 0;
+
 export class Character  {
     name: string;
     gw2Armory: string;
@@ -19,7 +21,13 @@ export class Character  {
 
     getIcon(): string {
         if (!this.build) {
-            console.warn('Warning: data for ' + this.name + ' does not exist');
+            if (warningLimit < 10) {
+                console.warn('Warning: data for ' + this.name + ' does not exist');
+                warningLimit++;
+            } else if (warningLimit === 10) {
+                console.warn('Stopping warning messages for characters');
+                warningLimit++;
+            }
             return 'assets/profIcons/any.png';
         }
         return this.build.getIcon();
