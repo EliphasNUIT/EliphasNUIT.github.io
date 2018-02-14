@@ -70,7 +70,7 @@ export class NavigationBarComponent implements OnInit {
     },
     {
       text: 'Wiki officiel',
-      ref: 'https://wiki.guildwars2.com/wiki/Raid/',
+      ref: 'https://wiki.guildwars2.com/wiki/Raid',
       target: 'Wiki'
     },
     {
