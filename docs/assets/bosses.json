@@ -15,7 +15,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrVG",
+                        "build": "chrIlluInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -37,9 +37,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPowerDPS",
                         "gw2Armory": ""
                     }
                 ],
@@ -47,7 +47,7 @@
                     {
                         "name": "Polga",
                         "role": "Tank",
-                        "build": "chrVGTank",
+                        "build": "chrTankMinstrel",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -69,9 +69,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "Gardien Rouge",
-                        "build": "",
+                        "build": "soulbeastCondi",
                         "gw2Armory": ""
                     }
                 ]
@@ -92,7 +92,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrGorse",
+                        "build": "chrDomiInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -102,21 +102,21 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Winter",
-                        "role": "",
-                        "build": "bers",
-                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
-                    },
-                    {
                         "name": "Vengeful",
                         "role": "",
                         "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerBHArc",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": " ",
+                        "role": "",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -124,7 +124,7 @@
                     {
                         "name": "Polga",
                         "role": "Tank",
-                        "build": "chrGorseTank",
+                        "build": "chrDomiInspiTankFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -146,10 +146,10 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": "Winter",
                         "role": "",
-                        "build": "",
-                        "gw2Armory": ""
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     }
                 ]
             }
@@ -169,7 +169,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrSab",
+                        "build": "chrDuelIllu",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -185,15 +185,15 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "cannon 1-3",
-                        "build": "",
+                        "build": "soulbeastCondi",
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
-                        "role": "backup cannon",
-                        "build": "",
+                        "name": " ",
+                        "role": "backup",
+                        "build": "holoPowerOrbital",
                         "gw2Armory": ""
                     }
                 ],
@@ -201,7 +201,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrSab",
+                        "build": "chrDuelIllu",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -246,7 +246,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrSloth",
+                        "build": "chrIlluInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -268,9 +268,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "champignon 4",
-                        "build": "",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ],
@@ -278,7 +278,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrSloth",
+                        "build": "chrIlluInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -296,13 +296,13 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "weavPowerSHAir",
+                        "build": "weavPowerSHArc",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "Champignon 2",
-                        "build": "",
+                        "build": "dhPowerZealRad",
                         "gw2Armory": ""
                     }
                 ]
@@ -323,7 +323,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrMatt",
+                        "build": "chrIlluInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -345,9 +345,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "mirageCondiMatt",
                         "gw2Armory": ""
                     }
                 ],
@@ -355,7 +355,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrMatt",
+                        "build": "chrIlluInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -377,9 +377,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "mirageCondiMatt",
                         "gw2Armory": ""
                     }
                 ]
@@ -400,7 +400,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrKC",
+                        "build": "chrDomiInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -422,9 +422,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerKC",
                         "gw2Armory": ""
                     }
                 ],
@@ -432,7 +432,7 @@
                     {
                         "name": "Polga",
                         "role": "Tank",
-                        "build": "chrKCTank",
+                        "build": "chrDomiInspiTankFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -454,9 +454,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerKC",
                         "gw2Armory": ""
                     }
                 ]
@@ -477,7 +477,7 @@
                     {
                         "name": "Damano",
                         "role": "Tank",
-                        "build": "chrXeraTank",
+                        "build": "chrDomiInspiTankFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -499,9 +499,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPowerOrbital",
                         "gw2Armory": ""
                     }
                 ],
@@ -509,7 +509,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrXera",
+                        "build": "chrDomiInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -531,9 +531,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerSHArc",
                         "gw2Armory": ""
                     }
                 ]
@@ -554,14 +554,14 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrCairn",
+                        "build": "chrDuelIllu",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Eliphas",
+                        "name": "Dam",
                         "role": "Kite",
                         "build": "druidCairnKite",
-                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Winter",
@@ -576,9 +576,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPower",
                         "gw2Armory": ""
                     }
                 ],
@@ -586,7 +586,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrCairn",
+                        "build": "chrDuelIllu",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -602,15 +602,15 @@
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Dam",
+                        "name": "Eliphas",
                         "role": "",
-                        "build": "",
-                        "gw2Armory": ""
+                        "build": "holoPower",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     }
                 ]
@@ -631,7 +631,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrMO",
+                        "build": "chrDuelIllu",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -653,9 +653,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPower",
                         "gw2Armory": ""
                     }
                 ],
@@ -663,7 +663,7 @@
                     {
                         "name": "Polga",
                         "role": "claim",
-                        "build": "chrMO",
+                        "build": "chrDuelIllu",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -685,9 +685,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPower",
                         "gw2Armory": ""
                     }
                 ]
@@ -708,7 +708,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrSam",
+                        "build": "chrDomiInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -730,9 +730,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -740,7 +740,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrSam",
+                        "build": "chrDomiInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -762,9 +762,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": ""
                     }
                 ]
@@ -801,9 +801,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerSHAir",
                         "gw2Armory": ""
                     }
                 ],
@@ -811,7 +811,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrDei",
+                        "build": "chrDomiInspi",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -833,9 +833,9 @@
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "weavPowerSHAir",
                         "gw2Armory": ""
                     }
                 ],
@@ -865,7 +865,7 @@
                     {
                         "name": "Damano",
                         "role": "Main Tank",
-                        "build": "chrSSTank",
+                        "build": "chrTankMinstrel",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -887,9 +887,9 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPowerTurret",
                         "gw2Armory": ""
                     }
                 ],
@@ -897,7 +897,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrSS",
+                        "build": "chrTankMinstrel",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -919,9 +919,9 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "",
+                        "name": " ",
                         "role": "",
-                        "build": "",
+                        "build": "holoPowerTurret",
                         "gw2Armory": ""
                     }
                 ]
@@ -953,15 +953,21 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Vengeful",
-                        "role": "",
-                        "build": "fbDPSPurg",
-                        "gw2Armory": ""
+                        "name": "Bouhteille",
+                        "role": "Boon removal",
+                        "build": "renCondiBH",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "",
-                        "role": "Orb 2",
-                        "build": "",
+                        "name": "Eliphas",
+                        "role": "",
+                        "build": "holoPowerDPSTurret",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": " ",
+                        "role": "",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -969,7 +975,7 @@
                     {
                         "name": "Polga",
                         "role": "orb 3",
-                        "build": "chrDhuum",
+                        "build": "chrIlluInspi",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -979,21 +985,15 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Bouhteille",
-                        "role": "Boon removal",
-                        "build": "renCondiBH",
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                        "name": "Vengeful",
+                        "role": "",
+                        "build": "dhPowerZealRad",
+                        "gw2Armory": ""
                     },
                     {
-                        "name": "Eliphas",
-                        "role": "",
-                        "build": "holoPowerTurret",
-                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
-                    },
-                    {
-                        "name": "",
-                        "role": "",
-                        "build": "",
+                        "name": " ",
+                        "role": "Orb 2",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": ""
                     }
                 ],
