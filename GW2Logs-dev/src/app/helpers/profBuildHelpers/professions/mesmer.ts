@@ -41,15 +41,15 @@ class MinstrelShareBuild extends MesBuild {
         this.icon += 'chronomancer.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Durability');
-        this.consumable.setConsumable('Bowl of Nopalitos Sauté', 'Magnanimous Maintenance Oil');
+        this.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Magnanimous Maintenance Oil');
         this.trinket.setSingleStat('Minstrel\'s');
         this.wep1.setMainHand('Sword', 'Minstrel\'s', 'Superior Sigil of Concentration');
         this.wep1.setOffHand('Shield', 'Minstrel\'s', 'Superior Sigil of Transference');
         this.wep2.setOffHand('Focus', 'Minstrel\'s', 'Superior Sigil of Transference');
-        this.specialization.setSpec('spec1', 'Domination', [
-            'Empowered Illusions',
-            'Blurred Inscriptions',
-            'Mental Anguish'
+        this.specialization.setSpec('spec1', 'Chaos', [
+            'Descent into Madness',
+            'Chaotic Dampening',
+            'Bountiful Disillusionment'
         ]);
         this.specialization.setSpec('spec2', 'Inspiration', [
             'Sympathetic Visage',
@@ -59,8 +59,11 @@ class MinstrelShareBuild extends MesBuild {
         this.specialization.setSpec('spec3', 'Chronomancer', [
             'All\'s Well That Ends Well',
             'Improved Alacrity',
-            'Chronophantasma'
+            'Seize the Moment'
         ]);
+        this.skills.setHealSkill('Well of Eternity');
+        this.skills.setUtilitySkills(['Well of Action', '', 'Signet of Inspiration']);
+        this.skills.setEliteSkill('');
     }
 }
 
@@ -216,19 +219,11 @@ export function mesBuildMaker() {
     // minstrel
     {
         build = new MinstrelShareBuild('chrTankMinstrel', 'Standard');
-        build.specialization.setSpec('spec2', 'Inspiration', [
-            'Sympathetic Visage',
-            'Restorative Illusions',
-            'Illusionary Inspiration'
-        ]);
-        build.skills.setHealSkill('Well of Eternity');
-        build.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
-        build.skills.setEliteSkill('Signet of Humility');
 
         build = new MinstrelShareBuild('chrTankDei', 'Deimos');
-        build.skills.setHealSkill('Mantra of Recovery');
+        build.skills.setHealSkill('Well of Eternity');
         build.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Signet of Inspiration']);
-        build.skills.setEliteSkill('Gravity Well');
+        build.skills.setEliteSkill('Time Warp');
     }
 
     // power

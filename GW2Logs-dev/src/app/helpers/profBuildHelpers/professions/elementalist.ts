@@ -47,7 +47,7 @@ class PowerWeaverBuild extends EleBuild {
             'Persisting Flames'
         ]);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
-        this.skills.setHealSkill('Glyph of Elemental Harmony');
+        this.skills.setHealSkill('Aquatic Stance');
         this.skills.setEliteSkill('Conjure Fiery Greatsword');
     }
 }
