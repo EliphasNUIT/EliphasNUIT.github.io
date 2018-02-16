@@ -37,7 +37,7 @@ export function necroBuildMaker() {
         build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
 
         build = new CondiScourgeBuild('scourgeCondiEpi', 'Epidemic');
-        build.skills.setUtilitySkills(['Epidemic', 'Trail of Anguish', 'Blood Is Power']);
+        build.skills.setUtilitySkills(['Epidemic', 'Summon Shadow Fiend', 'Blood Is Power']);
 
         build = new CondiScourgeBuild('scourgeCondiKite', 'Sabetha - Kite');
         build.skills.setHealSkill('Summon Blood Fiend');

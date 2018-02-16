@@ -46,10 +46,10 @@ class MinstrelShareBuild extends MesBuild {
         this.wep1.setMainHand('Sword', 'Minstrel\'s', 'Superior Sigil of Concentration');
         this.wep1.setOffHand('Shield', 'Minstrel\'s', 'Superior Sigil of Transference');
         this.wep2.setOffHand('Focus', 'Minstrel\'s', 'Superior Sigil of Transference');
-        this.specialization.setSpec('spec1', 'Chaos', [
-            'Descent into Madness',
-            'Chaotic Dampening',
-            'Bountiful Disillusionment'
+        this.specialization.setSpec('spec1', 'Domination', [
+            'Empowered Illusions',
+            'Blurred Inscriptions',
+            'Mental Anguish'
         ]);
         this.specialization.setSpec('spec2', 'Inspiration', [
             'Sympathetic Visage',
