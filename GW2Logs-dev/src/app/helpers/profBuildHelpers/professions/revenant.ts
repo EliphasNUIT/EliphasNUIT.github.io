@@ -98,9 +98,9 @@ class HealRenegadeBuild extends RevenantBuild {
     }
 }
 
-class KiteHeraldBuild extends RevenantBuild {
+class HealHeraldBuild extends RevenantBuild {
     constructor(id, name) {
-        super(id, 'Herald - Kite - ' + name);
+        super(id, 'Herald - Heal - ' + name);
         this.icon += 'herald.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Water');
@@ -157,12 +157,12 @@ export function revBuildMaker() {
 
         build = new HealRenegadeBuild('renHeal', 'Standard');
 
-        build = new KiteHeraldBuild('herDeiVentari', 'Deimos');
+        build = new HealHeraldBuild('herDeiVentari', 'Deimos');
 
         build.wep1.setMainHand('Sword', 'Minstrel\'s', 'Superior Sigil of Transference');
         build.wep1.setOffHand('Shield', 'Magi\'s', 'Superior Sigil of Water');
 
-        build = new KiteHeraldBuild('herCairnVentari', 'Cairn');
+        build = new HealHeraldBuild('herCairnVentari', 'Cairn');
 
         build.wep1.setTwoHand('Hammer', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
 
