@@ -15,7 +15,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrIlluInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -246,7 +246,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrIlluInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -278,7 +278,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrIlluInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -323,7 +323,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrIlluInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -355,7 +355,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrIlluInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -708,7 +708,7 @@
                     {
                         "name": "Damano",
                         "role": "",
-                        "build": "chrDomiInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
@@ -740,7 +740,7 @@
                     {
                         "name": "Polga",
                         "role": "",
-                        "build": "chrDomiInspiFocus",
+                        "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -975,7 +975,7 @@
                     {
                         "name": "Polga",
                         "role": "orb 3",
-                        "build": "chrIlluInspi",
+                        "build": "chrChaosInspi",
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
