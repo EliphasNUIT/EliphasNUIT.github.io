@@ -60,7 +60,7 @@ class SpellbreakerBannerBuild extends WarriorBuild {
         this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
         this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Phalanx Strength']);
-        this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Revenge Counter']);
+        this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Kick', 'Banner of Discipline', 'Banner of Strength']);
         this.skills.setEliteSkill('Rampage');
@@ -80,7 +80,7 @@ class SpellbreakerDPSBuild extends WarriorBuild {
         this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
         this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
-        this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Revenge Counter']);
+        this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         this.skills.setHealSkill('Healing Signet');
         this.skills.setUtilitySkills(['Kick', 'Bull\'s Charge', 'Signet of Might']);
         this.skills.setEliteSkill('Signet of Rage');
@@ -110,6 +110,9 @@ export function warBuildMaker() {
 
         build = new SpellbreakerBannerBuild('spellbrkFury', 'Fury');
         build.skills.setUtilitySkills(['"For Great Justice!"', 'Banner of Discipline', 'Banner of Strength']);
+
+        build = new SpellbreakerBannerBuild('spellbrkBoon', 'Boon Removal');
+        build.skills.setEliteSkill('Winds of Disenchantment');
 
         build = new SpellbreakerDPSBuild('spellbrkDPS', 'GS + Axe/Axe');
 
