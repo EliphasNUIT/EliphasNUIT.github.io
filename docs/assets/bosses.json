@@ -14,7 +14,7 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "",
+                        "role": "Gardien Rouge",
                         "build": "chrChaosInspiFocus",
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
@@ -25,10 +25,10 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Bouhteille",
-                        "role": "",
-                        "build": "dhPowerZealRad",
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                        "name": "Winter",
+                        "role": "gardien rouge",
+                        "build": "bers",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Vengeful",
@@ -39,7 +39,7 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPowerDPS",
+                        "build": "weavPowerSHArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -57,21 +57,21 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Winter",
-                        "role": "gardien rouge",
-                        "build": "bers",
-                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                        "name": "Bouhteille",
+                        "role": "Gardien Rouge",
+                        "build": "renCondi",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": "Eliphas",
-                        "role": "Gardien Rouge",
-                        "build": "holoPower",
+                        "role": "",
+                        "build": "holoPowerDPS",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": " ",
-                        "role": "Gardien Rouge",
-                        "build": "soulbeastCondi",
+                        "role": "",
+                        "build": "holoPowerDPS",
                         "gw2Armory": ""
                     }
                 ]
@@ -104,7 +104,7 @@
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     },
                     {
@@ -412,13 +412,13 @@
                     {
                         "name": "Winter",
                         "role": "orb pusher",
-                        "build": "bers",
+                        "build": "spellbrk",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerVirtRad",
+                        "build": "dhPowerVirtRadSig",
                         "gw2Armory": ""
                     },
                     {
@@ -442,16 +442,16 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": "Bouhteille",
-                        "role": "",
-                        "build": "weavPowerKC",
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
-                    },
-                    {
                         "name": "Eliphas",
                         "role": "",
                         "build": "weavPowerKC",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "dhPowerVirtRadSig",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": " ",
@@ -495,13 +495,13 @@
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     },
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPowerOrbital",
+                        "build": "weavPowerSHArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -527,13 +527,13 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "holoPowerOrbital",
+                        "build": "holoPowerOrbitalDPS",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": " ",
                         "role": "",
-                        "build": "weavPowerSHArc",
+                        "build": "holoPowerOrbitalDPS",
                         "gw2Armory": ""
                     }
                 ]
@@ -649,7 +649,7 @@
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "fbDPSPurg",
                         "gw2Armory": ""
                     },
                     {
@@ -726,7 +726,7 @@
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     },
                     {
@@ -752,13 +752,13 @@
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "weavPowerBHArc",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "holoPowerDPSCC",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
@@ -797,7 +797,7 @@
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "fbDPSPurg",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     },
                     {
@@ -829,7 +829,7 @@
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "weavPowerSHAir",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
@@ -908,8 +908,8 @@
                     },
                     {
                         "name": "Bouhteille",
-                        "role": "",
-                        "build": "renCondi",
+                        "role": "Epi Bouncer",
+                        "build": "scourgeCondiPortal",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
@@ -947,14 +947,14 @@
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Winter",
-                        "role": "orb 1",
-                        "build": "bers",
-                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidSab",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
-                        "role": "Boon removal",
+                        "role": "Emergency Boon removal",
                         "build": "renCondiBH",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
@@ -963,12 +963,6 @@
                         "role": "",
                         "build": "holoPowerDPSTurret",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
-                    },
-                    {
-                        "name": " ",
-                        "role": "",
-                        "build": "weavPowerBHArc",
-                        "gw2Armory": ""
                     }
                 ],
                 "t2": [
@@ -979,15 +973,21 @@
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
-                        "name": "Arkness",
-                        "role": "",
-                        "build": "druidSab",
-                        "gw2Armory": ""
+                        "name": "Winter",
+                        "role": "orb 1 & Boon Removal",
+                        "build": "spellbrkBoon",
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "dhPowerZealRadSig",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": " ",
+                        "role": "",
+                        "build": "weavPowerBHArc",
                         "gw2Armory": ""
                     },
                     {
