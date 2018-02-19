@@ -128,6 +128,14 @@ export function engiBuildMaker() {
 
         build = new PowerHolosmithRifleBuild('holoPowerOrbital', 'Orbital');
         build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
+
+        build = new PowerHolosmithRifleBuild('holoPowerOrbitalDPS', 'Full DPS / Orbital');
+        build.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+        build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
     }
 
      // Power - Sword
@@ -165,7 +173,13 @@ export function engiBuildMaker() {
 
         build = new PowerHolosmithSwordBuild('holoPowerOrbitalSw', 'Orbital');
         build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
-
+        build = new PowerHolosmithSwordBuild('holoPowerOrbitalDPSSw', 'Full DPS / Orbital');
+        build.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+        build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
     }
 }
 
