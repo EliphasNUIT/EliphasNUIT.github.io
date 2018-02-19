@@ -54,8 +54,24 @@ class PowerHolosmithBuild extends EngiBuild {
         ]);
 
         this.skills.setHealSkill('Coolant Blast');
-        this.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
         this.skills.setEliteSkill('Prime Light Beam');
+    }
+}
+
+class PowerHolosmithRifleBuild extends PowerHolosmithBuild {
+    constructor(id, name) {
+        super(id, 'Rifle - ' + name);
+        this.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
+        this.wep1.setTwoHand('Rifle', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
+    }
+}
+
+class PowerHolosmithSwordBuild extends PowerHolosmithBuild {
+    constructor(id, name) {
+        super(id, 'Sword - ' + name);
+        this.skills.setUtilitySkills(['Rifle Turret', 'Grenade Kit', 'Laser Disk']);
+        this.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Pistol', 'Berserker\'s', 'Superior Sigil of Air');
     }
 }
 
@@ -63,7 +79,7 @@ class PowerHolosmithBuild extends EngiBuild {
 export function engiBuildMaker() {
     let build: ProfBuild = null;
     // Condi
-    {
+    /*{
         build = new CondiEngiBuild('engiCondi', 'Standard');
 
         build = new CondiEngiBuild('engiCondiMob', 'Mobility');
@@ -75,23 +91,60 @@ export function engiBuildMaker() {
         build = new CondiEngiBuild('engiCondiSB', 'Stun Break');
         build.specialization.setSpec('spec3', 'Tools', ['Reactive Lenses', 'Streamlined Kits', 'Kinetic Battery']);
 
+    }*/
+
+    // Power - Rifle
+    {
+        build = new PowerHolosmithRifleBuild('holoPower', 'Standard');
+
+        build = new PowerHolosmithRifleBuild('holoPowerCC', 'CC');
+        build.skills.setHealSkill('A.E.D.');
+
+        build = new PowerHolosmithRifleBuild('holoPowerDPS', 'Full DPS');
+        build.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+
+        build = new PowerHolosmithRifleBuild('holoPowerDPSCC', 'Full DPS / CC');
+        build.skills.setHealSkill('A.E.D.');
+        build.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+
+        build = new PowerHolosmithRifleBuild('holoPowerTurret', 'Turret');
+        build.skills.setHealSkill('Healing Turret');
+
+        build = new PowerHolosmithRifleBuild('holoPowerDPSTurret', 'Full DPS / Turret');
+        build.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+        build.skills.setHealSkill('Healing Turret');
+
+        build = new PowerHolosmithRifleBuild('holoPowerOrbital', 'Orbital');
+        build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
     }
 
-    // Power
-    {
-        build = new PowerHolosmithBuild('holoPower', 'Standard');
+     // Power - Sword
+     {
+        build = new PowerHolosmithSwordBuild('holoPowerSw', 'Standard');
 
-        build = new PowerHolosmithBuild('holoPowerCC', 'CC');
+        build = new PowerHolosmithSwordBuild('holoPowerCCSw', 'CC');
         build.skills.setHealSkill('A.E.D.');
 
-        build = new PowerHolosmithBuild('holoPowerDPS', 'Full DPS');
+        build = new PowerHolosmithSwordBuild('holoPowerDPSSw', 'Full DPS');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
             'Thermal Vision',
             'Modified Ammunition'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerDPSCC', 'Full DPS - CC');
+        build = new PowerHolosmithSwordBuild('holoPowerDPSCCSw', 'Full DPS / CC');
         build.skills.setHealSkill('A.E.D.');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
@@ -99,10 +152,10 @@ export function engiBuildMaker() {
             'Modified Ammunition'
         ]);
 
-        build = new PowerHolosmithBuild('holoPowerTurret', 'Turret');
+        build = new PowerHolosmithSwordBuild('holoPowerTurretSw', 'Turret');
         build.skills.setHealSkill('Healing Turret');
 
-        build = new PowerHolosmithBuild('holoPowerDPSTurret', 'Full DPS - Turret');
+        build = new PowerHolosmithSwordBuild('holoPowerDPSTurretSw', 'Full DPS / Turret');
         build.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
             'Thermal Vision',
@@ -110,23 +163,9 @@ export function engiBuildMaker() {
         ]);
         build.skills.setHealSkill('Healing Turret');
 
-        build = new PowerHolosmithBuild('holoPowerStormTurret', 'Storm - Turret');
-        build.skills.setHealSkill('Healing Turret');
-        build.specialization.setSpec('spec3', 'Holosmith', [
-            'Solar Focusing Lens',
-            'Crystal Configuration: Storm',
-            'Photonic Blasting Module'
-        ]);
-
-        build = new PowerHolosmithBuild('holoPowerOrbital', 'Orbital');
+        build = new PowerHolosmithSwordBuild('holoPowerOrbitalSw', 'Orbital');
         build.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
 
-        build = new PowerHolosmithBuild('holoPowerStorm', 'Storm');
-        build.specialization.setSpec('spec3', 'Holosmith', [
-            'Solar Focusing Lens',
-            'Crystal Configuration: Storm',
-            'Photonic Blasting Module'
-        ]);
     }
 }
 
