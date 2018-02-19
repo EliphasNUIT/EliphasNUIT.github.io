@@ -103,8 +103,24 @@ export function guardBuildMaker() {
         build = new PowerDHBuild('dhPowerZealRadFury', 'Zeal/Radiance - Fury');
         build.skills.setEliteSkill('"Feel My Wrath!"');
 
+        build = new PowerDHBuild('dhPowerZealRadSig', 'Zeal/Radiance - Signet Share');
+        build.specialization.setSpec('spec2', 'Radiance', [
+            'Healer\'s Retribution',
+            'Retribution',
+            'Perfect Inscriptions'
+        ]);
+
         build = new PowerDHBuild('dhPowerVirtRad', 'Virtues/Radiance');
         build.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
+
+        build = new PowerDHBuild('dhPowerVirtRadSig', 'Virtues/Radiance - Signet Share');
+        build.specialization.setSpec('spec2', 'Radiance', [
+            'Healer\'s Retribution',
+            'Retribution',
+            'Perfect Inscriptions'
+        ]);
+        build.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
+
 
     }
 
