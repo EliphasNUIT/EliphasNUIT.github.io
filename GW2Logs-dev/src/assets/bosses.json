@@ -258,7 +258,7 @@
                     {
                         "name": "Winter",
                         "role": "",
-                        "build": "bersCC",
+                        "build": "warBan",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
@@ -412,7 +412,7 @@
                     {
                         "name": "Winter",
                         "role": "orb pusher",
-                        "build": "spellbrk",
+                        "build": "warBan",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
@@ -720,7 +720,7 @@
                     {
                         "name": "Winter",
                         "role": "",
-                        "build": "bersCC",
+                        "build": "warBan",
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
