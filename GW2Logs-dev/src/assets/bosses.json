@@ -33,7 +33,7 @@
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPowerZealRad",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     },
                     {
@@ -262,15 +262,15 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Vengeful",
-                        "role": "Champignon 3",
-                        "build": "dhPowerZealRad",
+                        "name": " ",
+                        "role": "champignon 2",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     },
                     {
                         "name": " ",
-                        "role": "champignon 4",
-                        "build": "dhPowerZealRad",
+                        "role": "Champignon 4",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": ""
                     }
                 ],
@@ -290,20 +290,20 @@
                     {
                         "name": "Bouhteille",
                         "role": "Champignon 1",
-                        "build": "dhPowerZealRad",
+                        "build": "dhPowerZealRadSig",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Vengeful",
+                        "role": "Champignon 3",
+                        "build": "dhPowerZealRadSig",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Eliphas",
                         "role": "",
                         "build": "weavPowerSHArc",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
-                    },
-                    {
-                        "name": " ",
-                        "role": "Champignon 2",
-                        "build": "dhPowerZealRad",
-                        "gw2Armory": ""
                     }
                 ]
             }

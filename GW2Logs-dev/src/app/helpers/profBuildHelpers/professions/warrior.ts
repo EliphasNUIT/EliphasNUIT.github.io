@@ -50,7 +50,7 @@ class PowerWarriorBuild extends WarriorBuild {
         super(id, name);
         this.armor.setStats(['Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s']);
         this.armor.setSingleRune('Superior Rune of the Scholar');
-        this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
+        this.consumable.setConsumable('Bowl of Curry Butternut Squash Soup', 'Superior Sharpening Stone');
         this.trinket.setStats(['Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Assassin\'s']);
         this.wep1.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
         this.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');

@@ -106,6 +106,7 @@ export const items = {
         'Bowl of Fire Meat Chili': 12484,
         'Bowl of Orrian Truffle and Meat Stew': 12488,
         'Toxic Maintenance Oil': 48916,
-        'Bowl of Refugee\'s Beet Soup': 41562
+        'Bowl of Refugee\'s Beet Soup': 41562,
+        'Bowl of Curry Butternut Squash Soup': 12486
     }
 };
