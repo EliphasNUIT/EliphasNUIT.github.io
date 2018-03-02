@@ -9,7 +9,7 @@ class NecroBuild extends ProfBuild {
 
 class CondiScourgeBuild extends NecroBuild {
     constructor(id, name) {
-        super(id, 'Scourge - Condition - ' + name);
+        super(id, 'Scourge - Condition' + name);
         this.icon += 'scourge.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -25,13 +25,20 @@ class CondiScourgeBuild extends NecroBuild {
         this.specialization.setSpec('spec2', 'Soul Reaping', ['Unyielding Blast', 'Vital Persistence', 'Dhuumfire']);
         this.specialization.setSpec('spec3', 'Scourge', ['Fell Beacon', 'Sadistic Searing', 'Demonic Lore']);
         this.skills.setHealSkill('Sand Flare');
+        this.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
         this.skills.setEliteSkill('Plaguelands');
+
+        this.specialization.addVariant('Kite', 'Curses', [
+            'Plague Sending',
+            'Master of Corruption',
+            'Parasitic Contagion'
+        ]);
     }
 }
 
 class CondiReaperBuild extends NecroBuild {
     constructor(id, name) {
-        super(id, 'Reaper - Condition - ' + name);
+        super(id, 'Reaper - Condition' + name);
         this.icon += 'reaper.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -48,6 +55,7 @@ class CondiReaperBuild extends NecroBuild {
         this.specialization.setSpec('spec2', 'Soul Reaping', ['Unyielding Blast', 'Vital Persistence', 'Dhuumfire']);
         this.specialization.setSpec('spec3', 'Reaper', ['Chilling Nova', 'Decimate Defenses', 'Deathly Chill']);
         this.skills.setHealSkill('Summon Blood Fiend');
+        this.skills.setUtilitySkills(['Summon Shadow Fiend', '', 'Blood Is Power']);
         this.skills.setEliteSkill('Plaguelands');
     }
 }
@@ -56,27 +64,12 @@ export function necroBuildMaker() {
     let build: ProfBuild = null;
     // Scourge - Condi
     {
-        build = new CondiScourgeBuild('scourgeCondi', 'Standard');
-        build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
-
-        build = new CondiScourgeBuild('scourgeCondiEpi', 'Epidemic');
-        build.skills.setUtilitySkills(['Epidemic', 'Summon Shadow Fiend', 'Blood Is Power']);
-
-        build = new CondiScourgeBuild('scourgeCondiKite', 'Sabetha - Kite');
-        build.skills.setHealSkill('Summon Blood Fiend');
-        build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
-
-        build = new CondiScourgeBuild('scourgeCondiPortal', 'Portal');
-        build.skills.setUtilitySkills(['Blood Is Power', 'Sand Swell', 'Epidemic']);
+        build = new CondiScourgeBuild('scourgeCondi', '');
     }
 
     // Reaper - Condi
     {
-        build = new CondiReaperBuild('reaperCondi', 'Standard');
-        build.skills.setUtilitySkills(['Summon Shadow Fiend', 'Summon Bone Fiend', 'Blood Is Power']);
-
-        build = new CondiReaperBuild('reaperCondiEpi', 'Epidemic');
-        build.skills.setUtilitySkills(['Epidemic', 'Summon Shadow Fiend', 'Blood Is Power']);
+        build = new CondiReaperBuild('reaperCondi', '');
     }
 }
 

@@ -1,5 +1,5 @@
 <div *ngIf='builds'>
-  <div class='uk-flex uk-flex-column '>
+  <div class='uk-flex uk-flex-column uk-margin-large-top uk-margin-large-bottom'>
     <div class='uk-flex uk-flex-column '>
       <div *ngIf="selectedBuild" (click)="onSelect(null)" [class.selected]="true" [ngClass]='getClass()'>
         <span class='my-text-large uk-text-bold'>{{selectedBuild.name}}</span>

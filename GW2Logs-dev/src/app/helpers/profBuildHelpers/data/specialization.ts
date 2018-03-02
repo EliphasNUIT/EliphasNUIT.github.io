@@ -2,6 +2,8 @@ export class Specialization {
     spec1: {name: number, traits: number[]};
     spec2: {name: number, traits: number[]};
     spec3: {name: number, traits: number[]};
+    variants: Map<string, {speName: number, traits: number[]}>;
+    _constraints: Set<number>;
     profession: any;
 
     constructor(profession) {
@@ -9,9 +11,14 @@ export class Specialization {
         this.spec1 = { name: -1, traits: [-1, -1, -1] };
         this.spec2 = { name: -1, traits: [-1, -1, -1] };
         this.spec3 = { name: -1, traits: [-1, -1, -1] };
+        this.variants = new Map();
+        this._constraints = new Set();
     }
 
     setSpec(specToSet: string, specName: string, traitArray: string[]) {
+        if (specToSet === '') {
+            return;
+        }
         if (this.profession.specializations[specName]) {
             this[specToSet].name = this.profession.specializations[specName];
             for (let i = 0; i < 3; i++) {
@@ -31,14 +38,50 @@ export class Specialization {
         }
     }
 
+    addVariant(name: string, specName: string, traitArray: string[]) {
+        const vari = {
+            speName: -1,
+            traits: [-1, -1, -1]
+        };
+        if (this.profession.specializations[specName]) {
+            vari.speName = this.profession.specializations[specName];
+            for (let i = 0; i < 3; i++) {
+                const trait = traitArray[i];
+                if (this.profession.traits[trait]) {
+                    if (vari.speName === this.profession.traits[trait].spe) {
+                        vari.traits[i] = this.profession.traits[trait].id;
+                    } else {
+                        console.warn('Warning: ' + trait + ' is not a ' + specName + ' trait');
+                    }
+                } else if (trait.length > 0) {
+                    console.warn('Warning: ' + trait + ' is not a ' + this.profession.name + ' trait');
+                }
+            }
+        } else if (specName.length > 0) {
+            console.warn('Warning: ' + specName + ' is not a ' + this.profession.name + ' specialization');
+        }
+        this.variants.set(name, vari);
+    }
+
     getDiv(mobile: boolean): string {
+        return this._getDiv(mobile) + this._getVarianteDiv(mobile);
+    }
+
+    _getDiv(mobile: boolean): string {
         const specs = [this.spec1, this.spec2, this.spec3];
-        let divToAdd = '<div data-armory-embed="specializations" ';
+        let title = '';
+        if (this.variants.size > 0) {
+            title = '<div uk-text-center>Main</div>';
+        }
+        let divToAdd = title + '<div data-armory-embed="specializations" ';
         let speIDS = 'data-armory-ids="';
         let totalTraits = '';
         for (let i = 0; i < 3; i++) {
             const specialization = specs[i];
             const speID = specialization.name;
+            if (speID === -1 ) {
+                continue;
+            }
             speIDS += speID + ',';
             let traits = 'data-armory-' + speID + '-traits="';
             for (let j = 0; j < 3; j++) {
@@ -57,6 +100,37 @@ export class Specialization {
             divToAdd += 'data-armory-size="70" ';
         }
         divToAdd += '></div>';
+        return divToAdd;
+    }
+
+    _getVarianteDiv(mobile: boolean): string {
+        let divToAdd = '';
+        this.variants.forEach(function(vari, name, map){
+            const title = '<div uk-text-center>' + name + '</div>';
+            divToAdd += title + '<div data-armory-embed="specializations" ';
+            let speIDS = 'data-armory-ids="';
+            let totalTraits = '';
+            {
+                const speID = vari.speName;
+                speIDS += speID + ',';
+                let traits = 'data-armory-' + speID + '-traits="';
+                for (let i = 0; i < 3; i++) {
+                    const traitID = vari.traits[i];
+                    traits += traitID + ',';
+                }
+                traits = traits.slice(0, -1) + '" ';
+                totalTraits += traits;
+            }
+            speIDS = speIDS.slice(0, -1) + '" ';
+            divToAdd += speIDS;
+            divToAdd += totalTraits;
+            if (mobile) {
+                divToAdd += 'data-armory-size="130" ';
+            } else {
+                divToAdd += 'data-armory-size="70" ';
+            }
+            divToAdd += '></div>';
+        });
         return divToAdd;
     }
 }
