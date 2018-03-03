@@ -41,6 +41,18 @@ export class ProfBuild {
     profession: any;
     icon = 'assets/profIcons/';
 
+    overrides: Map<string, {
+        skills: Skills,
+        profSkills: ProfessionSkills,
+        specialization: Specialization,
+        wep1: Weapons,
+        wep2: Weapons,
+        armor: Armor,
+        trinket: Trinket,
+        consumable: Consumable,
+        open: Boolean
+    }>;
+
     constructor(id: string, profession: any, name: string) {
         this.id = id;
         this.name = name;
@@ -53,62 +65,116 @@ export class ProfBuild {
         this.armor = new Armor(profession.armor);
         this.trinket = new Trinket();
         this.consumable = new Consumable();
+        this.overrides = new Map();
         buildDatabase.set(id, this);
     }
 
-    getSpecializations(): string {
+    getSpecializations(override: string = null): string {
+        if (this.overrides.has(override) && this.overrides.get(override).specialization) {
+            return this.overrides.get(override).specialization.getDiv(mobile);
+        }
         return this.specialization.getDiv(mobile);
     }
 
-    getPets(): string {
+    getPets(override: string = null): string {
+        if (this.overrides.has(override) && this.overrides.get(override).skills) {
+            return this.overrides.get(override).skills.getPDiv();
+        }
         if (this.skills === null) {
             return '';
         }
         return this.skills.getPDiv();
     }
 
-    getSkills(): {heal: string, utilities: string, elite: string} {
+    getSkills(override: string = null): { heal: string, utilities: string, elite: string } {
+        if (this.overrides.has(override) && this.overrides.get(override).skills) {
+            return this.overrides.get(override).skills.getSDiv(mobile);
+        }
         if (this.skills === null) {
             return null;
         }
         return this.skills.getSDiv(mobile);
     }
 
-    getProfessionSkills(): string {
+    getProfessionSkills(override: string = null): string {
+        if (this.overrides.has(override) && this.overrides.get(override).profSkills) {
+            return this.overrides.get(override).profSkills.getSDiv(mobile);
+        }
         if (this.profSkills === null) {
             return '';
         }
         return this.profSkills.getSDiv(mobile);
     }
 
-    getTrinket(): {BA: string, AR: string} {
+    getTrinket(override: string = null): { BA: string, AR: string } {
+        if (this.overrides.has(override) && this.overrides.get(override).trinket) {
+            return this.overrides.get(override).trinket.getDiv(mobile);
+        }
         return this.trinket.getDiv(mobile);
     }
 
-    getArmor(): {armor: string, rune: string} {
+    getArmor(override: string = null): { armor: string, rune: string } {
+        if (this.overrides.has(override) && this.overrides.get(override).armor) {
+            return this.overrides.get(override).armor.getDiv(mobile);
+        }
         return this.armor.getDiv(mobile);
     }
 
-    getWeapon1(): {wep: string, sig: string} {
+    getWeapon1(override: string = null): { wep: string, sig: string } {
+        if (this.overrides.has(override) && this.overrides.get(override).wep1) {
+            return this.overrides.get(override).wep1.getDiv(mobile);
+        }
         if (this.wep1 === null) {
             return null;
         }
         return this.wep1.getDiv(mobile);
     }
 
-    getWeapon2(): {wep: string, sig: string} {
+    getWeapon2(override: string = null): { wep: string, sig: string } {
+        if (this.overrides.has(override) && this.overrides.get(override).wep2) {
+            return this.overrides.get(override).wep2.getDiv(mobile);
+        }
         if (this.wep2 === null) {
             return null;
         }
         return this.wep2.getDiv(mobile);
     }
 
-    getConsumable(): string {
+    getConsumable(override: string = null): string {
+        if (this.overrides.has(override) && this.overrides.get(override).consumable) {
+            return this.overrides.get(override).consumable.getDiv(mobile);
+        }
         return this.consumable.getDiv(mobile);
     }
 
     getIcon(): string {
         return this.icon;
+    }
+
+    addOverride(name: string, open: boolean = true): {
+        skills: Skills,
+        profSkills: ProfessionSkills,
+        specialization: Specialization,
+        wep1: Weapons,
+        wep2: Weapons,
+        armor: Armor,
+        trinket: Trinket,
+        consumable: Consumable,
+        open: Boolean
+    } {
+        const res = {
+            skills: null,
+            profSkills: null,
+            specialization: null,
+            wep1: null,
+            wep2: null,
+            armor: null,
+            trinket: null,
+            consumable: null,
+            open: open
+        };
+        this.overrides.set(name, res);
+        return res;
     }
 }
 

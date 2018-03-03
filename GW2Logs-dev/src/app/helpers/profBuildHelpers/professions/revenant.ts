@@ -39,7 +39,7 @@ class CondiRenegadeBHBuild extends RevenantBuild {
         this.trinket.setSingleStat('Viper\'s');
         this.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
         this.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
-        this.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy')
+        this.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy');
         this.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Pulsating Pestilence']);
         this.specialization.setSpec('spec2', 'Devastation', [
             'Ferocious Strikes',
