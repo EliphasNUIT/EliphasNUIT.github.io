@@ -158,11 +158,11 @@ export function warBuildMaker() {
         variant.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
         variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
         variant.wep1 = new Weapons(build.profession);
-        build.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
-        build.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
+        variant.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
+        variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
         variant.wep2 = new Weapons(build.profession);
-        build.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
-        build.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
+        variant.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
+        variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
     }
 }
 
