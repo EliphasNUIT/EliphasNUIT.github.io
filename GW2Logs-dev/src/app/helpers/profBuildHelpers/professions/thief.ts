@@ -1,5 +1,6 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
+import { Skills } from '../data/skills';
 
 class ThiefBuild extends ProfBuild {
     constructor(id, name) {
@@ -9,7 +10,7 @@ class ThiefBuild extends ProfBuild {
 
 class PowerDaredevilBuild extends ThiefBuild {
     constructor(id, name) {
-        super(id, 'Daredevil - Staff Power - ' + name);
+        super(id, 'Daredevil - Power' + name);
         this.icon += 'daredevil.png';
         this.wep2 = null;
         this.armor.setSingleStat('Berserker\'s');
@@ -29,7 +30,7 @@ class PowerDaredevilBuild extends ThiefBuild {
 
 class PowerDeadeyeBuild extends ThiefBuild {
     constructor(id, name) {
-        super(id, 'Deadeye - Rifle Power - ' + name);
+        super(id, 'Deadeye - Power' + name);
         this.icon += 'deadeye.png';
         this.wep2 = null;
         this.armor.setSingleStat('Berserker\'s');
@@ -48,7 +49,7 @@ class PowerDeadeyeBuild extends ThiefBuild {
 
 class CondiDaredevilBuild extends ThiefBuild {
     constructor(id, name) {
-        super(id, 'Daredevil - Condition - ' + name);
+        super(id, 'Daredevil - Condition' + name);
         this.icon += 'daredevil.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Krait');
@@ -73,44 +74,72 @@ export function thiefBuildMaker() {
     let build: ProfBuild = null;
     // Power
     {
-        build = new PowerDaredevilBuild('drdPower', 'Standard');
+        build = new PowerDaredevilBuild('drdPower', '');
 
-        build = new PowerDaredevilBuild('drdPowerMob', 'Mobility');
-        build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
+        let variant = build.addOverride('Mobility', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of Malice');
+        variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
+        variant.skills.setEliteSkill('Basilisk Venom');
 
-        build = new PowerDaredevilBuild('drdPowerFastCC', 'Fast CC');
-        build.skills.setEliteSkill('Impact Strike');
+        variant = build.addOverride('FastCC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of Malice');
+        variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Spider Venom', 'Fist Flurry']);
+        variant.skills.setEliteSkill('Impact Strike');
 
-        build = new PowerDaredevilBuild('drdPowerNoCC', 'No CC');
-        build.skills.setEliteSkill('Thieves Guild');
+        variant = build.addOverride('NoCC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of Malice');
+        variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Spider Venom', 'Fist Flurry']);
+        variant.skills.setEliteSkill('Thieves Guild');
 
-        build = new PowerDeadeyeBuild('deadeyePower', 'Standard');
+        build = new PowerDeadeyeBuild('deadeyePower', '');
+        variant = build.addOverride('Mobility', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of Malice');
+        variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
+        variant.skills.setEliteSkill('Basilisk Venom');
 
-        build = new PowerDeadeyeBuild('deadeyePowerMob', 'Mobility');
-        build.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Shadow Flare']);
-
-        build = new PowerDeadeyeBuild('deadeyePowerNoCC', 'No CC');
-        build.skills.setEliteSkill('Thieves Guild');
+        variant = build.addOverride('NoCC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of Malice');
+        variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
+        variant.skills.setEliteSkill('Thieves Guild');
     }
 
     // Condi
     {
-        build = new CondiDaredevilBuild('drdCondi', 'Standard');
+        build = new CondiDaredevilBuild('drdCondi', '');
+        let variant = build.addOverride('Mobility', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Channeled Vigor');
+        variant.skills.setUtilitySkills(['Spider Venom', 'Shadowstep', 'Caltrops']);
+        variant.skills.setEliteSkill('Basilisk Venom');
 
-        build = new CondiDaredevilBuild('drdCondiMob', 'Mobility');
-        build.skills.setUtilitySkills(['Spider Venom', 'Shadowstep', 'Caltrops']);
+        variant = build.addOverride('Add', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Channeled Vigor');
+        variant.skills.setUtilitySkills(['Spider Venom', 'Needle Trap', 'Caltrops']);
+        variant.skills.setEliteSkill('Basilisk Venom');
 
-        build = new CondiDaredevilBuild('drdCondiAdd', 'Add');
-        build.skills.setUtilitySkills(['Spider Venom', 'Needle Trap', 'Caltrops']);
+        variant = build.addOverride('Mobile', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Channeled Vigor');
+        variant.skills.setUtilitySkills(['Spider Venom', 'Skale Venom', 'Caltrops']);
+        variant.skills.setEliteSkill('Basilisk Venom');
 
-        build = new CondiDaredevilBuild('drdCondiMobTar', 'Mobile Target');
-        build.skills.setUtilitySkills(['Spider Venom', 'Skale Venom', 'Caltrops']);
+        variant = build.addOverride('FastCC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Channeled Vigor');
+        variant.skills.setUtilitySkills(['Spider Venom', 'Devourer Venom', 'Caltrops']);
+        variant.skills.setEliteSkill('Impact Strike');
 
-        build = new CondiDaredevilBuild('drdCondiFastCC', 'Fast CC');
-        build.skills.setEliteSkill('Impact Strike');
-
-        build = new CondiDaredevilBuild('drdCondiNoCC', 'No CC');
-        build.skills.setEliteSkill('Thieves Guild');
+        variant = build.addOverride('FastCC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Channeled Vigor');
+        variant.skills.setUtilitySkills(['Spider Venom', 'Devourer Venom', 'Caltrops']);
+        variant.skills.setEliteSkill('Thieves Guild');
     }
 }
 
