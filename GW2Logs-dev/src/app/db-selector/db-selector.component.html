@@ -17,11 +17,23 @@
 
     </div>
     <div class="my-scrollable-panel uk-margin-top">
+      <div class="uk-flex uk-flex-row">
+        <div class="build-selector">
+          <div *ngFor="let build of (builds | dbSearch: filter)" (click)="onSelect(build)" [class.selected]="selectedBuild && build.id === selectedBuild.id"
+            [ngClass]='getClass()'>
+            <span class='my-text-large uk-text-bold'>{{build.name}}</span>
+          </div>
+        </div>
 
-      <div *ngFor="let build of (builds | dbSearch: filter)" (click)="onSelect(build)" [class.selected]="selectedBuild && build.id === selectedBuild.id"
-        [ngClass]='getClass()'>
-        <span class='my-text-large uk-text-bold'>{{build.name}}</span>
+        <div *ngIf="selectedBuild" class='variant-selector uk-margin-small-left'>
+          <div *ngFor="let override of selectedBuild.overrides" (click)="onSelectOverride(override)" [class.selected]="selectedOverride === override"
+            [ngClass]='getClass()'>
+            <span class='my-text-large uk-text-bold'>{{override}}</span>
+          </div>
+        </div>
+
       </div>
+
 
     </div>
   </div>

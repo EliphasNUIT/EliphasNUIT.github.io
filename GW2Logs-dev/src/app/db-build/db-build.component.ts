@@ -4,7 +4,7 @@ import { buildDatabase, ProfBuild } from '../helpers/profBuild';
 
 class ProfessionHandler {
   name: string;
-  builds: { id: string, name: string }[] = [];
+  builds: { id: string, name: string, overrides: string[] }[] = [];
 
   constructor(name: string) {
     this.name = name;
@@ -22,7 +22,7 @@ class ProfessionHandler {
   }
 
   add(build: ProfBuild) {
-    this.builds.push({ name: build.name, id: build.id });
+    this.builds.push({ name: build.name, id: build.id, overrides: build.getOverrides() });
   }
 
   validate() {
