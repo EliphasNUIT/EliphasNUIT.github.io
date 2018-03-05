@@ -11,12 +11,14 @@ export class Character  {
     gw2Armory: string;
     build: ProfBuild;
     role: string;
+    override: any;
 
-    constructor(params: {name: string, build: string, gw2Armory: string, role: string}) {
+    constructor(params: {name: string, build: string, gw2Armory: string, role: string, override: any}) {
         this.name = params.name;
         this.build = buildDatabase.get(params.build);
         this.gw2Armory = params.gw2Armory;
         this.role = params.role;
+        this.override = params.override;
     }
 
     getIcon(): string {
@@ -46,5 +48,9 @@ export class Character  {
 
     getRole(): string {
         return this.role;
+    }
+
+    getOverride(): any {
+        return this.override;
     }
 }
