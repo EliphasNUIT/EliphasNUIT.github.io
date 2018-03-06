@@ -148,7 +148,7 @@ export function mesBuildMaker() {
     let build: ProfBuild = null;
     // minstrel
     {
-        build = new MinstrelShareBuild('chrTankMinstrel', '');
+        build = new MinstrelShareBuild('chrMinstrel', '');
     }
 
     // power

@@ -52,7 +52,7 @@ class PowerWeaverBuild extends EleBuild {
         ]);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
         this.skills.setHealSkill('Aquatic Stance');
-        this.skills.setUtilitySkills(['', 'Glyph of Storms', 'Primordial Stance']);
+        this.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
         this.skills.setEliteSkill('Conjure Fiery Greatsword');
     }
 }
@@ -107,6 +107,12 @@ export function eleBuildMaker() {
         ]);
         variant.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Tempest Defense', 'Bolt to the Heart']);
         variant.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
+
+        variant = build.addOverride('Keep Construct');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Aquatic Stance');
+        variant.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
+        variant.skills.setEliteSkill('Weave Self');
     }
 
     // Special

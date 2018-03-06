@@ -18,7 +18,16 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
 
   @Input() build: ProfBuild = null;
   @Input() mainOverride: string = null;
-  @Input() specializedOverride: any = null;
+  @Input() specializedOverride: {
+    armor: string,
+    consumable: string,
+    trinket: string,
+    wep1: string,
+    wep2: string,
+    specialization: string,
+    profSkills: string,
+    skills: string
+} = null;
   oldName = '';
   cacheArray = ['traits', 'profSkills', 'skills', 'pets', 'armor', 'trinket', 'wep1', 'wep2', 'consum'];
   currentCache: any;
@@ -82,7 +91,7 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
 
   traits(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getSpecializations(this.mainOverride ||
-      (this.specializedOverride && this.specializedOverride.traits)));
+      (this.specializedOverride && this.specializedOverride.specialization)));
   }
   skills(): SafeHtml {
     let res = '';

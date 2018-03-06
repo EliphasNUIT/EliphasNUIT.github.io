@@ -167,7 +167,7 @@ export function rangerBuildMaker() {
         variant.wep2 = new Weapons(build.profession);
         variant.wep2.setTwoHand('Longbow', 'Harrier\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
         ////
-        build = new MinstrelDruidBuild('druidCairnKite', '');
+        build = new MinstrelDruidBuild('druidKite', '');
         variant = build.addOverride('Black Kite');
         variant.wep2 = new Weapons(build.profession);
         variant.wep2.setTwoHand('Greatsword', 'Minstrel\'s', 'Superior Sigil of Transference', 'Superior Sigil of Agility');

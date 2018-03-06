@@ -101,7 +101,7 @@ export function guardBuildMaker() {
     let build: ProfBuild = null;
     // Power
     {
-        build = new PowerDHBuild('dhPowerZealRad', '');
+        build = new PowerDHBuild('dhPower', '');
 
         let variant = build.addOverride('Virtue');
         variant.specialization = new Specialization(build.profession);

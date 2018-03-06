@@ -6,14 +6,34 @@ makeAllBuild();
 
 let warningLimit = 0;
 
-export class Character  {
+export class Character {
     name: string;
     gw2Armory: string;
     build: ProfBuild;
     role: string;
-    override: any;
+    override: {
+        armor: string,
+        consumable: string,
+        trinket: string,
+        wep1: string,
+        wep2: string,
+        specialization: string,
+        profSkills: string,
+        skills: string
+    };
 
-    constructor(params: {name: string, build: string, gw2Armory: string, role: string, override: any}) {
+    constructor(params: {
+        name: string, build: string, gw2Armory: string, role: string, override: {
+            armor: string,
+            consumable: string,
+            trinket: string,
+            wep1: string,
+            wep2: string,
+            specialization: string,
+            profSkills: string,
+            skills: string
+        }
+    }) {
         this.name = params.name;
         this.build = buildDatabase.get(params.build);
         this.gw2Armory = params.gw2Armory;
@@ -50,7 +70,15 @@ export class Character  {
         return this.role;
     }
 
-    getOverride(): any {
+    getOverride(): {
+        armor: string,
+        consumable: string,
+        trinket: string,
+        wep1: string,
+        wep2: string,
+        specialization: string,
+        profSkills: string
+    } {
         return this.override;
     }
 }
