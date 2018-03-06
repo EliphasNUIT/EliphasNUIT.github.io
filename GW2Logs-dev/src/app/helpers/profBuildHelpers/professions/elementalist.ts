@@ -52,7 +52,7 @@ class PowerWeaverBuild extends EleBuild {
         ]);
         this.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
         this.skills.setHealSkill('Aquatic Stance');
-        this.skills.setUtilitySkills(['Conjure Lightning Hammer', 'Glyph of Storms', 'Primordial Stance']);
+        this.skills.setUtilitySkills(['', 'Glyph of Storms', 'Primordial Stance']);
         this.skills.setEliteSkill('Conjure Fiery Greatsword');
     }
 }
