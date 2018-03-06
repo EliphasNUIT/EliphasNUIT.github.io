@@ -2,6 +2,7 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 import { Skills } from '../data/skills';
 import { Specialization } from '../data/specialization';
+import { Weapons } from '../data/weapons';
 
 class RangerBuild extends ProfBuild {
     constructor(id, name) {
@@ -77,6 +78,27 @@ class BoonDruidBuild extends RangerBuild {
     }
 }
 
+class MinstrelDruidBuild extends RangerBuild {
+    constructor(id, name) {
+        super(id, 'Druide - Minstrel' + name);
+        this.icon += 'druid.png';
+        this.armor.setSingleStat('Minstrel\'s');
+        this.armor.setSingleRune('Superior Rune of the Monk');
+        this.consumable.setConsumable('Delicious Rice Ball', 'Bountiful Maintenance Oil');
+        this.trinket.setSingleStat('Minstrel\'s');
+        this.wep1.setTwoHand('Staff', 'Minstrel\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
+        this.wep2.setMainHand('Axe', 'Minstrel\'s', 'Superior Sigil of Transference');
+        this.wep2.setOffHand('Warhorn', 'Minstrel\'s', 'Superior Sigil of Water');
+        this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Quick Draw']);
+        this.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
+        this.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
+        this.skills.pets = ['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern'];
+        this.skills.setHealSkill('Water Spirit');
+        this.skills.setUtilitySkills(['Glyph of Empowerment', '', '']);
+        this.skills.setEliteSkill('Spirit of Nature');
+    }
+}
+
 export function rangerBuildMaker() {
     let build: ProfBuild = null;
     // Condi
@@ -99,31 +121,31 @@ export function rangerBuildMaker() {
     {
         build = new BoonDruidBuild('druidBoon', '');
 
-        let variant = build.addOverride('VG', false);
+        let variant = build.addOverride('Vale Guardian');
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Glyph of Rejuvenation');
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Entangle');
 
-        variant = build.addOverride('Gorse', false);
+        variant = build.addOverride('Gorseval');
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Glyph of Rejuvenation');
         variant.skills.setUtilitySkills(['Glyph of Empowerment', '', '']);
         variant.skills.setEliteSkill('Entangle');
 
-        variant = build.addOverride('Sloth', false);
+        variant = build.addOverride('Slothasor');
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Glyph of Rejuvenation');
         variant.skills.setUtilitySkills(['"Protect Me!"', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
-        variant = build.addOverride('Samarog', false);
+        variant = build.addOverride('Samarog');
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Glyph of Rejuvenation');
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
-        variant = build.addOverride('Matthias', false);
+        variant = build.addOverride('Matthias');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Skirmishing', ['Trapper\'s Expertise', 'Spotter', 'Quick Draw']);
         variant.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
@@ -133,15 +155,22 @@ export function rangerBuildMaker() {
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
-        build = new BoonDruidBuild('druidCairnKite', ' - Cairn Kite');
-        build.armor.setSingleStat('Minstrel\'s');
-        build.armor.setSingleRune('Superior Rune of Water');
-        build.trinket.setSingleStat('Minstrel\'s');
-        build.skills.setHealSkill('Water Spirit');
-
-        build = new BoonDruidBuild('druidKite', ' - Black Kite');
-        build.wep2.setTwoHand('Greatsword', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Agility');
-
+        variant = build.addOverride('Desmina Pusher');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Marksmanship', ['Clarion Bond', 'Moment of Clarity', 'Lead the Wind']);
+        variant.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
+        variant.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Water Spirit');
+        variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
+        variant.skills.setEliteSkill('Spirit of Nature');
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setTwoHand('Longbow', 'Harrier\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
+        ////
+        build = new MinstrelDruidBuild('druidCairnKite', '');
+        variant = build.addOverride('Black Kite');
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setTwoHand('Greatsword', 'Minstrel\'s', 'Superior Sigil of Transference', 'Superior Sigil of Agility');
     }
 }
 

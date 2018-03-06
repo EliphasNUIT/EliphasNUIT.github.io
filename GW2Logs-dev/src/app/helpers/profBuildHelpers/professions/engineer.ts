@@ -77,7 +77,7 @@ export function engiBuildMaker() {
         variant = build.addOverride('CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('A.E.D.');
-        variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
+        variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Flamethrower']);
         variant.skills.setEliteSkill('Elite Mortar Kit');
     }
 

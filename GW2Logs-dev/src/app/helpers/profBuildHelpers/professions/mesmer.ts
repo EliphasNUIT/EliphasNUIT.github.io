@@ -221,9 +221,13 @@ export function mesBuildMaker() {
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
         //
-        variant = build.addOverride('Tank');
+        variant = build.addOverride('Tank', false);
         variant.consumable = new Consumable();
         variant.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Toxic Maintenance Oil');
+        //
+        variant = build.addOverride('Focus', false);
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
     }
     // condi clone
     {

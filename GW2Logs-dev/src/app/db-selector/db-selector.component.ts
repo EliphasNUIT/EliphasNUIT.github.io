@@ -27,9 +27,13 @@ export class DbSelectorComponent implements OnInit, OnChanges {
   }
 
   onSelect(selectedBuild: { name: string, id: string, overrides: string[] }) {
+    if (this.selectedBuild && selectedBuild && this.selectedBuild.id === selectedBuild.id) {
+      return;
+    }
     this.selectedBuild = selectedBuild !== null ?
-          { name: selectedBuild.name, id: selectedBuild.id, overrides: selectedBuild.overrides, override: this.selectedOverride } : null;
+          { name: selectedBuild.name, id: selectedBuild.id, overrides: selectedBuild.overrides, override: 'Main' } : null;
     this.selectedBuildEmit.emit(this.selectedBuild);
+    this.selectedOverride = 'Main';
   }
 
   onSelectOverride(selectedOverride: string) {

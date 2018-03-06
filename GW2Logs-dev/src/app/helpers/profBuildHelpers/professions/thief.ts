@@ -82,13 +82,13 @@ export function thiefBuildMaker() {
         variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
         variant.skills.setEliteSkill('Basilisk Venom');
 
-        variant = build.addOverride('FastCC', false);
+        variant = build.addOverride('Fast CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of Malice');
         variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Spider Venom', 'Fist Flurry']);
         variant.skills.setEliteSkill('Impact Strike');
 
-        variant = build.addOverride('NoCC', false);
+        variant = build.addOverride('No CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of Malice');
         variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Spider Venom', 'Fist Flurry']);
@@ -101,7 +101,7 @@ export function thiefBuildMaker() {
         variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
         variant.skills.setEliteSkill('Basilisk Venom');
 
-        variant = build.addOverride('NoCC', false);
+        variant = build.addOverride('No CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of Malice');
         variant.skills.setUtilitySkills(['Assassin\'s Signet', 'Shadowstep', 'Fist Flurry']);
@@ -123,19 +123,19 @@ export function thiefBuildMaker() {
         variant.skills.setUtilitySkills(['Spider Venom', 'Needle Trap', 'Caltrops']);
         variant.skills.setEliteSkill('Basilisk Venom');
 
-        variant = build.addOverride('Mobile', false);
+        variant = build.addOverride('Mobile Target', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Channeled Vigor');
         variant.skills.setUtilitySkills(['Spider Venom', 'Skale Venom', 'Caltrops']);
         variant.skills.setEliteSkill('Basilisk Venom');
 
-        variant = build.addOverride('FastCC', false);
+        variant = build.addOverride('Fast CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Channeled Vigor');
         variant.skills.setUtilitySkills(['Spider Venom', 'Devourer Venom', 'Caltrops']);
         variant.skills.setEliteSkill('Impact Strike');
 
-        variant = build.addOverride('FastCC', false);
+        variant = build.addOverride('No CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Channeled Vigor');
         variant.skills.setUtilitySkills(['Spider Venom', 'Devourer Venom', 'Caltrops']);
