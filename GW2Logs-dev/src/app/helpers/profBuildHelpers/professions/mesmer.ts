@@ -138,8 +138,8 @@ class CondiMirageCloneBuild extends MesBuild {
         ]);
         this.specialization.setSpec('spec3', 'Mirage', ['Self-Deception', 'Mirrored Axes', 'Infinite Horizon']);
         this.skills.setHealSkill('False Oasis');
-        this.skills.setUtilitySkills(['', 'Signet of Domination', 'Signet of Midnight']);
-        this.skills.setEliteSkill('');
+        this.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
+        this.skills.setEliteSkill('Jaunt');
     }
 }
 
@@ -149,6 +149,19 @@ export function mesBuildMaker() {
     // minstrel
     {
         build = new MinstrelShareBuild('chrMinstrel', '');
+
+        //
+        let variant = build.addOverride('Well/TW', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Well of Eternity');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Time Warp');
+
+        variant = build.addOverride('Well/CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Well of Eternity');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Signet of Humility');
     }
 
     // power
@@ -218,6 +231,7 @@ export function mesBuildMaker() {
         variant.wep1.setMainHand('Sword', 'Commander\'s', 'Superior Sigil of Concentration');
         variant.wep1.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
         variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
         //
@@ -228,10 +242,34 @@ export function mesBuildMaker() {
         variant = build.addOverride('Focus', false);
         variant.wep2 = new Weapons(build.profession);
         variant.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
+        //
+        variant = build.addOverride('Well/TW', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Time Warp');
+        //
+        variant = build.addOverride('Well/CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Signet of Humility');
+        //
+        variant = build.addOverride('Reflect/CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Feedback', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Signet of Humility');
     }
     // condi clone
     {
         build = new CondiMirageCloneBuild('mirageCondi', '');
+
+        const variant = build.addOverride('CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('False Oasis');
+        variant.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
+        variant.skills.setEliteSkill('Signet of Humility');
     }
 
 }

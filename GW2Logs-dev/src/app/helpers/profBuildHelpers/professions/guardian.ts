@@ -53,7 +53,7 @@ class CondiFBBuild extends GuardBuild {
         this.specialization.setSpec('spec2', 'Radiance', ['Right-Hand Strength', 'Radiant Fire', 'Amplified Wrath']);
         this.specialization.setSpec('spec3', 'Firebrand', ['Archivist of Whispers', 'Legendary Lore', 'Loremaster']);
         this.skills.setHealSkill('Mantra of Solace');
-        this.skills.setUtilitySkills(['Mantra of Flame', '', 'Signet of Wrath']);
+        this.skills.setUtilitySkills(['Mantra of Flame', 'Sword of Justice', 'Signet of Wrath']);
         this.skills.setEliteSkill('Renewed Focus');
     }
 }
@@ -145,6 +145,30 @@ export function guardBuildMaker() {
             'Big Game Hunter'
         ]);
 
+        variant = build.addOverride('Shout/Trap', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
+        variant.skills.setEliteSkill('Dragon\'s Maw');
+
+        variant = build.addOverride('Shout/Shout', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
+        variant.skills.setEliteSkill('"Feel My Wrath!"');
+
+        variant = build.addOverride('Trap/Shout', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
+        variant.skills.setEliteSkill('"Feel My Wrath!"');
+
+        variant = build.addOverride('Trap/Trap', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
+        variant.skills.setEliteSkill('Dragon\'s Maw');
+
     }
 
     // Condi
@@ -152,6 +176,10 @@ export function guardBuildMaker() {
         build = new CondiFBBuild('fbDPS', '');
 
         const variant = build.addOverride('Consecration');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Mantra of Solace');
+        variant.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
+        variant.skills.setEliteSkill('Renewed Focus');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
         variant.specialization.setSpec('spec2', 'Radiance', ['Right-Hand Strength', 'Radiant Fire', 'Amplified Wrath']);

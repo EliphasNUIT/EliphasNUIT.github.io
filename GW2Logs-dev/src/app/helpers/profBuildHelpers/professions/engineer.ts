@@ -98,7 +98,7 @@ export function engiBuildMaker() {
             'Crystal Configuration: Eclipse',
             'Photonic Blasting Module'
         ]);
-
+        //
         variant = build.addOverride('Thermal');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Shrapnel']);
@@ -112,7 +112,7 @@ export function engiBuildMaker() {
             'Crystal Configuration: Eclipse',
             'Photonic Blasting Module'
         ]);
-
+        //
         variant = build.addOverride('Thermal/Orbital');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
@@ -126,7 +126,7 @@ export function engiBuildMaker() {
             'Crystal Configuration: Eclipse',
             'Photonic Blasting Module'
         ]);
-
+        //
         variant = build.addOverride('Sword');
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('');
@@ -135,6 +135,12 @@ export function engiBuildMaker() {
         variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Pistol', 'Berserker\'s', 'Superior Sigil of Air');
+        //
+        variant = build.addOverride('CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('A.E.D.');
+        variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
+        variant.skills.setEliteSkill('Prime Light Beam');
     }
 
 }

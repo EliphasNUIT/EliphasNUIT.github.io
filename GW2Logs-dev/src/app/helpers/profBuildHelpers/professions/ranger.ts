@@ -109,12 +109,17 @@ export function rangerBuildMaker() {
         build = new CondiDruidBuild('druidCondi', 'Standard');*/
 
         build = new CondiSoulbeastBuild('soulbeastCondi', '');
-        const variant = build.addOverride('Trap', false);
+        let variant = build.addOverride('Trap', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Healing Spring');
         variant.skills.setUtilitySkills(['Viper\'s Nest', 'Vulture Stance', 'Sharpening Stone']);
         variant.skills.setEliteSkill('One Wolf Pack');
 
+        variant = build.addOverride('Spotter');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Quick Draw']);
+        variant.specialization.setSpec('spec2', 'Wilderness Survival', ['Taste for Danger', 'Ambidexterity', 'Poison Master']);
+        variant.specialization.setSpec('spec3', 'Soulbeast', ['Live Fast', 'Predator\'s Cunning', 'Leader of the Pack']);
     }
 
     // Heal
@@ -145,6 +150,12 @@ export function rangerBuildMaker() {
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
+        variant = build.addOverride('Solo');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Water Spirit');
+        variant.skills.setUtilitySkills(['Glyph of Empowerment', 'Sun Spirit', 'Frost Spirit']);
+        variant.skills.setEliteSkill('Spirit of Nature');
+
         variant = build.addOverride('Matthias');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Skirmishing', ['Trapper\'s Expertise', 'Spotter', 'Quick Draw']);
@@ -152,7 +163,7 @@ export function rangerBuildMaker() {
         variant.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Healing Spring');
-        variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
+        variant.skills.setUtilitySkills(['Glyph of the Tides', 'Sun Spirit', 'Stone Spirit']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
         variant = build.addOverride('Desmina Pusher');

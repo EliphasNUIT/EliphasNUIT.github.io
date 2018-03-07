@@ -82,12 +82,12 @@ class WarriorBannerBuild extends PowerWarriorBuild {
     constructor(id, name) {
         super(id, 'Warrior - Banner' + name);
         this.icon += 'warrior.png';
-        this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
+        this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
         this.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
         this.skills.setHealSkill('"To the Limit!"');
-        this.skills.setUtilitySkills(['', 'Banner of Discipline', 'Banner of Strength']);
-        this.skills.setEliteSkill('');
+        this.skills.setUtilitySkills(['Throw Bolas', 'Banner of Discipline', 'Banner of Strength']);
+        this.skills.setEliteSkill('Signet of Rage');
     }
 }
 
@@ -120,6 +120,12 @@ export function warBuildMaker() {
         variant.skills.setHealSkill('Blood Reckoning');
         variant.skills.setEliteSkill('Head Butt');
         variant.skills.setUtilitySkills(['Wild Blow', 'Banner of Discipline', 'Banner of Strength']);
+        
+        variant = build.addOverride('DPS', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Blood Reckoning');
+        variant.skills.setEliteSkill('Head Butt');
+        variant.skills.setUtilitySkills(['Shattering Blow', 'Banner of Discipline', 'Banner of Strength']);
         //
         build = new BerserkerDPSBuild('bersDPS', '');
     }
