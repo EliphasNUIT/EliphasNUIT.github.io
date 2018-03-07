@@ -5,9 +5,20 @@
 
 .my-scrollable-panel {
     overflow-y: auto;
-    border: 1px solid black;
     max-height: 450px;
-    width: 600px;
+    width: 650px;
+}
+
+.build-selector {
+    width: 325px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.variant-selector {
+    width: 300px;
+    height: 100%;
+    border: 1px solid black;
 }
 
 .my-search {

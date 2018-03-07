@@ -12,6 +12,9 @@ export class Specialization {
     }
 
     setSpec(specToSet: string, specName: string, traitArray: string[]) {
+        if (specToSet === '') {
+            return;
+        }
         if (this.profession.specializations[specName]) {
             this[specToSet].name = this.profession.specializations[specName];
             for (let i = 0; i < 3; i++) {
@@ -39,6 +42,9 @@ export class Specialization {
         for (let i = 0; i < 3; i++) {
             const specialization = specs[i];
             const speID = specialization.name;
+            if (speID === -1 ) {
+                continue;
+            }
             speIDS += speID + ',';
             let traits = 'data-armory-' + speID + '-traits="';
             for (let j = 0; j < 3; j++) {

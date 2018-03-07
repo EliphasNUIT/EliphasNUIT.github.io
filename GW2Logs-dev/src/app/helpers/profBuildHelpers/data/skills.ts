@@ -58,7 +58,7 @@ export class Skills {
         } else {
             divToAdd += 'data-armory-size="70" ';
         }
-        divToAdd += 'data-armory-blank-text="Au choix ou voir avec l\'autre classe jouant le même build" ';
+        divToAdd += 'data-armory-blank-text="Compétence utilitaire (reflect, cc, buff) ou DPS"';
         divToAdd += '></div>';
         return divToAdd;
     }
@@ -74,7 +74,7 @@ export class Skills {
         } else {
             divToAdd += 'data-armory-size="70" ';
         }
-        divToAdd += 'data-armory-blank-text="Au choix ou voir avec l\'autre classe jouant le même build" ';
+        divToAdd += 'data-armory-blank-text="Compétence utilitaire (reflect, cc, buff) ou DPS"';
         divToAdd += '></div>';
         return divToAdd;
     }
@@ -94,7 +94,7 @@ export class Skills {
         } else {
             divToAdd += 'data-armory-size="70" ';
         }
-        divToAdd += 'data-armory-blank-text="Au choix ou voir avec l\'autre classe jouant le même build" ';
+        divToAdd += 'data-armory-blank-text="Compétence utilitaire (reflect, cc, buff) ou DPS"';
         divToAdd += '></div>';
         return divToAdd;
     }

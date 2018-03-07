@@ -1,5 +1,9 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
+import { Consumable } from '../data/consumable';
+import { Specialization } from '../data/specialization';
+import { Weapons } from '../data/weapons';
+import { Skills } from '../data/skills';
 
 class MesBuild extends ProfBuild {
     constructor(id, name) {
@@ -10,7 +14,7 @@ class MesBuild extends ProfBuild {
 
 class ChronoPowerBuild extends MesBuild {
     constructor(id, name) {
-        super(id, 'Chronomancer - Power - ' + name);
+        super(id, 'Chronomancer - Power' + name);
         this.icon += 'chronomancer.png';
         this.armor.setSingleStat('Assassin\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
@@ -23,6 +27,11 @@ class ChronoPowerBuild extends MesBuild {
             'Phantasmal Fury',
             'Fencer\'s Finesse',
             'Superiority Complex'
+        ]);
+        this.specialization.setSpec('spec2', 'Illusions', [
+            'Shatter Storm',
+            'Maim the Disillusioned',
+            'Phantasmal Force'
         ]);
         this.specialization.setSpec('spec3', 'Chronomancer', [
             'Time Catches Up',
@@ -37,7 +46,7 @@ class ChronoPowerBuild extends MesBuild {
 
 class MinstrelShareBuild extends MesBuild {
     constructor(id, name) {
-        super(id, 'Chronomancer - Minstrel - ' + name);
+        super(id, 'Chronomancer - Minstrel' + name);
         this.icon += 'chronomancer.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Durability');
@@ -69,7 +78,7 @@ class MinstrelShareBuild extends MesBuild {
 
 class BoonShareBuild extends MesBuild {
     constructor(id, name) {
-        super(id, 'Chronomancer - ' + name);
+        super(id, 'Chronomancer - Boonshare' + name);
         this.icon += 'chronomancer.png';
         this.armor.setStats([
             'Berserker\'s',
@@ -85,6 +94,11 @@ class BoonShareBuild extends MesBuild {
         this.wep1.setMainHand('Sword', 'Commander\'s', 'Superior Sigil of Concentration');
         this.wep1.setOffHand('Shield', 'Berserker\'s', 'Superior Sigil of Force');
         this.wep2.setOffHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
+        this.specialization.setSpec('spec1', 'Domination', [
+            'Empowered Illusions',
+            'Blurred Inscriptions',
+            'Mental Anguish'
+        ]);
         this.specialization.setSpec('spec2', 'Inspiration', [
             'Sympathetic Visage',
             'Restorative Illusions',
@@ -101,93 +115,9 @@ class BoonShareBuild extends MesBuild {
     }
 }
 
-class DomiInspi extends BoonShareBuild {
-    constructor(id, name) {
-        super(id, 'Domination/Inspiration - ' + name);
-        this.specialization.setSpec('spec1', 'Domination', [
-            'Empowered Illusions',
-            'Blurred Inscriptions',
-            'Mental Anguish'
-        ]);
-    }
-}
-
-class IlluInspi extends BoonShareBuild {
-    constructor(id, name) {
-        super(id, 'Illusions/Inspiration - ' + name);
-        this.specialization.setSpec('spec1', 'Illusions', [
-            'Shatter Storm',
-            'Phantasmal Haste',
-            'Phantasmal Force'
-        ]);
-        this.specialization.setSpec('spec3', 'Chronomancer', [
-            'Time Catches Up',
-            'Improved Alacrity',
-            'Chronophantasma'
-        ]);
-    }
-}
-
-class ChaosInspi extends BoonShareBuild {
-    constructor(id, name) {
-        super(id, 'Chaos/Inspiration - ' + name);
-        this.specialization.setSpec('spec1', 'Chaos', [
-            'Descent into Madness',
-            'Chaotic Dampening',
-            'Bountiful Disillusionment'
-        ]);
-    }
-}
-
-class DuelIllu extends BoonShareBuild {
-    constructor(id, name) {
-        super(id, 'Dueling/Illusions - ' + name);
-        this.specialization.setSpec('spec1', 'Dueling', [
-            'Phantasmal Fury',
-            'Fencer\'s Finesse',
-            'Superiority Complex'
-        ]);
-        this.specialization.setSpec('spec2', 'Illusions', [
-            'Shatter Storm',
-            'Phantasmal Haste',
-            'Phantasmal Force'
-        ]);
-        this.specialization.setSpec('spec3', 'Chronomancer', [
-            'Time Catches Up',
-            'Improved Alacrity',
-            'Chronophantasma'
-        ]);
-        this.wep1.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-        this.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
-        this.skills.setEliteSkill('Time Warp');
-    }
-}
-
-class DomiInspiTank extends DomiInspi {
-    constructor(id, name) {
-        super(id, 'Tank - ' + name);
-        this.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Toxic Maintenance Oil');
-    }
-}
-
-class ChaosInspiTank extends ChaosInspi {
-    constructor(id, name) {
-        super(id, 'Tank - ' + name);
-        this.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Toxic Maintenance Oil');
-    }
-}
-
-class IlluInspiTank extends IlluInspi {
-    constructor(id, name) {
-        super(id, 'Tank - ' + name);
-        this.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Toxic Maintenance Oil');
-    }
-}
-
-
 class CondiMirageCloneBuild extends MesBuild {
     constructor(id, name) {
-        super(id, 'Mirage - Clone - ' + name);
+        super(id, 'Mirage - Clone' + name);
         this.icon += 'mirage.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -218,79 +148,128 @@ export function mesBuildMaker() {
     let build: ProfBuild = null;
     // minstrel
     {
-        build = new MinstrelShareBuild('chrTankMinstrel', 'Standard');
+        build = new MinstrelShareBuild('chrMinstrel', '');
 
-        build = new MinstrelShareBuild('chrTankDei', 'Deimos');
-        build.skills.setHealSkill('Well of Eternity');
-        build.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Signet of Inspiration']);
-        build.skills.setEliteSkill('Time Warp');
+        //
+        let variant = build.addOverride('Well/TW', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Well of Eternity');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Time Warp');
+
+        variant = build.addOverride('Well/CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Well of Eternity');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Signet of Humility');
     }
 
     // power
     {
-        build = new ChronoPowerBuild('chrPowerSword', 'Sword/Sword + Focus');
-        build.specialization.setSpec('spec2', 'Illusions', [
-            'Shatter Storm',
-            'Maim the Disillusioned',
-            'Phantasmal Force'
+        build = new ChronoPowerBuild('chrPower', '');
+        const variant = build.addOverride('Greatsword');
+        variant.specialization = new Specialization(build.profession);
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Accuracy');
+        variant.specialization.setSpec('spec1', 'Dueling', [
+            'Phantasmal Fury',
+            'Fencer\'s Finesse',
+            'Superiority Complex'
         ]);
-
-        build = new ChronoPowerBuild('chrPowerG', 'Sword/Sword + GS');
-        build.wep2.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Accuracy');
-        build.specialization.setSpec('spec2', 'Domination', [
+        variant.specialization.setSpec('spec2', 'Domination', [
             'Empowered Illusions',
             'Blurred Inscriptions',
             'Imagined Burden'
         ]);
+        variant.specialization.setSpec('spec3', 'Chronomancer', [
+            'Time Catches Up',
+            'Improved Alacrity',
+            'Chronophantasma'
+        ]);
     }
 
-    // boon share domi inspi
+    // boon share
     {
-        build = new DomiInspi('chrDomiInspi', 'Standard');
-
-        build = new DomiInspiTank('chrDomiInspiTank', 'Standard');
-
-        build = new DomiInspi('chrDomiInspiFocus', 'Focus');
-        build.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-
-        build = new DomiInspiTank('chrDomiInspiTankFocus', 'Focus');
-        build.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-    }
-    // boon share illu inspi
-    {
-        build = new IlluInspi('chrIlluInspi', 'Standard');
-
-        build = new IlluInspiTank('chrIlluInspiTank', 'Standard');
-
-        build = new IlluInspi('chrIlluInspiFocus', 'Focus');
-        build.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-
-        build = new IlluInspiTank('chrIlluInspiTankFocus', 'Focus');
-        build.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-    }
-    // boon share chaos inspi
-    {
-        build = new ChaosInspi('chrChaosInspi', 'Standard');
-
-        build = new ChaosInspiTank('chrChaosInspiTank', 'Standard');
-
-        build = new ChaosInspi('chrChaosInspiFocus', 'Focus');
-        build.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-
-        build = new ChaosInspiTank('chrChaosInspiTankFocus', 'Focus');
-        build.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-    }
-    // boon share duel illu
-    {
-        build = new DuelIllu('chrDuelIllu', 'Standard');
+        build = new BoonShareBuild('chrBoon', '');
+        //
+        let variant = build.addOverride('Chaos');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Chaos', [
+            'Descent into Madness',
+            'Chaotic Dampening',
+            'Bountiful Disillusionment'
+        ]);
+        variant.specialization.setSpec('spec2', 'Inspiration', [
+            'Sympathetic Visage',
+            'Restorative Illusions',
+            'Illusionary Inspiration'
+        ]);
+        variant.specialization.setSpec('spec3', 'Chronomancer', [
+            'Time Catches Up',
+            'Improved Alacrity',
+            'Seize the Moment'
+        ]);
+        //
+        variant = build.addOverride('Duel/Illu');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Dueling', [
+            'Phantasmal Fury',
+            'Fencer\'s Finesse',
+            'Superiority Complex'
+        ]);
+        variant.specialization.setSpec('spec2', 'Illusions', [
+            'Shatter Storm',
+            'Phantasmal Haste',
+            'Phantasmal Force'
+        ]);
+        variant.specialization.setSpec('spec3', 'Chronomancer', [
+            'Time Catches Up',
+            'Improved Alacrity',
+            'Chronophantasma'
+        ]);
+        variant.wep1 = new Weapons(build.profession);
+        variant.wep1.setMainHand('Sword', 'Commander\'s', 'Superior Sigil of Concentration');
+        variant.wep1.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Time Warp');
+        //
+        variant = build.addOverride('Tank', false);
+        variant.consumable = new Consumable();
+        variant.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Toxic Maintenance Oil');
+        //
+        variant = build.addOverride('Focus', false);
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
+        //
+        variant = build.addOverride('Well/TW', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Time Warp');
+        //
+        variant = build.addOverride('Well/CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Signet of Humility');
+        //
+        variant = build.addOverride('Reflect/CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Signet of the Ether');
+        variant.skills.setUtilitySkills(['Well of Action', 'Feedback', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Signet of Humility');
     }
     // condi clone
     {
-        build = new CondiMirageCloneBuild('mirageCondiMatt', 'Reflect CC');
-        build.skills.setUtilitySkills(['Feedback', 'Signet of Domination', 'Signet of Midnight']);
-        build.skills.setEliteSkill('Signet of Humility');
+        build = new CondiMirageCloneBuild('mirageCondi', '');
 
-        build = new CondiMirageCloneBuild('mirageCondi', 'Standard');
+        const variant = build.addOverride('CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('False Oasis');
+        variant.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
+        variant.skills.setEliteSkill('Signet of Humility');
     }
 
 }

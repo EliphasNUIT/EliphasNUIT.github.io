@@ -1,6 +1,7 @@
 
 .my-db-display {
-    height: 680px;
+    height: 100%;
+    min-height: 690px;
 }
 
 .my-build-display {

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, Input, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -14,9 +14,20 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./display-build.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDestroy /*, DoCheck, OnChanges*/ {
+export class DisplayBuildComponent implements OnInit, AfterViewChecked {
 
-  @Input() build: ProfBuild;
+  @Input() build: ProfBuild = null;
+  @Input() mainOverride: string = null;
+  @Input() specializedOverride: {
+    armor: string,
+    consumable: string,
+    trinket: string,
+    wep1: string,
+    wep2: string,
+    specialization: string,
+    profSkills: string,
+    skills: string
+} = null;
   oldName = '';
   cacheArray = ['traits', 'profSkills', 'skills', 'pets', 'armor', 'trinket', 'wep1', 'wep2', 'consum'];
   currentCache: any;
@@ -26,6 +37,11 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDest
 
   ngOnInit() {
   }
+
+  /*ngOnChanges() {
+    this.mainOverride = null;
+    this.specializedOverride = null;
+  }*/
 
   ngAfterViewChecked() {
     const toDestroyScript = document.head.querySelectorAll('script');
@@ -74,12 +90,14 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDest
   }
 
   traits(): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(this.build.getSpecializations());
+    return this.sanitizer.bypassSecurityTrustHtml(this.build.getSpecializations(this.mainOverride ||
+      (this.specializedOverride && this.specializedOverride.specialization)));
   }
   skills(): SafeHtml {
     let res = '';
     if (this.build.skills !== null) {
-      const skills = this.build.getSkills();
+      const skills = this.build.getSkills(this.mainOverride ||
+        (this.specializedOverride && this.specializedOverride.skills));
       res += skills.heal;
       res += skills.utilities;
       res += skills.elite;
@@ -87,24 +105,28 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDest
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
   profSkills(): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(this.build.getProfessionSkills());
+    return this.sanitizer.bypassSecurityTrustHtml(this.build.getProfessionSkills(this.mainOverride ||
+      (this.specializedOverride && this.specializedOverride.profSkills)));
   }
   pets(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getPets());
   }
   armor(): SafeHtml {
     let res = '';
-    const equipement = this.build.getArmor();
+    const equipement = this.build.getArmor(this.mainOverride ||
+      (this.specializedOverride && this.specializedOverride.armor));
     res += equipement.armor;
     res += equipement.rune;
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
   consumables(): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(this.build.getConsumable());
+    return this.sanitizer.bypassSecurityTrustHtml(this.build.getConsumable(this.mainOverride ||
+      (this.specializedOverride && this.specializedOverride.consumable)));
   }
   trinket(): SafeHtml {
     let res = '';
-    const trinket = this.build.getTrinket();
+    const trinket = this.build.getTrinket(this.mainOverride ||
+      (this.specializedOverride && this.specializedOverride.trinket));
     res += trinket.BA;
     res += trinket.AR;
     return this.sanitizer.bypassSecurityTrustHtml(res);
@@ -112,7 +134,8 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDest
 
   wep1(): SafeHtml {
     let res = '';
-    const wep1 = this.build.getWeapon1();
+    const wep1 = this.build.getWeapon1(this.mainOverride ||
+      (this.specializedOverride && this.specializedOverride.wep1));
     res += wep1.wep;
     res += wep1.sig;
     return this.sanitizer.bypassSecurityTrustHtml(res);
@@ -120,7 +143,8 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked/*, OnDest
   wep2(): SafeHtml {
     let res = '';
     if (this.build.wep2 !== null) {
-      const wep2 = this.build.getWeapon2();
+      const wep2 = this.build.getWeapon2(this.mainOverride ||
+        (this.specializedOverride && this.specializedOverride.wep2));
       res += wep2.wep;
       res += wep2.sig;
     }

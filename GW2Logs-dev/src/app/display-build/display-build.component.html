@@ -1,12 +1,12 @@
 <div *ngIf="build">
     <div [class]="build.profession.name">
-        <div class="build">
+        <div class="build uk-margin-bottom">
             <div uk-accordion="collapsible: false">
                 <span>
                     <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">
                         <span class="uk-margin-small-left">Aptitudes</span>
                     </div>
-                    <div id="traits" class="uk-margin-bottom uk-accordion-content uk-flex uk-flex-column uk-flex-between uk-margin-large-left uk-margin-large-right"
+                    <div id="traits" class="uk-margin-bottom uk-accordion-content uk-flex uk-flex-column uk-margin-large-left uk-margin-large-right"
                         [innerHTML]='traits()'></div>
                 </span>
                 <span>
@@ -15,8 +15,8 @@
                     </div>
                     <div class="uk-accordion-content uk-flex uk-flex-center uk-flex-column uk-flex-nowrap">
                         <div id="profSkills" class="uk-flex uk-flex-center	uk-flex-middle uk-flex-row" [innerHTML]='profSkills()'></div>
-                        <div id="skills" class="uk-flex uk-flex-center uk-flex-middle uk-flex-row" [innerHTML]='skills()'></div>
                         <div id="pets" class="uk-flex uk-flex-center uk-flex-middle uk-flex-row" [innerHTML]='pets()'></div>
+                        <div id="skills" class="uk-flex uk-flex-center uk-flex-middle uk-flex-row" [innerHTML]='skills()'></div>
                     </div>
                 </span>
                 <span>
@@ -57,7 +57,7 @@
                     <div class="uk-accordion-title my-accordion-title uk-text-bold uk-text-uppercase uk-text-middle">
                         <span class="uk-margin-small-left">Consommables</span>
                     </div>
-                    <div id="consum" class="uk-accordion-content uk-flex uk-flex-center uk-flex-middle" [innerHTML]='consumables()'></div>
+                    <div id="consum" class="uk-accordion-content uk-flex uk-flex-column uk-flex-center uk-flex-middle" [innerHTML]='consumables()'></div>
                 </span>
 
             </div>

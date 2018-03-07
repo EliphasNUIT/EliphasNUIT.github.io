@@ -7,7 +7,7 @@
     <div *ngIf="character.getRole().length > 0" [ngClass]="getClasses(false)" >
       <span title="Le rôle du joueur" uk-tooltip="pos: top">{{character.getRole().toUpperCase()}}</span>
     </div>
-    <app-display-build [build]="character.getBuild()"></app-display-build>
+    <app-display-build [build]="character.getBuild()" [specializedOverride]="character.getOverride()"></app-display-build>
 
   </div>
 
