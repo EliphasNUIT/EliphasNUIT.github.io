@@ -391,9 +391,11 @@
                     {
                         "name": "Bouhteille",
                         "role": "Champignon 1",
-                        "build": "dhPower",
+                        "build": "spellbrkDPS",
                         "override":{
-                            "skills": "Shout/Trap"
+                            "specialization":"Mace/Axe + Axe/Dagger",
+                            "wep1":"Mace/Axe + Axe/Dagger",
+                            "wep2":"Mace/Axe + Axe/Dagger"
                         },
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
@@ -939,30 +941,45 @@
                         "name": "Damano",
                         "role": "",
                         "build": "chrBoon",
+                        "override":{
+                            "skills":"Well/CC",
+                            "specialization":"Chaos",
+                            "wep2":"Focus"
+                        },
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Dam",
+                        "name": "Eliphas",
                         "role": "",
                         "build": "druidBoon",
-                        "gw2Armory": ""
+                        "override":{
+                            "skills": "Samarog"
+                        },
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Winter",
                         "role": "",
                         "build": "warBan",
+                        "override": {
+                            "specialization":"Mace - Shield",
+                            "wep1":"Mace - Shield"
+                        },
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Vengeful",
                         "role": "",
-                        "build": "dhPower",
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
-                        "name": " ",
+                        "name": "Sakura",
                         "role": "",
-                        "build": "weavPowerArc",
+                        "build": "holoPower",
+                        "override":{
+                            "specialization":"Thermal"
+                        },
                         "gw2Armory": ""
                     }
                 ],
@@ -971,30 +988,47 @@
                         "name": "Polga",
                         "role": "",
                         "build": "chrBoon",
+                        "override":{
+                            "skills":"Well/CC",
+                            "specialization":"Chaos",
+                            "wep2":"Focus"
+                        },
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Arkness",
                         "role": "",
                         "build": "druidBoon",
+                        "override":{
+                            "skills": "Samarog"
+                        },
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Meat",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "specialization":"Zeal Signet Share",
+                            "skills":"Shout/Trap"
+                        },
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "dhPower",
+                        "build": "spellbrkDPS",
+                        "override":{
+                            "specialization":"Mace/Axe + Axe/Dagger",
+                            "wep1":"Mace/Axe + Axe/Dagger",
+                            "wep2":"Mace/Axe + Axe/Dagger"
+                        },
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Eliphas",
+                        "name": "Dam",
                         "role": "",
-                        "build": "weavPowerArc",
-                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
-                    },
-                    {
-                        "name": " ",
-                        "role": "",
-                        "build": "weavPowerArc",
+                        "build": "any",
                         "gw2Armory": ""
                     }
                 ]
@@ -1016,22 +1050,31 @@
                         "name": "Damano",
                         "role": "Tank",
                         "build": "chrMinstrel",
+                        "override":{
+                            "skills":"Aegis/TW"
+                        },
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Dam",
+                        "name": "Eliphas",
                         "role": "black kite",
                         "build": "druidKite",
+                        "override":{
+                            "wep2":"Black Kite"
+                        },
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Meat",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Shout"
+                        },
                         "gw2Armory": ""
                     },
                     {
                         "name": "Vengeful",
-                        "role": "",
-                        "build": "dhPower",
-                        "gw2Armory": ""
-                    },
-                    {
-                        "name": " ",
                         "role": "",
                         "build": "weavPowerAir",
                         "gw2Armory": ""
@@ -1042,6 +1085,9 @@
                         "name": "Polga",
                         "role": "",
                         "build": "chrBoon",
+                        "override":{
+                            "skills":"Well/TW"
+                        },
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
@@ -1054,16 +1100,22 @@
                         "name": "Winter",
                         "role": "",
                         "build": "bers",
+                        "override":{
+                            "skills":"DPS"
+                        },
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
                         "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": " ",
+                        "name": "Sakura",
                         "role": "",
                         "build": "weavPowerAir",
                         "gw2Armory": ""
@@ -1071,10 +1123,10 @@
                 ],
                 "t3": [
                     {
-                        "name": "Eliphas",
+                        "name": "Dam?",
                         "role": "hand kite",
-                        "build": "herDeiVentari",
-                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                        "build": "any",
+                        "gw2Armory": ""
                     }
                 ]
             }
@@ -1096,30 +1148,43 @@
                         "name": "Damano",
                         "role": "Main Tank",
                         "build": "chrMinstrel",
+                        "override":{
+                            "skills":"Well/CC"
+                        },
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Dam",
+                        "name": "Eliphas",
                         "role": "",
                         "build": "druidBoon",
-                        "gw2Armory": ""
+                        "override":{
+                            "skills":"CC"
+                        },
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": "Winter",
                         "role": "",
                         "build": "bers",
+                        "override":{
+                            "skills":"CC"
+                        },
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "mirageCondi",
+                        "gw2Armory": ""
                     },
                     {
                         "name": "Vengeful",
                         "role": "",
                         "build": "fbDPS",
-                        "gw2Armory": ""
-                    },
-                    {
-                        "name": " ",
-                        "role": "",
-                        "build": "holoPower",
+                        "override":{
+                            "skills":"Consecration",
+                            "specialization":"Consecration"
+                        },
                         "gw2Armory": ""
                     }
                 ],
@@ -1128,30 +1193,47 @@
                         "name": "Polga",
                         "role": "",
                         "build": "chrMinstrel",
+                        "override":{
+                            "skills":"Well/CC"
+                        },
                         "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Arkness",
                         "role": "",
                         "build": "druidBoon",
+                        "override":{
+                            "skills":"Desmina Pusher",                     
+                            "specialization":"Desmina Pusher",
+                            "wep2":"Desmina Pusher"
+                        },
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "Epi Bouncer",
                         "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": "Eliphas",
+                        "name": "Dam",
                         "role": "",
                         "build": "scourgeCondi",
-                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                        "override":{
+                            "skills":"Epidemic"
+                        },
+                        "gw2Armory": ""
                     },
                     {
-                        "name": " ",
+                        "name": "Meat",
                         "role": "",
-                        "build": "holoPower",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Shout"
+                        },
                         "gw2Armory": ""
                     }
                 ]
@@ -1174,33 +1256,16 @@
                         "name": "Damano",
                         "role": "Tank",
                         "build": "chrMinstrel",
+                        "override":{
+                            "skills":"Well/TW"
+                        },
                         "gw2Armory": "http://gw2armory.com/Damano/characters/"
                     },
                     {
-                        "name": "Arkness",
-                        "role": "",
-                        "build": "druidBoon",
-                        "gw2Armory": ""
-                    },
-                    {
-                        "name": "Bouhteille",
-                        "role": "Emergency Boon removal",
-                        "build": "renCondi",
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
-                    },
-                    {
                         "name": "Eliphas",
-                        "role": "",
-                        "build": "holoPower",
+                        "role": "Kite",
+                        "build": "druidBoon",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
-                    }
-                ],
-                "t2": [
-                    {
-                        "name": "Polga",
-                        "role": "orb 3",
-                        "build": "chrBoon",
-                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
                     },
                     {
                         "name": "Winter",
@@ -1209,30 +1274,65 @@
                         "gw2Armory": "http://gw2armory.com/winterflame/characters/"
                     },
                     {
-                        "name": "Vengeful",
+                        "name": "Bouhteille",
                         "role": "",
-                        "build": "dhPower",
-                        "gw2Armory": ""
+                        "build": "spellbrkDPS",
+                        "override":{
+                            "specialization":"Mace/Axe + Axe/Dagger",
+                            "wep1":"Mace/Axe + Axe/Dagger",
+                            "wep2":"Mace/Axe + Axe/Dagger"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
-                        "name": " ",
-                        "role": "",
-                        "build": "weavPowerArc",
-                        "gw2Armory": ""
-                    },
-                    {
-                        "name": " ",
+                        "name": "Sakura",
                         "role": "Orb 2",
-                        "build": "weavPowerArc",
+                        "build": "holoPower",
+                        "override":{
+                            "specialization":"Thermal",
+                            "skills":"CC"
+                        },
                         "gw2Armory": ""
                     }
                 ],
-                "t3": [
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "orb 3",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Chaos",
+                            "skills":"Well/TW"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidBoon",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Meat",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap",
+                            "specialization":"Zeal Signet Share"
+                        },
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Vengeful",
+                        "role": "",
+                        "build": "weavPowerArc",
+                        "gw2Armory": ""
+                    },
                     {
                         "name": "Dam",
-                        "role": "Kite",
-                        "build": "druidBoon",
-                        "gw2Armory": "druidSab"
+                        "role": "",
+                        "build": "any",
+                        "gw2Armory": ""
                     }
                 ]
             }
