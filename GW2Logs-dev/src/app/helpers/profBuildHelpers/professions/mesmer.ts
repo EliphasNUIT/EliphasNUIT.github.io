@@ -162,6 +162,12 @@ export function mesBuildMaker() {
         variant.skills.setHealSkill('Well of Eternity');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Signet of Humility');
+
+        variant = build.addOverride('Aegis/TW', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Well of Eternity');
+        variant.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Signet of Inspiration']);
+        variant.skills.setEliteSkill('Time Warp');
     }
 
     // power

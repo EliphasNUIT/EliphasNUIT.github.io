@@ -71,7 +71,7 @@ class BoonDruidBuild extends RangerBuild {
         this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Quick Draw']);
         this.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
         this.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
-        this.skills.pets = ['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern'];
+        this.skills.pets = ['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern', 'Juvenile Tiger'];
         this.skills.setHealSkill('Glyph of Rejuvenation');
         this.skills.setUtilitySkills(['Glyph of Empowerment', '', '']);
         this.skills.setEliteSkill('Spirit of Nature');
@@ -92,7 +92,7 @@ class MinstrelDruidBuild extends RangerBuild {
         this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Quick Draw']);
         this.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
         this.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
-        this.skills.pets = ['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern'];
+        this.skills.pets = ['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern', 'Juvenile Tiger'];
         this.skills.setHealSkill('Water Spirit');
         this.skills.setUtilitySkills(['Glyph of Empowerment', '', '']);
         this.skills.setEliteSkill('Spirit of Nature');
@@ -144,11 +144,17 @@ export function rangerBuildMaker() {
         variant.skills.setUtilitySkills(['"Protect Me!"', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
-        variant = build.addOverride('Samarog');
+        variant = build.addOverride('CC', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Glyph of Rejuvenation');
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
+
+        variant = build.addOverride('Samarog');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Glyph of Rejuvenation');
+        variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
+        variant.skills.setEliteSkill('Entangle');
 
         variant = build.addOverride('Solo');
         variant.skills = new Skills(build.profession);

@@ -68,13 +68,13 @@ class SpellbreakerBannerBuild extends PowerWarriorBuild {
         this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
         this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
-        this.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         this.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
         this.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
         this.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Kick', 'Banner of Discipline', 'Banner of Strength']);
-        this.skills.setEliteSkill('');
+        this.skills.setEliteSkill('Winds of Disenchantment');
     }
 }
 
@@ -120,7 +120,7 @@ export function warBuildMaker() {
         variant.skills.setHealSkill('Blood Reckoning');
         variant.skills.setEliteSkill('Head Butt');
         variant.skills.setUtilitySkills(['Wild Blow', 'Banner of Discipline', 'Banner of Strength']);
-        
+
         variant = build.addOverride('DPS', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Blood Reckoning');
