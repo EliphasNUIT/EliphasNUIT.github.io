@@ -27,12 +27,6 @@ class CondiScourgeBuild extends NecroBuild {
         this.skills.setHealSkill('Sand Flare');
         this.skills.setUtilitySkills(['Summon Shadow Fiend', 'Trail of Anguish', 'Blood Is Power']);
         this.skills.setEliteSkill('Plaguelands');
-
-        this.specialization.addVariant('Kite', 'Curses', [
-            'Plague Sending',
-            'Master of Corruption',
-            'Parasitic Contagion'
-        ]);
     }
 }
 

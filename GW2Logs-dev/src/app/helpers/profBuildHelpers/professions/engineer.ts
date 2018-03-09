@@ -11,7 +11,7 @@ class EngiBuild extends ProfBuild {
 
 class CondiEngiBuild extends EngiBuild {
     constructor(id, name) {
-        super(id, 'Engineer - Condition - ' + name);
+        super(id, 'Engineer - Condition' + name);
         this.icon += 'engineer.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Renegade');
@@ -33,7 +33,7 @@ class CondiEngiBuild extends EngiBuild {
 }
 
 class PowerHolosmithBuild extends EngiBuild {
-    constructor(id, name, hasVariants = true) {
+    constructor(id, name) {
         super(id, 'Holosmith - Power' + name);
         this.icon += 'holosmith.png';
         this.armor.setSingleStat('Berserker\'s');
@@ -55,14 +55,6 @@ class PowerHolosmithBuild extends EngiBuild {
 
         this.skills.setHealSkill('');
         this.skills.setEliteSkill('Prime Light Beam');
-        if (hasVariants) {
-            this.specialization.addVariant('Orbital', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
-            this.specialization.addVariant('Thermal', 'Firearms', [
-                'High Caliber',
-                'Thermal Vision',
-                'Modified Ammunition'
-            ]);
-        }
     }
 }
 
@@ -87,8 +79,8 @@ class PowerHolosmithSwordBuild extends PowerHolosmithBuild {
 export function engiBuildMaker() {
     let build: ProfBuild = null;
     // Condi
-    /*{
-        build = new CondiEngiBuild('engiCondi', 'Standard');
+    {
+        build = new CondiEngiBuild('engiCondi', '');
 
         build = new CondiEngiBuild('engiCondiMob', 'Mobility');
         build.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
@@ -99,12 +91,11 @@ export function engiBuildMaker() {
         build = new CondiEngiBuild('engiCondiSB', 'Stun Break');
         build.specialization.setSpec('spec3', 'Tools', ['Reactive Lenses', 'Streamlined Kits', 'Kinetic Battery']);
 
-    }*/
+    }
 
     // Power
     {
         build = new PowerHolosmithRifleBuild('holoPower', '');
-        build = new PowerHolosmithSwordBuild('holoPowerSw', '');
     }
 
 }
