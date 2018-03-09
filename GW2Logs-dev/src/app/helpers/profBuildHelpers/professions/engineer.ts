@@ -1,5 +1,8 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
+import { Specialization } from '../data/specialization';
+import { Skills } from '../data/skills';
+import { Weapons } from '../data/weapons';
 
 class EngiBuild extends ProfBuild {
     constructor(id, name) {
@@ -52,7 +55,6 @@ class PowerHolosmithBuild extends EngiBuild {
             'Crystal Configuration: Eclipse',
             'Photonic Blasting Module'
         ]);
-
         this.skills.setHealSkill('');
         this.skills.setEliteSkill('Prime Light Beam');
     }
@@ -62,16 +64,7 @@ class PowerHolosmithRifleBuild extends PowerHolosmithBuild {
     constructor(id, name) {
         super(id, ' - Rifle' + name);
         this.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
-        this.wep1.setTwoHand('Rifle', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
-    }
-}
-
-class PowerHolosmithSwordBuild extends PowerHolosmithBuild {
-    constructor(id, name) {
-        super(id, ' - Sword' + name);
-        this.skills.setUtilitySkills(['Rifle Turret', 'Grenade Kit', 'Laser Disk']);
-        this.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
-        this.wep1.setOffHand('Pistol', 'Berserker\'s', 'Superior Sigil of Air');
+        this.skills.setEliteSkill('Prime Light Beam');
     }
 }
 

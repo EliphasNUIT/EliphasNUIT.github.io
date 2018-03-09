@@ -9,8 +9,8 @@ import { buildDatabase, ProfBuild } from '../helpers/profBuild';
 export class DbDisplayComponent implements OnInit, OnChanges {
 
   @Input() profName: string;
-  @Input() builds: { name: string, id: string }[];
-  selectedBuild: { name: string, id: string };
+  @Input() builds: { name: string, id: string, overrides: string[] }[];
+  selectedBuild: { name: string, id: string, overrides: string[], override: string };
 
   constructor() { }
 
@@ -21,7 +21,7 @@ export class DbDisplayComponent implements OnInit, OnChanges {
     this.selectedBuild = null;
   }
 
-  selectBuild(selectedBuild: { name: string, id: string }) {
+  selectBuild(selectedBuild: { name: string, id: string, overrides: string[], override: string }) {
     this.selectedBuild = selectedBuild;
   }
 

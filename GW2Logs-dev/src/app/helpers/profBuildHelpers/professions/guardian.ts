@@ -1,5 +1,7 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
+import { Specialization } from '../data/specialization';
+import { Skills } from '../data/skills';
 
 
 class GuardBuild extends ProfBuild {
@@ -10,7 +12,7 @@ class GuardBuild extends ProfBuild {
 
 class PowerDHBuild extends GuardBuild {
     constructor(id, name) {
-        super(id, 'Dragonhunter - Power - ' + name);
+        super(id, 'Dragonhunter - Power' + name);
         this.icon += 'dragonhunter.png';
         this.armor.setSingleStat('Berserker\'s');
         this.armor.setSingleRune('Superior Rune of the Scholar');
@@ -31,14 +33,14 @@ class PowerDHBuild extends GuardBuild {
             'Big Game Hunter'
         ]);
         this.skills.setHealSkill('Litany of Wrath');
-        this.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
-        this.skills.setEliteSkill('Dragon\'s Maw');
+        this.skills.setUtilitySkills(['Procession of Blades', '', 'Bane Signet']);
+        this.skills.setEliteSkill('');
     }
 }
 
 class CondiFBBuild extends GuardBuild {
     constructor(id, name) {
-        super(id, 'Firebrand - Condition - ' + name);
+        super(id, 'Firebrand - Condition' + name);
         this.icon += 'firebrand.png';
         this.armor.setStats(['Grieving', 'Sinister', 'Viper\'s', 'Sinister', 'Grieving', 'Sinister']);
         this.armor.setSingleRune('Superior Rune of Balthazar');
@@ -58,12 +60,13 @@ class CondiFBBuild extends GuardBuild {
 
 class SuppFBBuild extends GuardBuild {
     constructor(id, name) {
-        super(id, 'Firebrand - Support - ' + name);
+        super(id, 'Firebrand - Support' + name);
         this.icon += 'firebrand.png';
         this.armor.setSingleStat('Viper\'s');
         this.armor.setSingleRune('Superior Rune of the Firebrand');
         this.consumable.setConsumable('Bowl of Fire Meat Chili', 'Toxic Maintenance Oil');
         this.trinket.setSingleStat('Viper\'s');
+        this.wep1.setMainHand('Sword', 'Viper\'s', 'Superior Sigil of Smoldering');
         this.wep1.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Concentration');
         this.wep2.setMainHand('Axe', 'Viper\'s', 'Superior Sigil of Smoldering');
         this.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
@@ -77,7 +80,7 @@ class SuppFBBuild extends GuardBuild {
 
 class MinstrelFBBuild extends GuardBuild {
     constructor(id, name) {
-        super(id, 'Firebrand - Minstrel - ' + name);
+        super(id, 'Firebrand - Minstrel' + name);
         this.icon += 'firebrand.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Durability');
@@ -98,52 +101,96 @@ export function guardBuildMaker() {
     let build: ProfBuild = null;
     // Power
     {
-        build = new PowerDHBuild('dhPowerZealRad', 'Zeal/Radiance');
+        build = new PowerDHBuild('dhPower', '');
 
-        build = new PowerDHBuild('dhPowerZealRadFury', 'Zeal/Radiance - Fury');
-        build.skills.setEliteSkill('"Feel My Wrath!"');
+        let variant = build.addOverride('Virtue');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
+        variant.specialization.setSpec('spec2', 'Radiance', [
+            'Healer\'s Retribution',
+            'Retribution',
+            'Righteous Instincts'
+        ]);
+        variant.specialization.setSpec('spec3', 'Dragonhunter', [
+            'Piercing Light',
+            'Zealot\'s Aggression',
+            'Big Game Hunter'
+        ]);
 
-        build = new PowerDHBuild('dhPowerZealRadSig', 'Zeal/Radiance - Signet Share');
-        build.specialization.setSpec('spec2', 'Radiance', [
+        variant = build.addOverride('Zeal Signet Share');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Zeal', ['Fiery Wrath', 'Zealous Blade', 'Symbolic Avenger']);
+        variant.specialization.setSpec('spec2', 'Radiance', [
             'Healer\'s Retribution',
             'Retribution',
             'Perfect Inscriptions'
         ]);
+        variant.specialization.setSpec('spec3', 'Dragonhunter', [
+            'Piercing Light',
+            'Zealot\'s Aggression',
+            'Big Game Hunter'
+        ]);
 
-        build = new PowerDHBuild('dhPowerVirtRad', 'Virtues/Radiance');
-        build.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
-
-        build = new PowerDHBuild('dhPowerVirtRadSig', 'Virtues/Radiance - Signet Share');
-        build.specialization.setSpec('spec2', 'Radiance', [
+        variant = build.addOverride('Virtue Signet Share');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
+        variant.specialization.setSpec('spec2', 'Radiance', [
             'Healer\'s Retribution',
             'Retribution',
             'Perfect Inscriptions'
         ]);
-        build.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
+        variant.specialization.setSpec('spec3', 'Dragonhunter', [
+            'Piercing Light',
+            'Zealot\'s Aggression',
+            'Big Game Hunter'
+        ]);
 
+        variant = build.addOverride('Shout/Trap', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
+        variant.skills.setEliteSkill('Dragon\'s Maw');
+
+        variant = build.addOverride('Shout/Shout', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
+        variant.skills.setEliteSkill('"Feel My Wrath!"');
+
+        variant = build.addOverride('Trap/Shout', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
+        variant.skills.setEliteSkill('"Feel My Wrath!"');
+
+        variant = build.addOverride('Trap/Trap', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
+        variant.skills.setEliteSkill('Dragon\'s Maw');
 
     }
 
     // Condi
     {
-        build = new CondiFBBuild('fbDPS', 'UC - Adds');
+        build = new CondiFBBuild('fbDPS', '');
 
-        build = new CondiFBBuild('fbDPSPurg', 'UC - No Adds');
-        build.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
-
-        build = new CondiFBBuild('fbDPSConPurge', 'Consecration');
-        build.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
-        build.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
-
-        build = new CondiFBBuild('fbDPSCC', 'UC - CC');
-        build.skills.setUtilitySkills(['Mantra of Flame', 'Hammer of Wisdom', 'Signet of Wrath']);
+        const variant = build.addOverride('Consecration');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Mantra of Solace');
+        variant.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
+        variant.skills.setEliteSkill('Renewed Focus');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
+        variant.specialization.setSpec('spec2', 'Radiance', ['Right-Hand Strength', 'Radiant Fire', 'Amplified Wrath']);
+        variant.specialization.setSpec('spec3', 'Firebrand', ['Archivist of Whispers', 'Legendary Lore', 'Loremaster']);
     }
 
     // Support
     {
-        build = new MinstrelFBBuild('fbMins', 'Standard');
+        build = new MinstrelFBBuild('fbMins', '');
 
-        build = new SuppFBBuild('fbSupp', 'Standard');
+        build = new SuppFBBuild('fbSupp', '');
     }
 }
 

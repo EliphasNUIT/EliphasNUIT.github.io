@@ -1,5 +1,7 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
+import { Specialization } from '../data/specialization';
+import { Skills } from '../data/skills';
 
 class NecroBuild extends ProfBuild {
     constructor(id, name) {
@@ -59,6 +61,26 @@ export function necroBuildMaker() {
     // Scourge - Condi
     {
         build = new CondiScourgeBuild('scourgeCondi', '');
+        let variant = build.addOverride('Kite');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Summon Blood Fiend');
+        variant.skills.setUtilitySkills(['Summon Shadow Fiend', 'Epidemic', 'Blood Is Power']);
+        variant.skills.setEliteSkill('Plaguelands');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Curses', [
+            'Plague Sending',
+            'Master of Corruption',
+            'Parasitic Contagion'
+        ]);
+        variant.specialization.setSpec('spec2', 'Soul Reaping', ['Unyielding Blast', 'Vital Persistence', 'Dhuumfire']);
+        variant.specialization.setSpec('spec3', 'Scourge', ['Fell Beacon', 'Desert Empowerment', 'Sand Savant']);
+
+        variant = build.addOverride('Epidemic');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Sand Flare');
+        variant.skills.setUtilitySkills(['Summon Shadow Fiend', 'Epidemic', 'Blood Is Power']);
+        variant.skills.setEliteSkill('Plaguelands');
+
     }
 
     // Reaper - Condi

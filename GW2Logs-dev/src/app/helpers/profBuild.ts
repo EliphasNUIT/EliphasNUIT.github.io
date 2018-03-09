@@ -176,6 +176,16 @@ export class ProfBuild {
         this.overrides.set(name, res);
         return res;
     }
+
+    getOverrides(): string[] {
+        const res = ['Main'];
+        this.overrides.forEach(function (value, key, map) {
+            if (value.open) {
+                res.push(key);
+            }
+        });
+        return res;
+    }
 }
 
 
