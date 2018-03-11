@@ -159,6 +159,7 @@ export function warBuildMaker() {
         variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
 
         variant = build.addOverride('Dagger/Axe + Axe/Dagger');
+        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
         variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
         variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
