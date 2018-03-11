@@ -149,8 +149,8 @@ export function warBuildMaker() {
         variant = build.addOverride('Mace/Axe + Axe/Dagger');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
-        variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
@@ -159,10 +159,9 @@ export function warBuildMaker() {
         variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
 
         variant = build.addOverride('Dagger/Axe + Axe/Dagger');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
-        variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
