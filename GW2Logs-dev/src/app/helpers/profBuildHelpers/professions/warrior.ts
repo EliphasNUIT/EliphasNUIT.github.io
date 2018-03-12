@@ -84,7 +84,7 @@ class WarriorBannerBuild extends PowerWarriorBuild {
         this.icon += 'warrior.png';
         this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
-        this.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        this.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Throw Bolas', 'Banner of Discipline', 'Banner of Strength']);
         this.skills.setEliteSkill('Signet of Rage');
@@ -96,7 +96,7 @@ class SpellbreakerDPSBuild extends PowerWarriorBuild {
         super(id, 'Spellbreaker - DPS' + name);
         this.icon += 'spellbreaker.png';
         this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
-        this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Kick', 'Bull\'s Charge', 'Signet of Might']);
@@ -137,7 +137,7 @@ export function warBuildMaker() {
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
         variant.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
-        variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Shield', 'Berserker\'s', 'Superior Sigil of Paralyzation');
@@ -149,7 +149,7 @@ export function warBuildMaker() {
         variant = build.addOverride('Mace/Axe + Axe/Dagger');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
@@ -161,7 +161,7 @@ export function warBuildMaker() {
         variant = build.addOverride('Dagger/Axe + Axe/Dagger');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
+        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
