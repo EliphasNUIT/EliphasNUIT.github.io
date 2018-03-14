@@ -29,6 +29,13 @@ export class CompositionDetailComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.selectedChar = null;
+    for (const key in localStorage) {
+      if (localStorage.hasOwnProperty(key)) {
+        if (key.includes('GW2A') && key.includes('DATA')) {
+          localStorage.removeItem(key);
+        }
+      }
+    }
   }
 
   onSelect(char: Character): void {

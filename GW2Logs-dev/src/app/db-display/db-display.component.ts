@@ -19,7 +19,15 @@ export class DbDisplayComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.selectedBuild = null;
+    for (const key in localStorage) {
+      if (localStorage.hasOwnProperty(key)) {
+        if (key.includes('GW2A') && key.includes('DATA')) {
+          localStorage.removeItem(key);
+        }
+      }
+    }
   }
+
 
   selectBuild(selectedBuild: { name: string, id: string, overrides: string[], override: string }) {
     this.selectedBuild = selectedBuild;
