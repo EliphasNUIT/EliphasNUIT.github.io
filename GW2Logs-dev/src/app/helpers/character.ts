@@ -36,8 +36,8 @@ export class Character {
     }) {
         this.name = params.name;
         this.build = buildDatabase.get(params.build);
-        this.gw2Armory = params.gw2Armory;
-        this.role = params.role;
+        this.gw2Armory = params.gw2Armory ? params.gw2Armory : '';
+        this.role = params.role ? params.role : '' ;
         this.override = params.override;
     }
 
