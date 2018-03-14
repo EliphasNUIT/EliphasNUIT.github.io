@@ -2,6 +2,9 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 import { Specialization } from '../data/specialization';
 import { Skills } from '../data/skills';
+import { Weapons } from '../data/weapons';
+import { Trinket } from '../data/trinket';
+import { Armor } from '../data/armor';
 
 
 class GuardBuild extends ProfBuild {
@@ -80,7 +83,7 @@ class SuppFBBuild extends GuardBuild {
 
 class MinstrelFBBuild extends GuardBuild {
     constructor(id, name) {
-        super(id, 'Firebrand - Minstrel' + name);
+        super(id, 'Firebrand - Heal' + name);
         this.icon += 'firebrand.png';
         this.armor.setSingleStat('Minstrel\'s');
         this.armor.setSingleRune('Superior Rune of Durability');
@@ -188,7 +191,30 @@ export function guardBuildMaker() {
 
     // Support
     {
-        build = new MinstrelFBBuild('fbMins', '');
+        build = new MinstrelFBBuild('fbHeal', '');
+        let variant = build.addOverride('Black Kite');
+        variant.trinket = new Trinket();
+        variant.trinket.setStats(['Minstrel\'s', 'Minstrel\'s', 'Minstrel\'s', 'Magi\'s', 'Magi\'s', 'Magi\'s']);
+        variant.wep1 = new Weapons(build.profession);
+        variant.wep1.setMainHand('Mace', 'Minstrel\'s', 'Superior Sigil of Transference');
+        variant.wep1.setOffHand('Shield', 'Minstrel\'s', 'Superior Sigil of Concentration');
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setTwoHand('Staff', 'Minstrel\'s', 'Superior Sigil of Transference', 'Superior Sigil of Concentration');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Mantra of Solace');
+        variant.skills.setUtilitySkills(['Mantra of Potence', 'Mantra of Lore', 'Signet of Mercy']);
+        variant.skills.setEliteSkill('Signet of Courage');
+
+        variant = build.addOverride('Harrier');
+        variant.armor = new Armor(build.profession.armor);
+        variant.armor.setSingleStat('Harrier\'s');
+        variant.armor.setSingleRune('Superior Rune of the Monk');
+        variant.trinket = new Trinket();
+        variant.trinket.setSingleStat('Harrier\'s');
+        variant.wep1 = new Weapons(build.profession);
+        variant.wep1.setMainHand('Mace', 'Harrier\'s', 'Superior Sigil of Transference');
+        variant.wep2 = new Weapons(build.profession);
+        variant.wep2.setOffHand('Shield', 'Harrier\'s', 'Superior Sigil of Water');
 
         build = new SuppFBBuild('fbSupp', '');
     }
