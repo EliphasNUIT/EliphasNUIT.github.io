@@ -56,13 +56,6 @@ class PowerHolosmithBuild extends EngiBuild {
             'Photonic Blasting Module'
         ]);
         this.skills.setHealSkill('');
-        this.skills.setEliteSkill('Prime Light Beam');
-    }
-}
-
-class PowerHolosmithRifleBuild extends PowerHolosmithBuild {
-    constructor(id, name) {
-        super(id, ' - Rifle' + name);
         this.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
         this.skills.setEliteSkill('Prime Light Beam');
     }
@@ -74,22 +67,80 @@ export function engiBuildMaker() {
     // Condi
     {
         build = new CondiEngiBuild('engiCondi', '');
+        // Variants
+        let variant = build.addOverride('Mobility');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('Healing Turret');
+        variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
+        variant.skills.setEliteSkill('Elite Mortar Kit');
 
-        build = new CondiEngiBuild('engiCondiMob', 'Mobility');
-        build.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
-
-        build = new CondiEngiBuild('engiCondiCC', 'CC');
-        build.skills.setHealSkill('A.E.D.');
-
-        build = new CondiEngiBuild('engiCondiSB', 'Stun Break');
-        build.specialization.setSpec('spec3', 'Tools', ['Reactive Lenses', 'Streamlined Kits', 'Kinetic Battery']);
-
+        variant = build.addOverride('CC');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('A.E.D.');
+        variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Flamethrower']);
+        variant.skills.setEliteSkill('Elite Mortar Kit');
     }
 
     // Power
     {
-        build = new PowerHolosmithRifleBuild('holoPower', '');
+        build = new PowerHolosmithBuild('holoPower', '');
+        // Variants
+        let variant = build.addOverride('Orbital');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
+        variant.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Pinpoint Distribution',
+            'Modified Ammunition'
+        ]);
+        variant.specialization.setSpec('spec3', 'Holosmith', [
+            'Solar Focusing Lens',
+            'Crystal Configuration: Eclipse',
+            'Photonic Blasting Module'
+        ]);
+        //
+        variant = build.addOverride('Thermal');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Shrapnel']);
+        variant.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+        variant.specialization.setSpec('spec3', 'Holosmith', [
+            'Solar Focusing Lens',
+            'Crystal Configuration: Eclipse',
+            'Photonic Blasting Module'
+        ]);
+        //
+        variant = build.addOverride('Thermal/Orbital');
+        variant.specialization = new Specialization(build.profession);
+        variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
+        variant.specialization.setSpec('spec2', 'Firearms', [
+            'High Caliber',
+            'Thermal Vision',
+            'Modified Ammunition'
+        ]);
+        variant.specialization.setSpec('spec3', 'Holosmith', [
+            'Solar Focusing Lens',
+            'Crystal Configuration: Eclipse',
+            'Photonic Blasting Module'
+        ]);
+        //
+        variant = build.addOverride('Sword');
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('');
+        variant.skills.setUtilitySkills(['Rifle Turret', 'Grenade Kit', 'Laser Disk']);
+        variant.skills.setEliteSkill('Prime Light Beam');
+        variant.wep1 = new Weapons(build.profession);
+        variant.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
+        variant.wep1.setOffHand('Pistol', 'Berserker\'s', 'Superior Sigil of Air');
+        //
+        variant = build.addOverride('CC', false);
+        variant.skills = new Skills(build.profession);
+        variant.skills.setHealSkill('A.E.D.');
+        variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
+        variant.skills.setEliteSkill('Prime Light Beam');
     }
 
 }
-
