@@ -78,6 +78,9 @@
                                     <a href="../modules/AppRoutingModule.html"  data-type="entity-link" class="active" >AppRoutingModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/BossesModule.html" >BossesModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
@@ -104,7 +107,7 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                    <a href="../components/BossesComponent.html" >BossesComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -125,10 +128,10 @@
                                     <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/MainComponent.html" >MainComponent</a>
+                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                    <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -478,6 +481,9 @@
                                            <a href="../modules/AppRoutingModule.html"  data-type="entity-link" class="active" >AppRoutingModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/BossesModule.html" >BossesModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                        </li>
                                        <li class="link">
@@ -504,7 +510,7 @@
                                            <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                           <a href="../components/BossesComponent.html" >BossesComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -525,10 +531,10 @@
                                            <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/MainComponent.html" >MainComponent</a>
+                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                           <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -860,13 +866,13 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 
-import { MainComponent } from &#x27;./main/main.component&#x27;;
+import { BossesComponent } from &#x27;./bosses/bosses.component&#x27;;
 import { DbBuildComponent } from &#x27;./database/db-build/db-build.component&#x27;;
 
 const routes: Routes &#x3D; [
   { path: &#x27;&#x27;, redirectTo: &#x27;/main&#x27;, pathMatch: &#x27;full&#x27; },
   { path: &#x27;db&#x27;, component: DbBuildComponent },
-  { path: &#x27;main&#x27;, component: MainComponent }
+  { path: &#x27;main&#x27;, component: BossesComponent }
 ];
 
 @NgModule({

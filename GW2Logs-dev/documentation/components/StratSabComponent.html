@@ -78,6 +78,9 @@
                                     <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/BossesModule.html" >BossesModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
@@ -104,7 +107,7 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                    <a href="../components/BossesComponent.html" >BossesComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -125,10 +128,10 @@
                                     <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/MainComponent.html" >MainComponent</a>
+                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                    <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -478,6 +481,9 @@
                                            <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/BossesModule.html" >BossesModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                        </li>
                                        <li class="link">
@@ -504,7 +510,7 @@
                                            <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                           <a href="../components/BossesComponent.html" >BossesComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -525,10 +531,10 @@
                                            <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/MainComponent.html" >MainComponent</a>
+                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                           <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -847,7 +853,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/strat/strat-sab/strat-sab.component.ts</code>
+    <code>src/app/bosses/strat/strat-sab/strat-sab.component.ts</code>
 </p>
 
 
@@ -931,7 +937,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/strat/strat-sab/strat-sab.component.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/bosses/strat/strat-sab/strat-sab.component.ts:8</a></div>
                                 </td>
                             </tr>
     
@@ -970,7 +976,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/strat/strat-sab/strat-sab.component.ts:12</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/bosses/strat/strat-sab/strat-sab.component.ts:12</a></div>
                                 </td>
                             </tr>
     
@@ -1123,7 +1129,7 @@ export class StratSabComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class=\'uk-margin-large-top uk-flex uk-flex-middle uk-flex-column\'>  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">    <div>      <a href="#">Mécaniques de l\'arène</a>    </div>    <div>      <a href="#">Mécaniques du boss</a>    </div>    <div>      <a href="#">Split</a>    </div>  </ul></div><div class=\'uk-margin-left uk-margin-right\'>  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center">    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Platform integrity - </span> Durant tous le combat, la plateforme prend des dégats par diverses sources, si elle          est détruite c\'est le wipe.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Cannons - </span> Un cannon va apparaître toutes les 30 secondes en suivant le pattern Sud-Ouest-Nort-Est-Sud-Nord-Ouest-Est.          Il tire sur la plateforme endommageant cette dernière et les joueurs se trouvant dans l\'explosion. Un joueur qui          part sur un cannon ne peut pas aller sur un autre cannon pendant 50 secondes. Après l\'enrage, toutes les 30 secondes,          les 4 cannons réapparaissent.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Heavy Bomb (Bombe lourde) - </span> Durant le split, des bombes apparaissent régulièrement sur la plateforme et          explosent 10 secondes plus tard, infligeant des dégats lourds à la plateforme. Il faut aller intéragir avec la          bombe pour la détruire.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Sapper Bomb (Grenade) - </span> Grenade à lancer sur les plateformes de lancement afin d\'envoyer un joueur vers          un cannon. La grenade est perdue si elle n\'est pas lancée en 5 secondes.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Split - </span> Le boss split à 75%, 50% et 25%, laissant sa place à un mini-boss. Le boss revient après un certain          temps ou quand le mini-boss n\'a plus que 15% de sa vie et lance directement son mur de flamme.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Aura - </span> Pas d\'aura.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Tanking - </span> Pas de mécanique de tanking.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Firestorm - </span> En moyenne toutes les 45 secondes le boss lancer un mur de flamme qui tourne dans le sens contraire          des aiguilles d\'une montre. Tue instantanément tous les joueurs touchés. Non esquivable mais distortable et blinkable.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Time Bomb - </span> Le joueur le plus proche du boss est choisi et provoque une explosion 3 secondes plus tard          dans une zone assez large provoquant des dégats importants à ses alliés. Les joueurs au sol sont tués directement.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Flak Shot - </span> Envoie 3 boules de feu sur le joueur le plus éloigné. Les boules crééent une zone de feu à          l\'impact endommageant et brulant les joueurs se trouvant dessus.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Kernan - </span> Le premier mini boss. Triple attaque en cône avec dans l\'ordre une ouverture de 15, 30 et 45 degrés.          Inflige des dégats importants et des stacks de saignement.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Knuckles - </span> Le deuxième mini boss. Attaque avec breakbar, si la breakbar n\'est pas faîte les joueurs sont          balancés vers l\'extérieur de l\'arène, se faisant potentiellement ejectés.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Karde - </span> Le dernier mini boss. Attaque lance flamme. Fait apparaitre une tourelle lance-flamme toutes les          20 secondes.        </li>      </ul>    </div>  </ul></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailComponent', 'selector': 'app-build-detail'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'StratSabComponent'};
 </script>

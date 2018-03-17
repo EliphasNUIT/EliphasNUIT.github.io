@@ -78,6 +78,9 @@
                                     <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/BossesModule.html" >BossesModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
@@ -104,7 +107,7 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                    <a href="../components/BossesComponent.html" >BossesComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -125,10 +128,10 @@
                                     <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/MainComponent.html" >MainComponent</a>
+                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                    <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -478,6 +481,9 @@
                                            <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/BossesModule.html" >BossesModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                        </li>
                                        <li class="link">
@@ -504,7 +510,7 @@
                                            <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                           <a href="../components/BossesComponent.html" >BossesComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -525,10 +531,10 @@
                                            <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/MainComponent.html" >MainComponent</a>
+                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                           <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -1283,7 +1289,7 @@ export class DbBuildComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><h1 class="uk-text-center uk-text-bold">  Les Builds</h1><div class="uk-margin-large-left uk-margin-large-right uk-flex uk-flex-center uk-flex-wrap uk-flex-middle uk-margin-bottom">  <div class=\'my-grid\'>    <div *ngFor="let profession of professions" class="uk-inline uk-margin-small-left uk-margin-small-right uk-margin-top uk-margin-bottom uk-transition-toggle">      <span (click)="onSelect(profession)" [class.selected]="selectedProfession && selectedProfession.name === profession.name"        class="selector uk-border-rounded class-selector uk-flex uk-flex-around uk-background-cover uk-flex-middle " [ngStyle]=\'profession.getStyle()\'        [ngClass]=\'profession.getClass()\'>        <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">          {{profession.name | uppercase}}        </div>      </span>    </div>  </div></div><div *ngIf=\'selectedProfession\'>  <app-db-display [profName]="selectedProfession.name" [builds]="selectedProfession.builds"></app-db-display></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailComponent', 'selector': 'app-build-detail'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DbBuildComponent'};
 </script>

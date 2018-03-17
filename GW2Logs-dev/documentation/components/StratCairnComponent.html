@@ -78,6 +78,9 @@
                                     <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/BossesModule.html" >BossesModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
@@ -104,7 +107,7 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                    <a href="../components/BossesComponent.html" >BossesComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -125,10 +128,10 @@
                                     <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/MainComponent.html" >MainComponent</a>
+                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                    <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/StratCairnComponent.html"  data-type="entity-link" class="active" >StratCairnComponent</a>
@@ -478,6 +481,9 @@
                                            <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/BossesModule.html" >BossesModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                        </li>
                                        <li class="link">
@@ -504,7 +510,7 @@
                                            <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                           <a href="../components/BossesComponent.html" >BossesComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -525,10 +531,10 @@
                                            <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/MainComponent.html" >MainComponent</a>
+                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                           <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/StratCairnComponent.html"  data-type="entity-link" class="active" >StratCairnComponent</a>
@@ -847,7 +853,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/strat/strat-cairn/strat-cairn.component.ts</code>
+    <code>src/app/bosses/strat/strat-cairn/strat-cairn.component.ts</code>
 </p>
 
 
@@ -931,7 +937,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/strat/strat-cairn/strat-cairn.component.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/bosses/strat/strat-cairn/strat-cairn.component.ts:8</a></div>
                                 </td>
                             </tr>
     
@@ -970,7 +976,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/strat/strat-cairn/strat-cairn.component.ts:12</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/bosses/strat/strat-cairn/strat-cairn.component.ts:12</a></div>
                                 </td>
                             </tr>
     
@@ -1101,7 +1107,7 @@ export class StratCairnComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class=\'uk-margin-large-top uk-flex uk-flex-middle uk-flex-column\'>  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">    <div>      <a href="#">Mécaniques de l\'arène</a>    </div>    <div>      <a href="#">Mécaniques de base</a>    </div>  </ul></div><div class=\'uk-margin-left uk-margin-right\'>  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center">    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Unseen Burden - </span> Ralentit la cible de 1% par stack. Stack max de 99.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Cosmic Aura - </span> Aura qui endommage les joueurs.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Action Spéciale - </span> Une action spéciale permet de se se déplacer de la même manière que le 3 du bâton du          druide.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Shared Agony - </span> Toutes les 20 secondes, le joueur le plus éloigné, n\'ayant pas déjà le debuff, est choisi          par le boss. 3 joueurs peuvent avoir le debuff en même temps. Inflige de légers dégâts sur le joueur choisi et          de lourds dégâts sur une zone autour. Persiste pendant 60 secondes.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Displacement - </span> Trois zones rouges pop sous le raid, les joueurs le prennant se font téléporter de manière          aléatoire sur l\'arène.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Tanking - </span> Le boss vise le joueur le plus éloigné.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Energy Surge - </span> Le boss se téléporte sur 5 endroits différents, laissant une zone verte sur son passage.          Les joueurs se trouvant sur le chemin de tp se font bump. Lance Spatial Manipulation à la fin de l\'attaque.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Meteor Swarm - </span> Lance 8 projectiles qui bumpent les joueurs.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Orbital Sweep - </span> Attaque sur 360 degrés. Les joueurs prenant le coup se font bump. Le bump est puissant          et peut faire sortir le joueur de l\'arène. Lance Spatial Manipulation à la fin de l\'attaque.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Spatial Manipulation - </span> Inflige de gros dégâts et fait flotter le joueur. Ajoute des stacks de Unseen Burden.          On l\'évite en se positionnant sur une zone verte. Les petites zones requièrent 1 personne au moins pour fonctionner,          les moyennes 2 et les larges 4. Si toutes les zones sont de la même taille, pas d\'exigence sur le nombre de joueurs.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Gravity Wave - </span> Attaque de type vague vers l\'extérieur. Repousse le joueur le prennant. 3 vagues par attaque.        </li>      </ul>    </div>  </ul></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailComponent', 'selector': 'app-build-detail'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'StratCairnComponent'};
 </script>

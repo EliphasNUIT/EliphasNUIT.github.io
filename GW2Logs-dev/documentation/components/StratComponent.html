@@ -78,6 +78,9 @@
                                     <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/BossesModule.html" >BossesModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
@@ -104,7 +107,7 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                    <a href="../components/BossesComponent.html" >BossesComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -125,10 +128,10 @@
                                     <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/MainComponent.html" >MainComponent</a>
+                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                    <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -478,6 +481,9 @@
                                            <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/BossesModule.html" >BossesModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                        </li>
                                        <li class="link">
@@ -504,7 +510,7 @@
                                            <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                           <a href="../components/BossesComponent.html" >BossesComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -525,10 +531,10 @@
                                            <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/MainComponent.html" >MainComponent</a>
+                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NavigationBarComponent.html" >NavigationBarComponent</a>
+                                           <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -847,7 +853,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/strat/strat.component.ts</code>
+    <code>src/app/bosses/strat/strat.component.ts</code>
 </p>
 
 
@@ -945,7 +951,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/strat/strat.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/bosses/strat/strat.component.ts:11</a></div>
                                 </td>
                             </tr>
     
@@ -971,7 +977,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                        <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/strat/strat.component.ts:11</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/bosses/strat/strat.component.ts:11</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1008,7 +1014,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/strat/strat.component.ts:15</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/bosses/strat/strat.component.ts:15</a></div>
                                 </td>
                             </tr>
     
@@ -1031,7 +1037,7 @@
 
     <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
-import { Boss } from &#x27;../helpers/boss&#x27;;
+import { Boss } from &#x27;../../helpers/boss&#x27;;
 
 @Component({
   selector: &#x27;app-strat&#x27;,
@@ -1121,7 +1127,7 @@ export class StratComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div *ngIf=\'boss\'>  <div [ngSwitch]=\'boss.shortName\' class="my-mecs">    <div *ngSwitchCase="\'vg\'">      <app-strat-vg></app-strat-vg>    </div>    <div *ngSwitchCase="\'gorse\'">      <app-strat-gorse></app-strat-gorse>    </div>    <div *ngSwitchCase="\'sab\'">      <app-strat-sab></app-strat-sab>    </div>    <div *ngSwitchCase="\'sloth\'">      <app-strat-sloth></app-strat-sloth>    </div>    <div *ngSwitchCase="\'matt\'">      <app-strat-mat></app-strat-mat>    </div>    <div *ngSwitchCase="\'kc\'">      <app-strat-kc></app-strat-kc>    </div>    <div *ngSwitchCase="\'xera\'">      <app-strat-xera></app-strat-xera>    </div>    <div *ngSwitchCase="\'cairn\'">      <app-strat-cairn></app-strat-cairn>    </div>    <div *ngSwitchCase="\'mo\'">      <app-strat-mo></app-strat-mo>    </div>    <div *ngSwitchCase="\'sam\'">      <app-strat-sam></app-strat-sam>    </div>    <div *ngSwitchCase="\'dei\'">      <app-strat-dei></app-strat-dei>    </div>    <div *ngSwitchCase="\'desmina\'">      <app-strat-ss></app-strat-ss>    </div>    <div *ngSwitchCase="\'dhuum\'">      <app-strat-dhuum></app-strat-dhuum>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailComponent', 'selector': 'app-build-detail'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'StratComponent'};
 </script>

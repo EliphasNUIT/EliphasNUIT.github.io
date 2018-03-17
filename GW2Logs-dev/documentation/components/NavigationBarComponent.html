@@ -78,6 +78,9 @@
                                     <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/BossesModule.html" >BossesModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
@@ -104,7 +107,7 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                    <a href="../components/BossesComponent.html" >BossesComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -125,10 +128,10 @@
                                     <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/MainComponent.html" >MainComponent</a>
+                                    <a href="../components/NavigationBarComponent.html"  data-type="entity-link" class="active" >NavigationBarComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NavigationBarComponent.html"  data-type="entity-link" class="active" >NavigationBarComponent</a>
+                                    <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -478,6 +481,9 @@
                                            <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/BossesModule.html" >BossesModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                        </li>
                                        <li class="link">
@@ -504,7 +510,7 @@
                                            <a href="../components/AppComponent.html" >AppComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/BuildDetailComponent.html" >BuildDetailComponent</a>
+                                           <a href="../components/BossesComponent.html" >BossesComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CompositionDetailComponent.html" >CompositionDetailComponent</a>
@@ -525,10 +531,10 @@
                                            <a href="../components/LogsDetailComponent.html" >LogsDetailComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/MainComponent.html" >MainComponent</a>
+                                           <a href="../components/NavigationBarComponent.html"  data-type="entity-link" class="active" >NavigationBarComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NavigationBarComponent.html"  data-type="entity-link" class="active" >NavigationBarComponent</a>
+                                           <a href="../components/SpecDetailComponent.html" >SpecDetailComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/StratCairnComponent.html" >StratCairnComponent</a>
@@ -1519,7 +1525,7 @@ export class NavigationBarComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" class="avoid-click">    <nav class="uk-navbar-container uk-dark my-navbar" uk-navbar>        <div class="uk-navbar-center accept-click">            <ul class="uk-navbar-nav">                <li>                    <a class="my-title-nav uk-text-large uk-text-bold" href="#">Navigation</a>                    <div class="uk-navbar-dropdown my-navbar-dropdown">                        <div class="uk-navbar-dropdown-grid" uk-grid>                            <div>                                <ul class="uk-nav uk-navbar-dropdown-nav">                                    <li>                                        <a routerLink="/main">Les Boss</a>                                    </li>                                    <li>                                        <a routerLink="/db">Les Builds</a>                                    </li>                                </ul>                            </div>                        </div>                    </div>                </li>                <li>                    <a class="my-title-nav uk-text-large uk-text-bold" href="https://framadate.org/TOaODOIfn3cRoSba" target="calendar">Inscription</a>                </li>                <li>                    <a class="my-title-nav uk-text-large uk-text-bold" href="https://www.gw2raidar.com/info-help" target="Logs">Logs</a>                </li>                <li>                    <a class="my-title-nav uk-text-large uk-text-bold" href="#">Les Archives</a>                    <div class="uk-navbar-dropdown my-navbar-dropdown">                        <div class="uk-navbar-dropdown-grid" uk-grid>                            <div>                                <ul class="uk-nav uk-navbar-dropdown-nav">                                    <li>                                        <a href="logs/ressources.zip" download>Archives</a>                                    </li>                                    <li>                                        <a href="logs/ressources2.zip" download>Archives 2</a>                                    </li>                                </ul>                            </div>                        </div>                    </div>                </li>                <li>                    <a class="my-title-nav uk-text-large uk-text-bold" href="#">Liens Utiles</a>                    <div class="uk-navbar-dropdown my-navbar-dropdown uk-navbar-dropdown-width-2">                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>                            <div>                                <ul class="uk-nav uk-navbar-dropdown-nav">                                    <li class="uk-nav-header uk-text-bold">Addons</li>                                    <li *ngFor="let addon of Addons">                                        <a href={{addon.ref}} target={{addon.target}}> {{addon.text}}</a>                                    </li>                                </ul>                            </div>                            <div>                                <ul class="uk-nav uk-navbar-dropdown-nav">                                    <li class="uk-nav-header uk-text-bold">Builds</li>                                    <li *ngFor="let build of Builds">                                        <a href={{build.ref}} target={{build.target}}> {{build.text}}</a>                                    </li>                                </ul>                            </div>                            <div>                                <ul class="uk-nav uk-navbar-dropdown-nav">                                    <li class="uk-nav-header uk-text-bold">Strats</li>                                    <li *ngFor="let strat of Strats">                                        <a href={{strat.ref}} target={{strat.target}}> {{strat.text}}</a>                                    </li>                                </ul>                            </div>                            <div>                                <ul class="uk-nav uk-navbar-dropdown-nav">                                    <li class="uk-nav-header uk-text-bold">Divers</li>                                    <li *ngFor="let diver of Divers">                                        <a href={{diver.ref}} target={{diver.target}}> {{diver.text}}</a>                                    </li>                                </ul>                            </div>                        </div>                    </div>                </li>            </ul>        </div>    </nav></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailComponent', 'selector': 'app-build-detail'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavigationBarComponent'};
 </script>

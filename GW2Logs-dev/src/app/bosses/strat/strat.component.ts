@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Boss } from '../helpers/boss';
+import { Boss } from '../../helpers/boss';
 
 @Component({
   selector: 'app-strat',

@@ -7,9 +7,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
-import { StratModule } from './strat/strat.module';
 import { DatabaseModule } from './database/database.module';
-import { DisplayBuildModule } from './display-build/display-build.module';
 import { BossesModule } from './bosses/bosses.module';
 
 
@@ -23,9 +21,7 @@ import { BossesModule } from './bosses/bosses.module';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    StratModule,
     DatabaseModule,
-    DisplayBuildModule,
     BossesModule
   ],
   providers: [],
