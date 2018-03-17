@@ -3,13 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "compodoc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -d ../docs/documentation",
+    "docs": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -d ../docs/documentation",
     "ng": "ng",
     "start": "ng serve --deleteOutputPath=false",
     "build": "ng build --base-href=./ --prod --build-optimizer",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
