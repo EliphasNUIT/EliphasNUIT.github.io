@@ -27,10 +27,7 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     specialization: string,
     profSkills: string,
     skills: string
-} = null;
-  oldName = '';
-  cacheArray = ['traits', 'profSkills', 'skills', 'pets', 'armor', 'trinket', 'wep1', 'wep2', 'consum'];
-  currentCache: any;
+  } = null;
 
   constructor(private sanitizer: DomSanitizer) {
   }

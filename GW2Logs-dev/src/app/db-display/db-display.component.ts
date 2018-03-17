@@ -40,4 +40,11 @@ export class DbDisplayComponent implements OnInit, OnChanges {
     return null;
   }
 
+  getOverride(): string {
+    if (this.selectedBuild) {
+      return this.selectedBuild.override;
+    }
+    return 'Main';
+  }
+
 }

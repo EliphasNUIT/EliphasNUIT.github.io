@@ -6,7 +6,7 @@
   <div class='uk-flex uk-flex-row uk-flex-between uk-margin-right uk-margin-left'>
     <app-db-selector [builds]="builds" [profName]="profName" (selectedBuildEmit)="selectBuild($event)"></app-db-selector>
     <div class='uk-margin-large-left my-build-display'>
-      <app-display-build [build]="getBuild()" [mainOverride]="selectedBuild && selectedBuild.override"></app-display-build>
+      <app-display-build [build]="getBuild()" [mainOverride]="getOverride()"></app-display-build>
     </div>
 
   </div>

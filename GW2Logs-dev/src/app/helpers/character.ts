@@ -77,7 +77,8 @@ export class Character {
         wep1: string,
         wep2: string,
         specialization: string,
-        profSkills: string
+        profSkills: string,
+        skills: string
     } {
         return this.override;
     }
