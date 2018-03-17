@@ -1,7 +1,13 @@
 import { items } from '../professionUtilities/items';
 import { stats } from '../professionUtilities/stats';
 
+/**
+ * Weapon data
+ */
 const weapons = items.weapons;
+/**
+ * Sigil data
+ */
 const sigils = items.sigils;
 
 export class Weapons {

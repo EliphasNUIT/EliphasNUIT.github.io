@@ -100,6 +100,9 @@ class MinstrelFBBuild extends GuardBuild {
     }
 }
 
+/**
+ * Add guardian builds to the database
+ */
 export function guardBuildMaker() {
     let build: ProfBuild = null;
     // Power

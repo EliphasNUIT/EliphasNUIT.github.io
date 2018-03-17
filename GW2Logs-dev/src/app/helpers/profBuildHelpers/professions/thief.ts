@@ -70,6 +70,9 @@ class CondiDaredevilBuild extends ThiefBuild {
     }
 }
 
+/**
+ * Add thief builds to the database
+ */
 export function thiefBuildMaker() {
     let build: ProfBuild = null;
     // Power

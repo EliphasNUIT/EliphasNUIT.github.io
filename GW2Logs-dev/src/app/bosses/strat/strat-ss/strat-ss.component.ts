@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Soulless Horror strat component
+ */
 @Component({
   selector: 'app-strat-ss',
   templateUrl: './strat-ss.component.html',
@@ -7,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StratSsComponent implements OnInit {
 
+  /**
+   * Create a Soulless Horror strat component
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 

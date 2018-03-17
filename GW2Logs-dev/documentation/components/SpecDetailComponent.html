@@ -194,9 +194,6 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/ArmorData.html" >ArmorData</a>
-                                </li>
-                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -345,9 +342,6 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -603,9 +597,6 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/ArmorData.html" >ArmorData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -756,9 +747,6 @@
                                            <a href="../classes/Trinket.html" >Trinket</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/TrinketData.html" >TrinketData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -868,6 +856,13 @@
     <code>src/app/bosses/spec-detail/spec-detail.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Spec detail component</p>
+
+    </p>
 
 
     <p class="comment">
@@ -966,10 +961,16 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:16</a></div>
                                 </td>
                             </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Create a spec detail component</p>
+    </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
     </section>
@@ -984,6 +985,8 @@
                             <code>character</code>
                         </td>
                         <td class="col-md-10">
+                            <div><p>Input character data</p>
+</div>
                               <p>
                                 <em>Type:</em>    <code><a href="../classes/Character.html" target="_self" >Character</a></code>
 
@@ -992,7 +995,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                        <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:11</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:16</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1029,12 +1032,14 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:15</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:27</a></div>
                                 </td>
                             </tr>
     
                     <tr>
                         <td class="col-md-4">
+                                <div class="io-description"><p>Get css class of the spec</p>
+    </div>
     
                                 <div class="io-description">
                                         <b>Parameters :</b>
@@ -1044,6 +1049,7 @@
                                                     <td>Name</td>
                                                         <td>Type</td>
                                                     <td>Optional</td>
+                                                        <td>Description</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -1059,6 +1065,10 @@
                                                         </td>
                                                         
     
+                                                            <td>
+                                                                    <code><p>Big text or not</p>
+    </code>
+                                                            </td>
                                                     </tr>
                                             </tbody>
                                         </table>
@@ -1098,12 +1108,14 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:27</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/bosses/spec-detail/spec-detail.component.ts:42</a></div>
                                 </td>
                             </tr>
     
                     <tr>
                         <td class="col-md-4">
+                                <div class="io-description"><p>Todo on init</p>
+    </div>
     
                                 <div class="io-description">
                                     <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -1123,17 +1135,29 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input} from &#x27;@angular/core&#x27;;
 import { Character } from &#x27;../../helpers/character&#x27;;
 
+/**
+ * Spec detail component
+ */
 @Component({
   selector: &#x27;app-spec-detail&#x27;,
   templateUrl: &#x27;./spec-detail.component.html&#x27;,
   styleUrls: [&#x27;./spec-detail.component.css&#x27;]
 })
 export class SpecDetailComponent implements OnInit {
-
+  /**
+   * Input character data
+   */
   @Input() character: Character;
 
+  /**
+   * Create a spec detail component
+   */
   constructor() { }
 
+  /**
+   * Get css class of the spec
+   * @param big Big text or not
+   */
   getClasses(big: boolean): any {
     const res: any &#x3D; {};
     res[&#x27;charHeader&#x27;] &#x3D; true;
@@ -1146,6 +1170,9 @@ export class SpecDetailComponent implements OnInit {
     return res;
   }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 

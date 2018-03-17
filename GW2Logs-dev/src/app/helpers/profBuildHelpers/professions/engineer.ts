@@ -61,7 +61,9 @@ class PowerHolosmithBuild extends EngiBuild {
     }
 }
 
-
+/**
+ * Add engineer builds to the database
+ */
 export function engiBuildMaker() {
     let build: ProfBuild = null;
     // Condi
@@ -142,5 +144,4 @@ export function engiBuildMaker() {
         variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
         variant.skills.setEliteSkill('Prime Light Beam');
     }
-
 }

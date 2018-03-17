@@ -104,6 +104,9 @@ class SpellbreakerDPSBuild extends PowerWarriorBuild {
     }
 }
 
+/**
+ * Add warrior builds to the database
+ */
 export function warBuildMaker() {
     let build: ProfBuild = null;
     // Condi

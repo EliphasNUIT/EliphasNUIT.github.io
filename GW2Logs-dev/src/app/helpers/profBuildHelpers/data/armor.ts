@@ -1,4 +1,4 @@
-import { items, ArmorData } from '../professionUtilities/items';
+import { items } from '../professionUtilities/items';
 import { stats } from '../professionUtilities/stats';
 
 /**
@@ -13,31 +13,38 @@ export class Armor {
     /**
      * The armor type
      */
-    armorType: ArmorData;
+    armorType: {
+        helm: number,
+        shoulders: number,
+        coat: number,
+        gloves: number,
+        leggings: number,
+        boots: number
+    };
     /**
      * Helm data
      */
-    helm: {stat: number, rune: number};
+    helm: { stat: number, rune: number };
     /**
      * Shoulders data
      */
-    shoulders: {stat: number, rune: number};
+    shoulders: { stat: number, rune: number };
     /**
      * Coat data
      */
-    coat: {stat: number, rune: number};
+    coat: { stat: number, rune: number };
     /**
      * Gloves data
      */
-    gloves: {stat: number, rune: number};
+    gloves: { stat: number, rune: number };
     /**
      * Leggings data
      */
-    leggings: {stat: number, rune: number};
+    leggings: { stat: number, rune: number };
     /**
      * Boots data
      */
-    boots: {stat: number, rune: number};
+    boots: { stat: number, rune: number };
 
     /**
      * Create an armor set
@@ -129,7 +136,7 @@ export class Armor {
      * @param mobile if mobile device
      * @returns Two div elements to put in the html, armor set in armor and runes in rune
      */
-    getDiv(mobile: boolean): {armor: string, rune: string} {
+    getDiv(mobile: boolean): { armor: string, rune: string } {
         let divToAdd = '<div data-armory-embed="items" ';
         let runeDivToAdd = '<div data-armory-embed="items" ';
         let armorIDS = 'data-armory-ids="';

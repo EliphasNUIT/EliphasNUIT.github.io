@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
 import { ProfBuild } from '../../helpers/profBuild';
 
+/**
+ * Build selector component
+ */
 @Component({
   selector: 'app-db-selector',
   templateUrl: './db-selector.component.html',
@@ -8,24 +11,55 @@ import { ProfBuild } from '../../helpers/profBuild';
 })
 export class DbSelectorComponent implements OnInit, OnChanges {
 
+  /**
+   * Input builds data
+   */
   @Input() builds: { name: string, id: string, overrides: string[] }[];
+  /**
+   * Input profession name
+   */
   @Input() profName: string;
+  /**
+   * Output selected build and override
+   */
   @Output() selectedBuildEmit = new EventEmitter<{ name: string, id: string, override: string }>();
+  /**
+   * Selected build
+   */
   selectedBuild: { name: string, id: string, overrides: string[], override: string };
+  /**
+   * Selected build
+   */
   selectedOverride: string;
+  /**
+   * Search bar filter
+   */
   filter = '';
 
+  /**
+   * Create a build selector component
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
     this.selectedOverride = 'Main';
   }
 
+  /**
+   * Todo on input change
+   */
   ngOnChanges() {
     this.selectedBuild = null;
     this.selectedOverride = 'Main';
   }
 
+  /**
+   * On select build event
+   * @param selectedBuild Selected build
+   */
   onSelect(selectedBuild: { name: string, id: string, overrides: string[] }) {
     if (this.selectedBuild && selectedBuild && this.selectedBuild.id === selectedBuild.id) {
       return;
@@ -36,12 +70,19 @@ export class DbSelectorComponent implements OnInit, OnChanges {
     this.selectedBuildEmit.emit(this.selectedBuild);
   }
 
+  /**
+   * On select override event
+   * @param selectedOverride Selected override
+   */
   onSelectOverride(selectedOverride: string) {
     this.selectedOverride = selectedOverride;
     this.selectedBuild.override = selectedOverride;
     this.selectedBuildEmit.emit(this.selectedBuild);
   }
 
+  /**
+   * Get css class associated to the build
+   */
   getClass() {
     const res: any = {};
     res[this.profName] = true;

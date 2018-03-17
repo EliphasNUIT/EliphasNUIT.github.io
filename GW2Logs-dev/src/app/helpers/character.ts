@@ -4,13 +4,34 @@ import { makeAllBuild } from './profBuildHelpers/professions/_full';
 
 makeAllBuild();
 
+/**
+ * Warning messages limit
+ */
 let warningLimit = 0;
 
+/**
+ * Character data
+ */
 export class Character {
+    /**
+     * Character name
+     */
     name: string;
+    /**
+     * Gw2 Armory link
+     */
     gw2Armory: string;
+    /**
+     * Character build data
+     */
     build: ProfBuild;
+    /**
+     * Character role
+     */
     role: string;
+    /**
+     * Character build data override
+     */
     override: {
         armor: string,
         consumable: string,
@@ -22,6 +43,10 @@ export class Character {
         skills: string
     };
 
+    /**
+     * Create a character data
+     * @param params Parameters
+     */
     constructor(params: {
         name: string, build: string, gw2Armory: string, role: string, override: {
             armor: string,
@@ -41,6 +66,9 @@ export class Character {
         this.override = params.override;
     }
 
+    /**
+     * Get character's build icon path
+     */
     getIcon(): string {
         if (!this.build) {
             if (warningLimit < 10) {
@@ -55,10 +83,16 @@ export class Character {
         return this.build.getIcon();
     }
 
+    /**
+     * Get character's build data
+     */
     getBuild(): ProfBuild {
         return this.build;
     }
 
+    /**
+     * Get character's profession name
+     */
     getProfessionName(): string {
         if (this.build) {
             return this.build.profession.name;
@@ -66,10 +100,16 @@ export class Character {
         return 'any';
     }
 
+    /**
+     * Get character's role
+     */
     getRole(): string {
         return this.role;
     }
 
+    /**
+     * Get character's build data override
+     */
     getOverride(): {
         armor: string,
         consumable: string,

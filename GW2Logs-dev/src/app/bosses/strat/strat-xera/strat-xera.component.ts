@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Xera strat component
+ */
 @Component({
   selector: 'app-strat-xera',
   templateUrl: './strat-xera.component.html',
@@ -7,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StratXeraComponent implements OnInit {
 
+  /**
+   * Create a Xera strat component
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 

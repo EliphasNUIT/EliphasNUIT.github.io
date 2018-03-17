@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked, Input, ChangeDetectionStrategy, OnChanges } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -7,7 +7,9 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   persistToLocalStorage: true
 };
 
-
+/**
+ * Build display component
+ */
 @Component({
   selector: 'app-display-build',
   templateUrl: './display-build.component.html',
@@ -16,8 +18,17 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 })
 export class DisplayBuildComponent implements OnInit, AfterViewChecked {
 
+  /**
+   * Input build data
+   */
   @Input() build: ProfBuild = null;
+  /**
+   * Input main override - generaly for build database
+   */
   @Input() mainOverride: string = null;
+  /**
+   * Input specialized override - generaly for composition
+   */
   @Input() specializedOverride: {
     armor: string,
     consumable: string,
@@ -29,17 +40,22 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     skills: string
   } = null;
 
+  /**
+   * Create a build diplay component
+   * @param sanitizer Dom sanitizer
+   */
   constructor(private sanitizer: DomSanitizer) {
   }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 
-  /*ngOnChanges() {
-    this.mainOverride = null;
-    this.specializedOverride = null;
-  }*/
-
+  /**
+   * Todo after view checked - delete remnants of gw2armory css and scripts
+   */
   ngAfterViewChecked() {
     const toDestroyScript = document.head.querySelectorAll('script');
     if (toDestroyScript.length > 0) {
@@ -86,10 +102,16 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     document.head.appendChild(script);
   }
 
+  /**
+   * Get traits html
+   */
   traits(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getSpecializations(this.mainOverride ||
       (this.specializedOverride && this.specializedOverride.specialization)));
   }
+  /**
+   * Get skills html
+   */
   skills(): SafeHtml {
     let res = '';
     if (this.build.skills !== null) {
@@ -101,13 +123,22 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     }
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
+  /**
+   * Get profession skills html
+   */
   profSkills(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getProfessionSkills(this.mainOverride ||
       (this.specializedOverride && this.specializedOverride.profSkills)));
   }
+  /**
+   * Get pets html
+   */
   pets(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getPets());
   }
+  /**
+   * Get armor html
+   */
   armor(): SafeHtml {
     let res = '';
     const equipement = this.build.getArmor(this.mainOverride ||
@@ -116,10 +147,16 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     res += equipement.rune;
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
+  /**
+   * Get consumables html
+   */
   consumables(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.build.getConsumable(this.mainOverride ||
       (this.specializedOverride && this.specializedOverride.consumable)));
   }
+  /**
+   * Get trinket html
+   */
   trinket(): SafeHtml {
     let res = '';
     const trinket = this.build.getTrinket(this.mainOverride ||
@@ -128,7 +165,9 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     res += trinket.AR;
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
-
+  /**
+   * Get primary weapon set html
+   */
   wep1(): SafeHtml {
     let res = '';
     const wep1 = this.build.getWeapon1(this.mainOverride ||
@@ -137,6 +176,9 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
     res += wep1.sig;
     return this.sanitizer.bypassSecurityTrustHtml(res);
   }
+  /**
+   * Get secondary weapon set html
+   */
   wep2(): SafeHtml {
     let res = '';
     if (this.build.wep2 !== null) {

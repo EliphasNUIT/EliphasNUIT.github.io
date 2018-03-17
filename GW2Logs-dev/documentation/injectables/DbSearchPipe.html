@@ -194,9 +194,6 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/ArmorData.html" >ArmorData</a>
-                                </li>
-                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -345,9 +342,6 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -603,9 +597,6 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/ArmorData.html" >ArmorData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -756,9 +747,6 @@
                                            <a href="../classes/Trinket.html" >Trinket</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/TrinketData.html" >TrinketData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -865,6 +853,13 @@
             <code>src/app/database/db-search.pipe.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Search bar pipeline</p>
+
+            </p>
 
 
             <section>
@@ -930,12 +925,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/database/db-search.pipe.ts:9</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/database/db-search.pipe.ts:17</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get filtered items</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -945,6 +942,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -960,6 +958,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>Items to filter</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>filter</td>
@@ -973,6 +975,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>Filter</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -999,12 +1005,20 @@
     <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
 
+/**
+ * Search bar pipeline
+ */
 @Pipe({
   name: &#x27;dbSearch&#x27;
 })
 @Injectable()
 export class DbSearchPipe implements PipeTransform {
 
+  /**
+   * Get filtered items
+   * @param items Items to filter
+   * @param filter Filter
+   */
   transform(items: { name: string, id: string }[], filter: string): any {
     if (!items) {
       return [];

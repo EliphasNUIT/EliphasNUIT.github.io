@@ -99,6 +99,9 @@ class MinstrelDruidBuild extends RangerBuild {
     }
 }
 
+/**
+ * Add ranger builds to the database
+ */
 export function rangerBuildMaker() {
     let build: ProfBuild = null;
     // Condi

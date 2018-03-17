@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { buildDatabase, ProfBuild } from '../../helpers/profBuild';
 
+/**
+ * Database display component
+ */
 @Component({
   selector: 'app-db-display',
   templateUrl: './db-display.component.html',
@@ -8,15 +11,33 @@ import { buildDatabase, ProfBuild } from '../../helpers/profBuild';
 })
 export class DbDisplayComponent implements OnInit, OnChanges {
 
+  /**
+   * Input profession name
+   */
   @Input() profName: string;
+  /**
+   * Input profession builds
+   */
   @Input() builds: { name: string, id: string, overrides: string[] }[];
+  /**
+   * Selected build
+   */
   selectedBuild: { name: string, id: string, overrides: string[], override: string };
 
+  /**
+   * Create a database display component
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 
+  /**
+   * Todo on input change
+   */
   ngOnChanges() {
     this.selectedBuild = null;
     for (const key in localStorage) {
@@ -28,11 +49,17 @@ export class DbDisplayComponent implements OnInit, OnChanges {
     }
   }
 
-
+  /**
+   * On select build event
+   * @param selectedBuild selected build
+   */
   selectBuild(selectedBuild: { name: string, id: string, overrides: string[], override: string }) {
     this.selectedBuild = selectedBuild;
   }
 
+  /**
+   * Get build data associated to the selected build
+   */
   getBuild(): ProfBuild {
     if (this.selectedBuild) {
       return buildDatabase.get(this.selectedBuild.id);
@@ -40,6 +67,9 @@ export class DbDisplayComponent implements OnInit, OnChanges {
     return null;
   }
 
+  /**
+   * Get override of the selected build
+   */
   getOverride(): string {
     if (this.selectedBuild) {
       return this.selectedBuild.override;

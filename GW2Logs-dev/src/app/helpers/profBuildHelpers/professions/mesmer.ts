@@ -143,7 +143,9 @@ class CondiMirageCloneBuild extends MesBuild {
     }
 }
 
-
+/**
+ * Add mesmer builds to the database
+ */
 export function mesBuildMaker() {
     let build: ProfBuild = null;
     // minstrel

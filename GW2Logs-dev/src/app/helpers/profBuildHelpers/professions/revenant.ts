@@ -90,6 +90,9 @@ class HealHeraldBuild extends RevenantBuild {
     }
 }
 
+/**
+ * Add revenant builds to the database
+ */
 export function revBuildMaker() {
     let build: ProfBuild = null;
     // Condi

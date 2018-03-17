@@ -194,9 +194,6 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/ArmorData.html" >ArmorData</a>
-                                </li>
-                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -345,9 +342,6 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -603,9 +597,6 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/ArmorData.html" >ArmorData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -756,9 +747,6 @@
                                            <a href="../classes/Trinket.html" >Trinket</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/TrinketData.html" >TrinketData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -868,6 +856,13 @@
     <code>src/app/app.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Root app component</p>
+
+    </p>
 
 
 
@@ -975,10 +970,16 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/app.component.ts:9</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/app.component.ts:15</a></div>
                                 </td>
                             </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Title of the page</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -990,12 +991,18 @@
     <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
+/**
+ * Root app component
+ */
 @Component({
   selector: &#x27;app-root&#x27;,
   templateUrl: &#x27;./app.component.html&#x27;,
   styleUrls: [&#x27;./app.component.css&#x27;]
 })
 export class AppComponent {
+  /**
+   * Title of the page
+   */
   title: String &#x3D; &#x27;La guilde [OdS]&#x27;;
 }
 </code></pre>

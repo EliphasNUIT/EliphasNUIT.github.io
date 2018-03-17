@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Sabetha strat component
+ */
 @Component({
   selector: 'app-strat-sab',
   templateUrl: './strat-sab.component.html',
@@ -7,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StratSabComponent implements OnInit {
 
+  /**
+   * Create a Sabetha strat component
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 

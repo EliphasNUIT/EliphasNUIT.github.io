@@ -56,6 +56,9 @@ class CondiReaperBuild extends NecroBuild {
     }
 }
 
+/**
+ * Add necromancer builds to the database
+ */
 export function necroBuildMaker() {
     let build: ProfBuild = null;
     // Scourge - Condi

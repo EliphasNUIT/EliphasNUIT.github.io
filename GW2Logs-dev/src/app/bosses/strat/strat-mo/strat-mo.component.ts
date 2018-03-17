@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Mursaat Overseer strat component
+ */
 @Component({
   selector: 'app-strat-mo',
   templateUrl: './strat-mo.component.html',
@@ -7,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StratMoComponent implements OnInit {
 
+  /**
+   * Create a Mursaat Overseer strat component
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 

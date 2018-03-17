@@ -194,9 +194,6 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/ArmorData.html" >ArmorData</a>
-                                </li>
-                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -345,9 +342,6 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -603,9 +597,6 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/ArmorData.html" >ArmorData</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -754,9 +745,6 @@
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Trinket.html" >Trinket</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../classes/TrinketData.html" >TrinketData</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -3629,39 +3617,39 @@
                         <tr>
                             <td class="col-md-4">
                                 <i>Default value : </i><code>{
-        trinket: new TrinketData(
-            79712,
-            81024,
-            81658,
-            79745,
-            79444,
-            79830
-        ),
+        trinket: {
+            ring1: 79712,
+            ring2: 81024,
+            amulet: 81658,
+            earring1: 79745,
+            earring2: 79444,
+            back: 79830
+        },
         armor: {
-            Light: new ArmorData(
-                80751,
-                80855,
-                80811,
-                80838,
-                80755,
-                80815
-            ),
-            Medium: new ArmorData(
-                80753,
-                80825,
-                80798,
-                80779,
-                80812,
-                80836
-            ),
-            Heavy: new ArmorData(
-                80832,
-                80814,
-                80818,
-                80834,
-                80845,
-                80808
-            )
+            Light: {
+                helm: 80751,
+                shoulders: 80855,
+                coat: 80811,
+                gloves: 80838,
+                leggings: 80755,
+                boots: 80815
+            },
+            Medium: {
+                helm: 80753,
+                shoulders: 80825,
+                coat: 80798,
+                gloves: 80779,
+                leggings: 80812,
+                boots: 80836
+            },
+            Heavy: {
+                helm: 80832,
+                shoulders: 80814,
+                coat: 80818,
+                gloves: 80834,
+                leggings: 80845,
+                boots: 80808
+            }
         },
     
         runes: {
@@ -4295,6 +4283,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Warning messages limit</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>

@@ -16,22 +16,53 @@ import { HttpClient } from '@angular/common/http';
   console.log('logs done');
 });*/
 
+/**
+ * Bosses component
+ */
 @Component({
   selector: 'app-bosses',
   templateUrl: './bosses.component.html',
   styleUrls: ['./bosses.component.css']
 })
 export class BossesComponent implements OnInit {
+  /**
+   * Array of boss data
+   */
   bosses: Boss[] = [];
+  /**
+   * Selected boss
+   */
   selectedBoss: Boss;
+  /**
+   * Selected display mode - composition or mechanics
+   */
   selectedDisplay: string;
-  logsStyle = { 'background-image': 'url(assets/logs.png)', 'width': '250px', 'heigth' : '100px',
-       'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
-  compoStyle = { 'background-image': 'url(assets/compo.png)', 'width': '250px', 'heigth' : '100px',
-        'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
-  stratStyle = { 'background-image': 'url(assets/raid.jpg)', 'width': '250px', 'heigth' : '100px',
-        'background-repeat' : 'no-repeat', 'background-size' : 'cover' };
+  /**
+   * Style of the logs button
+   */
+  logsStyle = {
+    'background-image': 'url(assets/logs.png)', 'width': '250px', 'heigth': '100px',
+    'background-repeat': 'no-repeat', 'background-size': 'cover'
+  };
+  /**
+   * Style of the composition button
+   */
+  compoStyle = {
+    'background-image': 'url(assets/compo.png)', 'width': '250px', 'heigth': '100px',
+    'background-repeat': 'no-repeat', 'background-size': 'cover'
+  };
+  /**
+   * Style of the mechanics button
+   */
+  stratStyle = {
+    'background-image': 'url(assets/raid.jpg)', 'width': '250px', 'heigth': '100px',
+    'background-repeat': 'no-repeat', 'background-size': 'cover'
+  };
 
+  /**
+   * Create a boss component
+   * @param http To load json
+   */
   constructor(private http: HttpClient) {
     const _this = this;
     const localBoss = localStorage.getItem('selectedBoss') ? localStorage.getItem('selectedBoss') : null;
@@ -55,17 +86,28 @@ export class BossesComponent implements OnInit {
             }
           });
       });
-      this.selectedDisplay = localStorage.getItem('selectedDisplay') ? localStorage.getItem('selectedDisplay') : 'compo';
+    this.selectedDisplay = localStorage.getItem('selectedDisplay') ? localStorage.getItem('selectedDisplay') : 'compo';
   }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 
+  /**
+   * On select boss event
+   * @param boss The selected boss
+   */
   onSelect(boss: Boss): void {
     this.selectedBoss = boss;
     localStorage.setItem('selectedBoss', this.selectedBoss.shortName);
   }
 
+  /**
+   * On select display event
+   * @param display The selected display - composition or mechanics
+   */
   onSelectDisplay(display: string): void {
     this.selectedDisplay = display;
     localStorage.setItem('selectedDisplay', this.selectedDisplay);

@@ -1,11 +1,19 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * Search bar pipeline
+ */
 @Pipe({
   name: 'dbSearch'
 })
 @Injectable()
 export class DbSearchPipe implements PipeTransform {
 
+  /**
+   * Get filtered items
+   * @param items Items to filter
+   * @param filter Filter
+   */
   transform(items: { name: string, id: string }[], filter: string): any {
     if (!items) {
       return [];

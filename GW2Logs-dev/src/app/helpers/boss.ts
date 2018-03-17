@@ -1,16 +1,50 @@
 import { Character } from './character';
 
+/**
+ * Boss data
+ */
 export class Boss {
+    /**
+     * Raid name
+     */
     raid: string;
+    /**
+     * Wing name
+     */
     wing: string;
+    /**
+     * Boss name
+     */
     name: string;
+    /**
+     * Boss name to display html pages
+     */
     displayName: string;
+    /**
+     * Boss id
+     */
     shortName: string;
+    /**
+     * Boss name to display on buttons
+     */
     buttonName: string;
+    /**
+     * Boss style
+     */
     style: any;
+    /**
+     * Composition detail
+     */
     composition: { t1: Character[], t2: Character[], t3: Character[] };
+    /**
+     * Logs - DEPRECATED
+     */
     logs: { id: string, date: string, url: string }[] = [];
 
+    /**
+     * Create a Boss data
+     * @param params Parameters
+     */
     constructor(params: {
         raid: string, wing: string, style: any, shortName: string,
         displayName: string, buttonName: string, composition: { t1: any[], t2: any[], t3: any[] }
@@ -24,12 +58,20 @@ export class Boss {
         this.buildComposition(params.composition);
     }
 
+    /**
+     * Build Boss logs data
+     * @param logsSrc Logs data
+     */
     buildLogs(logsSrc: any[]) {
         if (logsSrc[this.shortName]) {
             this.logs = logsSrc[this.shortName].splice(0);
         }
     }
 
+    /**
+     * Build boss composition data
+     * @param compoSrc Composition data
+     */
     buildComposition(compoSrc: { t1: any[], t2: any[], t3: any[] }) {
         this.composition = {
             t1: [],
