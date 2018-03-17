@@ -12,5 +12,5 @@ export class AppComponent {
   /**
    * Title of the page
    */
-  title: String = 'La guilde [OdS]';
+  private title: String = 'La guilde [OdS]';
 }

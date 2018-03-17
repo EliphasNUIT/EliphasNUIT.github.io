@@ -17,15 +17,15 @@ export class Weapons {
     /**
      * OffHand data
      */
-    offHand: { id: number; stat: number; sigil: number; };
+    private offHand: { id: number; stat: number; sigil: number; };
     /**
      * MainHand data
      */
-    mainHand: { id: number; stat: number; sigil: number; };
+    private mainHand: { id: number; stat: number; sigil: number; };
     /**
      * Profession
      */
-    profession: any;
+    private profession: any;
 
     /**
      * Create a weapon data
@@ -44,7 +44,7 @@ export class Weapons {
      * @param statID Id of the stat
      * @param sigilID Id of the sigil
      */
-    _argumentCheck(typeID: Number, statID: Number, sigilID: Number) {
+    private _argumentCheck(typeID: Number, statID: Number, sigilID: Number) {
         if (!statID) {
             return false;
         }

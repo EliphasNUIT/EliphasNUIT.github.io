@@ -12,11 +12,11 @@ export class Consumable {
     /**
      * Food id
      */
-    food: number;
+    private food: number;
     /**
      * Utility id
      */
-    utility: number;
+    private utility: number;
 
     /**
      * Create a consumable data

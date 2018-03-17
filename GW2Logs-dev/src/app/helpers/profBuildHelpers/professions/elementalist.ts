@@ -96,11 +96,11 @@ class PowerWeaverAirBuild extends PowerWeaverBuild {
 }
 
 /**
- * Arcane Power Weaver
+ * Healing Tempest
  */
-class PowerWeaverArcBuild extends PowerWeaverBuild {
+class PowerWeaverArcBuild extends EleBuild {
     /**
-     * Create a Power Weaver build in Arcane
+     * Create a Healing Tempest build
      * @param id Id of the build
      * @param name Name of the build
      */
@@ -111,6 +111,37 @@ class PowerWeaverArcBuild extends PowerWeaverBuild {
             'Elemental Contingency',
             'Bountiful Power'
         ]);
+    }
+}
+
+/**
+ * Arcane Power Weaver
+ */
+class HealTempestBuild extends PowerWeaverBuild {
+    /**
+     * Create a Power Weaver build in Arcane
+     * @param id Id of the build
+     * @param name Name of the build
+     */
+    constructor(id, name) {
+        super(id, 'Tempest - Auramancer' + name);
+        this.icon += 'tempest.png';
+        this.armor.setSingleStat('Magi\'s');
+        this.armor.setSingleRune('Superior Rune of the Monk');
+        this.consumable.setConsumable('Delicious Rice Ball', 'Bountiful Maintenance Oil');
+        this.trinket.setSingleStat('Magi\'s');
+        this.wep1.setTwoHand('Staff', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
+
+        this.specialization.setSpec('spec1', 'Water', ['Soothing Ice', 'Aquamancer\'s Training', 'Soothing Power']);
+        this.specialization.setSpec('spec2', 'Arcane', ['Renewing Stamina', 'Arcane Resurrection', 'Bountiful Power']);
+        this.specialization.setSpec('spec3', 'Tempest', [
+            'Gale Song',
+            'Invigorating Torrents',
+            'Elemental Bastion'
+        ]);
+        this.skills.setHealSkill('"Wash the Pain Away!"');
+        this.skills.setUtilitySkills(['"Feel the Burn!"', '"Flash-Freeze!"', 'Lightning Flash']);
+        this.skills.setEliteSkill('"Rebound!"');
     }
 }
 
@@ -159,24 +190,7 @@ export function eleBuildMaker() {
 
     // Special
     {
-        build = new EleBuild('tempAura', 'Tempest - Auramancer');
-        build.icon += 'tempest.png';
-        build.armor.setSingleStat('Magi\'s');
-        build.armor.setSingleRune('Superior Rune of the Monk');
-        build.consumable.setConsumable('Delicious Rice Ball', 'Bountiful Maintenance Oil');
-        build.trinket.setSingleStat('Magi\'s');
-        build.wep1.setTwoHand('Staff', 'Magi\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
-
-        build.specialization.setSpec('spec1', 'Water', ['Soothing Ice', 'Aquamancer\'s Training', 'Soothing Power']);
-        build.specialization.setSpec('spec2', 'Arcane', ['Renewing Stamina', 'Arcane Resurrection', 'Bountiful Power']);
-        build.specialization.setSpec('spec3', 'Tempest', [
-            'Gale Song',
-            'Invigorating Torrents',
-            'Elemental Bastion'
-        ]);
-        build.skills.setHealSkill('"Wash the Pain Away!"');
-        build.skills.setUtilitySkills(['"Feel the Burn!"', '"Flash-Freeze!"', 'Lightning Flash']);
-        build.skills.setEliteSkill('"Rebound!"');
+        build = new HealTempestBuild('tempAura', '');
     }
 
 }

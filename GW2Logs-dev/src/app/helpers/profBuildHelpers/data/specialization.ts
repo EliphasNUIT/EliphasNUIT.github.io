@@ -5,19 +5,19 @@ export class Specialization {
     /**
      * First spec line
      */
-    spec1: {name: number, traits: number[]};
+    private spec1: {name: number, traits: number[]};
     /**
      * Second spec line
      */
-    spec2: {name: number, traits: number[]};
+    private spec2: {name: number, traits: number[]};
     /**
      * Third spec line
      */
-    spec3: {name: number, traits: number[]};
+    private spec3: {name: number, traits: number[]};
     /**
      * Profession
      */
-    profession: any;
+    private profession: any;
 
     /**
      * Create a specialization data

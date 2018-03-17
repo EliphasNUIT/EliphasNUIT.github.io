@@ -24,15 +24,15 @@ export class Character {
     /**
      * Character build data
      */
-    build: ProfBuild;
+    private build: ProfBuild;
     /**
      * Character role
      */
-    role: string;
+    private role: string;
     /**
      * Character build data override
      */
-    override: {
+    private override: {
         armor: string,
         consumable: string,
         trinket: string,

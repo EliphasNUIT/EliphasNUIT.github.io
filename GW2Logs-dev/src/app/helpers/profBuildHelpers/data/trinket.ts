@@ -13,27 +13,27 @@ export class Trinket {
     /**
      * Ring 2 id
      */
-    ring2: number;
+    private ring2: number;
     /**
      * Ring 1 id
      */
-    ring1: number;
+    private ring1: number;
     /**
      * Amulet id
      */
-    amulet: number;
+    private amulet: number;
     /**
      * Earring 2 id
      */
-    earring2: number;
+    private earring2: number;
     /**
      * Earring 1 id
      */
-    earring1: number;
+    private earring1: number;
     /**
      * Back id
      */
-    back: number;
+    private back: number;
 
     /**
      * Create a trinket set data
@@ -81,7 +81,7 @@ export class Trinket {
      * @param slots The slots that will be put in the div
      * @param mobile Mobile device or not
      */
-    _getDiv(slots: string[], mobile: boolean): string {
+    private _getDiv(slots: string[], mobile: boolean): string {
         let divToAdd = '<div data-armory-embed="items" ';
         let trinketIDS = 'data-armory-ids="';
         let totalStats = '';

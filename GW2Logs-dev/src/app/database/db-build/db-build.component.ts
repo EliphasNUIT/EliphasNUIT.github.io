@@ -68,12 +68,12 @@ export class DbBuildComponent implements OnInit {
   /**
    * Profession handlers
    */
-  professions: ProfessionHandler[];
+  private professions: ProfessionHandler[];
 
   /**
    * Selected profession handler
    */
-  selectedProfession: ProfessionHandler;
+  private selectedProfession: ProfessionHandler;
 
   /**
    * Create a build database component

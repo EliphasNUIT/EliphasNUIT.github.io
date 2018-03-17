@@ -114,9 +114,10 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
    */
   skills(): SafeHtml {
     let res = '';
-    if (this.build.skills !== null) {
-      const skills = this.build.getSkills(this.mainOverride ||
-        (this.specializedOverride && this.specializedOverride.skills));
+    const overrideValue = this.mainOverride ||
+    (this.specializedOverride && this.specializedOverride.skills);
+    if (this.build.hasSkills(overrideValue)) {
+      const skills = this.build.getSkills(overrideValue);
       res += skills.heal;
       res += skills.utilities;
       res += skills.elite;
@@ -181,9 +182,10 @@ export class DisplayBuildComponent implements OnInit, AfterViewChecked {
    */
   wep2(): SafeHtml {
     let res = '';
-    if (this.build.wep2 !== null) {
-      const wep2 = this.build.getWeapon2(this.mainOverride ||
-        (this.specializedOverride && this.specializedOverride.wep2));
+    const overrideValue = this.mainOverride ||
+    (this.specializedOverride && this.specializedOverride.wep2);
+    if (!this.build.isSingleWeapon(overrideValue)) {
+      const wep2 = this.build.getWeapon2(overrideValue);
       res += wep2.wep;
       res += wep2.sig;
     }

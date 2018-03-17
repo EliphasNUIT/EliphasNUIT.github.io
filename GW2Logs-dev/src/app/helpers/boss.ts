@@ -7,19 +7,19 @@ export class Boss {
     /**
      * Raid name
      */
-    raid: string;
+    private raid: string;
     /**
      * Wing name
      */
-    wing: string;
+    private wing: string;
     /**
      * Boss name
      */
-    name: string;
+    private name: string;
     /**
      * Boss name to display html pages
      */
-    displayName: string;
+    private displayName: string;
     /**
      * Boss id
      */
@@ -27,19 +27,19 @@ export class Boss {
     /**
      * Boss name to display on buttons
      */
-    buttonName: string;
+    private buttonName: string;
     /**
      * Boss style
      */
-    style: any;
+    private style: any;
     /**
      * Composition detail
      */
-    composition: { t1: Character[], t2: Character[], t3: Character[] };
+    private composition: { t1: Character[], t2: Character[], t3: Character[] };
     /**
      * Logs - DEPRECATED
      */
-    logs: { id: string, date: string, url: string }[] = [];
+    private logs: { id: string, date: string, url: string }[] = [];
 
     /**
      * Create a Boss data
@@ -72,7 +72,7 @@ export class Boss {
      * Build boss composition data
      * @param compoSrc Composition data
      */
-    buildComposition(compoSrc: { t1: any[], t2: any[], t3: any[] }) {
+    private buildComposition(compoSrc: { t1: any[], t2: any[], t3: any[] }) {
         this.composition = {
             t1: [],
             t2: [],

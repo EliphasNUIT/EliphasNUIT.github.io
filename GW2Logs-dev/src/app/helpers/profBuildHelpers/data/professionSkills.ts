@@ -5,11 +5,11 @@ export class ProfessionSkills {
     /**
      * Profession
      */
-    profession: any;
+    private profession: any;
     /**
      * Skills array
      */
-    skills: number[];
+    private skills: number[];
 
     /**
      * Create a profession skills data
@@ -24,7 +24,7 @@ export class ProfessionSkills {
      * Private method to set a skill, with checks
      * @param skillName Name of the skill
      */
-    _setSkill(skillName: string) {
+    private _setSkill(skillName: string) {
         const skill = this.profession.skills[skillName];
         if (skill) {
             if (skill.slot.includes('Profession')) {

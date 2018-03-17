@@ -34,17 +34,9 @@ export let buildDatabase: Map<string, ProfBuild> = new Map<string, ProfBuild>();
 const mobile = detectmob();
 
 /**
- * Build data
+ * Override data
  */
-export class ProfBuild {
-    /**
-     * Id of the build
-     */
-    id: string;
-    /**
-     * Name of the build
-     */
-    name: string;
+class BuildOverride {
     /**
      * Armor data
      */
@@ -78,27 +70,84 @@ export class ProfBuild {
      */
     skills: Skills;
     /**
+     * Original build
+     */
+    originalBuild: ProfBuild;
+    /**
+     * Visible or not
+     */
+    open: boolean;
+
+    constructor(originalBuild: ProfBuild, open: boolean) {
+        this.armor = null;
+        this.consumable = null;
+        this.profSkills = null;
+        this.skills = null;
+        this.specialization = null;
+        this.trinket = null;
+        this.wep1 = null;
+        this.wep2 = null;
+        this.originalBuild = originalBuild;
+        this.open = open;
+    }
+}
+
+/**
+ * Build data
+ */
+export class ProfBuild {
+    /**
+     * Id of the build
+     */
+    id: string;
+    /**
+     * Name of the build
+     */
+    name: string;
+    /**
+     * Armor data
+     */
+    protected armor: Armor;
+    /**
+     * Consumable data
+     */
+    protected consumable: Consumable;
+    /**
+     * Trinket data
+     */
+    protected trinket: Trinket;
+    /**
+     * Second weapon set data, can be set to null
+     */
+    protected wep2: Weapons;
+    /**
+     * Primary weapon set data
+     */
+    protected wep1: Weapons;
+    /**
+     * Specialization data
+     */
+    protected specialization: Specialization;
+    /**
+     * Profession skills data, can be set to null
+     */
+    protected profSkills: ProfessionSkills;
+    /**
+     * Skills data
+     */
+    protected skills: Skills;
+    /**
      * Profession
      */
-    profession: any;
+    public profession: any;
     /**
      * Icon path
      */
-    icon = 'assets/profIcons/';
+    protected icon = 'assets/profIcons/';
     /**
      * Overrides
      */
-    overrides: Map<string, {
-        skills: Skills,
-        profSkills: ProfessionSkills,
-        specialization: Specialization,
-        wep1: Weapons,
-        wep2: Weapons,
-        armor: Armor,
-        trinket: Trinket,
-        consumable: Consumable,
-        open: Boolean
-    }>;
+    private overrides: Map<string, BuildOverride>;
 
     /**
      * Create a profession build
@@ -252,28 +301,8 @@ export class ProfBuild {
      * @param name Name of the override
      * @param open Visible by default or not
      */
-    addOverride(name: string, open: boolean = true): {
-        skills: Skills,
-        profSkills: ProfessionSkills,
-        specialization: Specialization,
-        wep1: Weapons,
-        wep2: Weapons,
-        armor: Armor,
-        trinket: Trinket,
-        consumable: Consumable,
-        open: Boolean
-    } {
-        const res = {
-            skills: null,
-            profSkills: null,
-            specialization: null,
-            wep1: null,
-            wep2: null,
-            armor: null,
-            trinket: null,
-            consumable: null,
-            open: open
-        };
+    addOverride(name: string, open: boolean = true): BuildOverride {
+        const res = new BuildOverride(this, open);
         this.overrides.set(name, res);
         return res;
     }
@@ -290,6 +319,23 @@ export class ProfBuild {
             }
         });
         return res;
+    }
+
+    /**
+     * Check if the build has skills
+     */
+    hasSkills(override: string = null): boolean {
+        if (this.overrides.has(override)) {
+            return this.overrides.get(override).skills !== null;
+        }
+        return this.skills !== null;
+    }
+
+    isSingleWeapon(override: string = null): boolean {
+        if (this.overrides.has(override)) {
+            return this.overrides.get(override).wep2 === null;
+        }
+        return this.wep2 === null;
     }
 }
 

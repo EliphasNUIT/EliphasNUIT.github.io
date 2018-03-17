@@ -15,7 +15,7 @@ export class CompositionDetailComponent implements OnInit, OnChanges {
   /**
    * Selectect character
    */
-  selectedChar: Character = null;
+  private selectedChar: Character = null;
 
   /**
    * Input boss data

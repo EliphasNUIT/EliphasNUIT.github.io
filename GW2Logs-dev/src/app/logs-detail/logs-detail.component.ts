@@ -20,11 +20,11 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
     /**
      * Observer to listen to changes in the logs' iframe
      */
-    observerMap = new Map();
+    private observerMap = new Map();
     /**
      * Switch between iframe and new tab based logs
      */
-    logsTab: boolean;
+    private logsTab: boolean;
     /**
      * Create a log display component
      * @param sanitizer Make sure the given html elements are secure

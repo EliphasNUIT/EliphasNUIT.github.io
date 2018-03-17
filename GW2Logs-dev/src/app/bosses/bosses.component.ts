@@ -28,33 +28,33 @@ export class BossesComponent implements OnInit {
   /**
    * Array of boss data
    */
-  bosses: Boss[] = [];
+  private bosses: Boss[] = [];
   /**
    * Selected boss
    */
-  selectedBoss: Boss;
+  private selectedBoss: Boss;
   /**
    * Selected display mode - composition or mechanics
    */
-  selectedDisplay: string;
+  private selectedDisplay: string;
   /**
    * Style of the logs button
    */
-  logsStyle = {
+  private logsStyle = {
     'background-image': 'url(assets/logs.png)', 'width': '250px', 'heigth': '100px',
     'background-repeat': 'no-repeat', 'background-size': 'cover'
   };
   /**
    * Style of the composition button
    */
-  compoStyle = {
+  private compoStyle = {
     'background-image': 'url(assets/compo.png)', 'width': '250px', 'heigth': '100px',
     'background-repeat': 'no-repeat', 'background-size': 'cover'
   };
   /**
    * Style of the mechanics button
    */
-  stratStyle = {
+  private stratStyle = {
     'background-image': 'url(assets/raid.jpg)', 'width': '250px', 'heigth': '100px',
     'background-repeat': 'no-repeat', 'background-size': 'cover'
   };

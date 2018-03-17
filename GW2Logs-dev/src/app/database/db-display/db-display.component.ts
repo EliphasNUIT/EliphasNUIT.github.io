@@ -22,7 +22,7 @@ export class DbDisplayComponent implements OnInit, OnChanges {
   /**
    * Selected build
    */
-  selectedBuild: { name: string, id: string, overrides: string[], override: string };
+  private selectedBuild: { name: string, id: string, overrides: string[], override: string };
 
   /**
    * Create a database display component

@@ -13,7 +13,7 @@ export class Armor {
     /**
      * The armor type
      */
-    armorType: {
+    private armorType: {
         helm: number,
         shoulders: number,
         coat: number,
@@ -24,27 +24,27 @@ export class Armor {
     /**
      * Helm data
      */
-    helm: { stat: number, rune: number };
+    private helm: { stat: number, rune: number };
     /**
      * Shoulders data
      */
-    shoulders: { stat: number, rune: number };
+    private shoulders: { stat: number, rune: number };
     /**
      * Coat data
      */
-    coat: { stat: number, rune: number };
+    private coat: { stat: number, rune: number };
     /**
      * Gloves data
      */
-    gloves: { stat: number, rune: number };
+    private gloves: { stat: number, rune: number };
     /**
      * Leggings data
      */
-    leggings: { stat: number, rune: number };
+    private leggings: { stat: number, rune: number };
     /**
      * Boots data
      */
-    boots: { stat: number, rune: number };
+    private boots: { stat: number, rune: number };
 
     /**
      * Create an armor set

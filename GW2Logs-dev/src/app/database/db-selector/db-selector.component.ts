@@ -26,15 +26,15 @@ export class DbSelectorComponent implements OnInit, OnChanges {
   /**
    * Selected build
    */
-  selectedBuild: { name: string, id: string, overrides: string[], override: string };
+  private selectedBuild: { name: string, id: string, overrides: string[], override: string };
   /**
    * Selected build
    */
-  selectedOverride: string;
+  private selectedOverride: string;
   /**
    * Search bar filter
    */
-  filter = '';
+  private filter = '';
 
   /**
    * Create a build selector component
