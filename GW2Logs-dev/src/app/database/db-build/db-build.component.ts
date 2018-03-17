@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { buildDatabase, ProfBuild } from '../helpers/profBuild';
+import { buildDatabase, ProfBuild } from '../../helpers/profBuild';
 
 
 class ProfessionHandler {

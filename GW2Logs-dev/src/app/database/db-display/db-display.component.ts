@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { buildDatabase, ProfBuild } from '../helpers/profBuild';
+import { buildDatabase, ProfBuild } from '../../helpers/profBuild';
 
 @Component({
   selector: 'app-db-display',

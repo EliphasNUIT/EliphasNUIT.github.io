@@ -8,15 +8,11 @@ import { MainComponent } from './main/main.component';
 import { BuildDetailComponent } from './build-detail/build-detail.component';
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
 import { CompositionDetailComponent } from './composition-detail/composition-detail.component';
-import { DisplayBuildComponent } from './display-build/display-build.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
-import { DbBuildComponent } from './db-build/db-build.component';
-import { DbDisplayComponent } from './db-display/db-display.component';
-import { DbSearchPipe } from './db-search.pipe';
-import { FormsModule } from '@angular/forms';
-import { DbSelectorComponent } from './db-selector/db-selector.component'; // <-- NgModel lives here
 import { StratModule } from './strat/strat.module';
+import { DatabaseModule } from './database/database.module';
+import { DisplayBuildModule } from './display-build/display-build.module';
 
 
 @NgModule({
@@ -26,19 +22,15 @@ import { StratModule } from './strat/strat.module';
     MainComponent,
     BuildDetailComponent,
     LogsDetailComponent,
-    CompositionDetailComponent,
-    DisplayBuildComponent,
-    DbBuildComponent,
-    DbDisplayComponent,
-    DbSearchPipe,
-    DbSelectorComponent
+    CompositionDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
-    StratModule
+    StratModule,
+    DatabaseModule,
+    DisplayBuildModule
   ],
   providers: [],
   bootstrap: [AppComponent]

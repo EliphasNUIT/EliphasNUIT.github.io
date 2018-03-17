@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
-import { ProfBuild } from '../helpers/profBuild';
+import { ProfBuild } from '../../helpers/profBuild';
 
 @Component({
   selector: 'app-db-selector',
@@ -13,6 +13,7 @@ export class DbSelectorComponent implements OnInit, OnChanges {
   @Output() selectedBuildEmit = new EventEmitter<{ name: string, id: string, override: string }>();
   selectedBuild: { name: string, id: string, overrides: string[], override: string };
   selectedOverride: string;
+  filter: '';
 
   constructor() { }
 
