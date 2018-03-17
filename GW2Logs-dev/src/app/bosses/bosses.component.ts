@@ -28,11 +28,11 @@ export class BossesComponent implements OnInit {
   /**
    * Array of boss data
    */
-  private bosses: Boss[] = [];
+  public bosses: Boss[] = [];
   /**
    * Selected boss
    */
-  private selectedBoss: Boss;
+  public selectedBoss: Boss;
   /**
    * Selected display mode - composition or mechanics
    */
