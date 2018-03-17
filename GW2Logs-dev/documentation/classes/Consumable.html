@@ -932,10 +932,16 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:13</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:19</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Create a consumable data</p>
+            </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -967,12 +973,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:36</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:54</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the consumable div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -982,6 +990,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -997,6 +1006,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>If mobile device</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1036,12 +1049,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:20</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:34</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Set the consumables</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1051,6 +1066,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1066,6 +1082,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>Food name</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>utility</td>
@@ -1079,6 +1099,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>Utility name</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1131,10 +1155,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:12</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:15</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Food id</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1165,10 +1195,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:13</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/helpers/profBuildHelpers/data/consumable.ts:19</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Utility id</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1189,14 +1225,28 @@ const consumable &#x3D; items.consumable;
  * Class representing consumables
  */
 export class Consumable {
+    /**
+     * Food id
+     */
     food: number;
+    /**
+     * Utility id
+     */
     utility: number;
 
+    /**
+     * Create a consumable data
+     */
     constructor() {
         this.food &#x3D; -1;
         this.utility &#x3D; -1;
     }
 
+    /**
+     * Set the consumables
+     * @param food Food name
+     * @param utility Utility name
+     */
     setConsumable(food: string, utility: string) {
         const f &#x3D; consumable[food],
             u &#x3D; consumable[utility];
@@ -1213,6 +1263,10 @@ export class Consumable {
         }
     }
 
+    /**
+     * Get the consumable div
+     * @param mobile If mobile device
+     */
     getDiv(mobile: boolean): string {
         let divToAdd &#x3D; &#x27;&lt;div data-armory-embed&#x3D;&quot;items&quot; &#x27;;
         let foodIDS &#x3D; &#x27;data-armory-ids&#x3D;&quot;&#x27;;
