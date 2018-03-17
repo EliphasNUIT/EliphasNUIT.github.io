@@ -5,15 +5,30 @@ import { Skills } from '../data/skills';
 import { Specialization } from '../data/specialization';
 
 
-
+/**
+ * Standard Elementalist
+ */
 class EleBuild extends ProfBuild {
+    /**
+     * Create a standard Elementalist build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Elementalist, name);
         this.wep2 = null;
     }
 }
 
+/**
+ * Condition Weaver
+ */
 class CondiWeaverBuild extends EleBuild {
+    /**
+     * Create a Condition Weaver build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Weaver - Condition' + name);
         this.icon += 'weaver.png';
@@ -36,7 +51,15 @@ class CondiWeaverBuild extends EleBuild {
     }
 }
 
+/**
+ * Power Weaver
+ */
 class PowerWeaverBuild extends EleBuild {
+    /**
+     * Create a standard Power Weaver Build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Weaver - Power' + name);
         this.icon += 'weaver.png';
@@ -57,14 +80,30 @@ class PowerWeaverBuild extends EleBuild {
     }
 }
 
+/**
+ * Air Power Weaver
+ */
 class PowerWeaverAirBuild extends PowerWeaverBuild {
+    /**
+     * Create a Power Weaver in Air build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, ' - Air' + name);
         this.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Inscription', 'Bolt to the Heart']);
     }
 }
 
+/**
+ * Arcane Power Weaver
+ */
 class PowerWeaverArcBuild extends PowerWeaverBuild {
+    /**
+     * Create a Power Weaver build in Arcane
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, ' - Arcane' + name);
         this.specialization.setSpec('spec2', 'Arcane', [
@@ -75,6 +114,9 @@ class PowerWeaverArcBuild extends PowerWeaverBuild {
     }
 }
 
+/**
+ * Add elementalist builds to the database
+ */
 export function eleBuildMaker() {
     let build: ProfBuild = null;
     // Condi

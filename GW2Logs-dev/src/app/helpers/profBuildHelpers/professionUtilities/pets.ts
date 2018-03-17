@@ -1,3 +1,6 @@
+/**
+ * Pet data
+ */
 export const pets = {
     'Juvenile Jungle Stalker': {
         id: 1,
@@ -220,3 +223,5 @@ export const pets = {
         icon: 'https://render.guildwars2.com/file/A41953A8682309700FA17601FE05DB040C6CD07B/1128514.png'
     }
 };
+
+Object.freeze(pets);

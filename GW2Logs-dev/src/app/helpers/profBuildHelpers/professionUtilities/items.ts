@@ -1,38 +1,136 @@
-export const items = {
-    trinket: {
-        ring1: 79712,
-        ring2: 81024,
-        amulet: 81658,
-        earring1: 79745,
-        earring2: 79444,
-        back: 79830
-    },
+/**
+ * Armor data
+ */
+export class ArmorData {
+    /**
+     * Helm id
+     */
+    helm: number;
+    /**
+     * Shoulders id
+     */
+    shoulders: number;
+    /**
+     * Coat id
+     */
+    coat: number;
+    /**
+     * Gloves id
+     */
+    gloves: number;
+    /**
+     * Leggings id
+     */
+    leggings: number;
+    /**
+     * Boots id
+     */
+    boots: number;
 
+    /**
+     * Create an armor data
+     * @param helm Helm id
+     * @param shoulders Shoulders id
+     * @param coat Coat id
+     * @param gloves Gloves id
+     * @param leggings Leggings id
+     * @param boots Boots id
+     */
+    constructor(helm: number, shoulders: number, coat: number, gloves: number, leggings: number, boots: number) {
+        this.helm = helm;
+        this.shoulders = shoulders;
+        this.coat = coat;
+        this.gloves = gloves;
+        this.leggings = leggings;
+        this.boots = boots;
+    }
+}
+
+/**
+ * Trinket data
+ */
+export class TrinketData {
+    /**
+     * Ring 1 id
+     */
+    ring1: number;
+    /**
+     * Ring 2 id
+     */
+    ring2: number;
+    /**
+     * Amulet id
+     */
+    amulet: number;
+    /**
+     * Earring 1 id
+     */
+    earring1: number;
+    /**
+     * Earring 2 id
+     */
+    earring2: number;
+    /**
+     * Back id
+     */
+    back: number;
+
+    /**
+     * Create an armor data
+     * @param ring1 Ring 1 id
+     * @param ring2 Ring 2 id
+     * @param amulet Amulet id
+     * @param earring1 Earring 1 id
+     * @param earring2 Earring 2 id
+     * @param back Back id
+     */
+    constructor(ring1: number, ring2: number, amulet: number, earring1: number, earring2: number, back: number) {
+        this.ring1 = ring1;
+        this.ring2 = ring2;
+        this.amulet = amulet;
+        this.earring1 = earring1;
+        this.earring2 = earring2;
+        this.back = back;
+    }
+}
+
+/**
+ * Equipement data
+ */
+export const items = {
+    trinket: new TrinketData(
+        79712,
+        81024,
+        81658,
+        79745,
+        79444,
+        79830
+    ),
     armor: {
-        Light: {
-            helm: 80751,
-            shoulders: 80855,
-            coat: 80811,
-            gloves: 80838,
-            leggings: 80755,
-            boots: 80815
-        },
-        Medium: {
-            helm: 80753,
-            shoulders: 80825,
-            coat: 80798,
-            gloves: 80779,
-            leggings: 80812,
-            boots: 80836
-        },
-        Heavy: {
-            helm: 80832,
-            shoulders: 80814,
-            coat: 80818,
-            gloves: 80834,
-            leggings: 80845,
-            boots: 80808
-        }
+        Light: new ArmorData(
+            80751,
+            80855,
+            80811,
+            80838,
+            80755,
+            80815
+        ),
+        Medium: new ArmorData(
+            80753,
+            80825,
+            80798,
+            80779,
+            80812,
+            80836
+        ),
+        Heavy: new ArmorData(
+            80832,
+            80814,
+            80818,
+            80834,
+            80845,
+            80808
+        )
     },
 
     runes: {
@@ -110,3 +208,5 @@ export const items = {
         'Bowl of Curry Butternut Squash Soup': 12486
     }
 };
+
+Object.freeze(items);

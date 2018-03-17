@@ -4,35 +4,68 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Boss } from '../helpers/boss';
 import { OnDestroy, OnChanges } from '@angular/core';
 
+/**
+ * The componement displaying the logs - DEPRECATED, use gw2raidar instend
+ */
 @Component({
     selector: 'app-logs-detail',
     templateUrl: './logs-detail.component.html',
     styleUrls: ['./logs-detail.component.css']
 })
 export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
+    /**
+     * Input value, boss data
+     */
     @Input() boss: Boss;
+    /**
+     * Observer to listen to changes in the logs' iframe
+     */
     observerMap = new Map();
+    /**
+     * Switch between iframe and new tab based logs
+     */
     logsTab: boolean;
+    /**
+     * Create a log display component
+     * @param sanitizer Make sure the given html elements are secure
+     */
     constructor(public sanitizer: DomSanitizer) { }
 
+    /**
+     * Todo on init
+     */
     ngOnInit() {
         this.clearMutations();
         this.logsTab = localStorage.getItem('logsTab') === 'true';
     }
 
+    /**
+     * Todo on destroy
+     */
     ngOnDestroy() {
         this.clearMutations();
     }
 
+    /**
+     * Todo when input changes
+     */
     ngOnChanges() {
         this.clearMutations();
     }
 
+    /**
+     * Toggle the switch
+     */
     toggleLogsTab() {
         this.logsTab = !this.logsTab;
         localStorage.setItem('logsTab', this.logsTab.toString());
     }
 
+    /**
+     * Listen to changes in the logs' iframe to update the height
+     * @param id ID of the iframe
+     * @param target Body of the iframe
+     */
     observeMutations(id: string, target: HTMLElement): void {
         const frame = document.getElementById(id);
         let observer = null;
@@ -51,6 +84,9 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
         observer.observe(target, config);
     }
 
+    /**
+     * Empty the observer
+     */
     clearMutations(): void {
         const _this = this;
         this.observerMap.forEach(function (observer, id, map) {
@@ -58,6 +94,10 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
         });
     }
 
+    /**
+     * Stop listening to given id
+     * @param id ID of the iframe
+     */
     stopObserveMutations(id: string): void {
         if (this.observerMap.has(id)) {
             this.observerMap.get(id).disconnect();
@@ -65,6 +105,10 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
         }
     }
 
+    /**
+     * Display the given log
+     * @param log Log data
+     */
     display(log: { id: string, date: string, url: string }): void {
         if (this.logsTab) {
             window.open(log.url, '_blank');

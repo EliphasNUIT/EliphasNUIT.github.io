@@ -194,6 +194,9 @@
                                     <a href="../classes/Armor.html"  data-type="entity-link" class="active" >Armor</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../classes/ArmorData.html" >ArmorData</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -342,6 +345,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -597,6 +603,9 @@
                                            <a href="../classes/Armor.html"  data-type="entity-link" class="active" >Armor</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/ArmorData.html" >ArmorData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -747,6 +756,9 @@
                                            <a href="../classes/Trinket.html" >Trinket</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/TrinketData.html" >TrinketData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -856,6 +868,13 @@
             <code>src/app/helpers/profBuildHelpers/data/armor.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Class reprensenting armor sets</p>
+
+            </p>
 
 
 
@@ -873,7 +892,7 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                        <a href="#armor">armor</a>
+                                        <a href="#armorType">armorType</a>
                                     </li>
                                     <li>
                                         <a href="#boots">boots</a>
@@ -932,35 +951,46 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-            <code>constructor(armorType: )</code>
+            <code>constructor(armorType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                                 </td>
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:15</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:40</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Create an armor set</p>
+            </div>
                                         <div>
                                                 <b>Parameters :</b>
                                                 <table class="params">
                                                     <thead>
                                                         <tr>
                                                             <td>Name</td>
+                                                                <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                             <tr>
                                                                 <td>armorType</td>
                                                               
+                                                                    <td>
+                                                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                                    </td>
                                                               
                                                                 <td>
                                                                         no
                                                                 </td>
                                                                 
+                                                                    <td>
+                                                                            <code><p>the armor type: Heavy, Medium, Light</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -998,12 +1028,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:81</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:132</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the div elements to put in the html</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1013,6 +1045,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1028,6 +1061,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>if mobile device</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1039,7 +1076,8 @@
             
                                         </div>
                                             <div class="io-description">
-                                                
+                                                <p>Two div elements to put in the html, armor set in armor and runes in rune</p>
+            
                                             </div>
                                 </td>
                             </tr>
@@ -1067,12 +1105,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:60</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:106</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Set runes in a 4 2 pattern</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1082,6 +1122,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1097,6 +1138,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>The name of the first 4 runes</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>rune2</td>
@@ -1110,6 +1155,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>The name of the last 2 runes</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1149,12 +1198,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:48</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:89</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Set 6 times the same rune</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1164,6 +1215,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1179,6 +1231,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>The name of the rune</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1218,12 +1274,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:28</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:61</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Set the same stat on all armor pieces</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1233,6 +1291,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1248,6 +1307,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>the stat to use on all armor pieces</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1287,12 +1350,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:32</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:69</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Set the stats on the armor piece</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1302,6 +1367,7 @@
                                                             <td>Name</td>
                                                                 <td>Type</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1317,6 +1383,10 @@
                                                                 </td>
                                                                 
             
+                                                                    <td>
+                                                                            <code><p>Array of stats in the following order: helm - shoulders - coat - gloves - leggings - boots</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1346,33 +1416,39 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <a name="armor"></a>
+                                    <a name="armorType"></a>
                                     <span class="name">
                                         <b>
-                                        armor
+                                        armorType
                                         </b>
-                                        <a href="#armor"><span class="fa fa-link"></span></a>
+                                        <a href="#armorType"><span class="fa fa-link"></span></a>
                                     </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <code>armor:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    <code>armorType:     <code><a href="../classes/ArmorData.html" target="_self" >ArmorData</a></code>
             </code>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <i>Type : </i>    <code><a href="../classes/ArmorData.html" target="_self" >ArmorData</a></code>
             
                                     </td>
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:9</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:16</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>The armor type</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1403,10 +1479,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:15</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:40</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Boots data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1437,10 +1519,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:12</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:28</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Coat data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1471,10 +1559,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:13</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:32</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Gloves data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1505,10 +1599,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:10</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:20</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Helm data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1539,10 +1639,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:14</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:36</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Leggings data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1573,10 +1679,16 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:11</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/helpers/profBuildHelpers/data/armor.ts:24</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Shoulders data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1586,24 +1698,53 @@
 
 
     <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { items } from &#x27;../professionUtilities/items&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { items, ArmorData } from &#x27;../professionUtilities/items&#x27;;
 import { stats } from &#x27;../professionUtilities/stats&#x27;;
 
-
-const armor &#x3D; items.armor;
+/**
+ * Rune data
+ */
 const runes &#x3D; items.runes;
 
+/**
+ *Class reprensenting armor sets
+ */
 export class Armor {
-    armor: string;
+    /**
+     * The armor type
+     */
+    armorType: ArmorData;
+    /**
+     * Helm data
+     */
     helm: {stat: number, rune: number};
+    /**
+     * Shoulders data
+     */
     shoulders: {stat: number, rune: number};
+    /**
+     * Coat data
+     */
     coat: {stat: number, rune: number};
+    /**
+     * Gloves data
+     */
     gloves: {stat: number, rune: number};
+    /**
+     * Leggings data
+     */
     leggings: {stat: number, rune: number};
+    /**
+     * Boots data
+     */
     boots: {stat: number, rune: number};
 
-    constructor(armorType) {
-        this.armor &#x3D; armor[armorType];
+    /**
+     * Create an armor set
+     * @param armorType the armor type: Heavy, Medium, Light
+     */
+    constructor(armorType: string) {
+        this.armorType &#x3D; items.armor[armorType];
 
         this.helm &#x3D; { stat: -1, rune: -1 };
         this.shoulders &#x3D; { stat: -1, rune: -1 };
@@ -1613,13 +1754,21 @@ export class Armor {
         this.boots &#x3D; { stat: -1, rune: -1 };
     }
 
+    /**
+     * Set the same stat on all armor pieces
+     * @param stat the stat to use on all armor pieces
+     */
     setSingleStat(stat: string): void {
         this.setStats([stat, stat, stat, stat, stat, stat]);
     }
 
+    /**
+     * Set the stats on the armor piece
+     * @param armorStats Array of stats in the following order: helm - shoulders - coat - gloves - leggings - boots
+     */
     setStats(armorStats: string[]): void {
         if (armorStats.length !&#x3D;&#x3D; 6) {
-            console.warn(&#x27;Warning: invalid parameters in Trinkek::setStats&#x27;);
+            console.warn(&#x27;Warning: invalid parameters in Armor::setStats&#x27;);
             return;
         }
         const slots &#x3D; [&#x27;helm&#x27;, &#x27;shoulders&#x27;, &#x27;coat&#x27;, &#x27;gloves&#x27;, &#x27;leggings&#x27;, &#x27;boots&#x27;];
@@ -1633,6 +1782,10 @@ export class Armor {
         }
     }
 
+    /**
+     * Set 6 times the same rune
+     * @param rune The name of the rune
+     */
     setSingleRune(rune: string): void {
         const slots &#x3D; [&#x27;helm&#x27;, &#x27;shoulders&#x27;, &#x27;coat&#x27;, &#x27;gloves&#x27;, &#x27;leggings&#x27;, &#x27;boots&#x27;];
         const runeID &#x3D; runes[rune];
@@ -1645,6 +1798,11 @@ export class Armor {
         }
     }
 
+    /**
+     * Set runes in a 4 2 pattern
+     * @param rune1 The name of the first 4 runes
+     * @param rune2 The name of the last 2 runes
+     */
     set42Rune(rune1: string, rune2: string): void {
         const slots &#x3D; [&#x27;helm&#x27;, &#x27;shoulders&#x27;, &#x27;coat&#x27;, &#x27;gloves&#x27;, &#x27;leggings&#x27;, &#x27;boots&#x27;];
         let runeID &#x3D; runes[rune1];
@@ -1666,6 +1824,11 @@ export class Armor {
         }
     }
 
+    /**
+     * Get the div elements to put in the html
+     * @param mobile if mobile device
+     * @returns Two div elements to put in the html, armor set in armor and runes in rune
+     */
     getDiv(mobile: boolean): {armor: string, rune: string} {
         let divToAdd &#x3D; &#x27;&lt;div data-armory-embed&#x3D;&quot;items&quot; &#x27;;
         let runeDivToAdd &#x3D; &#x27;&lt;div data-armory-embed&#x3D;&quot;items&quot; &#x27;;
@@ -1677,7 +1840,7 @@ export class Armor {
             const slot &#x3D; slots[i];
             const slotStat &#x3D; this[slot].stat;
             const slotRune &#x3D; this[slot].rune;
-            const slotId &#x3D; this.armor[slot];
+            const slotId &#x3D; this.armorType[slot];
             armorIDS +&#x3D; slotId + &#x27;,&#x27;;
             runeIDS +&#x3D; slotRune + &#x27;,&#x27;;
             totalStats +&#x3D; &#x27;data-armory-&#x27; + slotId + &#x27;-stat&#x3D;&quot;&#x27; + slotStat + &#x27;&quot; &#x27;;

@@ -1,21 +1,50 @@
-import { items } from '../professionUtilities/items';
+import { items, ArmorData } from '../professionUtilities/items';
 import { stats } from '../professionUtilities/stats';
 
-
-const armor = items.armor;
+/**
+ * Rune data
+ */
 const runes = items.runes;
 
+/**
+ *Class reprensenting armor sets
+ */
 export class Armor {
-    armor: string;
+    /**
+     * The armor type
+     */
+    armorType: ArmorData;
+    /**
+     * Helm data
+     */
     helm: {stat: number, rune: number};
+    /**
+     * Shoulders data
+     */
     shoulders: {stat: number, rune: number};
+    /**
+     * Coat data
+     */
     coat: {stat: number, rune: number};
+    /**
+     * Gloves data
+     */
     gloves: {stat: number, rune: number};
+    /**
+     * Leggings data
+     */
     leggings: {stat: number, rune: number};
+    /**
+     * Boots data
+     */
     boots: {stat: number, rune: number};
 
-    constructor(armorType) {
-        this.armor = armor[armorType];
+    /**
+     * Create an armor set
+     * @param armorType the armor type: Heavy, Medium, Light
+     */
+    constructor(armorType: string) {
+        this.armorType = items.armor[armorType];
 
         this.helm = { stat: -1, rune: -1 };
         this.shoulders = { stat: -1, rune: -1 };
@@ -25,13 +54,21 @@ export class Armor {
         this.boots = { stat: -1, rune: -1 };
     }
 
+    /**
+     * Set the same stat on all armor pieces
+     * @param stat the stat to use on all armor pieces
+     */
     setSingleStat(stat: string): void {
         this.setStats([stat, stat, stat, stat, stat, stat]);
     }
 
+    /**
+     * Set the stats on the armor piece
+     * @param armorStats Array of stats in the following order: helm - shoulders - coat - gloves - leggings - boots
+     */
     setStats(armorStats: string[]): void {
         if (armorStats.length !== 6) {
-            console.warn('Warning: invalid parameters in Trinkek::setStats');
+            console.warn('Warning: invalid parameters in Armor::setStats');
             return;
         }
         const slots = ['helm', 'shoulders', 'coat', 'gloves', 'leggings', 'boots'];
@@ -45,6 +82,10 @@ export class Armor {
         }
     }
 
+    /**
+     * Set 6 times the same rune
+     * @param rune The name of the rune
+     */
     setSingleRune(rune: string): void {
         const slots = ['helm', 'shoulders', 'coat', 'gloves', 'leggings', 'boots'];
         const runeID = runes[rune];
@@ -57,6 +98,11 @@ export class Armor {
         }
     }
 
+    /**
+     * Set runes in a 4 2 pattern
+     * @param rune1 The name of the first 4 runes
+     * @param rune2 The name of the last 2 runes
+     */
     set42Rune(rune1: string, rune2: string): void {
         const slots = ['helm', 'shoulders', 'coat', 'gloves', 'leggings', 'boots'];
         let runeID = runes[rune1];
@@ -78,6 +124,11 @@ export class Armor {
         }
     }
 
+    /**
+     * Get the div elements to put in the html
+     * @param mobile if mobile device
+     * @returns Two div elements to put in the html, armor set in armor and runes in rune
+     */
     getDiv(mobile: boolean): {armor: string, rune: string} {
         let divToAdd = '<div data-armory-embed="items" ';
         let runeDivToAdd = '<div data-armory-embed="items" ';
@@ -89,7 +140,7 @@ export class Armor {
             const slot = slots[i];
             const slotStat = this[slot].stat;
             const slotRune = this[slot].rune;
-            const slotId = this.armor[slot];
+            const slotId = this.armorType[slot];
             armorIDS += slotId + ',';
             runeIDS += slotRune + ',';
             totalStats += 'data-armory-' + slotId + '-stat="' + slotStat + '" ';

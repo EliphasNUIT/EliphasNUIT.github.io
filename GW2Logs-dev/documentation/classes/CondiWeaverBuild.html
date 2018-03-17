@@ -194,6 +194,9 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../classes/ArmorData.html" >ArmorData</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -342,6 +345,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -597,6 +603,9 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/ArmorData.html" >ArmorData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -747,6 +756,9 @@
                                            <a href="../classes/Trinket.html" >Trinket</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/TrinketData.html" >TrinketData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -856,6 +868,13 @@
             <code>src/app/helpers/profBuildHelpers/professions/elementalist.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Condition Weaver</p>
+
+            </p>
 
             <p class="comment">
                 <h3>Extends</h3>
@@ -982,12 +1001,14 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/helpers/profBuildHelpers/professions/elementalist.ts:16</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/helpers/profBuildHelpers/professions/elementalist.ts:26</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Create a Condition Weaver build</p>
+            </div>
                                         <div>
                                                 <b>Parameters :</b>
                                                 <table class="params">
@@ -995,6 +1016,7 @@
                                                         <tr>
                                                             <td>Name</td>
                                                             <td>Optional</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1006,6 +1028,10 @@
                                                                         no
                                                                 </td>
                                                                 
+                                                                    <td>
+                                                                            <code><p>Id of the build</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>name</td>
@@ -1015,6 +1041,10 @@
                                                                         no
                                                                 </td>
                                                                 
+                                                                    <td>
+                                                                            <code><p>Name of the build</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1058,12 +1088,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:154</div>
+                                                <div class="io-line">Defined in EleBuild:255</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Add an override to the build</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1074,6 +1106,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1091,6 +1124,10 @@
                                                                     <td>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>open</td>
@@ -1107,6 +1144,10 @@
                                                                             <code>true</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Visible by default or not</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1152,12 +1193,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:116</div>
+                                                <div class="io-line">Defined in EleBuild:197</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the armor div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1168,6 +1211,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1186,6 +1230,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1231,12 +1279,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:143</div>
+                                                <div class="io-line">Defined in EleBuild:236</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the consumable div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1247,6 +1297,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1265,6 +1316,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1310,12 +1365,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:150</div>
+                                                <div class="io-line">Defined in EleBuild:246</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the icon path</p>
+            </div>
             
                                         <div class="io-description">
                                             <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
@@ -1353,17 +1410,25 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:180</div>
+                                                <div class="io-line">Defined in EleBuild:285</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the overrides of the build</p>
+            </div>
             
+                                        <div>
+                                        </div>
                                         <div class="io-description">
                                             <b>Returns : </b>    <code>string[]</code>
             
                                         </div>
+                                            <div class="io-description">
+                                                <p>Array of the name of the overrides</p>
+            
+                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -1396,12 +1461,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:79</div>
+                                                <div class="io-line">Defined in EleBuild:144</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the pets div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1412,6 +1479,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1430,6 +1498,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1475,12 +1547,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:99</div>
+                                                <div class="io-line">Defined in EleBuild:172</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the profession skills div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1491,6 +1565,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1509,6 +1584,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1554,12 +1633,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:89</div>
+                                                <div class="io-line">Defined in EleBuild:158</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the skills div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1570,6 +1651,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1588,6 +1670,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1633,12 +1719,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:72</div>
+                                                <div class="io-line">Defined in EleBuild:133</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the specialization div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1649,6 +1737,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1667,6 +1756,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1712,12 +1805,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:109</div>
+                                                <div class="io-line">Defined in EleBuild:186</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the trinket div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1728,6 +1823,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1746,6 +1842,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1791,12 +1891,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:123</div>
+                                                <div class="io-line">Defined in EleBuild:208</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the primary weapon set div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1807,6 +1909,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1825,6 +1928,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1870,12 +1977,14 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:133</div>
+                                                <div class="io-line">Defined in EleBuild:222</div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Get the secondary weapon set div</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -1886,6 +1995,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -1904,6 +2014,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Name of the override</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -1962,10 +2076,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:33</div>
+                                                <div class="io-line">Defined in EleBuild:51</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Armor data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2002,10 +2122,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:34</div>
+                                                <div class="io-line">Defined in EleBuild:55</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Consumable data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2047,10 +2173,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:42</div>
+                                                <div class="io-line">Defined in EleBuild:87</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Icon path</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2087,10 +2219,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:31</div>
+                                                <div class="io-line">Defined in EleBuild:43</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Id of the build</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2127,10 +2265,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:32</div>
+                                                <div class="io-line">Defined in EleBuild:47</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Name of the build</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2167,10 +2311,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:44</div>
+                                                <div class="io-line">Defined in EleBuild:91</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Overrides</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2207,10 +2357,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:41</div>
+                                                <div class="io-line">Defined in EleBuild:83</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Profession</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2247,10 +2403,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:39</div>
+                                                <div class="io-line">Defined in EleBuild:75</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Profession skills data, can be set to null</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2287,10 +2449,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:40</div>
+                                                <div class="io-line">Defined in EleBuild:79</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Skills data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2327,10 +2495,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:38</div>
+                                                <div class="io-line">Defined in EleBuild:71</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Specialization data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2367,10 +2541,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:35</div>
+                                                <div class="io-line">Defined in EleBuild:59</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Trinket data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2407,10 +2587,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:37</div>
+                                                <div class="io-line">Defined in EleBuild:67</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Primary weapon set data</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2447,10 +2633,16 @@
                                         </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in EleBuild:36</div>
+                                                <div class="io-line">Defined in EleBuild:63</div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Second weapon set data, can be set to null</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -2467,15 +2659,30 @@ import { Skills } from &#x27;../data/skills&#x27;;
 import { Specialization } from &#x27;../data/specialization&#x27;;
 
 
-
+/**
+ * Standard Elementalist
+ */
 class EleBuild extends ProfBuild {
+    /**
+     * Create a standard Elementalist build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Elementalist, name);
         this.wep2 &#x3D; null;
     }
 }
 
+/**
+ * Condition Weaver
+ */
 class CondiWeaverBuild extends EleBuild {
+    /**
+     * Create a Condition Weaver build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, &#x27;Weaver - Condition&#x27; + name);
         this.icon +&#x3D; &#x27;weaver.png&#x27;;
@@ -2498,7 +2705,15 @@ class CondiWeaverBuild extends EleBuild {
     }
 }
 
+/**
+ * Power Weaver
+ */
 class PowerWeaverBuild extends EleBuild {
+    /**
+     * Create a standard Power Weaver Build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, &#x27;Weaver - Power&#x27; + name);
         this.icon +&#x3D; &#x27;weaver.png&#x27;;
@@ -2519,14 +2734,30 @@ class PowerWeaverBuild extends EleBuild {
     }
 }
 
+/**
+ * Air Power Weaver
+ */
 class PowerWeaverAirBuild extends PowerWeaverBuild {
+    /**
+     * Create a Power Weaver in Air build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, &#x27; - Air&#x27; + name);
         this.specialization.setSpec(&#x27;spec2&#x27;, &#x27;Air&#x27;, [&#x27;Ferocious Winds&#x27;, &#x27;Inscription&#x27;, &#x27;Bolt to the Heart&#x27;]);
     }
 }
 
+/**
+ * Arcane Power Weaver
+ */
 class PowerWeaverArcBuild extends PowerWeaverBuild {
+    /**
+     * Create a Power Weaver build in Arcane
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, &#x27; - Arcane&#x27; + name);
         this.specialization.setSpec(&#x27;spec2&#x27;, &#x27;Arcane&#x27;, [
@@ -2537,6 +2768,9 @@ class PowerWeaverArcBuild extends PowerWeaverBuild {
     }
 }
 
+/**
+ * Add elementalist builds to the database
+ */
 export function eleBuildMaker() {
     let build: ProfBuild &#x3D; null;
     // Condi

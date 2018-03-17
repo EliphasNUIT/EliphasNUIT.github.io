@@ -9,7 +9,9 @@ import { thiefBuildMaker } from './thief';
 import { warBuildMaker } from './warrior';
 
 
-
+/**
+ * Add every builds from every professions to the database
+ */
 export function makeAllBuild() {
     console.log('creating builds');
     mesBuildMaker();

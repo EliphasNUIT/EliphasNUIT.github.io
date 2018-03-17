@@ -1,3 +1,6 @@
+/**
+ * Guardian data
+ */
 const Guardian = {
     name: 'Guardian',
     armor: 'Heavy',
@@ -224,6 +227,9 @@ const Guardian = {
         }
     }
 };
+/**
+ * Warrior data
+ */
 const Warrior = {
     name: 'Warrior',
     armor: 'Heavy',
@@ -486,6 +492,9 @@ const Warrior = {
         }
     }
 };
+/**
+ * Revenant data
+ */
 const Revenant = {
     name: 'Revenant',
     armor: 'Heavy',
@@ -677,6 +686,9 @@ const Revenant = {
         }
     }
 };
+/**
+ * Necromancer data
+ */
 const Necromancer = {
     name: 'Necromancer',
     armor: 'Light',
@@ -894,6 +906,9 @@ const Necromancer = {
         }
     }
 };
+/**
+ * Elementalist data
+ */
 const Elementalist = {
     name: 'Elementalist',
     armor: 'Light',
@@ -1186,6 +1201,9 @@ const Elementalist = {
         }
     }
 };
+/**
+ * Mesmer data
+ */
 const Mesmer = {
     name: 'Mesmer',
     armor: 'Light',
@@ -1396,6 +1414,9 @@ const Mesmer = {
         }
     }
 };
+/**
+ * Ranger data
+ */
 const Ranger = {
     name: 'Ranger',
     armor: 'Medium',
@@ -1654,6 +1675,9 @@ const Ranger = {
         }
     }
 };
+/**
+ * Thief data
+ */
 const Thief = {
     name: 'Thief',
     armor: 'Medium',
@@ -1877,6 +1901,9 @@ const Thief = {
         }
     }
 };
+/**
+ * Engineer data
+ */
 const Engineer = {
     name: 'Engineer',
     armor: 'Medium',
@@ -2054,6 +2081,19 @@ const Engineer = {
     }
 };
 
+Object.freeze(Warrior);
+Object.freeze(Guardian);
+Object.freeze(Revenant);
+Object.freeze(Mesmer);
+Object.freeze(Necromancer);
+Object.freeze(Elementalist);
+Object.freeze(Thief);
+Object.freeze(Engineer);
+Object.freeze(Ranger);
+
+/**
+ * Professions data
+ */
 export const Professions = {
     Guardian: Guardian,
     Warrior: Warrior,
@@ -2065,3 +2105,5 @@ export const Professions = {
     Necromancer: Necromancer,
     Mesmer: Mesmer
 };
+
+Object.freeze(Professions);

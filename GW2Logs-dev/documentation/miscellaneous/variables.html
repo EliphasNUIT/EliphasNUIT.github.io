@@ -194,6 +194,9 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../classes/ArmorData.html" >ArmorData</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -342,6 +345,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -597,6 +603,9 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/ArmorData.html" >ArmorData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -747,6 +756,9 @@
                                            <a href="../classes/Trinket.html" >Trinket</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/TrinketData.html" >TrinketData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -848,9 +860,6 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#armor">armor</a>
-                        </li>
-                        <li>
                             <a href="#buildDatabase">buildDatabase</a>
                         </li>
                         <li>
@@ -926,65 +935,6 @@
     </table>
 </section>
 
-    <h3>src/app/helpers/profBuildHelpers/data/armor.ts</h3>
-    <section>
-        <h3></h3>        <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="armor"></a>
-                            <span class="name">
-                                <b>
-                                armor
-                                </b>
-                                <a href="#armor"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>armor:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>items.armor</code>
-                            </td>
-                        </tr>
-    
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="runes"></a>
-                            <span class="name">
-                                <b>
-                                runes
-                                </b>
-                                <a href="#runes"><span class="fa fa-link"></span></a>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>runes:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>items.runes</code>
-                            </td>
-                        </tr>
-    
-    
-                </tbody>
-            </table>
-    </section>
     <h3>src/app/helpers/profBuild.ts</h3>
     <section>
         <h3></h3>        <table class="table table-sm table-bordered">
@@ -1018,6 +968,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Build database</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -1042,10 +998,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Default value : </i><code>false</code>
+                                <i>Default value : </i><code>detectmob()</code>
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Mobile device or not</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -1077,6 +1039,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Consumable data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -1405,6 +1373,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Elementalist data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -1614,6 +1588,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Engineer data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -1873,6 +1853,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Guardian data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -2116,6 +2102,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Mesmer data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -2366,6 +2358,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Necromancer data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -2410,6 +2408,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Professions data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -2701,6 +2705,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Ranger data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -2925,6 +2935,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Revenant data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3181,6 +3197,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Thief data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3476,6 +3498,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Warrior data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3510,11 +3538,18 @@
                         <tr>
                             <td class="col-md-4">
                                 <i>Default value : </i><code>{
+    
       production: true
     }</code>
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Production flag</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3554,6 +3589,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Production flag</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3588,40 +3629,39 @@
                         <tr>
                             <td class="col-md-4">
                                 <i>Default value : </i><code>{
-        trinket: {
-            ring1: 79712,
-            ring2: 81024,
-            amulet: 81658,
-            earring1: 79745,
-            earring2: 79444,
-            back: 79830
-        },
-    
+        trinket: new TrinketData(
+            79712,
+            81024,
+            81658,
+            79745,
+            79444,
+            79830
+        ),
         armor: {
-            Light: {
-                helm: 80751,
-                shoulders: 80855,
-                coat: 80811,
-                gloves: 80838,
-                leggings: 80755,
-                boots: 80815
-            },
-            Medium: {
-                helm: 80753,
-                shoulders: 80825,
-                coat: 80798,
-                gloves: 80779,
-                leggings: 80812,
-                boots: 80836
-            },
-            Heavy: {
-                helm: 80832,
-                shoulders: 80814,
-                coat: 80818,
-                gloves: 80834,
-                leggings: 80845,
-                boots: 80808
-            }
+            Light: new ArmorData(
+                80751,
+                80855,
+                80811,
+                80838,
+                80755,
+                80815
+            ),
+            Medium: new ArmorData(
+                80753,
+                80825,
+                80798,
+                80779,
+                80812,
+                80836
+            ),
+            Heavy: new ArmorData(
+                80832,
+                80814,
+                80818,
+                80834,
+                80845,
+                80808
+            )
         },
     
         runes: {
@@ -3702,6 +3742,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Equipement data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3960,6 +4006,49 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Pet data</p>
+    </div>
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+    </section>
+    <h3>src/app/helpers/profBuildHelpers/data/armor.ts</h3>
+    <section>
+        <h3></h3>        <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="runes"></a>
+                            <span class="name">
+                                <b>
+                                runes
+                                </b>
+                                <a href="#runes"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>runes:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>items.runes</code>
+                            </td>
+                        </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Rune data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -3991,6 +4080,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Sigil data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -4019,6 +4114,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Weapon data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -4114,6 +4215,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Item stat data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -4145,6 +4252,12 @@
                             </td>
                         </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Trinket data</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>

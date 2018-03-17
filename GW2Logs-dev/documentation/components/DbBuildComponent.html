@@ -194,6 +194,9 @@
                                     <a href="../classes/Armor.html" >Armor</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../classes/ArmorData.html" >ArmorData</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                 </li>
                                 <li class="link">
@@ -342,6 +345,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Trinket.html" >Trinket</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/TrinketData.html" >TrinketData</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -597,6 +603,9 @@
                                            <a href="../classes/Armor.html" >Armor</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/ArmorData.html" >ArmorData</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/BerserkerBannerBuild.html" >BerserkerBannerBuild</a>
                                        </li>
                                        <li class="link">
@@ -745,6 +754,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Trinket.html" >Trinket</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/TrinketData.html" >TrinketData</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/WarriorBannerBuild.html" >WarriorBannerBuild</a>
@@ -957,7 +969,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/database/db-build/db-build.component.ts:42</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/database/db-build/db-build.component.ts:67</a></div>
                                 </td>
                             </tr>
     
@@ -996,7 +1008,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/database/db-build/db-build.component.ts:67</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/database/db-build/db-build.component.ts:92</a></div>
                                 </td>
                             </tr>
     
@@ -1033,7 +1045,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/database/db-build/db-build.component.ts:70</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/database/db-build/db-build.component.ts:95</a></div>
                                 </td>
                             </tr>
     
@@ -1114,7 +1126,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/database/db-build/db-build.component.ts:40</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/database/db-build/db-build.component.ts:65</a></div>
                                 </td>
                             </tr>
     
@@ -1148,7 +1160,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/database/db-build/db-build.component.ts:42</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/database/db-build/db-build.component.ts:67</a></div>
                                 </td>
                             </tr>
     
@@ -1164,30 +1176,55 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { buildDatabase, ProfBuild } from &#x27;../../helpers/profBuild&#x27;;
 
-
+/**
+ * Profession handler
+ */
 class ProfessionHandler {
+  /**
+   * Name of the profession
+   */
   name: string;
+  /**
+   * Array of builds with minimum data, id, name and overrides
+   */
   builds: { id: string, name: string, overrides: string[] }[] &#x3D; [];
 
+  /**
+   * Create a profession handler
+   * @param name Name of the profession
+   */
   constructor(name: string) {
     this.name &#x3D; name;
   }
 
+  /**
+   * Get the background image of the handler
+   */
   getStyle() {
     return {
       &#x27;background-image&#x27;: &#x27;url(assets/dbBuilds/&#x27; + this.name + &#x27;.png)&#x27;
     };
   }
+  /**
+   * The css class of the profession handler
+   */
   getClass() {
     const res: any &#x3D; {};
     res[this.name] &#x3D; true;
     return res;
   }
 
+  /**
+   * Add a build to the handler
+   * @param build The build to add
+   */
   add(build: ProfBuild) {
     this.builds.push({ name: build.name, id: build.id, overrides: build.getOverrides() });
   }
 
+  /**
+   * Validate the handler and sorts the builds by alphabetical order
+   */
   validate() {
     this.builds.sort((a, b) &#x3D;&gt; a.name &lt; b.name ? -1 : 1);
   }

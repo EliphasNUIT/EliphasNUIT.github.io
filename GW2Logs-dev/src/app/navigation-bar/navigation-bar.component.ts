@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * The navigation bar
+ */
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
   styleUrls: ['./navigation-bar.component.css']
 })
 export class NavigationBarComponent implements OnInit {
+  /**
+   * Addons for the game
+   */
   Addons = [
     {
       text: 'Arc DPS',
@@ -33,7 +39,9 @@ export class NavigationBarComponent implements OnInit {
       target: 'TacO'
     }
   ];
-
+  /**
+   * Build ressources
+   */
   Builds = [
     {
       text: 'Metabattle',
@@ -61,7 +69,9 @@ export class NavigationBarComponent implements OnInit {
       target: 'Ez'
     }
   ];
-
+  /**
+   * Strategies ressources
+   */
   Strats = [
     {
       text: 'TCI',
@@ -90,6 +100,9 @@ export class NavigationBarComponent implements OnInit {
     }
   ];
 
+  /**
+   * Other stuff
+   */
   Divers = [
     {
       text: 'ID des buffs',
@@ -112,8 +125,15 @@ export class NavigationBarComponent implements OnInit {
       target: 'Law Lulles'
     }
   ];
+
+  /**
+   * Create a navigation bar
+   */
   constructor() { }
 
+  /**
+   * Todo on init
+   */
   ngOnInit() {
   }
 

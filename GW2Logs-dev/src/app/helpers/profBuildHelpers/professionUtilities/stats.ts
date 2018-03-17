@@ -1,3 +1,6 @@
+/**
+ * Item stat data
+ */
 export const stats = {
     Mighty: 137,
     Resilient: 140,
@@ -57,3 +60,5 @@ export const stats = {
     Grieving: 1379,
     'Harrier\'s': 1377
 };
+
+Object.freeze(stats);

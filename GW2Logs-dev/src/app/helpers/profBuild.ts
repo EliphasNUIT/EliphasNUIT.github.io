@@ -6,7 +6,10 @@ import { Armor } from './profBuildHelpers/data/armor';
 import { Trinket } from './profBuildHelpers/data/trinket';
 import { Consumable } from './profBuildHelpers/data/consumable';
 
-function detectmob() {
+/**
+ * Detect if mobile device
+ */
+function detectmob(): boolean {
     if (
         navigator.userAgent.match(/Android/i) ||
         navigator.userAgent.match(/webOS/i) ||
@@ -17,30 +20,74 @@ function detectmob() {
         navigator.userAgent.match(/Windows Phone/i)
     ) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
-
+/**
+ * Build database
+ */
 export let buildDatabase: Map<string, ProfBuild> = new Map<string, ProfBuild>();
 
-const mobile = false;
+/**
+ * Mobile device or not
+ */
+const mobile = detectmob();
 
-
+/**
+ * Build data
+ */
 export class ProfBuild {
+    /**
+     * Id of the build
+     */
     id: string;
+    /**
+     * Name of the build
+     */
     name: string;
+    /**
+     * Armor data
+     */
     armor: Armor;
+    /**
+     * Consumable data
+     */
     consumable: Consumable;
+    /**
+     * Trinket data
+     */
     trinket: Trinket;
+    /**
+     * Second weapon set data, can be set to null
+     */
     wep2: Weapons;
+    /**
+     * Primary weapon set data
+     */
     wep1: Weapons;
+    /**
+     * Specialization data
+     */
     specialization: Specialization;
+    /**
+     * Profession skills data, can be set to null
+     */
     profSkills: ProfessionSkills;
+    /**
+     * Skills data
+     */
     skills: Skills;
+    /**
+     * Profession
+     */
     profession: any;
+    /**
+     * Icon path
+     */
     icon = 'assets/profIcons/';
-
+    /**
+     * Overrides
+     */
     overrides: Map<string, {
         skills: Skills,
         profSkills: ProfessionSkills,
@@ -53,6 +100,12 @@ export class ProfBuild {
         open: Boolean
     }>;
 
+    /**
+     * Create a profession build
+     * @param id Id of the build
+     * @param profession Profession of the build
+     * @param name Name of the build
+     */
     constructor(id: string, profession: any, name: string) {
         this.id = id;
         this.name = name;
@@ -66,9 +119,17 @@ export class ProfBuild {
         this.trinket = new Trinket();
         this.consumable = new Consumable();
         this.overrides = new Map();
-        buildDatabase.set(id, this);
+        if (!buildDatabase.has(id)) {
+            buildDatabase.set(id, this);
+        } else {
+            console.warn('Warning: build ' + id + ' already exists in the database');
+        }
     }
 
+    /**
+     * Get the specialization div
+     * @param override Name of the override
+     */
     getSpecializations(override: string = null): string {
         if (this.overrides.has(override) && this.overrides.get(override).specialization) {
             return this.overrides.get(override).specialization.getDiv(mobile);
@@ -76,6 +137,10 @@ export class ProfBuild {
         return this.specialization.getDiv(mobile);
     }
 
+    /**
+     * Get the pets div
+     * @param override Name of the override
+     */
     getPets(override: string = null): string {
         if (this.overrides.has(override) && this.overrides.get(override).skills) {
             return this.overrides.get(override).skills.getPDiv();
@@ -86,6 +151,10 @@ export class ProfBuild {
         return this.skills.getPDiv();
     }
 
+    /**
+     * Get the skills div
+     * @param override Name of the override
+     */
     getSkills(override: string = null): { heal: string, utilities: string, elite: string } {
         if (this.overrides.has(override) && this.overrides.get(override).skills) {
             return this.overrides.get(override).skills.getSDiv(mobile);
@@ -96,6 +165,10 @@ export class ProfBuild {
         return this.skills.getSDiv(mobile);
     }
 
+    /**
+     * Get the profession skills div
+     * @param override Name of the override
+     */
     getProfessionSkills(override: string = null): string {
         if (this.overrides.has(override) && this.overrides.get(override).profSkills) {
             return this.overrides.get(override).profSkills.getSDiv(mobile);
@@ -106,6 +179,10 @@ export class ProfBuild {
         return this.profSkills.getSDiv(mobile);
     }
 
+    /**
+     * Get the trinket div
+     * @param override Name of the override
+     */
     getTrinket(override: string = null): { BA: string, AR: string } {
         if (this.overrides.has(override) && this.overrides.get(override).trinket) {
             return this.overrides.get(override).trinket.getDiv(mobile);
@@ -113,6 +190,10 @@ export class ProfBuild {
         return this.trinket.getDiv(mobile);
     }
 
+    /**
+     * Get the armor div
+     * @param override Name of the override
+     */
     getArmor(override: string = null): { armor: string, rune: string } {
         if (this.overrides.has(override) && this.overrides.get(override).armor) {
             return this.overrides.get(override).armor.getDiv(mobile);
@@ -120,6 +201,10 @@ export class ProfBuild {
         return this.armor.getDiv(mobile);
     }
 
+    /**
+     * Get the primary weapon set div
+     * @param override Name of the override
+     */
     getWeapon1(override: string = null): { wep: string, sig: string } {
         if (this.overrides.has(override) && this.overrides.get(override).wep1) {
             return this.overrides.get(override).wep1.getDiv(mobile);
@@ -130,6 +215,10 @@ export class ProfBuild {
         return this.wep1.getDiv(mobile);
     }
 
+    /**
+     * Get the secondary weapon set div
+     * @param override Name of the override
+     */
     getWeapon2(override: string = null): { wep: string, sig: string } {
         if (this.overrides.has(override) && this.overrides.get(override).wep2) {
             return this.overrides.get(override).wep2.getDiv(mobile);
@@ -140,6 +229,10 @@ export class ProfBuild {
         return this.wep2.getDiv(mobile);
     }
 
+    /**
+     * Get the consumable div
+     * @param override Name of the override
+     */
     getConsumable(override: string = null): string {
         if (this.overrides.has(override) && this.overrides.get(override).consumable) {
             return this.overrides.get(override).consumable.getDiv(mobile);
@@ -147,10 +240,18 @@ export class ProfBuild {
         return this.consumable.getDiv(mobile);
     }
 
+    /**
+     * Get the icon path
+     */
     getIcon(): string {
         return this.icon;
     }
 
+    /**
+     * Add an override to the build
+     * @param name Name of the override
+     * @param open Visible by default or not
+     */
     addOverride(name: string, open: boolean = true): {
         skills: Skills,
         profSkills: ProfessionSkills,
@@ -177,6 +278,10 @@ export class ProfBuild {
         return res;
     }
 
+    /**
+     * Get the overrides of the build
+     * @returns Array of the name of the overrides
+     */
     getOverrides(): string[] {
         const res = ['Main'];
         this.overrides.forEach(function (value, key, map) {
