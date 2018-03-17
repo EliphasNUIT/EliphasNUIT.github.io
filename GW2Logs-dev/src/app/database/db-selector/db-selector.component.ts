@@ -13,7 +13,7 @@ export class DbSelectorComponent implements OnInit, OnChanges {
   @Output() selectedBuildEmit = new EventEmitter<{ name: string, id: string, override: string }>();
   selectedBuild: { name: string, id: string, overrides: string[], override: string };
   selectedOverride: string;
-  filter: '';
+  filter = '';
 
   constructor() { }
 

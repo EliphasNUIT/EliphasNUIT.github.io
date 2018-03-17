@@ -1,12 +1,12 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Character } from '../helpers/character';
+import { Character } from '../../helpers/character';
 
 @Component({
-  selector: 'app-build-detail',
-  templateUrl: './build-detail.component.html',
-  styleUrls: ['./build-detail.component.css']
+  selector: 'app-spec-detail',
+  templateUrl: './spec-detail.component.html',
+  styleUrls: ['./spec-detail.component.css']
 })
-export class BuildDetailComponent implements OnInit {
+export class SpecDetailComponent implements OnInit {
 
   @Input() character: Character;
 

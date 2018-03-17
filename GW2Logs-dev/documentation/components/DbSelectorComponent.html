@@ -81,6 +81,9 @@
                                     <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/DisplayBuildModule.html" >DisplayBuildModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/StratModule.html" >StratModule</a>
                                 </li>
                         </ul>
@@ -476,6 +479,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../modules/DatabaseModule.html" >DatabaseModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/DisplayBuildModule.html" >DisplayBuildModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/StratModule.html" >StratModule</a>
@@ -906,6 +912,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#filter">filter</a>
+                            </li>
+                            <li>
                                 <a href="#selectedBuild">selectedBuild</a>
                             </li>
                             <li>
@@ -986,7 +995,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:16</a></div>
                                 </td>
                             </tr>
     
@@ -1092,7 +1101,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:44</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:45</a></div>
                                 </td>
                             </tr>
     
@@ -1129,7 +1138,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:23</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:24</a></div>
                                 </td>
                             </tr>
     
@@ -1166,7 +1175,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:19</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:20</a></div>
                                 </td>
                             </tr>
     
@@ -1203,7 +1212,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:28</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:29</a></div>
                                 </td>
                             </tr>
     
@@ -1272,7 +1281,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:38</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:39</a></div>
                                 </td>
                             </tr>
     
@@ -1326,6 +1335,45 @@
             <h3 id="inputs">
                 Properties
             </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="filter"></a>
+                            <span class="name">
+                                <b>
+                                filter
+                                </b>
+                                <a href="#filter"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>filter:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>&#x27;&#x27;</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/database/db-selector/db-selector.component.ts:16</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -1415,6 +1463,7 @@ export class DbSelectorComponent implements OnInit, OnChanges {
   @Output() selectedBuildEmit &#x3D; new EventEmitter&lt;{ name: string, id: string, override: string }&gt;();
   selectedBuild: { name: string, id: string, overrides: string[], override: string };
   selectedOverride: string;
+  filter &#x3D; &#x27;&#x27;;
 
   constructor() { }
 

@@ -17,11 +17,11 @@ import { HttpClient } from '@angular/common/http';
 });*/
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  selector: 'app-bosses',
+  templateUrl: './bosses.component.html',
+  styleUrls: ['./bosses.component.css']
 })
-export class MainComponent implements OnInit {
+export class BossesComponent implements OnInit {
   bosses: Boss[] = [];
   selectedBoss: Boss;
   selectedDisplay: string;

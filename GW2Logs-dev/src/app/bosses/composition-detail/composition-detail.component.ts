@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
-import { Character } from '../helpers/character';
-import { Boss } from '../helpers/boss';
+import { Character } from '../../helpers/character';
+import { Boss } from '../../helpers/boss';
 
 @Component({
   selector: 'app-composition-detail',

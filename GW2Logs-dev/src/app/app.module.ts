@@ -4,25 +4,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { MainComponent } from './main/main.component';
-import { BuildDetailComponent } from './build-detail/build-detail.component';
 import { LogsDetailComponent } from './logs-detail/logs-detail.component';
-import { CompositionDetailComponent } from './composition-detail/composition-detail.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { StratModule } from './strat/strat.module';
 import { DatabaseModule } from './database/database.module';
 import { DisplayBuildModule } from './display-build/display-build.module';
+import { BossesModule } from './bosses/bosses.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    MainComponent,
-    BuildDetailComponent,
-    LogsDetailComponent,
-    CompositionDetailComponent
+    LogsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +25,8 @@ import { DisplayBuildModule } from './display-build/display-build.module';
     AppRoutingModule,
     StratModule,
     DatabaseModule,
-    DisplayBuildModule
+    DisplayBuildModule,
+    BossesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
