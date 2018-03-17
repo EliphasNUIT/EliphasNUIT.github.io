@@ -2019,7 +2019,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="463" class="link-to-prism">src/app/helpers/profBuild.ts:463</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="464" class="link-to-prism">src/app/helpers/profBuild.ts:464</a></div>
                                         </td>
                                     </tr>
             
@@ -2037,6 +2037,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -2055,6 +2056,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Override name</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -2094,12 +2099,14 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                                <div class="io-line">Defined in <a href="" data-line="470" class="link-to-prism">src/app/helpers/profBuild.ts:470</a></div>
+                                                <div class="io-line">Defined in <a href="" data-line="475" class="link-to-prism">src/app/helpers/profBuild.ts:475</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Check if the build has a secondary weapon set</p>
+            </div>
             
                                         <div class="io-description">
                                                 <b>Parameters :</b>
@@ -2110,6 +2117,7 @@
                                                                 <td>Type</td>
                                                             <td>Optional</td>
                                                                 <td>Default value</td>
+                                                                <td>Description</td>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -2128,6 +2136,10 @@
                                                                             <code>null</code>
                                                                     </td>
             
+                                                                    <td>
+                                                                            <code><p>Override name</p>
+            </code>
+                                                                    </td>
                                                             </tr>
                                                     </tbody>
                                                 </table>
@@ -3156,6 +3168,7 @@ export class ProfBuild {
 
     /**
      * Check if the build has skills
+     * @param override Override name
      */
     hasSkills(override: string &#x3D; null): boolean {
         if (this.overrides.has(override)) {
@@ -3164,6 +3177,10 @@ export class ProfBuild {
         return this.skills !&#x3D;&#x3D; null;
     }
 
+    /**
+     * Check if the build has a secondary weapon set
+     * @param override Override name
+     */
     isSingleWeapon(override: string &#x3D; null): boolean {
         if (this.overrides.has(override)) {
             return !this.overrides.get(override).hasWep2();

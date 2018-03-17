@@ -459,6 +459,7 @@ export class ProfBuild {
 
     /**
      * Check if the build has skills
+     * @param override Override name
      */
     hasSkills(override: string = null): boolean {
         if (this.overrides.has(override)) {
@@ -467,6 +468,10 @@ export class ProfBuild {
         return this.skills !== null;
     }
 
+    /**
+     * Check if the build has a secondary weapon set
+     * @param override Override name
+     */
     isSingleWeapon(override: string = null): boolean {
         if (this.overrides.has(override)) {
             return !this.overrides.get(override).hasWep2();
