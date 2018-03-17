@@ -8,9 +8,6 @@
 # dependencies
 /node_modules
 
-# documentation
-/documentation
-
 # IDEs and editors
 /.idea
 .project
