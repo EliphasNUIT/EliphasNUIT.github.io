@@ -1,10 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Specialization } from '../data/specialization';
-import { Skills } from '../data/skills';
-import { Weapons } from '../data/weapons';
-import { Trinket } from '../data/trinket';
-import { Armor } from '../data/armor';
 
 /**
  * Standard Guardian build
@@ -149,7 +144,6 @@ export function guardBuildMaker() {
         build = new PowerDHBuild('dhPower', '');
 
         let variant = build.addOverride('Virtue');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
         variant.specialization.setSpec('spec2', 'Radiance', [
             'Healer\'s Retribution',
@@ -163,7 +157,6 @@ export function guardBuildMaker() {
         ]);
 
         variant = build.addOverride('Zeal Signet Share');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Zeal', ['Fiery Wrath', 'Zealous Blade', 'Symbolic Avenger']);
         variant.specialization.setSpec('spec2', 'Radiance', [
             'Healer\'s Retribution',
@@ -177,7 +170,6 @@ export function guardBuildMaker() {
         ]);
 
         variant = build.addOverride('Virtue Signet Share');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
         variant.specialization.setSpec('spec2', 'Radiance', [
             'Healer\'s Retribution',
@@ -191,25 +183,21 @@ export function guardBuildMaker() {
         ]);
 
         variant = build.addOverride('Shout/Trap', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Litany of Wrath');
         variant.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
         variant.skills.setEliteSkill('Dragon\'s Maw');
 
         variant = build.addOverride('Shout/Shout', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Litany of Wrath');
         variant.skills.setUtilitySkills(['Procession of Blades', '"Stand Your Ground!"', 'Bane Signet']);
         variant.skills.setEliteSkill('"Feel My Wrath!"');
 
         variant = build.addOverride('Trap/Shout', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Litany of Wrath');
         variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
         variant.skills.setEliteSkill('"Feel My Wrath!"');
 
         variant = build.addOverride('Trap/Trap', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Litany of Wrath');
         variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
         variant.skills.setEliteSkill('Dragon\'s Maw');
@@ -221,11 +209,9 @@ export function guardBuildMaker() {
         build = new CondiFBBuild('fbDPS', '');
 
         const variant = build.addOverride('Consecration');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Mantra of Solace');
         variant.skills.setUtilitySkills(['Mantra of Flame', 'Purging Flames', 'Signet of Wrath']);
         variant.skills.setEliteSkill('Renewed Focus');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Virtues', ['Master of Consecrations', 'Absolute Resolution', 'Permeating Wrath']);
         variant.specialization.setSpec('spec2', 'Radiance', ['Right-Hand Strength', 'Radiant Fire', 'Amplified Wrath']);
         variant.specialization.setSpec('spec3', 'Firebrand', ['Archivist of Whispers', 'Legendary Lore', 'Loremaster']);
@@ -235,27 +221,19 @@ export function guardBuildMaker() {
     {
         build = new HealFBBuild('fbHeal', '');
         let variant = build.addOverride('Black Kite');
-        variant.trinket = new Trinket();
         variant.trinket.setStats(['Minstrel\'s', 'Minstrel\'s', 'Minstrel\'s', 'Magi\'s', 'Magi\'s', 'Magi\'s']);
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Minstrel\'s', 'Superior Sigil of Transference');
         variant.wep1.setOffHand('Shield', 'Minstrel\'s', 'Superior Sigil of Concentration');
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setTwoHand('Staff', 'Minstrel\'s', 'Superior Sigil of Transference', 'Superior Sigil of Concentration');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Mantra of Solace');
         variant.skills.setUtilitySkills(['Mantra of Potence', 'Mantra of Lore', 'Signet of Mercy']);
         variant.skills.setEliteSkill('Signet of Courage');
 
         variant = build.addOverride('Harrier');
-        variant.armor = new Armor(build.profession.armor);
         variant.armor.setSingleStat('Harrier\'s');
         variant.armor.setSingleRune('Superior Rune of the Monk');
-        variant.trinket = new Trinket();
         variant.trinket.setSingleStat('Harrier\'s');
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Harrier\'s', 'Superior Sigil of Transference');
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setOffHand('Shield', 'Harrier\'s', 'Superior Sigil of Water');
 
         build = new SuppFBBuild('fbSupp', '');

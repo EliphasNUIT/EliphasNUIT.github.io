@@ -1,7 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Specialization } from '../data/specialization';
-import { Skills } from '../data/skills';
 
 /**
  * Standard Necromancer build
@@ -89,11 +87,9 @@ export function necroBuildMaker() {
     {
         build = new CondiScourgeBuild('scourgeCondi', '');
         let variant = build.addOverride('Kite');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Summon Blood Fiend');
         variant.skills.setUtilitySkills(['Summon Shadow Fiend', 'Epidemic', 'Blood Is Power']);
         variant.skills.setEliteSkill('Plaguelands');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Curses', [
             'Plague Sending',
             'Master of Corruption',
@@ -103,7 +99,6 @@ export function necroBuildMaker() {
         variant.specialization.setSpec('spec3', 'Scourge', ['Fell Beacon', 'Desert Empowerment', 'Sand Savant']);
 
         variant = build.addOverride('Epidemic');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Sand Flare');
         variant.skills.setUtilitySkills(['Summon Shadow Fiend', 'Epidemic', 'Blood Is Power']);
         variant.skills.setEliteSkill('Plaguelands');

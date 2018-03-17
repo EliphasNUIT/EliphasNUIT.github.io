@@ -1,8 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Skills } from '../data/skills';
-import { Specialization } from '../data/specialization';
-import { Weapons } from '../data/weapons';
 
 /**
  * Standard Warrior build
@@ -176,19 +173,16 @@ export function warBuildMaker() {
     {
         build = new BannerBerserkerBuild('bers', '');
         let variant = build.addOverride('Fury', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Blood Reckoning');
         variant.skills.setEliteSkill('Head Butt');
         variant.skills.setUtilitySkills(['"For Great Justice!"', 'Banner of Discipline', 'Banner of Strength']);
 
         variant = build.addOverride('CC', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Blood Reckoning');
         variant.skills.setEliteSkill('Head Butt');
         variant.skills.setUtilitySkills(['Wild Blow', 'Banner of Discipline', 'Banner of Strength']);
 
         variant = build.addOverride('DPS', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Blood Reckoning');
         variant.skills.setEliteSkill('Head Butt');
         variant.skills.setUtilitySkills(['Shattering Blow', 'Banner of Discipline', 'Banner of Strength']);
@@ -200,11 +194,9 @@ export function warBuildMaker() {
         build = new BannerWarriorBuild('warBan', '');
 
         let variant = build.addOverride('Mace - Shield');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
         variant.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
         variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Shield', 'Berserker\'s', 'Superior Sigil of Paralyzation');
         //
@@ -212,26 +204,20 @@ export function warBuildMaker() {
         //
         build = new PowerSpellbreakerBuild('spellbrkDPS', '');
         variant = build.addOverride('Mace/Axe + Axe/Dagger');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
         variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
 
         variant = build.addOverride('Dagger/Axe + Axe/Dagger');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
         variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
     }

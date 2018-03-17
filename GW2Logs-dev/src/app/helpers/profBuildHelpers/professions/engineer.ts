@@ -1,8 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Specialization } from '../data/specialization';
-import { Skills } from '../data/skills';
-import { Weapons } from '../data/weapons';
 
 /**
  * Standard Engineer build
@@ -94,13 +91,11 @@ export function engiBuildMaker() {
         build = new CondiEngiBuild('engiCondi', '');
         // Variants
         let variant = build.addOverride('Mobility');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Healing Turret');
         variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Rocket Boots']);
         variant.skills.setEliteSkill('Elite Mortar Kit');
 
         variant = build.addOverride('CC');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('A.E.D.');
         variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Flamethrower']);
         variant.skills.setEliteSkill('Elite Mortar Kit');
@@ -111,7 +106,6 @@ export function engiBuildMaker() {
         build = new PowerHolosmithBuild('holoPower', '');
         // Variants
         let variant = build.addOverride('Orbital');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
         variant.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
@@ -125,7 +119,6 @@ export function engiBuildMaker() {
         ]);
         //
         variant = build.addOverride('Thermal');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Shrapnel']);
         variant.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
@@ -139,7 +132,6 @@ export function engiBuildMaker() {
         ]);
         //
         variant = build.addOverride('Thermal/Orbital');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Explosives', ['Glass Cannon', 'Big Boomer', 'Orbital Command']);
         variant.specialization.setSpec('spec2', 'Firearms', [
             'High Caliber',
@@ -153,16 +145,13 @@ export function engiBuildMaker() {
         ]);
         //
         variant = build.addOverride('Sword');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('A.E.D.');
         variant.skills.setUtilitySkills(['Rifle Turret', 'Grenade Kit', 'Laser Disk']);
         variant.skills.setEliteSkill('Prime Light Beam');
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Pistol', 'Berserker\'s', 'Superior Sigil of Air');
         //
         variant = build.addOverride('CC', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('A.E.D.');
         variant.skills.setUtilitySkills(['Bomb Kit', 'Grenade Kit', 'Laser Disk']);
         variant.skills.setEliteSkill('Prime Light Beam');

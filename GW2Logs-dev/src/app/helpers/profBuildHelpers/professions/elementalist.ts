@@ -1,9 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Weapons } from '../data/weapons';
-import { Skills } from '../data/skills';
-import { Specialization } from '../data/specialization';
-
 
 /**
  * Standard Elementalist
@@ -95,12 +91,13 @@ class PowerWeaverAirBuild extends PowerWeaverBuild {
     }
 }
 
+
 /**
- * Healing Tempest
+ * Arcane Power Weaver
  */
-class PowerWeaverArcBuild extends EleBuild {
+class PowerWeaverArcBuild extends PowerWeaverBuild {
     /**
-     * Create a Healing Tempest build
+     * Create a Power Weaver build in Arcane
      * @param id Id of the build
      * @param name Name of the build
      */
@@ -115,11 +112,11 @@ class PowerWeaverArcBuild extends EleBuild {
 }
 
 /**
- * Arcane Power Weaver
+ * Healing Tempest
  */
-class HealTempestBuild extends PowerWeaverBuild {
+class HealTempestBuild extends EleBuild {
     /**
-     * Create a Power Weaver build in Arcane
+     * Create a Healing Tempest build
      * @param id Id of the build
      * @param name Name of the build
      */
@@ -159,10 +156,8 @@ export function eleBuildMaker() {
     {
         build = new PowerWeaverArcBuild('weavPowerArc', '');
         let variant = build.addOverride('Sword');
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Arcane Brilliance');
         variant.skills.setUtilitySkills(['Arcane Blast', 'Glyph of Storms', 'Primordial Stance']);
         variant.skills.setEliteSkill('Conjure Fiery Greatsword');
@@ -170,9 +165,7 @@ export function eleBuildMaker() {
 
         build = new PowerWeaverAirBuild('weavPowerAir', '');
         variant = build.addOverride('Tempest Defense');
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Fire', [
             'Burning Precision',
             'Pyromancer\'s Training',
@@ -182,7 +175,6 @@ export function eleBuildMaker() {
         variant.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
 
         variant = build.addOverride('Keep Construct');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Aquatic Stance');
         variant.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
         variant.skills.setEliteSkill('Weave Self');

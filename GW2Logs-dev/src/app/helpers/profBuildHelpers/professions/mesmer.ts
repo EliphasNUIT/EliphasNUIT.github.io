@@ -1,9 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Consumable } from '../data/consumable';
-import { Specialization } from '../data/specialization';
-import { Weapons } from '../data/weapons';
-import { Skills } from '../data/skills';
 
 /**
  * Standard Mesmer build
@@ -193,19 +189,16 @@ export function mesBuildMaker() {
 
         //
         let variant = build.addOverride('Well/TW', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Well of Eternity');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
 
         variant = build.addOverride('Well/CC', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Well of Eternity');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Signet of Humility');
 
         variant = build.addOverride('Aegis/TW', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Well of Eternity');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Precognition', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
@@ -215,8 +208,6 @@ export function mesBuildMaker() {
     {
         build = new ChronoPowerBuild('chrPower', '');
         const variant = build.addOverride('Greatsword');
-        variant.specialization = new Specialization(build.profession);
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Accuracy');
         variant.specialization.setSpec('spec1', 'Dueling', [
             'Phantasmal Fury',
@@ -240,7 +231,6 @@ export function mesBuildMaker() {
         build = new BoonShareBuild('chrBoon', '');
         //
         let variant = build.addOverride('Chaos');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Chaos', [
             'Descent into Madness',
             'Chaotic Dampening',
@@ -258,7 +248,6 @@ export function mesBuildMaker() {
         ]);
         //
         variant = build.addOverride('Duel/Illu');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Dueling', [
             'Phantasmal Fury',
             'Fencer\'s Finesse',
@@ -274,36 +263,29 @@ export function mesBuildMaker() {
             'Improved Alacrity',
             'Chronophantasma'
         ]);
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Sword', 'Commander\'s', 'Superior Sigil of Concentration');
         variant.wep1.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of the Ether');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
         //
         variant = build.addOverride('Tank', false);
-        variant.consumable = new Consumable();
         variant.consumable.setConsumable('Bowl of Refugee\'s Beet Soup', 'Toxic Maintenance Oil');
         //
         variant = build.addOverride('Focus', false);
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setOffHand('Focus', 'Berserker\'s', 'Superior Sigil of Force');
         //
         variant = build.addOverride('Well/TW', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of the Ether');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
         //
         variant = build.addOverride('Well/CC', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of the Ether');
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Signet of Humility');
         //
         variant = build.addOverride('Reflect/CC', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Signet of the Ether');
         variant.skills.setUtilitySkills(['Well of Action', 'Feedback', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Signet of Humility');
@@ -313,7 +295,6 @@ export function mesBuildMaker() {
         build = new CondiMirageCloneBuild('mirageCondi', '');
 
         const variant = build.addOverride('CC', false);
-        variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('False Oasis');
         variant.skills.setUtilitySkills(['Crystal Sands', 'Signet of Domination', 'Signet of Midnight']);
         variant.skills.setEliteSkill('Signet of Humility');

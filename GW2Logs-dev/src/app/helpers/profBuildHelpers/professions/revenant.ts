@@ -1,8 +1,5 @@
 import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
-import { Weapons } from '../data/weapons';
-import { Specialization } from '../data/specialization';
-import { ProfessionSkills } from '../data/professionSkills';
 
 /**
  * Standard Revenant build
@@ -131,12 +128,9 @@ export function revBuildMaker() {
         build = new CondiRenegadeBuild('renCondi', '');
         //
         let variant = build.addOverride('Big Hitbox');
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
         variant.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Pulsating Pestilence']);
         variant.specialization.setSpec('spec2', 'Devastation', [
             'Ferocious Strikes',
@@ -146,7 +140,6 @@ export function revBuildMaker() {
         variant.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
         //
         variant = build.addOverride('Invocation');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Diabolic Inferno']);
         variant.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',
@@ -156,12 +149,9 @@ export function revBuildMaker() {
         variant.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Lasting Legacy']);
         //
         variant = build.addOverride('Invocation - Big Hitbox');
-        variant.wep1 = new Weapons(build.profession);
         variant.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
         variant.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
-        variant.wep2 = new Weapons(build.profession);
         variant.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy');
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Pulsating Pestilence']);
         variant.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',
@@ -171,9 +161,7 @@ export function revBuildMaker() {
         variant.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Vindication']);
         //
         variant = build.addOverride('Support');
-        variant.profSkills = new ProfessionSkills(build.profession);
         variant.profSkills.setSkills(['Legendary Renegade Stance', 'Legendary Centaur Stance']);
-        variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Diabolic Inferno']);
         variant.specialization.setSpec('spec2', 'Salvation', [
             'Tranquil Balance',
