@@ -7,31 +7,31 @@ export class Skills {
     /**
      * Profession
      */
-    profession: any;
+    private profession: any;
     /**
      * Pets data
      */
-    pets: string[];
+    private pets: string[];
     /**
      * Healing skill
      */
-    healSkill: number;
+    private healSkill: number;
     /**
      * Utility skill
      */
-    utilitySkill0: number;
+    private utilitySkill0: number;
     /**
      * Utility skill
      */
-    utilitySkill1: number;
+    private utilitySkill1: number;
     /**
      * Utility skill
      */
-    utilitySkill2: number;
+    private utilitySkill2: number;
     /**
      * Elite skill
      */
-    eliteSkill: number;
+    private eliteSkill: number;
 
     /**
      * Create a skills data
@@ -53,7 +53,7 @@ export class Skills {
      * @param slotType Skill slot type
      * @param skillName Name of the skill
      */
-    _setSkill(slot: string, slotType: string, skillName: string) {
+    private _setSkill(slot: string, slotType: string, skillName: string) {
         const skill = this.profession.skills[skillName];
         if (skill) {
             if (skill.slot === slotType) {
@@ -98,10 +98,18 @@ export class Skills {
     }
 
     /**
+     * Set pets
+     * @param petNames Pets to set
+     */
+    setPets(petNames: string[]) {
+        this.pets = petNames.slice(0);
+    }
+
+    /**
      * Private method to get the div of the healing skill
      * @param mobile Mobile device or not
      */
-    _getHealDiv(mobile: boolean): string {
+    private _getHealDiv(mobile: boolean): string {
         let divToAdd = '<div data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
         skillIDS += this.healSkill;
@@ -121,7 +129,7 @@ export class Skills {
      * Private method to get the elite skill div
      * @param mobile Mobile device or not
      */
-    _getEliteDiv(mobile): string {
+    private _getEliteDiv(mobile): string {
         let divToAdd = '<div class="uk-margin-small-left uk-margin-small-right" data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
         skillIDS += this.eliteSkill;
@@ -141,7 +149,7 @@ export class Skills {
      * Private method to get the utility skills div
      * @param mobile Mobile device or not
      */
-    _getUtilitiesDiv(mobile): string {
+    private _getUtilitiesDiv(mobile): string {
         const skills = [this.utilitySkill0, this.utilitySkill1, this.utilitySkill2];
         let divToAdd = '<div class="uk-margin-small-left uk-margin-small-right" data-armory-embed="skills" ';
         let skillIDS = 'data-armory-ids="';
