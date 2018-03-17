@@ -6,14 +6,29 @@ import { Weapons } from '../data/weapons';
 import { Trinket } from '../data/trinket';
 import { Armor } from '../data/armor';
 
-
+/**
+ * Standard Guardian build
+ */
 class GuardBuild extends ProfBuild {
+    /**
+     * Create a standard Guardian build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Guardian, name);
     }
 }
 
+/**
+ * Power Dragonhunter build
+ */
 class PowerDHBuild extends GuardBuild {
+    /**
+     * Create a Power Dragonhunter build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Dragonhunter - Power' + name);
         this.icon += 'dragonhunter.png';
@@ -41,7 +56,15 @@ class PowerDHBuild extends GuardBuild {
     }
 }
 
+/**
+ * Condition Firebrand build
+ */
 class CondiFBBuild extends GuardBuild {
+    /**
+     * Create a Condition Firebrand build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Firebrand - Condition' + name);
         this.icon += 'firebrand.png';
@@ -61,7 +84,15 @@ class CondiFBBuild extends GuardBuild {
     }
 }
 
+/**
+ * Support Firebrand build
+ */
 class SuppFBBuild extends GuardBuild {
+    /**
+     * Create a Support Firebrand build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Firebrand - Support' + name);
         this.icon += 'firebrand.png';
@@ -81,7 +112,15 @@ class SuppFBBuild extends GuardBuild {
     }
 }
 
-class MinstrelFBBuild extends GuardBuild {
+/**
+ * Healing Firebrand build
+ */
+class HealFBBuild extends GuardBuild {
+    /**
+     * Create a Healing Firebrand build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Firebrand - Heal' + name);
         this.icon += 'firebrand.png';
@@ -194,7 +233,7 @@ export function guardBuildMaker() {
 
     // Support
     {
-        build = new MinstrelFBBuild('fbHeal', '');
+        build = new HealFBBuild('fbHeal', '');
         let variant = build.addOverride('Black Kite');
         variant.trinket = new Trinket();
         variant.trinket.setStats(['Minstrel\'s', 'Minstrel\'s', 'Minstrel\'s', 'Magi\'s', 'Magi\'s', 'Magi\'s']);

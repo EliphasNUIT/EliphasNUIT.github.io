@@ -4,15 +4,30 @@ import { Weapons } from '../data/weapons';
 import { Specialization } from '../data/specialization';
 import { ProfessionSkills } from '../data/professionSkills';
 
+/**
+ * Standard Revenant build
+ */
 class RevenantBuild extends ProfBuild {
+    /**
+     * Create a standard Revenant build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Revenant, name);
         this.skills = null;
     }
 }
 
-
+/**
+ * Condition Renegade build
+ */
 class CondiRenegadeBuild extends RevenantBuild {
+    /**
+     * Create a Condition Renegade build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Renegade - Condition' + name);
         this.icon += 'renegade.png';
@@ -33,7 +48,15 @@ class CondiRenegadeBuild extends RevenantBuild {
     }
 }
 
+/**
+ * Healing Renegade build
+ */
 class HealRenegadeBuild extends RevenantBuild {
+    /**
+     * Create a Healing Renegade build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Renegade - Heal' + name);
         this.icon += 'renegade.png';
@@ -59,7 +82,15 @@ class HealRenegadeBuild extends RevenantBuild {
     }
 }
 
+/**
+ * Healing Herald build
+ */
 class HealHeraldBuild extends RevenantBuild {
+    /**
+     * Create a Healing Herald build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Herald - Heal' + name);
         this.icon += 'herald.png';

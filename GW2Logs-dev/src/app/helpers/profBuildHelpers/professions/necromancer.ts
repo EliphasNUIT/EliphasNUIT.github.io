@@ -3,13 +3,29 @@ import { Professions } from '../professionUtilities/professions';
 import { Specialization } from '../data/specialization';
 import { Skills } from '../data/skills';
 
+/**
+ * Standard Necromancer build
+ */
 class NecroBuild extends ProfBuild {
+    /**
+     * Create a standard Necromancer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Necromancer, name);
     }
 }
 
+/**
+ * Condition Scourge build
+ */
 class CondiScourgeBuild extends NecroBuild {
+    /**
+     * Create a Condition Scourge build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Scourge - Condition' + name);
         this.icon += 'scourge.png';
@@ -32,7 +48,15 @@ class CondiScourgeBuild extends NecroBuild {
     }
 }
 
+/**
+ * Condition Reaper build
+ */
 class CondiReaperBuild extends NecroBuild {
+    /**
+     * Create a Condition Reaper build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Reaper - Condition' + name);
         this.icon += 'reaper.png';

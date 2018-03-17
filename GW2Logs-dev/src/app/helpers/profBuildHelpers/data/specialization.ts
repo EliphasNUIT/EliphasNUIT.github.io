@@ -1,9 +1,28 @@
+/**
+ * Specialization data
+ */
 export class Specialization {
+    /**
+     * First spec line
+     */
     spec1: {name: number, traits: number[]};
+    /**
+     * Second spec line
+     */
     spec2: {name: number, traits: number[]};
+    /**
+     * Third spec line
+     */
     spec3: {name: number, traits: number[]};
+    /**
+     * Profession
+     */
     profession: any;
 
+    /**
+     * Create a specialization data
+     * @param profession Profession
+     */
     constructor(profession) {
         this.profession = profession;
         this.spec1 = { name: -1, traits: [-1, -1, -1] };
@@ -11,6 +30,12 @@ export class Specialization {
         this.spec3 = { name: -1, traits: [-1, -1, -1] };
     }
 
+    /**
+     * Set a spec line
+     * @param specToSet Spec line to set
+     * @param specName Name of the spec
+     * @param traitArray Traits to use in spec
+     */
     setSpec(specToSet: string, specName: string, traitArray: string[]) {
         if (specToSet === '') {
             return;
@@ -34,6 +59,10 @@ export class Specialization {
         }
     }
 
+    /**
+     * Get the specialization div
+     * @param mobile Mobile device or not
+     */
     getDiv(mobile: boolean): string {
         const specs = [this.spec1, this.spec2, this.spec3];
         let divToAdd = '<div data-armory-embed="specializations" ';

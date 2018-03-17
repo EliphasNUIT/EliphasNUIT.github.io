@@ -4,13 +4,29 @@ import { Skills } from '../data/skills';
 import { Specialization } from '../data/specialization';
 import { Weapons } from '../data/weapons';
 
+/**
+ * Standard Ranger build
+ */
 class RangerBuild extends ProfBuild {
+    /**
+     * Create a standard Ranger build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Ranger, name);
     }
 }
 
+/**
+ * Condition Ranger build
+ */
 class CondiRangerBuild extends RangerBuild {
+    /**
+     * Create a Condition Ranger build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, name);
         this.armor.setSingleStat('Viper\'s');
@@ -18,7 +34,15 @@ class CondiRangerBuild extends RangerBuild {
     }
 }
 
+/**
+ * Condition Druid build
+ */
 class CondiDruidBuild extends CondiRangerBuild {
+    /**
+     * Create a Condition Druid build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Druide - Condition - ' + name);
         this.icon += 'druid.png';
@@ -37,7 +61,15 @@ class CondiDruidBuild extends CondiRangerBuild {
     }
 }
 
+/**
+ * Condition Soulbeast build
+ */
 class CondiSoulbeastBuild extends CondiRangerBuild {
+    /**
+     * Create a Condition Soulbeast build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Soulbeast - Condition' + name);
         this.icon += 'soulbeast.png';
@@ -56,8 +88,15 @@ class CondiSoulbeastBuild extends CondiRangerBuild {
     }
 }
 
-
+/**
+ * Boon Druid build
+ */
 class BoonDruidBuild extends RangerBuild {
+    /**
+    * Create a Boon Druid build
+    * @param id Id of the build
+    * @param name Name of the build
+    */
     constructor(id, name) {
         super(id, 'Druide - Boons' + name);
         this.icon += 'druid.png';
@@ -78,7 +117,15 @@ class BoonDruidBuild extends RangerBuild {
     }
 }
 
+/**
+ * Minstrel Druid build
+ */
 class MinstrelDruidBuild extends RangerBuild {
+    /**
+     * Create a Minstrel Druid build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Druide - Minstrel' + name);
         this.icon += 'druid.png';

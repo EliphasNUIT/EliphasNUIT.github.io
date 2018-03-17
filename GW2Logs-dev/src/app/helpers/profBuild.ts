@@ -171,12 +171,12 @@ export class ProfBuild {
      */
     getProfessionSkills(override: string = null): string {
         if (this.overrides.has(override) && this.overrides.get(override).profSkills) {
-            return this.overrides.get(override).profSkills.getSDiv(mobile);
+            return this.overrides.get(override).profSkills.getDiv(mobile);
         }
         if (this.profSkills === null) {
             return '';
         }
-        return this.profSkills.getSDiv(mobile);
+        return this.profSkills.getDiv(mobile);
     }
 
     /**

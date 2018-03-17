@@ -4,15 +4,30 @@ import { Specialization } from '../data/specialization';
 import { Skills } from '../data/skills';
 import { Weapons } from '../data/weapons';
 
+/**
+ * Standard Engineer build
+ */
 class EngiBuild extends ProfBuild {
+    /**
+     * Create a standard Engineer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Engineer, name);
         this.wep2 = null;
     }
 }
 
-
+/**
+ * Condition Engineer build
+ */
 class CondiEngiBuild extends EngiBuild {
+    /**
+     * Create a Condition Engineer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Engineer - Condition' + name);
         this.icon += 'engineer.png';
@@ -35,7 +50,15 @@ class CondiEngiBuild extends EngiBuild {
     }
 }
 
+/**
+ * Power Holosmith build
+ */
 class PowerHolosmithBuild extends EngiBuild {
+    /**
+     * Create a Power Holosmith build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Holosmith - Power' + name);
         this.icon += 'holosmith.png';
@@ -131,7 +154,7 @@ export function engiBuildMaker() {
         //
         variant = build.addOverride('Sword');
         variant.skills = new Skills(build.profession);
-        variant.skills.setHealSkill('');
+        variant.skills.setHealSkill('A.E.D.');
         variant.skills.setUtilitySkills(['Rifle Turret', 'Grenade Kit', 'Laser Disk']);
         variant.skills.setEliteSkill('Prime Light Beam');
         variant.wep1 = new Weapons(build.profession);

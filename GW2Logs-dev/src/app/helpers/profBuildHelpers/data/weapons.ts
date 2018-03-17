@@ -10,11 +10,27 @@ const weapons = items.weapons;
  */
 const sigils = items.sigils;
 
+/**
+ * Weapon data
+ */
 export class Weapons {
+    /**
+     * OffHand data
+     */
     offHand: { id: number; stat: number; sigil: number; };
+    /**
+     * MainHand data
+     */
     mainHand: { id: number; stat: number; sigil: number; };
+    /**
+     * Profession
+     */
     profession: any;
 
+    /**
+     * Create a weapon data
+     * @param profession Profession
+     */
     constructor(profession: any) {
         this.profession = profession;
 
@@ -22,6 +38,12 @@ export class Weapons {
         this.offHand = { id: -1, stat: -1, sigil: -1 };
     }
 
+    /**
+     * Private method to check if given ids are valid
+     * @param typeID Id of the weapon
+     * @param statID Id of the stat
+     * @param sigilID Id of the sigil
+     */
     _argumentCheck(typeID: Number, statID: Number, sigilID: Number) {
         if (!statID) {
             return false;
@@ -37,6 +59,12 @@ export class Weapons {
         return true;
     }
 
+    /**
+     * Set main hand weapon
+     * @param type Weapon type
+     * @param stat Stat
+     * @param sigil Sigil
+     */
     setMainHand(type: string, stat: string, sigil: string) {
         const statID: number = stats[stat];
         const sigilID: number = sigils[sigil];
@@ -61,6 +89,12 @@ export class Weapons {
         this.mainHand.sigil = sigilID;
     }
 
+    /**
+     * Set off hand weapon
+     * @param type Weapon type
+     * @param stat Stat
+     * @param sigil Sigil
+     */
     setOffHand(type: string, stat: string, sigil: string) {
         const statID: number = stats[stat];
         const sigilID: number = sigils[sigil];
@@ -85,6 +119,13 @@ export class Weapons {
         this.offHand.sigil = sigilID;
     }
 
+    /**
+     * Set two handed weapon
+     * @param type Weapon type
+     * @param stat Stat
+     * @param sigil1 First sigil
+     * @param sigil2 Second sigil
+     */
     setTwoHand(type: string, stat: string, sigil1: string, sigil2: string) {
         const statID: number = stats[stat];
         const sigil1ID: number = sigils[sigil1];
@@ -117,6 +158,10 @@ export class Weapons {
         this.offHand.sigil = sigil2ID;
     }
 
+    /**
+     * Get weapon div
+     * @param mobile Mobile device or not
+     */
     getDiv(mobile): {wep: string, sig: string} {
         let divToAdd = '<div data-armory-embed="items" ';
         let sigilDivToAdd = '<div data-armory-embed="items" ';

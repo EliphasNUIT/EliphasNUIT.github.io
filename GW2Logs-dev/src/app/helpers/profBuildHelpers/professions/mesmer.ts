@@ -5,14 +5,29 @@ import { Specialization } from '../data/specialization';
 import { Weapons } from '../data/weapons';
 import { Skills } from '../data/skills';
 
+/**
+ * Standard Mesmer build
+ */
 class MesBuild extends ProfBuild {
+    /**
+     * Create a standard Mesmer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Mesmer, name);
     }
 }
 
-
+/**
+ * Power Chronomancer build
+ */
 class ChronoPowerBuild extends MesBuild {
+    /**
+     * Create a Power Chronomancer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Chronomancer - Power' + name);
         this.icon += 'chronomancer.png';
@@ -44,7 +59,15 @@ class ChronoPowerBuild extends MesBuild {
     }
 }
 
+/**
+ * Minstrel Chronomancer build
+ */
 class MinstrelShareBuild extends MesBuild {
+    /**
+     * Create a Minstrel Chronomancer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Chronomancer - Minstrel' + name);
         this.icon += 'chronomancer.png';
@@ -76,7 +99,15 @@ class MinstrelShareBuild extends MesBuild {
     }
 }
 
+/**
+ * Boon Chronomancer build
+ */
 class BoonShareBuild extends MesBuild {
+    /**
+     * Create a Boon Chronomancer build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Chronomancer - Boonshare' + name);
         this.icon += 'chronomancer.png';
@@ -115,7 +146,15 @@ class BoonShareBuild extends MesBuild {
     }
 }
 
+/**
+ * Condition Mirage build
+ */
 class CondiMirageCloneBuild extends MesBuild {
+    /**
+     * Create a Condition Mirage build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Mirage - Clone' + name);
         this.icon += 'mirage.png';

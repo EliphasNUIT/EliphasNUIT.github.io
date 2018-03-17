@@ -4,14 +4,29 @@ import { Skills } from '../data/skills';
 import { Specialization } from '../data/specialization';
 import { Weapons } from '../data/weapons';
 
+/**
+ * Standard Warrior build
+ */
 class WarriorBuild extends ProfBuild {
+    /**
+     * Create a standard Warrior build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Warrior, name);
     }
 }
 
-
+/**
+ * Condition Warrior build
+ */
 class CondiWarriorBuild extends WarriorBuild {
+    /**
+     * Create a Condition Warrior build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, name);
         this.armor.setSingleStat('Viper\'s');
@@ -26,7 +41,15 @@ class CondiWarriorBuild extends WarriorBuild {
     }
 }
 
-class BerserkerBannerBuild extends CondiWarriorBuild {
+/**
+ * Banner Berserker build
+ */
+class BannerBerserkerBuild extends CondiWarriorBuild {
+    /**
+    * Create a Banner Berserker build
+    * @param id Id of the build
+    * @param name Name of the build
+    */
     constructor(id, name) {
         super(id, 'Berserker - Banner' + name);
         this.icon += 'berserker.png';
@@ -37,9 +60,17 @@ class BerserkerBannerBuild extends CondiWarriorBuild {
     }
 }
 
-class BerserkerDPSBuild extends CondiWarriorBuild {
+/**
+ * Condition Berserker build
+ */
+class ConditionBerserkerBuild extends CondiWarriorBuild {
+    /**
+     * Create a Condition Berserker build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
-        super(id, 'Berserker - DPS' + name);
+        super(id, 'Berserker - Condition' + name);
         this.icon += 'berserker.png';
         this.wep1.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Malice');
         this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Burst Mastery']);
@@ -48,7 +79,15 @@ class BerserkerDPSBuild extends CondiWarriorBuild {
     }
 }
 
+/**
+ * Power Warrior build
+ */
 class PowerWarriorBuild extends WarriorBuild {
+    /**
+     * Create a Power Warrior build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, name);
         this.armor.setStats(['Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s']);
@@ -61,7 +100,15 @@ class PowerWarriorBuild extends WarriorBuild {
     }
 }
 
-class SpellbreakerBannerBuild extends PowerWarriorBuild {
+/**
+ * Banner Spellbreaker build
+ */
+class BannerSpellbreakerBuild extends PowerWarriorBuild {
+    /**
+     * Create a Banner Spellbreaker build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Spellbreaker - Banner' + name);
         this.icon += 'spellbreaker.png';
@@ -78,7 +125,15 @@ class SpellbreakerBannerBuild extends PowerWarriorBuild {
     }
 }
 
-class WarriorBannerBuild extends PowerWarriorBuild {
+/**
+ * Banner Warrior build
+ */
+class BannerWarriorBuild extends PowerWarriorBuild {
+    /**
+     * Create a Banner Warrior build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Warrior - Banner' + name);
         this.icon += 'warrior.png';
@@ -91,9 +146,17 @@ class WarriorBannerBuild extends PowerWarriorBuild {
     }
 }
 
-class SpellbreakerDPSBuild extends PowerWarriorBuild {
+/**
+ * Power Spellbreaker build
+ */
+class PowerSpellbreakerBuild extends PowerWarriorBuild {
+    /**
+     * Create a Power Spellbreaker build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
-        super(id, 'Spellbreaker - DPS' + name);
+        super(id, 'Spellbreaker - Power' + name);
         this.icon += 'spellbreaker.png';
         this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
@@ -111,7 +174,7 @@ export function warBuildMaker() {
     let build: ProfBuild = null;
     // Condi
     {
-        build = new BerserkerBannerBuild('bers', '');
+        build = new BannerBerserkerBuild('bers', '');
         let variant = build.addOverride('Fury', false);
         variant.skills = new Skills(build.profession);
         variant.skills.setHealSkill('Blood Reckoning');
@@ -130,11 +193,11 @@ export function warBuildMaker() {
         variant.skills.setEliteSkill('Head Butt');
         variant.skills.setUtilitySkills(['Shattering Blow', 'Banner of Discipline', 'Banner of Strength']);
         //
-        build = new BerserkerDPSBuild('bersDPS', '');
+        build = new ConditionBerserkerBuild('bersDPS', '');
     }
     // power
     {
-        build = new WarriorBannerBuild('warBan', '');
+        build = new BannerWarriorBuild('warBan', '');
 
         let variant = build.addOverride('Mace - Shield');
         variant.specialization = new Specialization(build.profession);
@@ -145,10 +208,9 @@ export function warBuildMaker() {
         variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         variant.wep1.setOffHand('Shield', 'Berserker\'s', 'Superior Sigil of Paralyzation');
         //
-        build = new SpellbreakerBannerBuild('spellbrk', '');
+        build = new BannerSpellbreakerBuild('spellbrk', '');
         //
-        build = new SpellbreakerDPSBuild('spellbrkDPS', '');
-
+        build = new PowerSpellbreakerBuild('spellbrkDPS', '');
         variant = build.addOverride('Mace/Axe + Axe/Dagger');
         variant.specialization = new Specialization(build.profession);
         variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);

@@ -2,13 +2,29 @@ import { ProfBuild } from '../../profBuild';
 import { Professions } from '../professionUtilities/professions';
 import { Skills } from '../data/skills';
 
+/**
+ * Standard Thief build
+ */
 class ThiefBuild extends ProfBuild {
+    /**
+     * Create a standard Thief build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, Professions.Thief, name);
     }
 }
 
+/**
+ * Power Daredevil build
+ */
 class PowerDaredevilBuild extends ThiefBuild {
+    /**
+     * Create a Power Daredevil build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Daredevil - Power' + name);
         this.icon += 'daredevil.png';
@@ -27,8 +43,15 @@ class PowerDaredevilBuild extends ThiefBuild {
     }
 }
 
-
+/**
+ * Power Deadeye build
+ */
 class PowerDeadeyeBuild extends ThiefBuild {
+    /**
+     * Create a Power Deadeye build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Deadeye - Power' + name);
         this.icon += 'deadeye.png';
@@ -47,7 +70,15 @@ class PowerDeadeyeBuild extends ThiefBuild {
     }
 }
 
+/**
+ * Condition Daredevil build
+ */
 class CondiDaredevilBuild extends ThiefBuild {
+    /**
+     * Create a Condition Daredevil build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
     constructor(id, name) {
         super(id, 'Daredevil - Condition' + name);
         this.icon += 'daredevil.png';
