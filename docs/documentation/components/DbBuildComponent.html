@@ -936,11 +936,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#professions">professions</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#selectedProfession">selectedProfession</a>
                             </li>
                         </ul>
@@ -1130,7 +1130,7 @@
                             <a name="professions"></a>
                             <span class="name">
                                 <b>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 professions
                                 </b>
                                 <a href="#professions"><span class="fa fa-link"></span></a>
@@ -1171,7 +1171,7 @@
                             <a name="selectedProfession"></a>
                             <span class="name">
                                 <b>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 selectedProfession
                                 </b>
                                 <a href="#selectedProfession"><span class="fa fa-link"></span></a>
@@ -1281,12 +1281,12 @@ export class DbBuildComponent implements OnInit {
   /**
    * Profession handlers
    */
-  private professions: ProfessionHandler[];
+  public professions: ProfessionHandler[];
 
   /**
    * Selected profession handler
    */
-  private selectedProfession: ProfessionHandler;
+  public selectedProfession: ProfessionHandler;
 
   /**
    * Create a build database component

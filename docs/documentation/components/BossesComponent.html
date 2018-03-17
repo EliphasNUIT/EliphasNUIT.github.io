@@ -936,7 +936,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#bosses">bosses</a>
                             </li>
                             <li>
@@ -948,7 +948,7 @@
                                 <a href="#logsStyle">logsStyle</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#selectedBoss">selectedBoss</a>
                             </li>
                             <li>
@@ -1256,7 +1256,7 @@
                             <a name="bosses"></a>
                             <span class="name">
                                 <b>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 bosses
                                 </b>
                                 <a href="#bosses"><span class="fa fa-link"></span></a>
@@ -1400,7 +1400,7 @@
                             <a name="selectedBoss"></a>
                             <span class="name">
                                 <b>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Public</span>
                                 selectedBoss
                                 </b>
                                 <a href="#selectedBoss"><span class="fa fa-link"></span></a>
@@ -1560,11 +1560,11 @@ export class BossesComponent implements OnInit {
   /**
    * Array of boss data
    */
-  private bosses: Boss[] &#x3D; [];
+  public bosses: Boss[] &#x3D; [];
   /**
    * Selected boss
    */
-  private selectedBoss: Boss;
+  public selectedBoss: Boss;
   /**
    * Selected display mode - composition or mechanics
    */
