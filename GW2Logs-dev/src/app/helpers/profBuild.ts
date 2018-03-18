@@ -78,6 +78,11 @@ class BuildOverride {
      */
     open: boolean;
 
+    /**
+     * Create a build override
+     * @param originalBuild Original build to override
+     * @param open Visible by default or not
+     */
     constructor(originalBuild: ProfBuild, open: boolean) {
         this._armor = null;
         this._consumable = null;

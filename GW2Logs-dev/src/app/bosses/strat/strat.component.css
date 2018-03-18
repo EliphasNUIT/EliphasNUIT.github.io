@@ -15,6 +15,15 @@ ul.sublist {
     list-style-type: circle;
 }
 
+p.acknowledge {
+    font-size: 10px;
+}
+
+img {
+    min-width: 100px;
+    min-height: 100px;
+}
+
 a.acknowledge{
     color: rgb(100, 200, 250);
     text-shadow: 0px 0px 2px rgb(0,0,0);
