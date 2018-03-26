@@ -850,7 +850,7 @@
                 "t1": [
                     {
                         "name": "Damano",
-                        "role": "",
+                        "role": "Dispel",
                         "build": "chrBoon",
                         "override":{
                             "specialization":"Duel/Illu",
@@ -861,7 +861,7 @@
                     },
                     {
                         "name": "Eliphas",
-                        "role": "Dispel",
+                        "role": "",
                         "build": "soulbeastCondi",
                         "override":{
                             "specialization": "Spotter"
@@ -1153,7 +1153,6 @@
             "wing": "Hall of Chains",
             "style": {
                 "background-image": "url(assets/bosses/ssh.png)",
-                "background-size": "128px 128px",
                 "font-size": "11px"
             },
             "shortName": "desmina",
@@ -1260,8 +1259,318 @@
             "raid": "Hall of Chains",
             "wing": "Hall of Chains",
             "style": {
+                "background-image": "url(assets/bosses/river.png)",
+                "font-size": "12px"
+            },
+            "shortName": "river",
+            "buttonName": "River of Souls",
+            "displayName": "River of Souls",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Duel/Illu",
+                            "wep1":"Duel/Illu2",
+                            "skills":"Duel/Illu"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "override":{
+                            "skills":"CC"
+                        },
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "?",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Vengeful",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
+                        "gw2Armory": "https://gw2armory.com/DrSmirk/characters"
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "orb 2",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Duel/Illu",
+                            "wep1":"Duel/Illu2",
+                            "skills":"Duel/Illu"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidBoon",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "holoPower",
+                        "override":{
+                            "specialization":"Thermal"
+                        },
+                        "gw2Armory": ""
+                    }
+                ],
+                "t3": [                   
+                    {
+                        "name": "Eliphas",
+                        "role": "Vanguard",
+                        "build": "herDeiVentari",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "Vanguard",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "Meat",
+                        "role": "Vanguard",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
+                        "gw2Armory": ""
+                    }
+                ]
+            }
+        },
+        {
+            "raid": "Hall of Chains",
+            "wing": "Hall of Chains",
+            "style": {
+                "background-image": "url(assets/bosses/brokenking.png)",
+                "font-size": "12px"
+            },
+            "shortName": "brking",
+            "buttonName": "Broken King",
+            "displayName": "Broken King",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Duel/Illu",
+                            "wep1":"Duel/Illu",
+                            "skills":"Duel/Illu"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "",
+                        "build": "bers",
+                        "override":{
+                            "skills":"DPS"
+                        },
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "",
+                        "build": "holoPower",
+                        "override":{
+                            "specialization":"Thermal"
+                        },
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Meat",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Duel/Illu",
+                            "wep1":"Duel/Illu",
+                            "skills":"Duel/Illu"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidBoon",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "spellbrkDPS",
+                        "override":{
+                            "specialization":"Mace/Axe + Axe/Dagger",
+                            "wep1":"Mace/Axe + Axe/Dagger",
+                            "wep2":"Mace/Axe + Axe/Dagger"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "?",
+                        "role": "",
+                        "build": "weavPowerArc",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Vengeful",
+                        "role": "",
+                        "build": "weavPowerArc",
+                        "gw2Armory": "https://gw2armory.com/DrSmirk/characters"
+                    }
+                ],
+                "t3": [             
+                    {
+                        "name": "Eliphas",
+                        "role": "Tank",
+                        "build": "druidKite",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    }
+                ]
+            }
+        },
+        {
+            "raid": "Hall of Chains",
+            "wing": "Hall of Chains",
+            "style": {
+                "background-image": "url(assets/bosses/statue.png)",
+                "font-size": "12px"
+            },
+            "shortName": "sleater",
+            "buttonName": "Eater of Souls",
+            "displayName": "Eater of Souls",
+            "composition": {
+                "t1": [
+                    {
+                        "name": "Damano",
+                        "role": "orb 1",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Duel/Illu",
+                            "wep1":"Duel/Illu",
+                            "skills":"Duel/Illu"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Damano/characters/"
+                    },
+                    {
+                        "name": "Eliphas",
+                        "role": "Tank",
+                        "build": "druidKite",
+                        "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
+                    },
+                    {
+                        "name": "Winter",
+                        "role": "orb 1",
+                        "build": "bers",
+                        "override":{
+                            "skills":"DPS"
+                        },
+                        "gw2Armory": "http://gw2armory.com/winterflame/characters/"
+                    },
+                    {
+                        "name": "Sakura",
+                        "role": "orb 2",
+                        "build": "holoPower",
+                        "override":{
+                            "specialization":"Thermal"
+                        },
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Meat",
+                        "role": "",
+                        "build": "dhPower",
+                        "override":{
+                            "skills":"Shout/Trap"
+                        },
+                        "gw2Armory": ""
+                    }
+                ],
+                "t2": [
+                    {
+                        "name": "Polga",
+                        "role": "orb 2",
+                        "build": "chrBoon",
+                        "override":{
+                            "specialization":"Duel/Illu",
+                            "wep1":"Duel/Illu",
+                            "skills":"Duel/Illu"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Kaeryh/characters/"
+                    },
+                    {
+                        "name": "Arkness",
+                        "role": "",
+                        "build": "druidBoon",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Bouhteille",
+                        "role": "",
+                        "build": "spellbrkDPS",
+                        "override":{
+                            "specialization":"Mace/Axe + Axe/Dagger",
+                            "wep1":"Mace/Axe + Axe/Dagger",
+                            "wep2":"Mace/Axe + Axe/Dagger"
+                        },
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                    },
+                    {
+                        "name": "?",
+                        "role": "",
+                        "build": "weavPowerArc",
+                        "gw2Armory": ""
+                    },
+                    {
+                        "name": "Vengeful",
+                        "role": "",
+                        "build": "weavPowerArc",
+                        "gw2Armory": "https://gw2armory.com/DrSmirk/characters"
+                    }
+                ]
+            }
+        },
+        {
+            "raid": "Hall of Chains",
+            "wing": "Hall of Chains",
+            "style": {
                 "background-image": "url(assets/bosses/dhuum.png)",
-                "background-size": "128px 128px",
                 "font-size": "13px"
             },
             "shortName": "dhuum",
