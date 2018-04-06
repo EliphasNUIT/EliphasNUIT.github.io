@@ -1433,7 +1433,7 @@ const Ranger = {
         'Clarion Bond': { id: 986, spe: 8 },
         Stoneform: { id: 1021, spe: 8 },
         'Hunter\'s Gaze': { id: 1014, spe: 8 },
-        'Steady Focus': { id: 1000, spe: 8 },
+        'Farsighted': { id: 1000, spe: 8 },
         'Moment of Clarity': { id: 1070, spe: 8 },
         'Predator\'s Onslaught': { id: 996, spe: 8 },
         'Lead the Wind': { id: 1698, spe: 8 },

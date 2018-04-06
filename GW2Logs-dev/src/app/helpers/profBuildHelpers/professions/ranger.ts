@@ -144,6 +144,51 @@ class MinstrelDruidBuild extends RangerBuild {
 }
 
 /**
+ * Power Ranger Build
+ */
+class PowerRangerBuild extends RangerBuild {
+    /**
+     * Create a Power Ranger build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
+    constructor(id, name) {
+        super(id, name);
+        this.armor.setSingleStat('Berserker\'s');
+        this.trinket.setSingleStat('Berserker\'s');
+        this.wep2.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
+        this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Vicious Quarry']);
+        this.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
+        this.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
+        this.skills.setPets(['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern', 'Juvenile Tiger']);
+    }
+}
+
+/**
+ * Power Soulbeast Build
+ */
+class PowerSoulbeastBuild extends PowerRangerBuild {
+    /**
+     * Create a Power Soulbeast build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
+    constructor(id, name) {
+        super(id, 'Soulbeast - Power' + name);
+        this.icon += 'soulbeast.png';
+        this.armor.setSingleRune('Superior Rune of the Scholar');
+        this.wep1.setTwoHand('Longbow', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
+        this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
+        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
+        this.specialization.setSpec('spec2', 'Marksmanship', ['Clarion Bond', 'Farsighted', 'Predator\'s Onslaught']);
+        this.specialization.setSpec('spec3', 'Soulbeast', ['Live Fast', 'Predator\'s Cunning', 'Oppressive Superiority']);
+        this.skills.setHealSkill('"We Heal As One!"');
+        this.skills.setUtilitySkills(['Signet of the Wild', '"Sic \'Em!"', 'Sharpening Stone']);
+        this.skills.setEliteSkill('One Wolf Pack');
+    }
+}
+
+/**
  * Add ranger builds to the database
  */
 export function rangerBuildMaker() {
@@ -191,6 +236,11 @@ export function rangerBuildMaker() {
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
 
+        variant = build.addOverride('Water', false);
+        variant.skills.setHealSkill('Water Spirit');
+        variant.skills.setUtilitySkills(['Glyph of Empowerment', '', '']);
+        variant.skills.setEliteSkill('Spirit of Nature');
+
         variant = build.addOverride('Samarog');
         variant.skills.setHealSkill('Glyph of Rejuvenation');
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
@@ -217,10 +267,19 @@ export function rangerBuildMaker() {
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
         variant.skills.setEliteSkill('Spirit of Nature');
         variant.wep2.setTwoHand('Longbow', 'Harrier\'s', 'Superior Sigil of Transference', 'Superior Sigil of Water');
+    }
+
+    // Minstrel
+    {
         ////
         build = new MinstrelDruidBuild('druidKite', '');
-        variant = build.addOverride('Black Kite');
+        const variant = build.addOverride('Black Kite');
         variant.wep2.setTwoHand('Greatsword', 'Minstrel\'s', 'Superior Sigil of Transference', 'Superior Sigil of Agility');
+    }
+    // Power DPS
+    {
+        ////
+        build = new PowerSoulbeastBuild('soulbeastPower', '');
     }
 }
 
