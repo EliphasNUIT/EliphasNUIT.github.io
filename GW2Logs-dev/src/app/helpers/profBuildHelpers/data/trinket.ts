@@ -114,19 +114,4 @@ export class Trinket {
             AR: this._getDiv(['amulet', 'ring1', 'ring2'], mobile)
         };
     }
-
-    /**
-     * Updates class using a json
-     * @param data JSON data
-     */
-    fromJSON(data: string[]): void {
-        if (!data) {
-            return;
-        }
-        if (data.length === 6) {
-            this.setStats(data);
-        } else {
-            this.setSingleStat(data[0]);
-        }
-    }
 }

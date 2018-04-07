@@ -65,15 +65,4 @@ export class Consumable {
         divToAdd += '></div>';
         return divToAdd;
     }
-
-    /**
-     * Updates class using a json
-     * @param data JSON data
-     */
-    fromJSON(data: string[]): void {
-        if (!data) {
-            return;
-        }
-        this.setConsumable(data[0], data[1]);
-    }
 }

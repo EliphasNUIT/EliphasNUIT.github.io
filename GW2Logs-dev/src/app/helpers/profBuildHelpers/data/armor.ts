@@ -171,28 +171,4 @@ export class Armor {
         runeDivToAdd += '></div>';
         return { armor: divToAdd, rune: runeDivToAdd };
     }
-
-
-    /**
-     * Updates class using a json
-     * @param data JSON data
-     */
-    fromJSON(data: {
-        stats: string[],
-        runes: string[]
-    }): void {
-        if (!data) {
-            return;
-        }
-        if (data.stats.length === 6) {
-            this.setStats(data.stats);
-        } else {
-            this.setSingleStat(data.stats[0]);
-        }
-        if (data.runes.length === 2) {
-            this.set42Rune(data.runes[0], data.runes[1]);
-        } else {
-            this.setSingleRune(data.runes[0]);
-        }
-    }
 }

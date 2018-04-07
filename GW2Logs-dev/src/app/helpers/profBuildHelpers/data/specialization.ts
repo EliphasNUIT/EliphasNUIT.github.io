@@ -94,30 +94,4 @@ export class Specialization {
         divToAdd += '></div>';
         return divToAdd;
     }
-
-    /**
-     * Updates class using a json
-     * @param data JSON data
-     */
-    fromJSON(data: {
-        spec1: {
-            name: string,
-            traits: string[]
-        },
-        spec2: {
-            name: string,
-            traits: string[]
-        },
-        spec3: {
-            name: string,
-            traits: string[]
-        }
-    }): void {
-        if (!data) {
-            return;
-        }
-        this.setSpec('spec1', data.spec1.name, data.spec1.traits);
-        this.setSpec('spec2', data.spec2.name, data.spec2.traits);
-        this.setSpec('spec3', data.spec3.name, data.spec3.traits);
-    }
 }
