@@ -22,7 +22,7 @@ export class DbDisplayComponent implements OnInit, OnChanges {
   /**
    * Selected build
    */
-  private selectedBuild: { name: string, id: string, overrides: string[], override: string };
+  private selectedBuild: { name: string, id: string, override: string };
 
   /**
    * Create a database display component
@@ -53,7 +53,7 @@ export class DbDisplayComponent implements OnInit, OnChanges {
    * On select build event
    * @param selectedBuild selected build
    */
-  selectBuild(selectedBuild: { name: string, id: string, overrides: string[], override: string }) {
+  selectBuild(selectedBuild: { name: string, id: string, override: string }) {
     this.selectedBuild = selectedBuild;
   }
 
