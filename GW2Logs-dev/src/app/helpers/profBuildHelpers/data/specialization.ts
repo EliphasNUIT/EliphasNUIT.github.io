@@ -5,15 +5,15 @@ export class Specialization {
     /**
      * First spec line
      */
-    private spec1: {name: number, traits: number[]};
+    private spec1: { name: number, traits: number[] };
     /**
      * Second spec line
      */
-    private spec2: {name: number, traits: number[]};
+    private spec2: { name: number, traits: number[] };
     /**
      * Third spec line
      */
-    private spec3: {name: number, traits: number[]};
+    private spec3: { name: number, traits: number[] };
     /**
      * Profession
      */
@@ -71,7 +71,7 @@ export class Specialization {
         for (let i = 0; i < 3; i++) {
             const specialization = specs[i];
             const speID = specialization.name;
-            if (speID === -1 ) {
+            if (speID === -1) {
                 continue;
             }
             speIDS += speID + ',';
@@ -93,5 +93,28 @@ export class Specialization {
         }
         divToAdd += '></div>';
         return divToAdd;
+    }
+
+    /**
+     * Updates class using a json
+     * @param data JSON data
+     */
+    fromJSON(data: {
+        spec1: {
+            name: string,
+            traits: string[]
+        },
+        spec2: {
+            name: string,
+            traits: string[]
+        },
+        spec3: {
+            name: string,
+            traits: string[]
+        }
+    }): void {
+        this.setSpec('spec1', data.spec1.name, data.spec1.traits);
+        this.setSpec('spec2', data.spec2.name, data.spec2.traits);
+        this.setSpec('spec3', data.spec3.name, data.spec3.traits);
     }
 }

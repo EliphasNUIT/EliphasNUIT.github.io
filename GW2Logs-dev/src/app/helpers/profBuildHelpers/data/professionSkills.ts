@@ -74,4 +74,12 @@ export class ProfessionSkills {
         divToAdd += '></div>';
         return divToAdd;
     }
+
+    /**
+     * Updates class using a json
+     * @param data JSON data
+     */
+    fromJSON(data: string[]): any {
+        this.setSkills(data);
+    }
 }

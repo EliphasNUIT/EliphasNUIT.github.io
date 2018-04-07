@@ -201,4 +201,20 @@ export class Skills {
         divToAdd += ' </div>';
         return divToAdd;
     }
+
+    /**
+     * Updates class using a json
+     * @param data JSON data
+     */
+    fromJSON(data: {
+        heal: string,
+        utility: string[],
+        elite: string,
+        pets: string[]
+    }): void {
+        this.setHealSkill(data.heal);
+        this.setUtilitySkills(data.utility);
+        this.setEliteSkill(data.elite);
+        this.setPets(data.pets);
+    }
 }

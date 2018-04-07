@@ -162,7 +162,7 @@ export class Weapons {
      * Get weapon div
      * @param mobile Mobile device or not
      */
-    getDiv(mobile): {wep: string, sig: string} {
+    getDiv(mobile): { wep: string, sig: string } {
         let divToAdd = '<div data-armory-embed="items" ';
         let sigilDivToAdd = '<div data-armory-embed="items" ';
         let ids = 'data-armory-ids="';
@@ -208,5 +208,34 @@ export class Weapons {
         sigilDivToAdd += '></div>';
 
         return { wep: divToAdd, sig: sigilDivToAdd };
+    }
+
+
+    /**
+     * Updates class using a json
+     * @param data JSON data
+     */
+    fromJSON(data: {
+        mh: {
+            type: string,
+            stat: string,
+            sigil: string[]
+        },
+        oh: {
+            type: string,
+            stat: string,
+            sigil: string[]
+        }
+    }): void {
+        if (data.mh.sigil.length === 2) {
+            this.setTwoHand(data.mh.type,
+                data.mh.stat, data.mh.sigil[0], data.mh.sigil[1]);
+        } else {
+            this.setMainHand(data.mh.type,
+                data.mh.stat, data.mh.sigil[0]);
+
+            this.setOffHand(data.oh.type,
+                data.oh.stat, data.oh.sigil[0]);
+        }
     }
 }
