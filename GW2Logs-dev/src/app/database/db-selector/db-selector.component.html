@@ -26,7 +26,7 @@
         </div>
 
         <div *ngIf="selectedBuild" class='variant-selector uk-margin-left'>
-          <div *ngFor="let override of selectedBuild.overrides" (click)="onSelectOverride(override)" [class.selected]="selectedOverride === override"
+          <div *ngFor="let override of selectedBuildOverrides" (click)="onSelectOverride(override)" [class.selected]="selectedOverride === override"
             [ngClass]='getClass()'>
             <span class='my-text-large uk-text-bold'>{{override}}</span>
           </div>

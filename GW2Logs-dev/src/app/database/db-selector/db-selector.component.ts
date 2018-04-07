@@ -28,6 +28,10 @@ export class DbSelectorComponent implements OnInit, OnChanges {
    */
   private selectedBuild: { name: string, id: string, override: string };
   /**
+   * Selected build overrides
+   */
+  private selectedBuildOverrides: string[];
+  /**
    * Selected build
    */
   private selectedOverride: string;
@@ -67,6 +71,7 @@ export class DbSelectorComponent implements OnInit, OnChanges {
     this.selectedOverride = 'Main';
     this.selectedBuild = selectedBuild !== null ?
           { name: selectedBuild.name, id: selectedBuild.id, override: this.selectedOverride } : null;
+    this.selectedBuildOverrides = selectedBuild !== null ? selectedBuild.overrides : null;
     this.selectedBuildEmit.emit(this.selectedBuild);
   }
 
