@@ -80,6 +80,9 @@ export class ProfessionSkills {
      * @param data JSON data
      */
     fromJSON(data: string[]): any {
+        if (!data) {
+            return;
+        }
         this.setSkills(data);
     }
 }

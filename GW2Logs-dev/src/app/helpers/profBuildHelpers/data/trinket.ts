@@ -120,6 +120,9 @@ export class Trinket {
      * @param data JSON data
      */
     fromJSON(data: string[]): void {
+        if (!data) {
+            return;
+        }
         if (data.length === 6) {
             this.setStats(data);
         } else {

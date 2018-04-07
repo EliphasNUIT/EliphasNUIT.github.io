@@ -181,6 +181,9 @@ export class Armor {
         stats: string[],
         runes: string[]
     }): void {
+        if (!data) {
+            return;
+        }
         if (data.stats.length === 6) {
             this.setStats(data.stats);
         } else {

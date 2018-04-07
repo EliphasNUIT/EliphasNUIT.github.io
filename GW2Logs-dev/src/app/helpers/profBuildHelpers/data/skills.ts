@@ -212,6 +212,9 @@ export class Skills {
         elite: string,
         pets: string[]
     }): void {
+        if (!data) {
+            return;
+        }
         this.setHealSkill(data.heal);
         this.setUtilitySkills(data.utility);
         this.setEliteSkill(data.elite);

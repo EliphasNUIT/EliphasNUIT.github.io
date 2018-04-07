@@ -113,6 +113,9 @@ export class Specialization {
             traits: string[]
         }
     }): void {
+        if (!data) {
+            return;
+        }
         this.setSpec('spec1', data.spec1.name, data.spec1.traits);
         this.setSpec('spec2', data.spec2.name, data.spec2.traits);
         this.setSpec('spec3', data.spec3.name, data.spec3.traits);

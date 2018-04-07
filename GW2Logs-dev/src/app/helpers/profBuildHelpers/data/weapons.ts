@@ -227,6 +227,9 @@ export class Weapons {
             sigil: string[]
         }
     }): void {
+        if (!data) {
+            return;
+        }
         if (data.mh.sigil.length === 2) {
             this.setTwoHand(data.mh.type,
                 data.mh.stat, data.mh.sigil[0], data.mh.sigil[1]);

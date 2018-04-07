@@ -71,6 +71,9 @@ export class Consumable {
      * @param data JSON data
      */
     fromJSON(data: string[]): void {
+        if (!data) {
+            return;
+        }
         this.setConsumable(data[0], data[1]);
     }
 }
