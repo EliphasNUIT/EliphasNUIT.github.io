@@ -102,7 +102,7 @@ export class Skills {
      * @param petNames Pets to set
      */
     setPets(petNames: string[]) {
-        this.pets = petNames.slice(0);
+        this.pets = petNames ? petNames.slice(0) : [];
     }
 
     /**

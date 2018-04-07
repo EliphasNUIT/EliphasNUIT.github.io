@@ -38,6 +38,7 @@ export const items = {
     },
 
     runes: {
+        '': -1,
         'Superior Rune of Leadership': 70600,
         'Superior Rune of the Scholar': 24836,
         'Superior Rune of the Berserker': 71425,
@@ -55,6 +56,7 @@ export const items = {
     },
 
     sigils: {
+        '': -1,
         'Superior Sigil of Concentration': 72339,
         'Superior Sigil of Force': 24615,
         'Superior Sigil of Accuracy': 24618,
@@ -75,6 +77,7 @@ export const items = {
     },
 
     weapons: {
+        '': -1,
         Axe: 81321,
         Dagger: 81451,
         Mace: 81514,
@@ -94,6 +97,7 @@ export const items = {
     },
 
     consumable: {
+        '': -1,
         'Rare Veggie Pizza': 12464,
         'Toxic Focusing Crystal': 48917,
         'Furious Tuning Crystal': 67524,

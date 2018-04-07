@@ -2,6 +2,7 @@
  * Item stat data
  */
 export const stats = {
+    '': -1,
     Mighty: 137,
     Resilient: 140,
     Precise: 138,
