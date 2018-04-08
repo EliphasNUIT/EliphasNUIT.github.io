@@ -239,30 +239,39 @@
                     },
                     {
                         "name": "Eliphas",
-                        "role": "",
-                        "build": "druidBoon",
+                        "role": "Kite",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "specialization":"Kite",
+                            "skills":"Kite"
+                        },
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "renCondi",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": " ",
-                        "role": "backup",
-                        "build": "holoPower",
-                        "override": {
-                            "specialization": "Thermal/Orbital",
-                            "skills": "CC"
+                        "role": "",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": " ",
                         "role": "",
-                        "build": "weavPowerArc",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": ""
                     }
                 ],
@@ -280,8 +289,11 @@
                     },
                     {
                         "name": "Arkness",
-                        "role": "Kite",
+                        "role": "",
                         "build": "druidBoon",
+                        "override": {
+                            "skills": "Solo"
+                        },
                         "gw2Armory": ""
                     },
                     {
@@ -305,10 +317,9 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPower",
-                        "override": {
-                            "specialization": "Thermal/Orbital",
-                            "skills": "CC"
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
                         },
                         "gw2Armory": ""
                     }
@@ -1192,7 +1203,10 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "mirageCondi",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": ""
                     },
                     {
@@ -1242,10 +1256,9 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "fbDPS",
+                        "build": "scourgeCondi",
                         "override":{
-                            "skills":"Consecration",
-                            "specialization":"Consecration"
+                            "skills":"Epidemic"
                         },
                         "gw2Armory": ""
                     }

@@ -52,7 +52,8 @@ export const items = {
         'Superior Rune of the Renegade': 83502,
         'Superior Rune of the Firebrand': 83338,
         'Superior Rune of Durability': 72361,
-        'Superior Rune of the Traveler': 24691
+        'Superior Rune of the Traveler': 24691,
+        'Superior Rune of Strength': 24714
     },
 
     sigils: {
@@ -113,7 +114,8 @@ export const items = {
         'Bowl of Orrian Truffle and Meat Stew': 12488,
         'Toxic Maintenance Oil': 48916,
         'Bowl of Refugee\'s Beet Soup': 41562,
-        'Bowl of Curry Butternut Squash Soup': 12486
+        'Bowl of Curry Butternut Squash Soup': 12486,
+        'Slice of Allspice Cake': 75126
     }
 };
 

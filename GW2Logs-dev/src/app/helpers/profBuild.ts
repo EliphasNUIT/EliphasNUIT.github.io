@@ -467,8 +467,8 @@ export class ProfBuild {
      * @param override Override name
      */
     hasSkills(override: string = null): boolean {
-        if (this.overrides.has(override)) {
-            return this.overrides.get(override).hasSkills();
+        if (this.overrides.has(override) && this.overrides.get(override).hasSkills()) {
+            return this.overrides.get(override).skills !== null;
         }
         return this.skills !== null;
     }
@@ -478,8 +478,8 @@ export class ProfBuild {
      * @param override Override name
      */
     isSingleWeapon(override: string = null): boolean {
-        if (this.overrides.has(override)) {
-            return !this.overrides.get(override).hasWep2();
+        if (this.overrides.has(override) && this.overrides.get(override).hasWep2()) {
+            return this.overrides.get(override).wep2 === null;
         }
         return this.wep2 === null;
     }
