@@ -96,7 +96,7 @@ export function necroBuildMaker() {
             'Parasitic Contagion'
         ]);
         variant.specialization.setSpec('spec2', 'Soul Reaping', ['Unyielding Blast', 'Vital Persistence', 'Dhuumfire']);
-        variant.specialization.setSpec('spec3', 'Scourge', ['Fell Beacon', 'Desert Empowerment', 'Sand Savant']);
+        variant.specialization.setSpec('spec3', 'Scourge', ['Fell Beacon', 'Desert Empowerment', 'Demonic Lore']);
 
         variant = build.addOverride('Epidemic');
         variant.skills.setHealSkill('Sand Flare');
