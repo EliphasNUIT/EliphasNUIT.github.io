@@ -20,12 +20,13 @@
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
-    "core-js": "^2.5.3",
+    "core-js": "^2.5.5",
     "handlebars": "^4.0.11",
     "jquery": "^3.3.1",
+    "npm": "^5.8.0",
     "rxjs": "^5.5.7",
-    "uikit": "^3.0.0-beta.40",
-    "zone.js": "^0.8.20"
+    "uikit": "^3.0.0-beta.42",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular/cli": "1.6.5",
