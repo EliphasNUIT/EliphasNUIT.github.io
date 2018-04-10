@@ -26,8 +26,10 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "druidPower",
                         "override": {
+                            "armor": "Offensive",
+                            "wep1": "Offensive",
                             "skills": "Vale Guardian"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
@@ -127,9 +129,9 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "druidCondi",
                         "override": {
-                            "skills": "Gorseval"
+                            "armor": "Offensive"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
@@ -343,8 +345,10 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "druidPower",
                         "override": {
+                            "armor": "Offensive",
+                            "wep1": "Offensive",
                             "skills": "Slothasor"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
@@ -546,7 +550,7 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "soulbeastPower",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
@@ -806,7 +810,7 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "mirageCondi",
+                        "build": "holoPower",
                         "gw2Armory": ""
                     },
                     {
@@ -862,11 +866,7 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPower",
-                        "override":{
-                            "skills":"CC",
-                            "specialization": "Thermal"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
@@ -944,8 +944,10 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
-                        "override":{
+                        "build": "druidPower",
+                        "override": {
+                            "armor": "Offensive",
+                            "wep1": "Offensive",
                             "skills": "Samarog"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"

@@ -41,20 +41,20 @@ class CondiDruidBuild extends CondiRangerBuild {
      * @param name Name of the build
      */
     constructor(id, name) {
-        super(id, 'Druide - Condition - ' + name);
+        super(id, 'Druide - Condition' + name);
         this.icon += 'druid.png';
         this.armor.set42Rune('Superior Rune of the Traveler', 'Superior Rune of the Trapper');
-        this.wep1.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Concentration', 'Superior Sigil of Malice');
-        this.wep2.setMainHand('Dagger', 'Viper\'s', 'Superior Sigil of Concentration');
-        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Malice');
+        this.wep1.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Agony', 'Superior Sigil of Geomancy');
+        this.wep2.setMainHand('Dagger', 'Viper\'s', 'Superior Sigil of Agony');
+        this.wep2.setOffHand('Torch', 'Viper\'s', 'Superior Sigil of Geomancy');
         this.consumable.setConsumable('Prickly Pear Pie', 'Toxic Maintenance Oil');
-        this.skills.setPets(['Juvenile Lynx', 'Juvenile Electric Wyvern']);
+        this.skills.setPets(['Juvenile Rock Gazelle', 'Juvenile Lynx', 'Juvenile Electric Wyvern']);
         this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Light on your Feet']);
-        this.specialization.setSpec('spec2', 'Nature Magic', ['Bountiful Hunter', 'Spirited Arrival', 'Nature\'s Vengeance']);
+        this.specialization.setSpec('spec2', 'Wilderness Survival', ['Taste for Danger', 'Ambidexterity', 'Poison Master']);
         this.specialization.setSpec('spec3', 'Druid', ['Cultivated Synergy', 'Verdant Etching', 'Grace of the Land']);
         this.skills.setHealSkill('Glyph of Rejuvenation');
-        this.skills.setUtilitySkills(['Glyph of Empowerment', 'Sun Spirit', 'Frost Spirit']);
-        this.skills.setEliteSkill('Glyph of Unity');
+        this.skills.setUtilitySkills(['Sharpening Stone', 'Viper\'s Nest', '']);
+        this.skills.setEliteSkill('Entangle');
     }
 }
 
@@ -157,7 +157,7 @@ class PowerRangerBuild extends RangerBuild {
         this.armor.setSingleStat('Berserker\'s');
         this.trinket.setSingleStat('Berserker\'s');
         this.wep2.setMainHand('Sword', 'Berserker\'s', 'Superior Sigil of Force');
-        this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Vicious Quarry']);
+        this.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Quick Draw']);
         this.skills.setPets(['Juvenile Rock Gazelle', 'Juvenile Electric Wyvern', 'Juvenile Tiger']);
     }
 }
@@ -177,7 +177,7 @@ class PowerDruidBuild extends PowerRangerBuild {
         this.armor.setSingleRune('Superior Rune of Strength');
         this.wep1.setOffHand('Warhorn', 'Berserker\'s', 'Superior Sigil of Water');
         this.consumable.setConsumable('Slice of Allspice Cake', 'Superior Sharpening Stone');
-        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Water');
+        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
         this.specialization.setSpec('spec2', 'Marksmanship', ['Clarion Bond', 'Moment of Clarity', 'Predator\'s Onslaught']);
         this.specialization.setSpec('spec3', 'Druid', ['Cultivated Synergy', 'Verdant Etching', 'Grace of the Land']);
         this.skills.setHealSkill('Glyph of Rejuvenation');
@@ -236,17 +236,46 @@ export function rangerBuildMaker() {
 
     // Condi heal
     {
+        build = new CondiDruidBuild('druidCondi', '');
 
+        let variant = build.addOverride('Nature');
+        variant.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Light on your Feet']);
+        variant.specialization.setSpec('spec2', 'Nature Magic', ['Bountiful Hunter', 'Spirited Arrival', 'Nature\'s Vengeance']);
+        variant.specialization.setSpec('spec3', 'Druid', ['Cultivated Synergy', 'Verdant Etching', 'Grace of the Land']);
+
+        variant = build.addOverride('Offensive');
+        variant.armor.setSingleStat('Viper\'s');
+        variant.armor.set42Rune('Superior Rune of the Nightmare', 'Superior Rune of the Trapper');
     }
 
     // Power heal
     {
         build = new PowerDruidBuild('druidPower', '');
 
-        const variant = build.addOverride('Nature');
+        let variant = build.addOverride('Nature');
         variant.specialization.setSpec('spec1', 'Skirmishing', ['Sharpened Edges', 'Spotter', 'Quick Draw']);
         variant.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Spirited Arrival', 'Nature\'s Vengeance']);
         variant.specialization.setSpec('spec3', 'Druid', ['Cultivated Synergy', 'Verdant Etching', 'Grace of the Land']);
+
+        variant = build.addOverride('Offensive');
+        variant.armor.setSingleStat('Berserker\'s');
+        variant.armor.setSingleRune('Superior Rune of the Scholar');
+        variant.wep1.setTwoHand('Longbow', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
+
+        variant = build.addOverride('Vale Guardian');
+        variant.skills.setHealSkill('Glyph of Rejuvenation');
+        variant.skills.setUtilitySkills(['Signet of the Wild', 'Glyph of the Tides', '']);
+        variant.skills.setEliteSkill('Entangle');
+
+        variant = build.addOverride('Slothasor');
+        variant.skills.setHealSkill('Glyph of Rejuvenation');
+        variant.skills.setUtilitySkills(['Signet of the Wild', '"Protect Me!"', '']);
+        variant.skills.setEliteSkill('Spirit of Nature');
+
+        variant = build.addOverride('Samarog');
+        variant.skills.setHealSkill('Glyph of Rejuvenation');
+        variant.skills.setUtilitySkills(['Signet of the Wild', 'Glyph of the Tides', '']);
+        variant.skills.setEliteSkill('Entangle');
     }
 
     // Heal
