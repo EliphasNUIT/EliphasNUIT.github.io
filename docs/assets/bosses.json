@@ -26,8 +26,10 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "druidPower",
                         "override": {
+                            "armor": "Offensive",
+                            "wep1": "Offensive",
                             "skills": "Vale Guardian"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
@@ -44,11 +46,7 @@
                     {
                         "name": "Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override": {
-                            "specialization": "Zeal Signet Share",
-                            "skills": "Shout/Shout"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
@@ -131,20 +129,16 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "druidCondi",
                         "override": {
-                            "skills": "Gorseval"
+                            "armor": "Offensive"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override": {
-                            "specialization": "Zeal Signet Share",
-                            "skills": "Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
@@ -239,30 +233,39 @@
                     },
                     {
                         "name": "Eliphas",
-                        "role": "",
-                        "build": "druidBoon",
+                        "role": "Kite",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "specialization":"Kite",
+                            "skills":"Kite"
+                        },
                         "gw2Armory": ""
                     },
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "renCondi",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": " ",
-                        "role": "backup",
-                        "build": "holoPower",
-                        "override": {
-                            "specialization": "Thermal/Orbital",
-                            "skills": "CC"
+                        "role": "",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
                         "name": " ",
                         "role": "",
-                        "build": "weavPowerArc",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": ""
                     }
                 ],
@@ -280,8 +283,11 @@
                     },
                     {
                         "name": "Arkness",
-                        "role": "Kite",
+                        "role": "",
                         "build": "druidBoon",
+                        "override": {
+                            "skills": "Solo"
+                        },
                         "gw2Armory": ""
                     },
                     {
@@ -305,10 +311,9 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPower",
-                        "override": {
-                            "specialization": "Thermal/Orbital",
-                            "skills": "CC"
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
                         },
                         "gw2Armory": ""
                     }
@@ -340,8 +345,10 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "druidPower",
                         "override": {
+                            "armor": "Offensive",
+                            "wep1": "Offensive",
                             "skills": "Slothasor"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
@@ -359,20 +366,13 @@
                     {
                         "name": " Meat",
                         "role": "champignon 2",
-                        "build": "dhPower",
-                        "override":{
-                            "skills": "Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
                         "name": " ",
                         "role": "Champignon 4",
-                        "build": "holoPower",
-                        "override":{
-                            "specialization": "Thermal/Orbital",
-                            "skills": "CC"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -455,21 +455,20 @@
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
-                        "name": "Bouhteille",
+                        "name": " ",
                         "role": "",
-                        "build": "renCondi",
-                        "override":{
-                            "specialization": "Invocation"
+                        "build": "mirageCondi",
+                        "override": {
+                            "skills": "CC"
                         },
-                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
+                        "gw2Armory": ""
                     },
                     {
                         "name": " ",
                         "role": "",
-                        "build": "fbDPS",
+                        "build": "mirageCondi",
                         "override": {
-                            "specialization": "Consecration",
-                            "skills": "Consecration"
+                            "skills": "CC"
                         },
                         "gw2Armory": ""
                     },
@@ -519,13 +518,10 @@
                         "gw2Armory": ""
                     },
                     {
-                        "name": " ",
+                        "name": "Bouhteille",
                         "role": "",
-                        "build": "mirageCondi",
-                        "override": {
-                            "skills": "CC"
-                        },
-                        "gw2Armory": ""
+                        "build": "renCondi",
+                        "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     }
                 ]
             }
@@ -554,7 +550,7 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
+                        "build": "soulbeastPower",
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
                     },
                     {
@@ -678,10 +674,7 @@
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills": "Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
@@ -775,20 +768,13 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "fbDPS",
-                        "override":{
-                            "skills":"Consecration",
-                            "specialization":"Consecration"
-                        },
+                        "build": "mirageCondi",
                         "gw2Armory": ""
                     },
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills":"Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -824,7 +810,7 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "mirageCondi",
+                        "build": "holoPower",
                         "gw2Armory": ""
                     },
                     {
@@ -880,20 +866,13 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPower",
-                        "override":{
-                            "skills":"CC",
-                            "specialization": "Thermal"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills":"Shout/Shout"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -965,8 +944,10 @@
                     {
                         "name": "Eliphas",
                         "role": "",
-                        "build": "druidBoon",
-                        "override":{
+                        "build": "druidPower",
+                        "override": {
+                            "armor": "Offensive",
+                            "wep1": "Offensive",
                             "skills": "Samarog"
                         },
                         "gw2Armory": "http://gw2armory.com/EliphasNUIT/characters/"
@@ -1018,11 +999,7 @@
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "specialization":"Zeal Signet Share",
-                            "skills":"Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
@@ -1093,10 +1070,7 @@
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills":"Shout/Shout"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -1192,7 +1166,10 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "mirageCondi",
+                        "build": "scourgeCondi",
+                        "override":{
+                            "skills":"Epidemic"
+                        },
                         "gw2Armory": ""
                     },
                     {
@@ -1242,10 +1219,9 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "fbDPS",
+                        "build": "scourgeCondi",
                         "override":{
-                            "skills":"Consecration",
-                            "specialization":"Consecration"
+                            "skills":"Epidemic"
                         },
                         "gw2Armory": ""
                     }
@@ -1321,9 +1297,9 @@
                     {
                         "name": " ",
                         "role": "",
-                        "build": "holoPower",
+                        "build": "dhPower",
                         "override":{
-                            "specialization":"Thermal"
+                            "skills":"Shout/Trap"
                         },
                         "gw2Armory": ""
                     }
@@ -1400,10 +1376,7 @@
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills":"Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -1509,10 +1482,7 @@
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills":"Shout/Trap"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -1596,22 +1566,13 @@
                     {
                         "name": "Bouhteille",
                         "role": "",
-                        "build": "spellbrkDPS",
-                        "override":{
-                            "specialization":"Mace/Axe + Axe/Dagger",
-                            "wep1":"Mace/Axe + Axe/Dagger",
-                            "wep2":"Mace/Axe + Axe/Dagger"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": "http://gw2armory.com/Bouhteille/characters/"
                     },
                     {
                         "name": " ",
                         "role": "Orb 2",
-                        "build": "holoPower",
-                        "override":{
-                            "specialization":"Thermal",
-                            "skills":"CC"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     }
                 ],
@@ -1635,11 +1596,7 @@
                     {
                         "name": " Meat",
                         "role": "",
-                        "build": "dhPower",
-                        "override":{
-                            "skills":"Shout/Trap",
-                            "specialization":"Zeal Signet Share"
-                        },
+                        "build": "weavPowerArc",
                         "gw2Armory": ""
                     },
                     {
