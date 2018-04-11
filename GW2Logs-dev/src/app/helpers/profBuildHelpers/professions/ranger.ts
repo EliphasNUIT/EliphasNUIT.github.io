@@ -317,7 +317,7 @@ export function rangerBuildMaker() {
 
         variant = build.addOverride('Desmina Pusher');
         variant.specialization.setSpec('spec1', 'Marksmanship', ['Clarion Bond', 'Moment of Clarity', 'Lead the Wind']);
-        variant.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Windborne Notes', 'Nature\'s Vengeance']);
+        variant.specialization.setSpec('spec2', 'Nature Magic', ['Instinctive Reaction', 'Spirited Arrival', 'Nature\'s Vengeance']);
         variant.specialization.setSpec('spec3', 'Druid', ['Primal Echoes', 'Verdant Etching', 'Grace of the Land']);
         variant.skills.setHealSkill('Water Spirit');
         variant.skills.setUtilitySkills(['Glyph of the Tides', '', '']);
