@@ -269,7 +269,7 @@ export function mesBuildMaker() {
         variant.skills.setUtilitySkills(['Well of Action', 'Well of Recall', 'Signet of Inspiration']);
         variant.skills.setEliteSkill('Time Warp');
         //
-        variant = build.addOverride('Duel/Illu2');
+        variant = build.addOverride('Duel/Illu2', false);
         variant.wep1.setMainHand('Sword', 'Commander\'s', 'Superior Sigil of Concentration');
         variant.wep1.setOffHand('Pistol', 'Berserker\'s', 'Superior Sigil of Force');
         //
