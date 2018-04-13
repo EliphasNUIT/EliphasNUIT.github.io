@@ -175,6 +175,14 @@ export function eleBuildMaker() {
         variant.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
 
         variant = build.addOverride('Keep Construct');
+        variant.wep1.setTwoHand('Staff', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Impact');
+        variant.specialization.setSpec('spec1', 'Fire', [
+            'Burning Precision',
+            'Pyromancer\'s Training',
+            'Persisting Flames'
+        ]);
+        variant.specialization.setSpec('spec2', 'Air', ['Ferocious Winds', 'Tempest Defense', 'Bolt to the Heart']);
+        variant.specialization.setSpec('spec3', 'Weaver', ['Superior Elements', 'Swift Revenge', 'Elements of Rage']);
         variant.skills.setHealSkill('Aquatic Stance');
         variant.skills.setUtilitySkills(['Conjure Frost Bow', 'Glyph of Storms', 'Primordial Stance']);
         variant.skills.setEliteSkill('Weave Self');
