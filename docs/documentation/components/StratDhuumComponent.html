@@ -1077,9 +1077,6 @@ export class StratDhuumComponent implements OnInit {
       &lt;a href&#x3D;&quot;#&quot;&gt;Mécaniques de l&#x27;arène&lt;/a&gt;
     &lt;/div&gt;
     &lt;div&gt;
-      &lt;a href&#x3D;&quot;#&quot;&gt;Mécaniques de base&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
       &lt;a href&#x3D;&quot;#&quot;&gt;Phase 1&lt;/a&gt;
     &lt;/div&gt;
     &lt;div&gt;
@@ -1107,22 +1104,108 @@ export class StratDhuumComponent implements OnInit {
         &lt;li&gt;
           &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Deathly Aura - &lt;/span&gt; Aura qui endommage les joueurs.
         &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Faucheurs - &lt;/span&gt; 7 PNJ à protéger durant le combat. Ils se font attaquer par les adds.
+
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/reaper.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Zone Verte - &lt;/span&gt; Zone verte qui pop sous les faucheurs, permet de monter et chercher des orbes. Toutes les
+          30 secondes. Cf timings.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/green.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
       &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Préparation - &lt;/span&gt; Dure 2 minutes. Il faut tourner autour de la salle en nettoyant les adds et s&#x27;occupant de
+          zones vertes. A la fin des 2 minutes, le boss arrive.
+        &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
       &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Death Mark - &lt;/span&gt; Pose une AoE au sol, au contact avec un joueur, ce dernier se sépare de son âme et tous ses
+          avantages sont transférés au boss. Cf timings.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/mark.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Greater Death Mark - &lt;/span&gt; Le boss se téléporte au centre, sépare tous les joueurs de leur âme, vole tous les
+          avantages et commence à aspirer les joueurs vers le centre. La zone autour du boss provoque des dégats catastrophiques.
+          Cf timings.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/gmark.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Putrid Bomb - &lt;/span&gt; Régulièrement un joueur va être choisi pour exploser. Les dégats infligés aux joueurs sont
+          inversément proportionnels à la distance entre l&#x27;explosion et les joueurs. Le joueur choisi doit donc s&#x27;éloigner
+          au maximum du raid.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/bomb.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Impact - &lt;/span&gt; Le boss donne un coup de faux au sol. Du point d&#x27;impact, le sol commence à se fissurer. Les fissures
+          infligent de lourd dégats et provoquent un fear de longue durée (10 sec+).
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Soul Shackle - &lt;/span&gt; A partir de 60%. Régulièrement deux joueurs vont être chainés l&#x27;un contre l&#x27;autre. Il faut qu&#x27;ils partent
+          dans deux sens opposés afin de briser la chaine. La chaine inflige de lourd dégats.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/shack.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Scythe Slash - &lt;/span&gt; A partir de 30%. Attaque en cône qui inflige de lorud dégats.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/swing.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
       &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
-      &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Orb - &lt;/span&gt; Tous le raid doit aller chercher des orbes.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/lastorb.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Fin - &lt;/span&gt; Dhuum se met dans une bulle au centre, il faut intéragir avec les emplacements des faucheurs à peu
+          près en même temps et revenir dans la bulle pour attaquer le boss. A répeter jusqu&#x27;à sa mort. Les joueurs en dehors
+          de la bulle perdent rapidement de la vie.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/end.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
@@ -1133,6 +1216,11 @@ export class StratDhuumComponent implements OnInit {
         &lt;li&gt;
           &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Orbes - &lt;/span&gt; Il faut manger 5 orbes rouges pour revenir. Essayez de manger une grande orbe sinon un Enforcer
           va apparaître. Si aucune grande orbe n&#x27;est mangée, prévenir le raid.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/orb.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
         &lt;/li&gt;
         &lt;li&gt;
           &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Mouvement - &lt;/span&gt; Le mouvement est plan, ne vous faîtes pas avoir, toutes les orbes ne sont pas à votre niveau.
@@ -1149,8 +1237,35 @@ export class StratDhuumComponent implements OnInit {
           &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Adds - &lt;/span&gt;
           &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
             &lt;img src&#x3D;&quot;assets/strats/dhuumspawns.jpg&quot;&gt;
-            &lt;p&gt;Merci à
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
               &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;https://wiki.guildwars2.com/wiki/Hall_of_Chains#The_Voice_in_the_Void&quot;&gt;GW2 Wiki&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Enforcers - &lt;/span&gt; Add squelette, inflige de gros dégats aux faucheurs. Seulement durant la première phase ou
+          si une grande orbe a été loupée.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/enf.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Deathlings - &lt;/span&gt; Add araignée, inflige de légers dégats aux faucheurs.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/ling.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Messenger - &lt;/span&gt; Add golem, attaque la première personne qui les touche. Possède une zone autour qui inflige
+          de gros dégats aux joueurs. Meurt 20 secondes après son apparition. La fréquence d&#x27;apparition est très élevée durant
+          la première phase seulement.
+          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
+            &lt;img src&#x3D;&quot;assets/strats/dh/mes.jpg&quot;&gt;
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
+              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
           &lt;/div&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
@@ -1161,7 +1276,7 @@ export class StratDhuumComponent implements OnInit {
           &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Timings - &lt;/span&gt;
           &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
             &lt;img src&#x3D;&quot;assets/strats/dhuumpattern.png&quot;&gt;
-            &lt;p&gt;Merci à
+            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
               &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;https://wiki.guildwars2.com/wiki/Hall_of_Chains#The_Voice_in_the_Void&quot;&gt;GW2 Wiki&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
           &lt;/div&gt;
         &lt;/li&gt;
@@ -1194,7 +1309,7 @@ export class StratDhuumComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class=\'uk-margin-large-top uk-flex uk-flex-middle uk-flex-column\'>  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">    <div>      <a href="#">Mécaniques de l\'arène</a>    </div>    <div>      <a href="#">Mécaniques de base</a>    </div>    <div>      <a href="#">Phase 1</a>    </div>    <div>      <a href="#">Phase 2</a>    </div>    <div>      <a href="#">Phase 3</a>    </div>    <div>      <a href="#">Les orbes</a>    </div>    <div>      <a href="#">Adds</a>    </div>    <div>      <a href="#">Timings</a>    </div>  </ul></div><div class=\'uk-margin-left uk-margin-right\'>  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center">    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Deathly Aura - </span> Aura qui endommage les joueurs.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Soul Siphon - </span> La lumière blanche au centre tue tout de suite. Elle aspire constamment le joueur vers elle.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Orbes - </span> Il faut manger 5 orbes rouges pour revenir. Essayez de manger une grande orbe sinon un Enforcer          va apparaître. Si aucune grande orbe n\'est mangée, prévenir le raid.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Mouvement - </span> Le mouvement est plan, ne vous faîtes pas avoir, toutes les orbes ne sont pas à votre niveau.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Conseil - </span> Il se peut qu\'il n\'y ait pas d\'orbes dans votre quadran, pour vous déplacer rapidement, avancer          vers le mur puis foncer dans l\'autre sens en contourant le siphon. Ce dernier va vous faire gagner en vitesse.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Adds - </span>          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dhuumspawns.jpg">            <p>Merci à              <a class="acknowledge" href="https://wiki.guildwars2.com/wiki/Hall_of_Chains#The_Voice_in_the_Void">GW2 Wiki</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Timings - </span>          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dhuumpattern.png">            <p>Merci à              <a class="acknowledge" href="https://wiki.guildwars2.com/wiki/Hall_of_Chains#The_Voice_in_the_Void">GW2 Wiki</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>  </ul></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class=\'uk-margin-large-top uk-flex uk-flex-middle uk-flex-column\'>  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">    <div>      <a href="#">Mécaniques de l\'arène</a>    </div>    <div>      <a href="#">Phase 1</a>    </div>    <div>      <a href="#">Phase 2</a>    </div>    <div>      <a href="#">Phase 3</a>    </div>    <div>      <a href="#">Les orbes</a>    </div>    <div>      <a href="#">Adds</a>    </div>    <div>      <a href="#">Timings</a>    </div>  </ul></div><div class=\'uk-margin-left uk-margin-right\'>  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center">    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Deathly Aura - </span> Aura qui endommage les joueurs.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Faucheurs - </span> 7 PNJ à protéger durant le combat. Ils se font attaquer par les adds.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/reaper.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Zone Verte - </span> Zone verte qui pop sous les faucheurs, permet de monter et chercher des orbes. Toutes les          30 secondes. Cf timings.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/green.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Préparation - </span> Dure 2 minutes. Il faut tourner autour de la salle en nettoyant les adds et s\'occupant de          zones vertes. A la fin des 2 minutes, le boss arrive.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Death Mark - </span> Pose une AoE au sol, au contact avec un joueur, ce dernier se sépare de son âme et tous ses          avantages sont transférés au boss. Cf timings.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/mark.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Greater Death Mark - </span> Le boss se téléporte au centre, sépare tous les joueurs de leur âme, vole tous les          avantages et commence à aspirer les joueurs vers le centre. La zone autour du boss provoque des dégats catastrophiques.          Cf timings.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/gmark.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Putrid Bomb - </span> Régulièrement un joueur va être choisi pour exploser. Les dégats infligés aux joueurs sont          inversément proportionnels à la distance entre l\'explosion et les joueurs. Le joueur choisi doit donc s\'éloigner          au maximum du raid.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/bomb.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Impact - </span> Le boss donne un coup de faux au sol. Du point d\'impact, le sol commence à se fissurer. Les fissures          infligent de lourd dégats et provoquent un fear de longue durée (10 sec+).        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Soul Shackle - </span> A partir de 60%. Régulièrement deux joueurs vont être chainés l\'un contre l\'autre. Il faut qu\'ils partent          dans deux sens opposés afin de briser la chaine. La chaine inflige de lourd dégats.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/shack.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Scythe Slash - </span> A partir de 30%. Attaque en cône qui inflige de lorud dégats.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/swing.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Orb - </span> Tous le raid doit aller chercher des orbes.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/lastorb.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Fin - </span> Dhuum se met dans une bulle au centre, il faut intéragir avec les emplacements des faucheurs à peu          près en même temps et revenir dans la bulle pour attaquer le boss. A répeter jusqu\'à sa mort. Les joueurs en dehors          de la bulle perdent rapidement de la vie.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/end.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Soul Siphon - </span> La lumière blanche au centre tue tout de suite. Elle aspire constamment le joueur vers elle.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Orbes - </span> Il faut manger 5 orbes rouges pour revenir. Essayez de manger une grande orbe sinon un Enforcer          va apparaître. Si aucune grande orbe n\'est mangée, prévenir le raid.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/orb.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Mouvement - </span> Le mouvement est plan, ne vous faîtes pas avoir, toutes les orbes ne sont pas à votre niveau.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Conseil - </span> Il se peut qu\'il n\'y ait pas d\'orbes dans votre quadran, pour vous déplacer rapidement, avancer          vers le mur puis foncer dans l\'autre sens en contourant le siphon. Ce dernier va vous faire gagner en vitesse.        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Adds - </span>          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dhuumspawns.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="https://wiki.guildwars2.com/wiki/Hall_of_Chains#The_Voice_in_the_Void">GW2 Wiki</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Enforcers - </span> Add squelette, inflige de gros dégats aux faucheurs. Seulement durant la première phase ou          si une grande orbe a été loupée.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/enf.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Deathlings - </span> Add araignée, inflige de légers dégats aux faucheurs.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/ling.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Messenger - </span> Add golem, attaque la première personne qui les touche. Possède une zone autour qui inflige          de gros dégats aux joueurs. Meurt 20 secondes après son apparition. La fréquence d\'apparition est très élevée durant          la première phase seulement.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dh/mes.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/12/05/gw2-dhuum-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Timings - </span>          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/dhuumpattern.png">            <p class="acknowledge">Merci à              <a class="acknowledge" href="https://wiki.guildwars2.com/wiki/Hall_of_Chains#The_Voice_in_the_Void">GW2 Wiki</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>  </ul></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'StratDhuumComponent'};
