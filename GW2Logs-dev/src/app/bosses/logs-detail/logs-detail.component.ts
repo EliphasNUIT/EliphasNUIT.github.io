@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { Boss } from '../helpers/boss';
+import { Boss } from '../../helpers/boss';
 import { OnDestroy, OnChanges } from '@angular/core';
 
 /**

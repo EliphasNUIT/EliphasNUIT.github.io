@@ -1128,7 +1128,7 @@
                 "background-image": "url(assets/bosses/ssh.png)",
                 "font-size": "11px"
             },
-            "shortName": "desmina",
+            "shortName": "sh",
             "buttonName": "Soulless Horror",
             "displayName": "Soulless Horror",
             "composition": {
