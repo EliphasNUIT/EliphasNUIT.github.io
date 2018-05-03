@@ -1,67 +1,68 @@
 <div *ngIf="boss">
   <ul class="my-composition">
-    <div class='uk-flex uk-flex-row uk-flex-between'>
-      <div class='uk-flex uk-flex-row uk-margin-large-top'>
-        <table *ngIf="boss.composition.t1.length > 0" class='uk-margin-small-left uk-margin-small-right uk-margin-right'>
-          <thead>
-            <tr>
-              <th>
-                <span class="uk-text-large uk-text-bold">Groupe 1</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="uk-flex uk-flex-column">
-            <tr *ngFor="let character of boss.composition.t1" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar" >
-              <td>
-                <img [src]='character.getIcon(boss.shortName)'>
-                <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div class='uk-margin-large-left uk-margin-large-right'>
+      <div class='uk-flex uk-flex-row uk-flex-between uk-margin-right'>
+        <div class='uk-flex uk-flex-row uk-margin-large-top'>
+          <table *ngIf="boss.composition.t1.length > 0" class=''>
+            <thead>
+              <tr>
+                <th>
+                  <span class="uk-text-large uk-text-bold">Groupe 1</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="uk-flex uk-flex-column">
+              <tr *ngFor="let character of boss.composition.t1" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar">
+                <td>
+                  <img [src]='character.getIcon(boss.shortName)'>
+                  <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-        <table *ngIf="boss.composition.t2.length > 0" class='uk-margin-right'>
-          <thead>
-            <tr>
-              <th>
-                <span class="uk-text-large uk-text-bold">Groupe 2</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="uk-flex uk-flex-column">
-            <tr *ngFor="let character of boss.composition.t2" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar">
-              <td>
-                <img [src]='character.getIcon(boss.shortName)'>
-                <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
-              </td>
-            </tr>
+          <table *ngIf="boss.composition.t2.length > 0" class=''>
+            <thead>
+              <tr>
+                <th>
+                  <span class="uk-text-large uk-text-bold">Groupe 2</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="uk-flex uk-flex-column">
+              <tr *ngFor="let character of boss.composition.t2" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar">
+                <td>
+                  <img [src]='character.getIcon(boss.shortName)'>
+                  <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
+                </td>
+              </tr>
 
-          </tbody>
+            </tbody>
 
-        </table>
+          </table>
 
-        <table *ngIf="boss.composition.t3.length > 0" class='uk-margin-right'>
-          <thead>
-            <tr>
-              <th>
-                <span class="uk-text-large uk-text-bold">Groupe 3</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="uk-flex uk-flex-column">
-            <tr *ngFor="let character of boss.composition.t3" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar" >
-              <td>
-                <img [src]='character.getIcon(boss.shortName)'>
-                <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
-              </td>
-            </tr>
-          </tbody>
+          <table *ngIf="boss.composition.t3.length > 0" class=''>
+            <thead>
+              <tr>
+                <th>
+                  <span class="uk-text-large uk-text-bold">Groupe 3</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="uk-flex uk-flex-column">
+              <tr *ngFor="let character of boss.composition.t3" (click)="onSelect(character)" [ngClass]="getClasses(character)" [class.selected]="character === selectedChar">
+                <td>
+                  <img [src]='character.getIcon(boss.shortName)'>
+                  <span class='uk-text-middle uk-text-large uk-text-bold'>{{character.name}}</span>
+                </td>
+              </tr>
+            </tbody>
 
-        </table>
+          </table>
+        </div>
+        <app-spec-detail [character]="selectedChar" class="uk-margin-top"></app-spec-detail>
       </div>
-
-
-      <app-spec-detail [character]="selectedChar" class="uk-margin-top uk-margin-right"></app-spec-detail>
     </div>
+
   </ul>
 </div>

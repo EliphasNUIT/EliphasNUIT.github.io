@@ -75,7 +75,7 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
             });
             this.observerMap.set(id, observer);
         }
-        frame.setAttribute('height', target.scrollHeight.toString());
+        frame.setAttribute('height', (1.01 * target.scrollHeight).toString());
 
         observer = this.observerMap.get(id);
 
@@ -122,7 +122,7 @@ export class LogsDetailComponent implements OnInit, OnDestroy, OnChanges {
             if (init === 'about:blank') {
                 frame.style.display = 'block';
                 frame.setAttribute('src', log.url);
-                frame.setAttribute('width', '1250px');
+                frame.setAttribute('width', '1550px');
                 frame.setAttribute('height', '50');
                 frame.setAttribute('frameborder', '3');
                 // init the button
