@@ -111,7 +111,7 @@
                 "background-image": "url(assets/bosses/gorse.png)",
                 "font-size": "13px"
             },
-            "shortName": "gorse",
+            "shortName": "gors",
             "buttonName": "Gorseval",
             "displayName": "Gorseval the Multifarious",
             "composition": {
@@ -1128,7 +1128,7 @@
                 "background-image": "url(assets/bosses/ssh.png)",
                 "font-size": "11px"
             },
-            "shortName": "desmina",
+            "shortName": "sh",
             "buttonName": "Soulless Horror",
             "displayName": "Soulless Horror",
             "composition": {
