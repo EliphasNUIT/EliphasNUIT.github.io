@@ -26,11 +26,11 @@
         Composition
       </div>
     </span>
-    <!--<span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
+    <span (click)="onSelectDisplay('logs')" [class.selected]="selectedDisplay === 'logs'" [ngStyle]="logsStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
       <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
         Logs
       </div>
-    </span>-->
+    </span>
     <span (click)="onSelectDisplay('strat')" [class.selected]="selectedDisplay === 'strat'" [ngStyle]="stratStyle" class="uk-transition-toggle uk-border-rounded selector switcher uk-background-center-center uk-flex uk-flex-around uk-flex-middle uk-margin-small-right uk-margin-small-left">
       <div class="my-button-title uk-text-bold uk-text-center uk-transition-fade">
         Mécaniques
@@ -41,9 +41,9 @@
     <div *ngSwitchCase="'compo'">
       <app-composition-detail [boss]="selectedBoss"></app-composition-detail>
     </div>
-    <!--<div *ngSwitchCase="'logs'">
+    <div *ngSwitchCase="'logs'">
       <app-logs-detail [boss]="selectedBoss"></app-logs-detail>
-    </div>-->
+    </div>
     <div *ngSwitchCase="'strat'">
       <app-strat [boss]="selectedBoss"></app-strat>
     </div>
