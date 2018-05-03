@@ -53,7 +53,7 @@ void buildJSONObject(QJsonObject& myJSObject, QStringList& toZip) {
             id.insert(4,"_");
             id.insert(7,"_");
             QString date = QDate::fromString(id,"yyyy_MM_dd").toString("dd/MM/yyyy");
-            myJSBoss["id"] = id+bossName;
+            myJSBoss["id"] = id+'_'+bossName;
             myJSBoss["date"] = date;
             myJSBoss["url"] = "logs/" + logFile;
             bossJS[bossName].append(myJSBoss);
