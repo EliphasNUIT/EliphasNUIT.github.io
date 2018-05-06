@@ -22,7 +22,7 @@ table {
 .selectable {
     cursor: pointer;     
     border-top: 2px solid black;
-    width: 200px;
+    width: 225px;
     transition: background-color 0.2s linear;
 }
 /* Classes */
@@ -135,8 +135,8 @@ table {
 }
 /* */
 img {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     -webkit-filter: drop-shadow(5px 5px 5px #222) ;
     filter: drop-shadow(5px 5px 5px #222);
 }
