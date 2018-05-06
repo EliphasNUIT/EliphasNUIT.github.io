@@ -20,7 +20,7 @@ export class NavigationBarComponent implements OnInit {
     },
     {
       text: 'Parseur arc dps',
-      ref: 'https://raidheroes.tk/',
+      ref: 'https://github.com/baaron4/GW2-Elite-Insights-Parser',
       target: 'Parseur'
     },
     {
