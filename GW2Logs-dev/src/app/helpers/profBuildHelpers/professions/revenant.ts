@@ -33,7 +33,8 @@ class CondiRenegadeBuild extends RevenantBuild {
         this.consumable.setConsumable('Rare Veggie Pizza', 'Toxic Focusing Crystal');
         this.trinket.setSingleStat('Viper\'s');
         this.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
-        this.wep2.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
+        this.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
+        this.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy');
         this.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Diabolic Inferno']);
         this.specialization.setSpec('spec2', 'Devastation', [
             'Ferocious Strikes',
@@ -128,9 +129,6 @@ export function revBuildMaker() {
         build = new CondiRenegadeBuild('renCondi', '');
         //
         let variant = build.addOverride('Big Hitbox');
-        variant.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
-        variant.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
-        variant.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy');
         variant.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Pulsating Pestilence']);
         variant.specialization.setSpec('spec2', 'Devastation', [
             'Ferocious Strikes',
@@ -149,9 +147,6 @@ export function revBuildMaker() {
         variant.specialization.setSpec('spec3', 'Renegade', ['Blood Fury', 'Heartpiercer', 'Lasting Legacy']);
         //
         variant = build.addOverride('Invocation - Big Hitbox');
-        variant.wep1.setMainHand('Mace', 'Viper\'s', 'Superior Sigil of Smoldering');
-        variant.wep1.setOffHand('Axe', 'Viper\'s', 'Superior Sigil of Geomancy');
-        variant.wep2.setTwoHand('Shortbow', 'Viper\'s', 'Superior Sigil of Smoldering', 'Superior Sigil of Geomancy');
         variant.specialization.setSpec('spec1', 'Corruption', ['Venom Enhancement', 'Abyssal Chill', 'Pulsating Pestilence']);
         variant.specialization.setSpec('spec2', 'Invocation', [
             'Forceful Persistence',

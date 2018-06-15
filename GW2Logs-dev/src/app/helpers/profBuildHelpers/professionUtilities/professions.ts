@@ -523,7 +523,7 @@ const Revenant = {
         'Bolstered Anguish': { id: 1727, spe: 14 },
         'Abyssal Chill': { id: 1726, spe: 14 },
         'Spontaneous Destruction': { id: 1714, spe: 14 },
-        'Nourishing Ashes': { id: 1823, spe: 12 },
+        'Nourishing Roots': { id: 1823, spe: 12 },
         'Blinding Truths': { id: 1824, spe: 12 },
         'Maniacal Persistence': { id: 1720, spe: 14 },
         'Pulsating Pestilence': { id: 1721, spe: 14 },
@@ -761,7 +761,7 @@ const Necromancer = {
         'Spiteful Renewal': { id: 916, spe: 53 },
         'Desert Empowerment': { id: 2059, spe: 60 },
         'Unholy Fervor': { id: 909, spe: 53 },
-        'Nourishing Rot': { id: 2102, spe: 60 },
+        'Nourishing Ashes': { id: 2102, spe: 60 },
         'Sand Savant': { id: 2112, spe: 60 },
         'Demonic Lore': { id: 2164, spe: 60 },
         'Feed from Corruption': { id: 2080, spe: 60 }

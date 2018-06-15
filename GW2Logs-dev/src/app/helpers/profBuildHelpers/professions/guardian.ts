@@ -16,6 +16,38 @@ class GuardBuild extends ProfBuild {
 }
 
 /**
+ * Power Guardian build
+ */
+class PowerGuardBuild extends GuardBuild {
+    /**
+     * Create a Power Guardian build
+     * @param id Id of the build
+     * @param name Name of the build
+     */
+    constructor(id, name) {
+        super(id, 'Guardian - Power' + name);
+        this.icon += 'guardian.png';
+        this.armor.setSingleStat('Berserker\'s');
+        this.armor.setSingleRune('Superior Rune of the Scholar');
+        this.consumable.setConsumable('Bowl of Sweet and Spicy Butternut Squash Soup', 'Superior Sharpening Stone');
+        this.trinket.setSingleStat('Berserker\'s');
+        this.wep1.setMainHand('Scepter', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Torch', 'Berserker\'s', 'Superior Sigil of Air');
+        this.wep2.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
+        this.specialization.setSpec('spec1', 'Zeal', ['Fiery Wrath', 'Zealous Blade', 'Symbolic Avenger']);
+        this.specialization.setSpec('spec2', 'Radiance', [
+            'Healer\'s Retribution',
+            'Retribution',
+            'Righteous Instincts'
+        ]);
+        this.specialization.setSpec('spec3', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
+        this.skills.setHealSkill('Litany of Wrath');
+        this.skills.setUtilitySkills(['Sword of Justice', '', 'Bane Signet']);
+        this.skills.setEliteSkill('');
+    }
+}
+
+/**
  * Power Dragonhunter build
  */
 class PowerDHBuild extends GuardBuild {
@@ -143,34 +175,8 @@ export function guardBuildMaker() {
     {
         build = new PowerDHBuild('dhPower', '');
 
-        let variant = build.addOverride('Virtue');
-        variant.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
-        variant.specialization.setSpec('spec2', 'Radiance', [
-            'Healer\'s Retribution',
-            'Retribution',
-            'Righteous Instincts'
-        ]);
-        variant.specialization.setSpec('spec3', 'Dragonhunter', [
-            'Piercing Light',
-            'Zealot\'s Aggression',
-            'Big Game Hunter'
-        ]);
-
-        variant = build.addOverride('Zeal Signet Share');
+        let variant = build.addOverride('Zeal Signet Share');
         variant.specialization.setSpec('spec1', 'Zeal', ['Fiery Wrath', 'Zealous Blade', 'Symbolic Avenger']);
-        variant.specialization.setSpec('spec2', 'Radiance', [
-            'Healer\'s Retribution',
-            'Retribution',
-            'Perfect Inscriptions'
-        ]);
-        variant.specialization.setSpec('spec3', 'Dragonhunter', [
-            'Piercing Light',
-            'Zealot\'s Aggression',
-            'Big Game Hunter'
-        ]);
-
-        variant = build.addOverride('Virtue Signet Share');
-        variant.specialization.setSpec('spec1', 'Virtues', ['Unscathed Contender', 'Absolute Resolution', 'Permeating Wrath']);
         variant.specialization.setSpec('spec2', 'Radiance', [
             'Healer\'s Retribution',
             'Retribution',
@@ -201,6 +207,18 @@ export function guardBuildMaker() {
         variant.skills.setHealSkill('Litany of Wrath');
         variant.skills.setUtilitySkills(['Procession of Blades', 'Test of Faith', 'Bane Signet']);
         variant.skills.setEliteSkill('Dragon\'s Maw');
+
+        build = new PowerGuardBuild('guardPower', '');
+
+        variant = build.addOverride('Shout/Shout', false);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Sword of Justice', '"Stand Your Ground!"', 'Bane Signet']);
+        variant.skills.setEliteSkill('"Feel My Wrath!"');
+
+        variant = build.addOverride('Smite/Shout', false);
+        variant.skills.setHealSkill('Litany of Wrath');
+        variant.skills.setUtilitySkills(['Sword of Justice', 'Smite Condition', 'Bane Signet']);
+        variant.skills.setEliteSkill('"Feel My Wrath!"');
 
     }
 

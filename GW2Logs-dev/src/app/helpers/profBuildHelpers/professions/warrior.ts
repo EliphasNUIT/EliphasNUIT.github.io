@@ -87,13 +87,10 @@ class PowerWarriorBuild extends WarriorBuild {
      */
     constructor(id, name) {
         super(id, name);
-        this.armor.setStats(['Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Berserker\'s']);
+        this.armor.setStats(['Assassin\'s', 'Assassin\'s', 'Berserker\'s', 'Assassin\'s', 'Assassin\'s', 'Berserker\'s']);
         this.armor.setSingleRune('Superior Rune of the Scholar');
         this.consumable.setConsumable('Bowl of Curry Butternut Squash Soup', 'Superior Sharpening Stone');
-        this.trinket.setStats(['Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Assassin\'s', 'Assassin\'s']);
-        this.wep1.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Air');
-        this.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
-        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
+        this.trinket.setStats(['Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Berserker\'s', 'Assassin\'s']);
     }
 }
 
@@ -109,13 +106,12 @@ class BannerSpellbreakerBuild extends PowerWarriorBuild {
     constructor(id, name) {
         super(id, 'Spellbreaker - Banner' + name);
         this.icon += 'spellbreaker.png';
-        this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
+        this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
         this.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
         this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
-        this.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
-        this.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
+        this.wep1.setTwoHand('Greatsword', 'Berserker\'s', 'Superior Sigil of Force', 'Superior Sigil of Accuracy');
         this.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
-        this.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
+        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Kick', 'Banner of Discipline', 'Banner of Strength']);
         this.skills.setEliteSkill('Winds of Disenchantment');
@@ -139,7 +135,11 @@ class BannerWarriorBuild extends PowerWarriorBuild {
         this.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Throw Bolas', 'Banner of Discipline', 'Banner of Strength']);
-        this.skills.setEliteSkill('Signet of Rage');
+        this.skills.setEliteSkill('Rampage');
+        this.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Mace', 'Berserker\'s', 'Superior Sigil of Paralyzation');
+        this.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
     }
 }
 
@@ -155,12 +155,16 @@ class PowerSpellbreakerBuild extends PowerWarriorBuild {
     constructor(id, name) {
         super(id, 'Spellbreaker - Power' + name);
         this.icon += 'spellbreaker.png';
-        this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Forceful Greatsword', 'Berserker\'s Power']);
-        this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
-        this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         this.skills.setHealSkill('"To the Limit!"');
         this.skills.setUtilitySkills(['Kick', 'Bull\'s Charge', 'Signet of Might']);
         this.skills.setEliteSkill('Signet of Rage');
+        this.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
+        this.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
+        this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
+        this.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
+        this.wep2.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
     }
 }
 
@@ -192,34 +196,16 @@ export function warBuildMaker() {
     // power
     {
         build = new BannerWarriorBuild('warBan', '');
-
-        let variant = build.addOverride('Mace - Shield');
-        variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Tactics', ['Empowered', 'Empower Allies', 'Powerful Synergy']);
-        variant.specialization.setSpec('spec3', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
-        variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
-        variant.wep1.setOffHand('Shield', 'Berserker\'s', 'Superior Sigil of Paralyzation');
         //
         build = new BannerSpellbreakerBuild('spellbrk', '');
         //
         build = new PowerSpellbreakerBuild('spellbrkDPS', '');
-        variant = build.addOverride('Mace/Axe + Axe/Dagger');
-        variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
-        variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
-        variant.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
-        variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
-        variant.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
-        variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
 
-        variant = build.addOverride('Dagger/Axe + Axe/Dagger');
-        variant.specialization.setSpec('spec1', 'Strength', ['Peak Performance', 'Body Blow', 'Berserker\'s Power']);
-        variant.specialization.setSpec('spec2', 'Discipline', ['Warrior\'s Sprint', 'Inspiring Battle Standard', 'Axe Mastery']);
-        variant.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
+        const variant = build.addOverride('Dagger/Axe + Axe/Dagger');
         variant.wep1.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
-        variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Air');
+        variant.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
         variant.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
-        variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Air');
+        variant.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Accuracy');
     }
 }
 
