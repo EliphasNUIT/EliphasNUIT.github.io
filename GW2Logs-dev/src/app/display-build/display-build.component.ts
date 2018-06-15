@@ -3,7 +3,7 @@ import { ProfBuild } from '../helpers/profBuild';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 (<any>document).GW2A_EMBED_OPTIONS = {
-  lang: 'fr',
+  lang: 'en',
   persistToLocalStorage: true
 };
 

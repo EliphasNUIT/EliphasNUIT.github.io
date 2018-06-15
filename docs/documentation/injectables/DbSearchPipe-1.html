@@ -971,15 +971,17 @@
 </nav>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>StratSamComponent</li>
+  <li>Injectables</li>
+  <li>DbSearchPipe</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -987,81 +989,31 @@
         <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
     </li>
 
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 
     <li>
-        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-    </li>
-    <li>
-        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
     </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/bosses/strat/strat-sam/strat-sam.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/database/db-search.pipe.ts</code>
+        </p>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Samarog strat component</p>
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Search bar pipeline</p>
 
-    </p>
-
-
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
+            </p>
 
 
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-strat-sam</code></td>
-            </tr>
-
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>.strat.component.css</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./strat-sam.component.html</code></td>
-            </tr>
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -1075,7 +1027,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#transform">transform</a>
                             </li>
                         </ul>
                     </td>
@@ -1089,36 +1041,21 @@
     </table>
 </section>
 
-    <section>
+            <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>Object()</code>
                     </td>
                 </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/bosses/strat/strat-sam/strat-sam.component.ts:11</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Create a Samarog strat component</p>
-</div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
 
-
-
-
-
-    <section>
+            <section>
     
         <h3 id="methods">
             Methods
@@ -1127,37 +1064,89 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ngOnInit"></a>
+                        <a name="transform"></a>
                         <span class="name">
                             <b>
-                            ngOnInit
+                            transform
                             </b>
-                            <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            <a href="#transform"><span class="fa fa-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>ngOnInit()</code>
+<code>transform(items: literal type[], filter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/bosses/strat/strat-sam/strat-sam.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/database/db-search.pipe.ts:17</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Todo on init</p>
+                            <div class="io-description"><p>Get filtered items</p>
 </div>
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>items</td>
+                                                        <td>
+                                                                    <code>literal type[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Items to filter</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>filter</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>Filter</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -1165,180 +1154,51 @@
 </section>
 
 
-</div>
+    </div>
 
 
     <div class="tab-pane fade tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
 
 /**
- * Samarog strat component
+ * Search bar pipeline
  */
-@Component({
-  selector: &#x27;app-strat-sam&#x27;,
-  templateUrl: &#x27;./strat-sam.component.html&#x27;,
-  styleUrls: [&#x27;../strat.component.css&#x27;]
+@Pipe({
+  name: &#x27;dbSearch&#x27;
 })
-export class StratSamComponent implements OnInit {
+@Injectable()
+export class DbSearchPipe implements PipeTransform {
 
   /**
-   * Create a Samarog strat component
+   * Get filtered items
+   * @param items Items to filter
+   * @param filter Filter
    */
-  constructor() { }
-
-  /**
-   * Todo on init
-   */
-  ngOnInit() {
+  transform(items: { name: string, id: string }[], filter: string): any {
+    if (!items) {
+      return [];
+    }
+    return items.filter(function (elt) {
+      const filters &#x3D; filter.split(&#x27; &#x27;);
+      if (filters.length &gt; 1) {
+        for (let i &#x3D; 0; i &lt; filters.length; i++) {
+          const value &#x3D; filters[i];
+          if (!elt.name.toUpperCase().includes(value.toLocaleUpperCase())) {
+            return false;
+          }
+        }
+        return true;
+      } else {
+        return elt.name.toUpperCase().includes(filter.toLocaleUpperCase());
+      }
+    });
   }
 
 }
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&#x27;uk-margin-large-top uk-flex uk-flex-middle uk-flex-column&#x27;&gt;
-  &lt;ul class&#x3D;&quot;uk-subnav uk-subnav-pill uk-subnav-divider my-subnav&quot; uk-switcher&#x3D;&quot;connect: .switcher-container&quot;&gt;
-    &lt;div&gt;
-      &lt;a href&#x3D;&quot;#&quot;&gt;Mécaniques de l&#x27;arène&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;a href&#x3D;&quot;#&quot;&gt;Mécaniques de base&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;a href&#x3D;&quot;#&quot;&gt;Split&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
-  &lt;ul class&#x3D;&quot;uk-switcher uk-margin switcher-container uk-flex uk-flex-center&quot;&gt;
-    &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
-      &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Inevitable Betrayal - &lt;/span&gt; A partir de la phase 2, deux joueurs seront sélectionnés de manière aléatoire. Ils
-          doivent s&#x27;éloigner du raid et se mettre côte à côte. L&#x27;explosion inflige de lourds dégâts au raid. Si les joueurs
-          choisis ne sont pas côt à côté, le joueur avec la grosse AoE est mis au sol.
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/bomb.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Spear Impact - &lt;/span&gt; Des lances tombent régulièrement sur l&#x27;arène. Elles ont une zone autour qui inflige des
-          dégâts et taunt. Peuvent être détruites.
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/spears.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Soul Swarm - &lt;/span&gt; L&#x27;arène est entourée par des pics mortels (40% de l&#x27;hp par seconde).
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/spikes.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
-      &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Phase - &lt;/span&gt; Le boss phase à 66% et 33%.
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Brutal Aura - &lt;/span&gt; Aura qui endommage régulièrement les joueurs.
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Breakbar/Brutalize - &lt;/span&gt; Tous les 10%. Freeze la fixation actuelle et lui inflige de lours dégâts. Se termine
-          quand la breakbar est cassée ou que la fixation est morte.
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/break.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Fixation - &lt;/span&gt; Le boss se fixe sur le joueur le plus éloigné.
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Shockwave - &lt;/span&gt; Provoque une puissante onde de choc qui peut expulser les joueurs de l&#x27;arène.
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/wave.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Prisoner Sweep - &lt;/span&gt; Double swing devant le boss qui provoque un puissant lancement.
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/swing.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Bludgeon - &lt;/span&gt; Le boss donne un coup puissant devant lui, inflige de lourds dégâts et un kd. A partir de la
-          phase 2.
-          &lt;div class&#x3D;&quot;uk-flex uk-flex-column uk-flex-middle uk-flex-center&quot;&gt;
-            &lt;img src&#x3D;&quot;assets/strats/sam/slam.jpg&quot;&gt;
-            &lt;p class&#x3D;&quot;acknowledge&quot;&gt;Merci à
-              &lt;a class&#x3D;&quot;acknowledge&quot; href&#x3D;&quot;http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/&quot;&gt;Dulfy&lt;/a&gt; pour l&#x27;image.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&#x27;uk-margin-left uk-margin-right&#x27;&gt;
-      &lt;ul class&#x3D;&quot;uk-list uk-list-divider&quot;&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Jotun - &lt;/span&gt; Possède un bouclier qui transfert les dégâts reçus à l&#x27;humain. Il perd son bouclier si l&#x27;humain
-          explose sur le boss, on peut ensuite lui enlever 33% de sa vie avant qu&#x27;il ne regagne son bouclier.
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;span class&#x3D;&#x27;uk-text-uppercase uk-text-bold&#x27;&gt;Humain - &lt;/span&gt; Les dégâts infligés au jotun lui sont transférés pendant que ce premier a son bouclier. A
-          sa mort, il explose, provoquant de lourds dommages aux joueurs se trouvant dans l&#x27;explosion. S&#x27;il
-          meurt sur le boss, le jotun perd son bouclier. Il est immortel tant que le jotun est vivant.
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-
-    <div class="tab-pane fade" id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><div class=\'uk-margin-large-top uk-flex uk-flex-middle uk-flex-column\'>  <ul class="uk-subnav uk-subnav-pill uk-subnav-divider my-subnav" uk-switcher="connect: .switcher-container">    <div>      <a href="#">Mécaniques de l\'arène</a>    </div>    <div>      <a href="#">Mécaniques de base</a>    </div>    <div>      <a href="#">Split</a>    </div>  </ul></div><div class=\'uk-margin-left uk-margin-right\'>  <ul class="uk-switcher uk-margin switcher-container uk-flex uk-flex-center">    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Inevitable Betrayal - </span> A partir de la phase 2, deux joueurs seront sélectionnés de manière aléatoire. Ils          doivent s\'éloigner du raid et se mettre côte à côte. L\'explosion inflige de lourds dégâts au raid. Si les joueurs          choisis ne sont pas côt à côté, le joueur avec la grosse AoE est mis au sol.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/bomb.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Spear Impact - </span> Des lances tombent régulièrement sur l\'arène. Elles ont une zone autour qui inflige des          dégâts et taunt. Peuvent être détruites.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/spears.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Soul Swarm - </span> L\'arène est entourée par des pics mortels (40% de l\'hp par seconde).          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/spikes.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Phase - </span> Le boss phase à 66% et 33%.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Brutal Aura - </span> Aura qui endommage régulièrement les joueurs.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Breakbar/Brutalize - </span> Tous les 10%. Freeze la fixation actuelle et lui inflige de lours dégâts. Se termine          quand la breakbar est cassée ou que la fixation est morte.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/break.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Fixation - </span> Le boss se fixe sur le joueur le plus éloigné.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Shockwave - </span> Provoque une puissante onde de choc qui peut expulser les joueurs de l\'arène.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/wave.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Prisoner Sweep - </span> Double swing devant le boss qui provoque un puissant lancement.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/swing.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Bludgeon - </span> Le boss donne un coup puissant devant lui, inflige de lourds dégâts et un kd. A partir de la          phase 2.          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center">            <img src="assets/strats/sam/slam.jpg">            <p class="acknowledge">Merci à              <a class="acknowledge" href="http://dulfy.net/2017/02/11/gw2-samarog-raid-boss-guide/">Dulfy</a> pour l\'image.</p>          </div>        </li>      </ul>    </div>    <div class=\'uk-margin-left uk-margin-right\'>      <ul class="uk-list uk-list-divider">        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Jotun - </span> Possède un bouclier qui transfert les dégâts reçus à l\'humain. Il perd son bouclier si l\'humain          explose sur le boss, on peut ensuite lui enlever 33% de sa vie avant qu\'il ne regagne son bouclier.        </li>        <li>          <span class=\'uk-text-uppercase uk-text-bold\'>Humain - </span> Les dégâts infligés au jotun lui sont transférés pendant que ce premier a son bouclier. A          sa mort, il explose, provoquant de lourds dommages aux joueurs se trouvant dans l\'explosion. S\'il          meurt sur le boss, le jotun perd son bouclier. Il est immortel tant que le jotun est vivant.        </li>      </ul>    </div>  </ul></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BossesComponent', 'selector': 'app-bosses'},{'name': 'CompositionDetailComponent', 'selector': 'app-composition-detail'},{'name': 'DbBuildComponent', 'selector': 'app-db-build'},{'name': 'DbDisplayComponent', 'selector': 'app-db-display'},{'name': 'DbSelectorComponent', 'selector': 'app-db-selector'},{'name': 'DisplayBuildComponent', 'selector': 'app-display-build'},{'name': 'LogsDetailComponent', 'selector': 'app-logs-detail'},{'name': 'NavigationBarComponent', 'selector': 'app-navigation-bar'},{'name': 'SpecDetailComponent', 'selector': 'app-spec-detail'},{'name': 'StratCairnComponent', 'selector': 'app-strat-cairn'},{'name': 'StratComponent', 'selector': 'app-strat'},{'name': 'StratDeiComponent', 'selector': 'app-strat-dei'},{'name': 'StratDhuumComponent', 'selector': 'app-strat-dhuum'},{'name': 'StratEaterComponent', 'selector': 'app-strat-eater'},{'name': 'StratGorseComponent', 'selector': 'app-strat-gorse'},{'name': 'StratKcComponent', 'selector': 'app-strat-kc'},{'name': 'StratKingComponent', 'selector': 'app-strat-king'},{'name': 'StratMatComponent', 'selector': 'app-strat-mat'},{'name': 'StratMoComponent', 'selector': 'app-strat-mo'},{'name': 'StratRiverComponent', 'selector': 'app-strat-river'},{'name': 'StratSabComponent', 'selector': 'app-strat-sab'},{'name': 'StratSamComponent', 'selector': 'app-strat-sam'},{'name': 'StratSlothComponent', 'selector': 'app-strat-sloth'},{'name': 'StratSsComponent', 'selector': 'app-strat-ss'},{'name': 'StratVgComponent', 'selector': 'app-strat-vg'},{'name': 'StratXeraComponent', 'selector': 'app-strat-xera'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'StratSamComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
 
 
 
@@ -1373,7 +1233,7 @@ export class StratSamComponent implements OnInit {
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_URL = 'StratSamComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DbSearchPipe-1.html';
         </script>
 
        <script src="../js/search/search.js"></script>
