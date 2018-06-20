@@ -163,8 +163,8 @@ class PowerSpellbreakerBuild extends PowerWarriorBuild {
         this.specialization.setSpec('spec3', 'Spellbreaker', ['Pure Strike', 'Loss Aversion', 'Magebane Tether']);
         this.wep1.setMainHand('Mace', 'Berserker\'s', 'Superior Sigil of Force');
         this.wep1.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
-        this.wep2.setMainHand('Dagger', 'Berserker\'s', 'Superior Sigil of Force');
-        this.wep2.setOffHand('Axe', 'Berserker\'s', 'Superior Sigil of Accuracy');
+        this.wep2.setMainHand('Axe', 'Berserker\'s', 'Superior Sigil of Force');
+        this.wep2.setOffHand('Dagger', 'Berserker\'s', 'Superior Sigil of Accuracy');
     }
 }
 
