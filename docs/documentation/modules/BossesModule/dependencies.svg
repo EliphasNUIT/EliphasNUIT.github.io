@@ -34,73 +34,73 @@
 </g>
 <g id="clust8" class="cluster">
 <title>cluster_BossesModule_exports</title>
-<polygon fill="none" stroke="#000000" points="363,-208 363,-260 503,-260 503,-208 363,-208"/>
+<polygon fill="none" stroke="#000000" points="367,-208 367,-260 507,-260 507,-208 367,-208"/>
 </g>
-<!-- SpecDetailComponent -->
+<!-- BossesComponent -->
 <g id="node1" class="node">
-<title>SpecDetailComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="934.252,-122 791.748,-122 791.748,-86 934.252,-86 934.252,-122"/>
-<text text-anchor="middle" x="863" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SpecDetailComponent</text>
+<title>BossesComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="934.2176,-122 813.7824,-122 813.7824,-86 934.2176,-86 934.2176,-122"/>
+<text text-anchor="middle" x="874" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesComponent</text>
 </g>
 <!-- BossesModule -->
 <g id="node5" class="node">
 <title>BossesModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="482.4358,-187 479.4358,-191 458.4358,-191 455.4358,-187 383.5642,-187 383.5642,-151 482.4358,-151 482.4358,-187"/>
-<text text-anchor="middle" x="433" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="486.4358,-187 483.4358,-191 462.4358,-191 459.4358,-187 387.5642,-187 387.5642,-151 486.4358,-151 486.4358,-187"/>
+<text text-anchor="middle" x="437" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesModule</text>
 </g>
-<!-- SpecDetailComponent&#45;&gt;BossesModule -->
+<!-- BossesComponent&#45;&gt;BossesModule -->
 <g id="edge1" class="edge">
-<title>SpecDetailComponent&#45;&gt;BossesModule</title>
-<path fill="none" stroke="#000000" d="M863,-122.2843C863,-143.3211 863,-175 863,-175 863,-175 492.3265,-175 492.3265,-175"/>
-<polygon fill="#000000" stroke="#000000" points="492.3265,-171.5001 482.3265,-175 492.3264,-178.5001 492.3265,-171.5001"/>
+<title>BossesComponent&#45;&gt;BossesModule</title>
+<path fill="none" stroke="#000000" d="M874,-122.2843C874,-143.3211 874,-175 874,-175 874,-175 496.28,-175 496.28,-175"/>
+<polygon fill="#000000" stroke="#000000" points="496.28,-171.5001 486.28,-175 496.2799,-178.5001 496.28,-171.5001"/>
 </g>
 <!-- CompositionDetailComponent -->
 <g id="node2" class="node">
 <title>CompositionDetailComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="773.8836,-122 586.1164,-122 586.1164,-86 773.8836,-86 773.8836,-122"/>
-<text text-anchor="middle" x="680" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">CompositionDetailComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="795.8836,-122 608.1164,-122 608.1164,-86 795.8836,-86 795.8836,-122"/>
+<text text-anchor="middle" x="702" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">CompositionDetailComponent</text>
 </g>
 <!-- CompositionDetailComponent&#45;&gt;BossesModule -->
 <g id="edge2" class="edge">
 <title>CompositionDetailComponent&#45;&gt;BossesModule</title>
-<path fill="none" stroke="#000000" d="M680,-122.0225C680,-139.3734 680,-163 680,-163 680,-163 492.3905,-163 492.3905,-163"/>
-<polygon fill="#000000" stroke="#000000" points="492.3905,-159.5001 482.3905,-163 492.3905,-166.5001 492.3905,-159.5001"/>
-</g>
-<!-- BossesComponent -->
-<g id="node3" class="node">
-<title>BossesComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="568.2176,-122 447.7824,-122 447.7824,-86 568.2176,-86 568.2176,-122"/>
-<text text-anchor="middle" x="508" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesComponent</text>
-</g>
-<!-- BossesComponent&#45;&gt;BossesModule -->
-<g id="edge3" class="edge">
-<title>BossesComponent&#45;&gt;BossesModule</title>
-<path fill="none" stroke="#000000" d="M465.0544,-122.1061C465.0544,-122.1061 465.0544,-140.991 465.0544,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="461.5544,-140.9909 465.0544,-150.991 468.5544,-140.991 461.5544,-140.9909"/>
+<path fill="none" stroke="#000000" d="M702,-122.0225C702,-139.3734 702,-163 702,-163 702,-163 496.2234,-163 496.2234,-163"/>
+<polygon fill="#000000" stroke="#000000" points="496.2235,-159.5001 486.2234,-163 496.2234,-166.5001 496.2235,-159.5001"/>
 </g>
 <!-- LogsDetailComponent -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>LogsDetailComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="429.5379,-122 286.4621,-122 286.4621,-86 429.5379,-86 429.5379,-122"/>
-<text text-anchor="middle" x="358" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LogsDetailComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="589.5379,-122 446.4621,-122 446.4621,-86 589.5379,-86 589.5379,-122"/>
+<text text-anchor="middle" x="518" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">LogsDetailComponent</text>
 </g>
 <!-- LogsDetailComponent&#45;&gt;BossesModule -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>LogsDetailComponent&#45;&gt;BossesModule</title>
-<path fill="none" stroke="#000000" d="M406.7756,-122.1061C406.7756,-122.1061 406.7756,-140.991 406.7756,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="403.2757,-140.9909 406.7756,-150.991 410.2757,-140.991 403.2757,-140.9909"/>
+<path fill="none" stroke="#000000" d="M466.2244,-122.1061C466.2244,-122.1061 466.2244,-140.991 466.2244,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="462.7245,-140.9909 466.2244,-150.991 469.7245,-140.991 462.7245,-140.9909"/>
+</g>
+<!-- SpecDetailComponent -->
+<g id="node4" class="node">
+<title>SpecDetailComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="428.252,-122 285.748,-122 285.748,-86 428.252,-86 428.252,-122"/>
+<text text-anchor="middle" x="357" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">SpecDetailComponent</text>
+</g>
+<!-- SpecDetailComponent&#45;&gt;BossesModule -->
+<g id="edge4" class="edge">
+<title>SpecDetailComponent&#45;&gt;BossesModule</title>
+<path fill="none" stroke="#000000" d="M408.0793,-122.1061C408.0793,-122.1061 408.0793,-140.991 408.0793,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="404.5793,-140.9909 408.0793,-150.991 411.5793,-140.991 404.5793,-140.9909"/>
 </g>
 <!-- BossesComponent  -->
 <g id="node8" class="node">
 <title>BossesComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="494.7177,-252 371.2823,-252 371.2823,-216 494.7177,-216 494.7177,-252"/>
-<text text-anchor="middle" x="433" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="498.7177,-252 375.2823,-252 375.2823,-216 498.7177,-216 498.7177,-252"/>
+<text text-anchor="middle" x="437" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesComponent </text>
 </g>
 <!-- BossesModule&#45;&gt;BossesComponent  -->
 <g id="edge7" class="edge">
 <title>BossesModule&#45;&gt;BossesComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M433,-187.1061C433,-187.1061 433,-205.991 433,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="429.5001,-205.9909 433,-215.991 436.5001,-205.991 429.5001,-205.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M437,-187.1061C437,-187.1061 437,-205.991 437,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="433.5001,-205.9909 437,-215.991 440.5001,-205.991 433.5001,-205.9909"/>
 </g>
 <!-- DisplayBuildModule -->
 <g id="node6" class="node">
@@ -111,8 +111,8 @@
 <!-- DisplayBuildModule&#45;&gt;BossesModule -->
 <g id="edge5" class="edge">
 <title>DisplayBuildModule&#45;&gt;BossesModule</title>
-<path fill="none" stroke="#000000" d="M195,-122.0225C195,-139.3734 195,-163 195,-163 195,-163 373.6862,-163 373.6862,-163"/>
-<polygon fill="#000000" stroke="#000000" points="373.6863,-166.5001 383.6862,-163 373.6862,-159.5001 373.6863,-166.5001"/>
+<path fill="none" stroke="#000000" d="M195,-122.0225C195,-139.3734 195,-163 195,-163 195,-163 377.736,-163 377.736,-163"/>
+<polygon fill="#000000" stroke="#000000" points="377.736,-166.5001 387.736,-163 377.736,-159.5001 377.736,-166.5001"/>
 </g>
 <!-- StratModule -->
 <g id="node7" class="node">
@@ -123,8 +123,8 @@
 <!-- StratModule&#45;&gt;BossesModule -->
 <g id="edge6" class="edge">
 <title>StratModule&#45;&gt;BossesModule</title>
-<path fill="none" stroke="#000000" d="M67,-122.2843C67,-143.3211 67,-175 67,-175 67,-175 373.6396,-175 373.6396,-175"/>
-<polygon fill="#000000" stroke="#000000" points="373.6396,-178.5001 383.6396,-175 373.6396,-171.5001 373.6396,-178.5001"/>
+<path fill="none" stroke="#000000" d="M67,-122.2843C67,-143.3211 67,-175 67,-175 67,-175 377.4841,-175 377.4841,-175"/>
+<polygon fill="#000000" stroke="#000000" points="377.4841,-178.5001 387.4841,-175 377.484,-171.5001 377.4841,-178.5001"/>
 </g>
 </g>
 </svg>

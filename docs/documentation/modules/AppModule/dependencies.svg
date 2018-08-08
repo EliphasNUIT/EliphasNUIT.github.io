@@ -90,29 +90,29 @@
 <path fill="none" stroke="#000000" d="M334,-122.1061C334,-122.1061 334,-140.991 334,-140.991"/>
 <polygon fill="#000000" stroke="#000000" points="330.5001,-140.9909 334,-150.991 337.5001,-140.991 330.5001,-140.9909"/>
 </g>
-<!-- DatabaseModule -->
-<g id="node5" class="node">
-<title>DatabaseModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="251.3501,-122 248.3501,-126 227.3501,-126 224.3501,-122 140.6499,-122 140.6499,-86 251.3501,-86 251.3501,-122"/>
-<text text-anchor="middle" x="196" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DatabaseModule</text>
-</g>
-<!-- DatabaseModule&#45;&gt;AppModule -->
-<g id="edge4" class="edge">
-<title>DatabaseModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M196,-122.0225C196,-139.3734 196,-163 196,-163 196,-163 282.221,-163 282.221,-163"/>
-<polygon fill="#000000" stroke="#000000" points="282.221,-166.5001 292.221,-163 282.2209,-159.5001 282.221,-166.5001"/>
-</g>
 <!-- BossesModule -->
-<g id="node6" class="node">
+<g id="node5" class="node">
 <title>BossesModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="122.4358,-122 119.4358,-126 98.4358,-126 95.4358,-122 23.5642,-122 23.5642,-86 122.4358,-86 122.4358,-122"/>
-<text text-anchor="middle" x="73" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="251.4358,-122 248.4358,-126 227.4358,-126 224.4358,-122 152.5642,-122 152.5642,-86 251.4358,-86 251.4358,-122"/>
+<text text-anchor="middle" x="202" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">BossesModule</text>
 </g>
 <!-- BossesModule&#45;&gt;AppModule -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>BossesModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M73,-122.2843C73,-143.3211 73,-175 73,-175 73,-175 282.0658,-175 282.0658,-175"/>
-<polygon fill="#000000" stroke="#000000" points="282.0659,-178.5001 292.0658,-175 282.0658,-171.5001 282.0659,-178.5001"/>
+<path fill="none" stroke="#000000" d="M202,-122.0225C202,-139.3734 202,-163 202,-163 202,-163 282.2344,-163 282.2344,-163"/>
+<polygon fill="#000000" stroke="#000000" points="282.2344,-166.5001 292.2344,-163 282.2343,-159.5001 282.2344,-166.5001"/>
+</g>
+<!-- DatabaseModule -->
+<g id="node6" class="node">
+<title>DatabaseModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="134.3501,-122 131.3501,-126 110.3501,-126 107.3501,-122 23.6499,-122 23.6499,-86 134.3501,-86 134.3501,-122"/>
+<text text-anchor="middle" x="79" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">DatabaseModule</text>
+</g>
+<!-- DatabaseModule&#45;&gt;AppModule -->
+<g id="edge5" class="edge">
+<title>DatabaseModule&#45;&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M79,-122.2843C79,-143.3211 79,-175 79,-175 79,-175 282.1775,-175 282.1775,-175"/>
+<polygon fill="#000000" stroke="#000000" points="282.1775,-178.5001 292.1775,-175 282.1774,-171.5001 282.1775,-178.5001"/>
 </g>
 </g>
 </svg>
