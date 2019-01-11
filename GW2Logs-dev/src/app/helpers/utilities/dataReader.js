@@ -77,7 +77,7 @@ var myClasses = [
 	new Profession('Engineer', 'Medium')
 ];
 
-var timeout = 90000;
+var timeout = 3000;
 
 var createDLForClasses = function () {
 
@@ -120,32 +120,14 @@ var createDLForClasses = function () {
 
 var createDLForStats = function () {
 	var errorFunc = function () { };
-	var statstoDL = {};
+	var statstoDL = {"": -1};
 
-	FW_GW2().getItemstats(function (stats) {
+    FW_GW2().getItemstats(function (data) {
+        var statData = data;
 		console.log("starting getting stats");
-		window.setTimeout(function () {
-			for (var i = stats.length / 2; i < stats.length; i++) {
-				FW_GW2().getItemstat(stats[i], 'en', function (data2) {
-					if (!data2.name || data2.name.length === 0 || !data2.attributes) {
-						return;
-					}
-					var attributes = data2.attributes;
-					for (var k in attributes) {
-					  if (attributes.hasOwnProperty(k)) {
-					    if (attributes[k] === 0) {
-					      return;
-					    }
-					  }
-					}
-					statstoDL[data2.name] = data2.id;
-					console.log("got " + data2.name);
-				}, errorFunc);
-			}
-		}, 1 * timeout);
 
-		for (var i = 0; i < stats.length / 2; i++) {
-			FW_GW2().getItemstat(stats[i], 'en', function (data) {
+        for (var i = 0; i < data.length; i++) {
+            FW_GW2().getItemstat(statData[i], 'en', function (data) {
 				if (!data.name || data.name.length === 0 || !data.attributes) {
 					return;
 				}
@@ -165,7 +147,7 @@ var createDLForStats = function () {
 
 	window.setTimeout(function () {
 		var str = JSON.stringify(statstoDL);
-		str = "var stats = " + str + "; \n";
+		str = "const stats = " + str + "; \n";
 		console.log("total " + str);
 		var blob = new Blob([str], { type: "application/json" });
 		var url = URL.createObjectURL(blob);
