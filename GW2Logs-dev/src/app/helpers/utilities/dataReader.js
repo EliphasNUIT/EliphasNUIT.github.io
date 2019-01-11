@@ -4,12 +4,13 @@ var errorFunc = function (data) {
 	console.error('oh shit');
 };
 
-var Profession = function (name) {
+var Profession = function (name, armor) {
 	this.name = name;
 	this.specializations = {};
 	this.traits = {};
 	this.skills = {};
-	this.weapons = {};
+    this.weapons = {};
+    this.armor = armor;
 };
 
 Profession.prototype.buildFromAPI = function () {
@@ -65,15 +66,15 @@ Profession.prototype.buildFromAPI = function () {
 };
 
 var myClasses = [
-	new Profession('Guardian'),
-	new Profession('Warrior'),
-	new Profession('Revenant'),
-	new Profession('Necromancer'),
-	new Profession('Elementalist'),
-	new Profession('Mesmer'),
-	new Profession('Ranger'),
-	new Profession('Thief'),
-	new Profession('Engineer')
+	new Profession('Guardian', 'Heavy'),
+	new Profession('Warrior', 'Heavy'),
+	new Profession('Revenant', 'Heavy'),
+	new Profession('Necromancer', 'Light'),
+	new Profession('Elementalist', 'Light'),
+	new Profession('Mesmer', 'Light'),
+	new Profession('Ranger', 'Medium'),
+	new Profession('Thief', 'Medium'),
+	new Profession('Engineer', 'Medium')
 ];
 
 var timeout = 90000;
@@ -110,10 +111,10 @@ var createDLForClasses = function () {
 		var str = "";
 		for (var j = 0; j < myClasses.length; j++) {
 			var myClass = myClasses[j];
-			str += "var " + myClass.name + " = " + JSON.stringify(myClass) + "; \n";
+			str += "const " + myClass.name + " = " + JSON.stringify(myClass) + "; \n";
 		}
 		createDL(str);
-	}, (myClasses.length + 1) * timeout)
+	}, (myClasses.length + 1) * timeout);
 };
 
 
@@ -121,45 +122,44 @@ var createDLForStats = function () {
 	var errorFunc = function () { };
 	var statstoDL = {};
 
-	FW_GW2().getItemstats(function (data) {
-		var statData = data;
+	FW_GW2().getItemstats(function (stats) {
 		console.log("starting getting stats");
 		window.setTimeout(function () {
-			for (var i = data.length / 2; i < data.length; i++) {
-				FW_GW2().getItemstat(statData[i], 'en', function (data2) {
-					if (data2.name.length === 0 || !data2.attributes) {
+			for (var i = stats.length / 2; i < stats.length; i++) {
+				FW_GW2().getItemstat(stats[i], 'en', function (data2) {
+					if (!data2.name || data2.name.length === 0 || !data2.attributes) {
 						return;
 					}
 					var attributes = data2.attributes;
 					for (var k in attributes) {
-						if (attributes.hasOwnProperty(k)) {
-							if (attributes[k] === 0) {
-								return;
-							}
-						}
+					  if (attributes.hasOwnProperty(k)) {
+					    if (attributes[k] === 0) {
+					      return;
+					    }
+					  }
 					}
 					statstoDL[data2.name] = data2.id;
 					console.log("got " + data2.name);
-				}, errorFunc)
+				}, errorFunc);
 			}
-		}, 1 * timeout)
+		}, 1 * timeout);
 
-		for (var i = 0; i < data.length / 2; i++) {
-			FW_GW2().getItemstat(statData[i], 'en', function (data) {
-				if (data.name.length === 0 || !data.attributes) {
+		for (var i = 0; i < stats.length / 2; i++) {
+			FW_GW2().getItemstat(stats[i], 'en', function (data) {
+				if (!data.name || data.name.length === 0 || !data.attributes) {
 					return;
 				}
 				var attributes = data.attributes;
 				for (var k in attributes) {
-					if (attributes.hasOwnProperty(k)) {
-						if (attributes[k] === 0) {
-							return;
-						}
-					}
+				  if (attributes.hasOwnProperty(k)) {
+				    if (attributes[k] === 0) {
+				      return;
+				    }
+				  }
 				}
 				statstoDL[data.name] = data.id;
 				console.log("got " + data.name);
-			}, errorFunc)
+			}, errorFunc);
 		}
 	}, errorFunc);
 
