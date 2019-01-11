@@ -11,29 +11,29 @@ export const items = {
         back: 79830
     },
     armor: {
-        Light: {
-            helm: 80751,
-            shoulders: 80855,
-            coat: 80811,
-            gloves: 80838,
-            leggings: 80755,
-            boots: 80815
+        Heavy: {
+            helm: 80384,
+            shoulders: 80435,
+            coat: 80254,
+            gloves: 80205,
+            leggings: 80277,
+            boots: 80557
         },
         Medium: {
-            helm: 80753,
-            shoulders: 80825,
-            coat: 80798,
-            gloves: 80779,
-            leggings: 80812,
-            boots: 80836
+            helm: 80296,
+            shoulders: 80145,
+            coat: 80578,
+            gloves: 80161,
+            leggings: 80252,
+            boots: 80281
         },
-        Heavy: {
-            helm: 80832,
-            shoulders: 80814,
-            coat: 80818,
-            gloves: 80834,
-            leggings: 80845,
-            boots: 80808
+        Light: {
+            helm: 80248,
+            shoulders: 80131,
+            coat: 80190,
+            gloves: 80111,
+            leggings: 80356,
+            boots: 80399
         }
     },
 
@@ -79,22 +79,22 @@ export const items = {
 
     weapons: {
         '': -1,
-        Axe: 81321,
-        Dagger: 81451,
-        Mace: 81514,
-        Pistol: 81270,
-        Scepter: 81400,
-        Sword: 81376,
-        Focus: 81503,
-        Shield: 81339,
-        Torch: 81327,
-        Warhorn: 81337,
-        Greatsword: 81309,
-        Hammer: 81374,
-        Longbow: 81289,
-        Rifle: 81528,
-        Shortbow: 81329,
-        Staff: 81382
+        Axe: 30684,
+        Dagger: 87109,
+        Mace: 79562,
+        Pistol: 72713,
+        Scepter: 88576,
+        Sword: 81957,
+        Focus: 86098,
+        Shield: 30696,
+        Torch: 30700,
+        Warhorn: 30702,
+        Greatsword: 30689,
+        Hammer: 81839,
+        Longbow: 89854,
+        Rifle: 30694,
+        Shortbow: 78556,
+        Staff: 71383
     },
 
     consumable: {
